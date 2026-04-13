@@ -1,0 +1,73 @@
+{
+  "doc_id": "sample_basic",
+  "source_braille_path": "C:\\Users\\USER\\Desktop\\Braille\\data\\braille\\en\\sample_basic.txt",
+  "english_text": {
+    "rough": "Sample Document: BASIC\n\nThis is a simple sentence.\n\nThe weather is nice today.\n\nShe walked to the park after lunch.\n\nDo you know where the library is?\n\nPlease turn off the lights before you leave.\n\nHe said that he would arrive by noon.\n\nWhat time does the next train depart?\n\nI have never seen anything like it before.\n\nThey decided to postpone the event until further notice.",
+    "corrected": "Sample Document: BASIC\n\nThis is a simple sentence.\n\nThe weather is nice today.\n\nShe walked to the park after lunch.\n\nDo you know where the library is?\n\nPlease turn off the lights before you leave.\n\nHe said that he would arrive by noon.\n\nWhat time does the next train depart?\n\nI have never seen anything like it before.\n\nThey decided to postpone the event until further notice."
+  },
+  "structure": {
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 3,
+        "end_line": 3
+      },
+      {
+        "block_id": "b3",
+        "type": "P",
+        "start_line": 5,
+        "end_line": 5
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 7,
+        "end_line": 7
+      },
+      {
+        "block_id": "b5",
+        "type": "P",
+        "start_line": 9,
+        "end_line": 9
+      },
+      {
+        "block_id": "b6",
+        "type": "P",
+        "start_line": 11,
+        "end_line": 11
+      },
+      {
+        "block_id": "b7",
+        "type": "P",
+        "start_line": 13,
+        "end_line": 13
+      },
+      {
+        "block_id": "b8",
+        "type": "P",
+        "start_line": 15,
+        "end_line": 15
+      },
+      {
+        "block_id": "b9",
+        "type": "P",
+        "start_line": 17,
+        "end_line": 17
+      },
+      {
+        "block_id": "b10",
+        "type": "P",
+        "start_line": 19,
+        "end_line": 19
+      }
+    ]
+  },
+  "korean_summary": null
+}

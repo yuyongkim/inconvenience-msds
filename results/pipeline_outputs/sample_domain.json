@@ -1,0 +1,19 @@
+{
+  "doc_id": "sample_domain",
+  "source_braille_path": "data/braille/en/sample_domain.txt",
+  "english_text": {
+    "rough": "Sample Document: DOMAIN\n\nThe temperature ranges from 20 degrees C to 25 degrees C in the reactor.\n\nSodium chloride (NaCl) dissolves readily in water.\n\nThe CPU utilizes a 64-bit instruction set architecture.\n\nThe patient was administered 500 mg of amoxicillin twice daily.\n\nThe yield strength of A36 steel is approximately 250 MPa.\n\nPolymerase chain reaction (PCR) amplifies DNA segments.\n\nThe Reynolds number determines whether flow is laminar or turbulent.\n\nThe HTTP status code 404 means the resource was not found.\n\nBenzene (C6H6) is an aromatic hydrocarbon.\n\nThe compiler generates an abstract syntax tree (AST) during parsing.",
+    "corrected": "Sample Document: DOMAIN The temperature ranges from 20 degrees C to 25 degrees C in the reactor. Sodium chloride (NaCl) dissolves readily in water. The CPU utilizes a 64-bit instruction set architecture. The patient was administered 500 mg of amoxicillin twice daily. The yield strength of A36 steel is approximately 250 MPa. Polymerase chain reaction (PCR) amplifies DNA segments. The Reynolds number determines whether flow is laminar or turbulent. The HTTP status code 404 means the resource was not found. Benzene (C6H6) is an aromatic hydrocarbon. The compiler generates an abstract syntax tree (AST) during parsing."
+  },
+  "structure": {
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      }
+    ]
+  },
+  "korean_summary": null
+}

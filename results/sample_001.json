@@ -1,0 +1,37 @@
+{
+  "doc_id": "sample_001",
+  "source_braille_path": "data/braille/en/sample_001.txt",
+  "english_text": {
+    "rough": "This is a simple sentence.\nIt is used in a braille book.\n\nThe value of x is 3.ad.\n\n1. Open the valve.\n2. Check the pressure.\n3. Record the reading.\nAnother paragraph follows.",
+    "corrected": "This is a simple sentence.\nIt is used in a braille book.\n\nThe value of x is 3.ad.\n\n1. Open the valve.\n2. Check the pressure.\n3. Record the reading.\nAnother paragraph follows."
+  },
+  "structure": {
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 2
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 4,
+        "end_line": 4
+      },
+      {
+        "block_id": "b3",
+        "type": "L",
+        "start_line": 6,
+        "end_line": 8
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 9,
+        "end_line": 9
+      }
+    ]
+  },
+  "korean_summary": null
+}

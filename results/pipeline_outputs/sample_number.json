@@ -1,0 +1,73 @@
+{
+  "doc_id": "sample_number",
+  "source_braille_path": "C:\\Users\\USER\\Desktop\\Braille\\data\\braille\\en\\sample_number.txt",
+  "english_text": {
+    "rough": "Sample Document: NUMBER\n\nThe meeting starts at 3:45 p.m. on April 6, 2026.\n\nThere are 1,234 students enrolled this semester.\n\nThe ratio of water to cement is 0.45 to 1.\n\nCall me at 02-555-1234 for more details.\n\nThe package weighs 12.5 kg and costs  39.99.\n\nChapter 7, Section 3.2 covers fluid dynamics.\n\nRoom 401B is on the 4th floor.\n\nBetween 2019 and 2023, revenue grew by 47.3 percent.\n\nThe server responded in 12.8 milliseconds on average.",
+    "corrected": "Sample Document: NUMBER\n\nThe meeting starts at 3:45 p.m. on April 6, 2026.\n\nThere are 1,234 students enrolled this semester.\n\nThe ratio of water to cement is 0.45 to 1.\n\nCall me at 02-555-1234 for more details.\n\nThe package weighs 12.5 kg and costs 39.99.\n\nChapter 7, Section 3.2 covers fluid dynamics.\n\nRoom 401B is on the 4th floor.\n\nBetween 2019 and 2023, revenue grew by 47.3 percent.\n\nThe server responded in 12.8 milliseconds on average."
+  },
+  "structure": {
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 3,
+        "end_line": 3
+      },
+      {
+        "block_id": "b3",
+        "type": "P",
+        "start_line": 5,
+        "end_line": 5
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 7,
+        "end_line": 7
+      },
+      {
+        "block_id": "b5",
+        "type": "M",
+        "start_line": 9,
+        "end_line": 9
+      },
+      {
+        "block_id": "b6",
+        "type": "P",
+        "start_line": 11,
+        "end_line": 11
+      },
+      {
+        "block_id": "b7",
+        "type": "P",
+        "start_line": 13,
+        "end_line": 13
+      },
+      {
+        "block_id": "b8",
+        "type": "P",
+        "start_line": 15,
+        "end_line": 15
+      },
+      {
+        "block_id": "b9",
+        "type": "P",
+        "start_line": 17,
+        "end_line": 17
+      },
+      {
+        "block_id": "b10",
+        "type": "P",
+        "start_line": 19,
+        "end_line": 19
+      }
+    ]
+  },
+  "korean_summary": null
+}

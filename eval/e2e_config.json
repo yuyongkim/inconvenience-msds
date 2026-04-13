@@ -1,0 +1,25 @@
+{
+    "documents": [
+        {
+            "doc_id": "d01",
+            "gold_ko_text_path": "data/e2e/d01_gold_ko.txt",
+            "gold_structure_path": null,
+            "baseline_ko_braille_path": "data/e2e/d01_baseline_ko.brl",
+            "proposed_ko_braille_path": "data/e2e/d01_proposed_ko.brl"
+        },
+        {
+            "doc_id": "d02",
+            "gold_ko_text_path": "data/e2e/d02_gold_ko.txt",
+            "gold_structure_path": null,
+            "baseline_ko_braille_path": "data/e2e/d02_baseline_ko.brl",
+            "proposed_ko_braille_path": "data/e2e/d02_proposed_ko.brl"
+        },
+        {
+            "doc_id": "d03",
+            "gold_ko_text_path": "data/e2e/d03_gold_ko.txt",
+            "gold_structure_path": null,
+            "baseline_ko_braille_path": "data/e2e/d03_baseline_ko.brl",
+            "proposed_ko_braille_path": "data/e2e/d03_proposed_ko.brl"
+        }
+    ]
+}

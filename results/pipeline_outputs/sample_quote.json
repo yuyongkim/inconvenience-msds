@@ -1,0 +1,49 @@
+{
+  "doc_id": "sample_quote",
+  "source_braille_path": "C:\\Users\\USER\\Desktop\\Braille\\data\\braille\\en\\sample_quote.txt",
+  "english_text": {
+    "rough": "Sample Document: QUOTE\n\nHe whispered, \"Are you sure about this?\"\n\nThe term \"machine learning\" was coined by Arthur Samuel in 1959.\n\nShe replied ?with a slight smile?, \"Of course.\"\n\nThe so-called \"best practice\" is not always the best.\n\nAccording to the manual -- page 42 -- the limit is 500 units.",
+    "corrected": "Sample Document: QUOTE\n\nHe whispered, \"Are you sure about this?\"\n\nThe term \"machine learning\" was coined by Arthur Samuel in 1959.\n\nShe replied ?with a slight smile?, \"Of course.\"\n\nThe so-called \"best practice\" is not always the best.\n\nAccording to the manual -- page 42 -- the limit is 500 units."
+  },
+  "structure": {
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 3,
+        "end_line": 3
+      },
+      {
+        "block_id": "b3",
+        "type": "P",
+        "start_line": 5,
+        "end_line": 5
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 7,
+        "end_line": 7
+      },
+      {
+        "block_id": "b5",
+        "type": "P",
+        "start_line": 9,
+        "end_line": 9
+      },
+      {
+        "block_id": "b6",
+        "type": "P",
+        "start_line": 11,
+        "end_line": 11
+      }
+    ]
+  },
+  "korean_summary": null
+}

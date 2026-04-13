@@ -1,0 +1,114 @@
+{
+  "doc_id": "chemistry",
+  "source_braille_path": "data/braille/en/real/chemistry.txt",
+  "english_text": {
+    "rough": "Chemical Kinetics\n\nThe rate of a chemical reaction depends on several factors: the concentration of reactants, temperature, and the presence of a catalyst.\n\n1. Effect of Concentration\nThe higher the concentration of reactants, the greater the frequency of molecular collisions, leading to a faster reaction rate.\n\n2. Effect of Temperature\nFor every 10 degree increase in temperature, the reaction rate approximately doubles. This relationship is described by the Arrhenius equation: k = A * exp(-Ea/RT), where k is the rate constant, A is the pre-exponential factor, Ea is the activation energy, R is the gas constant (8.314 J/mol*K), and T is the absolute temperature in Kelvin.\n\n3. Role of Catalysts\nA catalyst lowers the activation energy of a reaction without being consumed. For example, platinum is used as a catalyst in the catalytic converter of automobiles, where it helps convert harmful CO and NO gases into CO2 and N2.",
+    "corrected": "Chemical Kinetics\n\nThe rate of a chemical reaction depends on several factors: the concentration of reactants, temperature, and the presence of a catalyst.\n\n1. Effect of Concentration\nThe higher the concentration of reactants, the greater the frequency of molecular collisions, leading to a faster reaction rate.\n\n2. Effect of Temperature\nFor every 10 degree increase in temperature, the reaction rate approximately doubles. This relationship is described by the Arrhenius equation: k = A * exp(-Ea/RT), where k is the rate constant, A is the pre-exponential factor, Ea is the activation energy, R is the gas constant (8.314 J/mol*K), and T is the absolute temperature in Kelvin.\n\n3. Role of Catalysts\nA catalyst lowers the activation energy of a reaction without being consumed. For example, platinum is used as a catalyst in the catalytic converter of automobiles, where it helps convert harmful CO and NO gases into CO2 and N2."
+  },
+  "structure": {
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 3,
+        "end_line": 3
+      },
+      {
+        "block_id": "b3",
+        "type": "L",
+        "start_line": 5,
+        "end_line": 5
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 6,
+        "end_line": 6
+      },
+      {
+        "block_id": "b5",
+        "type": "L",
+        "start_line": 8,
+        "end_line": 8
+      },
+      {
+        "block_id": "b6",
+        "type": "P",
+        "start_line": 9,
+        "end_line": 9
+      },
+      {
+        "block_id": "b7",
+        "type": "L",
+        "start_line": 11,
+        "end_line": 11
+      },
+      {
+        "block_id": "b8",
+        "type": "P",
+        "start_line": 12,
+        "end_line": 12
+      }
+    ]
+  },
+  "korean_text": {
+    "text": "화학 동역학\n\n화학 반응 속도는 반응물의 농도, 온도, 촉매의 존재 등 여러 요인에 따라 달라집니다.\n\n1. 집중력의 영향\n\n반응물의 농도가 높을수록 분자 충돌 빈도가 높아져 반응 속도가 빨라집니다.\n\n2. 온도의 영향\n\n온도가 10도 올라갈 때마다 반응 속도는 약 두 배로 늘어납니다. 이 관계는 Arrhenius 방정식으로 설명됩니다. k = A * exp(-Ea/RT), 여기서 k는 속도 상수, A는 사전 지수 인자, Ea는 활성화 에너지, R은 기체 상수(8.314 J/mol*K), T는 절대 온도(켈빈)입니다.\n\n3. 촉매의 역할\n\n촉매는 소모되지 않고 반응의 활성화 에너지를 낮춥니다. 예를 들어, 백금은 자동차 촉매 변환기의 촉매로 사용되어 유해한 CO 및 NO 가스를 CO2 및 N2로 변환하는 데 도움을 줍니다.",
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 3,
+        "end_line": 3
+      },
+      {
+        "block_id": "b3",
+        "type": "L",
+        "start_line": 5,
+        "end_line": 5
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 7,
+        "end_line": 7
+      },
+      {
+        "block_id": "b5",
+        "type": "L",
+        "start_line": 9,
+        "end_line": 9
+      },
+      {
+        "block_id": "b6",
+        "type": "P",
+        "start_line": 11,
+        "end_line": 11
+      },
+      {
+        "block_id": "b7",
+        "type": "L",
+        "start_line": 13,
+        "end_line": 13
+      },
+      {
+        "block_id": "b8",
+        "type": "P",
+        "start_line": 15,
+        "end_line": 15
+      }
+    ]
+  },
+  "korean_summary": null
+}

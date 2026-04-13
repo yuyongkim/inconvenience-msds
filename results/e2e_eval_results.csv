@@ -1,0 +1,4 @@
+doc_id,text_sim_score_baseline,text_sim_score_proposed,structure_f1_baseline,structure_f1_proposed,rule_violation_rate_baseline,rule_violation_rate_proposed
+d01,0.7413,1.0,0.75,1.0,0.0,0.0
+d02,0.7125,1.0,0.75,1.0,0.0,0.0
+d03,0.7332,1.0,1.0,1.0,0.0,0.0

@@ -1,0 +1,1524 @@
+id,clean_en,noisy_en,noise_type,corrected_en
+lu_0001,7/11/59,7_/11_/59,ueb_g2_decode,7_/11_/59
+lu_0002,7.11.59,74aa4ei,ueb_g2_decode,74aa4ei
+lu_0003,1960's,1960's,ueb_g2_decode,1960's
+lu_0004,'70s and '80s,'70s & '80s,ueb_g2_decode,'70s & '80s
+lu_0005,10:30 a.m.,10330 a4m4,ueb_g2_decode,10330 a4m4
+lu_0006,10.30 am,104cj am,ueb_g2_decode,104cj am
+lu_0007,$8.75,`s84ge,ueb_g2_decode,`s84ge
+lu_0008,£8.75,`l84ge,ueb_g2_decode,`l84ge
+lu_0009,"R8,75",R81ge,ueb_g2_decode,R81ge
+lu_0010,"$1,500.00",`s11ejj4jj,ueb_g2_decode,`s11ejj4jj
+lu_0011,"€1.500,00",`e14ejj1jj,ueb_g2_decode,`e14ejj1jj
+lu_0012,M4G 3E8,M4G 3E8,ueb_g2_decode,M4G 3E8
+lu_0013,W1N 9LF,"W1N 9,Lf",ueb_g2_decode,"W1N 9,Lf"
+lu_0014,N12 7BT,"N12 7,Bt",ueb_g2_decode,"N12 7,Bt"
+lu_0015,(416) 486-2500,"""<416""> 486-2500",ueb_g2_decode,"""<416""> 486-2500"
+lu_0016,For a taxi call 13-cabs.,",= a taxi call 13-cabs4",ueb_g2_decode,",= a taxi call 13-cabs4"
+lu_0017,telephone 1300-vision,"teleph""o 1300-vi.n",ueb_g2_decode,"teleph""o 1300-vi.n"
+lu_0018,1-800-SLEEP88,"1-800-,Sleep88",ueb_g2_decode,"1-800-,Sleep88"
+lu_0019,ISBN 0-14-300414-X,",Isbn 0-14-300414-;X",ueb_g2_decode,",Isbn 0-14-300414-;X"
+lu_0020,Section I. 1,Sec;n I4 1,ueb_g2_decode,Sec;n I4 1
+lu_0021,Section I.1,Sec;n I41,ueb_g2_decode,Sec;n I41
+lu_0022,"Section I, 1",Sec;n I1 1,ueb_g2_decode,Sec;n I1 1
+lu_0023,"Section I,1",Sec;n I11,ueb_g2_decode,Sec;n I11
+lu_0024,Section II. 2,"Sec;n ,Ii4 2",ueb_g2_decode,"Sec;n ,Ii4 2"
+lu_0025,Section III.2,"Sec;n ,Iii42",ueb_g2_decode,"Sec;n ,Iii42"
+lu_0026,"Section II, 3","Sec;n ,Ii1 3",ueb_g2_decode,"Sec;n ,Ii1 3"
+lu_0027,"Section III,3","Sec;n ,Iii13",ueb_g2_decode,"Sec;n ,Iii13"
+lu_0028,"(x, 4)","""<;x1 4"">",ueb_g2_decode,"""<;x1 4"">"
+lu_0029,"(x,4)","""<x14"">",ueb_g2_decode,"""<x14"">"
+lu_0030,ABC DEFG HIJ,",,Abc defg hij,'",ueb_g2_decode,",,Abc defg hij,'"
+lu_0031,ABC 456G HIJ,",,Abc 456;g hij,'",ueb_g2_decode,",,Abc 456;g hij,'"
+lu_0032,ABC 45FG HIJ,",,Abc 45;fg hij,'",ueb_g2_decode,",,Abc 45;fg hij,'"
+lu_0033,ABC 4EFG HIJ,",,Abc 4;efg hij,'",ueb_g2_decode,",,Abc 4;efg hij,'"
+lu_0034,AB123456G DWP CR,",,Ab123456;g dwp cr,'",ueb_g2_decode,",,Ab123456;g dwp cr,'"
+lu_0035,B.C.,B4C4,ueb_g2_decode,B4C4
+lu_0036,Hush. Keep Quiet!,Hu%4 Keep Quiet6,ueb_g2_decode,Hu%4 Keep Quiet6
+lu_0037,C. O. Linkletter,;C4 O4 L9klett},ueb_g2_decode,;C4 O4 L9klett}
+lu_0038,M MacPherson and O O'Hara,;M MacPh}son & O O'H>a,ueb_g2_decode,;M MacPh}son & O O'H>a
+lu_0039,'Twas Dr. Hamilton-Hall.,'Twas Dr4 Hamilton-Hall4,ueb_g2_decode,'Twas Dr4 Hamilton-Hall4
+lu_0040,Father Edmond Anderson,",""f ,$mond ,&}son",ueb_g2_decode,",""f ,$mond ,&}son"
+lu_0041,"Today, Mr Will Just visited us.",Td1 Mr W J visit$ u4,ueb_g2_decode,Td1 Mr W J visit$ u4
+lu_0042,His name is Thomas.,",8 ""n is ,?omas4",ueb_g2_decode,",8 ""n is ,?omas4"
+lu_0043,Étude,",~/etude",ueb_g2_decode,",~/etude"
+lu_0044,Voyage À Nice,"Voyage ,~*a Nice",ueb_g2_decode,"Voyage ,~*a Nice"
+lu_0045,PARLIAMENT,",P>lia;t",ueb_g2_decode,",P>lia;t"
+lu_0046,FRANÇOIS,",Fran~&cois",ueb_g2_decode,",Fran~&cois"
+lu_0047,DipTP,"Dip,Tp",ueb_g2_decode,"Dip,Tp"
+lu_0048,"""GO quickly and TAKE CARE!""","8,G qkly & ,Take ,C>e60",ueb_g2_decode,"8,G qkly & ,Take ,C>e60"
+lu_0049,ANGLO-SAXON,",Anglo-,Saxon",ueb_g2_decode,",Anglo-,Saxon"
+lu_0050,McGRAW-HILL,"Mc,Graw-,Hill",ueb_g2_decode,"Mc,Graw-,Hill"
+lu_0051,MERRY-GO-ROUND,",M}ry-,G-,R.d",ueb_g2_decode,",M}ry-,G-,R.d"
+lu_0052,UPPERCASE-lowercase,",Upp}case-l{}case",ueb_g2_decode,",Upp}case-l{}case"
+lu_0053,LITTLE-RED-RIDING-HOOD-type tales,",Ll-,R$-,Rid+-,Hood-type tales",ueb_g2_decode,",Ll-,R$-,Rid+-,Hood-type tales"
+lu_0054,The d'ARTAGNAN Romances,",! d',,>tagnan Rom.es",ueb_g2_decode,",! d',,>tagnan Rom.es"
+lu_0055,O'SULLIVAN,"O',Sullivan",ueb_g2_decode,"O',Sullivan"
+lu_0056,DON'T,",Don'T",ueb_g2_decode,",Don'T"
+lu_0057,THAT'S,",T'S",ueb_g2_decode,",T'S"
+lu_0058,SHE'LL,",,%e',Ll",ueb_g2_decode,",,%e',Ll"
+lu_0059,JACK'S FO'C'S'LE,",Jack'S ,Fo'C'S',Le",ueb_g2_decode,",Jack'S ,Fo'C'S',Le"
+lu_0060,WELCOME TO McDONALD'S,",Welcome ,To Mc,Donald'S",ueb_g2_decode,",Welcome ,To Mc,Donald'S"
+lu_0061,OK'd,",Ok'd",ueb_g2_decode,",Ok'd"
+lu_0062,RSVP or R.S.V.P.,",Rsvp or R4S4V4P4",ueb_g2_decode,",Rsvp or R4S4V4P4"
+lu_0063,HOTELS.COM,",Hotels4,Com",ueb_g2_decode,",Hotels4,Com"
+lu_0064,The N.A.S.D.A.Q. News,",! N4A4S4D4A4Q4 News",ueb_g2_decode,",! N4A4S4D4A4Q4 News"
+lu_0065,BA(Oxon),",Ba""<Oxon"">",ueb_g2_decode,",Ba""<Oxon"">"
+lu_0066,(R)AC,"""<R"">,Ac",ueb_g2_decode,"""<R"">,Ac"
+lu_0067,WIND(ward),",W9d""<w>d"">",ueb_g2_decode,",W9d""<w>d"">"
+lu_0068,AT&T,",At`&T",ueb_g2_decode,",At`&T"
+lu_0069,McDONALD@xyz.com,"Mc,Donald`axyz4com",ueb_g2_decode,"Mc,Donald`axyz4com"
+lu_0070,SWIFT & CO.,",Swift `& ,Co4",ueb_g2_decode,",Swift `& ,Co4"
+lu_0071,CAUTION: WET PAINT!,",,Cau;n3 wet pa9t6,'",ueb_g2_decode,",,Cau;n3 wet pa9t6,'"
+lu_0072,Please KEEP OFF THE GRASS in this area.,"Pl1se ,,Keep (f ! grass,' 9 ? >ea4",ueb_g2_decode,"Pl1se ,,Keep (f ! grass,' 9 ? >ea4"
+lu_0073,THE BBC AFRICA NEWS,",,,! bbc africa news,'",ueb_g2_decode,",,,! bbc africa news,'"
+lu_0074,PROUD TO BE A ΦΒΚ,",,Pr|d to 2 a .f.b.k,'",ueb_g2_decode,",,Pr|d to 2 a .f.b.k,'"
+lu_0075,FOR SALE: 1975 FIREBIRD,",,,= sale3 1975 firebird,'",ueb_g2_decode,",,,= sale3 1975 firebird,'"
+lu_0076,A SELF-MADE MAN,",,A self-made man,'",ueb_g2_decode,",,A self-made man,'"
+lu_0077,A.A. (ALAN ALEXANDER) MILNE,",,A4a4 ""<alan alex&}""> milne,'",ueb_g2_decode,",,A4a4 ""<alan alex&}""> milne,'"
+lu_0078,STOP RUNNING NOW! It's dangerous.,",,,/op runn+ n{6,' X's dang}|s4",ueb_g2_decode,",,,/op runn+ n{6,' X's dang}|s4"
+lu_0079,IT'S A HOAX! (APRIL FOOL!),",,X's a hoax6 ""<april fool6"">,'",ueb_g2_decode,",,X's a hoax6 ""<april fool6"">,'"
+lu_0080,ABCs,",Abc,'s",ueb_g2_decode,",Abc,'s"
+lu_0081,WASPs,",Wasp,'s",ueb_g2_decode,",Wasp,'s"
+lu_0082,WALKing,",Walk,'+",ueb_g2_decode,",Walk,'+"
+lu_0083,unSELFish,"un,Self,'i%",ueb_g2_decode,"un,Self,'i%"
+lu_0084,XXIInd,",Xxii,'nd",ueb_g2_decode,",Xxii,'nd"
+lu_0085,VIIb,",Vii,'b",ueb_g2_decode,",Vii,'b"
+lu_0086,The two CEOs met in our CEO's office.,",! two ,Ceo,'s met 9 |r ,Ceo's (fice4",ueb_g2_decode,",! two ,Ceo,'s met 9 |r ,Ceo's (fice4"
+lu_0087,"""So?""",8S80,ueb_g2_decode,8S80
+lu_0088,(July),"""<July"">",ueb_g2_decode,"""<July"">"
+lu_0089,'TIS,"',Tis",ueb_g2_decode,"',Tis"
+lu_0090,"""SHHHH!""","8,,%hhh60",ueb_g2_decode,"8,,%hhh60"
+lu_0091,Hippity-HOP,"Hipp;y-,Hop",ueb_g2_decode,"Hipp;y-,Hop"
+lu_0092,ÉTUDE,",,~/etude",ueb_g2_decode,",,~/etude"
+lu_0093,Unified English Braille (UEB),"Unifi$ ,5gli% Brl ""<,Ueb"">",ueb_g2_decode,"Unifi$ ,5gli% Brl ""<,Ueb"">"
+lu_0094,AC SMITH,";,Ac ,Smi?",ueb_g2_decode,";,Ac ,Smi?"
+lu_0095,V-NECK SWEATERS FOR SALE!,";,,V-neck sw1t}s = sale6,'",ueb_g2_decode,";,,V-neck sw1t}s = sale6,'"
+lu_0096,XI XIth,",Xi ,Xi,'?",ueb_g2_decode,",Xi ,Xi,'?"
+lu_0097,XXXI XXXIst,",Xxxi ,Xxxi,'/",ueb_g2_decode,",Xxxi ,Xxxi,'/"
+lu_0098,OK OKd,",Ok ,Ok,'d",ueb_g2_decode,",Ok ,Ok,'d"
+lu_0099,CD CDs,";,Cd ,Cd,'s",ueb_g2_decode,";,Cd ,Cd,'s"
+lu_0100,RV: Recreational Vehicle–Let's go RVing.,",Rv3 Recr1;nal Vehicle,-Let's g ,Rv,'+4",ueb_g2_decode,",Rv3 Recr1;nal Vehicle,-Let's g ,Rv,'+4"
+lu_0101,www.BLASTsoundmachine.com,"www4,Bla/,'s.dma*9e4com",ueb_g2_decode,"www4,Bla/,'s.dma*9e4com"
+lu_0102,preSENT,"pre,S5t",ueb_g2_decode,"pre,S5t"
+lu_0103,PRESent,",Pres,'5t",ueb_g2_decode,",Pres,'5t"
+lu_0104,WoooooooOOOOOOOOooooooo (a ghostly sound),"Wooooooo,Oooooooo,'ooooooo ""<a <o/ly s.d"">",ueb_g2_decode,"Wooooooo,Oooooooo,'ooooooo ""<a <o/ly s.d"">"
+lu_0105,When will Will meet us?,",:5 w W meet u8",ueb_g2_decode,",:5 w W meet u8"
+lu_0106,Every child from here knows Mr More.,"E * f ""h ""ks Mr M4",ueb_g2_decode,"E * f ""h ""ks Mr M4"
+lu_0107,"""do re mi fa so""",8d re mi fa s0,ueb_g2_decode,8d re mi fa s0
+lu_0108,That is quite fair and very just.,T is q fair & v j4,ueb_g2_decode,T is q fair & v j4
+lu_0109,"""People, people who need people""",8P1 p :o ne$ p0,ueb_g2_decode,8P1 p :o ne$ p0
+lu_0110,I do not like that watering-can!,I d n l t wat}+-c6,ueb_g2_decode,I d n l t wat}+-c6
+lu_0111,"But, would the people rather do the can-can for us?",B1 wd ! p r d ! c-c = u8,ueb_g2_decode,B1 wd ! p r d ! c-c = u8
+lu_0112,"""You so-and-so–go away!""","8Y s-&-s,-g away60",ueb_g2_decode,"8Y s-&-s,-g away60"
+lu_0113,"""I do have some–but I would like more!""","8I d h ""s,-b I wd l m60",ueb_g2_decode,"8I d h ""s,-b I wd l m60"
+lu_0114,last will and testament,la/ w & te/a;t,ueb_g2_decode,la/ w & te/a;t
+lu_0115,a child-like manner,a *-l mann},ueb_g2_decode,a *-l mann}
+lu_0116,will-o'-the-wisp,w-o'-!-wisp,ueb_g2_decode,w-o'-!-wisp
+lu_0117,"""Do-It-Yourself""",8D-X-Yrf0,ueb_g2_decode,8D-X-Yrf0
+lu_0118,come from–not go to,"come f,-n g to",ueb_g2_decode,"come f,-n g to"
+lu_0119,(just say so),"""<j say s"">",ueb_g2_decode,"""<j say s"">"
+lu_0120,As You Like It,Z Y L X,ueb_g2_decode,Z Y L X
+lu_0121,likes and dislikes,likes & 4likes,ueb_g2_decode,likes & 4likes
+lu_0122,childlike and likeness,*ildlike & like;s,ueb_g2_decode,*ildlike & like;s
+lu_0123,moreover and evermore,"moreov} & ""emore",ueb_g2_decode,"moreov} & ""emore"
+lu_0124,"""but, no buts""",8b1 no buts0,ueb_g2_decode,8b1 no buts0
+lu_0125,peoples,peoples,ueb_g2_decode,peoples
+lu_0126,quite/very,quite_/v}y,ueb_g2_decode,quite_/v}y
+lu_0127,d'you,d'y|,ueb_g2_decode,d'y|
+lu_0128,t'do,t'do,ueb_g2_decode,t'do
+lu_0129,t'have,t'have,ueb_g2_decode,t'have
+lu_0130,it'd,x'd,ueb_g2_decode,x'd
+lu_0131,you'd,y'd,ueb_g2_decode,y'd
+lu_0132,it'll,x'll,ueb_g2_decode,x'll
+lu_0133,that'll,t'll,ueb_g2_decode,t'll
+lu_0134,you'll,y'll,ueb_g2_decode,y'll
+lu_0135,you're,y're,ueb_g2_decode,y're
+lu_0136,people's,p's,ueb_g2_decode,p's
+lu_0137,so's,s's,ueb_g2_decode,s's
+lu_0138,you's,y's,ueb_g2_decode,y's
+lu_0139,can't,c't,ueb_g2_decode,c't
+lu_0140,you've,y've,ueb_g2_decode,y've
+lu_0141,Thomas More's life,",?omas M's life",ueb_g2_decode,",?omas M's life"
+lu_0142,Mr Just's house,Mr J's h|se,ueb_g2_decode,Mr J's h|se
+lu_0143,I can–you can't!,"I c,-y c't6",ueb_g2_decode,"I c,-y c't6"
+lu_0144,"""You've done it!""","8Y've d""o x60",ueb_g2_decode,"8Y've d""o x60"
+lu_0145,more'n,more'n,ueb_g2_decode,more'n
+lu_0146,you'm,y|'m,ueb_g2_decode,y|'m
+lu_0147,CAN Network,",C Net""w",ueb_g2_decode,",C Net""w"
+lu_0148,GO Train,",G Tra9",ueb_g2_decode,",G Tra9"
+lu_0149,Which CHILD-PROOF lock?,",: ,,*-,Pro( lock8",ueb_g2_decode,",: ,,*-,Pro( lock8"
+lu_0150,still-life and whiskey-still,/-life & :iskey-/,ueb_g2_decode,/-life & :iskey-/
+lu_0151,(This way out!),"""<,? way |6"">",ueb_g2_decode,"""<,? way |6"">"
+lu_0152,"""Which way out?""","8,: way |80",ueb_g2_decode,"8,: way |80"
+lu_0153,childish,*ildi%,ueb_g2_decode,*ildi%
+lu_0154,grandchild,gr&*ild,ueb_g2_decode,gr&*ild
+lu_0155,outcome,|tcome,ueb_g2_decode,|tcome
+lu_0156,without,)|t,ueb_g2_decode,)|t
+lu_0157,shallot,%allot,ueb_g2_decode,%allot
+lu_0158,shallow,%all{,ueb_g2_decode,%all{
+lu_0159,shilly-shally,%illy-%ally,ueb_g2_decode,%illy-%ally
+lu_0160,standstill,/&/ill,ueb_g2_decode,/&/ill
+lu_0161,thistle,?i/le,ueb_g2_decode,?i/le
+lu_0162,whichever,":i*""e",ueb_g2_decode,":i*""e"
+lu_0163,this/that,?is_/?at,ueb_g2_decode,?is_/?at
+lu_0164,Stillson wrench,",/illson wr5*",ueb_g2_decode,",/illson wr5*"
+lu_0165,www.universalchildcare.ca,www4univ}sal*ildc>e4ca,ueb_g2_decode,www4univ}sal*ildc>e4ca
+lu_0166,this'd,?'d,ueb_g2_decode,?'d
+lu_0167,which'll,:'ll,ueb_g2_decode,:'ll
+lu_0168,still's,/'s,ueb_g2_decode,/'s
+lu_0169,which've,:'ve,ueb_g2_decode,:'ve
+lu_0170,Julia Child's recipe,"Julia ,*'s recipe",ueb_g2_decode,"Julia ,*'s recipe"
+lu_0171,this'n,?is'n,ueb_g2_decode,?is'n
+lu_0172,andante,&ante,ueb_g2_decode,&ante
+lu_0173,England,",5gl&",ueb_g2_decode,",5gl&"
+lu_0174,grandad,gr&ad,ueb_g2_decode,gr&ad
+lu_0175,grandmother,"gr&""m",ueb_g2_decode,"gr&""m"
+lu_0176,meander,me&},ueb_g2_decode,me&}
+lu_0177,merchandise,m}*&ise,ueb_g2_decode,m}*&ise
+lu_0178,pandemic,p&emic,ueb_g2_decode,p&emic
+lu_0179,pandowdy,p&{dy,ueb_g2_decode,p&{dy
+lu_0180,afford,af=d,ueb_g2_decode,af=d
+lu_0181,comfort,com=t,ueb_g2_decode,com=t
+lu_0182,forgo,=go,ueb_g2_decode,=go
+lu_0183,Fortran,",=tran",ueb_g2_decode,",=tran"
+lu_0184,Pforzheimer,P=zheim},ueb_g2_decode,P=zheim}
+lu_0185,pianoforte,piano=te,ueb_g2_decode,piano=te
+lu_0186,coffee,c(fee,ueb_g2_decode,c(fee
+lu_0187,Geoffrey,Ge(frey,ueb_g2_decode,Ge(frey
+lu_0188,lofty,l(ty,ueb_g2_decode,l(ty
+lu_0189,often,(t5,ueb_g2_decode,(t5
+lu_0190,profane,pr(ane,ueb_g2_decode,pr(ane
+lu_0191,roof,ro(,ueb_g2_decode,ro(
+lu_0192,sofa,s(a,ueb_g2_decode,s(a
+lu_0193,tofu,t(u,ueb_g2_decode,t(u
+lu_0194,whereof,""":(",ueb_g2_decode,""":("
+lu_0195,Athens,A!ns,ueb_g2_decode,A!ns
+lu_0196,bathed,ba!d,ueb_g2_decode,ba!d
+lu_0197,bother,bo!r,ueb_g2_decode,bo!r
+lu_0198,Esther,Es!r,ueb_g2_decode,Es!r
+lu_0199,furthest,fur!/,ueb_g2_decode,fur!/
+lu_0200,nevertheless,"n""e!.s",ueb_g2_decode,"n""e!.s"
+lu_0201,scythe,scy!,ueb_g2_decode,scy!
+lu_0202,thee,!e,ueb_g2_decode,!e
+lu_0203,Matthew,Mat!w,ueb_g2_decode,Mat!w
+lu_0204,Parthenon,P>!non,ueb_g2_decode,P>!non
+lu_0205,theatre,!atre,ueb_g2_decode,!atre
+lu_0206,Theresa,",!resa",ueb_g2_decode,",!resa"
+lu_0207,forthwith,=?),ueb_g2_decode,=?)
+lu_0208,withe,)e,ueb_g2_decode,)e
+lu_0209,Swithin,S)9,ueb_g2_decode,S)9
+lu_0210,without,)|t,ueb_g2_decode,)|t
+lu_0211,with a knowledge of and respect for the rules,) a k ( & respect = ! rules,ueb_g2_decode,) a k ( & respect = ! rules
+lu_0212,Thelma's roof will withstand the force of the wind and/or the rain.,",!lma's ro( w )/& ! =ce ( ! w9d &_/or ! ra94",ueb_g2_decode,",!lma's ro( w )/& ! =ce ( ! w9d &_/or ! ra94"
+lu_0213,Andy Vandyke proofread the profile.,",&y V&yke pro(r1d ! pr(ile4",ueb_g2_decode,",&y V&yke pro(r1d ! pr(ile4"
+lu_0214,out-of-the-way,|-(-!-way,ueb_g2_decode,|-(-!-way
+lu_0215,chifforobe,*i6orobe,ueb_g2_decode,*i6orobe
+lu_0216,twofold,twofold,ueb_g2_decode,twofold
+lu_0217,insofar,9sof>,ueb_g2_decode,9sof>
+lu_0218,biofeedback,biofe$back,ueb_g2_decode,biofe$back
+lu_0219,microfilm,microfilm,ueb_g2_decode,microfilm
+lu_0220,apartheid,"a""pheid",ueb_g2_decode,"a""pheid"
+lu_0221,northeast,nor?1/,ueb_g2_decode,nor?1/
+lu_0222,thence,?;e,ueb_g2_decode,?;e
+lu_0223,sweetheart,sweethe>t,ueb_g2_decode,sweethe>t
+lu_0224,Sontheimer,Sontheim},ueb_g2_decode,Sontheim}
+lu_0225,aerial,a}ial,ueb_g2_decode,a}ial
+lu_0226,aghast,a<a/,ueb_g2_decode,a<a/
+lu_0227,anteroom,ant}oom,ueb_g2_decode,ant}oom
+lu_0228,argh!,><6,ueb_g2_decode,><6
+lu_0229,bear,be>,ueb_g2_decode,be>
+lu_0230,boredom,bor$om,ueb_g2_decode,bor$om
+lu_0231,brougham,br|<am,ueb_g2_decode,br|<am
+lu_0232,cheddar,*$d>,ueb_g2_decode,*$d>
+lu_0233,cherished,*}i%$,ueb_g2_decode,*}i%$
+lu_0234,cough,c|<,ueb_g2_decode,c|<
+lu_0235,coupon,c|pon,ueb_g2_decode,c|pon
+lu_0236,cringed,cr+$,ueb_g2_decode,cr+$
+lu_0237,derailed,d}ail$,ueb_g2_decode,d}ail$
+lu_0238,dingy,d+y,ueb_g2_decode,d+y
+lu_0239,dough,d|<,ueb_g2_decode,d|<
+lu_0240,Edith,",$i?",ueb_g2_decode,",$i?"
+lu_0241,e'er,e'},ueb_g2_decode,e'}
+lu_0242,erase,}ase,ueb_g2_decode,}ase
+lu_0243,Erie,",}ie",ueb_g2_decode,",}ie"
+lu_0244,error,}ror,ueb_g2_decode,}ror
+lu_0245,freedom,fre$om,ueb_g2_decode,fre$om
+lu_0246,ginger,g+},ueb_g2_decode,g+}
+lu_0247,gingham,g+ham,ueb_g2_decode,g+ham
+lu_0248,Goering,Go}+,ueb_g2_decode,Go}+
+lu_0249,hierarchy,hi}>*y,ueb_g2_decode,hi}>*y
+lu_0250,laugh,lau<,ueb_g2_decode,lau<
+lu_0251,lingerie,l+}ie,ueb_g2_decode,l+}ie
+lu_0252,lowdown,l{d{n,ueb_g2_decode,l{d{n
+lu_0253,malediction,mal$ic;n,ueb_g2_decode,mal$ic;n
+lu_0254,meningitis,m5+itis,ueb_g2_decode,m5+itis
+lu_0255,merchandising,m}*&is+,ueb_g2_decode,m}*&is+
+lu_0256,meringue,m}+ue,ueb_g2_decode,m}+ue
+lu_0257,mistake,mi/ake,ueb_g2_decode,mi/ake
+lu_0258,monowheel,mono:eel,ueb_g2_decode,mono:eel
+lu_0259,nightingale,ni<t+ale,ueb_g2_decode,ni<t+ale
+lu_0260,oedema,o$ema,ueb_g2_decode,o$ema
+lu_0261,'ounds,'|nds,ueb_g2_decode,'|nds
+lu_0262,"""Ow!""","8,{60",ueb_g2_decode,"8,{60"
+lu_0263,(par),"""<p>"">",ueb_g2_decode,"""<p>"">"
+lu_0264,predated,pr$at$,ueb_g2_decode,pr$at$
+lu_0265,psst,ps/,ueb_g2_decode,ps/
+lu_0266,redistribute,r$i/ribute,ueb_g2_decode,r$i/ribute
+lu_0267,reroute,r}|te,ueb_g2_decode,r}|te
+lu_0268,riflery,rifl}y,ueb_g2_decode,rifl}y
+lu_0269,sheer,%e},ueb_g2_decode,%e}
+lu_0270,Singh,S+h,ueb_g2_decode,S+h
+lu_0271,sou'east,s|'ea/,ueb_g2_decode,s|'ea/
+lu_0272,'struth,'/ru?,ueb_g2_decode,'/ru?
+lu_0273,Thomas,",?omas",ueb_g2_decode,",?omas"
+lu_0274,thorough,?or|<,ueb_g2_decode,?or|<
+lu_0275,thou,?|,ueb_g2_decode,?|
+lu_0276,toward,t{>d,ueb_g2_decode,t{>d
+lu_0277,trebled,trebl$,ueb_g2_decode,trebl$
+lu_0278,wharf,:>f,ueb_g2_decode,:>f
+lu_0279,whistle,:i/le,ueb_g2_decode,:i/le
+lu_0280,xxist,xxi/,ueb_g2_decode,xxi/
+lu_0281,ædile,a~6edile,ueb_g2_decode,a~6edile
+lu_0282,anthill,anthill,ueb_g2_decode,anthill
+lu_0283,blessèd,b.s~*ed,ueb_g2_decode,b.s~*ed
+lu_0284,deshabille,deshabille,ueb_g2_decode,deshabille
+lu_0285,foghorn,foghorn,ueb_g2_decode,foghorn
+lu_0286,kilowatt,kilowatt,ueb_g2_decode,kilowatt
+lu_0287,noway,noway,ueb_g2_decode,noway
+lu_0288,painstaking,pa9stak+,ueb_g2_decode,pa9stak+
+lu_0289,parenthood,p>5thood,ueb_g2_decode,p>5thood
+lu_0290,rawhide,rawhide,ueb_g2_decode,rawhide
+lu_0291,shanghai,%anghai,ueb_g2_decode,%anghai
+lu_0292,Stalingrad,",/al9grad",ueb_g2_decode,",/al9grad"
+lu_0293,viceregal,viceregal,ueb_g2_decode,viceregal
+lu_0294,St Stephen,"St ,/eph5",ueb_g2_decode,"St ,/eph5"
+lu_0295,ch-ch-chilly,ch-ch-*illy,ueb_g2_decode,ch-ch-*illy
+lu_0296,Shhh!,",%hh6",ueb_g2_decode,",%hh6"
+lu_0297,th'n,?'n,ueb_g2_decode,?'n
+lu_0298,Ste Anne,",/e Anne",ueb_g2_decode,",/e Anne"
+lu_0299,finger,f+},ueb_g2_decode,f+}
+lu_0300,ginger,g+},ueb_g2_decode,g+}
+lu_0301,singe,s+e,ueb_g2_decode,s+e
+lu_0302,singeing,s+e+,ueb_g2_decode,s+e+
+lu_0303,sting,/+,ueb_g2_decode,/+
+lu_0304,stinging,/++,ueb_g2_decode,/++
+lu_0305,brown(ing),"br{n""<+"">",ueb_g2_decode,"br{n""<+"">"
+lu_0306,SmithInge,"Smi?,+e",ueb_g2_decode,"Smi?,+e"
+lu_0307,Ch'ing Dynasty,",*'+ Dyna/y",ueb_g2_decode,",*'+ Dyna/y"
+lu_0308,ingot,9got,ueb_g2_decode,9got
+lu_0309,Ingoldsby,",9goldsby",ueb_g2_decode,",9goldsby"
+lu_0310,ingredients,9gr$i5ts,ueb_g2_decode,9gr$i5ts
+lu_0311,ingrown,9gr{n,ueb_g2_decode,9gr{n
+lu_0312,to-ing and fro-ing,to-9g & fro-9g,ueb_g2_decode,to-9g & fro-9g
+lu_0313,Smith–Inge,"Smi?,-,9ge",ueb_g2_decode,"Smi?,-,9ge"
+lu_0314,to be,to 2,ueb_g2_decode,to 2
+lu_0315,his car,8 c>,ueb_g2_decode,8 c>
+lu_0316,Be good.,",2 gd4",ueb_g2_decode,",2 gd4"
+lu_0317,HIS DOG,",,8 ,Dog",ueb_g2_decode,",,8 ,Dog"
+lu_0318,BE ALL THAT YOU CAN BE,",,,2 all t y c 2,'",ueb_g2_decode,",,,2 all t y c 2,'"
+lu_0319,at my (not his) house,"at my ""<n 8""> h|se",ueb_g2_decode,"at my ""<n 8""> h|se"
+lu_0320,He is [was]; they are [were].,He is .<0.>2 !y >e .<7.>4,ueb_g2_decode,He is .<0.>2 !y >e .<7.>4
+lu_0321,(Were there many?),"""<,7 ""! _m8"">",ueb_g2_decode,"""<,7 ""! _m8"">"
+lu_0322,his/her,his_/h},ueb_g2_decode,his_/h}
+lu_0323,What will you be?,",:at w y be8",ueb_g2_decode,",:at w y be8"
+lu_0324,would-be actor,wd-be actor,ueb_g2_decode,wd-be actor
+lu_0325,his-and-hers towels,his-&-h}s t{els,ueb_g2_decode,his-&-h}s t{els
+lu_0326,That were–I mean was–mine.,"T w}e,-I m1n was,-m9e4",ueb_g2_decode,"T w}e,-I m1n was,-m9e4"
+lu_0327,"""Be safe.""",8Be safe40,ueb_g2_decode,8Be safe40
+lu_0328,it was enough,x 0 5,ueb_g2_decode,x 0 5
+lu_0329,GIVE MORE THAN ENOUGH,",,Give m ?an 5,'",ueb_g2_decode,",,Give m ?an 5,'"
+lu_0330,Buy meat (enough for 2).,"Buy m1t ""<5 = 2"">4",ueb_g2_decode,"Buy m1t ""<5 = 2"">4"
+lu_0331,Enough's happened.,",5's happ5$4",ueb_g2_decode,",5's happ5$4"
+lu_0332,Mum's had-enough mood,Mum's _h-5 mood,ueb_g2_decode,Mum's _h-5 mood
+lu_0333,www.enoughforall.org,www45|<=all4org,ueb_g2_decode,www45|<=all4org
+lu_0334,enough/sufficient,5|<_/su6ici5t,ueb_g2_decode,5|<_/su6ici5t
+lu_0335,not in here,"n 9 ""h",ueb_g2_decode,"n 9 ""h"
+lu_0336,In or out?,",9 or |8",ueb_g2_decode,",9 or |8"
+lu_0337,GO ALL IN,",,G all 9,'",ueb_g2_decode,",,G all 9,'"
+lu_0338,in't,9't,ueb_g2_decode,9't
+lu_0339,mother-in-law,"""m-9-law",ueb_g2_decode,"""m-9-law"
+lu_0340,listen-in,li/5-9,ueb_g2_decode,li/5-9
+lu_0341,Listen!—In this case …,"Li/56,-,9 ? case 444",ueb_g2_decode,"Li/56,-,9 ? case 444"
+lu_0342,"""teach-in""",8t1*-90,ueb_g2_decode,8t1*-90
+lu_0343,IN-DEPTH,",,9-,Dep?",ueb_g2_decode,",,9-,Dep?"
+lu_0344,"(""In no way."")","""<8,9 no way40"">",ueb_g2_decode,"""<8,9 no way40"">"
+lu_0345,<in file>,`<9 file`>,ueb_g2_decode,`<9 file`>
+lu_0346,in/out,9_/|t,ueb_g2_decode,9_/|t
+lu_0347,"Come in, stay in.",Come in1 /ay in4,ueb_g2_decode,Come in1 /ay in4
+lu_0348,"""In any case""",8In any case0,ueb_g2_decode,8In any case0
+lu_0349,It was enough–more than enough.,"X 0 5,-m ?an 5|<4",ueb_g2_decode,"X 0 5,-m ?an 5|<4"
+lu_0350,We had enough–5.,"We _h 5,-54",ueb_g2_decode,"We _h 5,-54"
+lu_0351,Take enough.,Take 5|<4,ueb_g2_decode,Take 5|<4
+lu_0352,beatitude,2atitude,ueb_g2_decode,2atitude
+lu_0353,Beatrice,",2atrice",ueb_g2_decode,",2atrice"
+lu_0354,become,2come,ueb_g2_decode,2come
+lu_0355,begonia,2gonia,ueb_g2_decode,2gonia
+lu_0356,behemoth,2hemo?,ueb_g2_decode,2hemo?
+lu_0357,being,2+,ueb_g2_decode,2+
+lu_0358,beneficent,2nefic5t,ueb_g2_decode,2nefic5t
+lu_0359,beta,2ta,ueb_g2_decode,2ta
+lu_0360,first-begotten,f/-2gott5,ueb_g2_decode,f/-2gott5
+lu_0361,air-conditioned,air-3di;n$,ueb_g2_decode,air-3di;n$
+lu_0362,concept,3cept,ueb_g2_decode,3cept
+lu_0363,congress,3gress,ueb_g2_decode,3gress
+lu_0364,control,3trol,ueb_g2_decode,3trol
+lu_0365,re-connect,re-3nect,ueb_g2_decode,re-3nect
+lu_0366,disaster,4a/},ueb_g2_decode,4a/}
+lu_0367,disco,4co,ueb_g2_decode,4co
+lu_0368,dishonest,"4h""o/",ueb_g2_decode,"4h""o/"
+lu_0369,dislike,4like,ueb_g2_decode,4like
+lu_0370,dissect,4sect,ueb_g2_decode,4sect
+lu_0371,distance,4t.e,ueb_g2_decode,4t.e
+lu_0372,self-discipline,self-4cipl9e,ueb_g2_decode,self-4cipl9e
+lu_0373,beckon,beckon,ueb_g2_decode,beckon
+lu_0374,been,be5,ueb_g2_decode,be5
+lu_0375,belligerent,bellig}5t,ueb_g2_decode,bellig}5t
+lu_0376,benefit,b5efit,ueb_g2_decode,b5efit
+lu_0377,best,be/,ueb_g2_decode,be/
+lu_0378,bethel,be!l,ueb_g2_decode,be!l
+lu_0379,better,bett},ueb_g2_decode,bett}
+lu_0380,unbecoming,unbecom+,ueb_g2_decode,unbecom+
+lu_0381,conch,con*,ueb_g2_decode,con*
+lu_0382,cone,"c""o",ueb_g2_decode,"c""o"
+lu_0383,coneys,"c""oys",ueb_g2_decode,"c""oys"
+lu_0384,inconvenient,9conv5i5t,ueb_g2_decode,9conv5i5t
+lu_0385,disc,disc,ueb_g2_decode,disc
+lu_0386,dish,di%,ueb_g2_decode,di%
+lu_0387,dishevel,di%evel,ueb_g2_decode,di%evel
+lu_0388,dispirited,di_s$,ueb_g2_decode,di_s$
+lu_0389,disulphide,disulphide,ueb_g2_decode,disulphide
+lu_0390,indistinct,9di/9ct,ueb_g2_decode,9di/9ct
+lu_0391,"""Belinda!""","8,2l9da60",ueb_g2_decode,"8,2l9da60"
+lu_0392,'display will minimise','4play w m9imise',ueb_g2_decode,'4play w m9imise'
+lu_0393,concave/convex,3cave_/convex,ueb_g2_decode,3cave_/convex
+lu_0394,McConnell,McConnell,ueb_g2_decode,McConnell
+lu_0395,O'Connor,O'Connor,ueb_g2_decode,O'Connor
+lu_0396,MetroDisco,MetroDisco,ueb_g2_decode,MetroDisco
+lu_0397,be'ave,be'ave,ueb_g2_decode,be'ave
+lu_0398,be-stow,be-/{,ueb_g2_decode,be-/{
+lu_0399,[be]hold,.<be.>hold,ueb_g2_decode,.<be.>hold
+lu_0400,con(vey),"con""<vey"">",ueb_g2_decode,"con""<vey"">"
+lu_0401,dis'armony,dis'>mony,ueb_g2_decode,dis'>mony
+lu_0402,BeLinda,BeL9da,ueb_g2_decode,BeL9da
+lu_0403,conCUR,"con,Cur",ueb_g2_decode,"con,Cur"
+lu_0404,DisCORD,"Dis,Cord",ueb_g2_decode,"Dis,Cord"
+lu_0405,DISlike,",Dis,'like",ueb_g2_decode,",Dis,'like"
+lu_0406,Conn.,",3n4",ueb_g2_decode,",3n4"
+lu_0407,cont,3t,ueb_g2_decode,3t
+lu_0408,dist.,4t4,ueb_g2_decode,4t4
+lu_0409,Belg,Belg,ueb_g2_decode,Belg
+lu_0410,Con.,Con4,ueb_g2_decode,Con4
+lu_0411,abbé,a2~/e,ueb_g2_decode,a2~/e
+lu_0412,accept,a3ept,ueb_g2_decode,a3ept
+lu_0413,account,a3.t,ueb_g2_decode,a3.t
+lu_0414,acreage,acr1ge,ueb_g2_decode,acr1ge
+lu_0415,affirm,a6irm,ueb_g2_decode,a6irm
+lu_0416,aggressive,a7ressive,ueb_g2_decode,a7ressive
+lu_0417,agreeable,agre1ble,ueb_g2_decode,agre1ble
+lu_0418,areas,>1s,ueb_g2_decode,>1s
+lu_0419,arpeggio,>pe7io,ueb_g2_decode,>pe7io
+lu_0420,baccalaureate,ba3alaur1te,ueb_g2_decode,ba3alaur1te
+lu_0421,beat,b1t,ueb_g2_decode,b1t
+lu_0422,begging,be7+,ueb_g2_decode,be7+
+lu_0423,borealis,bor1lis,ueb_g2_decode,bor1lis
+lu_0424,bubble,bu2le,ueb_g2_decode,bu2le
+lu_0425,bureau,bur1u,ueb_g2_decode,bur1u
+lu_0426,Caribbean,C>i21n,ueb_g2_decode,C>i21n
+lu_0427,caveat,cav1t,ueb_g2_decode,cav1t
+lu_0428,create,cr1te,ueb_g2_decode,cr1te
+lu_0429,creation,cr1;n,ueb_g2_decode,cr1;n
+lu_0430,disease,41se,ueb_g2_decode,41se
+lu_0431,doggone,"do7""o",ueb_g2_decode,"do7""o"
+lu_0432,eggnog,e7nog,ueb_g2_decode,e7nog
+lu_0433,epicurean,epicur1n,ueb_g2_decode,epicur1n
+lu_0434,flaccid,fla3id,ueb_g2_decode,fla3id
+lu_0435,genealogy,g51logy,ueb_g2_decode,g51logy
+lu_0436,Hanseatic,Hans1tic,ueb_g2_decode,Hans1tic
+lu_0437,head,h1d,ueb_g2_decode,h1d
+lu_0438,Judaean,Juda1n,ueb_g2_decode,Juda1n
+lu_0439,likeable,lik1ble,ueb_g2_decode,lik1ble
+lu_0440,Liliaceae,Liliac1e,ueb_g2_decode,Liliac1e
+lu_0441,lineage,l91ge,ueb_g2_decode,l91ge
+lu_0442,mecca,me3a,ueb_g2_decode,me3a
+lu_0443,Minneapolis,M9n1polis,ueb_g2_decode,M9n1polis
+lu_0444,Montreal,Montr1l,ueb_g2_decode,Montr1l
+lu_0445,motheaten,mo?1t5,ueb_g2_decode,mo?1t5
+lu_0446,muffin,mu69,ueb_g2_decode,mu69
+lu_0447,Neapolitan,N1politan,ueb_g2_decode,N1politan
+lu_0448,northeast,nor?1/,ueb_g2_decode,nor?1/
+lu_0449,occupy,o3upy,ueb_g2_decode,o3upy
+lu_0450,oceanic,oc1nic,ueb_g2_decode,oc1nic
+lu_0451,oleaginous,ol1g9|s,ueb_g2_decode,ol1g9|s
+lu_0452,orgeat,org1t,ueb_g2_decode,org1t
+lu_0453,paean,pa1n,ueb_g2_decode,pa1n
+lu_0454,pancreas,pancr1s,ueb_g2_decode,pancr1s
+lu_0455,peaceable,p1c1ble,ueb_g2_decode,p1c1ble
+lu_0456,peanut,p1nut,ueb_g2_decode,p1nut
+lu_0457,rabbi,ra2i,ueb_g2_decode,ra2i
+lu_0458,really,r1lly,ueb_g2_decode,r1lly
+lu_0459,réchauffé,r~/e*au6~/e,ueb_g2_decode,r~/e*au6~/e
+lu_0460,Seamus,S1mus,ueb_g2_decode,S1mus
+lu_0461,Sean,S1n,ueb_g2_decode,S1n
+lu_0462,seashore,s1%ore,ueb_g2_decode,s1%ore
+lu_0463,Seattle,S1ttle,ueb_g2_decode,S1ttle
+lu_0464,Sheffield,",%e6ield",ueb_g2_decode,",%e6ield"
+lu_0465,sheriffs,%}i6s,ueb_g2_decode,%}i6s
+lu_0466,speakeasy,sp1k1sy,ueb_g2_decode,sp1k1sy
+lu_0467,tableau,tabl1u,ueb_g2_decode,tabl1u
+lu_0468,tobacco,toba3o,ueb_g2_decode,toba3o
+lu_0469,toreador,tor1dor,ueb_g2_decode,tor1dor
+lu_0470,Yeats,Y1ts,ueb_g2_decode,Y1ts
+lu_0471,afford,af=d,ueb_g2_decode,af=d
+lu_0472,appear,appe>,ueb_g2_decode,appe>
+lu_0473,arccosine,>ccos9e,ueb_g2_decode,>ccos9e
+lu_0474,bacchanal,bac*anal,ueb_g2_decode,bac*anal
+lu_0475,bear,be>,ueb_g2_decode,be>
+lu_0476,beatitude,2atitude,ueb_g2_decode,2atitude
+lu_0477,Beatrice,",2atrice",ueb_g2_decode,",2atrice"
+lu_0478,cinéaste,c9~/ea/e,ueb_g2_decode,c9~/ea/e
+lu_0479,coffee,c(fee,ueb_g2_decode,c(fee
+lu_0480,dumbbell,dumbbell,ueb_g2_decode,dumbbell
+lu_0481,'ead,'ead,ueb_g2_decode,'ead
+lu_0482,east,ea/,ueb_g2_decode,ea/
+lu_0483,ebb-tide,ebb-tide,ueb_g2_decode,ebb-tide
+lu_0484,hideaway,hideaway,ueb_g2_decode,hideaway
+lu_0485,idea(s),"idea""<s"">",ueb_g2_decode,"idea""<s"">"
+lu_0486,Leander,Le&},ueb_g2_decode,Le&}
+lu_0487,limeade,limeade,ueb_g2_decode,limeade
+lu_0488,mah-jongg,mah-j;gg,ueb_g2_decode,mah-j;gg
+lu_0489,man-eater,man-eat},ueb_g2_decode,man-eat}
+lu_0490,pineapple,p9eapple,ueb_g2_decode,p9eapple
+lu_0491,robb'd,robb'd,ueb_g2_decode,robb'd
+lu_0492,saccharine,sac*>9e,ueb_g2_decode,sac*>9e
+lu_0493,sea-green,sea-gre5,ueb_g2_decode,sea-gre5
+lu_0494,sheriff's,%}iff's,ueb_g2_decode,%}iff's
+lu_0495,snuff,snuff,ueb_g2_decode,snuff
+lu_0496,sou'east,s|'ea/,ueb_g2_decode,s|'ea/
+lu_0497,subbasement,subbase;t,ueb_g2_decode,subbase;t
+lu_0498,theatre,!atre,ueb_g2_decode,!atre
+lu_0499,CliffSide,CliffSide,ueb_g2_decode,CliffSide
+lu_0500,EggHead,EggH1d,ueb_g2_decode,EggH1d
+lu_0501,MacEACHEN,"Mac,Ea*5",ueb_g2_decode,"Mac,Ea*5"
+lu_0502,SeaWorld,"Sea,_w",ueb_g2_decode,"Sea,_w"
+lu_0503,TEAspoon,",Tea,'spoon",ueb_g2_decode,",Tea,'spoon"
+lu_0504,deactivate,deactivate,ueb_g2_decode,deactivate
+lu_0505,geanticline,geanticl9e,ueb_g2_decode,geanticl9e
+lu_0506,preamble,preamble,ueb_g2_decode,preamble
+lu_0507,reaction,reac;n,ueb_g2_decode,reac;n
+lu_0508,antinode,ant9ode,ueb_g2_decode,ant9ode
+lu_0509,arena,>5a,ueb_g2_decode,>5a
+lu_0510,been,be5,ueb_g2_decode,be5
+lu_0511,begin,2g9,ueb_g2_decode,2g9
+lu_0512,be'ind,be'9d,ueb_g2_decode,be'9d
+lu_0513,benefit,b5efit,ueb_g2_decode,b5efit
+lu_0514,binary,b9>y,ueb_g2_decode,b9>y
+lu_0515,binomial,b9omial,ueb_g2_decode,b9omial
+lu_0516,Blakeney,Blak5ey,ueb_g2_decode,Blak5ey
+lu_0517,Caen,Ca5,ueb_g2_decode,Ca5
+lu_0518,casino,cas9o,ueb_g2_decode,cas9o
+lu_0519,china,*9a,ueb_g2_decode,*9a
+lu_0520,Chopin,",*op9",ueb_g2_decode,",*op9"
+lu_0521,citizeness,citiz5ess,ueb_g2_decode,citiz5ess
+lu_0522,deafen,d1f5,ueb_g2_decode,d1f5
+lu_0523,denote,d5ote,ueb_g2_decode,d5ote
+lu_0524,deny,d5y,ueb_g2_decode,d5y
+lu_0525,disingenuous,49g5u|s,ueb_g2_decode,49g5u|s
+lu_0526,double-entendre,d|ble-5t5dre,ueb_g2_decode,d|ble-5t5dre
+lu_0527,e'en,e'5,ueb_g2_decode,e'5
+lu_0528,Einstein,E9/e9,ueb_g2_decode,E9/e9
+lu_0529,enceinte,5ce9te,ueb_g2_decode,5ce9te
+lu_0530,engine,5g9e,ueb_g2_decode,5g9e
+lu_0531,Enid,",5id",ueb_g2_decode,",5id"
+lu_0532,enormous,5orm|s,ueb_g2_decode,5orm|s
+lu_0533,equinox,equ9ox,ueb_g2_decode,equ9ox
+lu_0534,faint,fa9t,ueb_g2_decode,fa9t
+lu_0535,feminine,fem99e,ueb_g2_decode,fem99e
+lu_0536,goin',go9',ueb_g2_decode,go9'
+lu_0537,haven't,hav5't,ueb_g2_decode,hav5't
+lu_0538,henna,h5na,ueb_g2_decode,h5na
+lu_0539,Inc.,",9c4",ueb_g2_decode,",9c4"
+lu_0540,incline,9cl9e,ueb_g2_decode,9cl9e
+lu_0541,ingot,9got,ueb_g2_decode,9got
+lu_0542,in's,9's,ueb_g2_decode,9's
+lu_0543,into,9to,ueb_g2_decode,9to
+lu_0544,maenad,ma5ad,ueb_g2_decode,ma5ad
+lu_0545,Montenegro,Mont5egro,ueb_g2_decode,Mont5egro
+lu_0546,phoenix,pho5ix,ueb_g2_decode,pho5ix
+lu_0547,p(en),"p""<5"">",ueb_g2_decode,"p""<5"">"
+lu_0548,p(in),"p""<9"">",ueb_g2_decode,"p""<9"">"
+lu_0549,prenatal,pr5atal,ueb_g2_decode,pr5atal
+lu_0550,queen,que5,ueb_g2_decode,que5
+lu_0551,renew,r5ew,ueb_g2_decode,r5ew
+lu_0552,self-induced,self-9duc$,ueb_g2_decode,self-9duc$
+lu_0553,shut-ins,%ut-9s,ueb_g2_decode,%ut-9s
+lu_0554,within,)9,ueb_g2_decode,)9
+lu_0555,to-ing,to-9g,ueb_g2_decode,to-9g
+lu_0556,Athens,A!ns,ueb_g2_decode,A!ns
+lu_0557,benign,2nign,ueb_g2_decode,2nign
+lu_0558,business,busi;s,ueb_g2_decode,busi;s
+lu_0559,cringed,cr+$,ueb_g2_decode,cr+$
+lu_0560,fenced,f;ed,ueb_g2_decode,f;ed
+lu_0561,filename,"file""n",ueb_g2_decode,"file""n"
+lu_0562,forenoon,=enoon,ueb_g2_decode,=enoon
+lu_0563,Francene,Fr.ene,ueb_g2_decode,Fr.ene
+lu_0564,lament,la;t,ueb_g2_decode,la;t
+lu_0565,ménage,m~/enage,ueb_g2_decode,m~/enage
+lu_0566,señor,se~}nor,ueb_g2_decode,se~}nor
+lu_0567,toenail,toenail,ueb_g2_decode,toenail
+lu_0568,Aix-en-Provence,Aix-en-Prov;e,ueb_g2_decode,Aix-en-Prov;e
+lu_0569,Chou En-lai,",*| En-lai",ueb_g2_decode,",*| En-lai"
+lu_0570,en route,en r|te,ueb_g2_decode,en r|te
+lu_0571,"""Sudden!""",8Sudd560,ueb_g2_decode,8Sudd560
+lu_0572,"""Comin'?""",8Com9'80,ueb_g2_decode,8Com9'80
+lu_0573,linen…,l95444,ueb_g2_decode,l95444
+lu_0574,bein',2in',ueb_g2_decode,2in'
+lu_0575,foreword,=e~w,ueb_g2_decode,=e~w
+lu_0576,misworded,mis~w$,ueb_g2_decode,mis~w$
+lu_0577,sword,s~w,ueb_g2_decode,s~w
+lu_0578,word-for-word,~w-=-~w,ueb_g2_decode,~w-=-~w
+lu_0579,Wordsworth,",~wswor?",ueb_g2_decode,",~wswor?"
+lu_0580,cannot,_c,ueb_g2_decode,_c
+lu_0581,Germany,G}_m,ueb_g2_decode,G}_m
+lu_0582,many-sided,_m-sid$,ueb_g2_decode,_m-sid$
+lu_0583,dispirited,di_s$,ueb_g2_decode,di_s$
+lu_0584,spirits,_ss,ueb_g2_decode,_ss
+lu_0585,spiritual,_sual,ueb_g2_decode,_sual
+lu_0586,theirs,_!s,ueb_g2_decode,_!s
+lu_0587,SeaWorld,"Sea,_w",ueb_g2_decode,"Sea,_w"
+lu_0588,underworld,"""u_w",ueb_g2_decode,"""u_w"
+lu_0589,world-wide,_w-wide,ueb_g2_decode,_w-wide
+lu_0590,worldly,_wly,ueb_g2_decode,_wly
+lu_0591,day-by-day,"""d-by-""d",ueb_g2_decode,"""d-by-""d"
+lu_0592,Dayton,",""dton",ueb_g2_decode,",""dton"
+lu_0593,Friday,"Fri""d",ueb_g2_decode,"Fri""d"
+lu_0594,G'day,"G'""d",ueb_g2_decode,"G'""d"
+lu_0595,father-in-law,"""f-9-law",ueb_g2_decode,"""f-9-law"
+lu_0596,fatherless,"""f.s",ueb_g2_decode,"""f.s"
+lu_0597,grandfather,"gr&""f",ueb_g2_decode,"gr&""f"
+lu_0598,acknowledge,"ac""kl$ge",ueb_g2_decode,"ac""kl$ge"
+lu_0599,knowing,"""k+",ueb_g2_decode,"""k+"
+lu_0600,Knowles,",""kles",ueb_g2_decode,",""kles"
+lu_0601,well-known,"well-""kn",ueb_g2_decode,"well-""kn"
+lu_0602,Gaylord,"Gay""l",ueb_g2_decode,"Gay""l"
+lu_0603,lordosis,"""losis",ueb_g2_decode,"""losis"
+lu_0604,lordship,"""l%ip",ueb_g2_decode,"""l%ip"
+lu_0605,m'lord,"m'""l",ueb_g2_decode,"m'""l"
+lu_0606,godmother,"god""m",ueb_g2_decode,"god""m"
+lu_0607,mother-of-pearl,"""m-(-pe>l",ueb_g2_decode,"""m-(-pe>l"
+lu_0608,motherly,"""mly",ueb_g2_decode,"""mly"
+lu_0609,smother,"s""m",ueb_g2_decode,"s""m"
+lu_0610,apartheid,"a""pheid",ueb_g2_decode,"a""pheid"
+lu_0611,Bonaparte,"Bona""pe",ueb_g2_decode,"Bona""pe"
+lu_0612,impartial,"im""pial",ueb_g2_decode,"im""pial"
+lu_0613,part-time,"""p-""t",ueb_g2_decode,"""p-""t"
+lu_0614,partake,"""pake",ueb_g2_decode,"""pake"
+lu_0615,parterre,"""p}re",ueb_g2_decode,"""p}re"
+lu_0616,party,"""py",ueb_g2_decode,"""py"
+lu_0617,passe-partout,"passe-""p|t",ueb_g2_decode,"passe-""p|t"
+lu_0618,Spartan,"S""pan",ueb_g2_decode,"S""pan"
+lu_0619,questionnaire,"""qnaire",ueb_g2_decode,"""qnaire"
+lu_0620,unquestionable,"un""qable",ueb_g2_decode,"un""qable"
+lu_0621,affrighted,"a6""r$",ueb_g2_decode,"a6""r$"
+lu_0622,aright,"a""r",ueb_g2_decode,"a""r"
+lu_0623,brighten,"b""r5",ueb_g2_decode,"b""r5"
+lu_0624,millwright,"millw""r",ueb_g2_decode,"millw""r"
+lu_0625,right-handed,"""r-h&$",ueb_g2_decode,"""r-h&$"
+lu_0626,righteous,"""re|s",ueb_g2_decode,"""re|s"
+lu_0627,youngest,"""ye/",ueb_g2_decode,"""ye/"
+lu_0628,Youngstown,",""yst{n",ueb_g2_decode,",""yst{n"
+lu_0629,characteristic,"""*i/ic",ueb_g2_decode,"""*i/ic"
+lu_0630,characterise,"""*ise",ueb_g2_decode,"""*ise"
+lu_0631,throughout,"""?|t",ueb_g2_decode,"""?|t"
+lu_0632,elsewhere,"else"":",ueb_g2_decode,"else"":"
+lu_0633,somewhere,"""s"":",ueb_g2_decode,"""s"":"
+lu_0634,whereby,""":by",ueb_g2_decode,""":by"
+lu_0635,wherein,""":9",ueb_g2_decode,""":9"
+lu_0636,drought,"dr""|",ueb_g2_decode,"dr""|"
+lu_0637,fought,"f""|",ueb_g2_decode,"f""|"
+lu_0638,Houghton,"H""|on",ueb_g2_decode,"H""|on"
+lu_0639,oughtn't,"""|n't",ueb_g2_decode,"""|n't"
+lu_0640,thoughtful,"?""|;l",ueb_g2_decode,"?""|;l"
+lu_0641,coworker,"co""w}",ueb_g2_decode,"co""w}"
+lu_0642,fireworks,"fire""ws",ueb_g2_decode,"fire""ws"
+lu_0643,stonework,"/""o""w",ueb_g2_decode,"/""o""w"
+lu_0644,unworkable,"un""wable",ueb_g2_decode,"un""wable"
+lu_0645,workday,"""w""d",ueb_g2_decode,"""w""d"
+lu_0646,working,"""w+",ueb_g2_decode,"""w+"
+lu_0647,Dayan,Dayan,ueb_g2_decode,Dayan
+lu_0648,Sanday,S&ay,ueb_g2_decode,S&ay
+lu_0649,today,td,ueb_g2_decode,td
+lu_0650,Lucknow,Luckn{,ueb_g2_decode,Luckn{
+lu_0651,chlordane,*lordane,ueb_g2_decode,*lordane
+lu_0652,chemotherapy,*emo!rapy,ueb_g2_decode,*emo!rapy
+lu_0653,Parthenon,P>!non,ueb_g2_decode,P>!non
+lu_0654,where'er,:}e'},ueb_g2_decode,:}e'}
+lu_0655,wherever,":}""e",ueb_g2_decode,":}""e"
+lu_0656,Dworkin,Dwork9,ueb_g2_decode,Dwork9
+lu_0657,upon these shores,~u ~! %ores,ueb_g2_decode,~u ~! %ores
+lu_0658,Whose are those?,",~: >e ~?8",ueb_g2_decode,",~: >e ~?8"
+lu_0659,hereupon,"""h~u",ueb_g2_decode,"""h~u"
+lu_0660,whereupon,""":~u",ueb_g2_decode,""":~u"
+lu_0661,whosesoever,"~:so""e",ueb_g2_decode,"~:so""e"
+lu_0662,thereby,"""!by",ueb_g2_decode,"""!by"
+lu_0663,therefore,"""!=e",ueb_g2_decode,"""!=e"
+lu_0664,therein,"""!9",ueb_g2_decode,"""!9"
+lu_0665,thereupon,"""!~u",ueb_g2_decode,"""!~u"
+lu_0666,coupon,c|pon,ueb_g2_decode,c|pon
+lu_0667,Dupont,Dupont,ueb_g2_decode,Dupont
+lu_0668,hypotheses,hypo!ses,ueb_g2_decode,hypo!ses
+lu_0669,Theseus,",!seus",ueb_g2_decode,",!seus"
+lu_0670,spathose,spa?ose,ueb_g2_decode,spa?ose
+lu_0671,Thoseby,",?oseby",ueb_g2_decode,",?oseby"
+lu_0672,bothered,bo!r$,ueb_g2_decode,bo!r$
+lu_0673,ethereal,e!r1l,ueb_g2_decode,e!r1l
+lu_0674,isothere,iso!re,ueb_g2_decode,iso!re
+lu_0675,smithereens,smi!re5s,ueb_g2_decode,smi!re5s
+lu_0676,Theresa,",!resa",ueb_g2_decode,",!resa"
+lu_0677,withered,)}$,ueb_g2_decode,)}$
+lu_0678,Galahad,Gala_h,ueb_g2_decode,Gala_h
+lu_0679,haddock,_hdock,ueb_g2_decode,_hdock
+lu_0680,Haddon,",_hdon",ueb_g2_decode,",_hdon"
+lu_0681,hadji,_hji,ueb_g2_decode,_hji
+lu_0682,Hadley,",_hley",ueb_g2_decode,",_hley"
+lu_0683,hadn't,_hn't,ueb_g2_decode,_hn't
+lu_0684,Chad,",*ad",ueb_g2_decode,",*ad"
+lu_0685,Hades,Hades,ueb_g2_decode,Hades
+lu_0686,Hadrian,Hadrian,ueb_g2_decode,Hadrian
+lu_0687,menhaden,m5had5,ueb_g2_decode,m5had5
+lu_0688,shadow,%ad{,ueb_g2_decode,%ad{
+lu_0689,Thaddeus,",?addeus",ueb_g2_decode,",?addeus"
+lu_0690,asseverate,"ass""eate",ueb_g2_decode,"ass""eate"
+lu_0691,beverage,"b""eage",ueb_g2_decode,"b""eage"
+lu_0692,Everest,",""ee/",ueb_g2_decode,",""ee/"
+lu_0693,everything,"""ey?+",ueb_g2_decode,"""ey?+"
+lu_0694,fever,"f""e",ueb_g2_decode,"f""e"
+lu_0695,irreverence,"irr""e;e",ueb_g2_decode,"irr""e;e"
+lu_0696,nevertheless,"n""e!.s",ueb_g2_decode,"n""e!.s"
+lu_0697,reverend,"r""e5d",ueb_g2_decode,"r""e5d"
+lu_0698,several,"s""eal",ueb_g2_decode,"s""eal"
+lu_0699,Severn,"S""en",ueb_g2_decode,"S""en"
+lu_0700,Unilever,"Unil""e",ueb_g2_decode,"Unil""e"
+lu_0701,believer,2liev},ueb_g2_decode,2liev}
+lu_0702,eversion,ev}.n,ueb_g2_decode,ev}.n
+lu_0703,Guinevere,Gu9ev}e,ueb_g2_decode,Gu9ev}e
+lu_0704,McKeever,McKeev},ueb_g2_decode,McKeev}
+lu_0705,Monteverdi,Montev}di,ueb_g2_decode,Montev}di
+lu_0706,persevere,p}sev}e,ueb_g2_decode,p}sev}e
+lu_0707,reverberate,rev}b}ate,ueb_g2_decode,rev}b}ate
+lu_0708,revere,rev}e,ueb_g2_decode,rev}e
+lu_0709,reverify,rev}ify,ueb_g2_decode,rev}ify
+lu_0710,severity,sev};y,ueb_g2_decode,sev};y
+lu_0711,thievery,?iev}y,ueb_g2_decode,?iev}y
+lu_0712,adhere,"ad""h",ueb_g2_decode,"ad""h"
+lu_0713,atmosphere,"atmosp""h",ueb_g2_decode,"atmosp""h"
+lu_0714,cohere,"co""h",ueb_g2_decode,"co""h"
+lu_0715,hereabout,"""hab",ueb_g2_decode,"""hab"
+lu_0716,herewith,"""h)",ueb_g2_decode,"""h)"
+lu_0717,sphere,"sp""h",ueb_g2_decode,"sp""h"
+lu_0718,filename,"file""n",ueb_g2_decode,"file""n"
+lu_0719,nameable,"""nable",ueb_g2_decode,"""nable"
+lu_0720,renamed,"re""nd",ueb_g2_decode,"re""nd"
+lu_0721,surname,"sur""n",ueb_g2_decode,"sur""n"
+lu_0722,adhered,adh}$,ueb_g2_decode,adh}$
+lu_0723,bothered,bo!r$,ueb_g2_decode,bo!r$
+lu_0724,coherence,coh};e,ueb_g2_decode,coh};e
+lu_0725,elsewhere,"else"":",ueb_g2_decode,"else"":"
+lu_0726,ethereal,e!r1l,ueb_g2_decode,e!r1l
+lu_0727,heredity,h}$;y,ueb_g2_decode,h}$;y
+lu_0728,Hereford (City),"H}e=d ""<C;y"">",ueb_g2_decode,"H}e=d ""<C;y"">"
+lu_0729,enamel,5amel,ueb_g2_decode,5amel
+lu_0730,ornament,orna;t,ueb_g2_decode,orna;t
+lu_0731,unamended,unam5d$,ueb_g2_decode,unam5d$
+lu_0732,Vietnamese,Vietnamese,ueb_g2_decode,Vietnamese
+lu_0733,acetone,"acet""o",ueb_g2_decode,"acet""o"
+lu_0734,atonement,"at""o;t",ueb_g2_decode,"at""o;t"
+lu_0735,baloney,"bal""oy",ueb_g2_decode,"bal""oy"
+lu_0736,bygone,"byg""o",ueb_g2_decode,"byg""o"
+lu_0737,cone,"c""o",ueb_g2_decode,"c""o"
+lu_0738,demonetise,"dem""otise",ueb_g2_decode,"dem""otise"
+lu_0739,dishonesty,"4h""o/y",ueb_g2_decode,"4h""o/y"
+lu_0740,done,"d""o",ueb_g2_decode,"d""o"
+lu_0741,everyone,"""ey""o",ueb_g2_decode,"""ey""o"
+lu_0742,honey,"h""oy",ueb_g2_decode,"h""oy"
+lu_0743,Jones,"J""os",ueb_g2_decode,"J""os"
+lu_0744,lonesome,"l""o""s",ueb_g2_decode,"l""o""s"
+lu_0745,Mulroney,"Mulr""oy",ueb_g2_decode,"Mulr""oy"
+lu_0746,one-sided,"""o-sid$",ueb_g2_decode,"""o-sid$"
+lu_0747,oneness,"""o;s",ueb_g2_decode,"""o;s"
+lu_0748,phone,"ph""o",ueb_g2_decode,"ph""o"
+lu_0749,scone,"sc""o",ueb_g2_decode,"sc""o"
+lu_0750,stonework,"/""o""w",ueb_g2_decode,"/""o""w"
+lu_0751,stoney,"/""oy",ueb_g2_decode,"/""oy"
+lu_0752,anemone,anemone,ueb_g2_decode,anemone
+lu_0753,baroness,b>o;s,ueb_g2_decode,b>o;s
+lu_0754,baronet,b>onet,ueb_g2_decode,b>onet
+lu_0755,Boone,Boone,ueb_g2_decode,Boone
+lu_0756,Cantonese,Cantonese,ueb_g2_decode,Cantonese
+lu_0757,colonel,colonel,ueb_g2_decode,colonel
+lu_0758,Conestoga,",3e/oga",ueb_g2_decode,",3e/oga"
+lu_0759,crooner,croon},ueb_g2_decode,croon}
+lu_0760,cushioned,cu%ion$,ueb_g2_decode,cu%ion$
+lu_0761,Donegal,Donegal,ueb_g2_decode,Donegal
+lu_0762,erroneous,}rone|s,ueb_g2_decode,}rone|s
+lu_0763,Hermione,H}mione,ueb_g2_decode,H}mione
+lu_0764,Indonesia,",9donesia",ueb_g2_decode,",9donesia"
+lu_0765,krone,krone,ueb_g2_decode,krone
+lu_0766,Monet,Monet,ueb_g2_decode,Monet
+lu_0767,onerous,on}|s,ueb_g2_decode,on}|s
+lu_0768,phonetic,phonetic,ueb_g2_decode,phonetic
+lu_0769,pioneer,pione},ueb_g2_decode,pione}
+lu_0770,poisoned,poison$,ueb_g2_decode,poison$
+lu_0771,Rhône,Rh~%one,ueb_g2_decode,Rh~%one
+lu_0772,Rooney,Rooney,ueb_g2_decode,Rooney
+lu_0773,sooner,soon},ueb_g2_decode,soon}
+lu_0774,stoned,/on$,ueb_g2_decode,/on$
+lu_0775,blithesome,"bli!""s",ueb_g2_decode,"bli!""s"
+lu_0776,chromosome,"*romo""s",ueb_g2_decode,"*romo""s"
+lu_0777,fearsome,"fe>""s",ueb_g2_decode,"fe>""s"
+lu_0778,handsome,"h&""s",ueb_g2_decode,"h&""s"
+lu_0779,handsomer,"h&""sr",ueb_g2_decode,"h&""sr"
+lu_0780,lonesomest,"l""o""s/",ueb_g2_decode,"l""o""s/"
+lu_0781,somebody,"""sbody",ueb_g2_decode,"""sbody"
+lu_0782,somesuch,"""ss*",ueb_g2_decode,"""ss*"
+lu_0783,somewhere,"""s"":",ueb_g2_decode,"""s"":"
+lu_0784,twosome,"two""s",ueb_g2_decode,"two""s"
+lu_0785,blossomed (blossom),"blossom$ ""<blossom"">",ueb_g2_decode,"blossom$ ""<blossom"">"
+lu_0786,gasometer,gasomet},ueb_g2_decode,gasomet}
+lu_0787,isometric,isometric,ueb_g2_decode,isometric
+lu_0788,ransomed (ransom),"ransom$ ""<ransom"">",ueb_g2_decode,"ransom$ ""<ransom"">"
+lu_0789,somersault,som}sault,ueb_g2_decode,som}sault
+lu_0790,Somerset,Som}set,ueb_g2_decode,Som}set
+lu_0791,daytime,"""d""t",ueb_g2_decode,"""d""t"
+lu_0792,maritime,"m>i""t",ueb_g2_decode,"m>i""t"
+lu_0793,mistimed,"mis""td",ueb_g2_decode,"mis""td"
+lu_0794,pastime,"pas""t",ueb_g2_decode,"pas""t"
+lu_0795,sometimes,"""s""ts",ueb_g2_decode,"""s""ts"
+lu_0796,springtime,"spr+""t",ueb_g2_decode,"spr+""t"
+lu_0797,timeously,"""t|sly",ueb_g2_decode,"""t|sly"
+lu_0798,Timex,",""tx",ueb_g2_decode,",""tx"
+lu_0799,untimely,"un""tly",ueb_g2_decode,"un""tly"
+lu_0800,altimeter,altimet},ueb_g2_decode,altimet}
+lu_0801,centime,c5time,ueb_g2_decode,c5time
+lu_0802,centimeter,c5timet},ueb_g2_decode,c5timet}
+lu_0803,Mortimer,Mortim},ueb_g2_decode,Mortim}
+lu_0804,multimedia,multim$ia,ueb_g2_decode,multim$ia
+lu_0805,sentiment,s5ti;t,ueb_g2_decode,s5ti;t
+lu_0806,blunder,"bl""u",ueb_g2_decode,"bl""u"
+lu_0807,misunderstand,"mis""u/&",ueb_g2_decode,"mis""u/&"
+lu_0808,thundered,"?""u$",ueb_g2_decode,"?""u$"
+lu_0809,undergo,"""ugo",ueb_g2_decode,"""ugo"
+lu_0810,underpaid,"""upd",ueb_g2_decode,"""upd"
+lu_0811,Wunderhorn,"W""uhorn",ueb_g2_decode,"W""uhorn"
+lu_0812,flounder,fl.d},ueb_g2_decode,fl.d}
+lu_0813,laundering,laund}+,ueb_g2_decode,laund}+
+lu_0814,Saunders,Saund}s,ueb_g2_decode,Saund}s
+lu_0815,underived,und}iv$,ueb_g2_decode,und}iv$
+lu_0816,underogatory,und}ogatory,ueb_g2_decode,und}ogatory
+lu_0817,amount,am.t,ueb_g2_decode,am.t
+lu_0818,baroness,b>o;s,ueb_g2_decode,b>o;s
+lu_0819,bastion,bas;n,ueb_g2_decode,bas;n
+lu_0820,blessing,b.s+,ueb_g2_decode,b.s+
+lu_0821,business,busi;s,ueb_g2_decode,busi;s
+lu_0822,cancel,c.el,ueb_g2_decode,c.el
+lu_0823,carefully,c>e;lly,ueb_g2_decode,c>e;lly
+lu_0824,cement,ce;t,ueb_g2_decode,ce;t
+lu_0825,cheerful,*e};l,ueb_g2_decode,*e};l
+lu_0826,chockfull,*ock;ll,ueb_g2_decode,*ock;ll
+lu_0827,circuity,circu;y,ueb_g2_decode,circu;y
+lu_0828,commencement,comm;e;t,ueb_g2_decode,comm;e;t
+lu_0829,comment,com;t,ueb_g2_decode,com;t
+lu_0830,confusion,3fu.n,ueb_g2_decode,3fu.n
+lu_0831,country,c.try,ueb_g2_decode,c.try
+lu_0832,county,c.ty,ueb_g2_decode,c.ty
+lu_0833,creation,cr1;n,ueb_g2_decode,cr1;n
+lu_0834,dancer,d.er,ueb_g2_decode,d.er
+lu_0835,deity,de;y,ueb_g2_decode,de;y
+lu_0836,Du Plessis,Du P.sis,ueb_g2_decode,Du P.sis
+lu_0837,experienced,exp}i;ed,ueb_g2_decode,exp}i;ed
+lu_0838,expressionless,expres.n.s,ueb_g2_decode,expres.n.s
+lu_0839,extramental,extra;tal,ueb_g2_decode,extra;tal
+lu_0840,fences,f;es,ueb_g2_decode,f;es
+lu_0841,finesse,fi;se,ueb_g2_decode,fi;se
+lu_0842,found,f.d,ueb_g2_decode,f.d
+lu_0843,fractional,frac;nal,ueb_g2_decode,frac;nal
+lu_0844,Frances,Fr.es,ueb_g2_decode,Fr.es
+lu_0845,governess,gov};s,ueb_g2_decode,gov};s
+lu_0846,Guinness,Gu9;s,ueb_g2_decode,Gu9;s
+lu_0847,incongruous,9c;gru|s,ueb_g2_decode,9c;gru|s
+lu_0848,influenceable,9flu;eable,ueb_g2_decode,9flu;eable
+lu_0849,lioness,lio;s,ueb_g2_decode,lio;s
+lu_0850,longevity,l;gev;y,ueb_g2_decode,l;gev;y
+lu_0851,memento,me;to,ueb_g2_decode,me;to
+lu_0852,mongoose,m;goose,ueb_g2_decode,m;goose
+lu_0853,mountain,m.ta9,ueb_g2_decode,m.ta9
+lu_0854,noblesse,nob.se,ueb_g2_decode,nob.se
+lu_0855,persuasion,p}sua.n,ueb_g2_decode,p}sua.n
+lu_0856,pity,p;y,ueb_g2_decode,p;y
+lu_0857,pongee,p;gee,ueb_g2_decode,p;gee
+lu_0858,prong,pr;g,ueb_g2_decode,pr;g
+lu_0859,rationally,ra;nally,ueb_g2_decode,ra;nally
+lu_0860,rotation,rota;n,ueb_g2_decode,rota;n
+lu_0861,Rountree,R.tree,ueb_g2_decode,R.tree
+lu_0862,séance,s~/e.e,ueb_g2_decode,s~/e.e
+lu_0863,silenced,sil;ed,ueb_g2_decode,sil;ed
+lu_0864,sinfulness,s9;l;s,ueb_g2_decode,s9;l;s
+lu_0865,Spencer,Sp;er,ueb_g2_decode,Sp;er
+lu_0866,sponge,sp;ge,ueb_g2_decode,sp;ge
+lu_0867,sound,s.d,ueb_g2_decode,s.d
+lu_0868,sublessee,sub.see,ueb_g2_decode,sub.see
+lu_0869,Tennessee,T5;see,ueb_g2_decode,T5;see
+lu_0870,thence,?;e,ueb_g2_decode,?;e
+lu_0871,tongue,t;gue,ueb_g2_decode,t;gue
+lu_0872,unfulfilled,un;lfill$,ueb_g2_decode,un;lfill$
+lu_0873,unless,un.s,ueb_g2_decode,un.s
+lu_0874,unlessoned,un.son$,ueb_g2_decode,un.son$
+lu_0875,Wenceslaus,W;eslaus,ueb_g2_decode,W;eslaus
+lu_0876,wounded,w.d$,ueb_g2_decode,w.d$
+lu_0877,ancestor,ance/or,ueb_g2_decode,ance/or
+lu_0878,channel-less,*annel-less,ueb_g2_decode,*annel-less
+lu_0879,congruous,3gru|s,ueb_g2_decode,3gru|s
+lu_0880,electroencephalogram,electro5cephalogram,ueb_g2_decode,electro5cephalogram
+lu_0881,encephalitis,5cephalitis,ueb_g2_decode,5cephalitis
+lu_0882,fiancé,fianc~/e,ueb_g2_decode,fianc~/e
+lu_0883,inessential,9ess5tial,ueb_g2_decode,9ess5tial
+lu_0884,lessee,lessee,ueb_g2_decode,lessee
+lu_0885,moongod,moongod,ueb_g2_decode,moongod
+lu_0886,nongaseous,nongase|s,ueb_g2_decode,nongase|s
+lu_0887,one-ness,"""o-ness",ueb_g2_decode,"""o-ness"
+lu_0888,'ound,'|nd,ueb_g2_decode,'|nd
+lu_0889,pityard,pity>d,ueb_g2_decode,pity>d
+lu_0890,AttenTION!,"Att5,Tion6",ueb_g2_decode,"Att5,Tion6"
+lu_0891,AWful,",Aw,'ful",ueb_g2_decode,",Aw,'ful"
+lu_0892,ExperiMental,Exp}iM5tal,ueb_g2_decode,Exp}iM5tal
+lu_0893,MyAncestor,MyAnce/or,ueb_g2_decode,MyAnce/or
+lu_0894,around,>.d,ueb_g2_decode,>.d
+lu_0895,ARound,",,>,'|nd",ueb_g2_decode,",,>,'|nd"
+lu_0896,AROUND,",,>.d",ueb_g2_decode,",,>.d"
+lu_0897,WE GO AROUND,",,We g >.d,'",ueb_g2_decode,",,We g >.d,'"
+lu_0898,WE GO ARound,",We ,G ,,>,'|nd",ueb_g2_decode,",We ,G ,,>,'|nd"
+lu_0899,WE GO AROund,",We ,G ,,>o,'und",ueb_g2_decode,",We ,G ,,>o,'und"
+lu_0900,dAnce,dAnce,ueb_g2_decode,dAnce
+lu_0901,PASSion,",Pass,'ion",ueb_g2_decode,",Pass,'ion"
+lu_0902,PayLESS,"Pay,Less",ueb_g2_decode,"Pay,Less"
+lu_0903,PaylESS,"Payl,Ess",ueb_g2_decode,"Payl,Ess"
+lu_0904,MOunt,",Mo,'unt",ueb_g2_decode,",Mo,'unt"
+lu_0905,OffEnce,",(f,5ce",ueb_g2_decode,",(f,5ce"
+lu_0906,AlOnG,AlOnG,ueb_g2_decode,AlOnG
+lu_0907,Nesscafe,Nesscafe,ueb_g2_decode,Nesscafe
+lu_0908,RefIty,RefIty,ueb_g2_decode,RefIty
+lu_0909,getFullName,"getFull,""n",ueb_g2_decode,"getFull,""n"
+lu_0910,chieftainess,*iefta9ess,ueb_g2_decode,*iefta9ess
+lu_0911,citizeness,citiz5ess,ueb_g2_decode,citiz5ess
+lu_0912,heatheness,h1!ness,ueb_g2_decode,h1!ness
+lu_0913,You should receive your letter tomorrow afternoon.,Y %d rcv yr lr tm afn4,ueb_g2_decode,Y %d rcv yr lr tm afn4
+lu_0914,an about-face from the quick-witted go-between,an ab-face f ! qk-witt$ g-2t,ueb_g2_decode,an ab-face f ! qk-witt$ g-2t
+lu_0915,"""Good-bye, Miss Little-Smythe!""",8Gd-bye1 Miss Ll-Smy!60,ueb_g2_decode,8Gd-bye1 Miss Ll-Smy!60
+lu_0916,(braille–first writing system for blind people),"""<brl,-f/ writ+ sy/em = bl p"">",ueb_g2_decode,"""<brl,-f/ writ+ sy/em = bl p"">"
+lu_0917,to-night,to-ni<t,ueb_g2_decode,to-ni<t
+lu_0918,above/below,above_/bel{,ueb_g2_decode,above_/bel{
+lu_0919,PRINT/BRAILLE,",Pr9t_/,Braille",ueb_g2_decode,",Pr9t_/,Braille"
+lu_0920,friend@rogers.com,fri5d`arog}s4com,ueb_g2_decode,fri5d`arog}s4com
+lu_0921,www.living.beyond.myself.org,www4liv+4beyond4myself4org,ueb_g2_decode,www4liv+4beyond4myself4org
+lu_0922,aboveground,abvgr.d,ueb_g2_decode,abvgr.d
+lu_0923,belowdecks,2ldecks,ueb_g2_decode,2ldecks
+lu_0924,Friendly Islands,Frly Isl&s,ueb_g2_decode,Frly Isl&s
+lu_0925,godchildren,god*n,ueb_g2_decode,god*n
+lu_0926,goodafternoon,gdafn,ueb_g2_decode,gdafn
+lu_0927,hereabouts,"""habs",ueb_g2_decode,"""habs"
+lu_0928,lettermen,lrm5,ueb_g2_decode,lrm5
+lu_0929,Quicker Delivery,Qk} Deliv}y,ueb_g2_decode,Qk} Deliv}y
+lu_0930,repaid,repd,ueb_g2_decode,repd
+lu_0931,suchlike,s*like,ueb_g2_decode,s*like
+lu_0932,Our boyfriends mustn't miss tomorrow's afterdinner speaker!,",|r boyfrs m/n't miss tm's afd9n} sp1k}6",ueb_g2_decode,",|r boyfrs m/n't miss tm's afd9n} sp1k}6"
+lu_0933,Mr Letterman could've quickly rebrailled the Aftercare Newsletter.,Mr Lrman cd've qkly rebrld ! Afc>e Newslr4,ueb_g2_decode,Mr Lrman cd've qkly rebrld ! Afc>e Newslr4
+lu_0934,I am brailling the newsletters' headlines.,I am braill+ ! newslrs' h1dl9es4,ueb_g2_decode,I am braill+ ! newslrs' h1dl9es4
+lu_0935,friend(s),"fri5d""<s"">",ueb_g2_decode,"fri5d""<s"">"
+lu_0936,print/braille,pr9t_/braille,ueb_g2_decode,pr9t_/braille
+lu_0937,www.afterschool.gov,www4aft}s*ool4gov,ueb_g2_decode,www4aft}s*ool4gov
+lu_0938,aftereffect,aft}e6ect,ueb_g2_decode,aft}e6ect
+lu_0939,afterimage,aft}image,ueb_g2_decode,aft}image
+lu_0940,blinded,bl9d$,ueb_g2_decode,bl9d$
+lu_0941,blinding,bl9d+,ueb_g2_decode,bl9d+
+lu_0942,befriended,2fri5d$,ueb_g2_decode,2fri5d$
+lu_0943,friendy,fri5dy,ueb_g2_decode,fri5dy
+lu_0944,abouts,ab|ts,ueb_g2_decode,ab|ts
+lu_0945,acrosses,acrosses,ueb_g2_decode,acrosses
+lu_0946,againe,aga9e,ueb_g2_decode,aga9e
+lu_0947,almosts,almo/s,ueb_g2_decode,almo/s
+lu_0948,hims,hims,ueb_g2_decode,hims
+lu_0949,hereinbefore,"""h9be=e",ueb_g2_decode,"""h9be=e"
+lu_0950,hereinbelow,"""h9bel{",ueb_g2_decode,"""h9bel{"
+lu_0951,inbetween,9betwe5,ueb_g2_decode,9betwe5
+lu_0952,misconceived,misconceiv$,ueb_g2_decode,misconceiv$
+lu_0953,"""couldx""",8c|ldx0,ueb_g2_decode,8c|ldx0
+lu_0954,Himalayas,Himalayas,ueb_g2_decode,Himalayas
+lu_0955,Suchet,Su*et,ueb_g2_decode,Su*et
+lu_0956,Yourcenar,Y|rc5>,ueb_g2_decode,Y|rc5>
+lu_0957,Braillette board,Brltte bo>d,ueb_g2_decode,Brltte bo>d
+lu_0958,"Marcillat-en-Combraille, France",M>cillat-en-Combrl1 Fr.e,ueb_g2_decode,M>cillat-en-Combrl1 Fr.e
+lu_0959,Greatford Hall,Grt=d Hall,ueb_g2_decode,Grt=d Hall
+lu_0960,greatgreatgreatgrandchildren,grtgrtgrtgr&*n,ueb_g2_decode,grtgrtgrtgr&*n
+lu_0961,Greatorex,Grtorex,ueb_g2_decode,Grtorex
+lu_0962,Blindcraft,Blcraft,ueb_g2_decode,Blcraft
+lu_0963,Blindheim,Blheim,ueb_g2_decode,Blheim
+lu_0964,Firstbank,F/bank,ueb_g2_decode,F/bank
+lu_0965,Firstchoice,F/*oice,ueb_g2_decode,F/*oice
+lu_0966,"""goodz""",8gdz0,ueb_g2_decode,8gdz0
+lu_0967,Mr Feelgreat from Goodge Street,"Mr Feelgrt f Gdge ,/reet",ueb_g2_decode,"Mr Feelgrt f Gdge ,/reet"
+lu_0968,Ms Letterkenny's Littleport home.,Ms Lrk5ny's Llport home4,ueb_g2_decode,Ms Lrk5ny's Llport home4
+lu_0969,"Quicksburg, Virginia",Qksburg1 Virg9ia,ueb_g2_decode,Qksburg1 Virg9ia
+lu_0970,Blindoc,Bl9doc,ueb_g2_decode,Bl9doc
+lu_0971,www.braillex.com,www4braillex4com,ueb_g2_decode,www4braillex4com
+lu_0972,Firstamerica,Fir/am}ica,ueb_g2_decode,Fir/am}ica
+lu_0973,Goodacre,Goodacre,ueb_g2_decode,Goodacre
+lu_0974,Littlearm,Little>m,ueb_g2_decode,Little>m
+lu_0975,Letterewe Estate,Lett}ewe E/ate,ueb_g2_decode,Lett}ewe E/ate
+lu_0976,Mr Linkletter of Portlittle,Mr L9klett} ( Portlittle,ueb_g2_decode,Mr L9klett} ( Portlittle
+lu_0977,Bisquick Pancake Mix,Bisquick Pancake Mix,ueb_g2_decode,Bisquick Pancake Mix
+lu_0978,Ted Makegood of Goodena,T$ Makegood ( Good5a,ueb_g2_decode,T$ Makegood ( Good5a
+lu_0979,Herf gun,Herf gun,ueb_g2_decode,Herf gun
+lu_0980,"""mst"" files",8mst0 files,ueb_g2_decode,8mst0 files
+lu_0981,www.sch.edu.au,www4s*4$u4au,ueb_g2_decode,www4s*4$u4au
+lu_0982,ab initio,;ab 9itio,ueb_g2_decode,;ab 9itio
+lu_0983,et al–,"et ;al,-",ueb_g2_decode,"et ;al,-"
+lu_0984,Al-Azar,;Al-Az>,ueb_g2_decode,;Al-Az>
+lu_0985,Alt.: 3000 ft.,;Alt43 3000 ft4,ueb_g2_decode,;Alt43 3000 ft4
+lu_0986,"""Hm, would Al like this CD?""","8;Hm1 wd ;Al l ? ;,Cd80",ueb_g2_decode,"8;Hm1 wd ;Al l ? ;,Cd80"
+lu_0987,Grtsamada,;Grtsamada,ueb_g2_decode,;Grtsamada
+lu_0988,BLCUP,";,Blcup",ueb_g2_decode,";,Blcup"
+lu_0989,"spelled ""ei"" or ""ie""?",spell$ 8;ei0 or 8ie08,ueb_g2_decode,spell$ 8;ei0 or 8ie08
+lu_0990,gd lnch. TM sd yu shd meet me b4 yr mtg 2 read lr. wl b qk. l8r.,";gd ln*4 ;,Tm ;sd yu shd meet me b4 ;yr mtg 2 r1d ;lr4 wl ;b ;qk4 l8r4",ueb_g2_decode,";gd ln*4 ;,Tm ;sd yu shd meet me b4 ;yr mtg 2 r1d ;lr4 wl ;b ;qk4 l8r4"
+lu_0991,advanced,adv.ed,ueb_g2_decode,adv.ed
+lu_0992,aright,"a""r",ueb_g2_decode,"a""r"
+lu_0993,bastion,bas;n,ueb_g2_decode,bas;n
+lu_0994,coherence,coh};e,ueb_g2_decode,coh};e
+lu_0995,Congo,",3go",ueb_g2_decode,",3go"
+lu_0996,congratulate,3gratulate,ueb_g2_decode,3gratulate
+lu_0997,congruity,3gru;y,ueb_g2_decode,3gru;y
+lu_0998,dancer,d.er,ueb_g2_decode,d.er
+lu_0999,dispirited,di_s$,ueb_g2_decode,di_s$
+lu_1000,distinct,4t9ct,ueb_g2_decode,4t9ct
+lu_1001,disturbed,4turb$,ueb_g2_decode,4turb$
+lu_1002,happiness,happi;s,ueb_g2_decode,happi;s
+lu_1003,meander,me&},ueb_g2_decode,me&}
+lu_1004,named,"""nd",ueb_g2_decode,"""nd"
+lu_1005,oneness,"""o;s",ueb_g2_decode,"""o;s"
+lu_1006,thence,?;e,ueb_g2_decode,?;e
+lu_1007,timer,"""tr",ueb_g2_decode,"""tr"
+lu_1008,vengeance,v5ge.e,ueb_g2_decode,v5ge.e
+lu_1009,wither,)},ueb_g2_decode,)}
+lu_1010,afford,af=d,ueb_g2_decode,af=d
+lu_1011,bathed,ba!d,ueb_g2_decode,ba!d
+lu_1012,calisthenics,calis!nics,ueb_g2_decode,calis!nics
+lu_1013,coffee,c(fee,ueb_g2_decode,c(fee
+lu_1014,effort,ef=t,ueb_g2_decode,ef=t
+lu_1015,gathered,ga!r$,ueb_g2_decode,ga!r$
+lu_1016,Leander,Le&},ueb_g2_decode,Le&}
+lu_1017,offer,(f},ueb_g2_decode,(f}
+lu_1018,office,(fice,ueb_g2_decode,(fice
+lu_1019,other,o!r,ueb_g2_decode,o!r
+lu_1020,Parthenon,P>!non,ueb_g2_decode,P>!non
+lu_1021,proffer,pr(f},ueb_g2_decode,pr(f}
+lu_1022,slithered,sli!r$,ueb_g2_decode,sli!r$
+lu_1023,theatre,!atre,ueb_g2_decode,!atre
+lu_1024,then,!n,ueb_g2_decode,!n
+lu_1025,weathered,w1!r$,ueb_g2_decode,w1!r$
+lu_1026,thence,?;e,ueb_g2_decode,?;e
+lu_1027,beatitude,2atitude,ueb_g2_decode,2atitude
+lu_1028,Beatrix,",2atrix",ueb_g2_decode,",2atrix"
+lu_1029,bedraggled,2dra7l$,ueb_g2_decode,2dra7l$
+lu_1030,benevolence,2nevol;e,ueb_g2_decode,2nevol;e
+lu_1031,benighted,2ni<t$,ueb_g2_decode,2ni<t$
+lu_1032,benign,2nign,ueb_g2_decode,2nign
+lu_1033,berated,2rat$,ueb_g2_decode,2rat$
+lu_1034,congee,3gee,ueb_g2_decode,3gee
+lu_1035,congenial,3g5ial,ueb_g2_decode,3g5ial
+lu_1036,dishonesty,"4h""o/y",ueb_g2_decode,"4h""o/y"
+lu_1037,distance,4t.e,ueb_g2_decode,4t.e
+lu_1038,beach,b1*,ueb_g2_decode,b1*
+lu_1039,beautiful,b1uti;l,ueb_g2_decode,b1uti;l
+lu_1040,benefit,b5efit,ueb_g2_decode,b5efit
+lu_1041,benzene,b5z5e,ueb_g2_decode,b5z5e
+lu_1042,berth,b}?,ueb_g2_decode,b}?
+lu_1043,dish,di%,ueb_g2_decode,di%
+lu_1044,dishevelled,di%evell$,ueb_g2_decode,di%evell$
+lu_1045,bacchanal,bac*anal,ueb_g2_decode,bac*anal
+lu_1046,bear,be>,ueb_g2_decode,be>
+lu_1047,fear,fe>,ueb_g2_decode,fe>
+lu_1048,heart,he>t,ueb_g2_decode,he>t
+lu_1049,nearly,ne>ly,ueb_g2_decode,ne>ly
+lu_1050,nuclear,nucle>,ueb_g2_decode,nucle>
+lu_1051,saccharine,sac*>9e,ueb_g2_decode,sac*>9e
+lu_1052,sting,/+,ueb_g2_decode,/+
+lu_1053,egghead,e7h1d,ueb_g2_decode,e7h1d
+lu_1054,Clemenceau,Clem;eau,ueb_g2_decode,Clem;eau
+lu_1055,commenced,comm;ed,ueb_g2_decode,comm;ed
+lu_1056,experienced,exp}i;ed,ueb_g2_decode,exp}i;ed
+lu_1057,influenceable,9flu;eable,ueb_g2_decode,9flu;eable
+lu_1058,silenceable,sil;eable,ueb_g2_decode,sil;eable
+lu_1059,silencer,sil;er,ueb_g2_decode,sil;er
+lu_1060,Spencer,Sp;er,ueb_g2_decode,Sp;er
+lu_1061,adhered,adh}$,ueb_g2_decode,adh}$
+lu_1062,adherent,adh}5t,ueb_g2_decode,adh}5t
+lu_1063,adherer,adh}},ueb_g2_decode,adh}}
+lu_1064,cohered,coh}$,ueb_g2_decode,coh}$
+lu_1065,component,compon5t,ueb_g2_decode,compon5t
+lu_1066,effulgent,e6ulg5t,ueb_g2_decode,e6ulg5t
+lu_1067,heredity,h}$;y,ueb_g2_decode,h}$;y
+lu_1068,onerous,on}|s,ueb_g2_decode,on}|s
+lu_1069,opponent,oppon5t,ueb_g2_decode,oppon5t
+lu_1070,Parthian,P>?ian,ueb_g2_decode,P>?ian
+lu_1071,poisoned,poison$,ueb_g2_decode,poison$
+lu_1072,prisoner,prison},ueb_g2_decode,prison}
+lu_1073,shadow,%ad{,ueb_g2_decode,%ad{
+lu_1074,sooner,soon},ueb_g2_decode,soon}
+lu_1075,stoned,/on$,ueb_g2_decode,/on$
+lu_1076,telephoned,telephon$,ueb_g2_decode,telephon$
+lu_1077,Thaddeus,",?addeus",ueb_g2_decode,",?addeus"
+lu_1078,toner,ton},ueb_g2_decode,ton}
+lu_1079,advanced,adv.ed,ueb_g2_decode,adv.ed
+lu_1080,apartheid,"a""pheid",ueb_g2_decode,"a""pheid"
+lu_1081,asthma,as?ma,ueb_g2_decode,as?ma
+lu_1082,dishevelled,di%evell$,ueb_g2_decode,di%evell$
+lu_1083,gingham,g+ham,ueb_g2_decode,g+ham
+lu_1084,hypotheses,hypo!ses,ueb_g2_decode,hypo!ses
+lu_1085,isthmus,is?mus,ueb_g2_decode,is?mus
+lu_1086,posthumous,po/hum|s,ueb_g2_decode,po/hum|s
+lu_1087,stronghold,/r;ghold,ueb_g2_decode,/r;ghold
+lu_1088,towhee,t{hee,ueb_g2_decode,t{hee
+lu_1089,where'er,:}e'},ueb_g2_decode,:}e'}
+lu_1090,whereas,""":as",ueb_g2_decode,""":as"
+lu_1091,wherever,":}""e",ueb_g2_decode,":}""e"
+lu_1092,chemotherapy,*emo!rapy,ueb_g2_decode,*emo!rapy
+lu_1093,chlordane,*lordane,ueb_g2_decode,*lordane
+lu_1094,whaddaya,:addaya,ueb_g2_decode,:addaya
+lu_1095,enough–bein',"5,-2in'",ueb_g2_decode,"5,-2in'"
+lu_1096,in.....,in44444,ueb_g2_decode,in44444
+lu_1097,IN MY HOUSE,",,,9 my h|se,'",ueb_g2_decode,",,,9 my h|se,'"
+lu_1098,Airedale,Airedale,ueb_g2_decode,Airedale
+lu_1099,Bighorn,Bighorn,ueb_g2_decode,Bighorn
+lu_1100,blowhard,bl{h>d,ueb_g2_decode,bl{h>d
+lu_1101,bottleneck,bottleneck,ueb_g2_decode,bottleneck
+lu_1102,carthorse,c>thorse,ueb_g2_decode,c>thorse
+lu_1103,cowherd,c{h}d,ueb_g2_decode,c{h}d
+lu_1104,dumbbell,dumbbell,ueb_g2_decode,dumbbell
+lu_1105,egghead,e7h1d,ueb_g2_decode,e7h1d
+lu_1106,fathead,fath1d,ueb_g2_decode,fath1d
+lu_1107,flearidden,fl1ridd5,ueb_g2_decode,fl1ridd5
+lu_1108,grasshopper,grasshopp},ueb_g2_decode,grasshopp}
+lu_1109,hideaway,hideaway,ueb_g2_decode,hideaway
+lu_1110,indiarubber,9diaru2},ueb_g2_decode,9diaru2}
+lu_1111,insofar,9sof>,ueb_g2_decode,9sof>
+lu_1112,Jamestown,Jamest{n,ueb_g2_decode,Jamest{n
+lu_1113,kettledrum,kettledrum,ueb_g2_decode,kettledrum
+lu_1114,longhand,l;gh&,ueb_g2_decode,l;gh&
+lu_1115,northeast,nor?1/,ueb_g2_decode,nor?1/
+lu_1116,painstaking,pa9stak+,ueb_g2_decode,pa9stak+
+lu_1117,photoflash,photofla%,ueb_g2_decode,photofla%
+lu_1118,pineapple,p9eapple,ueb_g2_decode,p9eapple
+lu_1119,rawhide,rawhide,ueb_g2_decode,rawhide
+lu_1120,Southend,S|?5d,ueb_g2_decode,S|?5d
+lu_1121,stateroom,/ateroom,ueb_g2_decode,/ateroom
+lu_1122,storeroom,/oreroom,ueb_g2_decode,/oreroom
+lu_1123,stronghold,/r;ghold,ueb_g2_decode,/r;ghold
+lu_1124,sweetheart,sweethe>t,ueb_g2_decode,sweethe>t
+lu_1125,tearoom,t1room,ueb_g2_decode,t1room
+lu_1126,toenail,toenail,ueb_g2_decode,toenail
+lu_1127,wiseacre,wiseacre,ueb_g2_decode,wiseacre
+lu_1128,Cunnyngham,Cunnyngham,ueb_g2_decode,Cunnyngham
+lu_1129,knighthood,kni<thood,ueb_g2_decode,kni<thood
+lu_1130,mishandle,mish&le,ueb_g2_decode,mish&le
+lu_1131,mishap,mishap,ueb_g2_decode,mishap
+lu_1132,mishear,mishe>,ueb_g2_decode,mishe>
+lu_1133,Newhaven,Newhav5,ueb_g2_decode,Newhav5
+lu_1134,shanghaied,%anghai$,ueb_g2_decode,%anghai$
+lu_1135,Sontheim,Sontheim,ueb_g2_decode,Sontheim
+lu_1136,stronghold,/r;ghold,ueb_g2_decode,/r;ghold
+lu_1137,Brigham,Bri<am,ueb_g2_decode,Bri<am
+lu_1138,Chatham,",*a?am",ueb_g2_decode,",*a?am"
+lu_1139,Higham,Hi<am,ueb_g2_decode,Hi<am
+lu_1140,bedazzle,2dazzle,ueb_g2_decode,2dazzle
+lu_1141,bedevil,2devil,ueb_g2_decode,2devil
+lu_1142,benighted,2ni<t$,ueb_g2_decode,2ni<t$
+lu_1143,benumb,2numb,ueb_g2_decode,2numb
+lu_1144,berate,2rate,ueb_g2_decode,2rate
+lu_1145,bereave,2r1ve,ueb_g2_decode,2r1ve
+lu_1146,congeal,3g1l,ueb_g2_decode,3g1l
+lu_1147,congruent,3gru5t,ueb_g2_decode,3gru5t
+lu_1148,disharmony,4h>mony,ueb_g2_decode,4h>mony
+lu_1149,dishonest,"4h""o/",ueb_g2_decode,"4h""o/"
+lu_1150,preamplifier,preamplifi},ueb_g2_decode,preamplifi}
+lu_1151,readjust,readju/,ueb_g2_decode,readju/
+lu_1152,reappoint,reappo9t,ueb_g2_decode,reappo9t
+lu_1153,reassure,reassure,ueb_g2_decode,reassure
+lu_1154,abbreviate,a2reviate,ueb_g2_decode,a2reviate
+lu_1155,accent,a35t,ueb_g2_decode,a35t
+lu_1156,affect,a6ect,ueb_g2_decode,a6ect
+lu_1157,aggressive,a7ressive,ueb_g2_decode,a7ressive
+lu_1158,aqueduct,aqu$uct,ueb_g2_decode,aqu$uct
+lu_1159,arise,>ise,ueb_g2_decode,>ise
+lu_1160,Benedict,B5$ict,ueb_g2_decode,B5$ict
+lu_1161,deduce,d$uce,ueb_g2_decode,d$uce
+lu_1162,denominate,d5om9ate,ueb_g2_decode,d5om9ate
+lu_1163,denote,d5ote,ueb_g2_decode,d5ote
+lu_1164,denouement,d5|e;t,ueb_g2_decode,d5|e;t
+lu_1165,denounce,d5|nce,ueb_g2_decode,d5|nce
+lu_1166,derail,d}ail,ueb_g2_decode,d}ail
+lu_1167,deregister,d}egi/},ueb_g2_decode,d}egi/}
+lu_1168,derivable,d}ivable,ueb_g2_decode,d}ivable
+lu_1169,derogatory,d}ogatory,ueb_g2_decode,d}ogatory
+lu_1170,edacious,$aci|s,ueb_g2_decode,$aci|s
+lu_1171,edict,$ict,ueb_g2_decode,$ict
+lu_1172,edition,$i;n,ueb_g2_decode,$i;n
+lu_1173,educe,$uce,ueb_g2_decode,$uce
+lu_1174,effaceable,e6ac1ble,ueb_g2_decode,e6ac1ble
+lu_1175,effect,e6ect,ueb_g2_decode,e6ect
+lu_1176,enormous,5orm|s,ueb_g2_decode,5orm|s
+lu_1177,enounce,5|nce,ueb_g2_decode,5|nce
+lu_1178,enumerate,5um}ate,ueb_g2_decode,5um}ate
+lu_1179,erase,}ase,ueb_g2_decode,}ase
+lu_1180,erosion,}o.n,ueb_g2_decode,}o.n
+lu_1181,froward,fr{>d,ueb_g2_decode,fr{>d
+lu_1182,irredentist,irr$5ti/,ueb_g2_decode,irr$5ti/
+lu_1183,malediction,mal$ic;n,ueb_g2_decode,mal$ic;n
+lu_1184,mistake,mi/ake,ueb_g2_decode,mi/ake
+lu_1185,mistrust,mi/ru/,ueb_g2_decode,mi/ru/
+lu_1186,multinomial,mult9omial,ueb_g2_decode,mult9omial
+lu_1187,pandemonium,p&emonium,ueb_g2_decode,p&emonium
+lu_1188,perinatal,p}9atal,ueb_g2_decode,p}9atal
+lu_1189,predate,pr$ate,ueb_g2_decode,pr$ate
+lu_1190,predecease,pr$ec1se,ueb_g2_decode,pr$ec1se
+lu_1191,predecessor,pr$ecessor,ueb_g2_decode,pr$ecessor
+lu_1192,predestine,pr$e/9e,ueb_g2_decode,pr$e/9e
+lu_1193,predicament,pr$ica;t,ueb_g2_decode,pr$ica;t
+lu_1194,prediction,pr$ic;n,ueb_g2_decode,pr$ic;n
+lu_1195,predominate,pr$om9ate,ueb_g2_decode,pr$om9ate
+lu_1196,prerequisite,pr}equisite,ueb_g2_decode,pr}equisite
+lu_1197,prerogative,pr}ogative,ueb_g2_decode,pr}ogative
+lu_1198,profanity,pr(an;y,ueb_g2_decode,pr(an;y
+lu_1199,professor,pr(essor,ueb_g2_decode,pr(essor
+lu_1200,profile,pr(ile,ueb_g2_decode,pr(ile
+lu_1201,profoundly,pr(.dly,ueb_g2_decode,pr(.dly
+lu_1202,profusion,pr(u.n,ueb_g2_decode,pr(u.n
+lu_1203,redact,r$act,ueb_g2_decode,r$act
+lu_1204,rededicate,r$$icate,ueb_g2_decode,r$$icate
+lu_1205,redeemable,r$eemable,ueb_g2_decode,r$eemable
+lu_1206,redouble,r$|ble,ueb_g2_decode,r$|ble
+lu_1207,renege,r5ege,ueb_g2_decode,r5ege
+lu_1208,renegotiate,r5egotiate,ueb_g2_decode,r5egotiate
+lu_1209,renewable,r5ewable,ueb_g2_decode,r5ewable
+lu_1210,renumber,r5umb},ueb_g2_decode,r5umb}
+lu_1211,reread,r}1d,ueb_g2_decode,r}1d
+lu_1212,sedate,s$ate,ueb_g2_decode,s$ate
+lu_1213,Vandyke,V&yke,ueb_g2_decode,V&yke
+lu_1214,aerofoil,a}ofoil,ueb_g2_decode,a}ofoil
+lu_1215,antitype,antitype,ueb_g2_decode,antitype
+lu_1216,biofeedback,biofe$back,ueb_g2_decode,biofe$back
+lu_1217,centimeter,c5timet},ueb_g2_decode,c5timet}
+lu_1218,cofounder,cof.d},ueb_g2_decode,cof.d}
+lu_1219,disulphide,disulphide,ueb_g2_decode,disulphide
+lu_1220,filofax,filofax,ueb_g2_decode,filofax
+lu_1221,gasometer,gasomet},ueb_g2_decode,gasomet}
+lu_1222,inessential,9ess5tial,ueb_g2_decode,9ess5tial
+lu_1223,infrared,9frar$,ueb_g2_decode,9frar$
+lu_1224,kilowatt,kilowatt,ueb_g2_decode,kilowatt
+lu_1225,microfilm,microfilm,ueb_g2_decode,microfilm
+lu_1226,prounion,prounion,ueb_g2_decode,prounion
+lu_1227,retroflex,retroflex,ueb_g2_decode,retroflex
+lu_1228,riboflavin,riboflav9,ueb_g2_decode,riboflav9
+lu_1229,styrofoam,/yrofoam,ueb_g2_decode,/yrofoam
+lu_1230,subbasement,subbase;t,ueb_g2_decode,subbase;t
+lu_1231,unamended,unam5d$,ueb_g2_decode,unam5d$
+lu_1232,underived,und}iv$,ueb_g2_decode,und}iv$
+lu_1233,anteater,ant1t},ueb_g2_decode,ant1t}
+lu_1234,contradistinction,3tradi/9c;n,ueb_g2_decode,3tradi/9c;n
+lu_1235,disease,41se,ueb_g2_decode,41se
+lu_1236,extramental,extra;tal,ueb_g2_decode,extra;tal
+lu_1237,heartsease,he>ts1se,ueb_g2_decode,he>ts1se
+lu_1238,incongruity,9c;gru;y,ueb_g2_decode,9c;gru;y
+lu_1239,incongruous,9c;gru|s,ueb_g2_decode,9c;gru|s
+lu_1240,indistinct,9di/9ct,ueb_g2_decode,9di/9ct
+lu_1241,indistinguishable,9di/+ui%able,ueb_g2_decode,9di/+ui%able
+lu_1242,motheaten,mo?1t5,ueb_g2_decode,mo?1t5
+lu_1243,northeast,nor?1/,ueb_g2_decode,nor?1/
+lu_1244,redistribution,r$i/ribu;n,ueb_g2_decode,r$i/ribu;n
+lu_1245,speakeasy,sp1k1sy,ueb_g2_decode,sp1k1sy
+lu_1246,spreadeagle,spr1d1gle,ueb_g2_decode,spr1d1gle
+lu_1247,uncongenial,unc;g5ial,ueb_g2_decode,unc;g5ial
+lu_1248,undisturbed,undi/urb$,ueb_g2_decode,undi/urb$
+lu_1249,unfulfilled,un;lfill$,ueb_g2_decode,un;lfill$
+lu_1250,unlessoned,un.son$,ueb_g2_decode,un.son$
+lu_1251,disingenuous,49g5u|s,ueb_g2_decode,49g5u|s
+lu_1252,electroencephalogram,electro5cephalogram,ueb_g2_decode,electro5cephalogram
+lu_1253,acreage,acr1ge,ueb_g2_decode,acr1ge
+lu_1254,agreeable,agre1ble,ueb_g2_decode,agre1ble
+lu_1255,arboreal,>bor1l,ueb_g2_decode,>bor1l
+lu_1256,baroness,b>o;s,ueb_g2_decode,b>o;s
+lu_1257,boredom,bor$om,ueb_g2_decode,bor$om
+lu_1258,Brigham,Bri<am,ueb_g2_decode,Bri<am
+lu_1259,changeability,*ang1bil;y,ueb_g2_decode,*ang1bil;y
+lu_1260,chargeable,*>g1ble,ueb_g2_decode,*>g1ble
+lu_1261,Chatham,",*a?am",ueb_g2_decode,",*a?am"
+lu_1262,delineate,del91te,ueb_g2_decode,del91te
+lu_1263,dukedom,duk$om,ueb_g2_decode,duk$om
+lu_1264,effaceable,e6ac1ble,ueb_g2_decode,e6ac1ble
+lu_1265,European,Europ1n,ueb_g2_decode,Europ1n
+lu_1266,finery,f9}y,ueb_g2_decode,f9}y
+lu_1267,foreseeably,=ese1bly,ueb_g2_decode,=ese1bly
+lu_1268,freedom,fre$om,ueb_g2_decode,fre$om
+lu_1269,genealogy,g51logy,ueb_g2_decode,g51logy
+lu_1270,governess,gov};s,ueb_g2_decode,gov};s
+lu_1271,Higham,Hi<am,ueb_g2_decode,Hi<am
+lu_1272,imagery,imag}y,ueb_g2_decode,imag}y
+lu_1273,laureate,laur1te,ueb_g2_decode,laur1te
+lu_1274,likeable,lik1ble,ueb_g2_decode,lik1ble
+lu_1275,lineage,l91ge,ueb_g2_decode,l91ge
+lu_1276,lineal,l91l,ueb_g2_decode,l91l
+lu_1277,lioness,lio;s,ueb_g2_decode,lio;s
+lu_1278,midwifery,midwif}y,ueb_g2_decode,midwif}y
+lu_1279,mileage,mil1ge,ueb_g2_decode,mil1ge
+lu_1280,noticeable,notic1ble,ueb_g2_decode,notic1ble
+lu_1281,oleaginous,ol1g9|s,ueb_g2_decode,ol1g9|s
+lu_1282,orangery,orang}y,ueb_g2_decode,orang}y
+lu_1283,peaceable,p1c1ble,ueb_g2_decode,p1c1ble
+lu_1284,permeable,p}m1ble,ueb_g2_decode,p}m1ble
+lu_1285,permeate,p}m1te,ueb_g2_decode,p}m1te
+lu_1286,popedom,pop$om,ueb_g2_decode,pop$om
+lu_1287,rateable,rat1ble,ueb_g2_decode,rat1ble
+lu_1288,savagery,savag}y,ueb_g2_decode,savag}y
+lu_1289,venereal,v5}1l,ueb_g2_decode,v5}1l
+lu_1290,biscuity,biscuity,ueb_g2_decode,biscuity
+lu_1291,chieftainess,*iefta9ess,ueb_g2_decode,*iefta9ess
+lu_1292,Chisholm,",*isholm",ueb_g2_decode,",*isholm"
+lu_1293,citizeness,citiz5ess,ueb_g2_decode,citiz5ess
+lu_1294,fruity,fruity,ueb_g2_decode,fruity
+lu_1295,orangeade,orangeade,ueb_g2_decode,orangeade
+lu_1296,rabbity,ra2ity,ueb_g2_decode,ra2ity
+lu_1297,twofold,twofold,ueb_g2_decode,twofold
+lu_1298,areaway,>1way,ueb_g2_decode,>1way
+lu_1299,ebbing,e2+,ueb_g2_decode,e2+
+lu_1300,eggplant,e7plant,ueb_g2_decode,e7plant
+lu_1301,ideas,id1s,ueb_g2_decode,id1s
+lu_1302,seaman,s1man,ueb_g2_decode,s1man
+lu_1303,seashore,s1%ore,ueb_g2_decode,s1%ore
+lu_1304,stiffly,/i6ly,ueb_g2_decode,/i6ly
+lu_1305,teatime,"t1""t",ueb_g2_decode,"t1""t"
+lu_1306,aerial,a}ial,ueb_g2_decode,a}ial
+lu_1307,aerobic,a}obic,ueb_g2_decode,a}obic
+lu_1308,Baedeker,Ba$ek},ueb_g2_decode,Ba$ek}
+lu_1309,Betws-y-Coed,Betws-;y-Co$,ueb_g2_decode,Betws-;y-Co$
+lu_1310,Blaenau Ffestiniog,Bla5au Ffe/9iog,ueb_g2_decode,Bla5au Ffe/9iog
+lu_1311,Caernarvon,Ca}n>von,ueb_g2_decode,Ca}n>von
+lu_1312,Daedalus,Da$alus,ueb_g2_decode,Da$alus
+lu_1313,diaeresis,dia}esis,ueb_g2_decode,dia}esis
+lu_1314,encyclopaedia,5cyclopa$ia,ueb_g2_decode,5cyclopa$ia
+lu_1315,faerie,fa}ie,ueb_g2_decode,fa}ie
+lu_1316,Goering,Go}+,ueb_g2_decode,Go}+
+lu_1317,Gruenfeld,Gru5feld,ueb_g2_decode,Gru5feld
+lu_1318,Judaean,Juda1n,ueb_g2_decode,Juda1n
+lu_1319,Liliaceae,Liliac1e,ueb_g2_decode,Liliac1e
+lu_1320,maenad,ma5ad,ueb_g2_decode,ma5ad
+lu_1321,Oedipus,O$ipus,ueb_g2_decode,O$ipus
+lu_1322,orthopaedic,or?opa$ic,ueb_g2_decode,or?opa$ic
+lu_1323,paean,pa1n,ueb_g2_decode,pa1n
+lu_1324,phoenix,pho5ix,ueb_g2_decode,pho5ix
+lu_1325,Schoenberg,S*o5b}g,ueb_g2_decode,S*o5b}g
+lu_1326,subpoena,subpo5a,ueb_g2_decode,subpo5a
+lu_1327,færie,fa~6erie,ueb_g2_decode,fa~6erie
+lu_1328,W2N 6CH,"W2N 6,Ch",ueb_g2_decode,"W2N 6,Ch"
+lu_1329,S. Da.,;S4 Da4,ueb_g2_decode,;S4 Da4
+lu_1330,Xft.,Xft4,ueb_g2_decode,Xft4
+lu_1331,G.B.S.,G4B4S4,ueb_g2_decode,G4B4S4
+lu_1332,V & A,;V `& A,ueb_g2_decode,;V `& A
+lu_1333,p. 15,;p4 15,ueb_g2_decode,;p4 15
+lu_1334,c 1600,;c 1600,ueb_g2_decode,;c 1600
+lu_1335,3 N m,3 ;N ;m,ueb_g2_decode,3 ;N ;m
+lu_1336,Macbeth V i 8 or V.i.8,Macbe? ;V i 8 or V4i48,ueb_g2_decode,Macbe? ;V i 8 or V4i48
+lu_1337,U. of K.,;U4 ( ;K4,ueb_g2_decode,;U4 ( ;K4
+lu_1338,FORTRAN,",,=tran",ueb_g2_decode,",,=tran"
+lu_1339,prof,pr(,ueb_g2_decode,pr(
+lu_1340,ch. 7,ch4 7,ueb_g2_decode,ch4 7
+lu_1341,ch.7,*47,ueb_g2_decode,*47
+lu_1342,par3,p>3,ueb_g2_decode,p>3
+lu_1343,4-Hers,4-H}s,ueb_g2_decode,4-H}s
+lu_1344,qwerty,qw}ty,ueb_g2_decode,qw}ty
+lu_1345,radar,rad>,ueb_g2_decode,rad>
+lu_1346,Ariz,",>iz",ueb_g2_decode,",>iz"
+lu_1347,CHUM Radio,",,*um Radio",ueb_g2_decode,",,*um Radio"
+lu_1348,START,",,/>t",ueb_g2_decode,",,/>t"
+lu_1349,Sh$40,",%`s40",ueb_g2_decode,",%`s40"
+lu_1350,1 in.,1 in4,ueb_g2_decode,1 in4
+lu_1351,9-in dia.,9-9 dia4,ueb_g2_decode,9-9 dia4
+lu_1352,Belg.,Belg4,ueb_g2_decode,Belg4
+lu_1353,cont.,3t4,ueb_g2_decode,3t4
+lu_1354,Dist.,",4t4",ueb_g2_decode,",4t4"
+lu_1355,nem. con.,nem4 con4,ueb_g2_decode,nem4 con4
+lu_1356,ASEAN,",As1n",ueb_g2_decode,",As1n"
+lu_1357,SEATO,",S1to",ueb_g2_decode,",S1to"
+lu_1358,7 ins,7 9s,ueb_g2_decode,7 9s
+lu_1359,7ins,7;ins,ueb_g2_decode,7;ins
+lu_1360,Inc.,",9c4",ueb_g2_decode,",9c4"
+lu_1361,Gov. Gen.,Gov4 G54,ueb_g2_decode,Gov4 G54
+lu_1362,Minn.,M9n4,ueb_g2_decode,M9n4
+lu_1363,MiniPC,"M9i,Pc",ueb_g2_decode,"M9i,Pc"
+lu_1364,INXS,",,9xs",ueb_g2_decode,",,9xs"
+lu_1365,1-800-INFO,"1-800-,,9fo",ueb_g2_decode,"1-800-,,9fo"
+lu_1366,3 yrs 6 mths,3 ;yrs 6 m?s,ueb_g2_decode,3 ;yrs 6 m?s
+lu_1367,braille_it_better@learn.org,braille.-it.-bett}`ale>n4org,ueb_g2_decode,braille.-it.-bett}`ale>n4org
+lu_1368,children-do-great@teach.net,*n-d-gr1t`at1*4net,ueb_g2_decode,*n-d-gr1t`at1*4net
+lu_1369,world@large.com,_w`al>ge4com,ueb_g2_decode,_w`al>ge4com
+lu_1370,www.rubberchicken.com/menus,www4ru2}*ick54com_/m5us,ueb_g2_decode,www4ru2}*ick54com_/m5us
+lu_1371,www.one.in.a.hundred.org,"www4""o494a4hundr$4org",ueb_g2_decode,"www4""o494a4hundr$4org"
+lu_1372,c:\\contractions\\wordsigns.doc,c3_*contrac;ns_*~wsigns4doc,ueb_g2_decode,c3_*contrac;ns_*~wsigns4doc
+lu_1373,c:\\InfoForSteven\\PhoneNumbers.xls,"c3_*,9fo,=,/ev5_*Ph""oNumb}s4xls",ueb_g2_decode,"c3_*,9fo,=,/ev5_*Ph""oNumb}s4xls"
+lu_1374,c:\\ideas\\child-of-the-sea.doc,c3_*id1s_**ild-(-!-sea4doc,ueb_g2_decode,c3_*id1s_**ild-(-!-sea4doc
+lu_1375,c:\\poem ideas\\my child's smile.doc,c3_*poem id1s_*my *'s smile4doc,ueb_g2_decode,c3_*poem id1s_*my *'s smile4doc
+lu_1376,coulda,cda,ueb_g2_decode,cda
+lu_1377,mebbe,me2e,ueb_g2_decode,me2e
+lu_1378,pinny,p9ny,ueb_g2_decode,p9ny
+lu_1379,depity,dep;y,ueb_g2_decode,dep;y
+lu_1380,your,yr,ueb_g2_decode,yr
+lu_1381,wher,:},ueb_g2_decode,:}
+lu_1382,somers,som}s,ueb_g2_decode,som}s
+lu_1383,theirselves,_!selves,ueb_g2_decode,_!selves
+lu_1384,dint,d9t,ueb_g2_decode,d9t
+lu_1385,bofe,b(e,ueb_g2_decode,b(e
+lu_1386,'stracted,'/ract$,ueb_g2_decode,'/ract$
+lu_1387,fayther,fay!r,ueb_g2_decode,fay!r
+lu_1388,distruction,4truc;n,ueb_g2_decode,4truc;n
+lu_1389,musta,m/a,ueb_g2_decode,m/a
+lu_1390,goodun,gdun,ueb_g2_decode,gdun
+lu_1391,lyedee,ly$ee,ueb_g2_decode,ly$ee
+lu_1392,com'ere,com'}e,ueb_g2_decode,com'}e
+lu_1393,say pl...,say pl444,ueb_g2_decode,say pl444
+lu_1394,Tell me wh-.,Tell me wh-4,ueb_g2_decode,Tell me wh-4
+lu_1395,-tion,-tion,ueb_g2_decode,-tion
+lu_1396,-ccio,-ccio,ueb_g2_decode,-ccio
+lu_1397,-ing,-9g,ueb_g2_decode,-9g
+lu_1398,-ount,-|nt,ueb_g2_decode,-|nt
+lu_1399,-est,-e/,ueb_g2_decode,-e/
+lu_1400,Bighorn,Bighorn,ueb_g2_decode,Bighorn
+lu_1401,chemotherapy,*emo!rapy,ueb_g2_decode,*emo!rapy
+lu_1402,Hades,Hades,ueb_g2_decode,Hades
+lu_1403,Hermione,H}mione,ueb_g2_decode,H}mione
+lu_1404,Mortimer,Mortim},ueb_g2_decode,Mortim}
+lu_1405,Newhaven,Newhav5,ueb_g2_decode,Newhav5
+lu_1406,Stalingrad,",/al9grad",ueb_g2_decode,",/al9grad"
+lu_1407,Vietnamese,Vietnamese,ueb_g2_decode,Vietnamese
+lu_1408,Berea,",2rea",ueb_g2_decode,",2rea"
+lu_1409,Ione,"I""o",ueb_g2_decode,"I""o"
+lu_1410,Simone,"Sim""o",ueb_g2_decode,"Sim""o"
+lu_1411,Townshend,T{nsh5d,ueb_g2_decode,T{nsh5d
+lu_1412,Twillingate,Twill+ate,ueb_g2_decode,Twill+ate
+lu_1413,thecond thentury,!cond !ntury,ueb_g2_decode,!cond !ntury
+lu_1414,thenotaph,!notaph,ueb_g2_decode,!notaph
+lu_1415,thuthpenthe,?u?p5!,ueb_g2_decode,?u?p5!
+lu_1416,verY,v}Y,ueb_g2_decode,v}Y
+lu_1417,you'll,y'll,ueb_g2_decode,y'll
+lu_1418,go'n,go'n,ueb_g2_decode,go'n
+lu_1419,child(ish),"*ild""<i%"">",ueb_g2_decode,"*ild""<i%"">"
+lu_1420,this'll,?'ll,ueb_g2_decode,?'ll
+lu_1421,out'a,|t'a,ueb_g2_decode,|t'a
+lu_1422,grandEST,"gr&,E/",ueb_g2_decode,"gr&,E/"
+lu_1423,with(er),")""<}"">",ueb_g2_decode,")""<}"">"
+lu_1424,THIRSTy,",,?ir/,'y",ueb_g2_decode,",,?ir/,'y"
+lu_1425,ni(gh)t,"ni""<<"">t",ueb_g2_decode,"ni""<<"">t"
+lu_1426,thou're,?|'re,ueb_g2_decode,?|'re
+lu_1427,wer(e),"w}""<e"">",ueb_g2_decode,"w}""<e"">"
+lu_1428,his'n,his'n,ueb_g2_decode,his'n
+lu_1429,in't,9't,ueb_g2_decode,9't
+lu_1430,(be)long,"""<be"">l;g",ueb_g2_decode,"""<be"">l;g"
+lu_1431,O'Connor,O'Connor,ueb_g2_decode,O'Connor
+lu_1432,CliffEdge,"Cliff,$ge",ueb_g2_decode,"Cliff,$ge"
+lu_1433,dragg(ing),"dragg""<+"">",ueb_g2_decode,"dragg""<+"">"
+lu_1434,rubb'd,rubb'd,ueb_g2_decode,rubb'd
+lu_1435,NorthEast,Nor?Ea/,ueb_g2_decode,Nor?Ea/
+lu_1436,there(upon),"""!""<~u"">",ueb_g2_decode,"""!""<~u"">"
+lu_1437,HANDsome,",H&,'""s",ueb_g2_decode,",H&,'""s"
+lu_1438,WordPerfect,",~wP}fect",ueb_g2_decode,",~wP}fect"
+lu_1439,count(less),"c.t""<less"">",ueb_g2_decode,"c.t""<less"">"
+lu_1440,CarLess,C>Less,ueb_g2_decode,C>Less
+lu_1441,grey'ound,grey'|nd,ueb_g2_decode,grey'|nd
+lu_1442,J----y,;J----;y,ueb_g2_decode,;J----;y
+lu_1443,n...ce,n444ce,ueb_g2_decode,n444ce
+lu_1444,fr...nd,fr444nd,ueb_g2_decode,fr444nd
+lu_1445,w...ghed,w444<$,ueb_g2_decode,w444<$
+lu_1446,we-e-ellll,we-;e-ellll,ueb_g2_decode,we-;e-ellll
+lu_1447,a-a-ah—ch-o-o-oh,"a-a-ah,-ch-o-o-oh",ueb_g2_decode,"a-a-ah,-ch-o-o-oh"
+lu_1448,mmm-more,mmm-m,ueb_g2_decode,mmm-m
+lu_1449,shhhh,%hhh,ueb_g2_decode,%hhh
+lu_1450,errrr,}rrr,ueb_g2_decode,}rrr
+lu_1451,pfft,p6t,ueb_g2_decode,p6t
+lu_1452,doodle-e-do,doodle-;e-d,ueb_g2_decode,doodle-;e-d
+lu_1453,the-e-enk,!-;e-5k,ueb_g2_decode,!-;e-5k
+lu_1454,so-o-o-o,s-o-o-o,ueb_g2_decode,s-o-o-o
+lu_1455,aaarrrggghh,aa>rr7<h,ueb_g2_decode,aa>rr7<h
+lu_1456,br-r-r,br-;r-;r,ueb_g2_decode,br-;r-;r
+lu_1457,cooooountry,coooo.try,ueb_g2_decode,coooo.try
+lu_1458,ggggood,g7good,ueb_g2_decode,g7good
+lu_1459,loooong,looo;g,ueb_g2_decode,looo;g
+lu_1460,sisterrr,si/}rr,ueb_g2_decode,si/}rr
+lu_1461,d-d-day,";d-;d-""d",ueb_g2_decode,";d-;d-""d"
+lu_1462,ch-child,ch-*,ueb_g2_decode,ch-*
+lu_1463,y-y-you,;y-;y-y,ueb_g2_decode,;y-;y-y
+lu_1464,b...but,b444but,ueb_g2_decode,b444but
+lu_1465,c-c-c-conceive,;c-;c-;c-3cv,ueb_g2_decode,;c-;c-;c-3cv
+lu_1466,st-st-stay,st-st-/ay,ueb_g2_decode,st-st-/ay
+lu_1467,s-s-stutter,;s-;s-/utt},ueb_g2_decode,;s-;s-/utt}
+lu_1468,g-good,;g-gd,ueb_g2_decode,;g-gd
+lu_1469,qu-quick,qu-qk,ueb_g2_decode,qu-qk
+lu_1470,m-m-m-mine,;m-;m-;m-m9e,ueb_g2_decode,;m-;m-;m-m9e
+lu_1471,wh-where,"wh-"":",ueb_g2_decode,"wh-"":"
+lu_1472,f-f-father,";f-;f-""f",ueb_g2_decode,";f-;f-""f"
+lu_1473,th-the,th-!,ueb_g2_decode,th-!
+lu_1474,de-ce-ce-cease,de-ce-ce-c1se,ueb_g2_decode,de-ce-ce-c1se
+lu_1475,th-these,th-~!,ueb_g2_decode,th-~!
+lu_1476,g-ghost,;g-<o/,ueb_g2_decode,;g-<o/
+lu_1477,gr-ground,gr-gr.d,ueb_g2_decode,gr-gr.d
+lu_1478,lea-leave,lea-l1ve,ueb_g2_decode,lea-l1ve
+lu_1479,m-must,;m-m/,ueb_g2_decode,;m-m/
+lu_1480,w-what,;w-:at,ueb_g2_decode,;w-:at
+lu_1481,c-can't,;c-c't,ueb_g2_decode,;c-c't
+lu_1482,w-was,;w-was,ueb_g2_decode,;w-was
+lu_1483,ch-ch-children,ch-ch-*n,ueb_g2_decode,ch-ch-*n
+lu_1484,th-themselves,th-!mvs,ueb_g2_decode,th-!mvs
+lu_1485,b-b-below,;b-;b-2l,ueb_g2_decode,;b-;b-2l
+lu_1486,some-one,"""s-""o",ueb_g2_decode,"""s-""o"
+lu_1487,en-chant-ment,en-*ant-m5t,ueb_g2_decode,en-*ant-m5t
+lu_1488,in-fea-si-ble,9-fea-si-ble,ueb_g2_decode,9-fea-si-ble
+lu_1489,child-ish-ly,*-i%-ly,ueb_g2_decode,*-i%-ly
+lu_1490,dis-in-ter-est,dis-9-t}-e/,ueb_g2_decode,dis-9-t}-e/
+lu_1491,friend-li-ness,fr-li-ness,ueb_g2_decode,fr-li-ness
+lu_1492,for-get-ting,=-get-t+,ueb_g2_decode,=-get-t+
+lu_1493,bless-ed,b.s-$,ueb_g2_decode,b.s-$
+lu_1494,out-side,|-side,ueb_g2_decode,|-side
+lu_1495,be-low,be-l{,ueb_g2_decode,be-l{
+lu_1496,his-tory,his-tory,ueb_g2_decode,his-tory
+lu_1497,nightin-gale,ni<t9-gale,ueb_g2_decode,ni<t9-gale
+lu_1498,pro-found.),"pro-f.d4"">",ueb_g2_decode,"pro-f.d4"">"
+lu_1499,ahimsa,ahimsa,ueb_g2_decode,ahimsa
+lu_1500,braillist,brailli/,ueb_g2_decode,brailli/
+lu_1501,declaration,decl>a;n,ueb_g2_decode,decl>a;n
+lu_1502,drafter,draft},ueb_g2_decode,draft}
+lu_1503,lacrosse,lacrosse,ueb_g2_decode,lacrosse
+lu_1504,marabout,m>ab|t,ueb_g2_decode,m>ab|t
+lu_1505,mustache,mu/a*e,ueb_g2_decode,mu/a*e
+lu_1506,mustang,mu/ang,ueb_g2_decode,mu/ang
+lu_1507,muster,mu/},ueb_g2_decode,mu/}
+lu_1508,necessarily,necess>ily,ueb_g2_decode,necess>ily
+lu_1509,rafter,raft},ueb_g2_decode,raft}
+lu_1510,shoulder,%|ld},ueb_g2_decode,%|ld}
+lu_1511,abouts,ab|ts,ueb_g2_decode,ab|ts
+lu_1512,acrosses,acrosses,ueb_g2_decode,acrosses
+lu_1513,againe,aga9e,ueb_g2_decode,aga9e
+lu_1514,almosts,almo/s,ueb_g2_decode,almo/s
+lu_1515,hims,hims,ueb_g2_decode,hims
+lu_1516,aftereffect,aft}e6ect,ueb_g2_decode,aft}e6ect
+lu_1517,afterimage,aft}image,ueb_g2_decode,aft}image
+lu_1518,blinded,bl9d$,ueb_g2_decode,bl9d$
+lu_1519,blinding,bl9d+,ueb_g2_decode,bl9d+
+lu_1520,befriended,2fri5d$,ueb_g2_decode,2fri5d$
+lu_1521,hereinbefore,"""h9be=e",ueb_g2_decode,"""h9be=e"
+lu_1522,inbetween,9betwe5,ueb_g2_decode,9betwe5
+lu_1523,misconceived,misconceiv$,ueb_g2_decode,misconceiv$

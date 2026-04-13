@@ -1,0 +1,501 @@
+chem_id,name,ko_text_chars,ko_braille_chars,roundtrip_edit_sim,roundtrip_chrf,violations,violation_count,coverage_pct,passthrough_chars
+043091,"Tall oil polymer with glycerol, isophthalic acid, terephthalic acid, 3,4,5,6-tetrachloro-1,2-benzenedicarboxylic acid, 4,5,6,7-tetrachloro-1,3-isobenzofurandione and trimethylolpropane -",1198,1992,0.5182,0.4052,"{""passthrough_chars"": 10}",10,99.17,10
+007840,2-하이드록시사이클로헥산온 이합체(2-HYDROXYCYCLOHEXANONE DIMER),869,1745,0.7574,0.6649,"{""double_blank"": 33, ""passthrough_chars"": 10}",43,98.85,10
+001741,"알파-(3-(3-(2H-벤조트리아졸-2-일)-5-(1,1-다이메틸에틸)-4- 하이드록시페닐)-1-옥소프로필)-오...",4259,8682,0.8717,0.769,"{""double_blank"": 6, ""passthrough_chars"": 82}",88,98.07,82
+428220,3-(dodecylamino)propiononitrile,4236,8361,0.7536,0.6729,"{""double_blank"": 15, ""passthrough_chars"": 131}",146,96.91,131
+019171,4-Allylthiosemicarbazide,5662,10877,0.7233,0.6294,"{""double_blank"": 1, ""passthrough_chars"": 145}",146,97.44,145
+017116,N-FMOC-L-메티오닌 펜타플루오로페닐 에스테르(N-FMOC-L-METHIONINE PENTAFLUOROP...,848,1756,0.6912,0.6135,"{""passthrough_chars"": 10}",10,98.82,10
+015507,카코딜린 산,3999,8280,0.8631,0.7748,"{""double_blank"": 2, ""passthrough_chars"": 78}",80,98.05,78
+009715,다카바진(DACARBAZINE),4750,9846,0.8521,0.7473,"{""double_blank"": 4, ""passthrough_chars"": 103}",107,97.83,103
+427390,"9-Octadecenylamine, acetate, (Z)-",3637,7238,0.7832,0.6888,"{""double_blank"": 11, ""passthrough_chars"": 94}",105,97.42,94
+007242,모노크롬 인산염(MONOCHROME PHOSPHATE),5109,10081,0.719,0.6357,"{""double_blank"": 16, ""passthrough_chars"": 158}",174,96.91,158
+045535,"α-Hydro-ω-hydroxypoly(oxy-1,2-ethanediyl) polymer with bis(isocyanatomethyl)benzene, polyethylene glycol branched mono(nonylphenyl ether)-blocked",1076,1840,0.5575,0.4477,"{""passthrough_chars"": 16}",16,98.51,16
+428117,"4H-1,2,4-triazol-4-ylamine",4971,9648,0.7859,0.6929,"{""double_blank"": 18, ""passthrough_chars"": 159}",177,96.8,159
+036927,(E)-5-Methyl-4-nonene,3243,6758,0.8775,0.7862,"{""double_blank"": 1, ""passthrough_chars"": 63}",64,98.06,63
+006196,(2-하이드록시에틸)트리페닐포스포늄 염화물((2-HYDROXYETHYL)TRIPHENYLPHOSPHONIUM ...,917,1825,0.7353,0.6494,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.91,10
+039884,Phosphoric acid aluminum salt (2:1),745,1476,0.7692,0.6418,"{""passthrough_chars"": 10}",10,98.66,10
+028836,"Fatty acids, coco polymers with acetic anhydride, adipic acid, 1,4-butanediol, and propylene glycol -",943,1698,0.6311,0.5077,"{""passthrough_chars"": 10}",10,98.94,10
+002298,N-뷰틸 이소시아네이트,8045,16136,0.8105,0.6962,"{""double_blank"": 44, ""passthrough_chars"": 285}",329,96.46,285
+002147,STROPH개미HIN(STROPHANTHIN),795,1614,0.7431,0.6519,"{""double_blank"": 23, ""passthrough_chars"": 10}",33,98.74,10
+006644,나딕 메틸 무수물(NADIC METHYL ANHYDRIDE),7298,14252,0.7467,0.6448,"{""double_blank"": 21, ""passthrough_chars"": 264}",285,96.38,264
+015129,디스페스 오렌지 3(DISPERSE ORANGE 3),5906,11896,0.7734,0.6796,"{""double_blank"": 15, ""passthrough_chars"": 185}",200,96.87,185
+016263,"2,2-디클로로아세트알데하이드",719,1508,0.8395,0.7141,"{""passthrough_chars"": 10}",10,98.61,10
+034304,Iridium dioxide,685,1401,0.8193,0.6889,"{""passthrough_chars"": 10}",10,98.54,10
+040639,"2-Propenoic acid polymer with methyl 2-propenoate, octadecyl 2-propenoate and 2-propenenitrile",922,1674,0.6458,0.5204,"{""passthrough_chars"": 10}",10,98.92,10
+001850,프로필 프로피온산염,724,1522,0.827,0.708,"{""passthrough_chars"": 10}",10,98.62,10
+037967,5-Nitrobenzoimidazole,6330,11078,0.5874,0.5023,"{""double_blank"": 15, ""passthrough_chars"": 206}",221,96.75,206
+013796,페닐디톨릴메탄(PHENYLDITOLYLMETHANE),812,1654,0.7444,0.6475,"{""double_blank"": 16, ""passthrough_chars"": 12}",28,98.52,12
+097743,Caryophyllene acetate,3863,7709,0.8241,0.725,"{""double_blank"": 18, ""passthrough_chars"": 94}",112,97.57,94
+043776,"Tin ores, concs., roasted -",722,1444,0.7843,0.6572,"{""passthrough_chars"": 10}",10,98.61,10
+048532,메톡시메틸,655,1383,0.8728,0.7436,"{""passthrough_chars"": 10}",10,98.47,10
+036899,2-Methylnonacosane,3234,6737,0.8795,0.7886,"{""double_blank"": 1, ""passthrough_chars"": 63}",64,98.05,63
+028678,"Fatty acids, (C=7-9)-branched -",734,1465,0.7763,0.6473,"{""passthrough_chars"": 13}",13,98.23,13
+015247,칼슘-IONOPHORE II(CALCIUM-IONOPHORE II),844,1737,0.6573,0.5755,"{""passthrough_chars"": 14}",14,98.34,14
+030624,"Fatty acids, (C=18)-unsatd., dimers, esters with diethylene glycol -",844,1587,0.6939,0.569,"{""passthrough_chars"": 13}",13,98.46,13
+039804,2-(Phenylmethylene)octanal; Hexyl cinnamic aldehyde,7034,13836,0.7493,0.6525,"{""double_blank"": 18, ""passthrough_chars"": 242}",260,96.56,242
+019378,"Amines, tallow alkyl, ethoxylated, 4-dodecylbenzenesulfonates (salts) -",854,1585,0.6739,0.5607,"{""passthrough_chars"": 10}",10,98.83,10
+000426,시아노겐,8580,16728,0.7483,0.6435,"{""double_blank"": 30, ""passthrough_chars"": 321}",351,96.26,321
+011080,"2-시아노아미노-4,6-다이하이드록시피리미딘(2-CYANOAMINO-4,6-DIHYDROXYPYRIMIDINE)",893,1818,0.7117,0.5903,"{""double_blank"": 2, ""passthrough_chars"": 10}",12,98.88,10
+047772,황산,1077,2316,0.8276,0.6979,"{""passthrough_chars"": 10}",10,99.07,10
+028881,"Fatty acids, coco polymers with phthalic anhydride, trimethylolpropane, 1,6-hexanediol and p-tert-butylbenzoic acid -",992,1750,0.5963,0.4833,"{""passthrough_chars"": 10}",10,98.99,10
+023446,C.I. acid yellow 176 -,706,1434,0.8088,0.6784,"{""passthrough_chars"": 10}",10,98.58,10
+019357,"Amines, (C=14-18) and (C=16-18)-unsatd. alkyl, ethoxylated, 4-dodecylbenzene-sulfonates (salts) -",931,1692,0.6574,0.5276,"{""passthrough_chars"": 16}",16,98.28,16
+010794,"(1R,2S)-1-메틸글리시돌((1R,2S)-1-METHYLGLYCIDOL)",845,1702,0.7368,0.626,"{""double_blank"": 21, ""passthrough_chars"": 10}",31,98.82,10
+014901,(C=6-9) 알코올,3447,7092,0.842,0.7524,"{""double_blank"": 1, ""passthrough_chars"": 76}",77,97.8,76
+023207,C.I. acid brown 427 -,704,1432,0.8123,0.6817,"{""passthrough_chars"": 10}",10,98.58,10
+007221,트리스(아이소프로필페닐) 인산염(TRIS(ISOPROPYLPHENYL) PHOSPHATE),5223,10371,0.7543,0.6535,"{""double_blank"": 23, ""passthrough_chars"": 170}",193,96.75,170
+006582,"4-METHYLBENZENESULFONAMIDE POLYMER WITH FORMALDEHYDE AND 1,3...",3658,7538,0.8204,0.733,"{""double_blank"": 20, ""passthrough_chars"": 63}",83,98.28,63
+026046,"2,7-Dihydroxy-9,10-anthracenedione",4661,8612,0.6545,0.5676,"{""double_blank"": 11, ""passthrough_chars"": 148}",159,96.82,148
+006854,지르코늄 질화물(ZIRCONIUM NITRIDE),4931,9936,0.8156,0.7329,"{""double_blank"": 26, ""passthrough_chars"": 139}",165,97.18,139
+024674,C.I. sulphur black 001 -,6408,11674,0.6317,0.5353,"{""double_blank"": 12, ""passthrough_chars"": 215}",227,96.64,215
+023689,C.I. direct yellow 095 -,712,1440,0.8056,0.6733,"{""passthrough_chars"": 10}",10,98.6,10
+040751,trans-5-Propyl-2-[4-(4-propylcyclohexyl)phenyl]pyrimidine,811,1548,0.7117,0.5862,"{""passthrough_chars"": 16}",16,98.03,16
+018469,"(+)-3-아이소프로필-7A-메틸테트라히드로피롤로(2,1-B)옥사졸-5(6H)-one((+)-3-ISOPROP...",917,1785,0.7838,0.6418,"{""double_blank"": 32, ""passthrough_chars"": 16}",48,98.26,16
+003152,코쿨러스 고체,687,1443,0.8506,0.7245,"{""passthrough_chars"": 10}",10,98.54,10
+365588,"1- 테트라 폴러머, 1- 데센, 증류잔여물. 수소화 C24-84 부분",6948,13554,0.7309,0.6318,"{""double_blank"": 18, ""num_indicator_orphan"": 1, ""passthrough_chars"": 239}",258,96.56,239
+031293,"Fructose 1,6-bis(calcium phosphate)",744,1472,0.768,0.6385,"{""passthrough_chars"": 10}",10,98.66,10
+036328,Methyl 3-[4-(3-cyano-5-phenylazo-2-thienylazo)-N-ethylanilino]propionate,856,1605,0.6881,0.5576,"{""passthrough_chars"": 16}",16,98.13,16
+008739,"1-메틸피라노(3,4-B)인돌-3(9H)-one(1-METHYLPYRANO(3,4-B)INDOL-3(9H)-...",914,1785,0.7276,0.6105,"{""double_blank"": 33, ""passthrough_chars"": 10}",43,98.91,10
+025955,"1,3-Dihydro-1,3-dioxo-5-isobenzofurancarboxylic acid polymer with 2-aminoethanol, 2,2-dimethyl-1,3-propanediol, 2,5-furandione and 3a,4,7,7a-tetrahydro-1,3-isobenzofurandione",1163,1972,0.5427,0.421,"{""passthrough_chars"": 10}",10,99.14,10
+005646,"2,2-다이메틸-1,3-프로판딜 에스테르 2-프로펜 산",8059,13727,0.5473,0.4497,"{""double_blank"": 15, ""passthrough_chars"": 297}",312,96.31,297
+037364,2-Methyl-2-propenoic acid methyl ester polymer with diethenylbenzene and ethenylbenzene,900,1646,0.6468,0.5301,"{""passthrough_chars"": 10}",10,98.89,10
+020360,"벤젠디메탄아민, N-(2-시아노에틸) 유도체",4248,8784,0.8929,0.799,"{""double_blank"": 4, ""passthrough_chars"": 87}",91,97.95,87
+042384,"Soybean oil, polymer with glycerol, phthalic anhydride, styrene and tung oil -",874,1617,0.6645,0.544,"{""passthrough_chars"": 10}",10,98.86,10
+041721,"실록산 및 실리콘, di-Me, 3-하이드록시프로필 Me, 종말-3-하이드록시프로필, 에톡시레이트 프로폭실레이트",3358,6934,0.8511,0.7586,"{""double_blank"": 3, ""passthrough_chars"": 58}",61,98.27,58
+024848,Copper titanium trioxide,712,1431,0.7935,0.6636,"{""passthrough_chars"": 10}",10,98.6,10
+039023,"Oils, sassafras -",690,1406,0.813,0.6826,"{""passthrough_chars"": 10}",10,98.55,10
+013354,"망가니즈 글루코네이트, 이수화물(망간 글루코네이트, 이수화물(MANGANESE GLUCONATE, DIHYDRATE)",912,1860,0.7086,0.613,"{""double_blank"": 13, ""passthrough_chars"": 10}",23,98.9,10
+048870,(3-클로로프로필)트라이메톡시실란((3-CHLOROPROPYL)TRIMETHOXYSILANE),1281,2703,0.7182,0.6128,"{""double_blank"": 2, ""passthrough_chars"": 10}",12,99.22,10
+005027,EOSIN Y,3751,7575,0.8399,0.7483,"{""double_blank"": 43, ""passthrough_chars"": 91}",134,97.57,91
+003320,설폰산 나트륨 크실렌(SODIUM XYLENE SULFONATE),3342,6564,0.6654,0.553,"{""double_blank"": 22, ""passthrough_chars"": 137}",159,95.9,137
+044523,Undecamethylenediamine,704,1417,0.7909,0.6682,"{""passthrough_chars"": 10}",10,98.58,10
+015873,플루오린화 세륨,7278,13575,0.6764,0.5825,"{""double_blank"": 20, ""passthrough_chars"": 234}",254,96.78,234
+020112,"1,2-Benzenedicarboxylic acid 2,2-dimethyl-1,3-propanediyl diisooctyl ester",862,1608,0.6824,0.5547,"{""passthrough_chars"": 10}",10,98.84,10
+005711,푸마르 산 칼륨(FUMARIC ACID POTASSIUM),811,1676,0.7149,0.6167,"{""double_blank"": 1, ""passthrough_chars"": 10}",11,98.77,10
+016278,3-(4-메틸펜옥시)벤즈알데하이드(3-(4-METHYLPHENOXY)BENZALDEHYDE),868,1777,0.693,0.5972,"{""double_blank"": 3, ""passthrough_chars"": 10}",13,98.85,10
+007142,리티다티온(LYTHIDATHION),760,1572,0.7837,0.6614,"{""double_blank"": 2, ""passthrough_chars"": 10}",12,98.68,10
+026059,"(3S, 3S)-3,3-디하이드록시-베타,베타-케로틴-4,4-디원 ; 아스텍산신",4788,9682,0.8221,0.7239,"{""double_blank"": 10, ""passthrough_chars"": 128}",138,97.33,128
+019364,Cocodiamine acetate,1206,2252,0.635,0.5329,"{""double_blank"": 14, ""passthrough_chars"": 51}",65,95.77,51
+030899,"Fatty acids, (C=18)-unsatd., dimers polymers with neopentyl glycol, phthalic anhydride and trimethylolpropane -",973,1728,0.6124,0.4957,"{""passthrough_chars"": 13}",13,98.66,13
+042846,Sulfuric acid aluminium salt,724,1446,0.7778,0.6528,"{""passthrough_chars"": 10}",10,98.62,10
+025057,1-Cyclohexylpropan-1-one,711,1433,0.7869,0.6627,"{""passthrough_chars"": 10}",10,98.59,10
+011287,"1,3,4-티아디아졸리딘-2,5-디티온, 디나트륨 염(1,3,4-THIADIAZOLIDINE-2,5-DITH...",900,1801,0.7319,0.6059,"{""double_blank"": 13, ""passthrough_chars"": 10}",23,98.89,10
+025408,Diammonium beryllium tetrafluoride,7309,14643,0.8002,0.6972,"{""double_blank"": 14, ""passthrough_chars"": 252}",266,96.55,252
+024431,C.I. reactive red 078 -,709,1437,0.8088,0.6762,"{""passthrough_chars"": 10}",10,98.59,10
+014517,"메틸 3,3,3-트리플루오르프로필, 메틸비닐, 하이드록시 말단 실록산과 실리콘(METHYL 3,3,3-TRIF...",3813,7804,0.8154,0.7229,"{""double_blank"": 10, ""passthrough_chars"": 77}",87,97.98,77
+045107,Basic lead sulfite,694,1413,0.8,0.6784,"{""passthrough_chars"": 10}",10,98.56,10
+018643,"아세트산, 지르코늄 염",6143,11883,0.7179,0.6243,"{""double_blank"": 21, ""passthrough_chars"": 200}",221,96.74,200
+048604,황산,1077,2316,0.8276,0.6979,"{""passthrough_chars"": 10}",10,99.07,10
+045983,Trimethyl alkyl(C=6-30) ammonium chloride,764,1498,0.754,0.6264,"{""passthrough_chars"": 13}",13,98.3,13
+043655,Tetraquinine octahydrogen hexaiodide tris(sulfate),4112,8282,0.8395,0.7546,"{""double_blank"": 6, ""passthrough_chars"": 87}",93,97.88,87
+005149,N(알파)-BOC-L-히스티딘(N(ALPHA)-BOC-L-HISTIDINE),851,1700,0.7141,0.6332,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.82,10
+041106,"Rosin, fumarated polymer with azelaic acid and glycerol -",811,1545,0.7113,0.5849,"{""passthrough_chars"": 10}",10,98.77,10
+042799,"Sulfonic acids, (C=8-24)-branched and linear alkane, ammonium salts -",848,1594,0.695,0.5652,"{""passthrough_chars"": 13}",13,98.47,13
+011860,TERBACIL,742,1502,0.8137,0.7047,"{""double_blank"": 25, ""passthrough_chars"": 10}",35,98.65,10
+036191,"2-Methylbenzenesulfonamide polymer with formaldehyde, 4-methylbenzenesulfonamide and 1,3,5-triazine-2,4,6-triamine",982,1740,0.603,0.4915,"{""passthrough_chars"": 10}",10,98.98,10
+365543,"b-알라닌,N-[4-[2-(2-시아노-4-니트로페닐)디아제닐]페닐]-N-메틸-,2-(1,3-디하이드로-1,3-디옥소-2H-이소인돌-2-일)에틸 에스테르",6061,11230,0.6586,0.5442,"{""double_blank"": 18, ""passthrough_chars"": 216}",234,96.44,216
+017110,N-FMOC-L-알라닌 펜타플루오로페닐(N-FMOC-L-ALANINE PENTAFLUOROPHENYL),896,1806,0.6913,0.6225,"{""double_blank"": 31, ""passthrough_chars"": 10}",41,98.88,10
+011337,이염기성 스테아린산 납(DIBASIC LEAD STEARATE),4137,8278,0.736,0.6288,"{""double_blank"": 16, ""passthrough_chars"": 150}",166,96.37,150
+031479,"Gases (petroleum), (C=3-4), isobutane-rich -",7052,14030,0.7685,0.6777,"{""double_blank"": 22, ""passthrough_chars"": 252}",274,96.43,252
+026015,"디하이드로-3-(옥테닐)-2,5-푸란디온",4404,8864,0.8074,0.7137,"{""double_blank"": 6, ""passthrough_chars"": 141}",147,96.8,141
+018838,"Alcohols, (C=6) and (C=8)-iso-, distn. residues -",787,1530,0.7455,0.6125,"{""passthrough_chars"": 16}",16,97.97,16
+043129,"Tall-oil rosin, compd. with 2-(dimethylamino)ethanol -",802,1536,0.7143,0.5931,"{""passthrough_chars"": 10}",10,98.75,10
+046541,황산,1077,2316,0.8276,0.6979,"{""passthrough_chars"": 10}",10,99.07,10
+037686,"Naphthalenesulfonic acids, branched and linear Bu derivs., ammonium sodium salts -",887,1630,0.6584,0.5386,"{""passthrough_chars"": 10}",10,98.87,10
+015193,4''-벤질옥시-2''-하이드록시-3''-메틸아세토페논(4''-BENZYLOXY-2''-HYDROXY-3''-METHYL...,935,1820,0.7606,0.6283,"{""double_blank"": 33, ""passthrough_chars"": 10}",43,98.93,10
+046055,5-염화 비소,5194,10442,0.8015,0.711,"{""double_blank"": 13, ""passthrough_chars"": 116}",129,97.77,116
+022400,Cerium silicate -,691,1407,0.8133,0.6831,"{""passthrough_chars"": 10}",10,98.55,10
+004073,헬레보레인(HELLEBOREIN),769,1574,0.7755,0.6775,"{""double_blank"": 17, ""passthrough_chars"": 10}",27,98.7,10
+015973,불화 스트론슘(STRONTIUM FLUORIDE),4021,7980,0.7755,0.688,"{""double_blank"": 26, ""passthrough_chars"": 99}",125,97.54,99
+002324,"3-HYDROXY-2,2-DIMETHYLPROPYL 2,2-DIMETHYLHYDRACRYLATE",5071,10087,0.7641,0.6781,"{""double_blank"": 52, ""passthrough_chars"": 129}",181,97.46,129
+021821,"Carbonic acid, polymer with 1,6-hexanediol, 4,4''-methylenebis[cyclohexanamine] and 1,1''-methylenebis[4-isocyanatocyclohexane]",1022,1783,0.601,0.4814,"{""passthrough_chars"": 22}",22,97.85,22
+027439,Dodecabismuth germanium icosaoxide,742,1461,0.7617,0.6374,"{""passthrough_chars"": 10}",10,98.65,10
+018693,"(2S-cis)-3-(Acetyloxy)-5-[2-(dimethylamino)ethyl]-2,3-dihydro-2-(4-methoxyphenyl)-1,5-benzothiazepin-4(5H)-one hydrochloride",1012,1797,0.5983,0.4772,"{""passthrough_chars"": 16}",16,98.42,16
+004795,"1,1-디에톡시사이클로헥산(1,1-DIETHOXYCYCLOHEXANE)",833,1703,0.7273,0.6245,"{""double_blank"": 10, ""passthrough_chars"": 10}",20,98.8,10
+014613,"1,2-헥산다이올",4690,9464,0.7847,0.6934,"{""double_blank"": 18, ""passthrough_chars"": 149}",167,96.82,149
+038356,(E)-9-Octadecenoic acid methyl ester,747,1478,0.7583,0.6323,"{""passthrough_chars"": 10}",10,98.66,10
+134855,Cobalt-chromium-molybdenum alloy,4953,10141,0.8414,0.7543,"{""double_blank"": 6, ""passthrough_chars"": 138}",144,97.21,138
+021770,Carbamic acid butyl ester polymer with formaldehyde,3293,6773,0.8554,0.7673,"{""passthrough_chars"": 47}",47,98.57,47
+014723,"2,3,5-트리메틸페놀(2,3,5-TRIMETHYLPHENOL)",822,1660,0.7492,0.6249,"{""double_blank"": 13, ""passthrough_chars"": 10}",23,98.78,10
+044141,"[S-(Z)]-3,7,11-Trimethyl-1,6,10-dodecatrien-3-ol, acetate",811,1566,0.7254,0.5904,"{""passthrough_chars"": 16}",16,98.03,16
+033903,3-Hydroxybutyric acid,5874,10908,0.6582,0.5642,"{""double_blank"": 7, ""passthrough_chars"": 179}",186,96.95,179
+027077,Disodium hexachloroiridate,718,1434,0.7831,0.6574,"{""passthrough_chars"": 10}",10,98.61,10
+043315,테레프탈산-에틸렌 글리콜-뷰틸렌 글리콜 공중합체,3216,6775,0.8947,0.8023,"{""passthrough_chars"": 61}",61,98.1,61
+031256,"Formaldehyde polymer with 4-(1,1,3,3-tetramethylbutyl)phenol",820,1560,0.7148,0.581,"{""passthrough_chars"": 10}",10,98.78,10
+009941,LUMAZINE,681,1426,0.8176,0.699,"{""passthrough_chars"": 10}",10,98.53,10
+018495,안데노신 5''-트리인산염 디나트륨 염(ADENOSINE 5''-TRIPHOSPHATE DISODIUM SALT...,5137,9661,0.6821,0.5939,"{""double_blank"": 18, ""passthrough_chars"": 118}",136,97.7,118
+009721,니트릭-15N 산(NITRIC-15N ACID),802,1598,0.7975,0.6801,"{""double_blank"": 29, ""passthrough_chars"": 10}",39,98.75,10
+017233,3-브로모티오펜(3-BROMOTHIOPHENE),795,1609,0.7716,0.655,"{""double_blank"": 18, ""passthrough_chars"": 10}",28,98.74,10
+428700,Colistimethate sodium,4237,8665,0.8578,0.7683,"{""double_blank"": 2, ""passthrough_chars"": 101}",103,97.62,101
+037975,"Nitrododecanedioic acid compound with 2,2''-iminodiethanol (1:2)",832,1572,0.7083,0.5808,"{""passthrough_chars"": 10}",10,98.8,10
+036508,"2-(1-Methylethoxy)-1,2-diphenylethanone",5036,10100,0.7664,0.6827,"{""double_blank"": 14, ""passthrough_chars"": 148}",162,97.06,148
+018343,N-아세틸-에그린 C 재조합(N-ACETYL-EGLIN C RECOMBINANT),848,1745,0.6842,0.594,"{""double_blank"": 7, ""passthrough_chars"": 10}",17,98.82,10
+433021,QNB,6002,12087,0.7948,0.6956,"{""double_blank"": 17, ""passthrough_chars"": 209}",226,96.52,209
+039497,2-(3-Pentadecylphenoxy)butyryl chloride,757,1482,0.7481,0.6263,"{""passthrough_chars"": 10}",10,98.68,10
+029262,"Fatty acids, (C=6-12), Me esters -",3567,7273,0.8095,0.7193,"{""passthrough_chars"": 62}",62,98.26,62
+039428,"Parmelia laetevirens, ext. -",724,1443,0.7809,0.6547,"{""passthrough_chars"": 10}",10,98.62,10
+027324,"Distillates (petroleum), steam-cracked light petroleum residues, (C=9-10)-arom. fraction -",910,1659,0.6581,0.5296,"{""passthrough_chars"": 13}",13,98.57,13
+024871,"Cottonseed oil, polymer with glycerol and phthalic anhydride -",826,1560,0.6955,0.5743,"{""passthrough_chars"": 10}",10,98.79,10
+015174,"(2S,3R)-(+)-3,4-다이메틸-5,7-디옥소-2-페닐페르히드로-1,4-옥사제핀((2S,3R)-(+)-3...",917,1773,0.806,0.6369,"{""double_blank"": 32, ""passthrough_chars"": 16}",48,98.26,16
+009634,"2-(4-메톡시스트릴)-4,6-비스(트리클로로메틸)-1,3,5-트리아진(2-(4-METHOXYSTRYL)-4...",3765,7430,0.8017,0.699,"{""double_blank"": 30, ""passthrough_chars"": 93}",123,97.53,93
+034578,"1,3-Isobenzofurandione polymer with 2-ethyl-2-(hydroxymethyl)-1,3-propanediol, tetradecanoate -",925,1674,0.6392,0.5185,"{""passthrough_chars"": 10}",10,98.92,10
+033529,(Z)-Hex-4-en-1-ol,2471,4883,0.7062,0.6173,"{""double_blank"": 12, ""passthrough_chars"": 89}",101,96.4,89
+006460,옥사진 1 과염소산(OXAZINE 1 PERCHLORATE),807,1665,0.7489,0.6403,"{""double_blank"": 4, ""passthrough_chars"": 10}",14,98.76,10
+003427,"수은 황산염, 베이직",4541,8990,0.776,0.6796,"{""double_blank"": 20, ""passthrough_chars"": 127}",147,97.2,127
+007720,"3,4-디클로로-1,1''-바이페닐(3,4-DICHLORO-1,1''-BIPHENYL)",882,1747,0.7168,0.5789,"{""double_blank"": 8, ""passthrough_chars"": 14}",22,98.41,14
+010616,도엑스 마크로포로우스 수지(DOWEX MACROPOROUS RESIN),839,1687,0.7718,0.6687,"{""double_blank"": 24, ""passthrough_chars"": 10}",34,98.81,10
+042306,"Soybean oil, polymer with ethylene, pentaerythritol, phthalic anhydride and styrene -",895,1635,0.6472,0.5325,"{""passthrough_chars"": 10}",10,98.88,10
+011101,N-나이트로소다이에틸아민,8373,14998,0.5828,0.4943,"{""double_blank"": 19, ""passthrough_chars"": 345}",364,95.88,345
+045783,Polyoxyethylene alkyl(C=12-22) ether,749,1480,0.7704,0.6412,"{""passthrough_chars"": 13}",13,98.26,13
+028851,"Fatty acids, coco polymers with benzoic acid, glycerol and phthalic anhydride -",877,1620,0.6634,0.5429,"{""passthrough_chars"": 10}",10,98.86,10
+040272,Potassium sulfamate,697,1413,0.8025,0.6765,"{""passthrough_chars"": 10}",10,98.57,10
+004610,(S)-2-메틸-1-뷰탄올((S)-2-METHYL-1-BUTANOL),5217,10477,0.8218,0.7172,"{""double_blank"": 25, ""passthrough_chars"": 152}",177,97.09,152
+026364,"cis-1,3-Dimethylcyclohexane",6010,11824,0.7457,0.6566,"{""double_blank"": 18, ""passthrough_chars"": 189}",207,96.86,189
+026157,"diisotridecyl 3,3-[(dibutylstannylene)bis(thio)]dipropionate",7618,14780,0.7218,0.6201,"{""double_blank"": 31, ""passthrough_chars"": 319}",350,95.81,319
+040238,Potassium hydrogen malate,714,1433,0.7851,0.6609,"{""passthrough_chars"": 10}",10,98.6,10
+031860,"Glycerides, peanut-oil mono- and di- -",754,1482,0.7481,0.6263,"{""passthrough_chars"": 10}",10,98.67,10
+035862,"Maleic anhydride, phthalic anhydride, propylene glycol, styrene, acrylic acid, phthalic anhydride resin",950,1696,0.6189,0.504,"{""passthrough_chars"": 10}",10,98.95,10
+017562,키모트립신(CHYMOTRYPSIN),776,1572,0.7976,0.6853,"{""double_blank"": 24, ""passthrough_chars"": 10}",34,98.71,10
+037442,뷰틸 2-메틸-2-프로펜산 및 메틸 2-메틸-2-프로펜산이 함유된 2-메틸-2-프로펜산 중합체,3921,7847,0.8122,0.7169,"{""double_blank"": 4, ""passthrough_chars"": 89}",93,97.73,89
+000753,피레트럼,6447,12887,0.7876,0.6876,"{""double_blank"": 21, ""passthrough_chars"": 249}",270,96.14,249
+045770,"Alcohols, C12-18(even numbered), ethoxylated < 2.5 EO, sulfates, sodium salt",6202,11922,0.7128,0.6208,"{""double_blank"": 17, ""passthrough_chars"": 202}",219,96.74,202
+258184,cyclopentyl chloroformate,7971,15748,0.7898,0.6803,"{""double_blank"": 10, ""passthrough_chars"": 315}",325,96.05,315
+008054,테스토스테론 EN개미H산,746,1564,0.7933,0.6681,"{""passthrough_chars"": 10}",10,98.66,10
+045863,"Sodium [2-[[2-(hydroxy-kO)-3,6-disulfo-1-naphthalenyl]azo-kN1] benzoato(4-)-kO]auminate(1-)",914,1687,0.6702,0.5344,"{""passthrough_chars"": 28}",28,96.94,28
+036376,6-Methyl-1-decene,691,1413,0.8167,0.6844,"{""passthrough_chars"": 10}",10,98.55,10
+018633,Acetic acid ethenyl ester polymer with ethenol reaction products with 1-isocyanatohexadecane and 1-isocyanatooctadecane,997,1752,0.5942,0.4807,"{""passthrough_chars"": 10}",10,99.0,10
+043192,Tallow monoglycerides -,709,1425,0.7895,0.6658,"{""passthrough_chars"": 10}",10,98.59,10
+023441,C.I. acid yellow 155 -,706,1434,0.8088,0.6784,"{""passthrough_chars"": 10}",10,98.58,10
+007855,4-nitroimidazole,1678,3071,0.6869,0.5776,"{""double_blank"": 30, ""passthrough_chars"": 60}",90,96.42,60
+020381,"Benzene, poly(propene) derivatives",5968,11376,0.6882,0.5956,"{""double_blank"": 21, ""passthrough_chars"": 176}",197,97.05,176
+029677,"Fatty acids, tall-oil compds. with tallow alkyl amines -",808,1545,0.7067,0.587,"{""passthrough_chars"": 10}",10,98.76,10
+010979,니칼디핀 수화염화물(NICARDIPINE HYDROCHLORIDE),5141,10376,0.799,0.704,"{""double_blank"": 10, ""passthrough_chars"": 128}",138,97.51,128
+030920,"Fatty acids, (C=18)-unsatd., dimers reaction products with diethylenetriamine -",3804,7562,0.8543,0.7711,"{""double_blank"": 2, ""passthrough_chars"": 88}",90,97.69,88
+000213,"N-(1-메틸에틸)-N''-페닐-1,4-벤젠디아민",6170,12041,0.7506,0.6492,"{""double_blank"": 6, ""passthrough_chars"": 184}",190,97.02,184
+316179,와파린,5076,10428,0.8325,0.7367,"{""double_blank"": 10, ""passthrough_chars"": 157}",167,96.91,157
+138557,Tall Oil,4114,8514,0.8893,0.7983,"{""double_blank"": 1, ""passthrough_chars"": 85}",86,97.93,85
+018388,"2,2'-메틸렌비스(4-클로로페놀)(2,2'-METHYLENEBIS(4-CHLOROPHENOL))",8745,15368,0.5565,0.4627,"{""double_blank"": 14, ""passthrough_chars"": 375}",389,95.71,375
+033992,2-Hydroxy-3-[(2-hydroxy-1-dibenzofuryl)azo]-5-nitrobenzenesulfonic acid,853,1596,0.6816,0.5602,"{""passthrough_chars"": 16}",16,98.12,16
+012379,2-나이트로벤질 알코올(2-NITROBENZYL ALCOHOL),821,1680,0.7412,0.6374,"{""double_blank"": 13, ""passthrough_chars"": 10}",23,98.78,10
+034457,"1,3-Isobenzofurandione polymer with (E)-2-butenedioic acid and 1,2-propanediol",874,1626,0.67,0.5472,"{""passthrough_chars"": 10}",10,98.86,10
+007501,다이아이소노닐 프탈산(DIISONONYL PHTHALATE),6232,12164,0.7489,0.6466,"{""double_blank"": 27, ""passthrough_chars"": 189}",216,96.97,189
+042165,"Soybean oil, polymer with adipic acid, glycerol, pentaerythritol and phthalic anhydride -",907,1650,0.6413,0.5254,"{""passthrough_chars"": 10}",10,98.9,10
+020705,5''-Bis(ethoxycarbonylmethyl)amino-2''-(2-cyano-4-nitrophenylazo)acetoanilide,871,1611,0.6777,0.5523,"{""passthrough_chars"": 10}",10,98.85,10
+043060,"Tall oil polymer with dipropylene glycol, formaldehyde, isophthalic acid, phenol, trimellitic anhydride and trimethylolpropane -",1024,1776,0.5779,0.4674,"{""passthrough_chars"": 10}",10,99.02,10
+034456,"1,3-Isobenzofurandione polymer with (E)-2-butenedioic acid and oxybis[propanol]",877,1626,0.6656,0.5464,"{""passthrough_chars"": 16}",16,98.18,16
+041095,"Rosin, ext. Na salt -",703,1428,0.8089,0.6737,"{""passthrough_chars"": 10}",10,98.58,10
+013801,비닐 아세트산-모노 아이소뷰틸 말레산염-메타크릴산염-에틸 아크릴산염 산 중합체(VINYL ACETATE-MON...,851,1777,0.7904,0.6703,"{""passthrough_chars"": 10}",10,98.82,10
+025652,"methyl 4-[[(2,5-dichlorophenyl)amino]carbonyl]-2-[[2-hydroxy-3-[[(2-methoxyphenyl)amino]carbonyl]-1-naphthyl]azo]benzoate",5363,9938,0.6526,0.5579,"{""double_blank"": 26, ""num_indicator_orphan"": 1, ""passthrough_chars"": 191}",218,96.44,191
+011211,C.I. 색소 황색 83(C.I. PIGMENT YELLOW 83),5780,10215,0.5709,0.4817,"{""double_blank"": 21, ""passthrough_chars"": 186}",207,96.78,186
+036534,"4,4''-(1-Methylethylidene)bisphenol, dipropoxylated polymer with (chloromethyl)oxirane, 2-methyl-2-propenoate 2-propenoate",1006,1764,0.6035,0.4808,"{""passthrough_chars"": 10}",10,99.01,10
+035943,Manganese diboride,694,1410,0.8058,0.6794,"{""passthrough_chars"": 10}",10,98.56,10
+000038,티오글리콜산,7539,14956,0.7635,0.6593,"{""double_blank"": 23, ""passthrough_chars"": 313}",336,95.85,313
+040438,"2-Propenoic acid butyl ester polymer with 1,3-butadiene, ethenylbenzene, .alpha.-methylstylene and 2-propenenitrile",985,1743,0.6065,0.4894,"{""passthrough_chars"": 10}",10,98.98,10
+022391,Cerium fluoride,5972,11829,0.7914,0.6864,"{""double_blank"": 17, ""passthrough_chars"": 183}",200,96.94,183
+033207,"Hexanedioic acid polymer with ethenylbenzene, 2,5-furanedione and 1,1''-[(1-methylethylidene)bis(4,1-phenyleneoxy)]bis[2-propanol]",1030,1800,0.5983,0.4753,"{""passthrough_chars"": 22}",22,97.86,22
+001340,페닐수은 수산화물,3845,7720,0.7692,0.6502,"{""double_blank"": 13, ""passthrough_chars"": 138}",151,96.41,138
+007876,펜아진 산화물,3709,7598,0.8448,0.7508,"{""double_blank"": 15, ""passthrough_chars"": 92}",107,97.52,92
+024936,"Cyanoguanidine polymer with formaldehyde and 1,3,5-triazine-2,4,6-triamine",862,1611,0.6835,0.5544,"{""passthrough_chars"": 10}",10,98.84,10
+021301,"(Z)-2-Butenedioic acid oxydi-2,1-ethanediyl ester",787,1527,0.7273,0.6024,"{""passthrough_chars"": 10}",10,98.73,10
+016741,페닐셀레네닐 요오드화물(PHENYLSELENENYL IODIDE),822,1693,0.7352,0.6512,"{""double_blank"": 13, ""passthrough_chars"": 10}",23,98.78,10
+004216,"O-디아니스딘, 테트라화 아연 염화물 착화합물(O-DIANISIDINE, TETRAZOTIZED ZINC C...",932,1865,0.6841,0.5893,"{""double_blank"": 7, ""passthrough_chars"": 16}",23,98.28,16
+016838,"DDA-P,P''",733,1518,0.7836,0.6692,"{""double_blank"": 5, ""passthrough_chars"": 10}",15,98.64,10
+038368,(Z)-9-Octadecenoic acid polymer with oxirane,773,1507,0.7383,0.6134,"{""passthrough_chars"": 10}",10,98.71,10
+005643,2-(브로모메틸)바이페닐(2-(BROMOMETHYL)BIPHENYL),852,1713,0.7141,0.6021,"{""double_blank"": 5, ""passthrough_chars"": 14}",19,98.36,14
+006110,벤디오캅,5913,11508,0.7337,0.6338,"{""double_blank"": 36, ""passthrough_chars"": 217}",253,96.33,217
+365754,"7-[[4,6-비스[[3-(디에틸아미노)프로필아미노]-1,3,5-트리아진-2-일]아미노]-3-[2-(2,3-디하이드로-2-옥소-1H-벤지이미다졸-6-일)디아제닐]-4-하이드록시-2-나프탈렌술포닉산과 2-하이드록시프로파노익산 화합물 (1:1) (CAS No. 790240-84-5)",6723,13062,0.733,0.6279,"{""double_blank"": 23, ""passthrough_chars"": 253}",276,96.24,253
+033035,"Hexanedioic acid polymer with 1,3-diisocyanatomethylbenzene and 2,2''-oxybis[ethanol], isocyanate-terminated",964,1716,0.616,0.5007,"{""passthrough_chars"": 16}",16,98.34,16
+005004,아피게닌 7-O-해스페리도시드(APIGENIN 7-O-HESPERIDOSIDE),839,1716,0.7297,0.6165,"{""double_blank"": 5, ""passthrough_chars"": 10}",15,98.81,10
+036097,p-(2-methoxyethyl)phenol,3722,7450,0.7843,0.7044,"{""double_blank"": 8, ""passthrough_chars"": 91}",99,97.56,91
+008800,N-헵틸메틸아민(N-HEPTYLMETHYLAMINE),806,1654,0.729,0.6337,"{""double_blank"": 14, ""passthrough_chars"": 10}",24,98.76,10
+008975,"메틸옥시란, 옥시란과의 중합체, 모노데실 에테르(METHYLOXIRANE, POLYMER WITH OXIRA...",3261,6777,0.8382,0.7538,"{""double_blank"": 7, ""passthrough_chars"": 54}",61,98.34,54
+044424,"Tris(pentane-2,4-dionato-O,O'')silicon hexafluoroantimonate",4177,8336,0.8238,0.7341,"{""double_blank"": 5, ""passthrough_chars"": 96}",101,97.7,96
+032334,"2-[(3a,4,5,6,7,7a-Hexahydro-4,7-methano-1H-inden-5-yl)oxy]ethanol",835,1608,0.7051,0.5711,"{""passthrough_chars"": 16}",16,98.08,16
+037217,"2-메틸-1,3-프로판디올",6161,12036,0.7525,0.653,"{""double_blank"": 31, ""passthrough_chars"": 229}",260,96.28,229
+011456,"4,4''-다이메틸-5,5''-디페닐테트라티아풀발렌(4,4''-DIMETHYL-5,5''-DIPHENYLTETRATH...",929,1814,0.7473,0.6302,"{""double_blank"": 33, ""passthrough_chars"": 10}",43,98.92,10
+018508,알파-메틸벤질 알코올,9501,16688,0.5502,0.4579,"{""double_blank"": 17, ""passthrough_chars"": 392}",409,95.87,392
+035767,"Maleic anhydride, dicyclopentadiene, glycerol polymer",799,1524,0.7143,0.5942,"{""passthrough_chars"": 10}",10,98.75,10
+040939,"Resin acids and Rosin acids, calcium lead salts -",787,1524,0.7336,0.6035,"{""passthrough_chars"": 10}",10,98.73,10
+028915,"Fatty acids, (C=6-12) compds. with triethanolamine -",796,1533,0.7302,0.6025,"{""passthrough_chars"": 13}",13,98.37,13
+014669,모나팍스 785(MONAFAX 785),722,1489,0.8244,0.7031,"{""passthrough_chars"": 10}",10,98.61,10
+036529,"2,2'-(이소프로필데네비스(2,6-디브로모-4,1-페닐렌옥시))디에탄올",4362,8662,0.8071,0.7124,"{""double_blank"": 10, ""passthrough_chars"": 106}",116,97.57,106
+365604,"2,3- 디클로로 산",5475,11048,0.7943,0.6913,"{""double_blank"": 11, ""passthrough_chars"": 185}",196,96.62,185
+046772,디시안디아마이드,645,1368,0.8851,0.7629,"{""passthrough_chars"": 10}",10,98.45,10
+013951,디에탄올아민 증류(DIETHANOLAMINE DITALLATE),4973,10170,0.7974,0.7188,"{""double_blank"": 12, ""passthrough_chars"": 130}",142,97.39,130
+049729,아이소프로필 알코올,1098,2361,0.8306,0.7041,"{""passthrough_chars"": 10}",10,99.09,10
+021576,2-Butynedioic acid dimethyl ester; Dimethyl butynedioate,6021,11890,0.7579,0.6607,"{""double_blank"": 16, ""passthrough_chars"": 204}",220,96.61,204
+027297,"Distillates (petroleum), solvent-refined hydrotreated heavy, hydrogenated -",4690,9474,0.8403,0.7517,"{""double_blank"": 3, ""passthrough_chars"": 104}",107,97.78,104
+045206,C.I. acid red 337,691,1419,0.8211,0.6971,"{""passthrough_chars"": 10}",10,98.55,10
+025620,"2,5-Dichloro-4-[4-[[5-[(4,6-dichloro-1,3,5-triazin-2-yl)amino]-2-sulfophenyl]azo]-4,5-dihydro-3-methyl-5-oxo-1H-pyrazol-1-yl]benzenesulfonic acid",1075,1887,0.5829,0.4531,"{""passthrough_chars"": 34}",34,96.84,34
+029896,"Fatty acids, tall-oil polymers with benzoic acid, isophthalic acid, neopentyl glycol and pentaerythritol -",958,1710,0.6108,0.498,"{""passthrough_chars"": 10}",10,98.96,10
+035105,"Linseed oil, polymd. polymer with bisphenol A, p-tert-butylphenol, formaldehyde and tung oil -",922,1677,0.6308,0.5168,"{""passthrough_chars"": 10}",10,98.92,10
+030773,"Fatty acids, (C=18)-unsatd., dimers polymers with 1,4-cyclohexanediamethanol and di-Me 1,4-cyclohexanedicarboxylate -",991,1758,0.6092,0.4876,"{""passthrough_chars"": 13}",13,98.69,13
+008485,4-(메틸티오)벤질 알코올(4-(METHYLTHIO)BENZYL ALCOHOL),847,1733,0.7009,0.6084,"{""double_blank"": 7, ""passthrough_chars"": 10}",17,98.82,10
+017322,S-벤질-L-시스테이놀(S-BENZYL-L-CYSTEINOL),827,1659,0.7481,0.6564,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.79,10
+015628,"나트륨 디티온산, 이수화물(SODIUM DITHIONATE, DIHYDRATE)",847,1725,0.7223,0.6335,"{""double_blank"": 17, ""passthrough_chars"": 10}",27,98.82,10
+004648,4-클로로벤젠데아조니움 헥사플루오로인산염(4-CHLOROBENZENEDIAZONIUM HEXAFLUOROPH...,894,1856,0.6983,0.6129,"{""double_blank"": 4, ""passthrough_chars"": 10}",14,98.88,10
+023304,C.I. acid red 089,690,1418,0.8209,0.6966,"{""passthrough_chars"": 10}",10,98.55,10
+001455,메틸사이클로헥산-D14(METHYLCYCLOHEXANE-D14),824,1692,0.7195,0.6316,"{""double_blank"": 10, ""passthrough_chars"": 10}",20,98.79,10
+039741,1-(Phenylamino)-2-methylanthraquinone,750,1472,0.7562,0.6321,"{""passthrough_chars"": 10}",10,98.67,10
+037487,2-Methyl-2-propenoic acid polymer with ethenyl acetate and ethyl 2-propenoate,871,1620,0.6743,0.5477,"{""passthrough_chars"": 10}",10,98.85,10
+016065,세슘 요오드화합물,6355,11428,0.6293,0.531,"{""double_blank"": 15, ""passthrough_chars"": 201}",216,96.84,201
+039750,"N-Phenylbenzenamine reaction products with styrene and 2,4,4-trimethylpentene -",5475,10546,0.7077,0.6151,"{""double_blank"": 15, ""passthrough_chars"": 164}",179,97.0,164
+015233,클로펜테진(CLOFENTEZINE),7342,12821,0.5847,0.4862,"{""double_blank"": 28, ""passthrough_chars"": 286}",314,96.1,286
+000472,"N,N-다이메틸에틸아민",7567,14869,0.7647,0.6556,"{""double_blank"": 6, ""passthrough_chars"": 287}",293,96.21,287
+005121,퍼플루오로테트라코산(PERFLUOROTETRACOSANE),809,1673,0.7368,0.6458,"{""double_blank"": 8, ""passthrough_chars"": 10}",18,98.76,10
+049178,백연 질산(WHITE FUMING NITRIC ACID),1228,2578,0.7335,0.6329,"{""double_blank"": 16, ""passthrough_chars"": 10}",26,99.19,10
+042545,"Starch polymer with 2-propenenitrile, hydrolyzed -",790,1518,0.7253,0.6015,"{""passthrough_chars"": 10}",10,98.73,10
+004285,아이오딘화 다이에틸다이카보사이아닌(요오드화 디에틸디카르보시아닌)(DIETHYLDICARBOCYANINE IODIDE),921,1839,0.7524,0.6786,"{""double_blank"": 34, ""passthrough_chars"": 10}",44,98.91,10
+015966,"질산 수은, 모노수화물",7045,14021,0.7865,0.6799,"{""double_blank"": 14, ""passthrough_chars"": 255}",269,96.38,255
+004881,칼륨 헥사클로로렌산염(IV)(POTASSIUM HEXACHLORORHENATE(IV)),3548,7321,0.8368,0.7537,"{""double_blank"": 16, ""passthrough_chars"": 65}",81,98.17,65
+002272,ROSE BENGAL,758,1516,0.815,0.7092,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.68,10
+022802,Cobalt boride (CoB),5412,10956,0.8176,0.7262,"{""double_blank"": 8, ""passthrough_chars"": 155}",163,97.14,155
+005112,"3-메르캅토-1-프로판술폰 산, 나트륨 염",4008,8020,0.7997,0.7067,"{""double_blank"": 21, ""passthrough_chars"": 128}",149,96.81,128
+034881,4-(Isopropyl)-1-methylcyclohex-3-en-1-ol,5687,10729,0.6894,0.5996,"{""double_blank"": 6, ""passthrough_chars"": 135}",141,97.63,135
+016644,"3-(3,5-디클로로펜옥시)벤즈알데하이드(3-(3,5-DICHLOROPHENOXY)BENZALDEHYDE)",902,1794,0.728,0.6354,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.89,10
+019397,"2-Amino-1,4-benzenedisulfonic acid sodium salt; Aniline-2,5-disulfonic acid sodium salt",901,1659,0.6474,0.5303,"{""passthrough_chars"": 10}",10,98.89,10
+045029,1-Alkyl(C=1-4)-2-alkyl(C=1-4) imidazole,758,1507,0.7624,0.6318,"{""passthrough_chars"": 16}",16,97.89,16
+032998,"Hexanedioic acid polymer with 1,3-dihydro-1,3-dioxo-5-isobenzofurancarboxylic acid and 2,2-dimethyl-1,3-propanediol, 4-(1,1-dimethylethyl)benzoate",1078,1863,0.5679,0.4494,"{""passthrough_chars"": 10}",10,99.07,10
+014830,에틸 3-메틸-1-피페리딘프로피온산염(ETHYL 3-METHYL-1-PIPERIDINEPROPIONATE),885,1824,0.6848,0.5836,"{""double_blank"": 2, ""passthrough_chars"": 10}",12,98.87,10
+036525,"4,4''-(1-Methylethylidene)biscyclohexanol polymer with (chloromethyl)oxirane, neodecanoate -",916,1656,0.6486,0.5247,"{""passthrough_chars"": 10}",10,98.91,10
+009234,O-알리하이드록시아민 수화염화물(O-ALLYHYDROXYAMINE HYDROCHLORIDE),863,1792,0.6883,0.603,"{""double_blank"": 3, ""passthrough_chars"": 10}",13,98.84,10
+353901,5-Chloro-2-nitroaniline,3909,7764,0.7473,0.6627,"{""double_blank"": 11, ""passthrough_chars"": 124}",135,96.83,124
+038609,"Oils, animal, polymd., oxidized -",739,1461,0.7674,0.6404,"{""passthrough_chars"": 10}",10,98.65,10
+038948,"Oils, origanum -",687,1403,0.813,0.685,"{""passthrough_chars"": 10}",10,98.54,10
+032162,Hept-5-en-2-one,6116,12335,0.7924,0.6986,"{""double_blank"": 13, ""passthrough_chars"": 208}",221,96.6,208
+016986,BH 584,730,1515,0.7942,0.6737,"{""passthrough_chars"": 10}",10,98.63,10
+032182,Heptyl 12-hydroxyoleate,709,1428,0.7967,0.6692,"{""passthrough_chars"": 10}",10,98.59,10
+027862,에톡시화 프로폭시화 알코올류 (C=16-18) -,4729,9632,0.83,0.7374,"{""double_blank"": 5, ""passthrough_chars"": 122}",127,97.42,122
+013178,"2-아세트아미도-5-벤질티오-1,3,4-티아디아졸(2-ACETAMIDO-5-BENZYLTHIO-1,3,4-T...",914,1797,0.74,0.6199,"{""double_blank"": 31, ""passthrough_chars"": 10}",41,98.91,10
+006690,"2-프로펜산, 에텐과의 중합체, 암모늄 염(2-PROPENOIC ACID, POLYMER WITH ETHEN...",898,1844,0.6988,0.5879,"{""double_blank"": 3, ""passthrough_chars"": 10}",13,98.89,10
+006868,폴리(2-하이드록시프로필 메타크릴산염)(POLY(2-HYDROXYPROPYL METHACRYLATE)),4534,9216,0.8382,0.7445,"{""double_blank"": 15, ""passthrough_chars"": 118}",133,97.4,118
+044374,Trisodium 7-[[[[6-[(o-anisyl)azo]-5-hydroxy-7-sulfonato-2-naphthyl]amino]carbonyl]amino]-4-hydroxy-3-[(6-sulfonato-2-naphthyl)azo]naphthalene-2-sulfonate,1099,1887,0.5741,0.4456,"{""passthrough_chars"": 46}",46,95.81,46
+029434,"프로필렌 글리콜 지방산, 소야 에스테르",4224,8749,0.8961,0.8028,"{""double_blank"": 3, ""passthrough_chars"": 87}",90,97.94,87
+024367,C.I. reactive orange 017 -,718,1446,0.7992,0.6678,"{""passthrough_chars"": 10}",10,98.61,10
+028944,"Fatty acids, cottonseed-oil polymers with pentaerythritol, phthalic anhydride and trimethylolethane -",943,1686,0.6135,0.5052,"{""passthrough_chars"": 10}",10,98.94,10
+028126,".alpha.-[[(2-Ethylhexyl)oxy]hydroxyphosphinyl]-.omega.-hydroxypoly(oxy-1,2-ethanediyl), alkyl(C=9-11) ethers, sodium salts -",1012,1779,0.608,0.4809,"{""passthrough_chars"": 25}",25,97.53,25
+031792,"Glycerides, corn-oil mono- and di- -",748,1476,0.7567,0.6318,"{""passthrough_chars"": 10}",10,98.66,10
+365539,"2-뷰텐산, 4-옥소-4-(트라이데실아미노)-, (Z)-, 가지형",5406,10632,0.7202,0.607,"{""double_blank"": 12, ""passthrough_chars"": 186}",198,96.56,186
+003952,옥시미노 메토밀(OXIMINO METHOMYL),3749,7627,0.8292,0.7387,"{""double_blank"": 22, ""passthrough_chars"": 91}",113,97.57,91
+045316,Dialkyl(C=6-9) phenol,704,1432,0.8027,0.6752,"{""passthrough_chars"": 13}",13,98.15,13
+044011,"4,4'',2''''-Trihydroxy-3,3'',5,5''-tetramethyltriphenylmethane",827,1564,0.74,0.5948,"{""passthrough_chars"": 10}",10,98.79,10
+043534,"Tetrahydrofuran polymer with oxirane, bis[[3-(1-aziridinyl)butyl]carbamate] -",872,1612,0.6781,0.5511,"{""passthrough_chars"": 22}",22,97.48,22
+006966,산화 옥틸 다이메틸 아민(OCTYL DIMETHYL AMINE OXIDE),4325,8747,0.791,0.7088,"{""double_blank"": 12, ""passthrough_chars"": 114}",126,97.36,114
+004406,"4-(2,4-디클로로페녹시)벤젠아민(4-(2,4-DICHLOROPHENOXY)BENZENAMINE)",879,1796,0.6899,0.5829,"{""double_blank"": 1, ""passthrough_chars"": 10}",11,98.86,10
+027535,1-Dodecenylbutanedioic acid 4-tridecyl ester,772,1500,0.7406,0.6159,"{""passthrough_chars"": 10}",10,98.7,10
+365471,"N,N에틸렌네디(디아세트아마이드)",4815,9646,0.8071,0.7126,"{""double_blank"": 8, ""passthrough_chars"": 144}",152,97.01,144
+023384,C.I. acid red 426 -,698,1426,0.8188,0.6875,"{""passthrough_chars"": 10}",10,98.57,10
+007695,페닐티오히단토인 프로린(PHENYLTHIOHYDANTOIN PROLINE),832,1731,0.71,0.6117,"{""passthrough_chars"": 10}",10,98.8,10
+017375,디프로필렌 글리콜 메틸 에테르 아세트산(DIPROPYLENE GLYCOL METHYL ETHER ACETAT...,6572,11141,0.4982,0.393,"{""double_blank"": 19, ""passthrough_chars"": 340}",359,94.83,340
+013267,전범위 알킬화 나프타,9381,16739,0.5929,0.5037,"{""double_blank"": 18, ""passthrough_chars"": 342}",360,96.35,342
+013165,O-아이소프로필아닐린(O-ISOPROPYLANILINE),808,1659,0.7511,0.6513,"{""double_blank"": 16, ""passthrough_chars"": 10}",26,98.76,10
+036332,"2-Methylcyclohexane-1,3-dione",4601,9251,0.7838,0.6966,"{""double_blank"": 15, ""passthrough_chars"": 136}",151,97.04,136
+030585,"Fatty acids, (C=14-18)-unsatd., compds. with triisopropanolamine -",838,1578,0.6986,0.5731,"{""passthrough_chars"": 13}",13,98.45,13
+009757,부톡실,8871,14873,0.4979,0.4129,"{""double_blank"": 24, ""num_indicator_orphan"": 1, ""passthrough_chars"": 317}",342,96.43,317
+028833,"Fatty acids, coco, mixed with pine oil, potassium salts -",811,1548,0.7088,0.5851,"{""passthrough_chars"": 10}",10,98.77,10
+012701,도파민 수화염화물,6473,11947,0.6745,0.5742,"{""double_blank"": 14, ""passthrough_chars"": 202}",216,96.88,202
+019401,4-Aminobenzenesulfonic acid monosodium salt polymer with formaldehyde and methyl phenol,901,1644,0.6452,0.5299,"{""passthrough_chars"": 10}",10,98.89,10
+031503,"Gases (petroleum), steam-cracked butadiene ext. -",787,1515,0.7336,0.6035,"{""passthrough_chars"": 10}",10,98.73,10
+017455,D-아미노 산 산화효소 (돼지 신장에서)(D-AMINO ACID OXIDASE (FROM HOG KIDNEY...,3582,7371,0.8176,0.7441,"{""double_blank"": 22, ""passthrough_chars"": 69}",91,98.07,69
+005415,P-헥실옥시페놀(P-HEXYLOXYPHENOL),797,1629,0.754,0.6484,"{""double_blank"": 16, ""passthrough_chars"": 10}",26,98.75,10
+030226,"Fatty acids, tall oil polymers with glycerol, phthalic anhydride and soybean oil -",886,1632,0.655,0.5365,"{""passthrough_chars"": 10}",10,98.87,10
+037252,"2-Methyl-2-propenoic acid butyl ester polymer with ethenylbenzene, 2-ethylhexyl 2-propenoate, 2-hydroxyethyl 2-propenoate and methyl 2-methyl-2-propenoate",1102,1884,0.5585,0.441,"{""passthrough_chars"": 10}",10,99.09,10
+006933,D-탈로스(D-TALOSE),3753,7591,0.8385,0.7446,"{""double_blank"": 43, ""passthrough_chars"": 88}",131,97.66,88
+003694,플로리실(FLORISIL),4011,8161,0.8458,0.7456,"{""double_blank"": 38, ""passthrough_chars"": 82}",120,97.96,82
+043924,1-Tridecanol dihydrogen phosphate compd. with 2-ethyl-1-hexanamine (1:2),856,1605,0.6936,0.5642,"{""passthrough_chars"": 10}",10,98.83,10
+036613,"4,4''-(1-Methylethylidene)bisphenol reaction product with styrene, ethoxylat ed, sulfates, sodium salts -",956,1708,0.6315,0.5053,"{""passthrough_chars"": 10}",10,98.95,10
+000968,플루토라닐,4914,9587,0.7581,0.6686,"{""double_blank"": 8, ""passthrough_chars"": 119}",127,97.58,119
+006616,비스페놀 A 에피클로로히드린 중합체 디메타크릴산염(BISPHENOL A EPICHLOROHYDRIN POLY...,4425,9088,0.8479,0.7582,"{""double_blank"": 12, ""passthrough_chars"": 103}",115,97.67,103
+016534,Ferrosilicon,4726,9397,0.8113,0.7123,"{""double_blank"": 21, ""passthrough_chars"": 136}",157,97.12,136
+011536,에틸 2-메르카프토-5-메틸-4-이미다졸-카복실산(ETHYL 2-MERCAPTO-5-METHYL-4-IMI...,911,1807,0.7415,0.6235,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.9,10
+027818,"9-[2-(Ethoxycarbonyl)phenyl]-3,6-bis(ethylamino)-2,7-dimethylxanthylium, salt with 4,5-dihydro-5-oxo-1-(4-sulfophenyl)-4-[(4-sulfophenyl)azo]-1H-pyrazole-3-carboxylic acid (3:1)",1171,1986,0.5396,0.4203,"{""passthrough_chars"": 22}",22,98.12,22
+033012,"Hexanedioic acid polymer with 1,3-dihydro-1,3-dioxo-5-isobenzofurancarboxylic acid, 2-ethyl-2-(hydroxymethyl)-1,3-propanediol and 1,3-isobenzofurandione",1096,1878,0.5556,0.4421,"{""passthrough_chars"": 10}",10,99.09,10
+032732,"Hexanedioic acid polymer with 1,3-benzenedicarboxylic acid, 1,2-ethanediol,2,5-furandione, 2,2''-oxybis[ethanol] and 3a,4,7,7a-tetrahydro-4,7-methano-1H-indene",1117,1926,0.5656,0.4373,"{""passthrough_chars"": 16}",16,98.57,16
+014797,"1-플루오르-2,4-디니트로벤젠",4931,9925,0.8159,0.7065,"{""double_blank"": 11, ""passthrough_chars"": 172}",183,96.51,172
+027431,Docosyl 2-ethylhexanoate,712,1431,0.7935,0.6643,"{""passthrough_chars"": 10}",10,98.6,10
+004269,"빈블라스틴 황산염, 모노수화물",3645,7427,0.8323,0.7368,"{""double_blank"": 16, ""passthrough_chars"": 83}",99,97.72,83
+011423,사이클로(HIS-PHE)(CYCLO(HIS-PHE)),812,1622,0.76,0.6695,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.77,10
+025984,Dihydrogen hexachloroosmate(2-),733,1452,0.7717,0.6478,"{""passthrough_chars"": 10}",10,98.64,10
+000142,"2,4,6-트리니트로페놀",4840,9478,0.7393,0.6134,"{""double_blank"": 20, ""passthrough_chars"": 213}",233,95.6,213
+026734,"N-(2,4-Dimethylphenyl)-N''-(2-methoxyphenyl)-3,3''-dioxo-2,2''-(3,3''-dichloro-4,4''-biphenylenebisazo)dibutylamide",984,1757,0.6315,0.4974,"{""passthrough_chars"": 10}",10,98.98,10
+018521,아디포키네틱 호르몬 II 로쿠스타 미그라토리아 SEQUENCE(ADIPOKINETIC HORMONE II L...,890,1815,0.7263,0.6422,"{""double_blank"": 9, ""passthrough_chars"": 10}",19,98.88,10
+031004,"Fatty acids, vegetable-oil polymers with glycerol, maleic anhydride and phthalic anhydride -",916,1662,0.6324,0.5192,"{""passthrough_chars"": 10}",10,98.91,10
+019841,Antimony compound with ytterbium (1:1),754,1485,0.7595,0.6347,"{""passthrough_chars"": 10}",10,98.67,10
+028907,"Fatty acids, (C=8-10) compds. with N-butyl-1-butanamine -",811,1560,0.7158,0.5912,"{""passthrough_chars"": 13}",13,98.4,13
+047618,4-Nitrobenzyl chloroformate,7206,13181,0.6386,0.5447,"{""double_blank"": 15, ""passthrough_chars"": 208}",223,97.11,208
+365645,메시트알데하이드,5761,11539,0.7754,0.6765,"{""double_blank"": 10, ""passthrough_chars"": 186}",196,96.77,186
+037608,2-(1-Methylvinyl)naphthalene,5001,10081,0.7769,0.6956,"{""double_blank"": 12, ""passthrough_chars"": 149}",161,97.02,149
+044563,"10-Undecenoic acid 3,7-dimethyl-2,6-octadienyl ester",796,1536,0.7336,0.6012,"{""passthrough_chars"": 10}",10,98.74,10
+134909,"7-Methylpyrido[3,4-c]psoralen",3914,7964,0.8681,0.7778,"{""double_blank"": 4, ""passthrough_chars"": 89}",93,97.73,89
+033080,"Hexanedioic acid polymer with 2,4-diisocyanato-1-methylbenzene, formaldehyde, 2,2''-oxybis[ethanol] and 1,3,5-triazine-2,4,6-triamine",1039,1818,0.5966,0.4686,"{""passthrough_chars"": 16}",16,98.46,16
+010749,프로타민 황산염 연어으로부터(PROTAMINE SULFATE FROM SALMON),848,1766,0.7126,0.6254,"{""double_blank"": 4, ""passthrough_chars"": 10}",14,98.82,10
+013144,아트라쿠리움 베실 산(ATRACURIUM BESYLATE),812,1657,0.7542,0.6642,"{""double_blank"": 16, ""passthrough_chars"": 10}",26,98.77,10
+020592,Bis(5-bromo-2-hydroxyphenyl)ethanedione triethylamine salt; DBS-Triethylamine salt,887,1642,0.6412,0.5357,"{""passthrough_chars"": 10}",10,98.87,10
+015065,접착제(BONDING AGENT),713,1488,0.793,0.6789,"{""passthrough_chars"": 10}",10,98.6,10
+004258,테트라에틸렌 글리콜 다이메틸 에테르,4062,8237,0.8326,0.7245,"{""double_blank"": 13, ""passthrough_chars"": 93}",106,97.71,93
+039143,"Oiticica oils polymers with bisphenol A, bisphenol A diglycidyl ether, p-tert-butylphenol, cyclohexanone and formaldehyde -",1009,1773,0.5824,0.4732,"{""passthrough_chars"": 10}",10,99.01,10
+427316,Phthalaldehyde,3462,6809,0.7575,0.6506,"{""double_blank"": 16, ""passthrough_chars"": 125}",141,96.39,125
+036719,"Methyl (E,E)-hexa-2,4-dienoate",5631,10448,0.6462,0.5533,"{""double_blank"": 8, ""passthrough_chars"": 173}",181,96.93,173
+004429,폴리에스테르-스타이렌 아크릴 융합 수지(POLYESTER-STYRENE ACRYLIC GRAFTED RESIN...,918,1861,0.6724,0.5995,"{""double_blank"": 16, ""passthrough_chars"": 10}",26,98.91,10
+021700,Calcium hexanoate,691,1407,0.8058,0.6818,"{""passthrough_chars"": 10}",10,98.55,10
+004162,코발트 테트라페닐포르핀(COBALT TETRAPHENYLPORPHINE),832,1710,0.7286,0.6182,"{""double_blank"": 1, ""passthrough_chars"": 10}",11,98.8,10
+003663,"3,5- 디아이오도살리실산",5888,11499,0.7115,0.6166,"{""double_blank"": 21, ""passthrough_chars"": 244}",265,95.86,244
+039470,"Pentachlororuthenate(2-), dipotassium",751,1470,0.7549,0.6315,"{""passthrough_chars"": 10}",10,98.67,10
+032432,"Hexanedioic acid dimethyl ester polymer with dimethyl butanedioate, dimethyl pentanedioate 2-ethyl-2-(hydroxymethyl)-1,3-propanediol and 2,2''-oxybis[ethanol]",1114,1890,0.5517,0.4391,"{""passthrough_chars"": 16}",16,98.56,16
+034140,8-Hydroxyoctanoic acid,5135,10311,0.7783,0.6937,"{""double_blank"": 12, ""passthrough_chars"": 159}",171,96.9,159
+035993,"p-Mentha-1(7),3-diene",5775,11663,0.8016,0.7081,"{""double_blank"": 14, ""passthrough_chars"": 189}",203,96.73,189
+010929,"4-아미노-3,5-디나이트로벤즈아마이드(4-AMINO-3,5-DINITROBENZAMIDE)",878,1739,0.7539,0.6461,"{""double_blank"": 33, ""passthrough_chars"": 10}",43,98.86,10
+004140,리시놀레 산,3865,7938,0.8638,0.7665,"{""double_blank"": 15, ""passthrough_chars"": 94}",109,97.57,94
+034467,"1,3-Isobenzofurandione polymer with (E)-2-butenedioic acid, 2,5-furandione, 2,2''-oxybis[ethanol] and 1,2-propanediol",991,1764,0.6199,0.4909,"{""passthrough_chars"": 16}",16,98.39,16
+005732,"1-나프톨-3,6-디술폰 산 디나트륨 염(1-NAPHTHOL-3,6-DISULFONIC ACID DISODI...",898,1836,0.6887,0.5844,"{""double_blank"": 1, ""passthrough_chars"": 10}",11,98.89,10
+012868,뷰틸 에틸 에테르(BUTYL ETHYL ETHER),8080,15811,0.7192,0.6263,"{""double_blank"": 38, ""passthrough_chars"": 302}",340,96.26,302
+004957,망가니즈 질산염 육수화물(망간 질산염 육수화물)(MANGANESE NITRATE HEXAHYDRATE),8037,15871,0.7519,0.6484,"{""double_blank"": 12, ""passthrough_chars"": 282}",294,96.49,282
+040182,Polyphosphoric acids aluminum salts -,751,1473,0.7577,0.6306,"{""passthrough_chars"": 10}",10,98.67,10
+004920,4-(4-아닐리노페닐아조)벤젠술폰 산(4-(4-ANILINOPHENYLAZO)BENEZENESULFONIC ...,900,1835,0.6895,0.6011,"{""double_blank"": 5, ""passthrough_chars"": 10}",15,98.89,10
+045437,"5-ethyl-1,3-dioxane-5-methanol",5894,11214,0.6751,0.5813,"{""double_blank"": 22, ""passthrough_chars"": 192}",214,96.74,192
+016454,"대두 기름, 에폭시화된(SOYBEAN OIL, EPOXIDIZED)",4789,9529,0.7742,0.6845,"{""double_blank"": 40, ""passthrough_chars"": 134}",174,97.2,134
+027610,Dodecylphosphonic acid,4362,8471,0.7281,0.6471,"{""double_blank"": 4, ""passthrough_chars"": 96}",100,97.8,96
+008411,메틸 3-브로모프로피온염(METHYL 3-BROMOPROPIONATE),828,1705,0.731,0.6177,"{""double_blank"": 3, ""passthrough_chars"": 10}",13,98.79,10
+038520,7-Octen-1-ol acetate,699,1424,0.8038,0.6747,"{""passthrough_chars"": 10}",10,98.57,10
+017206,염화 2-클로로에틸디에틸암모늄,6103,12259,0.8054,0.699,"{""double_blank"": 14, ""passthrough_chars"": 237}",251,96.12,237
+039126,"Oils, walnut, polymers with pentaerythritol and phthalic anhydride -",844,1578,0.6792,0.563,"{""passthrough_chars"": 10}",10,98.82,10
+040148,"Polymer of urea, benzenamine, 1,3,5-triazine-2,4,6-triamine, formaldehyde, bisulfited, sodium salt -",941,1699,0.6381,0.5112,"{""passthrough_chars"": 10}",10,98.94,10
+002867,지르코늄 탄화물(ZIRCONIUM CARBIDE),5112,10159,0.7616,0.6699,"{""double_blank"": 32, ""passthrough_chars"": 178}",210,96.52,178
+041777,"Siloxanes and silicones, di-Me polymers with Me silsesquioxanes, 2,2-dimethyl-1-(1-methylethyl)-3-(2-methyl-1-oxopropoxy)propyl- and 2,2,4-trimethyl-3-(2-methyl-1-oxopropoxy)pentyl-terminated -",1220,2035,0.5112,0.3997,"{""passthrough_chars"": 10}",10,99.18,10
+005857,구연산 에토헵타진(ETHOHEPTAZINE CITRATE),797,1651,0.7452,0.6361,"{""double_blank"": 2, ""passthrough_chars"": 12}",14,98.49,12
+028659,"Fatty acids, (C=8-18) and (C=12-18)-unsatd., tin(2+) salts -",820,1575,0.7397,0.5963,"{""passthrough_chars"": 19}",19,97.68,19
+044268,Trimethylsilyl trimethylsilylcarbamate,754,1470,0.7462,0.6266,"{""passthrough_chars"": 10}",10,98.67,10
+039437,"Peanut oil, oxidized, bisulfited -",742,1464,0.7615,0.6367,"{""passthrough_chars"": 10}",10,98.65,10
+038228,"(Z,Z)-9,12-Octadecadienoic acid polymer with 2,2-bis(hydroxymethyl)-1,3-propanediol and 1,3-isobenzofurandione",970,1743,0.6169,0.4963,"{""passthrough_chars"": 10}",10,98.97,10
+035447,"Linseed oil polymer with glycerol, phthalic anhydride and tung oil -",844,1584,0.6835,0.5626,"{""passthrough_chars"": 10}",10,98.82,10
+021881,"Carboxylic acids, tall-oil, sulfated, sodium salts -",797,1528,0.7121,0.5942,"{""passthrough_chars"": 10}",10,98.75,10
+018193,테트라메틸우로늄 헥사플루오로인산염(TETRAMETHYLURONIUM HEXAFLUOROPHOSPHATE),879,1819,0.7103,0.6255,"{""double_blank"": 9, ""passthrough_chars"": 10}",19,98.86,10
+014161,"실루산 AND 실리콘, 디-ME, 디-PH, 하이드록시-털미네이티드, 반응성 생성물 ,함유 클로로트리메틸실란,...",851,1762,0.8175,0.6652,"{""passthrough_chars"": 10}",10,98.82,10
+045078,"Amines, alkyl(C=8-28) dimethyl",731,1462,0.7846,0.6549,"{""passthrough_chars"": 13}",13,98.22,13
+097784,triethyl amine,6953,13987,0.8424,0.7487,"{""double_blank"": 11, ""passthrough_chars"": 240}",251,96.55,240
+021738,Calcium succinate,3127,6326,0.8314,0.7372,"{""double_blank"": 7, ""passthrough_chars"": 65}",72,97.92,65
+016689,L-(+)-2-아미노-7-포스포노헵탄오익 산(L-(+)-2-AMINO-7-PHOSPHONOHEPTANOIC ...,914,1788,0.7372,0.6289,"{""double_blank"": 33, ""passthrough_chars"": 16}",49,98.25,16
+018550,"실루산 AND 실리콘, 3-아미노프로필 메틸, 다이메틸(SILOXANES AND SILICONES, 3-AMI...",3422,7121,0.8419,0.7575,"{""double_blank"": 7, ""passthrough_chars"": 63}",70,98.16,63
+027087,"Disodium hydrogen bis[4-[(4,5-dihydro-3-methyl-5-oxo-1-phenyl-1H-pyrazol-4-yl)azo]-3-hydroxynaphthalene-1-sulfonato(3-)]chromate(3-)",5781,11263,0.744,0.6561,"{""double_blank"": 14, ""passthrough_chars"": 181}",195,96.87,181
+009140,(-)-시스-미르타닐아민((-)-CIS-MYRTANYLAMINE),818,1653,0.7625,0.6305,"{""double_blank"": 8, ""passthrough_chars"": 10}",18,98.78,10
+043489,(Z)-Tetradec-3-enol,697,1422,0.7967,0.6755,"{""passthrough_chars"": 10}",10,98.57,10
+020807,"3,3-Bis(4-methoxyphenyl)2-propenal diphenylhydrazone",796,1530,0.721,0.5999,"{""passthrough_chars"": 10}",10,98.74,10
+031149,"Foots oil (petroleum), silicic acid-treated -",3741,7606,0.8604,0.7708,"{""double_blank"": 1, ""passthrough_chars"": 64}",65,98.29,64
+021868,"Carboxylic acids, di-, (C=5-12) polymers with 1,4-butanediol and propyleneglycol, 2-ethylhexyl esters -",949,1710,0.6375,0.5105,"{""passthrough_chars"": 13}",13,98.63,13
+005225,터트-뷰틸클로로다이메틸실란(tert-BUTYLCHLORODIMETHYLSILANE),4223,8535,0.7978,0.7114,"{""double_blank"": 20, ""passthrough_chars"": 98}",118,97.68,98
+000611,헥사브로모사이클로도데칸,5334,10645,0.8042,0.6937,"{""double_blank"": 20, ""passthrough_chars"": 191}",211,96.42,191
+031219,"Formaldehyde polymer with methyloxirane, oxirane and phenol",817,1548,0.7032,0.5807,"{""passthrough_chars"": 10}",10,98.78,10
+041894,Sodium bromite,3119,6436,0.865,0.7808,"{""double_blank"": 6, ""passthrough_chars"": 63}",69,97.98,63
+038082,"Nonanedioic acid polymer with 1,2-ethanediol and 1,3-isobenzofuranedione, decyl hexyl octyl ester",931,1686,0.6355,0.5152,"{""passthrough_chars"": 10}",10,98.93,10
+007071,피리딘/황 트리산화물 착물(PYRIDINE/SULFUR TRIOXIDE COMPLEX),855,1773,0.7034,0.6135,"{""double_blank"": 3, ""passthrough_chars"": 16}",19,98.13,16
+005272,"1-클로로메틸-1,1,3,3,3-펜타메틸디실릴메틸렌(1-CHLOROMETHYL-1,1,3,3,3-PENTAM...",897,1813,0.7482,0.6137,"{""double_blank"": 11, ""passthrough_chars"": 10}",21,98.89,10
+036420,"6,6''-Methylenebis(6-hexanolide)",736,1461,0.7795,0.6505,"{""passthrough_chars"": 10}",10,98.64,10
+014758,4-클로로페닐 페닐 에테르(4-CHLOROPHENYL PHENYL ETHER),845,1724,0.7204,0.6178,"{""double_blank"": 10, ""passthrough_chars"": 10}",20,98.82,10
+034339,Iron di(thiocyanate),4173,8437,0.8546,0.7653,"{""double_blank"": 7, ""passthrough_chars"": 91}",98,97.82,91
+009243,"3,4-디아미노벤조페논(3,4-DIAMINOBENZOPHENONE)",825,1694,0.7208,0.6079,"{""double_blank"": 2, ""passthrough_chars"": 10}",12,98.79,10
+024020,C.I. fluorescent brightener 230 -,739,1467,0.7791,0.6505,"{""passthrough_chars"": 10}",10,98.65,10
+004977,"1,4-비스-(2-클로로펜옥시)-2-부텐(1,4-BIS-(2-CHLOROPHENOXY)-2-BUTENE)",899,1770,0.7352,0.6169,"{""double_blank"": 31, ""passthrough_chars"": 10}",41,98.89,10
+017076,뷰틸 글리콜 뷰틸 프탈산,9818,17357,0.5765,0.4836,"{""double_blank"": 22, ""passthrough_chars"": 417}",439,95.75,417
+025365,"4,4''-Diamino-5,5''-dichloro-3,3''-biphenyldisulfonic acid",815,1555,0.7275,0.5941,"{""passthrough_chars"": 10}",10,98.77,10
+019823,Antimony compound with copper (1:3),745,1476,0.7692,0.6418,"{""passthrough_chars"": 10}",10,98.66,10
+010951,"1,3-다이메틸-5,6-디아미노우라실(1,3-DIMETHYL-5,6-DIAMINOURACIL)",868,1768,0.7037,0.5773,"{""passthrough_chars"": 10}",10,98.85,10
+029901,"Fatty acids, tall-oil polymers with benzoic acid, isophthalic acid, trimellitic anhydride and trimethylolethane -",980,1732,0.5998,0.4876,"{""passthrough_chars"": 10}",10,98.98,10
+036786,폴리옥시프로필렌 모노메틸 에테르,5903,11093,0.7043,0.5988,"{""double_blank"": 16, ""passthrough_chars"": 193}",209,96.73,193
+048783,"나트륨 아세트산, 트리수화물(SODIUM ACETATE, TRIHYDRATE)",1255,2637,0.7315,0.6319,"{""double_blank"": 10, ""passthrough_chars"": 10}",20,99.2,10
+020972,"Boric acid (H2B4O7) disodium salt, oxidized -",775,1527,0.7329,0.6127,"{""passthrough_chars"": 10}",10,98.71,10
+041272,"Rosin polymer with ethylene glycol, pentaerythritol, phthalic anhydride and tall oil -",898,1641,0.6484,0.5313,"{""passthrough_chars"": 10}",10,98.89,10
+044045,"Trimellitic anhydride, terephthalic acid, adipic acid, neopentyl glycol, ethylene glycol polymer",929,1672,0.6293,0.5149,"{""passthrough_chars"": 10}",10,98.92,10
+035850,"Maleic anhydride, phthalic anhydride, neopentyl glycol, styrene polymer",853,1587,0.6781,0.558,"{""passthrough_chars"": 10}",10,98.83,10
+000513,프로판 설톤,8404,16638,0.7527,0.6562,"{""double_blank"": 35, ""passthrough_chars"": 346}",381,95.88,346
+044956,"Zirconium, oxalate potassium complexes -",760,1482,0.7481,0.6237,"{""passthrough_chars"": 10}",10,98.68,10
+037532,4-Methyl-1-[2-(trans-4-propylcyclohexyl)cyclohexyl]ethylbenzol,827,1564,0.7021,0.5771,"{""passthrough_chars"": 16}",16,98.07,16
+020767,"N,N-Bis(2-hydroxyethyl)-N-methyl-2-[(1-oxooctadecyl)oxy]ethanaminium methyl sulfate (salt)",910,1674,0.6404,0.5253,"{""passthrough_chars"": 16}",16,98.24,16
+044662,이소부틸레이트 포름알데히드 및 파라포름알데히드 우레아 폴리머,4337,8982,0.8982,0.8084,"{""double_blank"": 2, ""passthrough_chars"": 86}",88,98.02,86
+007314,3-(1H-벤즈이미다졸-2-일)-7-(디에틸아미노)-2H-1-벤조피란-2-온(3-(1H-BENZIMIDAZO...,3693,7528,0.8154,0.721,"{""double_blank"": 28, ""passthrough_chars"": 56}",84,98.48,56
+009364,3-브로모벤질아민 수화염화물(3-BROMOBENZYLAMINE HYDROCHLORIDE),872,1751,0.7344,0.6491,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.85,10
+018466,m-아미노벤조트라이플루오라이드,8580,15275,0.599,0.4993,"{""double_blank"": 21, ""passthrough_chars"": 305}",326,96.45,305
+008112,베타-헥사클로로사이클로헥산,8735,16112,0.6417,0.5398,"{""double_blank"": 16, ""passthrough_chars"": 377}",393,95.68,377
+007544,"DL-3,4-다이하이드록시페닐글리콜(DL-3,4-DIHYDROXYPHENYLGLYCOL)",863,1761,0.7091,0.6055,"{""double_blank"": 6, ""passthrough_chars"": 12}",18,98.61,12
+428385,"1,2-bis(3-methylphenoxy)ethane",4952,9675,0.7372,0.6394,"{""double_blank"": 15, ""passthrough_chars"": 196}",211,96.04,196
+010792,"7,7,9,9-테트라메틸-1,4-디옥사-8-아자-스피로(4.5)데칸-2-메탄올(7,7,9,9-TETRAMET...",914,1779,0.7948,0.6334,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.91,10
+018995,"Alkanes, (C=7-10)-iso- -",7030,14312,0.8328,0.7416,"{""double_blank"": 2, ""passthrough_chars"": 204}",206,97.1,204
+019612,2-((4-아미노-2-나이트로페닐)아미노)에탄올,7021,12088,0.546,0.4566,"{""double_blank"": 16, ""passthrough_chars"": 221}",237,96.85,221
+040824,"Quaternary ammonium compounds, alkyl(C=14-18)trimethyl chlorides -",838,1578,0.6976,0.5723,"{""passthrough_chars"": 13}",13,98.45,13
+014590,무정형 실리카 발연(AMORPHOUS SILICA FUME),3901,7953,0.8124,0.7281,"{""double_blank"": 51, ""passthrough_chars"": 103}",154,97.36,103
+134833,Agaritine,4782,9530,0.8025,0.7153,"{""double_blank"": 16, ""passthrough_chars"": 141}",157,97.05,141
+023619,C.I. direct green 006,702,1430,0.8135,0.6866,"{""passthrough_chars"": 10}",10,98.58,10
+014115,사슬상 도데실벤젠 설폰 산(BRANCHED DODECYLBENZENE SULFONIC ACID),4907,9792,0.7661,0.674,"{""double_blank"": 11, ""passthrough_chars"": 139}",150,97.17,139
+046452,염화 제II구리,1105,2369,0.7968,0.6737,"{""passthrough_chars"": 10}",10,99.1,10
+042751,"Sulfonamides, alkane(C=4-8), perfluoro, N-(hydroxyethyl)-N-methyl reaction products with epichlorohydrin, adipates(esters) -",1012,1779,0.5872,0.4763,"{""passthrough_chars"": 13}",13,98.72,13
+018429,ARG-PRO-프로-길-B-(2-티에닐)-ALA-SER-D-PHE-B-(2-티에닐)(ARG-PRO-PRO-G...,898,1809,0.6752,0.5738,"{""double_blank"": 10, ""passthrough_chars"": 10}",20,98.89,10
+034308,Iridium oxide (Ir2O3),2997,6176,0.8649,0.7792,"{""double_blank"": 5, ""passthrough_chars"": 60}",65,98.0,60
+033202,"Hexanedioic acid polymer with 1,2-ethanediol, 1,2-propanediol and 1,2,3-propanetriol",892,1647,0.6688,0.5371,"{""passthrough_chars"": 10}",10,98.88,10
+017542,폴리비닐피로리돈(POLYVINYLPYRROLIDONE),9298,16027,0.5306,0.4367,"{""double_blank"": 32, ""passthrough_chars"": 353}",385,96.2,353
+003710,우라늄 산화물(URANIUM OXIDE),5206,10493,0.7911,0.7111,"{""double_blank"": 26, ""passthrough_chars"": 151}",177,97.1,151
+006552,산톨리트 MHP(SANTOLITE MHP),3652,7550,0.8551,0.7579,"{""double_blank"": 23, ""passthrough_chars"": 63}",86,98.27,63
+042754,5-(5-Sulfo-1-naphthylazo)salicylic acid disodium salt,800,1537,0.7224,0.5954,"{""passthrough_chars"": 10}",10,98.75,10
+019279,"Aluminum oxide (Al2O3), solid soln. with barium oxide, calcium oxide, cerium oxide and strontium oxide, dysprosium and terbium-doped -",1043,1825,0.578,0.4625,"{""passthrough_chars"": 10}",10,99.04,10
+003195,옥세타자인,4676,9542,0.8391,0.7246,"{""double_blank"": 21, ""passthrough_chars"": 97}",118,97.93,97
+000233,p-크실렌,7394,14549,0.7436,0.6347,"{""double_blank"": 32, ""passthrough_chars"": 322}",354,95.65,322
+023007,C.I. acid blue 002 -,701,1429,0.8155,0.6846,"{""passthrough_chars"": 10}",10,98.57,10
+009136,Perfluoroisobutylene,6031,12082,0.7843,0.6892,"{""double_blank"": 7, ""passthrough_chars"": 210}",217,96.52,210
+042939,"Sunflower oil, hydrogenated -",727,1446,0.7773,0.6517,"{""passthrough_chars"": 10}",10,98.62,10
+018283,5-클로로-2-메틸벤젠아민,5597,11123,0.756,0.6609,"{""double_blank"": 17, ""passthrough_chars"": 168}",185,97.0,168
+011213,3-메틸-2-뷰텐-1-올(3-METHYL-2-BUTEN-1-OL),10213,18577,0.6329,0.5272,"{""double_blank"": 22, ""passthrough_chars"": 469}",491,95.41,469
+428186,5-methoxy-2-methylsulphanilic acid,4159,8089,0.7542,0.6565,"{""double_blank"": 15, ""passthrough_chars"": 120}",135,97.11,120
+030141,"Fatty acids, tall oil polymers with glycerol, hydrogenated rosin, pentaerythritol and phthalic anhydride -",958,1707,0.6091,0.4992,"{""passthrough_chars"": 10}",10,98.96,10
+037340,"2-Methyl-2-propenoic acid methyl ester polymer with 1,3-butadiene, butyl 2-propenoate and ethenylbenzene",952,1713,0.6291,0.505,"{""passthrough_chars"": 10}",10,98.95,10
+048979,황산,1077,2316,0.8276,0.6979,"{""passthrough_chars"": 10}",10,99.07,10
+029213,"Fatty acids, linseed-oil polymers with dipentaerythritol, glycerol, maleic anhydride, pentaerythritol and tall oil fatty acids -",1024,1782,0.5734,0.4676,"{""passthrough_chars"": 10}",10,99.02,10
+037945,".alpha.,.alpha.'',.alpha.''''-(Nitrilotri-2,1-ethanediyl)tris[.omega.-hydroxypoly(oxy-1,2-ethanediyl)] polymer with 2,4-diisocyanato-1-methylbenzene",1084,1857,0.5865,0.4565,"{""passthrough_chars"": 16}",16,98.52,16
+000634,프로필렌 글리콜 디니트레이트,6204,12526,0.8031,0.699,"{""double_blank"": 17, ""passthrough_chars"": 194}",211,96.87,194
+005405,(R)-(+)-시트로넬릭 산((R)-(+)-CITRONELLIC ACID),841,1694,0.7103,0.5994,"{""double_blank"": 6, ""passthrough_chars"": 16}",22,98.1,16
+046916,톨루엔,1075,2315,0.8273,0.6975,"{""passthrough_chars"": 10}",10,99.07,10
+010364,트리나이트로메탄,690,1451,0.855,0.7276,"{""passthrough_chars"": 10}",10,98.55,10
+036941,4-Methyl-1-octadecanol,3246,6755,0.8766,0.7856,"{""double_blank"": 1, ""passthrough_chars"": 63}",64,98.06,63
+002607,"덱사메타손 아세트산, 무수물(DEXAMETHASONE ACETATE, ANHYDROUS)",4190,8528,0.8227,0.7164,"{""double_blank"": 30, ""passthrough_chars"": 84}",114,98.0,84
+025344,Dialuminium tribarium hexaoxide,733,1452,0.7686,0.6441,"{""passthrough_chars"": 10}",10,98.64,10
+039361,"2,2''-Oxydiethanol-fumaric acid-adipic acid-2,2-bis[3,5-dibromo-4-(2-hydroxyethoxy)phenyl]propane copolymer",962,1729,0.6239,0.502,"{""passthrough_chars"": 16}",16,98.34,16
+037396,"2-Methyl-2-propenoic acid (1-methylethylidene)bis(4,1-phenyleneoxy-2,1-ethanediyloxy-2,1-ethanediyl) ester",958,1722,0.6246,0.5023,"{""passthrough_chars"": 10}",10,98.96,10
+010301,2-(4-아이소뷰틸페닐)프로피온알데하이드(2-(4-ISOBUTYLPHENYL)PROPIONALDEHYDE),886,1827,0.6914,0.5997,"{""passthrough_chars"": 10}",10,98.87,10
+029351,"Fatty acids, peanut-oil, sodium salts -",757,1485,0.7453,0.6238,"{""passthrough_chars"": 10}",10,98.68,10
+008913,다이메틸 (2-옥소헵틸)포스폰산염(DIMETHYL (2-OXOHEPTYL)PHOSPHONATE),869,1794,0.6955,0.5944,"{""passthrough_chars"": 10}",10,98.85,10
+003028,4-에톡시아세토에세테닐라이드,3419,6749,0.7171,0.6147,"{""double_blank"": 11, ""passthrough_chars"": 113}",124,96.69,113
+021350,"(E)-2-Butenedioic acid polymer with methyloxirane, oxirane and 1,2,3-propanetriol",883,1635,0.6656,0.5403,"{""passthrough_chars"": 10}",10,98.87,10
+025045,1-Cyclohexyl-1-methylethyl isobutyrate,754,1479,0.751,0.6281,"{""passthrough_chars"": 10}",10,98.67,10
+002878,트리카보닐부타디엔 철(TRICARBONYLBUTADIENE IRON),827,1686,0.742,0.6488,"{""double_blank"": 15, ""passthrough_chars"": 10}",25,98.79,10
+024597,C.I. solvent orange 078 -,715,1443,0.8024,0.6705,"{""passthrough_chars"": 10}",10,98.6,10
+014554,"(29H,31H-프탈로시아니나토(2-)-N29,N30,N31,N32)구리, 클로린화된((29H,31H-PHT...",5428,10286,0.6695,0.576,"{""double_blank"": 25, ""passthrough_chars"": 159}",184,97.07,159
+045886,Sodium titanium oxide,703,1422,0.8,0.6715,"{""passthrough_chars"": 10}",10,98.58,10
+017436,"2-(4-(4-(다이메틸아미노)페닐)-1,3-부타디엔일)-3-에틸-나프토(2,1-D)티아졸륨 퍼클로레이트(2-...",899,1796,0.8207,0.6452,"{""double_blank"": 5, ""passthrough_chars"": 10}",15,98.89,10
+044895,Zinc dimetaphosphate,700,1416,0.7984,0.6742,"{""passthrough_chars"": 10}",10,98.57,10
+007261,세프타졸린 나트륨(CEFAZOLIN SODIUM),3860,7955,0.8575,0.7531,"{""double_blank"": 26, ""passthrough_chars"": 65}",91,98.32,65
+024326,C.I. reactive blue 227 -,713,1441,0.8058,0.6738,"{""passthrough_chars"": 10}",10,98.6,10
+037878,Nickel hydroxide,7085,13929,0.7622,0.6646,"{""double_blank"": 26, ""passthrough_chars"": 259}",285,96.34,259
+027816,4-Ethoxybutan-1-ol,5154,9510,0.6491,0.5633,"{""double_blank"": 6, ""passthrough_chars"": 135}",141,97.38,135
+041861,"Slimes and Sludges, tin smelting -",742,1470,0.7704,0.6389,"{""passthrough_chars"": 10}",10,98.65,10
+010733,쿠마린 153(COUMARIN 153),778,1576,0.8084,0.6795,"{""double_blank"": 9, ""passthrough_chars"": 10}",19,98.71,10
+016559,"수지 지방산, 나트륨 염(TALLOW FATTY ACIDS, SODIUM SALT)",4668,9243,0.7285,0.6594,"{""double_blank"": 20, ""passthrough_chars"": 121}",141,97.41,121
+011277,메리피엘드 중합물(MERRIFIELD POLYMER),746,1561,0.7744,0.6664,"{""passthrough_chars"": 10}",10,98.66,10
+012273,디브로모말레산(DIBROMOMALEIC ACID),795,1642,0.7188,0.6177,"{""passthrough_chars"": 10}",10,98.74,10
+028205,3-Ethyl-2-methylbenzoselenazolium ethosulfate,4588,9220,0.8055,0.7115,"{""double_blank"": 8, ""passthrough_chars"": 137}",145,97.01,137
+001726,D-A H-포스폰산염(D-A H-PHOSPHONATE),804,1685,0.6874,0.6005,"{""passthrough_chars"": 10}",10,98.76,10
+012427,2-메틸벤즈이미다졸(2-METHYLBENZIMIDAZOLE),814,1670,0.7228,0.6265,"{""double_blank"": 10, ""passthrough_chars"": 10}",20,98.77,10
+427401,Undecylenamide,4040,7918,0.762,0.6748,"{""double_blank"": 19, ""passthrough_chars"": 126}",145,96.88,126
+022918,"Coconut oil, polymer with 3-hydroxy-2,2-dimethylpropyl 3-hydroxy-2,2-dimethylpropanoate, phthalic anhydride, trimellitic anhydride and trimethylolpropane -",1105,1875,0.5467,0.4371,"{""passthrough_chars"": 10}",10,99.1,10
+028167,"2-Ethyl-2-(hydroxymethyl)-1,3-propanediol polymer with 1,3-diisocyanatomethylbenzene, .alpha.-hydro-.omega.-hydroxypoly[oxy(methyl-1,2-ethanediyl)] and oxybis[propanol]",1144,1926,0.5385,0.4278,"{""passthrough_chars"": 22}",22,98.08,22
+045090,"N-(2-아미노에틸)-1,3-프로판디아민",7329,14216,0.7305,0.624,"{""double_blank"": 25, ""passthrough_chars"": 274}",299,96.26,274
+403612,"N-(카복시메틸)-N,N-다이메틸-3-((1-옥소옥타데센일)아미노)-1-프로판아미늄 수산화물, 내염",5393,10867,0.8443,0.7363,"{""double_blank"": 13, ""passthrough_chars"": 160}",173,97.03,160
+017339,N-숙신일-알라닌-알라닌-프롤린-페닐알라닌 7-아미도-4-메틸 쿠마린(N-SUCCINYL-ALANINE-AL...,903,1878,0.6937,0.5752,"{""double_blank"": 1, ""passthrough_chars"": 10}",11,98.89,10
+018632,Acetic acid ethenyl ester polymer with ethene and 1-propene,817,1557,0.7063,0.5818,"{""passthrough_chars"": 10}",10,98.78,10
+011049,"3,3''5,5''-테트라메틸벤즈이딘(3,3''5,5''-TETRAMETHYLBENZIDINE)",920,1808,0.6937,0.5754,"{""double_blank"": 8, ""passthrough_chars"": 18}",26,98.04,18
+048490,질산,1079,2319,0.8198,0.6917,"{""passthrough_chars"": 10}",10,99.07,10
+007618,"2,3,5,6-테트라플루오로-7,7,8,8-테트라-시아노퀴노디메탄(2,3,5,6-TETRAFLUORO-7,7...",906,1805,0.764,0.5943,"{""double_blank"": 3, ""passthrough_chars"": 12}",15,98.68,12
+026218,"1,1-Dimethoxy-3,7-dimethyl-2,6-octadiene; Citral dimethyl acetal",6059,11349,0.672,0.5854,"{""double_blank"": 6, ""passthrough_chars"": 156}",162,97.43,156
+002795,셀레늄화 탈륨(셀렌화 탈륨)(THALLIUM SELENIDE),3932,7591,0.6822,0.5756,"{""double_blank"": 30, ""passthrough_chars"": 145}",175,96.31,145
+032033,"D-Gulono-1,4-lactone",699,1427,0.7932,0.6722,"{""passthrough_chars"": 10}",10,98.57,10
+015430,클로로텍실보란-메틸 황화물 착물(CHLOROTHEXYLBORANE-METHYL SULFIDE COMPLEX),905,1828,0.6962,0.6254,"{""double_blank"": 32, ""passthrough_chars"": 10}",42,98.9,10
+013846,"(C6-C10) 알킬에톡실산염 황 산, 암모늄 염((C6-C10) ALKYLETHOXYLATE SULFURI...",891,1830,0.7204,0.6083,"{""double_blank"": 1, ""passthrough_chars"": 10}",11,98.88,10
+031351,"2,5-Furandione polymer with 2,2''-oxybis[ethanol], 2-ethylhexyl ester",847,1593,0.7065,0.5684,"{""passthrough_chars"": 16}",16,98.11,16
+024063,C.I. mordant blue 069 -,709,1437,0.8056,0.6756,"{""passthrough_chars"": 10}",10,98.59,10
+021147,"1,4-Butanediol polymer with .alpha.-hydro-.omega.-hydroxypoly(oxy-1,4-butanediyl), .alpha.-hydro-.omega.-hydroxypoly[oxy(methyl-1,2-ethanediyl)] and 1,1''-methylenebis[4-isocyanatobenzene]",1204,1998,0.5288,0.4113,"{""passthrough_chars"": 22}",22,98.17,22

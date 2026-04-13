@@ -1,0 +1,1524 @@
+id,text,braille_brf
+lu_0001,7/11/59,#g_/#aa_/#ei
+lu_0002,7.11.59,#g4aa4ei
+lu_0003,1960's,#aifj's
+lu_0004,'70s and '80s,'#gjs & '#hjs
+lu_0005,10:30 a.m.,#aj3#cj a4m4
+lu_0006,10.30 am,#aj4cj am
+lu_0007,$8.75,`s#h4ge
+lu_0008,£8.75,`l#h4ge
+lu_0009,"R8,75",",r#h1ge"
+lu_0010,"$1,500.00",`s#a1ejj4jj
+lu_0011,"€1.500,00",`e#a4ejj1jj
+lu_0012,M4G 3E8,",m#d,g #c,e#h"
+lu_0013,W1N 9LF,",w#a,n #i,,lf"
+lu_0014,N12 7BT,",n#ab #g,,bt"
+lu_0015,(416) 486-2500,"""<#daf""> #dhf-#bejj"
+lu_0016,For a taxi call 13-cabs.,",= a taxi call #ac-cabs4"
+lu_0017,telephone 1300-vision,"teleph""o #acjj-vi.n"
+lu_0018,1-800-SLEEP88,"#a-#hjj-,,sleep#hh"
+lu_0019,ISBN 0-14-300414-X,",,isbn #j-#ad-#cjjdad-;,x"
+lu_0020,Section I. 1,",sec;n ,i4 #a"
+lu_0021,Section I.1,",sec;n ,i4#a"
+lu_0022,"Section I, 1",",sec;n ,i1 #a"
+lu_0023,"Section I,1",",sec;n ,i1#a"
+lu_0024,Section II. 2,",sec;n ,,ii4 #b"
+lu_0025,Section III.2,",sec;n ,,iii4#b"
+lu_0026,"Section II, 3",",sec;n ,,ii1 #c"
+lu_0027,"Section III,3",",sec;n ,,iii1#c"
+lu_0028,"(x, 4)","""<;x1 #d"">"
+lu_0029,"(x,4)","""<x1#d"">"
+lu_0030,ABC DEFG HIJ,",,,abc defg hij,'"
+lu_0031,ABC 456G HIJ,",,,abc #def;g hij,'"
+lu_0032,ABC 45FG HIJ,",,,abc #de;fg hij,'"
+lu_0033,ABC 4EFG HIJ,",,,abc #d;efg hij,'"
+lu_0034,AB123456G DWP CR,",,,ab#abcdef;g dwp cr,'"
+lu_0035,B.C.,",b4,c4"
+lu_0036,Hush. Keep Quiet!,",hu%4 ,keep ,quiet6"
+lu_0037,C. O. Linkletter,";,c4 ,o4 ,l9klett}"
+lu_0038,M MacPherson and O O'Hara,";,m ,mac,ph}son & ,o ,o',h>a"
+lu_0039,'Twas Dr. Hamilton-Hall.,"',twas ,dr4 ,hamilton-,hall4"
+lu_0040,Father Edmond Anderson,",""f ,$mond ,&}son"
+lu_0041,"Today, Mr Will Just visited us.",",td1 ,mr ,w ,j visit$ u4"
+lu_0042,His name is Thomas.,",8 ""n is ,?omas4"
+lu_0043,Étude,",~/etude"
+lu_0044,Voyage À Nice,",voyage ,~*a ,nice"
+lu_0045,PARLIAMENT,",,p>lia;t"
+lu_0046,FRANÇOIS,",,fran~&cois"
+lu_0047,DipTP,",dip,,tp"
+lu_0048,"""GO quickly and TAKE CARE!""","8,,g qkly & ,,take ,,c>e60"
+lu_0049,ANGLO-SAXON,",,anglo-,,saxon"
+lu_0050,McGRAW-HILL,",mc,,graw-,,hill"
+lu_0051,MERRY-GO-ROUND,",,m}ry-,,g-,,r.d"
+lu_0052,UPPERCASE-lowercase,",,upp}case-l{}case"
+lu_0053,LITTLE-RED-RIDING-HOOD-type tales,",,ll-,,r$-,,rid+-,,hood-type tales"
+lu_0054,The d'ARTAGNAN Romances,",! d',,>tagnan ,rom.es"
+lu_0055,O'SULLIVAN,",o',,sullivan"
+lu_0056,DON'T,",,don',t"
+lu_0057,THAT'S,",,t',s"
+lu_0058,SHE'LL,",,%e',,ll"
+lu_0059,JACK'S FO'C'S'LE,",,jack',s ,,fo',c',s',,le"
+lu_0060,WELCOME TO McDONALD'S,",,welcome ,,to ,mc,,donald',s"
+lu_0061,OK'd,",,ok'd"
+lu_0062,RSVP or R.S.V.P.,",,rsvp or ,r4,s4,v4,p4"
+lu_0063,HOTELS.COM,",,hotels4,,com"
+lu_0064,The N.A.S.D.A.Q. News,",! ,n4,a4,s4,d4,a4,q4 ,news"
+lu_0065,BA(Oxon),",,ba""<,oxon"">"
+lu_0066,(R)AC,"""<,r"">,,ac"
+lu_0067,WIND(ward),",,w9d""<w>d"">"
+lu_0068,AT&T,",,at`&,t"
+lu_0069,McDONALD@xyz.com,",mc,,donald`axyz4com"
+lu_0070,SWIFT & CO.,",,swift `& ,,co4"
+lu_0071,CAUTION: WET PAINT!,",,,cau;n3 wet pa9t6,'"
+lu_0072,Please KEEP OFF THE GRASS in this area.,",pl1se ,,,keep (f ! grass,' 9 ? >ea4"
+lu_0073,THE BBC AFRICA NEWS,",,,! bbc africa news,'"
+lu_0074,PROUD TO BE A ΦΒΚ,",,,pr|d to 2 a .f.b.k,'"
+lu_0075,FOR SALE: 1975 FIREBIRD,",,,= sale3 #aige firebird,'"
+lu_0076,A SELF-MADE MAN,",,,a self-made man,'"
+lu_0077,A.A. (ALAN ALEXANDER) MILNE,",,,a4a4 ""<alan alex&}""> milne,'"
+lu_0078,STOP RUNNING NOW! It's dangerous.,",,,/op runn+ n{6,' ,x's dang}|s4"
+lu_0079,IT'S A HOAX! (APRIL FOOL!),",,,x's a hoax6 ""<april fool6"">,'"
+lu_0080,ABCs,",,abc,'s"
+lu_0081,WASPs,",,wasp,'s"
+lu_0082,WALKing,",,walk,'+"
+lu_0083,unSELFish,"un,,self,'i%"
+lu_0084,XXIInd,",,xxii,'nd"
+lu_0085,VIIb,",,vii,'b"
+lu_0086,The two CEOs met in our CEO's office.,",! two ,,ceo,'s met 9 |r ,,ceo's (fice4"
+lu_0087,"""So?""","8,s80"
+lu_0088,(July),"""<,july"">"
+lu_0089,'TIS,"',,tis"
+lu_0090,"""SHHHH!""","8,,%hhh60"
+lu_0091,Hippity-HOP,",hipp;y-,,hop"
+lu_0092,ÉTUDE,",,~/etude"
+lu_0093,Unified English Braille (UEB),",unifi$ ,5gli% ,brl ""<,,ueb"">"
+lu_0094,AC SMITH,";,,ac ,,smi?"
+lu_0095,V-NECK SWEATERS FOR SALE!,";,,,v-neck sw1t}s = sale6,'"
+lu_0096,XI XIth,",,xi ,,xi,'?"
+lu_0097,XXXI XXXIst,",,xxxi ,,xxxi,'/"
+lu_0098,OK OKd,",,ok ,,ok,'d"
+lu_0099,CD CDs,";,,cd ,,cd,'s"
+lu_0100,RV: Recreational Vehicle–Let's go RVing.,",,rv3 ,recr1;nal ,vehicle,-,let's g ,,rv,'+4"
+lu_0101,www.BLASTsoundmachine.com,"www4,,bla/,'s.dma*9e4com"
+lu_0102,preSENT,"pre,,s5t"
+lu_0103,PRESent,",,pres,'5t"
+lu_0104,WoooooooOOOOOOOOooooooo (a ghostly sound),",wooooooo,,oooooooo,'ooooooo ""<a <o/ly s.d"">"
+lu_0105,When will Will meet us?,",:5 w ,w meet u8"
+lu_0106,Every child from here knows Mr More.,",e * f ""h ""ks ,mr ,m4"
+lu_0107,"""do re mi fa so""",8d re mi fa s0
+lu_0108,That is quite fair and very just.,",t is q fair & v j4"
+lu_0109,"""People, people who need people""","8,p1 p :o ne$ p0"
+lu_0110,I do not like that watering-can!,",i d n l t wat}+-c6"
+lu_0111,"But, would the people rather do the can-can for us?",",b1 wd ! p r d ! c-c = u8"
+lu_0112,"""You so-and-so–go away!""","8,y s-&-s,-g away60"
+lu_0113,"""I do have some–but I would like more!""","8,i d h ""s,-b ,i wd l m60"
+lu_0114,last will and testament,la/ w & te/a;t
+lu_0115,a child-like manner,a *-l mann}
+lu_0116,will-o'-the-wisp,w-o'-!-wisp
+lu_0117,"""Do-It-Yourself""","8,d-,x-,yrf0"
+lu_0118,come from–not go to,"come f,-n g to"
+lu_0119,(just say so),"""<j say s"">"
+lu_0120,As You Like It,",z ,y ,l ,x"
+lu_0121,likes and dislikes,likes & 4likes
+lu_0122,childlike and likeness,*ildlike & like;s
+lu_0123,moreover and evermore,"moreov} & ""emore"
+lu_0124,"""but, no buts""",8b1 no buts0
+lu_0125,peoples,peoples
+lu_0126,quite/very,quite_/v}y
+lu_0127,d'you,d'y|
+lu_0128,t'do,t'do
+lu_0129,t'have,t'have
+lu_0130,it'd,x'd
+lu_0131,you'd,y'd
+lu_0132,it'll,x'll
+lu_0133,that'll,t'll
+lu_0134,you'll,y'll
+lu_0135,you're,y're
+lu_0136,people's,p's
+lu_0137,so's,s's
+lu_0138,you's,y's
+lu_0139,can't,c't
+lu_0140,you've,y've
+lu_0141,Thomas More's life,",?omas ,m's life"
+lu_0142,Mr Just's house,",mr ,j's h|se"
+lu_0143,I can–you can't!,",i c,-y c't6"
+lu_0144,"""You've done it!""","8,y've d""o x60"
+lu_0145,more'n,more'n
+lu_0146,you'm,y|'m
+lu_0147,CAN Network,",,c ,net""w"
+lu_0148,GO Train,",,g ,tra9"
+lu_0149,Which CHILD-PROOF lock?,",: ,,*-,,pro( lock8"
+lu_0150,still-life and whiskey-still,/-life & :iskey-/
+lu_0151,(This way out!),"""<,? way |6"">"
+lu_0152,"""Which way out?""","8,: way |80"
+lu_0153,childish,*ildi%
+lu_0154,grandchild,gr&*ild
+lu_0155,outcome,|tcome
+lu_0156,without,)|t
+lu_0157,shallot,%allot
+lu_0158,shallow,%all{
+lu_0159,shilly-shally,%illy-%ally
+lu_0160,standstill,/&/ill
+lu_0161,thistle,?i/le
+lu_0162,whichever,":i*""e"
+lu_0163,this/that,?is_/?at
+lu_0164,Stillson wrench,",/illson wr5*"
+lu_0165,www.universalchildcare.ca,www4univ}sal*ildc>e4ca
+lu_0166,this'd,?'d
+lu_0167,which'll,:'ll
+lu_0168,still's,/'s
+lu_0169,which've,:'ve
+lu_0170,Julia Child's recipe,",julia ,*'s recipe"
+lu_0171,this'n,?is'n
+lu_0172,andante,&ante
+lu_0173,England,",5gl&"
+lu_0174,grandad,gr&ad
+lu_0175,grandmother,"gr&""m"
+lu_0176,meander,me&}
+lu_0177,merchandise,m}*&ise
+lu_0178,pandemic,p&emic
+lu_0179,pandowdy,p&{dy
+lu_0180,afford,af=d
+lu_0181,comfort,com=t
+lu_0182,forgo,=go
+lu_0183,Fortran,",=tran"
+lu_0184,Pforzheimer,",p=zheim}"
+lu_0185,pianoforte,piano=te
+lu_0186,coffee,c(fee
+lu_0187,Geoffrey,",ge(frey"
+lu_0188,lofty,l(ty
+lu_0189,often,(t5
+lu_0190,profane,pr(ane
+lu_0191,roof,ro(
+lu_0192,sofa,s(a
+lu_0193,tofu,t(u
+lu_0194,whereof,""":("
+lu_0195,Athens,",a!ns"
+lu_0196,bathed,ba!d
+lu_0197,bother,bo!r
+lu_0198,Esther,",es!r"
+lu_0199,furthest,fur!/
+lu_0200,nevertheless,"n""e!.s"
+lu_0201,scythe,scy!
+lu_0202,thee,!e
+lu_0203,Matthew,",mat!w"
+lu_0204,Parthenon,",p>!non"
+lu_0205,theatre,!atre
+lu_0206,Theresa,",!resa"
+lu_0207,forthwith,=?)
+lu_0208,withe,)e
+lu_0209,Swithin,",s)9"
+lu_0210,without,)|t
+lu_0211,with a knowledge of and respect for the rules,) a k ( & respect = ! rules
+lu_0212,Thelma's roof will withstand the force of the wind and/or the rain.,",!lma's ro( w )/& ! =ce ( ! w9d &_/or ! ra94"
+lu_0213,Andy Vandyke proofread the profile.,",&y ,v&yke pro(r1d ! pr(ile4"
+lu_0214,out-of-the-way,|-(-!-way
+lu_0215,chifforobe,*i6orobe
+lu_0216,twofold,twofold
+lu_0217,insofar,9sof>
+lu_0218,biofeedback,biofe$back
+lu_0219,microfilm,microfilm
+lu_0220,apartheid,"a""pheid"
+lu_0221,northeast,nor?1/
+lu_0222,thence,?;e
+lu_0223,sweetheart,sweethe>t
+lu_0224,Sontheimer,",sontheim}"
+lu_0225,aerial,a}ial
+lu_0226,aghast,a<a/
+lu_0227,anteroom,ant}oom
+lu_0228,argh!,><6
+lu_0229,bear,be>
+lu_0230,boredom,bor$om
+lu_0231,brougham,br|<am
+lu_0232,cheddar,*$d>
+lu_0233,cherished,*}i%$
+lu_0234,cough,c|<
+lu_0235,coupon,c|pon
+lu_0236,cringed,cr+$
+lu_0237,derailed,d}ail$
+lu_0238,dingy,d+y
+lu_0239,dough,d|<
+lu_0240,Edith,",$i?"
+lu_0241,e'er,e'}
+lu_0242,erase,}ase
+lu_0243,Erie,",}ie"
+lu_0244,error,}ror
+lu_0245,freedom,fre$om
+lu_0246,ginger,g+}
+lu_0247,gingham,g+ham
+lu_0248,Goering,",go}+"
+lu_0249,hierarchy,hi}>*y
+lu_0250,laugh,lau<
+lu_0251,lingerie,l+}ie
+lu_0252,lowdown,l{d{n
+lu_0253,malediction,mal$ic;n
+lu_0254,meningitis,m5+itis
+lu_0255,merchandising,m}*&is+
+lu_0256,meringue,m}+ue
+lu_0257,mistake,mi/ake
+lu_0258,monowheel,mono:eel
+lu_0259,nightingale,ni<t+ale
+lu_0260,oedema,o$ema
+lu_0261,'ounds,'|nds
+lu_0262,"""Ow!""","8,{60"
+lu_0263,(par),"""<p>"">"
+lu_0264,predated,pr$at$
+lu_0265,psst,ps/
+lu_0266,redistribute,r$i/ribute
+lu_0267,reroute,r}|te
+lu_0268,riflery,rifl}y
+lu_0269,sheer,%e}
+lu_0270,Singh,",s+h"
+lu_0271,sou'east,s|'ea/
+lu_0272,'struth,'/ru?
+lu_0273,Thomas,",?omas"
+lu_0274,thorough,?or|<
+lu_0275,thou,?|
+lu_0276,toward,t{>d
+lu_0277,trebled,trebl$
+lu_0278,wharf,:>f
+lu_0279,whistle,:i/le
+lu_0280,xxist,xxi/
+lu_0281,ædile,a~6edile
+lu_0282,anthill,anthill
+lu_0283,blessèd,b.s~*ed
+lu_0284,deshabille,deshabille
+lu_0285,foghorn,foghorn
+lu_0286,kilowatt,kilowatt
+lu_0287,noway,noway
+lu_0288,painstaking,pa9stak+
+lu_0289,parenthood,p>5thood
+lu_0290,rawhide,rawhide
+lu_0291,shanghai,%anghai
+lu_0292,Stalingrad,",/al9grad"
+lu_0293,viceregal,viceregal
+lu_0294,St Stephen,",st ,/eph5"
+lu_0295,ch-ch-chilly,ch-ch-*illy
+lu_0296,Shhh!,",%hh6"
+lu_0297,th'n,?'n
+lu_0298,Ste Anne,",/e ,anne"
+lu_0299,finger,f+}
+lu_0300,ginger,g+}
+lu_0301,singe,s+e
+lu_0302,singeing,s+e+
+lu_0303,sting,/+
+lu_0304,stinging,/++
+lu_0305,brown(ing),"br{n""<+"">"
+lu_0306,SmithInge,",smi?,+e"
+lu_0307,Ch'ing Dynasty,",*'+ ,dyna/y"
+lu_0308,ingot,9got
+lu_0309,Ingoldsby,",9goldsby"
+lu_0310,ingredients,9gr$i5ts
+lu_0311,ingrown,9gr{n
+lu_0312,to-ing and fro-ing,to-9g & fro-9g
+lu_0313,Smith–Inge,",smi?,-,9ge"
+lu_0314,to be,to 2
+lu_0315,his car,8 c>
+lu_0316,Be good.,",2 gd4"
+lu_0317,HIS DOG,",,8 ,,dog"
+lu_0318,BE ALL THAT YOU CAN BE,",,,2 all t y c 2,'"
+lu_0319,at my (not his) house,"at my ""<n 8""> h|se"
+lu_0320,He is [was]; they are [were].,",he is .<0.>2 !y >e .<7.>4"
+lu_0321,(Were there many?),"""<,7 ""! _m8"">"
+lu_0322,his/her,his_/h}
+lu_0323,What will you be?,",:at w y be8"
+lu_0324,would-be actor,wd-be actor
+lu_0325,his-and-hers towels,his-&-h}s t{els
+lu_0326,That were–I mean was–mine.,",t w}e,-,i m1n was,-m9e4"
+lu_0327,"""Be safe.""","8,be safe40"
+lu_0328,it was enough,x 0 5
+lu_0329,GIVE MORE THAN ENOUGH,",,,give m ?an 5,'"
+lu_0330,Buy meat (enough for 2).,",buy m1t ""<5 = #b"">4"
+lu_0331,Enough's happened.,",5's happ5$4"
+lu_0332,Mum's had-enough mood,",mum's _h-5 mood"
+lu_0333,www.enoughforall.org,www45|<=all4org
+lu_0334,enough/sufficient,5|<_/su6ici5t
+lu_0335,not in here,"n 9 ""h"
+lu_0336,In or out?,",9 or |8"
+lu_0337,GO ALL IN,",,,g all 9,'"
+lu_0338,in't,9't
+lu_0339,mother-in-law,"""m-9-law"
+lu_0340,listen-in,li/5-9
+lu_0341,Listen!—In this case …,",li/56,-,9 ? case 444"
+lu_0342,"""teach-in""",8t1*-90
+lu_0343,IN-DEPTH,",,9-,,dep?"
+lu_0344,"(""In no way."")","""<8,9 no way40"">"
+lu_0345,<in file>,`<9 file`>
+lu_0346,in/out,9_/|t
+lu_0347,"Come in, stay in.",",come in1 /ay in4"
+lu_0348,"""In any case""","8,in any case0"
+lu_0349,It was enough–more than enough.,",x 0 5,-m ?an 5|<4"
+lu_0350,We had enough–5.,",we _h 5,-#e4"
+lu_0351,Take enough.,",take 5|<4"
+lu_0352,beatitude,2atitude
+lu_0353,Beatrice,",2atrice"
+lu_0354,become,2come
+lu_0355,begonia,2gonia
+lu_0356,behemoth,2hemo?
+lu_0357,being,2+
+lu_0358,beneficent,2nefic5t
+lu_0359,beta,2ta
+lu_0360,first-begotten,f/-2gott5
+lu_0361,air-conditioned,air-3di;n$
+lu_0362,concept,3cept
+lu_0363,congress,3gress
+lu_0364,control,3trol
+lu_0365,re-connect,re-3nect
+lu_0366,disaster,4a/}
+lu_0367,disco,4co
+lu_0368,dishonest,"4h""o/"
+lu_0369,dislike,4like
+lu_0370,dissect,4sect
+lu_0371,distance,4t.e
+lu_0372,self-discipline,self-4cipl9e
+lu_0373,beckon,beckon
+lu_0374,been,be5
+lu_0375,belligerent,bellig}5t
+lu_0376,benefit,b5efit
+lu_0377,best,be/
+lu_0378,bethel,be!l
+lu_0379,better,bett}
+lu_0380,unbecoming,unbecom+
+lu_0381,conch,con*
+lu_0382,cone,"c""o"
+lu_0383,coneys,"c""oys"
+lu_0384,inconvenient,9conv5i5t
+lu_0385,disc,disc
+lu_0386,dish,di%
+lu_0387,dishevel,di%evel
+lu_0388,dispirited,di_s$
+lu_0389,disulphide,disulphide
+lu_0390,indistinct,9di/9ct
+lu_0391,"""Belinda!""","8,2l9da60"
+lu_0392,'display will minimise','4play w m9imise'
+lu_0393,concave/convex,3cave_/convex
+lu_0394,McConnell,",mc,connell"
+lu_0395,O'Connor,",o',connor"
+lu_0396,MetroDisco,",metro,disco"
+lu_0397,be'ave,be'ave
+lu_0398,be-stow,be-/{
+lu_0399,[be]hold,.<be.>hold
+lu_0400,con(vey),"con""<vey"">"
+lu_0401,dis'armony,dis'>mony
+lu_0402,BeLinda,",be,l9da"
+lu_0403,conCUR,"con,,cur"
+lu_0404,DisCORD,",dis,,cord"
+lu_0405,DISlike,",,dis,'like"
+lu_0406,Conn.,",3n4"
+lu_0407,cont,3t
+lu_0408,dist.,4t4
+lu_0409,Belg,",belg"
+lu_0410,Con.,",con4"
+lu_0411,abbé,a2~/e
+lu_0412,accept,a3ept
+lu_0413,account,a3.t
+lu_0414,acreage,acr1ge
+lu_0415,affirm,a6irm
+lu_0416,aggressive,a7ressive
+lu_0417,agreeable,agre1ble
+lu_0418,areas,>1s
+lu_0419,arpeggio,>pe7io
+lu_0420,baccalaureate,ba3alaur1te
+lu_0421,beat,b1t
+lu_0422,begging,be7+
+lu_0423,borealis,bor1lis
+lu_0424,bubble,bu2le
+lu_0425,bureau,bur1u
+lu_0426,Caribbean,",c>i21n"
+lu_0427,caveat,cav1t
+lu_0428,create,cr1te
+lu_0429,creation,cr1;n
+lu_0430,disease,41se
+lu_0431,doggone,"do7""o"
+lu_0432,eggnog,e7nog
+lu_0433,epicurean,epicur1n
+lu_0434,flaccid,fla3id
+lu_0435,genealogy,g51logy
+lu_0436,Hanseatic,",hans1tic"
+lu_0437,head,h1d
+lu_0438,Judaean,",juda1n"
+lu_0439,likeable,lik1ble
+lu_0440,Liliaceae,",liliac1e"
+lu_0441,lineage,l91ge
+lu_0442,mecca,me3a
+lu_0443,Minneapolis,",m9n1polis"
+lu_0444,Montreal,",montr1l"
+lu_0445,motheaten,mo?1t5
+lu_0446,muffin,mu69
+lu_0447,Neapolitan,",n1politan"
+lu_0448,northeast,nor?1/
+lu_0449,occupy,o3upy
+lu_0450,oceanic,oc1nic
+lu_0451,oleaginous,ol1g9|s
+lu_0452,orgeat,org1t
+lu_0453,paean,pa1n
+lu_0454,pancreas,pancr1s
+lu_0455,peaceable,p1c1ble
+lu_0456,peanut,p1nut
+lu_0457,rabbi,ra2i
+lu_0458,really,r1lly
+lu_0459,réchauffé,r~/e*au6~/e
+lu_0460,Seamus,",s1mus"
+lu_0461,Sean,",s1n"
+lu_0462,seashore,s1%ore
+lu_0463,Seattle,",s1ttle"
+lu_0464,Sheffield,",%e6ield"
+lu_0465,sheriffs,%}i6s
+lu_0466,speakeasy,sp1k1sy
+lu_0467,tableau,tabl1u
+lu_0468,tobacco,toba3o
+lu_0469,toreador,tor1dor
+lu_0470,Yeats,",y1ts"
+lu_0471,afford,af=d
+lu_0472,appear,appe>
+lu_0473,arccosine,>ccos9e
+lu_0474,bacchanal,bac*anal
+lu_0475,bear,be>
+lu_0476,beatitude,2atitude
+lu_0477,Beatrice,",2atrice"
+lu_0478,cinéaste,c9~/ea/e
+lu_0479,coffee,c(fee
+lu_0480,dumbbell,dumbbell
+lu_0481,'ead,'ead
+lu_0482,east,ea/
+lu_0483,ebb-tide,ebb-tide
+lu_0484,hideaway,hideaway
+lu_0485,idea(s),"idea""<s"">"
+lu_0486,Leander,",le&}"
+lu_0487,limeade,limeade
+lu_0488,mah-jongg,mah-j;gg
+lu_0489,man-eater,man-eat}
+lu_0490,pineapple,p9eapple
+lu_0491,robb'd,robb'd
+lu_0492,saccharine,sac*>9e
+lu_0493,sea-green,sea-gre5
+lu_0494,sheriff's,%}iff's
+lu_0495,snuff,snuff
+lu_0496,sou'east,s|'ea/
+lu_0497,subbasement,subbase;t
+lu_0498,theatre,!atre
+lu_0499,CliffSide,",cliff,side"
+lu_0500,EggHead,",egg,h1d"
+lu_0501,MacEACHEN,",mac,,ea*5"
+lu_0502,SeaWorld,",sea,_w"
+lu_0503,TEAspoon,",,tea,'spoon"
+lu_0504,deactivate,deactivate
+lu_0505,geanticline,geanticl9e
+lu_0506,preamble,preamble
+lu_0507,reaction,reac;n
+lu_0508,antinode,ant9ode
+lu_0509,arena,>5a
+lu_0510,been,be5
+lu_0511,begin,2g9
+lu_0512,be'ind,be'9d
+lu_0513,benefit,b5efit
+lu_0514,binary,b9>y
+lu_0515,binomial,b9omial
+lu_0516,Blakeney,",blak5ey"
+lu_0517,Caen,",ca5"
+lu_0518,casino,cas9o
+lu_0519,china,*9a
+lu_0520,Chopin,",*op9"
+lu_0521,citizeness,citiz5ess
+lu_0522,deafen,d1f5
+lu_0523,denote,d5ote
+lu_0524,deny,d5y
+lu_0525,disingenuous,49g5u|s
+lu_0526,double-entendre,d|ble-5t5dre
+lu_0527,e'en,e'5
+lu_0528,Einstein,",e9/e9"
+lu_0529,enceinte,5ce9te
+lu_0530,engine,5g9e
+lu_0531,Enid,",5id"
+lu_0532,enormous,5orm|s
+lu_0533,equinox,equ9ox
+lu_0534,faint,fa9t
+lu_0535,feminine,fem99e
+lu_0536,goin',go9'
+lu_0537,haven't,hav5't
+lu_0538,henna,h5na
+lu_0539,Inc.,",9c4"
+lu_0540,incline,9cl9e
+lu_0541,ingot,9got
+lu_0542,in's,9's
+lu_0543,into,9to
+lu_0544,maenad,ma5ad
+lu_0545,Montenegro,",mont5egro"
+lu_0546,phoenix,pho5ix
+lu_0547,p(en),"p""<5"">"
+lu_0548,p(in),"p""<9"">"
+lu_0549,prenatal,pr5atal
+lu_0550,queen,que5
+lu_0551,renew,r5ew
+lu_0552,self-induced,self-9duc$
+lu_0553,shut-ins,%ut-9s
+lu_0554,within,)9
+lu_0555,to-ing,to-9g
+lu_0556,Athens,",a!ns"
+lu_0557,benign,2nign
+lu_0558,business,busi;s
+lu_0559,cringed,cr+$
+lu_0560,fenced,f;ed
+lu_0561,filename,"file""n"
+lu_0562,forenoon,=enoon
+lu_0563,Francene,",fr.ene"
+lu_0564,lament,la;t
+lu_0565,ménage,m~/enage
+lu_0566,señor,se~}nor
+lu_0567,toenail,toenail
+lu_0568,Aix-en-Provence,",aix-en-,prov;e"
+lu_0569,Chou En-lai,",*| ,en-lai"
+lu_0570,en route,en r|te
+lu_0571,"""Sudden!""","8,sudd560"
+lu_0572,"""Comin'?""","8,com9'80"
+lu_0573,linen…,l95444
+lu_0574,bein',2in'
+lu_0575,foreword,=e~w
+lu_0576,misworded,mis~w$
+lu_0577,sword,s~w
+lu_0578,word-for-word,~w-=-~w
+lu_0579,Wordsworth,",~wswor?"
+lu_0580,cannot,_c
+lu_0581,Germany,",g}_m"
+lu_0582,many-sided,_m-sid$
+lu_0583,dispirited,di_s$
+lu_0584,spirits,_ss
+lu_0585,spiritual,_sual
+lu_0586,theirs,_!s
+lu_0587,SeaWorld,",sea,_w"
+lu_0588,underworld,"""u_w"
+lu_0589,world-wide,_w-wide
+lu_0590,worldly,_wly
+lu_0591,day-by-day,"""d-by-""d"
+lu_0592,Dayton,",""dton"
+lu_0593,Friday,",fri""d"
+lu_0594,G'day,",g'""d"
+lu_0595,father-in-law,"""f-9-law"
+lu_0596,fatherless,"""f.s"
+lu_0597,grandfather,"gr&""f"
+lu_0598,acknowledge,"ac""kl$ge"
+lu_0599,knowing,"""k+"
+lu_0600,Knowles,",""kles"
+lu_0601,well-known,"well-""kn"
+lu_0602,Gaylord,",gay""l"
+lu_0603,lordosis,"""losis"
+lu_0604,lordship,"""l%ip"
+lu_0605,m'lord,"m'""l"
+lu_0606,godmother,"god""m"
+lu_0607,mother-of-pearl,"""m-(-pe>l"
+lu_0608,motherly,"""mly"
+lu_0609,smother,"s""m"
+lu_0610,apartheid,"a""pheid"
+lu_0611,Bonaparte,",bona""pe"
+lu_0612,impartial,"im""pial"
+lu_0613,part-time,"""p-""t"
+lu_0614,partake,"""pake"
+lu_0615,parterre,"""p}re"
+lu_0616,party,"""py"
+lu_0617,passe-partout,"passe-""p|t"
+lu_0618,Spartan,",s""pan"
+lu_0619,questionnaire,"""qnaire"
+lu_0620,unquestionable,"un""qable"
+lu_0621,affrighted,"a6""r$"
+lu_0622,aright,"a""r"
+lu_0623,brighten,"b""r5"
+lu_0624,millwright,"millw""r"
+lu_0625,right-handed,"""r-h&$"
+lu_0626,righteous,"""re|s"
+lu_0627,youngest,"""ye/"
+lu_0628,Youngstown,",""yst{n"
+lu_0629,characteristic,"""*i/ic"
+lu_0630,characterise,"""*ise"
+lu_0631,throughout,"""?|t"
+lu_0632,elsewhere,"else"":"
+lu_0633,somewhere,"""s"":"
+lu_0634,whereby,""":by"
+lu_0635,wherein,""":9"
+lu_0636,drought,"dr""|"
+lu_0637,fought,"f""|"
+lu_0638,Houghton,",h""|on"
+lu_0639,oughtn't,"""|n't"
+lu_0640,thoughtful,"?""|;l"
+lu_0641,coworker,"co""w}"
+lu_0642,fireworks,"fire""ws"
+lu_0643,stonework,"/""o""w"
+lu_0644,unworkable,"un""wable"
+lu_0645,workday,"""w""d"
+lu_0646,working,"""w+"
+lu_0647,Dayan,",dayan"
+lu_0648,Sanday,",s&ay"
+lu_0649,today,td
+lu_0650,Lucknow,",luckn{"
+lu_0651,chlordane,*lordane
+lu_0652,chemotherapy,*emo!rapy
+lu_0653,Parthenon,",p>!non"
+lu_0654,where'er,:}e'}
+lu_0655,wherever,":}""e"
+lu_0656,Dworkin,",dwork9"
+lu_0657,upon these shores,~u ~! %ores
+lu_0658,Whose are those?,",~: >e ~?8"
+lu_0659,hereupon,"""h~u"
+lu_0660,whereupon,""":~u"
+lu_0661,whosesoever,"~:so""e"
+lu_0662,thereby,"""!by"
+lu_0663,therefore,"""!=e"
+lu_0664,therein,"""!9"
+lu_0665,thereupon,"""!~u"
+lu_0666,coupon,c|pon
+lu_0667,Dupont,",dupont"
+lu_0668,hypotheses,hypo!ses
+lu_0669,Theseus,",!seus"
+lu_0670,spathose,spa?ose
+lu_0671,Thoseby,",?oseby"
+lu_0672,bothered,bo!r$
+lu_0673,ethereal,e!r1l
+lu_0674,isothere,iso!re
+lu_0675,smithereens,smi!re5s
+lu_0676,Theresa,",!resa"
+lu_0677,withered,)}$
+lu_0678,Galahad,",gala_h"
+lu_0679,haddock,_hdock
+lu_0680,Haddon,",_hdon"
+lu_0681,hadji,_hji
+lu_0682,Hadley,",_hley"
+lu_0683,hadn't,_hn't
+lu_0684,Chad,",*ad"
+lu_0685,Hades,",hades"
+lu_0686,Hadrian,",hadrian"
+lu_0687,menhaden,m5had5
+lu_0688,shadow,%ad{
+lu_0689,Thaddeus,",?addeus"
+lu_0690,asseverate,"ass""eate"
+lu_0691,beverage,"b""eage"
+lu_0692,Everest,",""ee/"
+lu_0693,everything,"""ey?+"
+lu_0694,fever,"f""e"
+lu_0695,irreverence,"irr""e;e"
+lu_0696,nevertheless,"n""e!.s"
+lu_0697,reverend,"r""e5d"
+lu_0698,several,"s""eal"
+lu_0699,Severn,",s""en"
+lu_0700,Unilever,",unil""e"
+lu_0701,believer,2liev}
+lu_0702,eversion,ev}.n
+lu_0703,Guinevere,",gu9ev}e"
+lu_0704,McKeever,",mc,keev}"
+lu_0705,Monteverdi,",montev}di"
+lu_0706,persevere,p}sev}e
+lu_0707,reverberate,rev}b}ate
+lu_0708,revere,rev}e
+lu_0709,reverify,rev}ify
+lu_0710,severity,sev};y
+lu_0711,thievery,?iev}y
+lu_0712,adhere,"ad""h"
+lu_0713,atmosphere,"atmosp""h"
+lu_0714,cohere,"co""h"
+lu_0715,hereabout,"""hab"
+lu_0716,herewith,"""h)"
+lu_0717,sphere,"sp""h"
+lu_0718,filename,"file""n"
+lu_0719,nameable,"""nable"
+lu_0720,renamed,"re""nd"
+lu_0721,surname,"sur""n"
+lu_0722,adhered,adh}$
+lu_0723,bothered,bo!r$
+lu_0724,coherence,coh};e
+lu_0725,elsewhere,"else"":"
+lu_0726,ethereal,e!r1l
+lu_0727,heredity,h}$;y
+lu_0728,Hereford (City),",h}e=d ""<,c;y"">"
+lu_0729,enamel,5amel
+lu_0730,ornament,orna;t
+lu_0731,unamended,unam5d$
+lu_0732,Vietnamese,",vietnamese"
+lu_0733,acetone,"acet""o"
+lu_0734,atonement,"at""o;t"
+lu_0735,baloney,"bal""oy"
+lu_0736,bygone,"byg""o"
+lu_0737,cone,"c""o"
+lu_0738,demonetise,"dem""otise"
+lu_0739,dishonesty,"4h""o/y"
+lu_0740,done,"d""o"
+lu_0741,everyone,"""ey""o"
+lu_0742,honey,"h""oy"
+lu_0743,Jones,",j""os"
+lu_0744,lonesome,"l""o""s"
+lu_0745,Mulroney,",mulr""oy"
+lu_0746,one-sided,"""o-sid$"
+lu_0747,oneness,"""o;s"
+lu_0748,phone,"ph""o"
+lu_0749,scone,"sc""o"
+lu_0750,stonework,"/""o""w"
+lu_0751,stoney,"/""oy"
+lu_0752,anemone,anemone
+lu_0753,baroness,b>o;s
+lu_0754,baronet,b>onet
+lu_0755,Boone,",boone"
+lu_0756,Cantonese,",cantonese"
+lu_0757,colonel,colonel
+lu_0758,Conestoga,",3e/oga"
+lu_0759,crooner,croon}
+lu_0760,cushioned,cu%ion$
+lu_0761,Donegal,",donegal"
+lu_0762,erroneous,}rone|s
+lu_0763,Hermione,",h}mione"
+lu_0764,Indonesia,",9donesia"
+lu_0765,krone,krone
+lu_0766,Monet,",monet"
+lu_0767,onerous,on}|s
+lu_0768,phonetic,phonetic
+lu_0769,pioneer,pione}
+lu_0770,poisoned,poison$
+lu_0771,Rhône,",rh~%one"
+lu_0772,Rooney,",rooney"
+lu_0773,sooner,soon}
+lu_0774,stoned,/on$
+lu_0775,blithesome,"bli!""s"
+lu_0776,chromosome,"*romo""s"
+lu_0777,fearsome,"fe>""s"
+lu_0778,handsome,"h&""s"
+lu_0779,handsomer,"h&""sr"
+lu_0780,lonesomest,"l""o""s/"
+lu_0781,somebody,"""sbody"
+lu_0782,somesuch,"""ss*"
+lu_0783,somewhere,"""s"":"
+lu_0784,twosome,"two""s"
+lu_0785,blossomed (blossom),"blossom$ ""<blossom"">"
+lu_0786,gasometer,gasomet}
+lu_0787,isometric,isometric
+lu_0788,ransomed (ransom),"ransom$ ""<ransom"">"
+lu_0789,somersault,som}sault
+lu_0790,Somerset,",som}set"
+lu_0791,daytime,"""d""t"
+lu_0792,maritime,"m>i""t"
+lu_0793,mistimed,"mis""td"
+lu_0794,pastime,"pas""t"
+lu_0795,sometimes,"""s""ts"
+lu_0796,springtime,"spr+""t"
+lu_0797,timeously,"""t|sly"
+lu_0798,Timex,",""tx"
+lu_0799,untimely,"un""tly"
+lu_0800,altimeter,altimet}
+lu_0801,centime,c5time
+lu_0802,centimeter,c5timet}
+lu_0803,Mortimer,",mortim}"
+lu_0804,multimedia,multim$ia
+lu_0805,sentiment,s5ti;t
+lu_0806,blunder,"bl""u"
+lu_0807,misunderstand,"mis""u/&"
+lu_0808,thundered,"?""u$"
+lu_0809,undergo,"""ugo"
+lu_0810,underpaid,"""upd"
+lu_0811,Wunderhorn,",w""uhorn"
+lu_0812,flounder,fl.d}
+lu_0813,laundering,laund}+
+lu_0814,Saunders,",saund}s"
+lu_0815,underived,und}iv$
+lu_0816,underogatory,und}ogatory
+lu_0817,amount,am.t
+lu_0818,baroness,b>o;s
+lu_0819,bastion,bas;n
+lu_0820,blessing,b.s+
+lu_0821,business,busi;s
+lu_0822,cancel,c.el
+lu_0823,carefully,c>e;lly
+lu_0824,cement,ce;t
+lu_0825,cheerful,*e};l
+lu_0826,chockfull,*ock;ll
+lu_0827,circuity,circu;y
+lu_0828,commencement,comm;e;t
+lu_0829,comment,com;t
+lu_0830,confusion,3fu.n
+lu_0831,country,c.try
+lu_0832,county,c.ty
+lu_0833,creation,cr1;n
+lu_0834,dancer,d.er
+lu_0835,deity,de;y
+lu_0836,Du Plessis,",du ,p.sis"
+lu_0837,experienced,exp}i;ed
+lu_0838,expressionless,expres.n.s
+lu_0839,extramental,extra;tal
+lu_0840,fences,f;es
+lu_0841,finesse,fi;se
+lu_0842,found,f.d
+lu_0843,fractional,frac;nal
+lu_0844,Frances,",fr.es"
+lu_0845,governess,gov};s
+lu_0846,Guinness,",gu9;s"
+lu_0847,incongruous,9c;gru|s
+lu_0848,influenceable,9flu;eable
+lu_0849,lioness,lio;s
+lu_0850,longevity,l;gev;y
+lu_0851,memento,me;to
+lu_0852,mongoose,m;goose
+lu_0853,mountain,m.ta9
+lu_0854,noblesse,nob.se
+lu_0855,persuasion,p}sua.n
+lu_0856,pity,p;y
+lu_0857,pongee,p;gee
+lu_0858,prong,pr;g
+lu_0859,rationally,ra;nally
+lu_0860,rotation,rota;n
+lu_0861,Rountree,",r.tree"
+lu_0862,séance,s~/e.e
+lu_0863,silenced,sil;ed
+lu_0864,sinfulness,s9;l;s
+lu_0865,Spencer,",sp;er"
+lu_0866,sponge,sp;ge
+lu_0867,sound,s.d
+lu_0868,sublessee,sub.see
+lu_0869,Tennessee,",t5;see"
+lu_0870,thence,?;e
+lu_0871,tongue,t;gue
+lu_0872,unfulfilled,un;lfill$
+lu_0873,unless,un.s
+lu_0874,unlessoned,un.son$
+lu_0875,Wenceslaus,",w;eslaus"
+lu_0876,wounded,w.d$
+lu_0877,ancestor,ance/or
+lu_0878,channel-less,*annel-less
+lu_0879,congruous,3gru|s
+lu_0880,electroencephalogram,electro5cephalogram
+lu_0881,encephalitis,5cephalitis
+lu_0882,fiancé,fianc~/e
+lu_0883,inessential,9ess5tial
+lu_0884,lessee,lessee
+lu_0885,moongod,moongod
+lu_0886,nongaseous,nongase|s
+lu_0887,one-ness,"""o-ness"
+lu_0888,'ound,'|nd
+lu_0889,pityard,pity>d
+lu_0890,AttenTION!,",att5,,tion6"
+lu_0891,AWful,",,aw,'ful"
+lu_0892,ExperiMental,",exp}i,m5tal"
+lu_0893,MyAncestor,",my,ance/or"
+lu_0894,around,>.d
+lu_0895,ARound,",,>,'|nd"
+lu_0896,AROUND,",,>.d"
+lu_0897,WE GO AROUND,",,,we g >.d,'"
+lu_0898,WE GO ARound,",,we ,,g ,,>,'|nd"
+lu_0899,WE GO AROund,",,we ,,g ,,>o,'und"
+lu_0900,dAnce,"d,ance"
+lu_0901,PASSion,",,pass,'ion"
+lu_0902,PayLESS,",pay,,less"
+lu_0903,PaylESS,",payl,,ess"
+lu_0904,MOunt,",,mo,'unt"
+lu_0905,OffEnce,",(f,5ce"
+lu_0906,AlOnG,",al,on,g"
+lu_0907,Nesscafe,",nesscafe"
+lu_0908,RefIty,",ref,ity"
+lu_0909,getFullName,"get,full,""n"
+lu_0910,chieftainess,*iefta9ess
+lu_0911,citizeness,citiz5ess
+lu_0912,heatheness,h1!ness
+lu_0913,You should receive your letter tomorrow afternoon.,",y %d rcv yr lr tm afn4"
+lu_0914,an about-face from the quick-witted go-between,an ab-face f ! qk-witt$ g-2t
+lu_0915,"""Good-bye, Miss Little-Smythe!""","8,gd-bye1 ,miss ,ll-,smy!60"
+lu_0916,(braille–first writing system for blind people),"""<brl,-f/ writ+ sy/em = bl p"">"
+lu_0917,to-night,to-ni<t
+lu_0918,above/below,above_/bel{
+lu_0919,PRINT/BRAILLE,",,pr9t_/,,braille"
+lu_0920,friend@rogers.com,fri5d`arog}s4com
+lu_0921,www.living.beyond.myself.org,www4liv+4beyond4myself4org
+lu_0922,aboveground,abvgr.d
+lu_0923,belowdecks,2ldecks
+lu_0924,Friendly Islands,",frly ,isl&s"
+lu_0925,godchildren,god*n
+lu_0926,goodafternoon,gdafn
+lu_0927,hereabouts,"""habs"
+lu_0928,lettermen,lrm5
+lu_0929,Quicker Delivery,",qk} ,deliv}y"
+lu_0930,repaid,repd
+lu_0931,suchlike,s*like
+lu_0932,Our boyfriends mustn't miss tomorrow's afterdinner speaker!,",|r boyfrs m/n't miss tm's afd9n} sp1k}6"
+lu_0933,Mr Letterman could've quickly rebrailled the Aftercare Newsletter.,",mr ,lrman cd've qkly rebrld ! ,afc>e ,newslr4"
+lu_0934,I am brailling the newsletters' headlines.,",i am braill+ ! newslrs' h1dl9es4"
+lu_0935,friend(s),"fri5d""<s"">"
+lu_0936,print/braille,pr9t_/braille
+lu_0937,www.afterschool.gov,www4aft}s*ool4gov
+lu_0938,aftereffect,aft}e6ect
+lu_0939,afterimage,aft}image
+lu_0940,blinded,bl9d$
+lu_0941,blinding,bl9d+
+lu_0942,befriended,2fri5d$
+lu_0943,friendy,fri5dy
+lu_0944,abouts,ab|ts
+lu_0945,acrosses,acrosses
+lu_0946,againe,aga9e
+lu_0947,almosts,almo/s
+lu_0948,hims,hims
+lu_0949,hereinbefore,"""h9be=e"
+lu_0950,hereinbelow,"""h9bel{"
+lu_0951,inbetween,9betwe5
+lu_0952,misconceived,misconceiv$
+lu_0953,"""couldx""",8c|ldx0
+lu_0954,Himalayas,",himalayas"
+lu_0955,Suchet,",su*et"
+lu_0956,Yourcenar,",y|rc5>"
+lu_0957,Braillette board,",brltte bo>d"
+lu_0958,"Marcillat-en-Combraille, France",",m>cillat-en-,combrl1 ,fr.e"
+lu_0959,Greatford Hall,",grt=d ,hall"
+lu_0960,greatgreatgreatgrandchildren,grtgrtgrtgr&*n
+lu_0961,Greatorex,",grtorex"
+lu_0962,Blindcraft,",blcraft"
+lu_0963,Blindheim,",blheim"
+lu_0964,Firstbank,",f/bank"
+lu_0965,Firstchoice,",f/*oice"
+lu_0966,"""goodz""",8gdz0
+lu_0967,Mr Feelgreat from Goodge Street,",mr ,feelgrt f ,gdge ,/reet"
+lu_0968,Ms Letterkenny's Littleport home.,",ms ,lrk5ny's ,llport home4"
+lu_0969,"Quicksburg, Virginia",",qksburg1 ,virg9ia"
+lu_0970,Blindoc,",bl9doc"
+lu_0971,www.braillex.com,www4braillex4com
+lu_0972,Firstamerica,",fir/am}ica"
+lu_0973,Goodacre,",goodacre"
+lu_0974,Littlearm,",little>m"
+lu_0975,Letterewe Estate,",lett}ewe ,e/ate"
+lu_0976,Mr Linkletter of Portlittle,",mr ,l9klett} ( ,portlittle"
+lu_0977,Bisquick Pancake Mix,",bisquick ,pancake ,mix"
+lu_0978,Ted Makegood of Goodena,",t$ ,makegood ( ,good5a"
+lu_0979,Herf gun,",herf gun"
+lu_0980,"""mst"" files",8mst0 files
+lu_0981,www.sch.edu.au,www4s*4$u4au
+lu_0982,ab initio,;ab 9itio
+lu_0983,et al–,"et ;al,-"
+lu_0984,Al-Azar,";,al-,az>"
+lu_0985,Alt.: 3000 ft.,";,alt43 #cjjj ft4"
+lu_0986,"""Hm, would Al like this CD?""","8;,hm1 wd ;,al l ? ;,,cd80"
+lu_0987,Grtsamada,";,grtsamada"
+lu_0988,BLCUP,";,,blcup"
+lu_0989,"spelled ""ei"" or ""ie""?",spell$ 8;ei0 or 8ie08
+lu_0990,gd lnch. TM sd yu shd meet me b4 yr mtg 2 read lr. wl b qk. l8r.,";gd ln*4 ;,,tm ;sd yu shd meet me b#d ;yr mtg #b r1d ;lr4 wl ;b ;qk4 l#hr4"
+lu_0991,advanced,adv.ed
+lu_0992,aright,"a""r"
+lu_0993,bastion,bas;n
+lu_0994,coherence,coh};e
+lu_0995,Congo,",3go"
+lu_0996,congratulate,3gratulate
+lu_0997,congruity,3gru;y
+lu_0998,dancer,d.er
+lu_0999,dispirited,di_s$
+lu_1000,distinct,4t9ct
+lu_1001,disturbed,4turb$
+lu_1002,happiness,happi;s
+lu_1003,meander,me&}
+lu_1004,named,"""nd"
+lu_1005,oneness,"""o;s"
+lu_1006,thence,?;e
+lu_1007,timer,"""tr"
+lu_1008,vengeance,v5ge.e
+lu_1009,wither,)}
+lu_1010,afford,af=d
+lu_1011,bathed,ba!d
+lu_1012,calisthenics,calis!nics
+lu_1013,coffee,c(fee
+lu_1014,effort,ef=t
+lu_1015,gathered,ga!r$
+lu_1016,Leander,",le&}"
+lu_1017,offer,(f}
+lu_1018,office,(fice
+lu_1019,other,o!r
+lu_1020,Parthenon,",p>!non"
+lu_1021,proffer,pr(f}
+lu_1022,slithered,sli!r$
+lu_1023,theatre,!atre
+lu_1024,then,!n
+lu_1025,weathered,w1!r$
+lu_1026,thence,?;e
+lu_1027,beatitude,2atitude
+lu_1028,Beatrix,",2atrix"
+lu_1029,bedraggled,2dra7l$
+lu_1030,benevolence,2nevol;e
+lu_1031,benighted,2ni<t$
+lu_1032,benign,2nign
+lu_1033,berated,2rat$
+lu_1034,congee,3gee
+lu_1035,congenial,3g5ial
+lu_1036,dishonesty,"4h""o/y"
+lu_1037,distance,4t.e
+lu_1038,beach,b1*
+lu_1039,beautiful,b1uti;l
+lu_1040,benefit,b5efit
+lu_1041,benzene,b5z5e
+lu_1042,berth,b}?
+lu_1043,dish,di%
+lu_1044,dishevelled,di%evell$
+lu_1045,bacchanal,bac*anal
+lu_1046,bear,be>
+lu_1047,fear,fe>
+lu_1048,heart,he>t
+lu_1049,nearly,ne>ly
+lu_1050,nuclear,nucle>
+lu_1051,saccharine,sac*>9e
+lu_1052,sting,/+
+lu_1053,egghead,e7h1d
+lu_1054,Clemenceau,",clem;eau"
+lu_1055,commenced,comm;ed
+lu_1056,experienced,exp}i;ed
+lu_1057,influenceable,9flu;eable
+lu_1058,silenceable,sil;eable
+lu_1059,silencer,sil;er
+lu_1060,Spencer,",sp;er"
+lu_1061,adhered,adh}$
+lu_1062,adherent,adh}5t
+lu_1063,adherer,adh}}
+lu_1064,cohered,coh}$
+lu_1065,component,compon5t
+lu_1066,effulgent,e6ulg5t
+lu_1067,heredity,h}$;y
+lu_1068,onerous,on}|s
+lu_1069,opponent,oppon5t
+lu_1070,Parthian,",p>?ian"
+lu_1071,poisoned,poison$
+lu_1072,prisoner,prison}
+lu_1073,shadow,%ad{
+lu_1074,sooner,soon}
+lu_1075,stoned,/on$
+lu_1076,telephoned,telephon$
+lu_1077,Thaddeus,",?addeus"
+lu_1078,toner,ton}
+lu_1079,advanced,adv.ed
+lu_1080,apartheid,"a""pheid"
+lu_1081,asthma,as?ma
+lu_1082,dishevelled,di%evell$
+lu_1083,gingham,g+ham
+lu_1084,hypotheses,hypo!ses
+lu_1085,isthmus,is?mus
+lu_1086,posthumous,po/hum|s
+lu_1087,stronghold,/r;ghold
+lu_1088,towhee,t{hee
+lu_1089,where'er,:}e'}
+lu_1090,whereas,""":as"
+lu_1091,wherever,":}""e"
+lu_1092,chemotherapy,*emo!rapy
+lu_1093,chlordane,*lordane
+lu_1094,whaddaya,:addaya
+lu_1095,enough–bein',"5,-2in'"
+lu_1096,in.....,in44444
+lu_1097,IN MY HOUSE,",,,9 my h|se,'"
+lu_1098,Airedale,",airedale"
+lu_1099,Bighorn,",bighorn"
+lu_1100,blowhard,bl{h>d
+lu_1101,bottleneck,bottleneck
+lu_1102,carthorse,c>thorse
+lu_1103,cowherd,c{h}d
+lu_1104,dumbbell,dumbbell
+lu_1105,egghead,e7h1d
+lu_1106,fathead,fath1d
+lu_1107,flearidden,fl1ridd5
+lu_1108,grasshopper,grasshopp}
+lu_1109,hideaway,hideaway
+lu_1110,indiarubber,9diaru2}
+lu_1111,insofar,9sof>
+lu_1112,Jamestown,",jamest{n"
+lu_1113,kettledrum,kettledrum
+lu_1114,longhand,l;gh&
+lu_1115,northeast,nor?1/
+lu_1116,painstaking,pa9stak+
+lu_1117,photoflash,photofla%
+lu_1118,pineapple,p9eapple
+lu_1119,rawhide,rawhide
+lu_1120,Southend,",s|?5d"
+lu_1121,stateroom,/ateroom
+lu_1122,storeroom,/oreroom
+lu_1123,stronghold,/r;ghold
+lu_1124,sweetheart,sweethe>t
+lu_1125,tearoom,t1room
+lu_1126,toenail,toenail
+lu_1127,wiseacre,wiseacre
+lu_1128,Cunnyngham,",cunnyngham"
+lu_1129,knighthood,kni<thood
+lu_1130,mishandle,mish&le
+lu_1131,mishap,mishap
+lu_1132,mishear,mishe>
+lu_1133,Newhaven,",newhav5"
+lu_1134,shanghaied,%anghai$
+lu_1135,Sontheim,",sontheim"
+lu_1136,stronghold,/r;ghold
+lu_1137,Brigham,",bri<am"
+lu_1138,Chatham,",*a?am"
+lu_1139,Higham,",hi<am"
+lu_1140,bedazzle,2dazzle
+lu_1141,bedevil,2devil
+lu_1142,benighted,2ni<t$
+lu_1143,benumb,2numb
+lu_1144,berate,2rate
+lu_1145,bereave,2r1ve
+lu_1146,congeal,3g1l
+lu_1147,congruent,3gru5t
+lu_1148,disharmony,4h>mony
+lu_1149,dishonest,"4h""o/"
+lu_1150,preamplifier,preamplifi}
+lu_1151,readjust,readju/
+lu_1152,reappoint,reappo9t
+lu_1153,reassure,reassure
+lu_1154,abbreviate,a2reviate
+lu_1155,accent,a35t
+lu_1156,affect,a6ect
+lu_1157,aggressive,a7ressive
+lu_1158,aqueduct,aqu$uct
+lu_1159,arise,>ise
+lu_1160,Benedict,",b5$ict"
+lu_1161,deduce,d$uce
+lu_1162,denominate,d5om9ate
+lu_1163,denote,d5ote
+lu_1164,denouement,d5|e;t
+lu_1165,denounce,d5|nce
+lu_1166,derail,d}ail
+lu_1167,deregister,d}egi/}
+lu_1168,derivable,d}ivable
+lu_1169,derogatory,d}ogatory
+lu_1170,edacious,$aci|s
+lu_1171,edict,$ict
+lu_1172,edition,$i;n
+lu_1173,educe,$uce
+lu_1174,effaceable,e6ac1ble
+lu_1175,effect,e6ect
+lu_1176,enormous,5orm|s
+lu_1177,enounce,5|nce
+lu_1178,enumerate,5um}ate
+lu_1179,erase,}ase
+lu_1180,erosion,}o.n
+lu_1181,froward,fr{>d
+lu_1182,irredentist,irr$5ti/
+lu_1183,malediction,mal$ic;n
+lu_1184,mistake,mi/ake
+lu_1185,mistrust,mi/ru/
+lu_1186,multinomial,mult9omial
+lu_1187,pandemonium,p&emonium
+lu_1188,perinatal,p}9atal
+lu_1189,predate,pr$ate
+lu_1190,predecease,pr$ec1se
+lu_1191,predecessor,pr$ecessor
+lu_1192,predestine,pr$e/9e
+lu_1193,predicament,pr$ica;t
+lu_1194,prediction,pr$ic;n
+lu_1195,predominate,pr$om9ate
+lu_1196,prerequisite,pr}equisite
+lu_1197,prerogative,pr}ogative
+lu_1198,profanity,pr(an;y
+lu_1199,professor,pr(essor
+lu_1200,profile,pr(ile
+lu_1201,profoundly,pr(.dly
+lu_1202,profusion,pr(u.n
+lu_1203,redact,r$act
+lu_1204,rededicate,r$$icate
+lu_1205,redeemable,r$eemable
+lu_1206,redouble,r$|ble
+lu_1207,renege,r5ege
+lu_1208,renegotiate,r5egotiate
+lu_1209,renewable,r5ewable
+lu_1210,renumber,r5umb}
+lu_1211,reread,r}1d
+lu_1212,sedate,s$ate
+lu_1213,Vandyke,",v&yke"
+lu_1214,aerofoil,a}ofoil
+lu_1215,antitype,antitype
+lu_1216,biofeedback,biofe$back
+lu_1217,centimeter,c5timet}
+lu_1218,cofounder,cof.d}
+lu_1219,disulphide,disulphide
+lu_1220,filofax,filofax
+lu_1221,gasometer,gasomet}
+lu_1222,inessential,9ess5tial
+lu_1223,infrared,9frar$
+lu_1224,kilowatt,kilowatt
+lu_1225,microfilm,microfilm
+lu_1226,prounion,prounion
+lu_1227,retroflex,retroflex
+lu_1228,riboflavin,riboflav9
+lu_1229,styrofoam,/yrofoam
+lu_1230,subbasement,subbase;t
+lu_1231,unamended,unam5d$
+lu_1232,underived,und}iv$
+lu_1233,anteater,ant1t}
+lu_1234,contradistinction,3tradi/9c;n
+lu_1235,disease,41se
+lu_1236,extramental,extra;tal
+lu_1237,heartsease,he>ts1se
+lu_1238,incongruity,9c;gru;y
+lu_1239,incongruous,9c;gru|s
+lu_1240,indistinct,9di/9ct
+lu_1241,indistinguishable,9di/+ui%able
+lu_1242,motheaten,mo?1t5
+lu_1243,northeast,nor?1/
+lu_1244,redistribution,r$i/ribu;n
+lu_1245,speakeasy,sp1k1sy
+lu_1246,spreadeagle,spr1d1gle
+lu_1247,uncongenial,unc;g5ial
+lu_1248,undisturbed,undi/urb$
+lu_1249,unfulfilled,un;lfill$
+lu_1250,unlessoned,un.son$
+lu_1251,disingenuous,49g5u|s
+lu_1252,electroencephalogram,electro5cephalogram
+lu_1253,acreage,acr1ge
+lu_1254,agreeable,agre1ble
+lu_1255,arboreal,>bor1l
+lu_1256,baroness,b>o;s
+lu_1257,boredom,bor$om
+lu_1258,Brigham,",bri<am"
+lu_1259,changeability,*ang1bil;y
+lu_1260,chargeable,*>g1ble
+lu_1261,Chatham,",*a?am"
+lu_1262,delineate,del91te
+lu_1263,dukedom,duk$om
+lu_1264,effaceable,e6ac1ble
+lu_1265,European,",europ1n"
+lu_1266,finery,f9}y
+lu_1267,foreseeably,=ese1bly
+lu_1268,freedom,fre$om
+lu_1269,genealogy,g51logy
+lu_1270,governess,gov};s
+lu_1271,Higham,",hi<am"
+lu_1272,imagery,imag}y
+lu_1273,laureate,laur1te
+lu_1274,likeable,lik1ble
+lu_1275,lineage,l91ge
+lu_1276,lineal,l91l
+lu_1277,lioness,lio;s
+lu_1278,midwifery,midwif}y
+lu_1279,mileage,mil1ge
+lu_1280,noticeable,notic1ble
+lu_1281,oleaginous,ol1g9|s
+lu_1282,orangery,orang}y
+lu_1283,peaceable,p1c1ble
+lu_1284,permeable,p}m1ble
+lu_1285,permeate,p}m1te
+lu_1286,popedom,pop$om
+lu_1287,rateable,rat1ble
+lu_1288,savagery,savag}y
+lu_1289,venereal,v5}1l
+lu_1290,biscuity,biscuity
+lu_1291,chieftainess,*iefta9ess
+lu_1292,Chisholm,",*isholm"
+lu_1293,citizeness,citiz5ess
+lu_1294,fruity,fruity
+lu_1295,orangeade,orangeade
+lu_1296,rabbity,ra2ity
+lu_1297,twofold,twofold
+lu_1298,areaway,>1way
+lu_1299,ebbing,e2+
+lu_1300,eggplant,e7plant
+lu_1301,ideas,id1s
+lu_1302,seaman,s1man
+lu_1303,seashore,s1%ore
+lu_1304,stiffly,/i6ly
+lu_1305,teatime,"t1""t"
+lu_1306,aerial,a}ial
+lu_1307,aerobic,a}obic
+lu_1308,Baedeker,",ba$ek}"
+lu_1309,Betws-y-Coed,",betws-;y-,co$"
+lu_1310,Blaenau Ffestiniog,",bla5au ,ffe/9iog"
+lu_1311,Caernarvon,",ca}n>von"
+lu_1312,Daedalus,",da$alus"
+lu_1313,diaeresis,dia}esis
+lu_1314,encyclopaedia,5cyclopa$ia
+lu_1315,faerie,fa}ie
+lu_1316,Goering,",go}+"
+lu_1317,Gruenfeld,",gru5feld"
+lu_1318,Judaean,",juda1n"
+lu_1319,Liliaceae,",liliac1e"
+lu_1320,maenad,ma5ad
+lu_1321,Oedipus,",o$ipus"
+lu_1322,orthopaedic,or?opa$ic
+lu_1323,paean,pa1n
+lu_1324,phoenix,pho5ix
+lu_1325,Schoenberg,",s*o5b}g"
+lu_1326,subpoena,subpo5a
+lu_1327,færie,fa~6erie
+lu_1328,W2N 6CH,",w#b,n #f,,ch"
+lu_1329,S. Da.,";,s4 ,da4"
+lu_1330,Xft.,",xft4"
+lu_1331,G.B.S.,",g4,b4,s4"
+lu_1332,V & A,";,v `& ,a"
+lu_1333,p. 15,;p4 #ae
+lu_1334,c 1600,;c #afjj
+lu_1335,3 N m,"#c ;,n ;m"
+lu_1336,Macbeth V i 8 or V.i.8,",macbe? ;,v i #h or ,v4i4#h"
+lu_1337,U. of K.,";,u4 ( ;,k4"
+lu_1338,FORTRAN,",,=tran"
+lu_1339,prof,pr(
+lu_1340,ch. 7,ch4 #g
+lu_1341,ch.7,*4#g
+lu_1342,par3,p>#c
+lu_1343,4-Hers,"#d-,h}s"
+lu_1344,qwerty,qw}ty
+lu_1345,radar,rad>
+lu_1346,Ariz,",>iz"
+lu_1347,CHUM Radio,",,*um ,radio"
+lu_1348,START,",,/>t"
+lu_1349,Sh$40,",%`s#dj"
+lu_1350,1 in.,#a in4
+lu_1351,9-in dia.,#i-9 dia4
+lu_1352,Belg.,",belg4"
+lu_1353,cont.,3t4
+lu_1354,Dist.,",4t4"
+lu_1355,nem. con.,nem4 con4
+lu_1356,ASEAN,",,as1n"
+lu_1357,SEATO,",,s1to"
+lu_1358,7 ins,#g 9s
+lu_1359,7ins,#g;ins
+lu_1360,Inc.,",9c4"
+lu_1361,Gov. Gen.,",gov4 ,g54"
+lu_1362,Minn.,",m9n4"
+lu_1363,MiniPC,",m9i,,pc"
+lu_1364,INXS,",,9xs"
+lu_1365,1-800-INFO,"#a-#hjj-,,9fo"
+lu_1366,3 yrs 6 mths,#c ;yrs #f m?s
+lu_1367,braille_it_better@learn.org,braille.-it.-bett}`ale>n4org
+lu_1368,children-do-great@teach.net,*n-d-gr1t`at1*4net
+lu_1369,world@large.com,_w`al>ge4com
+lu_1370,www.rubberchicken.com/menus,www4ru2}*ick54com_/m5us
+lu_1371,www.one.in.a.hundred.org,"www4""o494a4hundr$4org"
+lu_1372,c:\\contractions\\wordsigns.doc,c3_*contrac;ns_*~wsigns4doc
+lu_1373,c:\\InfoForSteven\\PhoneNumbers.xls,"c3_*,9fo,=,/ev5_*,ph""o,numb}s4xls"
+lu_1374,c:\\ideas\\child-of-the-sea.doc,c3_*id1s_**ild-(-!-sea4doc
+lu_1375,c:\\poem ideas\\my child's smile.doc,c3_*poem id1s_*my *'s smile4doc
+lu_1376,coulda,cda
+lu_1377,mebbe,me2e
+lu_1378,pinny,p9ny
+lu_1379,depity,dep;y
+lu_1380,your,yr
+lu_1381,wher,:}
+lu_1382,somers,som}s
+lu_1383,theirselves,_!selves
+lu_1384,dint,d9t
+lu_1385,bofe,b(e
+lu_1386,'stracted,'/ract$
+lu_1387,fayther,fay!r
+lu_1388,distruction,4truc;n
+lu_1389,musta,m/a
+lu_1390,goodun,gdun
+lu_1391,lyedee,ly$ee
+lu_1392,com'ere,com'}e
+lu_1393,say pl...,say pl444
+lu_1394,Tell me wh-.,",tell me wh-4"
+lu_1395,-tion,-tion
+lu_1396,-ccio,-ccio
+lu_1397,-ing,-9g
+lu_1398,-ount,-|nt
+lu_1399,-est,-e/
+lu_1400,Bighorn,",bighorn"
+lu_1401,chemotherapy,*emo!rapy
+lu_1402,Hades,",hades"
+lu_1403,Hermione,",h}mione"
+lu_1404,Mortimer,",mortim}"
+lu_1405,Newhaven,",newhav5"
+lu_1406,Stalingrad,",/al9grad"
+lu_1407,Vietnamese,",vietnamese"
+lu_1408,Berea,",2rea"
+lu_1409,Ione,",i""o"
+lu_1410,Simone,",sim""o"
+lu_1411,Townshend,",t{nsh5d"
+lu_1412,Twillingate,",twill+ate"
+lu_1413,thecond thentury,!cond !ntury
+lu_1414,thenotaph,!notaph
+lu_1415,thuthpenthe,?u?p5!
+lu_1416,verY,"v},y"
+lu_1417,you'll,y'll
+lu_1418,go'n,go'n
+lu_1419,child(ish),"*ild""<i%"">"
+lu_1420,this'll,?'ll
+lu_1421,out'a,|t'a
+lu_1422,grandEST,"gr&,,e/"
+lu_1423,with(er),")""<}"">"
+lu_1424,THIRSTy,",,?ir/,'y"
+lu_1425,ni(gh)t,"ni""<<"">t"
+lu_1426,thou're,?|'re
+lu_1427,wer(e),"w}""<e"">"
+lu_1428,his'n,his'n
+lu_1429,in't,9't
+lu_1430,(be)long,"""<be"">l;g"
+lu_1431,O'Connor,",o',connor"
+lu_1432,CliffEdge,",cliff,$ge"
+lu_1433,dragg(ing),"dragg""<+"">"
+lu_1434,rubb'd,rubb'd
+lu_1435,NorthEast,",nor?,ea/"
+lu_1436,there(upon),"""!""<~u"">"
+lu_1437,HANDsome,",,h&,'""s"
+lu_1438,WordPerfect,",~w,p}fect"
+lu_1439,count(less),"c.t""<less"">"
+lu_1440,CarLess,",c>,less"
+lu_1441,grey'ound,grey'|nd
+lu_1442,J----y,";,j----;y"
+lu_1443,n...ce,n444ce
+lu_1444,fr...nd,fr444nd
+lu_1445,w...ghed,w444<$
+lu_1446,we-e-ellll,we-;e-ellll
+lu_1447,a-a-ah—ch-o-o-oh,"a-a-ah,-ch-o-o-oh"
+lu_1448,mmm-more,mmm-m
+lu_1449,shhhh,%hhh
+lu_1450,errrr,}rrr
+lu_1451,pfft,p6t
+lu_1452,doodle-e-do,doodle-;e-d
+lu_1453,the-e-enk,!-;e-5k
+lu_1454,so-o-o-o,s-o-o-o
+lu_1455,aaarrrggghh,aa>rr7<h
+lu_1456,br-r-r,br-;r-;r
+lu_1457,cooooountry,coooo.try
+lu_1458,ggggood,g7good
+lu_1459,loooong,looo;g
+lu_1460,sisterrr,si/}rr
+lu_1461,d-d-day,";d-;d-""d"
+lu_1462,ch-child,ch-*
+lu_1463,y-y-you,;y-;y-y
+lu_1464,b...but,b444but
+lu_1465,c-c-c-conceive,;c-;c-;c-3cv
+lu_1466,st-st-stay,st-st-/ay
+lu_1467,s-s-stutter,;s-;s-/utt}
+lu_1468,g-good,;g-gd
+lu_1469,qu-quick,qu-qk
+lu_1470,m-m-m-mine,;m-;m-;m-m9e
+lu_1471,wh-where,"wh-"":"
+lu_1472,f-f-father,";f-;f-""f"
+lu_1473,th-the,th-!
+lu_1474,de-ce-ce-cease,de-ce-ce-c1se
+lu_1475,th-these,th-~!
+lu_1476,g-ghost,;g-<o/
+lu_1477,gr-ground,gr-gr.d
+lu_1478,lea-leave,lea-l1ve
+lu_1479,m-must,;m-m/
+lu_1480,w-what,;w-:at
+lu_1481,c-can't,;c-c't
+lu_1482,w-was,;w-was
+lu_1483,ch-ch-children,ch-ch-*n
+lu_1484,th-themselves,th-!mvs
+lu_1485,b-b-below,;b-;b-2l
+lu_1486,some-one,"""s-""o"
+lu_1487,en-chant-ment,en-*ant-m5t
+lu_1488,in-fea-si-ble,9-fea-si-ble
+lu_1489,child-ish-ly,*-i%-ly
+lu_1490,dis-in-ter-est,dis-9-t}-e/
+lu_1491,friend-li-ness,fr-li-ness
+lu_1492,for-get-ting,=-get-t+
+lu_1493,bless-ed,b.s-$
+lu_1494,out-side,|-side
+lu_1495,be-low,be-l{
+lu_1496,his-tory,his-tory
+lu_1497,nightin-gale,ni<t9-gale
+lu_1498,pro-found.),"pro-f.d4"">"
+lu_1499,ahimsa,ahimsa
+lu_1500,braillist,brailli/
+lu_1501,declaration,decl>a;n
+lu_1502,drafter,draft}
+lu_1503,lacrosse,lacrosse
+lu_1504,marabout,m>ab|t
+lu_1505,mustache,mu/a*e
+lu_1506,mustang,mu/ang
+lu_1507,muster,mu/}
+lu_1508,necessarily,necess>ily
+lu_1509,rafter,raft}
+lu_1510,shoulder,%|ld}
+lu_1511,abouts,ab|ts
+lu_1512,acrosses,acrosses
+lu_1513,againe,aga9e
+lu_1514,almosts,almo/s
+lu_1515,hims,hims
+lu_1516,aftereffect,aft}e6ect
+lu_1517,afterimage,aft}image
+lu_1518,blinded,bl9d$
+lu_1519,blinding,bl9d+
+lu_1520,befriended,2fri5d$
+lu_1521,hereinbefore,"""h9be=e"
+lu_1522,inbetween,9betwe5
+lu_1523,misconceived,misconceiv$

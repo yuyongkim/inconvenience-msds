@@ -1,0 +1,61 @@
+{
+  "doc_id": "chemistry",
+  "source_braille_path": "C:\\Users\\USER\\Desktop\\Braille\\data\\braille\\en\\real\\chemistry.txt",
+  "english_text": {
+    "rough": "Chemical Kinetics\n\nThe rate of a chemical reaction depends on several factors: the concentration of reactants, temperature, and the presence of a catalyst.\n\n1. Effect of Concentration\nThe higher the concentration of reactants, the greater the frequency of molecular collisions, leading to a faster reaction rate.\n\n2. Effect of Temperature\nFor every 10 degree increase in temperature, the reaction rate approximately doubles. This relationship is described by the Arrhenius equation: k = A * exp(-Ea/RT), where k is the rate constant, A is the pre-exponential factor, Ea is the activation energy, R is the gas constant (8.314 J/mol*K), and T is the absolute temperature in Kelvin.\n\n3. Role of Catalysts\nA catalyst lowers the activation energy of a reaction without being consumed. For example, platinum is used as a catalyst in the catalytic converter of automobiles, where it helps convert harmful CO and NO gases into CO2 and N2.",
+    "corrected": "Chemical Kinetics\n\nThe rate of a chemical reaction depends on several factors: the concentration of reactants, temperature, and the presence of a catalyst.\n\n1. Effect of Concentration\nThe higher the concentration of reactants, the greater the frequency of molecular collisions, leading to a faster reaction rate.\n\n2. Effect of Temperature\nFor every 10 degrees increase in temperature, the reaction rate approximately doubles. This relationship is described by the Arrhenius equation: k = A * exp(-Ea/RT), where k is the rate constant, A is the pre-exponential factor, Ea is the activation energy, R is the gas constant (8.314 J/mol*K), and T is the absolute temperature in Kelvin.\n\n3. Role of Catalysts\nA catalyst lowers the activation energy of a reaction without being consumed. For example, platinum is used as a catalyst in the catalytic converter of automobiles, where it helps convert harmful CO and NO gases into CO2 and N2."
+  },
+  "structure": {
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 3,
+        "end_line": 3
+      },
+      {
+        "block_id": "b3",
+        "type": "L",
+        "start_line": 5,
+        "end_line": 5
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 6,
+        "end_line": 6
+      },
+      {
+        "block_id": "b5",
+        "type": "L",
+        "start_line": 8,
+        "end_line": 8
+      },
+      {
+        "block_id": "b6",
+        "type": "P",
+        "start_line": 9,
+        "end_line": 9
+      },
+      {
+        "block_id": "b7",
+        "type": "L",
+        "start_line": 11,
+        "end_line": 11
+      },
+      {
+        "block_id": "b8",
+        "type": "P",
+        "start_line": 12,
+        "end_line": 12
+      }
+    ]
+  },
+  "korean_summary": null
+}

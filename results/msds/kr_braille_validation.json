@@ -1,0 +1,19 @@
+{
+  "sample_size": 500,
+  "roundtrip": {
+    "mean_edit_similarity": 0.7346,
+    "mean_chrf": 0.6252,
+    "perfect_count": 0,
+    "high_count_95pct": 0,
+    "low_count_80pct": 378
+  },
+  "coverage": {
+    "mean_pct": 98.05
+  },
+  "violations": {
+    "total": 38832,
+    "per_1000_cells": 15.79
+  },
+  "total_ko_text_chars": 1261170,
+  "total_ko_braille_chars": 2459148
+}

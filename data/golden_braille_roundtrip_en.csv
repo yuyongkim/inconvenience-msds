@@ -1,0 +1,46 @@
+id,source_text,category
+en_001,"This is a simple sentence.",basic
+en_002,"The weather is nice today.",basic
+en_003,"She walked to the park after lunch.",basic
+en_004,"Do you know where the library is?",basic
+en_005,"Please turn off the lights before you leave.",basic
+en_006,"He said that he would arrive by noon.",basic
+en_007,"The meeting starts at 3:45 p.m. on April 6, 2026.",number
+en_008,"There are 1,234 students enrolled this semester.",number
+en_009,"The ratio of water to cement is 0.45 to 1.",number
+en_010,"Call me at 02-555-1234 for more details.",number
+en_011,"The package weighs 12.5 kg and costs $39.99.",number
+en_012,"Chapter 7, Section 3.2 covers fluid dynamics.",number
+en_013,"Room 401B is on the 4th floor.",number
+en_014,"The following items are required: pencil, eraser, ruler, and compass.",list
+en_015,"Step 1: Open the valve. Step 2: Check the pressure. Step 3: Record the reading.",list
+en_016,"Options include: (a) red, (b) blue, (c) green, and (d) yellow.",list
+en_017,"First, gather the materials; second, prepare the solution; third, run the test.",list
+en_018,"Ingredients: 200g flour, 100ml milk, 2 eggs, and a pinch of salt.",list
+en_019,"He whispered, ""Are you sure about this?""",quote
+en_020,"The term ""machine learning"" was coined by Arthur Samuel in 1959.",quote
+en_021,"She replied (with a slight smile), ""Of course.""",quote
+en_022,"The so-called ""best practice"" is not always the best.",quote
+en_023,"According to the manual -- page 42 -- the limit is 500 units.",quote
+en_024,"If x squared equals 4, then x is either 2 or negative 2.",math
+en_025,"The area of a circle is pi times r squared.",math
+en_026,"Solve for y: 3y + 7 = 22.",math
+en_027,"The sum of angles in a triangle is 180 degrees.",math
+en_028,"Given f(x) = 2x + 1, find f(3).",math
+en_029,"The integral of x squared from 0 to 1 is one third.",math
+en_030,"The temperature ranges from 20 degrees C to 25 degrees C in the reactor.",domain
+en_031,"Sodium chloride (NaCl) dissolves readily in water.",domain
+en_032,"The CPU utilizes a 64-bit instruction set architecture.",domain
+en_033,"The patient was administered 500 mg of amoxicillin twice daily.",domain
+en_034,"The yield strength of A36 steel is approximately 250 MPa.",domain
+en_035,"Polymerase chain reaction (PCR) amplifies DNA segments.",domain
+en_036,"The Reynolds number determines whether flow is laminar or turbulent.",domain
+en_037,"The HTTP status code 404 means the resource was not found.",domain
+en_038,"Benzene (C6H6) is an aromatic hydrocarbon.",domain
+en_039,"The compiler generates an abstract syntax tree (AST) during parsing.",domain
+en_040,"What time does the next train depart?",basic
+en_041,"I have never seen anything like it before.",basic
+en_042,"They decided to postpone the event until further notice.",basic
+en_043,"Between 2019 and 2023, revenue grew by 47.3 percent.",number
+en_044,"The server responded in 12.8 milliseconds on average.",number
+en_045,"Note the following exceptions: items marked with an asterisk (*) are optional.",list

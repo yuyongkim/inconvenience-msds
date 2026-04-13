@@ -1,0 +1,91 @@
+{
+  "doc_id": "networking",
+  "source_braille_path": "data/braille/en/real/networking.txt",
+  "english_text": {
+    "rough": "Computer Networking\n\nA computer network is a system of interconnected devices that can exchange data. Networks are classified by their geographic scope:\n\n- LAN (Local Area Network): covers a building or campus.\n- MAN (Metropolitan Area Network): spans a city.\n- WAN (Wide Area Network): connects cities, countries, or continents.\n\nThe TCP/IP protocol stack is the foundation of Internet communication. Data is transmitted in packets, each containing a source address and destination address. The 4 layers are:\n\n1. Application Layer (HTTP, FTP, DNS)\n2. Transport Layer (TCP, UDP)\n3. Internet Layer (IP, ICMP)\n4. Link Layer (Ethernet, Wi-Fi)\n\nThe HTTP status code 404 indicates that the requested resource was not found on the server. Status code 200 means the request was successful. Status code 500 indicates an internal server error.",
+    "corrected": "Computer Networking\n\nA computer network is a system of interconnected devices that can exchange data. Networks are classified by their geographic scope:\n\n- LAN (Local Area Network): covers a building or campus.\n- MAN (Metropolitan Area Network): spans a city.\n- WAN (Wide Area Network): connects cities, countries, or continents.\n\nThe TCP/IP protocol stack is the foundation of Internet communication. Data is transmitted in packets, each containing a source address and destination address. The 4 layers are:\n\n1. Application Layer (HTTP, FTP, DNS)\n2. Transport Layer (TCP, UDP)\n3. Internet Layer (IP, ICMP)\n4. Link Layer (Ethernet, Wi-Fi)\n\nThe HTTP status code 404 indicates that the requested resource was not found on the server. Status code 200 means the request was successful. Status code 500 indicates an internal server error."
+  },
+  "structure": {
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 3,
+        "end_line": 3
+      },
+      {
+        "block_id": "b3",
+        "type": "L",
+        "start_line": 5,
+        "end_line": 7
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 9,
+        "end_line": 9
+      },
+      {
+        "block_id": "b5",
+        "type": "L",
+        "start_line": 11,
+        "end_line": 14
+      },
+      {
+        "block_id": "b6",
+        "type": "P",
+        "start_line": 16,
+        "end_line": 16
+      }
+    ]
+  },
+  "korean_text": {
+    "text": "컴퓨터 네트워킹\n\n컴퓨터 네트워크는 데이터를 교환할 수 있는 상호 연결된 장치 시스템입니다. 네트워크는 지리적 범위에 따라 분류됩니다.\n\n- LAN(근거리 통신망): 건물이나 캠퍼스를 포괄합니다.\n- MAN(Metropolitan Area Network): 도시 전체에 걸쳐 있습니다.\n- WAN(Wide Area Network): 도시, 국가 또는 대륙을 연결합니다.\n\nTCP/IP 프로토콜 스택은 인터넷 통신의 기초입니다. 데이터는 패킷으로 전송되며 각 패킷에는 소스 주소와 대상 주소가 포함됩니다. 4개 레이어는 다음과 같습니다.\n\n1. 애플리케이션 계층(HTTP, FTP, DNS)\n2. 전송 계층(TCP, UDP)\n3. 인터넷 계층(IP, ICMP)\n4. 링크 계층(이더넷, Wi-Fi)\n\nHTTP 상태 코드 404는 요청한 리소스를 서버에서 찾을 수 없음을 나타냅니다. 상태 코드 200은 요청이 성공했음을 의미합니다. 상태 코드 500은 내부 서버 오류를 나타냅니다.",
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 3,
+        "end_line": 3
+      },
+      {
+        "block_id": "b3",
+        "type": "L",
+        "start_line": 5,
+        "end_line": 7
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 9,
+        "end_line": 9
+      },
+      {
+        "block_id": "b5",
+        "type": "L",
+        "start_line": 11,
+        "end_line": 14
+      },
+      {
+        "block_id": "b6",
+        "type": "P",
+        "start_line": 16,
+        "end_line": 16
+      }
+    ]
+  },
+  "korean_summary": null,
+  "korean_braille": "⠫⠒⠃⠷⠨⠹⠒⠀⠅⠢⠹⠲⠪⠒⠫⠰⠵\n\n⠫⠒⠃⠷⠨⠹⠒⠀⠅⠢⠹⠲⠪⠒⠫⠲⠅⠲⠅⠀⠙⠢⠰⠹⠒⠑⠲⠑⠀⠉⠘⠳⠊⠶⠅⠳⠶⠑⠀⠓⠪⠀⠰⠓⠓⠅⠲⠅⠀⠓⠶⠵⠳⠊⠀⠔⠅⠉⠔⠑⠙⠊⠲⠅⠀⠛⠶⠵⠋⠰⠀⠓⠰⠓⠲⠹⠢⠃⠰⠇⠅⠰⠙⠶⠲⠃⠀⠅⠢⠹⠲⠪⠒⠫⠲⠅⠲⠅⠀⠛⠰⠑⠰⠛⠒⠁⠀⠇⠒⠃⠪⠲⠢⠀⠠⠙⠶⠑⠶⠀⠇⠪⠅⠑⠨⠙⠊⠲⠇⠅⠰⠙⠶⠲⠃\n\n⠤⠀LAN⠶⠉⠲⠅⠉⠒⠑⠰⠀⠹⠊⠵⠓⠰⠅⠃⠶⠵⠶⠒⠒⠀⠉⠒⠅⠃⠪⠑⠰⠅⠶⠀⠫⠦⠃⠷⠒⠓⠲⠑⠲⠑⠀⠷⠊⠉⠊⠶⠑⠳⠶⠇⠅⠰⠙⠶⠲⠃\n⠤⠀MAN⠶Metropolitan⠀Area⠀Network⠶⠒⠒⠀⠙⠊⠓⠰⠀⠛⠒⠅⠋⠢⠢⠀⠉⠒⠑⠋⠔⠀⠰⠓⠓⠓⠲⠇⠅⠰⠙⠶⠲⠃\n⠤⠀WAN⠶Wide⠀Area⠀Network⠶⠒⠒⠀⠙⠊⠓⠰⠂⠀⠉⠪⠁⠉⠶⠀⠠⠙⠊⠅⠲⠅⠀⠙⠦⠑⠨⠁⠲⠑⠀⠔⠅⠉⠔⠑⠳⠶⠇⠅⠰⠙⠶⠲⠃\n\nTCP/IP⠀⠷⠲⠑⠊⠹⠊⠫⠊⠑⠀⠓⠲⠹⠦⠁⠲⠅⠀⠰⠅⠹⠒⠅⠢⠓⠀⠹⠊⠵⠓⠰⠅⠲⠲⠀⠉⠰⠋⠊⠰⠇⠅⠰⠙⠶⠲⠃⠀⠙⠢⠰⠹⠒⠅⠲⠅⠀⠷⠦⠫⠰⠓⠲⠑⠊⠀⠛⠒⠅⠓⠊⠵⠙⠊⠲⠃⠔⠀⠉⠶⠁⠀⠷⠦⠫⠰⠓⠢⠅⠲⠅⠀⠓⠊⠓⠲⠀⠛⠪⠓⠊⠊⠶⠀⠙⠦⠓⠶⠵⠀⠛⠪⠓⠊⠉⠶⠀⠷⠊⠳⠶⠃⠙⠊⠲⠇⠅⠰⠙⠶⠲⠃⠀⠼⠙⠉⠦⠀⠑⠢⠰⠒⠅⠲⠅⠀⠙⠶⠲⠃⠉⠊⠶⠀⠉⠶⠹⠓⠲⠇⠅⠰⠙⠶⠲⠃\n\n⠼⠁⠲⠃⠀⠦⠷⠲⠑⠑⠰⠫⠢⠰⠓⠔⠅⠀⠉⠄⠋⠲⠵⠶HTTP⠂⠀FTP⠂⠀DNS⠶\n⠼⠃⠲⠃⠀⠛⠒⠅⠓⠊⠵⠀⠉⠄⠋⠲⠵⠶TCP⠂⠀UDP⠶\n⠼⠉⠲⠃⠀⠰⠅⠹⠒⠅⠢⠓⠀⠉⠄⠋⠲⠵⠶IP⠂⠀ICMP⠶\n⠼⠙⠲⠃⠀⠑⠰⠵⠫⠲⠀⠉⠄⠋⠲⠵⠶⠰⠙⠒⠅⠢⠓⠂⠀Wi⠤Fi⠶\n\nHTTP⠀⠓⠶⠵⠹⠦⠀⠫⠊⠙⠲⠀⠼⠙⠚⠙⠅⠲⠅⠀⠘⠋⠒⠵⠳⠶⠅⠀⠑⠰⠓⠊⠓⠲⠑⠲⠑⠀⠓⠒⠇⠒⠢⠓⠒⠀⠋⠶⠛⠲⠑⠀⠓⠪⠀⠒⠇⠓⠲⠃⠲⠑⠀⠅⠶⠹⠶⠅⠦⠇⠅⠰⠙⠶⠲⠃⠀⠓⠶⠵⠹⠦⠀⠫⠊⠙⠲⠀⠼⠃⠚⠚⠲⠅⠀⠘⠋⠒⠵⠰⠀⠓⠒⠵⠉⠊⠵⠳⠦⠓⠓⠲⠃⠲⠑⠀⠲⠲⠃⠰⠳⠶⠇⠅⠰⠙⠶⠲⠃⠀⠓⠶⠵⠹⠦⠀⠫⠊⠙⠲⠀⠼⠑⠚⠚⠲⠅⠀⠅⠦⠇⠪⠀⠓⠒⠇⠒⠀⠊⠑⠨⠑⠲⠑⠀⠅⠶⠹⠶⠅⠦⠇⠅⠰⠙⠶⠲⠃"
+}

@@ -1,0 +1,55 @@
+{
+  "doc_id": "sample_math",
+  "source_braille_path": "C:\\Users\\USER\\Desktop\\Braille\\data\\braille\\en\\sample_math.txt",
+  "english_text": {
+    "rough": "Sample Document: MATH\n\nIf x squared equals 4, then x is either 2 or negative 2.\n\nThe area of a circle is pi times r squared.\n\nSolve for y: 3y + 7 ? 22.\n\nThe sum of angles in a triangle is 180 degrees.\n\nGiven f?x? ? 2x + 1, find f?3?.\n\nThe integral of x squared from 0 to 1 is one third.",
+    "corrected": "Sample Document: MATH\n\nIf x squared equals 4, then x is either 2 or negative 2.\n\nThe area of a circle is pi times r squared.\n\nSolve for y: 3y + 7 ? 22.\n\nThe sum of angles in a triangle is 180 degrees.\n\nGiven f?x? ? 2x + 1, find f?3?.\n\nThe integral of x squared from 0 to 1 is one third."
+  },
+  "structure": {
+    "blocks": [
+      {
+        "block_id": "b1",
+        "type": "P",
+        "start_line": 1,
+        "end_line": 1
+      },
+      {
+        "block_id": "b2",
+        "type": "P",
+        "start_line": 3,
+        "end_line": 3
+      },
+      {
+        "block_id": "b3",
+        "type": "P",
+        "start_line": 5,
+        "end_line": 5
+      },
+      {
+        "block_id": "b4",
+        "type": "P",
+        "start_line": 7,
+        "end_line": 7
+      },
+      {
+        "block_id": "b5",
+        "type": "P",
+        "start_line": 9,
+        "end_line": 9
+      },
+      {
+        "block_id": "b6",
+        "type": "P",
+        "start_line": 11,
+        "end_line": 11
+      },
+      {
+        "block_id": "b7",
+        "type": "P",
+        "start_line": 13,
+        "end_line": 13
+      }
+    ]
+  },
+  "korean_summary": null
+}

@@ -1,0 +1,91 @@
+id,category,source_text,roundtrip_text,sim_edit,sim_chrf
+en_001,basic,This is a simple sentence.,This is a simple sentence.,1.0,1.0
+en_002,basic,The weather is nice today.,The weather is nice today.,1.0,1.0
+en_003,basic,She walked to the park after lunch.,She walked to the park after lunch.,1.0,1.0
+en_004,basic,Do you know where the library is?,Do you know where the library is?,1.0,1.0
+en_005,basic,Please turn off the lights before you leave.,Please turn off the lights before you leave.,1.0,1.0
+en_006,basic,He said that he would arrive by noon.,He said that he would arrive by noon.,1.0,1.0
+en_007,number,"The meeting starts at 3:45 p.m. on April 6, 2026.","The meeting starts at 3:45 p.m. on April 6, 2026.",1.0,1.0
+en_008,number,"There are 1,234 students enrolled this semester.","There are 1,234 students enrolled this semester.",1.0,1.0
+en_009,number,The ratio of water to cement is 0.45 to 1.,The ratio of water to cement is 0.45 to 1.,1.0,1.0
+en_010,number,Call me at 02-555-1234 for more details.,Call me at 02-555-1234 for more details.,1.0,1.0
+en_011,number,The package weighs 12.5 kg and costs $39.99.,The package weighs 12.5 kg and costs $39.99.,1.0,1.0
+en_012,number,"Chapter 7, Section 3.2 covers fluid dynamics.","Chapter 7, Section 3.2 covers fluid dynamics.",1.0,1.0
+en_013,number,Room 401B is on the 4th floor.,Room 401B is on the 4th floor.,1.0,1.0
+en_014,list,"The following items are required: pencil, eraser, ruler, and compass.","The following items are required: pencil, eraser, ruler, and compass.",1.0,1.0
+en_015,list,Step 1: Open the valve. Step 2: Check the pressure. Step 3: Record the reading.,Step 1: Open the valve. Step 2: Check the pressure. Step 3: Record the reading.,1.0,1.0
+en_016,list,"Options include: (a) red, (b) blue, (c) green, and (d) yellow.","Options include: (a) red, (b) blue, (c) green, and (d) yellow.",1.0,1.0
+en_017,list,"First, gather the materials; second, prepare the solution; third, run the test.","First, gather the materials; second, prepare the solution; third, run the test.",1.0,1.0
+en_018,list,"Ingredients: 200g flour, 100ml milk, 2 eggs, and a pinch of salt.","Ingredients: 200g flour, 100ml milk, 2 eggs, and a pinch of salt.",1.0,1.0
+en_019,quote,"He whispered, ""Are you sure about this?""","He whispered, ""Are you sure about this?""",1.0,1.0
+en_020,quote,"The term ""machine learning"" was coined by Arthur Samuel in 1959.","The term ""machine learning"" was coined by Arthur Samuel in 1959.",1.0,1.0
+en_021,quote,"She replied (with a slight smile), ""Of course.""","She replied (with a slight smile), ""Of course.""",1.0,1.0
+en_022,quote,"The so-called ""best practice"" is not always the best.","The so-called ""best practice"" is not always the best.",1.0,1.0
+en_023,quote,According to the manual -- page 42 -- the limit is 500 units.,According to the manual -- page 42 -- the limit is 500 units.,1.0,1.0
+en_024,math,"If x squared equals 4, then x is either 2 or negative 2.","If x squared equals 4, then x is either 2 or negative 2.",1.0,1.0
+en_025,math,The area of a circle is pi times r squared.,The area of a circle is pi times r squared.,1.0,1.0
+en_026,math,Solve for y: 3y + 7 = 22.,Solve for y: 3y + 7 = 22.,1.0,1.0
+en_027,math,The sum of angles in a triangle is 180 degrees.,The sum of angles in a triangle is 180 degrees.,1.0,1.0
+en_028,math,"Given f(x) = 2x + 1, find f(3).","Given f(x) = 2x + 1, find f(3).",1.0,1.0
+en_029,math,The integral of x squared from 0 to 1 is one third.,The integral of x squared from 0 to 1 is one third.,1.0,1.0
+en_030,domain,The temperature ranges from 20 degrees C to 25 degrees C in the reactor.,The temperature ranges from 20 degrees C to 25 degrees C in the reactor.,1.0,1.0
+en_031,domain,Sodium chloride (NaCl) dissolves readily in water.,Sodium chloride (NaCl) dissolves readily in water.,1.0,1.0
+en_032,domain,The CPU utilizes a 64-bit instruction set architecture.,The CPU utilizes a 64-bit instruction set architecture.,1.0,1.0
+en_033,domain,The patient was administered 500 mg of amoxicillin twice daily.,The patient was administered 500 mg of amoxicillin twice daily.,1.0,1.0
+en_034,domain,The yield strength of A36 steel is approximately 250 MPa.,The yield strength of A36 steel is approximately 250 MPa.,1.0,1.0
+en_035,domain,Polymerase chain reaction (PCR) amplifies DNA segments.,Polymerase chain reaction (PCR) amplifies DNA segments.,1.0,1.0
+en_036,domain,The Reynolds number determines whether flow is laminar or turbulent.,The Reynolds number determines whether flow is laminar or turbulent.,1.0,1.0
+en_037,domain,The HTTP status code 404 means the resource was not found.,The HTTP status code 404 means the resource was not found.,1.0,1.0
+en_038,domain,Benzene (C6H6) is an aromatic hydrocarbon.,Benzene (C6H6) is an aromatic hydrocarbon.,1.0,1.0
+en_039,domain,The compiler generates an abstract syntax tree (AST) during parsing.,The compiler generates an abstract syntax tree (AST) during parsing.,1.0,1.0
+en_040,basic,What time does the next train depart?,What time does the next train depart?,1.0,1.0
+en_041,basic,I have never seen anything like it before.,I have never seen anything like it before.,1.0,1.0
+en_042,basic,They decided to postpone the event until further notice.,They decided to postpone the event until further notice.,1.0,1.0
+en_043,number,"Between 2019 and 2023, revenue grew by 47.3 percent.","Between 2019 and 2023, revenue grew by 47.3 percent.",1.0,1.0
+en_044,number,The server responded in 12.8 milliseconds on average.,The server responded in 12.8 milliseconds on average.,1.0,1.0
+en_045,list,Note the following exceptions: items marked with an asterisk (*) are optional.,Note the following exceptions: items marked with an asterisk (*) are optional.,1.0,1.0
+ko_001,basic,이것은 간단한 문장입니다.,이것은 간단한 문장입니다.,1.0,1.0
+ko_002,basic,오늘 날씨가 참 좋습니다.,오늘 날씨가 참 좋습니다.,1.0,1.0
+ko_003,basic,그녀는 점심 후에 공원으로 걸어갔다.,그녀는 점심 후에 공원으로 걸어갔다.,1.0,1.0
+ko_004,basic,도서관이 어디에 있는지 아시나요?,도서관이 어디에 있는지 아시나요?,1.0,1.0
+ko_005,basic,나가기 전에 불을 꺼 주세요.,나가기 전에 불을 꺼 주세요.,1.0,1.0
+ko_006,basic,그는 정오까지 도착하겠다고 말했다.,그는 정오까지 도착하겠다고 말했다.,1.0,1.0
+ko_007,number,회의는 2026년 4월 6일 오후 3시 45분에 시작합니다.,회의는 2026년 4월 6일 오후 3시 45분에 시작합니다.,1.0,1.0
+ko_008,number,이번 학기에 등록한 학생 수는 1234명입니다.,이번 학기에 등록한 학생 수는 1234명입니다.,1.0,1.0
+ko_009,number,물과 시멘트의 비율은 0.45 대 1입니다.,물과 시멘트의 비율은 0.45 대 1입니다.,1.0,1.0
+ko_010,number,자세한 내용은 02-555-1234로 전화해 주세요.,자세한 내용은 02-555-1234로 전화해 주세요.,1.0,1.0
+ko_011,number,이 소포의 무게는 12.5킬로그램이고 가격은 39000원입니다.,이 소포의 무게는 12.5킬로그램이고 가격은 39000원입니다.,1.0,1.0
+ko_012,number,제7장 3.2절은 유체역학을 다룹니다.,제7장 3.2절은 유체역학을 다룹니다.,1.0,1.0
+ko_013,number,401B호는 4층에 있습니다.,401B호는 4층에 있습니다.,1.0,1.0
+ko_014,list,"다음 물품이 필요합니다: 연필, 지우개, 자, 컴퍼스.","다음 물품이 필요합니다: 연필, 지우개, 자, 컴퍼스.",1.0,1.0
+ko_015,list,1단계: 밸브를 연다. 2단계: 압력을 확인한다. 3단계: 수치를 기록한다.,1단계: 밸브를 연다. 2단계: 압력을 확인한다. 3단계: 수치를 기록한다.,1.0,1.0
+ko_016,list,"선택지는 다음과 같다: (가) 빨강, (나) 파랑, (다) 초록, (라) 노랑.","선택지는 다음과 같다: (가) 빨강, (나) 파랑, (다) 초록, (라) 노랑.",1.0,1.0
+ko_017,list,"첫째 재료를 모으고, 둘째 용액을 준비하고, 셋째 실험을 실시한다.","첫째 재료를 모으고, 둘째 용액을 준비하고, 셋째 실험을 실시한다.",1.0,1.0
+ko_018,list,"재료: 밀가루 200그램, 우유 100밀리리터, 달걀 2개, 소금 약간.","재료: 밀가루 200그램, 우유 100밀리리터, 달걀 2개, 소금 약간.",1.0,1.0
+ko_019,quote,"그는 속삭였다. ""정말 확실해?""","그는 속삭였다. ""정말 확실해?""",1.0,1.0
+ko_020,quote,"""기계 학습""이라는 용어는 1959년 아서 새뮤얼이 만들었다.","""기계 학습""이라는 용어는 1959년 아서 새뮤얼이 만들었다.",1.0,1.0
+ko_021,quote,"그녀는 살짝 미소를 지으며 대답했다. ""물론이지.""","그녀는 살짝 미소를 지으며 대답했다. ""물론이지.""",1.0,1.0
+ko_022,quote,"소위 ""모범 사례""가 항상 최선은 아니다.","소위 ""모범 사례""가 항상 최선은 아니다.",1.0,1.0
+ko_023,quote,매뉴얼에 따르면 -- 42쪽 -- 한도는 500개입니다.,매뉴얼에 따르면 -- 42쪽 -- 한도는 500개입니다.,1.0,1.0
+ko_024,math,"x 제곱이 4라면, x는 2 또는 마이너스 2입니다.","x 제곱이 4라면, x는 2 또는 마이너스 2입니다.",1.0,1.0
+ko_025,math,원의 넓이는 파이 곱하기 반지름의 제곱입니다.,원의 넓이는 파이 곱하기 반지름의 제곱입니다.,1.0,1.0
+ko_026,math,y에 대해 풀어라: 3y 더하기 7은 22이다.,y에 대해 풀어라: 3y 더하기 7은 22이다.,1.0,1.0
+ko_027,math,삼각형의 내각의 합은 180도입니다.,삼각형의 내각의 합은 180도입니다.,1.0,1.0
+ko_028,math,"f(x) = 2x + 1일 때, f(3)을 구하시오.","f(x) = 2x + 1일 때, f(3)을 구하시오.",1.0,1.0
+ko_029,math,x 제곱을 0에서 1까지 적분하면 3분의 1이다.,x 제곱을 0에서 1까지 적분하면 3분의 1이다.,1.0,1.0
+ko_030,domain,반응기 온도는 섭씨 20도에서 25도 사이를 유지해야 합니다.,반응기 온도는 섭씨 20도에서 25도 사이를 유지해야 합니다.,1.0,1.0
+ko_031,domain,염화나트륨(NaCl)은 물에 잘 녹는다.,염화나트륨(NaCl)은 물에 잘 녹는다.,1.0,1.0
+ko_032,domain,이 CPU는 64비트 명령어 집합 아키텍처를 사용합니다.,이 CPU는 64비트 명령어 집합 아키텍처를 사용합니다.,1.0,1.0
+ko_033,domain,환자에게 아목시실린 500밀리그램을 하루 두 번 투여하였다.,환자에게 아목시실린 500밀리그램을 하루 두 번 투여하였다.,1.0,1.0
+ko_034,domain,A36 강재의 항복 강도는 약 250메가파스칼입니다.,A36 강재의 항복 강도는 약 250메가파스칼입니다.,1.0,1.0
+ko_035,domain,중합효소 연쇄 반응(PCR)은 DNA 조각을 증폭합니다.,중합효소 연쇄 반응(PCR)은 DNA 조각을 증폭합니다.,1.0,1.0
+ko_036,domain,레이놀즈 수는 흐름이 층류인지 난류인지를 결정합니다.,레이놀즈 수는 흐름이 층류인지 난류인지를 결정합니다.,1.0,1.0
+ko_037,domain,HTTP 상태 코드 404는 리소스를 찾을 수 없음을 의미합니다.,HTTP 상태 코드 404는 리소스를 찾을 수 없음을 의미합니다.,1.0,1.0
+ko_038,domain,벤젠(C6H6)은 방향족 탄화수소입니다.,벤젠(C6H6)은 방향족 탄화수소입니다.,1.0,1.0
+ko_039,domain,컴파일러는 구문 분석 과정에서 추상 구문 트리(AST)를 생성합니다.,컴파일러는 구문 분석 과정에서 추상 구문 트리(AST)를 생성합니다.,1.0,1.0
+ko_040,basic,다음 기차는 몇 시에 출발합니까?,다음 기차는 몇 시에 출발합니까?,1.0,1.0
+ko_041,basic,나는 그런 것을 전에 한 번도 본 적이 없다.,나는 그런 것을 전에 한 번도 본 적이 없다.,1.0,1.0
+ko_042,basic,그들은 추후 공지가 있을 때까지 행사를 연기하기로 했다.,그들은 추후 공지가 있을 때까지 행사를 연기하기로 했다.,1.0,1.0
+ko_043,number,2019년부터 2023년까지 매출은 47.3퍼센트 증가했다.,2019년부터 2023년까지 매출은 47.3퍼센트 증가했다.,1.0,1.0
+ko_044,number,서버 응답 시간은 평균 12.8밀리초였습니다.,서버 응답 시간은 평균 12.8밀리초였습니다.,1.0,1.0
+ko_045,list,다음 예외 사항에 유의하시오: 별표(*)가 표시된 항목은 선택 사항입니다.,다음 예외 사항에 유의하시오: 별표(*)가 표시된 항목은 선택 사항입니다.,1.0,1.0

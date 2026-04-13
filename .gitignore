@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+venv/
+env/
+.venv/
+.env
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Project artifacts
+*.log
+web/server.log
+web/backend/__pycache__/
+
+# Large datasets — kept out of git, distributed via HuggingFace
+data/hf_dataset/train.jsonl
+data/hf_dataset/*.jsonl
+
+# Bulk results — regenerable, large
+results/msds/bulk_stats.csv
+results/msds/scan_*.log
+results/msds/scan_*.txt
+results/demo_braille.pdf
+
+# External reference repo (vendored, has its own .git)
+data/braille/ref_converter/
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+paper/compile.log
+paper/compile2.log
+
+# Local DB pointer (DB lives at G:/MSDS/data/terminology.db)
+*.db
+*.db-journal
+
+# HuggingFace cache
+.cache/
