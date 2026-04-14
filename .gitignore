@@ -70,3 +70,4 @@ paper/compile2.log
 # HuggingFace cache
 .cache/
 .gstack/
+.omx/
