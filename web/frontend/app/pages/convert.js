@@ -1,6 +1,6 @@
 import { apiPostJson } from "../lib/api.js";
 import { copyText } from "../lib/clipboard.js";
-import { qs } from "../lib/dom.js";
+import { clear, el, qs } from "../lib/dom.js";
 
 export function initConvert({ root, toast }) {
   const runBtn = qs(root, "#convert-run");
@@ -19,11 +19,10 @@ export function initConvert({ root, toast }) {
     try {
       const d = await apiPostJson("/convert", { text: input });
       outputEl.textContent = d.braille;
-      statsEl.innerHTML = `
-        <span>입력 ${d.text_chars.toLocaleString()}자</span>
-        <span>점자 ${d.braille_cells.toLocaleString()}셀</span>
-        <span>비율 ${(d.braille_cells / d.text_chars).toFixed(2)}x</span>
-      `;
+      clear(statsEl);
+      statsEl.appendChild(el("span", { text: `입력 ${d.text_chars.toLocaleString()}자` }));
+      statsEl.appendChild(el("span", { text: `점자 ${d.braille_cells.toLocaleString()}셀` }));
+      statsEl.appendChild(el("span", { text: `비율 ${(d.braille_cells / d.text_chars).toFixed(2)}x` }));
     } catch {
       outputEl.textContent = "변환에 실패했습니다. 서버 연결을 확인하세요.";
     }
@@ -51,4 +50,3 @@ export function initConvert({ root, toast }) {
 
   return { convertText, copyBraille, clearConvert };
 }
-

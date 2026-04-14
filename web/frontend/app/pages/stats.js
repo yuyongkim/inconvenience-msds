@@ -1,14 +1,20 @@
 import { apiGet } from "../lib/api.js";
+import { clear, el } from "../lib/dom.js";
 
 export function initStats({ statsEl }) {
   async function refresh() {
     try {
       const d = await apiGet("/stats");
-      statsEl.innerHTML = `
-        <div class="stat-item"><strong>${d.total_chemicals.toLocaleString()}</strong> 화학물질</div>
-        <div class="stat-item"><strong>${d.total_sections.toLocaleString()}</strong> MSDS 섹션</div>
-        <div class="stat-item"><strong>${d.complete_chemicals.toLocaleString()}</strong> 완전(15+)</div>
-      `;
+      clear(statsEl);
+      statsEl.appendChild(
+        el("div", { class: "stat-item" }, [el("strong", { text: d.total_chemicals.toLocaleString() }), " 화학물질"]),
+      );
+      statsEl.appendChild(
+        el("div", { class: "stat-item" }, [el("strong", { text: d.total_sections.toLocaleString() }), " MSDS 섹션"]),
+      );
+      statsEl.appendChild(
+        el("div", { class: "stat-item" }, [el("strong", { text: d.complete_chemicals.toLocaleString() }), " 완전(15+)"]),
+      );
     } catch {
       statsEl.innerHTML = "";
     }
@@ -16,4 +22,3 @@ export function initStats({ statsEl }) {
 
   return { refresh };
 }
-
