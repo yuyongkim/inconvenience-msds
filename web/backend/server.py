@@ -50,6 +50,7 @@ def _resolve_db_path() -> Path | None:
 
     candidates = [
         PROJECT_ROOT / "data" / "terminology.db",
+        PROJECT_ROOT / "data" / "terminology.sample.db",
         PROJECT_ROOT / "terminology.db",
         Path.cwd() / "terminology.db",
     ]

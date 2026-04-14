@@ -52,6 +52,8 @@ python -c "from pipeline.ko_braille import encode_korean_braille; \
            print(encode_korean_braille('벤젠은 방향족 탄화수소이다.'))"
 
 # Run the web service locally
+# - Uses `data/terminology.sample.db` by default (small sample DB included for demo)
+# - For full data, set `BRAILLE_MSDS_DB_PATH` to your `terminology.db` path
 cd web/backend && uvicorn server:app --port 8000
 
 # Bulk-convert the entire KOSHA database (requires terminology.db)

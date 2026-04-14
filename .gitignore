@@ -65,6 +65,8 @@ paper/compile2.log
 # Local DB pointer (DB lives at G:/MSDS/data/terminology.db)
 *.db
 *.db-journal
+!data/terminology.sample.db
 
 # HuggingFace cache
 .cache/
+.gstack/
