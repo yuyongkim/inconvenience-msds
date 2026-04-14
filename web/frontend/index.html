@@ -897,9 +897,9 @@
                 const r = await fetch(`${API}/stats`);
                 const d = await r.json();
                 document.getElementById('stats-bar').innerHTML = `
-                    <div class="stat-item"><strong>${d.complete_chemicals.toLocaleString()}</strong> 화학물질</div>
+                    <div class="stat-item"><strong>${d.total_chemicals.toLocaleString()}</strong> 화학물질</div>
                     <div class="stat-item"><strong>${d.total_sections.toLocaleString()}</strong> MSDS 섹션</div>
-                    <div class="stat-item"><strong>16</strong> 섹션/물질</div>
+                    <div class="stat-item"><strong>${d.complete_chemicals.toLocaleString()}</strong> 완전(15+)</div>
                 `;
             } catch (e) {
                 document.getElementById('stats-bar').innerHTML = '';
@@ -1064,10 +1064,34 @@
             }
         }
 
-        function copyBraille() {
+        function _fallbackCopyText(text) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.top = '-1000px';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                return document.execCommand('copy');
+            } catch {
+                return false;
+            } finally {
+                document.body.removeChild(ta);
+            }
+        }
+
+        async function copyBraille() {
             const text = document.getElementById('convert-output').textContent;
-            if (text && text !== '변환 중...' && !text.startsWith('변환에 실패')) {
-                navigator.clipboard.writeText(text).then(() => showToast('클립보드에 복사됨'));
+            if (!text || text === '변환 중...' || text.startsWith('변환에 실패')) return;
+
+            try {
+                await navigator.clipboard.writeText(text);
+                showToast('클립보드에 복사됨');
+            } catch {
+                const ok = _fallbackCopyText(text);
+                showToast(ok ? '클립보드에 복사됨' : '복사에 실패했습니다');
             }
         }
 
