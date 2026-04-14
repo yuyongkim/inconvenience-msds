@@ -18,6 +18,7 @@ Run:
 """
 
 from __future__ import annotations
+import os
 import sqlite3
 import sys
 from pathlib import Path
@@ -35,8 +36,30 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from pipeline.ko_braille import encode_korean_braille
 
-DB_PATH = "G:/MSDS/data/terminology.db"
 FRONTEND_DIR = PROJECT_ROOT / "web" / "frontend"
+
+
+def _resolve_db_path() -> Path | None:
+    env = (
+        os.getenv("BRAILLE_MSDS_DB_PATH")
+        or os.getenv("BRAILLE_DB_PATH")
+        or os.getenv("DB_PATH")
+    )
+    if env:
+        return Path(env).expanduser()
+
+    candidates = [
+        PROJECT_ROOT / "data" / "terminology.db",
+        PROJECT_ROOT / "terminology.db",
+        Path.cwd() / "terminology.db",
+    ]
+    for p in candidates:
+        if p.exists():
+            return p
+    return None
+
+
+DB_PATH = _resolve_db_path()
 
 app = FastAPI(
     title="Braille MSDS",
@@ -82,7 +105,13 @@ SECTION_TITLES = {
 # ---------------------------------------------------------------------------
 
 def get_db() -> sqlite3.Connection:
-    conn = sqlite3.connect(DB_PATH)
+    if DB_PATH is None or not DB_PATH.exists():
+        raise HTTPException(
+            status_code=500,
+            detail="terminology.db not found. Set BRAILLE_MSDS_DB_PATH to the DB file path.",
+        )
+
+    conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
     return conn
 

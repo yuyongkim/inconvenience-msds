@@ -9,25 +9,28 @@
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
     <style>
         :root {
-            --bg: #f4f5f7;
-            --surface: #fff;
+            --bg: #f6f7f9;
+            --surface: #ffffff;
             --surface-raised: #fff;
-            --border: #e2e4e8;
-            --border-light: #eef0f3;
-            --text: #1c1e21;
-            --text-secondary: #5f6368;
-            --text-tertiary: #8c9097;
+            --border: #e5e7eb;
+            --border-light: #eef2f7;
+            --text: #0b0f16;
+            --text-secondary: #3c4251;
+            --text-tertiary: #707786;
             --accent: #0f6b5e;
             --accent-hover: #0a5a4e;
             --accent-subtle: #e8f5f2;
             --accent-text: #0a4f44;
-            --braille-bg: #1a1d23;
+            --braille-bg: #121723;
             --braille-text: #d4e0dc;
-            --shadow-sm: 0 1px 2px rgba(28,30,33,0.04), 0 1px 3px rgba(28,30,33,0.06);
-            --shadow-md: 0 2px 4px rgba(28,30,33,0.04), 0 4px 12px rgba(28,30,33,0.08);
-            --radius: 10px;
-            --radius-sm: 6px;
+            --shadow-sm: 0 1px 2px rgba(18, 23, 35, 0.04), 0 1px 3px rgba(18, 23, 35, 0.06);
+            --shadow-md: 0 4px 14px rgba(18, 23, 35, 0.08);
+            --shadow-lg: 0 18px 44px rgba(18, 23, 35, 0.12);
+            --radius: 14px;
+            --radius-sm: 10px;
             --transition: 180ms ease;
+            --ring: 0 0 0 3px rgba(15,107,94,0.14);
+            --ring-strong: 0 0 0 4px rgba(15,107,94,0.20);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,11 +44,35 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(1200px 700px at 15% 10%, rgba(15,107,94,0.10), transparent 55%),
+                radial-gradient(900px 500px at 85% 15%, rgba(15,107,94,0.05), transparent 58%);
+            opacity: 0.9;
+        }
+
+        a { color: inherit; }
+
+        :focus-visible {
+            outline: none;
+            box-shadow: var(--ring-strong);
+            border-color: rgba(15,107,94,0.65) !important;
+        }
+
         /* ===== Header ===== */
         header {
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.78);
+            border-bottom: 1px solid rgba(229,231,235,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 18px 0 14px;
         }
         .header-inner {
             max-width: 1360px;
@@ -58,8 +85,8 @@
         }
         .header-brand {
             display: flex;
-            align-items: baseline;
-            gap: 10px;
+            align-items: center;
+            gap: 14px;
         }
         header h1 {
             font-size: 18px;
@@ -85,7 +112,8 @@
             font-size: 12px;
             font-weight: 500;
             color: var(--text-secondary);
-            background: var(--bg);
+            background: rgba(246,247,249,0.9);
+            border: 1px solid rgba(229,231,235,0.9);
             font-variant-numeric: tabular-nums;
         }
         .stat-item strong {
@@ -103,6 +131,9 @@
             margin-top: 12px;
         }
         .tab {
+            appearance: none;
+            border: 1px solid transparent;
+            background: transparent;
             padding: 10px 20px;
             cursor: pointer;
             font-size: 13px;
@@ -115,8 +146,9 @@
         .tab:hover { color: var(--text-secondary); background: rgba(0,0,0,0.02); }
         .tab.active {
             color: var(--accent-text);
-            background: var(--surface);
+            background: rgba(255,255,255,0.92);
             box-shadow: inset 0 -2px 0 var(--accent);
+            border-color: rgba(229,231,235,0.9);
         }
 
         /* ===== Tab content ===== */
@@ -129,12 +161,140 @@
             padding: 20px 32px 48px;
         }
 
+        /* ===== Hero ===== */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 16px;
+            align-items: stretch;
+            margin: 10px 0 18px;
+        }
+        .hero-copy {
+            background: rgba(255,255,255,0.72);
+            border: 1px solid rgba(229,231,235,0.85);
+            border-radius: calc(var(--radius) + 6px);
+            padding: 22px 24px;
+            box-shadow: var(--shadow-sm);
+        }
+        .hero-title {
+            font-size: 28px;
+            line-height: 1.15;
+            letter-spacing: -0.7px;
+            font-weight: 750;
+            color: var(--text);
+        }
+        .hero-title strong {
+            font-weight: 800;
+            color: var(--accent-text);
+        }
+        .hero-desc {
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            max-width: 65ch;
+            line-height: 1.75;
+        }
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(246,247,249,0.8);
+            border: 1px solid rgba(229,231,235,0.9);
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: -0.1px;
+        }
+        .pill code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+            font-size: 11px;
+            color: var(--accent-text);
+        }
+        .pill .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--accent);
+            box-shadow: 0 0 0 3px rgba(15,107,94,0.12);
+            animation: breathe 2.6s ease-in-out infinite;
+        }
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); opacity: 0.75; }
+            50% { transform: scale(1.15); opacity: 1; }
+        }
+        .hero-preview {
+            position: relative;
+            overflow: hidden;
+            border-radius: calc(var(--radius) + 10px);
+            border: 1px solid rgba(229,231,235,0.85);
+            background:
+                linear-gradient(140deg, rgba(15,107,94,0.14), transparent 45%),
+                radial-gradient(520px 240px at 30% 10%, rgba(255,255,255,0.65), transparent 62%),
+                rgba(255,255,255,0.72);
+            box-shadow: var(--shadow-md);
+        }
+        .hero-preview::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+            transform: translateX(-40%);
+            animation: sweep 2.6s ease-in-out infinite;
+            opacity: 0.55;
+        }
+        @keyframes sweep {
+            0% { transform: translateX(-60%); }
+            60% { transform: translateX(70%); }
+            100% { transform: translateX(70%); }
+        }
+        .hero-preview-inner {
+            position: relative;
+            height: 100%;
+            padding: 18px;
+            display: grid;
+            place-items: end start;
+        }
+        .hero-preview-card {
+            width: 100%;
+            background: rgba(18, 23, 35, 0.86);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            box-shadow: 0 18px 44px rgba(18, 23, 35, 0.22);
+            padding: 14px 14px 12px;
+        }
+        .hero-preview-label {
+            font-size: 11px;
+            color: rgba(212,224,220,0.62);
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-weight: 650;
+        }
+        .hero-preview-braille {
+            margin-top: 10px;
+            font-family: "Noto Sans Symbols 2", "Noto Sans Symbols", "Segoe UI Symbol", monospace;
+            color: rgba(212,224,220,0.92);
+            font-size: 16px;
+            line-height: 1.9;
+            letter-spacing: 0.6px;
+            white-space: pre-wrap;
+        }
+
         /* ===== Search ===== */
         .search-bar {
             display: flex;
             gap: 8px;
             margin-bottom: 20px;
         }
+        .search-bar form { display: contents; }
         .search-bar input {
             flex: 1;
             padding: 11px 16px;
@@ -150,34 +310,40 @@
         .search-bar input:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(15,107,94,0.1);
+            box-shadow: var(--ring);
         }
         .btn {
             padding: 10px 22px;
             font-size: 13px;
             font-family: inherit;
             font-weight: 600;
-            border: none;
+            border: 1px solid transparent;
             border-radius: var(--radius-sm);
             cursor: pointer;
-            transition: background var(--transition), transform 80ms ease;
+            transition: background var(--transition), transform 80ms ease, border-color var(--transition);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 6px;
         }
-        .btn:active { transform: scale(0.97); }
+        .btn:active { transform: translateY(1px) scale(0.985); }
         .btn-primary {
             background: var(--accent);
             color: #fff;
         }
         .btn-primary:hover { background: var(--accent-hover); }
         .btn-secondary {
-            background: var(--bg);
+            background: rgba(246,247,249,0.9);
             color: var(--text-secondary);
             border: 1.5px solid var(--border);
         }
-        .btn-secondary:hover { background: #ebedf0; border-color: #d0d3d8; }
+        .btn-secondary:hover { background: #eef1f6; border-color: rgba(229,231,235,0.95); }
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1.5px solid rgba(229,231,235,0.95);
+        }
+        .btn-ghost:hover { background: rgba(255,255,255,0.7); }
 
         /* ===== Layout ===== */
         .layout {
@@ -189,9 +355,10 @@
 
         /* ===== List panel ===== */
         .list-panel {
-            background: var(--surface);
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.84);
+            border-radius: calc(var(--radius) + 6px);
+            border: 1px solid rgba(229,231,235,0.9);
+            box-shadow: var(--shadow-sm);
             max-height: calc(100dvh - 240px);
             overflow-y: auto;
             scrollbar-width: thin;
@@ -206,9 +373,11 @@
             border-bottom: 1px solid var(--border-light);
             position: sticky;
             top: 0;
-            background: var(--surface);
+            background: rgba(255,255,255,0.92);
             z-index: 1;
             font-variant-numeric: tabular-nums;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
         .list-item {
             padding: 10px 14px;
@@ -232,13 +401,16 @@
             margin-top: 1px;
         }
         .list-item.active .chem-name { color: var(--accent-text); font-weight: 600; }
+        .list-item[role="button"] { background: transparent; border: 0; text-align: left; width: 100%; }
+        .list-item:focus-visible { box-shadow: var(--ring); }
 
         /* ===== Detail panel ===== */
         .detail-panel {
-            background: var(--surface);
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.84);
+            border-radius: calc(var(--radius) + 6px);
+            border: 1px solid rgba(229,231,235,0.9);
             min-height: 400px;
+            box-shadow: var(--shadow-sm);
         }
         .detail-header {
             padding: 24px 28px 18px;
@@ -261,10 +433,11 @@
             font-size: 11px;
             font-weight: 500;
             color: var(--text-tertiary);
-            background: var(--bg);
+            background: rgba(246,247,249,0.9);
             padding: 3px 10px;
             border-radius: 4px;
             font-variant-numeric: tabular-nums;
+            border: 1px solid rgba(229,231,235,0.9);
         }
         .download-row {
             display: flex;
@@ -364,8 +537,8 @@
             font-family: inherit;
             line-height: 1.8;
             border: 1.5px solid var(--border);
-            border-radius: var(--radius);
-            background: var(--surface);
+            border-radius: calc(var(--radius) + 6px);
+            background: rgba(255,255,255,0.9);
             color: var(--text);
             resize: vertical;
             transition: border-color var(--transition), box-shadow var(--transition);
@@ -374,7 +547,7 @@
         .convert-panel textarea:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(15,107,94,0.1);
+            box-shadow: var(--ring);
         }
         .convert-output {
             width: 100%;
@@ -384,7 +557,7 @@
             background: var(--braille-bg);
             color: var(--braille-text);
             border: none;
-            border-radius: var(--radius);
+            border-radius: calc(var(--radius) + 6px);
             font-family: "Noto Sans Symbols 2", "Noto Sans Symbols", "Segoe UI Symbol", monospace;
             line-height: 1.8;
             letter-spacing: 0.5px;
@@ -404,26 +577,101 @@
 
         /* ===== Placeholder / Loader ===== */
         .placeholder {
-            text-align: center;
-            padding: 80px 28px;
-            color: var(--text-tertiary);
+            padding: 28px;
+            color: var(--text-secondary);
         }
-        .placeholder .braille-hero {
+        .empty-state {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 16px;
+            align-items: stretch;
+        }
+        .empty-copy {
+            padding: 14px 12px 16px;
+        }
+        .empty-copy h3 {
+            font-size: 16px;
+            letter-spacing: -0.3px;
+            font-weight: 750;
+            color: var(--text);
+            line-height: 1.35;
+        }
+        .empty-copy p { font-size: 13px; line-height: 1.75; margin-top: 8px; color: var(--text-secondary); }
+        .empty-actions { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
+        .empty-preview {
+            border-radius: calc(var(--radius) + 10px);
+            background: var(--braille-bg);
+            color: var(--braille-text);
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: 0 18px 44px rgba(18, 23, 35, 0.18);
+            padding: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .empty-preview::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: radial-gradient(500px 320px at 30% 15%, rgba(255,255,255,0.10), transparent 58%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .empty-preview .braille-hero {
+            position: relative;
             font-family: "Noto Sans Symbols 2", "Noto Sans Symbols", "Segoe UI Symbol", monospace;
-            font-size: 36px;
-            color: var(--accent);
-            opacity: 0.4;
-            margin-bottom: 16px;
-            letter-spacing: 4px;
+            font-size: 30px;
+            opacity: 0.7;
+            letter-spacing: 6px;
+            margin-bottom: 10px;
         }
-        .placeholder p { font-size: 13px; line-height: 1.7; }
-        .placeholder .sub { font-size: 12px; margin-top: 6px; color: var(--text-tertiary); opacity: 0.7; }
+        .empty-preview .sub {
+            position: relative;
+            font-size: 12px;
+            line-height: 1.75;
+            color: rgba(212,224,220,0.80);
+            opacity: 0.95;
+        }
 
         .loader {
-            text-align: center;
-            padding: 32px;
+            padding: 24px 18px;
             font-size: 13px;
             color: var(--text-tertiary);
+        }
+        .skeleton {
+            padding: 18px;
+        }
+        .skeleton-row {
+            height: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(229,231,235,0.55), rgba(229,231,235,0.95), rgba(229,231,235,0.55));
+            background-size: 200% 100%;
+            animation: shimmer 1.2s ease-in-out infinite;
+            margin-top: 10px;
+        }
+        .skeleton-row:first-child { margin-top: 0; width: 66%; }
+        .skeleton-row:nth-child(2) { width: 92%; }
+        .skeleton-row:nth-child(3) { width: 78%; }
+        @keyframes shimmer {
+            0% { background-position: 180% 0; }
+            100% { background-position: -20% 0; }
+        }
+        .error-box {
+            padding: 16px 18px;
+            margin: 14px;
+            border-radius: calc(var(--radius) + 6px);
+            border: 1px solid rgba(229,231,235,0.9);
+            background: rgba(255,255,255,0.86);
+            box-shadow: var(--shadow-sm);
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.75;
+        }
+        .error-box strong {
+            display: block;
+            color: var(--text);
+            font-weight: 750;
+            letter-spacing: -0.2px;
+            margin-bottom: 6px;
         }
 
         /* ===== Toast ===== */
@@ -461,6 +709,8 @@
 
         /* ===== Responsive ===== */
         @media (max-width: 960px) {
+            .hero { grid-template-columns: 1fr; }
+            .empty-state { grid-template-columns: 1fr; }
             .layout { grid-template-columns: 1fr; }
             .list-panel { max-height: 280px; }
             .section-content { grid-template-columns: 1fr; }
@@ -477,6 +727,11 @@
             .stats-bar { gap: 4px; }
             .stat-item { padding: 4px 10px; font-size: 11px; }
         }
+        @media (prefers-reduced-motion: reduce) {
+            * { scroll-behavior: auto !important; }
+            .pill .dot, .hero-preview::before, .skeleton-row { animation: none !important; }
+            .btn { transition: background var(--transition), border-color var(--transition) !important; }
+        }
     </style>
 </head>
 <body>
@@ -490,17 +745,40 @@
         </div>
     </header>
 
-    <div class="tabs">
-        <div class="tab active" data-tab="browse" onclick="switchTab('browse')">화학물질 검색</div>
-        <div class="tab" data-tab="convert" onclick="switchTab('convert')">실시간 변환</div>
+    <div class="tabs" role="tablist" aria-label="Braille MSDS">
+        <button class="tab active" id="tab-btn-browse" type="button" role="tab" aria-selected="true" aria-controls="tab-browse" data-tab="browse" onclick="switchTab('browse')">화학물질 검색</button>
+        <button class="tab" id="tab-btn-convert" type="button" role="tab" aria-selected="false" aria-controls="tab-convert" data-tab="convert" onclick="switchTab('convert')">실시간 변환</button>
     </div>
 
     <main>
         <!-- Tab 1: Browse chemicals -->
-        <div class="tab-content active" id="tab-browse">
+        <div class="tab-content active" id="tab-browse" role="tabpanel" aria-labelledby="tab-btn-browse">
+            <section class="hero" aria-label="서비스 소개">
+                <div class="hero-copy">
+                    <div class="hero-title">MSDS를 <strong>점자</strong>로 변환하고 바로 내려받습니다</div>
+                    <div class="hero-desc">화학물질 안전보건자료의 본문을 한국 점자 규정(2017) 기준으로 변환합니다. Unicode 점자와 엠보서용 BRF를 지원합니다.</div>
+                    <div class="hero-meta">
+                        <span class="pill"><span class="dot" aria-hidden="true"></span>API: <code>/api</code></span>
+                        <span class="pill">Unicode TXT</span>
+                        <span class="pill">BRF</span>
+                    </div>
+                </div>
+                <div class="hero-preview" aria-hidden="true">
+                    <div class="hero-preview-inner">
+                        <div class="hero-preview-card">
+                            <div class="hero-preview-label">BRAILLE PREVIEW</div>
+                            <div class="hero-preview-braille">⠈⠱⠣⠣⠪⠐⠒⠀⠠⠵⠔⠪⠐⠒⠀⠠⠎⠙⠎⠎
+⠠⠅⠕⠎⠓⠁⠀⠃⠗⠁⠊⠇⠇⠑⠀⠉⠕⠝⠧⠑⠗⠞</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <div class="search-bar">
-                <input type="text" id="search" placeholder="화학물질명 또는 CAS 번호 검색" />
-                <button class="btn btn-primary" onclick="search()">검색</button>
+                <form onsubmit="event.preventDefault(); search();">
+                    <input type="text" id="search" placeholder="화학물질명 또는 CAS 번호 검색" />
+                    <button class="btn btn-primary" type="submit">검색</button>
+                    <button class="btn btn-ghost" type="button" onclick="clearSearch()">초기화</button>
+                </form>
             </div>
             <div class="layout">
                 <div class="list-panel">
@@ -509,9 +787,20 @@
                 <div class="detail-panel">
                     <div id="detail">
                         <div class="placeholder">
-                            <div class="braille-hero">&#x2803;&#x2817;&#x2807;</div>
-                            <p>왼쪽 목록에서 화학물질을 선택하세요</p>
-                            <p class="sub">검색하거나 목록을 클릭하면 MSDS 전문이 점자로 변환됩니다</p>
+                            <div class="empty-state">
+                                <div class="empty-copy">
+                                    <h3>왼쪽 목록에서 화학물질을 선택하세요</h3>
+                                    <p>검색하거나 목록을 클릭하면 MSDS 전문이 점자로 변환됩니다. 변환 결과는 섹션별로 한국어/점자를 나란히 확인할 수 있습니다.</p>
+                                    <div class="empty-actions">
+                                        <button class="btn btn-secondary" type="button" onclick="focusSearch()">검색창으로 이동</button>
+                                        <button class="btn btn-secondary" type="button" onclick="loadRandomFromList()">목록에서 임의 선택</button>
+                                    </div>
+                                </div>
+                                <div class="empty-preview">
+                                    <div class="braille-hero">&#x2803;&#x2817;&#x2807;</div>
+                                    <div class="sub">선택 후 다운로드 버튼에서 Unicode TXT / BRF를 내려받을 수 있습니다.</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -519,7 +808,7 @@
         </div>
 
         <!-- Tab 2: Real-time conversion -->
-        <div class="tab-content" id="tab-convert">
+        <div class="tab-content" id="tab-convert" role="tabpanel" aria-labelledby="tab-btn-convert">
             <div class="convert-actions">
                 <button class="btn btn-primary" onclick="convertText()">점자로 변환</button>
                 <button class="btn btn-secondary" onclick="copyBraille()">복사</button>
@@ -542,15 +831,23 @@
 
     <footer>KOSHA-Braille &middot; 한국 점자 규정 (2017) 기반 &middot; 48,966종 화학물질</footer>
 
-    <div class="toast" id="toast"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
         const API = '/api';
         let currentChemId = null;
+        let inflightList = null;
+        let inflightDetail = null;
 
         function switchTab(tabName) {
-            document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.toggle('active', t.id === 'tab-' + tabName));
+            document.querySelectorAll('.tab').forEach(t => {
+                const active = t.dataset.tab === tabName;
+                t.classList.toggle('active', active);
+                t.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+            document.querySelectorAll('.tab-content').forEach(t => {
+                t.classList.toggle('active', t.id === 'tab-' + tabName);
+            });
         }
 
         function showToast(msg) {
@@ -558,6 +855,40 @@
             el.textContent = msg;
             el.classList.add('visible');
             setTimeout(() => el.classList.remove('visible'), 2000);
+        }
+
+        function renderListSkeleton() {
+            return `
+                <div class="list-header">불러오는 중</div>
+                <div class="skeleton">
+                    <div class="skeleton-row"></div>
+                    <div class="skeleton-row"></div>
+                    <div class="skeleton-row"></div>
+                </div>
+            `;
+        }
+
+        function renderDetailSkeleton() {
+            return `
+                <div class="skeleton">
+                    <div class="skeleton-row" style="width: 48%"></div>
+                    <div class="skeleton-row" style="width: 86%"></div>
+                    <div class="skeleton-row" style="width: 72%"></div>
+                </div>
+            `;
+        }
+
+        function renderError(title, message, actionLabel, actionHandlerName) {
+            const action = actionLabel && actionHandlerName
+                ? `<button class="btn btn-secondary" type="button" onclick="${actionHandlerName}()">${escapeHtml(actionLabel)}</button>`
+                : '';
+            return `
+                <div class="error-box" role="alert">
+                    <strong>${escapeHtml(title)}</strong>
+                    <div>${escapeHtml(message)}</div>
+                    <div class="empty-actions" style="margin-top: 12px">${action}</div>
+                </div>
+            `;
         }
 
         // Stats
@@ -578,26 +909,62 @@
         // Chemical list
         async function loadList(searchQuery = '') {
             const list = document.getElementById('list');
-            list.innerHTML = '<div class="loader">검색 중</div>';
+            list.innerHTML = renderListSkeleton();
+
+            if (inflightList) inflightList.abort();
+            inflightList = new AbortController();
+            const { signal } = inflightList;
             try {
                 const url = `${API}/chemicals?limit=100${searchQuery ? '&search=' + encodeURIComponent(searchQuery) : ''}`;
-                const r = await fetch(url);
+                const r = await fetch(url, { signal });
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 const d = await r.json();
                 if (d.results.length === 0) {
-                    list.innerHTML = '<div class="loader">결과 없음</div>';
+                    list.innerHTML = `
+                        <div class="list-header">결과 없음</div>
+                        <div class="loader">다른 키워드로 다시 검색해 보세요</div>
+                    `;
                     return;
                 }
                 list.innerHTML = `
                     <div class="list-header">${d.total.toLocaleString()}개 중 ${d.results.length}개 표시</div>
                 ` + d.results.map(c => `
-                    <div class="list-item" data-id="${c.chem_id}" onclick="loadDetail('${c.chem_id}')">
+                    <button class="list-item" type="button" role="button" data-id="${c.chem_id}" onclick="loadDetail('${c.chem_id}')">
                         <div class="chem-id">${c.chem_id}</div>
                         <div class="chem-name">${escapeHtml(c.name)}</div>
-                    </div>
+                    </button>
                 `).join('');
             } catch (e) {
-                list.innerHTML = '<div class="loader">서버 연결 실패</div>';
+                if (e.name === 'AbortError') return;
+                list.innerHTML = renderError('목록을 불러오지 못했습니다', '서버 연결을 확인한 뒤 다시 시도하세요.', '다시 시도', 'retryList');
             }
+        }
+
+        function retryList() {
+            const q = document.getElementById('search').value.trim();
+            loadList(q);
+        }
+
+        function clearSearch() {
+            const input = document.getElementById('search');
+            input.value = '';
+            loadList('');
+            showToast('검색 조건이 초기화되었습니다');
+            input.focus();
+        }
+
+        function focusSearch() {
+            const input = document.getElementById('search');
+            input.focus();
+            input.select();
+        }
+
+        function loadRandomFromList() {
+            const items = Array.from(document.querySelectorAll('.list-item[data-id]'));
+            if (items.length === 0) return;
+            const idx = Math.floor(Math.random() * items.length);
+            const chemId = items[idx].dataset.id;
+            if (chemId) loadDetail(chemId);
         }
 
         // Chemical detail
@@ -607,10 +974,15 @@
                 el.classList.toggle('active', el.dataset.id === chemId);
             });
             const detail = document.getElementById('detail');
-            detail.innerHTML = '<div class="loader">점자 변환 중</div>';
+            detail.innerHTML = renderDetailSkeleton();
+
+            if (inflightDetail) inflightDetail.abort();
+            inflightDetail = new AbortController();
+            const { signal } = inflightDetail;
 
             try {
-                const r = await fetch(`${API}/chemicals/${chemId}/braille`);
+                const r = await fetch(`${API}/chemicals/${chemId}/braille`, { signal });
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 const d = await r.json();
                 const ratio = d.stats.korean_chars > 0
                     ? (d.stats.braille_cells / d.stats.korean_chars).toFixed(2) : '—';
@@ -655,8 +1027,14 @@
                 html += '</div>';
                 detail.innerHTML = html;
             } catch (e) {
-                detail.innerHTML = '<div class="loader">상세 정보를 불러올 수 없습니다</div>';
+                if (e.name === 'AbortError') return;
+                detail.innerHTML = renderError('상세 정보를 불러오지 못했습니다', '서버 연결을 확인한 뒤 다시 시도하세요.', '다시 시도', 'retryDetail');
             }
+        }
+
+        function retryDetail() {
+            if (!currentChemId) return;
+            loadDetail(currentChemId);
         }
 
         // Real-time conversion
@@ -673,6 +1051,7 @@
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({text: input}),
                 });
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
                 const d = await r.json();
                 output.textContent = d.braille;
                 document.getElementById('convert-stats').innerHTML = `
@@ -703,10 +1082,6 @@
             loadList(q);
         }
 
-        document.getElementById('search').addEventListener('keydown', e => {
-            if (e.key === 'Enter') search();
-        });
-
         document.getElementById('convert-input').addEventListener('keydown', e => {
             if (e.key === 'Enter' && e.ctrlKey) convertText();
         });
@@ -716,6 +1091,18 @@
             div.textContent = text || '';
             return div.innerHTML;
         }
+
+        document.querySelector('.tabs').addEventListener('keydown', e => {
+            if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+            const tabs = Array.from(document.querySelectorAll('.tab'));
+            const idx = tabs.findIndex(t => t === document.activeElement);
+            if (idx === -1) return;
+            const next = e.key === 'ArrowRight' ? idx + 1 : idx - 1;
+            const el = tabs[(next + tabs.length) % tabs.length];
+            el.focus();
+            switchTab(el.dataset.tab);
+            e.preventDefault();
+        });
 
         loadStats();
         loadList();
