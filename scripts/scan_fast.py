@@ -10,6 +10,7 @@ Usage:
     python scripts/scan_fast.py --start 3740 --end 50000 --workers 16
 """
 
+import os
 import argparse
 import json
 import logging
@@ -27,8 +28,12 @@ logger = logging.getLogger(__name__)
 
 DB_PATH = "G:/MSDS/data/terminology.db"
 BASE_URL = "https://apis.data.go.kr/B552468/msdschem"
-API_KEY = "REDACTED_DATA_GO_KR_SERVICE_KEY"
-
+API_KEY = os.environ.get("DATA_GO_KR_SERVICE_KEY", "")
+if not API_KEY:
+    raise SystemExit(
+        "DATA_GO_KR_SERVICE_KEY is not set. Request a service key at "
+        "data.go.kr and set it in the environment before running this script."
+    )
 _shutdown = False
 def _signal_handler(sig, frame):
     global _shutdown

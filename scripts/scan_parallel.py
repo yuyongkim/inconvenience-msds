@@ -10,6 +10,7 @@ Usage:
     python scripts/scan_parallel.py --start 3740 --end 50000 --workers 10
 """
 
+import os
 import argparse
 import logging
 import signal
@@ -26,8 +27,12 @@ logger = logging.getLogger(__name__)
 
 DB_PATH = "G:/MSDS/data/terminology.db"
 BASE_URL = "https://apis.data.go.kr/B552468/msdschem"
-API_KEY = "REDACTED_DATA_GO_KR_SERVICE_KEY"
-
+API_KEY = os.environ.get("DATA_GO_KR_SERVICE_KEY", "")
+if not API_KEY:
+    raise SystemExit(
+        "DATA_GO_KR_SERVICE_KEY is not set. Request a service key at "
+        "data.go.kr and set it in the environment before running this script."
+    )
 RATE_PER_WORKER = 0.3  # seconds between calls per worker
 _shutdown = False
 _lock = __import__('threading').Lock()

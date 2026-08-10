@@ -5,6 +5,7 @@ No probing needed — just fills in missing sections 2-16.
 Workers: 32, rate limit: 0.1s per worker (safe within 100k/endpoint/day)
 """
 
+import os
 import logging
 import signal
 import sqlite3
@@ -20,8 +21,12 @@ logger = logging.getLogger(__name__)
 
 DB_PATH = "G:/MSDS/data/terminology.db"
 BASE_URL = "https://apis.data.go.kr/B552468/msdschem"
-API_KEY = "REDACTED_DATA_GO_KR_SERVICE_KEY"
-
+API_KEY = os.environ.get("DATA_GO_KR_SERVICE_KEY", "")
+if not API_KEY:
+    raise SystemExit(
+        "DATA_GO_KR_SERVICE_KEY is not set. Request a service key at "
+        "data.go.kr and set it in the environment before running this script."
+    )
 _shutdown = False
 _lock = __import__('threading').Lock()
 _saved = 0

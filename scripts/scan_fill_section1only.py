@@ -3,6 +3,7 @@ Fill chemicals that only have section 1 (from Phase 1 probe).
 Fetch sections 2-16 for these.
 """
 
+import os
 import logging
 import signal
 import sqlite3
@@ -16,8 +17,12 @@ log = logging.getLogger()
 
 DB = "G:/MSDS/data/terminology.db"
 URL = "https://apis.data.go.kr/B552468/msdschem"
-KEY = "REDACTED_DATA_GO_KR_SERVICE_KEY"
-
+KEY = os.environ.get("DATA_GO_KR_SERVICE_KEY", "")
+if not KEY:
+    raise SystemExit(
+        "DATA_GO_KR_SERVICE_KEY is not set. Request a service key at "
+        "data.go.kr and set it in the environment before running this script."
+    )
 stop = False
 def _sig(s, f): global stop; stop = True; log.info("Stopping...")
 signal.signal(signal.SIGINT, _sig)
