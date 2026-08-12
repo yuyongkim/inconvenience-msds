@@ -191,8 +191,15 @@ KO_PUNCT_BRAILLE = {
     ':': dots_to_braille('5') + dots_to_braille('2'),
     ';': dots_to_braille('5-6'),
     '-': dots_to_braille('3-6'),
-    '(': dots_to_braille('3-6'),
-    ')': dots_to_braille('3-6'),
+    # Brackets are two cells under the 2017 revision (제54-56항). The revision
+    # moved them off the single 3-6 cell precisely because that cell was shared
+    # with 붙임표 and 줄표; see data/standards/README.md for the source pages.
+    '(': dots_to_braille('1-2-5') + dots_to_braille('3'),
+    ')': dots_to_braille('6') + dots_to_braille('2-4-5'),
+    '{': dots_to_braille('1-2-5') + dots_to_braille('1'),
+    '}': dots_to_braille('5') + dots_to_braille('2-4-5'),
+    '[': dots_to_braille('1-2-5') + dots_to_braille('1-2'),
+    ']': dots_to_braille('5-6') + dots_to_braille('2-4-5'),
     '"': dots_to_braille('2-3-6'),
     "'": dots_to_braille('3'),
 }
