@@ -21,15 +21,26 @@ All 6 stages implemented and tested. No external API keys required (Google Trans
 | Korean braille encoding | Hangul decomposition + 점자 규정 |
 | Real document E2E test | 4 domains passed |
 
+## 2017 한국 점자 규정 대조 (2026-08-14)
+
+| Metric | Value |
+|--------|-------|
+| 해설서 예시 자동 대조 | **275 / 475 일치** (감사 전 15) |
+| 반영한 항 | 제2항(첫소리 ㅇ), 제10·11항, 제12~18항(약자·약어), 제30·32~35항(로마자 종료표), 제38·39·49항, 제54~56항(괄호) |
+| 남은 미구현 | 옛 글자(제19~28항), 가운뎃점·빗금·따옴표·낫표·줄표·물결표 등 부호, 대문자 단어표 |
+| 점자 길이 변화 | 묵자 한 글자당 **2.086 → 1.65칸** |
+
+전체 내역은 `notes/2026-08-13-regulation-audit.md`.
+
 ## MSDS Bulk Conversion (KOSHA DB)
 
 | Metric | Value |
 |--------|-------|
 | Chemicals processed | **48,963** (0 errors) |
 | Total KR text | **127.1M chars** |
-| Total KR braille | **247.4M chars** |
-| Avg braille/text ratio | **1.947** |
-| Processing speed | **249.5 chemicals/s** (3.3 min total) |
+| Total KR braille | **209.7M chars** |
+| Avg braille/text ratio | **1.65** |
+| Processing speed | **162.6 chemicals/s** (5.0 min total) |
 
 ## GHS Hazard/Precautionary Statements
 
@@ -46,11 +57,37 @@ All 6 stages implemented and tested. No external API keys required (Google Trans
 | Metric | Value |
 |--------|-------|
 | Encoding coverage | **98.1%** |
-| Roundtrip edit similarity | **0.638** (encoder→decoder) |
-| Roundtrip ChrF | **0.625** |
-| Violations per 1,000 cells | **15.8** |
+| Roundtrip edit similarity (golden set, KR decode path) | **1.000** |
+| Roundtrip ChrF (golden set, KR decode path) | **1.000** |
+| Violations per 1,000 cells | **18.4** |
 
-Note: roundtrip score reflects decoder ambiguity (초성/종성 boundary), not encoding quality. Coverage 98% means 98% of input characters are properly mapped to braille cells.
+Note: KR round-trip metrics should be read as decoder-path verification, not encoder-correctness evidence. After routing KR evaluation through the Korean decode path and tightening mixed-script, punctuation, parenthesis, quote, and number-span handling, the Korean golden-set round-trip now reaches 1.000 edit similarity / 1.000 ChrF on 45/45 samples. Encoding coverage still measures direct text-to-braille mapping rather than decode quality.
+
+Nearly all of those violations are pass-through characters — 빗금·퍼센트·섭씨 등
+아직 점형을 넣지 않은 부호가 그대로 흘러나간 것이다 (33,983 / 38,325). 나머지는
+원문의 연속 빈칸(4,339)과 수표 뒤 비숫자(3)다.
+
+Decoder QA summary artifacts currently report:
+- stress corpus: **39 cases, 1 failure** (붙임표로 이어진 수 다음 첫소리 — 점형이 같아
+  갈리지 않는 자리)
+- regulatory regression: **15 cases, 0 failures**
+- real-text spot-check (sample DB): **6 rows, 0 failures**
+- fresh 400-row sample from the full KOSHA DB: **30 rows differ**, 대부분 규정이 한 칸으로
+  합쳐 놓은 마침표/로마자 종료표 자리
+- synthetic noisy-braille stress:
+  - **2%** corruption → edit **0.8894**, ChrF **0.7606**
+  - **5%** corruption → edit **0.8690**, ChrF **0.7322**
+  - **10%** corruption → edit **0.7558**, ChrF **0.5413**
+
+Additional decoder QA artifacts:
+- `results/ko_decoder_stress_results.csv`
+- `results/ko_decoder_stress_summary.csv`
+- `results/ko_decoder_realtext_spotcheck.csv`
+- `results/ko_decoder_realtext_spotcheck_summary.csv`
+- `results/ko_decoder_noisy_stress.csv`
+- `results/ko_decoder_noisy_stress_summary.csv`
+- workflow notes: `notes/decoder_qa.md`
+- release checklist: `notes/decoder_release_checklist.md`
 
 ## International Expansion
 

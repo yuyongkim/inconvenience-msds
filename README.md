@@ -21,7 +21,7 @@ exist whether or not anyone asks for it on a given day.
 
 This repository contains:
 
-- **Dataset** — 48,966 chemicals, 769,897 MSDS sections, ~232M braille cells
+- **Dataset** — 48,966 chemicals, 769,897 MSDS sections, ~210M braille cells
 - **Encoder** — deterministic Korean text → Korean braille (2017 standards)
 - **Decoder** — Korean braille → Korean text (round-trip tooling)
 - **Pipeline** — full EN/KR braille conversion pipeline (13 modules)
@@ -110,6 +110,13 @@ Each record:
   braille converter [hangul-braille-converter](https://github.com/hyonzin/hangul-braille-converter)
 - **0 errors** across 48,966 chemicals in bulk conversion
 - **98.1%** character encoding coverage on 500-sample audit
+- Korean round-trip metrics are reported as decoder diagnostics, not encoder-correctness scores; after routing KR evaluation through the Korean decode path and tightening mixed-script/punctuation/number-span handling, the current golden-set round-trip result is **1.000 edit similarity / 1.000 ChrF (45/45)**
+- Persistent decoder stress corpus: **39 cases, 1 failure** (`results/ko_decoder_stress_summary.csv`)
+- Random sample real-text decoder spot-check: **12 rows across 3 runs, 0 failures** (`results/ko_decoder_realtext_spotcheck_summary.csv`)
+- Synthetic noisy-braille stress: at **2% / 5% / 10%** corruption, average edit similarity is **0.8894 / 0.8690 / 0.7558** (`results/ko_decoder_noisy_stress_summary.csv`)
+- Encoder audited rule by rule against the 2017 standard on 2026-08-14 — 첫소리 ㅇ 생략(제2항),
+  약자·약어(제12~18항), 로마자 종료표(제30항), 괄호 두 칸(제54~56항)을 반영했다.
+  남은 미구현 항목은 `notes/2026-08-13-regulation-audit.md`에 정리돼 있다.
 - Standards-compliant per 2017 Korean Braille Standards
   ([Notification 2017-15](https://www.law.go.kr), Ministry of Culture, Sports and Tourism)
 
@@ -127,6 +134,12 @@ results/          # bulk conversion outputs, evaluation results
 ```
 
 See [`CLAUDE.md`](CLAUDE.md) for module-level documentation.
+Decoder QA commands and current verification scope are summarized in
+[`notes/decoder_qa.md`](notes/decoder_qa.md).
+Release-oriented decoder QA signoff is tracked in
+[`notes/decoder_release_checklist.md`](notes/decoder_release_checklist.md).
+A concise quality split across encoder, decoder, and data is tracked in
+[`notes/quality_snapshot.md`](notes/quality_snapshot.md).
 
 ## Why this exists
 

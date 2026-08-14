@@ -3,8 +3,8 @@
   "processed": 48963,
   "errors": 0,
   "total_ko_text_chars": 127109134,
-  "total_ko_braille_chars": 247427850,
-  "avg_braille_ratio": 1.947,
-  "elapsed_seconds": 196.3,
-  "rate_per_second": 249.5
+  "total_ko_braille_chars": 209747750,
+  "avg_braille_ratio": 1.65,
+  "elapsed_seconds": 301.2,
+  "rate_per_second": 162.6
 }

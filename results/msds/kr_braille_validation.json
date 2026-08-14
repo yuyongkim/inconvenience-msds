@@ -1,19 +1,19 @@
 {
   "sample_size": 500,
   "roundtrip": {
-    "mean_edit_similarity": 0.7346,
-    "mean_chrf": 0.6252,
-    "perfect_count": 0,
-    "high_count_95pct": 0,
-    "low_count_80pct": 378
+    "mean_edit_similarity": 0.9985,
+    "mean_chrf": 0.9981,
+    "perfect_count": 399,
+    "high_count_95pct": 499,
+    "low_count_80pct": 0
   },
   "coverage": {
-    "mean_pct": 98.05
+    "mean_pct": 98.12
   },
   "violations": {
-    "total": 38832,
-    "per_1000_cells": 15.79
+    "total": 38325,
+    "per_1000_cells": 18.37
   },
   "total_ko_text_chars": 1261170,
-  "total_ko_braille_chars": 2459148
+  "total_ko_braille_chars": 2085925
 }
