@@ -74,6 +74,10 @@ Decoder QA summary artifacts currently report:
 - real-text spot-check (sample DB): **6 rows, 0 failures**
 - fresh 400-row sample from the full KOSHA DB: **30 rows differ**, 대부분 규정이 한 칸으로
   합쳐 놓은 마침표/로마자 종료표 자리
+- residual mismatch classification (`tests/ko_decoder_residual_classify.py`):
+  750행 중 35행 불일치, 81개 diff가 **전부 규정상 모호** (구현 버그 0건). 겹친 칸
+  때문이며 목록은 `results/ko_decoder_residual_classes.csv`에 있다. 왕복은 품질
+  목표가 아니라 회귀 감시용으로 쓴다.
 - synthetic noisy-braille stress:
   - **2%** corruption → edit **0.8894**, ChrF **0.7606**
   - **5%** corruption → edit **0.8690**, ChrF **0.7322**
