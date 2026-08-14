@@ -5,8 +5,8 @@ Checks automated rules against Korean braille output (Unicode braille characters
 Returns violation counts per rule, normalized as violations per 1,000 braille cells.
 
 Rules implemented:
-  1. number_indicator   - Number sign (⠼) must precede digit sequences
-  2. bracket_pairing    - Opening/closing brackets and quotes must be paired
+  1. number_indicator   - 수표(⠼)로 열린 수의 구조 (제37·39·49항)
+  2. bracket_pairing    - 2017 개정 괄호 두 칸 표기의 짝 (제54~56항)
   3. capital_indicator   - Capital letter indicator usage (⠠) check
   4. space_around_dash  - Proper spacing around dashes/hyphens
   5. consecutive_spaces - No excessive consecutive spaces (>2)
@@ -15,8 +15,11 @@ Korean braille Unicode range: U+2800 to U+28FF
 """
 
 from __future__ import annotations
+
 import re
 from dataclasses import dataclass, field
+
+from pipeline.ko_braille import KO_PUNCT_BRAILLE
 
 
 # ---------------------------------------------------------------------------
@@ -46,11 +49,12 @@ BRAILLE_DIGITS = {
 # Capital indicator
 CAPITAL_INDICATOR = '\u2820'  # ⠠ (dot 6)
 
-# Bracket/quote pairs in braille
+# 괄호는 2017 개정에서 두 칸이 되었다(제54~56항). 한 칸짜리 점형으로는 종성·부호와
+# 구분되지 않으므로 짝을 셀 수 없다.
 BRACKET_PAIRS = {
-    '\u2836': '\u2836',  # ⠶ generic bracket open/close (simplified)
-    '(': ')',
-    '\u2826': '\u2834',  # open/close quote pair
+    KO_PUNCT_BRAILLE['(']: KO_PUNCT_BRAILLE[')'],
+    KO_PUNCT_BRAILLE['{']: KO_PUNCT_BRAILLE['}'],
+    KO_PUNCT_BRAILLE['[']: KO_PUNCT_BRAILLE[']'],
 }
 
 # Braille space
@@ -97,32 +101,41 @@ class RuleCheckResult:
 
 def check_number_indicator(text: str) -> RuleCheckResult:
     """
-    Rule 1: Number sequences must be preceded by a number indicator (⠼).
-    Detects digit-pattern braille cells not preceded by ⠼.
+    Rule 1: 수는 수표(⠼)를 앞세워 적는다 (제37항).
+
+    숫자 점형은 로마자 a–j와 같고, 첫소리 'ㄴ, ㄷ, ㅁ, ㅋ, ㅌ, ㅍ, ㅎ'이나 'ㅏ' 약자와도
+    같은 칸이다. 그래서 "수표 없는 숫자 칸"을 세면 한글을 전부 위반으로 잡는다.
+    대신 수표가 연 구간의 구조만 본다.
+
+      - 수표 뒤에는 숫자가 와야 한다
+      - 이미 수 안인데 수표를 다시 적으면 안 된다 (제39·49항)
     """
     result = RuleCheckResult(rule='number_indicator', total_cells=count_braille_cells(text))
     digit_set = set(BRAILLE_DIGITS.keys())
+    # 제39·49항 — 수를 끊지 않고 이어 주는 부호
+    connectors = {'\u2824', '\u2832', '\u2810', '\u2810\u2802'}
 
+    in_number = False
     for i, ch in enumerate(text):
-        if ch in digit_set:
-            # Check if preceded by number indicator (possibly with other digits in between)
-            found_indicator = False
-            j = i - 1
-            while j >= 0:
-                if text[j] == NUMBER_INDICATOR:
-                    found_indicator = True
-                    break
-                elif text[j] in digit_set or text[j] == '\u2832':  # dot for decimal
-                    j -= 1
-                    continue
-                else:
-                    break
-            if not found_indicator:
+        if ch == NUMBER_INDICATOR:
+            nxt = text[i + 1] if i + 1 < len(text) else ''
+            if nxt not in digit_set:
                 result.violations.append(RuleViolation(
                     rule='number_indicator',
                     position=i,
-                    description=f'Digit at pos {i} not preceded by number indicator'
+                    description=f'Number indicator at pos {i} not followed by a digit',
                 ))
+            elif in_number:
+                result.violations.append(RuleViolation(
+                    rule='number_indicator',
+                    position=i,
+                    description=f'Number indicator repeated inside a number at pos {i}',
+                ))
+            in_number = True
+            continue
+        if ch in digit_set or ch in connectors:
+            continue
+        in_number = False
     return result
 
 
@@ -133,41 +146,32 @@ def check_bracket_pairing(text: str) -> RuleCheckResult:
     """
     result = RuleCheckResult(rule='bracket_pairing', total_cells=count_braille_cells(text))
 
-    # Check common bracket types
-    pairs = [('(', ')'), ('[', ']'), ('{', '}'),
-             ('\u2826', '\u2834'),  # braille quote open/close
-             ('\u2836', '\u2836')]  # braille bracket (same char open/close)
-
-    for open_ch, close_ch in pairs:
-        if open_ch == close_ch:
-            # Same character for open/close: count must be even
-            cnt = text.count(open_ch)
-            if cnt % 2 != 0:
-                result.violations.append(RuleViolation(
-                    rule='bracket_pairing',
-                    position=-1,
-                    description=f'Unpaired bracket/quote {repr(open_ch)} (count={cnt})'
-                ))
-        else:
-            depth = 0
-            for i, ch in enumerate(text):
-                if ch == open_ch:
-                    depth += 1
-                elif ch == close_ch:
-                    depth -= 1
-                    if depth < 0:
-                        result.violations.append(RuleViolation(
-                            rule='bracket_pairing',
-                            position=i,
-                            description=f'Unmatched closing {repr(close_ch)} at pos {i}'
-                        ))
-                        depth = 0
-            if depth > 0:
-                result.violations.append(RuleViolation(
-                    rule='bracket_pairing',
-                    position=-1,
-                    description=f'{depth} unclosed {repr(open_ch)}'
-                ))
+    for open_seq, close_seq in BRACKET_PAIRS.items():
+        depth = 0
+        i = 0
+        while i < len(text):
+            if text.startswith(open_seq, i):
+                depth += 1
+                i += len(open_seq)
+                continue
+            if text.startswith(close_seq, i):
+                depth -= 1
+                if depth < 0:
+                    result.violations.append(RuleViolation(
+                        rule='bracket_pairing',
+                        position=i,
+                        description=f'Unmatched closing bracket at pos {i}',
+                    ))
+                    depth = 0
+                i += len(close_seq)
+                continue
+            i += 1
+        if depth > 0:
+            result.violations.append(RuleViolation(
+                rule='bracket_pairing',
+                position=-1,
+                description=f'{depth} unclosed bracket(s)',
+            ))
     return result
 
 

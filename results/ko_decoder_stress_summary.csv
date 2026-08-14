@@ -1,0 +1,7 @@
+category,cases,failures
+hangul,7,0
+mixed-latin,2,0
+mixed-numeric,14,0
+paren,11,1
+quote,5,0
+overall,39,1

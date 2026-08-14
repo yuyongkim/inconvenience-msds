@@ -1,0 +1,40 @@
+category,source,roundtrip,ok
+hangul,이것은 간단한 문장입니다.,이것은 간단한 문장입니다.,True
+hangul,오늘 날씨가 참 좋습니다.,오늘 날씨가 참 좋습니다.,True
+mixed-numeric,자세한 내용은 02-555-1234로 전화해 주세요.,자세한 내용은 02-555-1234로 전화해 주세요.,True
+mixed-numeric,HTTP 상태 코드 404,HTTP 상태 코드 404,True
+mixed-latin,NaCl,NaCl,True
+mixed-numeric,A36,A36,True
+quote,정말 확실해?,정말 확실해?,True
+mixed-numeric,1단계: 밸브를 연다.,1 단계: 밸브를 연다.,True
+mixed-numeric,401B호는 4층에 있습니다.,401B호는 4층에 있습니다.,True
+mixed-numeric,"x 제곱이 4라면, x는 2 또는 마이너스 2입니다.","x 제곱이 4라면, x는 2 또는 마이너스 2입니다.",True
+mixed-numeric,이 CPU는 64비트 명령어 집합 아키텍처를 사용합니다.,이 CPU는 64비트 명령어 집합 아키텍처를 사용합니다.,True
+quote,"소위 ""모범 사례""가 항상 최선은 아니다.","소위 ""모범 사례""가 항상 최선은 아니다.",True
+quote,"그는 속삭였다. ""정말 확실해?""","그는 속삭였다. ""정말 확실해?""",True
+mixed-numeric,매뉴얼에 따르면 -- 42쪽 -- 한도는 500개입니다.,매뉴얼에 따르면 -- 42쪽 -- 한도는 500개입니다.,True
+paren,염화나트륨(NaCl)은 물에 잘 녹는다.,염화나트륨(NaCl)은 물에 잘 녹는다.,True
+paren,벤젠(C6H6)은 방향족 탄화수소입니다.,벤젠(C6H6)은 방향족 탄화수소입니다.,True
+paren,"f(x) = 2x + 1일 때, f(3)을 구하시오.","f(x) = 2x + 1일 때, f(3)을 구하시오.",True
+paren,중합효소 연쇄 반응(PCR)은 DNA 조각을 증폭합니다.,중합효소 연쇄 반응(PCR)은 DNA 조각을 증폭합니다.,True
+paren,컴파일러는 구문 분석 과정에서 추상 구문 트리(AST)를 생성합니다.,컴파일러는 구문 분석 과정에서 추상 구문 트리(AST)를 생성합니다.,True
+mixed-numeric,"회의실은 B-102호, 비상연락처는 031-222-3333이다.","회의실은 B-102 호, 비상연락처는 031-222-3333이다.",True
+mixed-numeric,제품코드 ABC-123X와 로트번호 2026-04-16-7을 기록했다.,제품코드 ABC-123X와 로트번호 2026-04-16-7을 기록했다.,True
+mixed-numeric,"온도 범위는 -20°C~5°C, 습도는 35~45%이다.","온도 범위는 -20°C~5°C, 습도는 35~45%이다.",True
+paren,pH 7.4에서 NaCl(0.9%) 용액을 37°C로 유지한다.,pH 7.페서 NaCl(0.9%) 용액을 37°C로 유지한다.,False
+quote,“AST(추상 구문 트리)”는 컴파일러에서 중요하다.,“AST(추상 구문 트리)”는 컴파일러에서 중요하다.,True
+mixed-numeric,"A/B 테스트에서 그룹 A는 52%, 그룹 B는 48%였다.","A/B 테스트에서 그룹 A는 52%, 그룹 B는 48%였다.",True
+paren,별표(*)와 괄호(예: NaCl)를 함께 쓴다.,별표(*)와 괄호(예: NaCl)를 함께 쓴다.,True
+quote,인용문: “PCR(중합효소 연쇄 반응)은 DNA를 증폭한다.”,인용문: “PCR(중합효소 연쇄 반응)은 DNA를 증폭한다.”,True
+hangul,높은 온도에서 증기가 발생한다.,높은 온도에서 증기가 발생한다.,True
+hangul,앞에 있는 덮개를 엎지르지 마시오.,앞에 있는 덮개를 엎지르지 마시오.,True
+hangul,무릎을 짚고 일어섰다.,무릎을 짚고 일어섰다.,True
+hangul,화기를 멀리하시오.금연 구역입니다.,화기를 멀리하시오.금연 구역입니다.,True
+mixed-numeric,"노출 시간은 4 hr, 실험종은 Rat이다.","노출 시간은 4 hr, 실험종은 Rat이다.",True
+mixed-latin,Magnesium permanganate를 취급한다.,Magnesium permanganate를 취급한다.,True
+paren,자료의 출처는 CRC Handbook(분자량)이다.,자료의 출처는 CRC Handbook(분자량)이다.,True
+paren,폐기방법: 1) 소각하시오.,폐기방법: 1) 소각하시오.,True
+mixed-numeric,분자량은 182.14이고 잔류성은 4.81이다.,분자량은 182.14이고 잔류성은 4.81이다.,True
+paren,[주의] {비고} (참고)를 확인한다.,[주의] {비고} (참고)를 확인한다.,True
+hangul,"열,고온의 표면,스파크,화염을 피한다.","열,고온의 표면,스파크,화염을 피한다.",True
+paren,흡입: 가스 LC50 2.45 mg/L 4 hr (604 ppmV),흡입: 가스 LC50 2.45 mg/L 4 hr (604 ppmV),True

@@ -442,6 +442,10 @@ def braille_to_text(braille_str: str, lang: str = 'en') -> str:
     if not braille_str:
         return ''
 
+    if lang == 'ko':
+        from pipeline.ko_braille_decoder import decode_korean_braille
+        return decode_korean_braille(braille_str)
+
     has_unicode = any(_is_braille(ch) for ch in braille_str)
 
     if has_unicode:
