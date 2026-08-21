@@ -21,7 +21,7 @@ exist whether or not anyone asks for it on a given day.
 
 This repository contains:
 
-- **Dataset** — 48,966 chemicals, 769,897 MSDS sections, ~210M braille cells
+- **Dataset** — 48,966 chemicals, 769,897 MSDS sections, ~197M braille cells (v1.2; the published report describes v1.0 at ~232M)
 - **Encoder** — deterministic Korean text → Korean braille (2017 standards)
 - **Decoder** — Korean braille → Korean text (round-trip tooling)
 - **Pipeline** — full EN/KR braille conversion pipeline (13 modules)

@@ -104,7 +104,7 @@ against the source standard. Pin the version you need.
 |---|---|---|---|---|
 | **v1.0** | as described in the published brief report | 232.3M | 1.95 | `train.v1.0.jsonl` (~943 MB) |
 | v1.1 | *withdrawn* — bracket cells were derived from the wrong ASCII table | — | — | not released |
-| **v1.2** | 2017-standard audit applied | 209.7M | 1.65 | `train.jsonl` (~883 MB) |
+| **v1.2** | 2017-standard audit applied | 196.8M | 1.65 | `train.jsonl` (~883 MB) |
 
 **Cite v1.0 with the paper.** The brief report describes the v1.0 artifact, and its
 figures (232.3M cells, ratio 1.95) refer to that file.
@@ -129,7 +129,7 @@ Figures below are for **v1.0**, the version the paper describes.
 | Total chemicals | 48,966 | 48,966 |
 | Total MSDS sections | 769,897 | 769,897 |
 | Korean text (total) | 119.3M characters | 119.3M characters |
-| Korean braille (total) | 232.3M cells | 209.7M cells |
+| Korean braille (total) | 232.3M cells | 196.8M cells |
 | Mean text per chemical | 6,046 characters | 6,046 characters |
 | Median text per chemical | 5,934 characters | 5,934 characters |
 | Min / Max text | 2,241 / 10,490 characters | 2,241 / 10,490 characters |
