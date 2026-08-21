@@ -26,6 +26,13 @@ This frontend stays deliberately buildless. The backend serves static files from
 3. Page controllers update state in `app/state/*`.
 4. Store subscribers trigger component rendering into the DOM.
 
+Bulk export follows the same split:
+
+1. Browse page collects selected `chem_id`s and chosen formats.
+2. Frontend creates a `POST /api/bulk-jobs` request.
+3. The page polls `GET /api/bulk-jobs/{job_id}` until completion.
+4. The finished ZIP is downloaded from `GET /api/bulk-jobs/{job_id}/download`.
+
 This split matters because future features should be able to change one layer without rewriting the others.
 
 ## Extension Rules
@@ -45,6 +52,7 @@ When adding a new feature:
 - Route-level deep links such as `?chem_id=000001&tab=convert`.
 - A second browse source, for example local sample DB vs full DB, behind a source selector in store state.
 - Download job queue / progress states if BRF or PDF generation becomes asynchronous.
+- Persisted bulk-job history so completed ZIPs survive reloads and can be resumed.
 
 ## Guardrails
 
@@ -53,3 +61,19 @@ When adding a new feature:
 - No component should directly mutate unrelated DOM outside its mount root.
 - Keep backend API contracts narrow and explicit. Frontend expansion should not require scraping HTML responses.
 
+## Language
+
+`app/lib/i18n.js` holds every UI string in Korean and English. Markup carries
+`data-i18n` / `data-i18n-placeholder` / `data-i18n-label` attributes; views built
+in JS call `t(key, params)`.
+
+The toggle in the header writes the choice to `localStorage` and sets
+`document.documentElement.lang`. That attribute matters more than usual here:
+screen readers choose their voice from it, so showing English under `lang="ko"`
+would have the page read aloud in a Korean voice.
+
+`onLangChange` redraws the JS-rendered views. The store is not touched — only the
+rendering repeats.
+
+The corpus and the MSDS text stay Korean. This covers the interface only, so that
+a reader who cannot read Korean can still reach the data and the download formats.

@@ -1,5 +1,6 @@
 import { apiGet } from "../lib/api.js";
 import { clear, el } from "../lib/dom.js";
+import { t } from "../lib/i18n.js";
 
 export function initStats({ statsEl }) {
   async function refresh() {
@@ -7,13 +8,13 @@ export function initStats({ statsEl }) {
       const d = await apiGet("/stats");
       clear(statsEl);
       statsEl.appendChild(
-        el("div", { class: "stat-item" }, [el("strong", { text: d.total_chemicals.toLocaleString() }), " 화학물질"]),
+        el("div", { class: "stat-item" }, [el("strong", { text: d.total_chemicals.toLocaleString() }), t("stats.chemicals")]),
       );
       statsEl.appendChild(
-        el("div", { class: "stat-item" }, [el("strong", { text: d.total_sections.toLocaleString() }), " MSDS 섹션"]),
+        el("div", { class: "stat-item" }, [el("strong", { text: d.total_sections.toLocaleString() }), t("stats.sections")]),
       );
       statsEl.appendChild(
-        el("div", { class: "stat-item" }, [el("strong", { text: d.complete_chemicals.toLocaleString() }), " 완전(15+)"]),
+        el("div", { class: "stat-item" }, [el("strong", { text: d.complete_chemicals.toLocaleString() }), t("stats.complete")]),
       );
     } catch {
       statsEl.innerHTML = "";

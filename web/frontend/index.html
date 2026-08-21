@@ -14,24 +14,27 @@
         <div class="header-inner">
             <div class="header-brand">
                 <h1><span>KOSHA</span>-Braille</h1>
-                <span class="header-sub">화학물질 안전보건자료 점자 변환</span>
+                <span class="header-sub" data-i18n="header.sub">화학물질 안전보건자료 점자 변환</span>
             </div>
-            <div class="stats-bar" id="stats-bar"></div>
+            <div class="header-tools">
+                <div class="stats-bar" id="stats-bar"></div>
+                <button class="lang-toggle" id="lang-toggle" type="button" lang="en">English</button>
+            </div>
         </div>
     </header>
 
     <div class="tabs" role="tablist" aria-label="Braille MSDS">
-        <button class="tab active" id="tab-btn-browse" type="button" role="tab" aria-selected="true" aria-controls="tab-browse" data-tab="browse">화학물질 검색</button>
-        <button class="tab" id="tab-btn-convert" type="button" role="tab" aria-selected="false" aria-controls="tab-convert" data-tab="convert">실시간 변환</button>
+        <button class="tab active" id="tab-btn-browse" type="button" role="tab" aria-selected="true" aria-controls="tab-browse" data-tab="browse" data-i18n="tab.browse">화학물질 검색</button>
+        <button class="tab" id="tab-btn-convert" type="button" role="tab" aria-selected="false" aria-controls="tab-convert" data-tab="convert" data-i18n="tab.convert">실시간 변환</button>
     </div>
 
     <main>
         <!-- Tab 1: Browse chemicals -->
         <div class="tab-content active" id="tab-browse" role="tabpanel" aria-labelledby="tab-btn-browse">
-            <section class="hero" aria-label="서비스 소개">
+            <section class="hero" data-i18n-label="hero.label" aria-label="서비스 소개">
                 <div class="hero-copy">
-                    <div class="hero-title">MSDS를 <strong>점자</strong>로 변환하고 바로 내려받습니다</div>
-                    <div class="hero-desc">화학물질 안전보건자료의 본문을 한국 점자 규정(2017) 기준으로 변환합니다. Unicode 점자와 엠보서용 BRF를 지원합니다.</div>
+                    <div class="hero-title"><span data-i18n="hero.titleBefore">MSDS를 </span><strong data-i18n="hero.titleStrong">점자</strong><span data-i18n="hero.titleAfter">로 변환하고 바로 내려받습니다</span></div>
+                    <div class="hero-desc" data-i18n="hero.desc">화학물질 안전보건자료의 본문을 한국 점자 규정(2017) 기준으로 변환합니다. Unicode 점자와 엠보서용 BRF를 지원합니다.</div>
                     <div class="hero-meta">
                         <span class="pill"><span class="dot" aria-hidden="true"></span>API: <code>/api</code></span>
                         <span class="pill">Unicode TXT</span>
@@ -50,14 +53,15 @@
             </section>
             <div class="search-bar">
                 <form id="search-form">
-                    <input type="text" id="search-input" placeholder="화학물질명 또는 CAS 번호 검색" />
-                    <button class="btn btn-primary" type="submit">검색</button>
-                    <button class="btn btn-ghost" id="search-clear" type="button">초기화</button>
+                    <input type="text" id="search-input" data-i18n-placeholder="search.placeholder" placeholder="화학물질명 또는 CAS 번호 검색" />
+                    <button class="btn btn-primary" type="submit" data-i18n="search.submit">검색</button>
+                    <button class="btn btn-ghost" id="search-clear" type="button" data-i18n="search.clear">초기화</button>
                 </form>
             </div>
+            <section id="bulk-toolbar" data-i18n-label="bulk.label" aria-label="벌크 다운로드"></section>
             <div class="layout">
                 <div class="list-panel">
-                    <div id="list"><div class="loader">목록 불러오는 중</div></div>
+                    <div id="list"><div class="loader" data-i18n="list.loading">목록 불러오는 중</div></div>
                 </div>
                 <div class="detail-panel">
                     <div id="detail"></div>
@@ -68,18 +72,18 @@
         <!-- Tab 2: Real-time conversion -->
         <div class="tab-content" id="tab-convert" role="tabpanel" aria-labelledby="tab-btn-convert">
             <div class="convert-actions">
-                <button class="btn btn-primary" id="convert-run" type="button">점자로 변환</button>
-                <button class="btn btn-secondary" id="convert-copy" type="button">복사</button>
-                <button class="btn btn-secondary" id="convert-clear" type="button">초기화</button>
-                <span class="convert-hint">Ctrl+Enter로 변환</span>
+                <button class="btn btn-primary" id="convert-run" type="button" data-i18n="convert.run">점자로 변환</button>
+                <button class="btn btn-secondary" id="convert-copy" type="button" data-i18n="convert.copy">복사</button>
+                <button class="btn btn-secondary" id="convert-clear" type="button" data-i18n="convert.clear">초기화</button>
+                <span class="convert-hint" data-i18n="convert.hint">Ctrl+Enter로 변환</span>
             </div>
             <div class="convert-panel">
                 <div>
-                    <div class="col-label">한국어 텍스트</div>
-                    <textarea id="convert-input" placeholder="여기에 한국어 텍스트를 입력하세요.&#10;&#10;예: 벤젠은 방향족 탄화수소로, 무색의 휘발성 액체입니다."></textarea>
+                    <div class="col-label" data-i18n="convert.inputLabel">한국어 텍스트</div>
+                    <textarea id="convert-input" data-i18n-placeholder="convert.placeholder" placeholder="여기에 한국어 텍스트를 입력하세요.&#10;&#10;예: 벤젠은 방향족 탄화수소로, 무색의 휘발성 액체입니다."></textarea>
                 </div>
                 <div>
-                    <div class="col-label">점자 출력</div>
+                    <div class="col-label" data-i18n="convert.outputLabel">점자 출력</div>
                     <div class="convert-output" id="convert-output"></div>
                 </div>
             </div>
@@ -87,7 +91,7 @@
         </div>
     </main>
 
-    <footer>KOSHA-Braille &middot; 한국 점자 규정 (2017) 기반 &middot; 48,966종 화학물질</footer>
+    <footer data-i18n="footer">KOSHA-Braille &middot; 한국 점자 규정 (2017) 기반 &middot; 48,966종 화학물질</footer>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 

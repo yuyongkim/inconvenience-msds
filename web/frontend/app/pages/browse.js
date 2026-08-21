@@ -1,16 +1,19 @@
-import { apiGet } from "../lib/api.js";
+import { apiGet, apiPostJson } from "../lib/api.js";
 import { clear, qs } from "../lib/dom.js";
 import { renderListSkeleton, renderDetailSkeleton } from "../components/skeleton.js";
 import { renderErrorBox } from "../components/error-box.js";
 import { renderEmptyDetail } from "../components/empty-detail.js";
 import { renderListEmpty } from "../components/list-empty.js";
+import { renderBulkToolbar } from "../components/bulk-toolbar.js";
 import { renderChemicalList, setListSelection } from "../components/chemical-list.js";
 import { renderChemicalDetail } from "../components/chemical-detail.js";
 import { createBrowseStore } from "../state/browse-store.js";
+import { t } from "../lib/i18n.js";
 
 export function initBrowse({ root, toast }) {
   const listEl = qs(root, "#list");
   const detailEl = qs(root, "#detail");
+  const bulkToolbarEl = qs(root, "#bulk-toolbar");
   const searchForm = qs(root, "#search-form");
   const searchInput = qs(root, "#search-input");
   const clearBtn = qs(root, "#search-clear");
@@ -18,6 +21,7 @@ export function initBrowse({ root, toast }) {
 
   let inflightList = null;
   let inflightDetail = null;
+  let bulkPollTimer = null;
 
   function focusSearch() {
     searchInput.focus();
@@ -32,6 +36,107 @@ export function initBrowse({ root, toast }) {
     if (chemId) loadDetail(chemId);
   }
 
+  function stopBulkPolling() {
+    if (bulkPollTimer) {
+      window.clearTimeout(bulkPollTimer);
+      bulkPollTimer = null;
+    }
+  }
+
+  function scheduleBulkPoll(jobId) {
+    stopBulkPolling();
+    bulkPollTimer = window.setTimeout(async () => {
+      try {
+        const job = await apiGet(`/bulk-jobs/${encodeURIComponent(jobId)}`);
+        store.setState({ bulkJob: job });
+        if (job.status === "queued" || job.status === "running") {
+          scheduleBulkPoll(jobId);
+        }
+      } catch {
+        store.setState({
+          bulkJob: {
+            ...(store.getState().bulkJob || {}),
+            status: "failed",
+            error: t("bulk.statusFailed"),
+          },
+        });
+      }
+    }, 1000);
+  }
+
+  function setSelectedChemIds(nextIds) {
+    store.setState({
+      selectedChemIds: Array.from(new Set(nextIds)),
+    });
+  }
+
+  function toggleSelection(chemId, checked) {
+    const prev = store.getState().selectedChemIds;
+    if (checked) {
+      setSelectedChemIds([...prev, chemId]);
+      return;
+    }
+    setSelectedChemIds(prev.filter((id) => id !== chemId));
+  }
+
+  function selectVisible() {
+    const ids = store.getState().chemicals.map((item) => item.chem_id);
+    setSelectedChemIds([...store.getState().selectedChemIds, ...ids]);
+    toast.show(t("bulk.added"));
+  }
+
+  function clearSelected() {
+    store.setState({ selectedChemIds: [] });
+    toast.show(t("bulk.cleared"));
+  }
+
+  function toggleBulkFormat(format, checked) {
+    const prev = store.getState().bulkFormats;
+    if (!checked && prev.length === 1 && prev.includes(format)) {
+      renderBulkToolbar({ mountEl: bulkToolbarEl, state: store.getState() });
+      toast.show(t("bulk.needFormat"));
+      return;
+    }
+    if (checked) {
+      store.setState({ bulkFormats: Array.from(new Set([...prev, format])) });
+      return;
+    }
+    store.setState({ bulkFormats: prev.filter((value) => value !== format) });
+  }
+
+  async function createBulkJob() {
+    const state = store.getState();
+    if (state.selectedChemIds.length === 0) {
+      toast.show(t("bulk.needSelection"));
+      return;
+    }
+
+    try {
+      const job = await apiPostJson("/bulk-jobs", {
+        chem_ids: state.selectedChemIds,
+        formats: state.bulkFormats,
+      });
+      store.setState({ bulkJob: job });
+      scheduleBulkPoll(job.job_id);
+      toast.show(t("bulk.started"));
+    } catch {
+      store.setState({
+        bulkJob: {
+          job_id: "",
+          status: "failed",
+          error: t("bulk.startFailed"),
+          created_at: "",
+          completed_at: null,
+          formats: state.bulkFormats,
+          total_items: state.selectedChemIds.length,
+          completed_items: 0,
+          failed_items: 0,
+          download_url: null,
+        },
+      });
+    }
+  }
+
   function renderList(state) {
     clear(listEl);
     if (state.listStatus === "loading" || state.listStatus === "idle") {
@@ -41,9 +146,9 @@ export function initBrowse({ root, toast }) {
     if (state.listStatus === "error") {
       listEl.appendChild(
         renderErrorBox({
-          title: "목록을 불러오지 못했습니다",
-          message: state.listError || "서버 연결을 확인한 뒤 다시 시도하세요.",
-          actionLabel: "다시 시도",
+          title: t("list.error"),
+          message: state.listError || t("error.connection"),
+          actionLabel: t("error.retry"),
         }),
       );
       return;
@@ -53,7 +158,12 @@ export function initBrowse({ root, toast }) {
       return;
     }
 
-    renderChemicalList({ listEl, chemicals: state.chemicals, total: state.total });
+    renderChemicalList({
+      listEl,
+      chemicals: state.chemicals,
+      total: state.total,
+      selectedChemIds: state.selectedChemIds,
+    });
     if (state.currentChemId) {
       setListSelection({ listEl, chemId: state.currentChemId });
     }
@@ -68,9 +178,9 @@ export function initBrowse({ root, toast }) {
     if (state.detailStatus === "error") {
       detailEl.appendChild(
         renderErrorBox({
-          title: "상세 정보를 불러오지 못했습니다",
-          message: state.detailError || "서버 연결을 확인한 뒤 다시 시도하세요.",
-          actionLabel: "다시 시도",
+          title: t("detail.error"),
+          message: state.detailError || t("error.connection"),
+          actionLabel: t("error.retry"),
         }),
       );
       return;
@@ -128,7 +238,7 @@ export function initBrowse({ root, toast }) {
       if (e.name === "AbortError") return;
       store.setState({
         listStatus: "error",
-        listError: "서버 연결을 확인한 뒤 다시 시도하세요.",
+        listError: t("error.connection"),
       });
     }
   }
@@ -157,7 +267,7 @@ export function initBrowse({ root, toast }) {
       store.setState({
         currentChemId: chemId,
         detailStatus: "error",
-        detailError: "서버 연결을 확인한 뒤 다시 시도하세요.",
+        detailError: t("error.connection"),
         detail: null,
       });
     }
@@ -171,7 +281,7 @@ export function initBrowse({ root, toast }) {
   function clearSearch() {
     searchInput.value = "";
     loadList("");
-    toast.show("검색 조건이 초기화되었습니다");
+    toast.show(t("search.reset"));
     focusSearch();
   }
 
@@ -186,6 +296,12 @@ export function initBrowse({ root, toast }) {
     const btn = e.target.closest("button.list-item[data-chem-id]");
     if (!btn) return;
     loadDetail(btn.dataset.chemId);
+  });
+
+  listEl.addEventListener("change", (e) => {
+    const input = e.target.closest("input[data-select-chem-id]");
+    if (!input) return;
+    toggleSelection(input.dataset.selectChemId, input.checked);
   });
 
   listEl.addEventListener("click", (e) => {
@@ -226,14 +342,39 @@ export function initBrowse({ root, toast }) {
     e.preventDefault();
   });
 
+  bulkToolbarEl.addEventListener("click", (e) => {
+    const action = e.target.closest("[data-action]");
+    if (!action) return;
+    const actionName = action.dataset.action;
+    if (actionName === "select-visible") {
+      selectVisible();
+      return;
+    }
+    if (actionName === "clear-selected") {
+      clearSelected();
+      return;
+    }
+    if (actionName === "create-bulk-job") {
+      createBulkJob();
+    }
+  });
+
+  bulkToolbarEl.addEventListener("change", (e) => {
+    const input = e.target.closest("input[data-format]");
+    if (!input) return;
+    toggleBulkFormat(input.dataset.format, input.checked);
+  });
+
   store.subscribe((nextState) => {
     renderList(nextState);
     renderDetail(nextState);
+    renderBulkToolbar({ mountEl: bulkToolbarEl, state: nextState });
   });
 
   // Init
   renderList(store.getState());
   renderDetail(store.getState());
+  renderBulkToolbar({ mountEl: bulkToolbarEl, state: store.getState() });
   loadList("");
 
   return {

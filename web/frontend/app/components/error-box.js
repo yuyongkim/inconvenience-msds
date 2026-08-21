@@ -1,9 +1,10 @@
 import { el } from "../lib/dom.js";
+import { t } from "../lib/i18n.js";
 
 export function renderErrorBox({ title, message, actionLabel } = {}) {
   const box = el("div", { class: "error-box", role: "alert" }, [
-    el("strong", { text: title || "오류" }),
-    el("div", { text: message || "요청을 처리할 수 없습니다." }),
+    el("strong", { text: title || t("error.title") }),
+    el("div", { text: message || t("error.generic") }),
   ]);
 
   if (actionLabel) {

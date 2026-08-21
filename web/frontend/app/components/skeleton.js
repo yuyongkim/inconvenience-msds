@@ -1,8 +1,9 @@
 import { el } from "../lib/dom.js";
+import { t } from "../lib/i18n.js";
 
 export function renderListSkeleton() {
   return el("div", {}, [
-    el("div", { class: "list-header", text: "불러오는 중" }),
+    el("div", { class: "list-header", text: t("common.loading") }),
     el("div", { class: "skeleton" }, [
       el("div", { class: "skeleton-row" }),
       el("div", { class: "skeleton-row" }),

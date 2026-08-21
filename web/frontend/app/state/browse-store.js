@@ -6,6 +6,9 @@ const initialBrowseState = {
   listError: null,
   chemicals: [],
   total: 0,
+  selectedChemIds: [],
+  bulkFormats: ["txt", "brf"],
+  bulkJob: null,
   currentChemId: null,
   detailStatus: "empty",
   detailError: null,
@@ -15,4 +18,3 @@ const initialBrowseState = {
 export function createBrowseStore() {
   return createStore(initialBrowseState);
 }
-

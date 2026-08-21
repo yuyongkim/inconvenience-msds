@@ -1,6 +1,7 @@
 import { apiPostJson } from "../lib/api.js";
 import { copyText } from "../lib/clipboard.js";
 import { clear, el, qs } from "../lib/dom.js";
+import { t } from "../lib/i18n.js";
 
 export function initConvert({ root, toast }) {
   const runBtn = qs(root, "#convert-run");
@@ -13,26 +14,28 @@ export function initConvert({ root, toast }) {
   async function convertText() {
     const input = inputEl.value.trim();
     if (!input) return;
-    outputEl.textContent = "변환 중...";
+    outputEl.textContent = t("convert.running");
     statsEl.textContent = "";
 
     try {
       const d = await apiPostJson("/convert", { text: input });
       outputEl.textContent = d.braille;
       clear(statsEl);
-      statsEl.appendChild(el("span", { text: `입력 ${d.text_chars.toLocaleString()}자` }));
-      statsEl.appendChild(el("span", { text: `점자 ${d.braille_cells.toLocaleString()}셀` }));
-      statsEl.appendChild(el("span", { text: `비율 ${(d.braille_cells / d.text_chars).toFixed(2)}x` }));
+      statsEl.appendChild(el("span", { text: t("convert.inputChars", { n: d.text_chars.toLocaleString() }) }));
+      statsEl.appendChild(el("span", { text: t("detail.brailleCells", { n: d.braille_cells.toLocaleString() }) }));
+      statsEl.appendChild(
+        el("span", { text: t("detail.ratio", { n: (d.braille_cells / d.text_chars).toFixed(2) }) })
+      );
     } catch {
-      outputEl.textContent = "변환에 실패했습니다. 서버 연결을 확인하세요.";
+      outputEl.textContent = t("convert.failed");
     }
   }
 
   async function copyBraille() {
     const text = outputEl.textContent;
-    if (!text || text === "변환 중..." || text.startsWith("변환에 실패")) return;
+    if (!text || text === t("convert.running") || text === t("convert.failed")) return;
     const r = await copyText(text);
-    toast.show(r.ok ? "클립보드에 복사됨" : "복사에 실패했습니다");
+    toast.show(r.ok ? t("convert.copied") : t("convert.copyFailed"));
   }
 
   function clearConvert() {

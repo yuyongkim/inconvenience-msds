@@ -1,4 +1,5 @@
 import { clear, el } from "../lib/dom.js";
+import { t } from "../lib/i18n.js";
 
 function formatRatio(stats) {
   if (!stats || !stats.korean_chars || stats.korean_chars <= 0) return "—";
@@ -13,9 +14,15 @@ export function renderChemicalDetail({ detailEl, chem }) {
     el("h2", { text: chem.name }),
     el("div", { class: "detail-meta" }, [
       el("span", { class: "meta-chip", text: `ID ${chem.chem_id}` }),
-      el("span", { class: "meta-chip", text: `한국어 ${Number(chem.stats?.korean_chars ?? 0).toLocaleString()}자` }),
-      el("span", { class: "meta-chip", text: `점자 ${Number(chem.stats?.braille_cells ?? 0).toLocaleString()}셀` }),
-      el("span", { class: "meta-chip", text: `비율 ${ratio}x` }),
+      el("span", {
+        class: "meta-chip",
+        text: t("detail.koreanChars", { n: Number(chem.stats?.korean_chars ?? 0).toLocaleString() }),
+      }),
+      el("span", {
+        class: "meta-chip",
+        text: t("detail.brailleCells", { n: Number(chem.stats?.braille_cells ?? 0).toLocaleString() }),
+      }),
+      el("span", { class: "meta-chip", text: t("detail.ratio", { n: ratio }) }),
     ]),
   ]);
 
@@ -36,7 +43,7 @@ export function renderChemicalDetail({ detailEl, chem }) {
         href: `/api/chemicals/${encodeURIComponent(chem.chem_id)}/braille.brf`,
         download: "",
       },
-      ["BRF (엠보서)"],
+      [t("detail.brf")],
     ),
   ]);
 
@@ -45,14 +52,14 @@ export function renderChemicalDetail({ detailEl, chem }) {
     const title = el(
       "div",
       { class: "section-title", role: "button", tabindex: "0", "data-action": "toggle-section" },
-      [el("span", { text: `${sec.section_no}. ${sec.title}` }), el("span", { class: "toggle", text: "접기/펼치기" })],
+      [el("span", { text: `${sec.section_no}. ${sec.title}` }), el("span", { class: "toggle", text: t("detail.toggle") })],
     );
     const korean = el("div", { class: "section-korean" }, [
-      el("div", { class: "col-label", text: "한국어" }),
+      el("div", { class: "col-label", text: t("detail.korean") }),
       el("div", { text: sec.korean }),
     ]);
     const braille = el("div", { class: "section-braille" }, [
-      el("div", { class: "col-label", text: "점자" }),
+      el("div", { class: "col-label", text: t("detail.braille") }),
       el("div", { text: sec.braille }),
     ]);
     const content = el("div", { class: "section-content" }, [korean, braille]);
