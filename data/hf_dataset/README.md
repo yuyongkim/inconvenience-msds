@@ -95,20 +95,47 @@ Korea Occupational Safety and Health Agency (KOSHA) public MSDS database,
 retrieved via the Korea Public Data Portal API (data.go.kr) under an
 authorized operational account.
 
+## Versions
+
+The braille side of this corpus changed after a rule-by-rule audit of the encoder
+against the source standard. Pin the version you need.
+
+| Version | Encoder | Braille cells | Ratio | File |
+|---|---|---|---|---|
+| **v1.0** | as described in the published brief report | 232.3M | 1.95 | `train.v1.0.jsonl` (~943 MB) |
+| v1.1 | *withdrawn* — bracket cells were derived from the wrong ASCII table | — | — | not released |
+| **v1.2** | 2017-standard audit applied | 209.7M | 1.65 | `train.jsonl` (~883 MB) |
+
+**Cite v1.0 with the paper.** The brief report describes the v1.0 artifact, and its
+figures (232.3M cells, ratio 1.95) refer to that file.
+
+**Use v1.2 for new work.** The audit corrected the parenthesis cells to the two-cell
+2017 form (제54~56항), added the roman terminator (제30항), and implemented the
+abbreviations of 제12~18항 together with the initial-ㅇ omission of 제2항. The corpus
+is shorter because those provisions replace multi-cell spellings with single cells.
+Note that this moves the corpus off Grade 1: v1.0 is uncontracted throughout, while
+v1.2 uses the standard abbreviations.
+
+See `notes/2026-08-13-regulation-audit.md` in the code repository for the per-article
+comparison, and `paper/brief_report/errata_2026-08-14.md` for what changed relative to
+the published report.
+
 ## Statistics
 
-| Metric | Value |
-|--------|-------|
-| Total chemicals | 48,966 |
-| Total MSDS sections | 769,897 |
-| Korean text (total) | 119.3M characters |
-| Korean braille (total) | 232.3M cells |
-| Mean text per chemical | 6,046 characters |
-| Median text per chemical | 5,934 characters |
-| Min / Max text | 2,241 / 10,490 characters |
-| Mean braille:text ratio | 1.95 |
-| Script composition | 76.3% Korean, 16.6% Latin, 7.1% digits |
-| File size (JSONL) | ~943 MB |
+Figures below are for **v1.0**, the version the paper describes.
+
+| Metric | Value | v1.2 |
+|--------|-------|------|
+| Total chemicals | 48,966 | 48,966 |
+| Total MSDS sections | 769,897 | 769,897 |
+| Korean text (total) | 119.3M characters | 119.3M characters |
+| Korean braille (total) | 232.3M cells | 209.7M cells |
+| Mean text per chemical | 6,046 characters | 6,046 characters |
+| Median text per chemical | 5,934 characters | 5,934 characters |
+| Min / Max text | 2,241 / 10,490 characters | 2,241 / 10,490 characters |
+| Mean braille:text ratio | 1.95 | 1.65 |
+| Script composition | 76.3% Korean, 16.6% Latin, 7.1% digits | same |
+| File size (JSONL) | ~943 MB | ~883 MB |
 
 ## MSDS section coverage
 
