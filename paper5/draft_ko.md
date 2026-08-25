@@ -100,7 +100,7 @@ datasets 서버가 파싱하지 않았다.
 | ZahidYasinMittha/American-Sign-Language-Dataset | video | 없음 |
 | silentone0725/Indian_Sign_Language_Data.gov_Rencoded | label, video | 없음 |
 
-어느 것도 화자·피험자·참여자 열을 갖고 있지 않다. 그 중 가장 큰 것, 표준 Kaggle
+어느 것도 화자·피험자·참여자 열을 갖고 있지 않다(그림 2). 그 중 가장 큰 것, 표준 Kaggle
 공개본에서 파생된 34,627 표본의 ASL-MNIST는 대다수 지문자 논문이 수치를 보고하는
 벤치마크인데, 이미지와 글자만 저장한다.
 
@@ -176,3 +176,5 @@ python scripts/dataset_signer_audit.py
 ## 그림
 
 **그림 1.** 동일 데이터에 대한 두 분할 방식의 점수 차이. 세로축은 0.85에서 절단하였다. 합성 keypoint이며 인식 정확도가 아니다. (`figures/Fig1.png`)
+
+**그림 2.** 공개 수어 자모 데이터셋이 저장하는 것. 표본과 글자는 기록되나 화자는 기록되지 않는다. 비어 있는 오른쪽 열이, 이 데이터셋들에서 화자 독립 분할을 표현할 수 없는 이유이다. (`figures/Fig2.png`)

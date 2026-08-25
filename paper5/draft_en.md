@@ -99,7 +99,7 @@ resolved; the remaining two are unparsed by the datasets server.
 | ZahidYasinMittha/American-Sign-Language-Dataset | video | no |
 | silentone0725/Indian_Sign_Language_Data.gov_Rencoded | label, video | no |
 
-None of them carries a signer, subject, or participant column. The largest of
+None of them carries a signer, subject, or participant column (Fig. 2). The largest of
 them, the 34,627-sample ASL-MNIST derived from the standard Kaggle release, is
 the benchmark most fingerspelling papers report on, and it stores only the image
 and its letter.
@@ -177,3 +177,5 @@ The data file requires `samples[].landmarks` (21×3), `.label` and `.signer`. Th
 ## Figures
 
 **Fig. 1** Scores under the two splits over identical data. The vertical axis is truncated at 0.85. Synthetic keypoints; not recognition accuracy. (`figures/Fig1.png`)
+
+**Fig. 2** What the public sign-alphabet datasets store. The sample and its letter are recorded; the signer never is. The empty right-hand column is why a person-independent split cannot be expressed on any of them. (`figures/Fig2.png`)
