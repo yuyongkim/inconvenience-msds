@@ -1,0 +1,358 @@
+{
+ "size_angle_matrix": [
+  {
+   "marker_px": 200,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 200,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 200,
+   "angle_deg": 30,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 200,
+   "angle_deg": 45,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 200,
+   "angle_deg": 60,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 200,
+   "angle_deg": 70,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 120,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 120,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 120,
+   "angle_deg": 30,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 120,
+   "angle_deg": 45,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 120,
+   "angle_deg": 60,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 120,
+   "angle_deg": 70,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 72,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 72,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 72,
+   "angle_deg": 30,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 72,
+   "angle_deg": 45,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 72,
+   "angle_deg": 60,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 72,
+   "angle_deg": 70,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 44,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 44,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 44,
+   "angle_deg": 30,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 44,
+   "angle_deg": 45,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 44,
+   "angle_deg": 60,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 44,
+   "angle_deg": 70,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 24,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 24,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 24,
+   "angle_deg": 30,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 24,
+   "angle_deg": 45,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 24,
+   "angle_deg": 60,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 24,
+   "angle_deg": 70,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "marker_px": 16,
+   "angle_deg": 0,
+   "detected": 8,
+   "trials": 12
+  },
+  {
+   "marker_px": 16,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 16,
+   "angle_deg": 30,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 16,
+   "angle_deg": 45,
+   "detected": 3,
+   "trials": 12
+  },
+  {
+   "marker_px": 16,
+   "angle_deg": 60,
+   "detected": 1,
+   "trials": 12
+  },
+  {
+   "marker_px": 16,
+   "angle_deg": 70,
+   "detected": 0,
+   "trials": 12
+  }
+ ],
+ "opencv": "5.0.0",
+ "dictionary": "DICT_4X4_50",
+ "frame": {
+  "w": 1280,
+  "h": 720
+ },
+ "trials_per_condition": 12,
+ "size_sweep": [
+  {
+   "marker_px": 200,
+   "frame_fraction": 0.1562,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 140,
+   "frame_fraction": 0.1094,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 100,
+   "frame_fraction": 0.0781,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 72,
+   "frame_fraction": 0.0563,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 56,
+   "frame_fraction": 0.0437,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 44,
+   "frame_fraction": 0.0344,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 36,
+   "frame_fraction": 0.0281,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 28,
+   "frame_fraction": 0.0219,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 22,
+   "frame_fraction": 0.0172,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 18,
+   "frame_fraction": 0.0141,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 14,
+   "frame_fraction": 0.0109,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 12,
+   "frame_fraction": 0.0094,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "marker_px": 10,
+   "frame_fraction": 0.0078,
+   "detected": 0,
+   "trials": 12
+  }
+ ],
+ "angle_sweep": [
+  {
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "angle_deg": 30,
+   "detected": 11,
+   "trials": 12
+  },
+  {
+   "angle_deg": 45,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "angle_deg": 55,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "angle_deg": 65,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "angle_deg": 70,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "angle_deg": 75,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "angle_deg": 80,
+   "detected": 0,
+   "trials": 12
+  }
+ ],
+ "smallest_reliable_px": 12,
+ "smallest_reliable_frame_fraction": 0.0094,
+ "widest_reliable_angle_deg": 15,
+ "caveat": "synthetic: no motion blur, no specular highlight, no rolling shutter"
+}
