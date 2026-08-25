@@ -80,6 +80,11 @@ CANDIDATES: dict[str, list[str]] = {
 MIN_SUPPORT = 8          # names that must show the pair before it is kept
 MIN_PRECISION = 0.45     # share of the morpheme's names carrying the Korean form
 MAX_BACKGROUND = 0.25    # share of the other names allowed to carry it anyway
+# A single Hangul syllable is not evidence of anything. '드' matched 333 names for
+# "ide" and would have matched most of the corpus; the same syllable ends hundreds
+# of unrelated transliterations. Two syllables is the shortest form that carries
+# a root's identity.
+MIN_KO_LEN = 2
 
 
 def load_pairs(db_path: Path) -> list[tuple[str, str]]:
@@ -173,6 +178,9 @@ def mine(pairs: list[tuple[str, str]]) -> list[dict]:
                 # unrelated names ("다이페닐디아젠") happen to end the same way.
                 best.append((form, (precision - bg) * len(form), n))
 
+            if not best:
+                continue
+            best = [b for b in best if len(b[0]) >= MIN_KO_LEN]
             if not best:
                 continue
             best.sort(key=lambda item: -item[1])
