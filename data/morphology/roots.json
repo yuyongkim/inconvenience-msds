@@ -1,0 +1,1254 @@
+{
+ "source": "KOSHA chemical_terms, aligned Korean/English names",
+ "pairs": 8071,
+ "min_support": 8,
+ "min_precision": 0.45,
+ "max_background": 0.25,
+ "roots": [
+  {
+   "en": "methyl",
+   "ko": [
+    "메틸"
+   ],
+   "kind": "prefix",
+   "count": 1131,
+   "precision": 1.67
+  },
+  {
+   "en": "ic",
+   "ko": [
+    "산"
+   ],
+   "kind": "suffix",
+   "count": 1126,
+   "precision": 0.3772
+  },
+  {
+   "en": "acid",
+   "ko": [
+    "산"
+   ],
+   "kind": "suffix",
+   "count": 940,
+   "precision": 0.6665
+  },
+  {
+   "en": "ethyl",
+   "ko": [
+    "에틸"
+   ],
+   "kind": "prefix",
+   "count": 466,
+   "precision": 1.7697
+  },
+  {
+   "en": "amine",
+   "ko": [
+    "아민"
+   ],
+   "kind": "suffix",
+   "count": 455,
+   "precision": 1.5184
+  },
+  {
+   "en": "bis",
+   "ko": [
+    "비스"
+   ],
+   "kind": "prefix",
+   "count": 426,
+   "precision": 1.4712
+  },
+  {
+   "en": "iso",
+   "ko": [
+    "이소"
+   ],
+   "kind": "prefix",
+   "count": 423,
+   "precision": 1.2746
+  },
+  {
+   "en": "tetra",
+   "ko": [
+    "테트라"
+   ],
+   "kind": "prefix",
+   "count": 417,
+   "precision": 2.5302
+  },
+  {
+   "en": "chloro",
+   "ko": [
+    "클로로"
+   ],
+   "kind": "prefix",
+   "count": 391,
+   "precision": 2.7395
+  },
+  {
+   "en": "phenyl",
+   "ko": [
+    "페닐"
+   ],
+   "kind": "prefix",
+   "count": 384,
+   "precision": 1.7474
+  },
+  {
+   "en": "benzene",
+   "ko": [
+    "벤젠"
+   ],
+   "kind": "stem",
+   "count": 364,
+   "precision": 1.5745
+  },
+  {
+   "en": "chloride",
+   "ko": [
+    "염화"
+   ],
+   "kind": "stem",
+   "count": 346,
+   "precision": 1.174
+  },
+  {
+   "en": "ide",
+   "ko": [
+    "드"
+   ],
+   "kind": "suffix",
+   "count": 333,
+   "precision": 0.4372
+  },
+  {
+   "en": "hydroxy",
+   "ko": [
+    "하이드록시"
+   ],
+   "kind": "prefix",
+   "count": 325,
+   "precision": 3.6259
+  },
+  {
+   "en": "fluoro",
+   "ko": [
+    "플루오로"
+   ],
+   "kind": "prefix",
+   "count": 282,
+   "precision": 3.3494
+  },
+  {
+   "en": "butyl",
+   "ko": [
+    "뷰틸"
+   ],
+   "kind": "prefix",
+   "count": 276,
+   "precision": 1.3746
+  },
+  {
+   "en": "hexa",
+   "ko": [
+    "헥사"
+   ],
+   "kind": "prefix",
+   "count": 268,
+   "precision": 1.5312
+  },
+  {
+   "en": "poly",
+   "ko": [
+    "결합한"
+   ],
+   "kind": "prefix",
+   "count": 241,
+   "precision": 1.8795
+  },
+  {
+   "en": "cyclo",
+   "ko": [
+    "사이클로"
+   ],
+   "kind": "prefix",
+   "count": 236,
+   "precision": 3.2067
+  },
+  {
+   "en": "amide",
+   "ko": [
+    "마이드"
+   ],
+   "kind": "suffix",
+   "count": 227,
+   "precision": 1.6095
+  },
+  {
+   "en": "acetate",
+   "ko": [
+    "아세트산"
+   ],
+   "kind": "stem",
+   "count": 226,
+   "precision": 2.7334
+  },
+  {
+   "en": "sulfo",
+   "ko": [
+    "폰산"
+   ],
+   "kind": "prefix",
+   "count": 217,
+   "precision": 0.9023
+  },
+  {
+   "en": "amino",
+   "ko": [
+    "아미노"
+   ],
+   "kind": "prefix",
+   "count": 208,
+   "precision": 2.3652
+  },
+  {
+   "en": "nitro",
+   "ko": [
+    "나이트로"
+   ],
+   "kind": "prefix",
+   "count": 196,
+   "precision": 2.5557
+  },
+  {
+   "en": "thio",
+   "ko": [
+    "티오"
+   ],
+   "kind": "prefix",
+   "count": 184,
+   "precision": 0.9077
+  },
+  {
+   "en": "penta",
+   "ko": [
+    "펜타"
+   ],
+   "kind": "prefix",
+   "count": 174,
+   "precision": 1.4187
+  },
+  {
+   "en": "azo",
+   "ko": [
+    "졸"
+   ],
+   "kind": "prefix",
+   "count": 162,
+   "precision": 0.6355
+  },
+  {
+   "en": "oxide",
+   "ko": [
+    "산화"
+   ],
+   "kind": "stem",
+   "count": 162,
+   "precision": 1.0173
+  },
+  {
+   "en": "bromo",
+   "ko": [
+    "브로모"
+   ],
+   "kind": "prefix",
+   "count": 151,
+   "precision": 2.757
+  },
+  {
+   "en": "sulfate",
+   "ko": [
+    "황산"
+   ],
+   "kind": "stem",
+   "count": 149,
+   "precision": 1.7881
+  },
+  {
+   "en": "ethylene",
+   "ko": [
+    "에틸렌"
+   ],
+   "kind": "stem",
+   "count": 145,
+   "precision": 1.4933
+  },
+  {
+   "en": "propane",
+   "ko": [
+    "프로"
+   ],
+   "kind": "stem",
+   "count": 138,
+   "precision": 1.711
+  },
+  {
+   "en": "phenol",
+   "ko": [
+    "페놀"
+   ],
+   "kind": "stem",
+   "count": 129,
+   "precision": 1.7006
+  },
+  {
+   "en": "naphthalene",
+   "ko": [
+    "나프탈렌"
+   ],
+   "kind": "stem",
+   "count": 125,
+   "precision": 3.0294
+  },
+  {
+   "en": "mono",
+   "ko": [
+    "모노"
+   ],
+   "kind": "prefix",
+   "count": 123,
+   "precision": 1.3032
+  },
+  {
+   "en": "propyl",
+   "ko": [
+    "프로필"
+   ],
+   "kind": "prefix",
+   "count": 123,
+   "precision": 2.413
+  },
+  {
+   "en": "tris",
+   "ko": [
+    "트리스"
+   ],
+   "kind": "prefix",
+   "count": 122,
+   "precision": 1.4452
+  },
+  {
+   "en": "carboxy",
+   "ko": [
+    "카복실산"
+   ],
+   "kind": "prefix",
+   "count": 112,
+   "precision": 2.1328
+  },
+  {
+   "en": "phospho",
+   "ko": [
+    "포스포"
+   ],
+   "kind": "prefix",
+   "count": 104,
+   "precision": 1.4685
+  },
+  {
+   "en": "glycol",
+   "ko": [
+    "글리콜"
+   ],
+   "kind": "stem",
+   "count": 99,
+   "precision": 1.6573
+  },
+  {
+   "en": "phosphate",
+   "ko": [
+    "인산"
+   ],
+   "kind": "stem",
+   "count": 98,
+   "precision": 1.2856
+  },
+  {
+   "en": "octa",
+   "ko": [
+    "옥타"
+   ],
+   "kind": "prefix",
+   "count": 94,
+   "precision": 1.238
+  },
+  {
+   "en": "hexane",
+   "ko": [
+    "사이클로헥"
+   ],
+   "kind": "stem",
+   "count": 91,
+   "precision": 2.2544
+  },
+  {
+   "en": "aniline",
+   "ko": [
+    "아닐린"
+   ],
+   "kind": "stem",
+   "count": 89,
+   "precision": 2.1505
+  },
+  {
+   "en": "oxo",
+   "ko": [
+    "옥소"
+   ],
+   "kind": "prefix",
+   "count": 89,
+   "precision": 1.0734
+  },
+  {
+   "en": "deca",
+   "ko": [
+    "데카"
+   ],
+   "kind": "prefix",
+   "count": 86,
+   "precision": 0.8927
+  },
+  {
+   "en": "decyl",
+   "ko": [
+    "데실"
+   ],
+   "kind": "prefix",
+   "count": 83,
+   "precision": 1.2889
+  },
+  {
+   "en": "sulfonate",
+   "ko": [
+    "폰산"
+   ],
+   "kind": "stem",
+   "count": 78,
+   "precision": 1.0434
+  },
+  {
+   "en": "ethane",
+   "ko": [
+    "에"
+   ],
+   "kind": "stem",
+   "count": 76,
+   "precision": 0.7484
+  },
+  {
+   "en": "silane",
+   "ko": [
+    "실레인"
+   ],
+   "kind": "stem",
+   "count": 75,
+   "precision": 1.44
+  },
+  {
+   "en": "benzyl",
+   "ko": [
+    "벤질"
+   ],
+   "kind": "prefix",
+   "count": 70,
+   "precision": 1.6243
+  },
+  {
+   "en": "acrylate",
+   "ko": [
+    "아크릴"
+   ],
+   "kind": "stem",
+   "count": 68,
+   "precision": 2.6358
+  },
+  {
+   "en": "fluoride",
+   "ko": [
+    "플루오"
+   ],
+   "kind": "stem",
+   "count": 59,
+   "precision": 2.2263
+  },
+  {
+   "en": "sulfide",
+   "ko": [
+    "설파이드"
+   ],
+   "kind": "stem",
+   "count": 58,
+   "precision": 2.1364
+  },
+  {
+   "en": "alpha",
+   "ko": [
+    "알파"
+   ],
+   "kind": "prefix",
+   "count": 57,
+   "precision": 1.2487
+  },
+  {
+   "en": "hepta",
+   "ko": [
+    "헵타"
+   ],
+   "kind": "prefix",
+   "count": 57,
+   "precision": 1.2261
+  },
+  {
+   "en": "octyl",
+   "ko": [
+    "옥틸"
+   ],
+   "kind": "prefix",
+   "count": 56,
+   "precision": 1.6044
+  },
+  {
+   "en": "acetyl",
+   "ko": [
+    "아세틸"
+   ],
+   "kind": "prefix",
+   "count": 55,
+   "precision": 2.5012
+  },
+  {
+   "en": "decane",
+   "ko": [
+    "데칸"
+   ],
+   "kind": "stem",
+   "count": 54,
+   "precision": 1.0181
+  },
+  {
+   "en": "hexyl",
+   "ko": [
+    "에틸헥실"
+   ],
+   "kind": "prefix",
+   "count": 53,
+   "precision": 2.0362
+  },
+  {
+   "en": "methacrylate",
+   "ko": [
+    "메타크릴"
+   ],
+   "kind": "stem",
+   "count": 53,
+   "precision": 2.8639
+  },
+  {
+   "en": "methane",
+   "ko": [
+    "메"
+   ],
+   "kind": "stem",
+   "count": 53,
+   "precision": 0.5834
+  },
+  {
+   "en": "toluene",
+   "ko": [
+    "톨루엔"
+   ],
+   "kind": "stem",
+   "count": 53,
+   "precision": 2.711
+  },
+  {
+   "en": "butane",
+   "ko": [
+    "부탄"
+   ],
+   "kind": "stem",
+   "count": 49,
+   "precision": 0.9749
+  },
+  {
+   "en": "iodide",
+   "ko": [
+    "아이오"
+   ],
+   "kind": "stem",
+   "count": 49,
+   "precision": 1.3977
+  },
+  {
+   "en": "beta",
+   "ko": [
+    "베타"
+   ],
+   "kind": "prefix",
+   "count": 47,
+   "precision": 1.2281
+  },
+  {
+   "en": "bromide",
+   "ko": [
+    "브롬"
+   ],
+   "kind": "stem",
+   "count": 47,
+   "precision": 0.9775
+  },
+  {
+   "en": "carbonate",
+   "ko": [
+    "탄산"
+   ],
+   "kind": "stem",
+   "count": 47,
+   "precision": 0.9307
+  },
+  {
+   "en": "cyano",
+   "ko": [
+    "아노"
+   ],
+   "kind": "prefix",
+   "count": 46,
+   "precision": 1.6909
+  },
+  {
+   "en": "ose",
+   "ko": [
+    "스"
+   ],
+   "kind": "suffix",
+   "count": 46,
+   "precision": 0.3111
+  },
+  {
+   "en": "stearate",
+   "ko": [
+    "스테아"
+   ],
+   "kind": "stem",
+   "count": 46,
+   "precision": 2.2729
+  },
+  {
+   "en": "nona",
+   "ko": [
+    "노나"
+   ],
+   "kind": "prefix",
+   "count": 45,
+   "precision": 1.1031
+  },
+  {
+   "en": "hydroxide",
+   "ko": [
+    "산화"
+   ],
+   "kind": "stem",
+   "count": 43,
+   "precision": 0.8949
+  },
+  {
+   "en": "dodeca",
+   "ko": [
+    "도데"
+   ],
+   "kind": "prefix",
+   "count": 42,
+   "precision": 1.5565
+  },
+  {
+   "en": "dodecyl",
+   "ko": [
+    "도데실"
+   ],
+   "kind": "prefix",
+   "count": 42,
+   "precision": 1.9978
+  },
+  {
+   "en": "pyridine",
+   "ko": [
+    "피리딘"
+   ],
+   "kind": "stem",
+   "count": 41,
+   "precision": 2.6319
+  },
+  {
+   "en": "pentane",
+   "ko": [
+    "펜탄"
+   ],
+   "kind": "stem",
+   "count": 40,
+   "precision": 0.945
+  },
+  {
+   "en": "allyl",
+   "ko": [
+    "알릴"
+   ],
+   "kind": "prefix",
+   "count": 39,
+   "precision": 1.6403
+  },
+  {
+   "en": "furan",
+   "ko": [
+    "하이드로"
+   ],
+   "kind": "stem",
+   "count": 39,
+   "precision": 1.8561
+  },
+  {
+   "en": "imidazole",
+   "ko": [
+    "이미다졸"
+   ],
+   "kind": "stem",
+   "count": 38,
+   "precision": 3.0462
+  },
+  {
+   "en": "nitrate",
+   "ko": [
+    "질산"
+   ],
+   "kind": "stem",
+   "count": 38,
+   "precision": 1.5757
+  },
+  {
+   "en": "phthalate",
+   "ko": [
+    "프탈"
+   ],
+   "kind": "stem",
+   "count": 37,
+   "precision": 1.305
+  },
+  {
+   "en": "cyclohexyl",
+   "ko": [
+    "사이클로헥실"
+   ],
+   "kind": "prefix",
+   "count": 36,
+   "precision": 4.4933
+  },
+  {
+   "en": "peroxide",
+   "ko": [
+    "과산화"
+   ],
+   "kind": "stem",
+   "count": 33,
+   "precision": 1.4534
+  },
+  {
+   "en": "pentyl",
+   "ko": [
+    "펜틸"
+   ],
+   "kind": "prefix",
+   "count": 32,
+   "precision": 0.936
+  },
+  {
+   "en": "vinyl",
+   "ko": [
+    "비닐"
+   ],
+   "kind": "prefix",
+   "count": 32,
+   "precision": 1.186
+  },
+  {
+   "en": "oleate",
+   "ko": [
+    "올레"
+   ],
+   "kind": "stem",
+   "count": 31,
+   "precision": 1.093
+  },
+  {
+   "en": "benzoate",
+   "ko": [
+    "벤조"
+   ],
+   "kind": "stem",
+   "count": 30,
+   "precision": 1.6801
+  },
+  {
+   "en": "nonyl",
+   "ko": [
+    "노닐"
+   ],
+   "kind": "prefix",
+   "count": 30,
+   "precision": 1.7316
+  },
+  {
+   "en": "siloxane",
+   "ko": [
+    "실록"
+   ],
+   "kind": "stem",
+   "count": 30,
+   "precision": 1.2662
+  },
+  {
+   "en": "urea",
+   "ko": [
+    "레아"
+   ],
+   "kind": "stem",
+   "count": 30,
+   "precision": 0.9958
+  },
+  {
+   "en": "anthracene",
+   "ko": [
+    "안트라센"
+   ],
+   "kind": "stem",
+   "count": 28,
+   "precision": 2.7123
+  },
+  {
+   "en": "iodo",
+   "ko": [
+    "아이오"
+   ],
+   "kind": "prefix",
+   "count": 26,
+   "precision": 2.5276
+  },
+  {
+   "en": "meta",
+   "ko": [
+    "메타"
+   ],
+   "kind": "prefix",
+   "count": 26,
+   "precision": 1.4354
+  },
+  {
+   "en": "diazo",
+   "ko": [
+    "아조"
+   ],
+   "kind": "prefix",
+   "count": 25,
+   "precision": 0.952
+  },
+  {
+   "en": "octadeca",
+   "ko": [
+    "옥타데"
+   ],
+   "kind": "prefix",
+   "count": 25,
+   "precision": 2.258
+  },
+  {
+   "en": "ase",
+   "ko": [
+    "제"
+   ],
+   "kind": "suffix",
+   "count": 24,
+   "precision": 0.4489
+  },
+  {
+   "en": "nitroso",
+   "ko": [
+    "나이트로소"
+   ],
+   "kind": "prefix",
+   "count": 24,
+   "precision": 3.9571
+  },
+  {
+   "en": "propylene",
+   "ko": [
+    "프로필렌"
+   ],
+   "kind": "stem",
+   "count": 24,
+   "precision": 2.1617
+  },
+  {
+   "en": "styrene",
+   "ko": [
+    "스타이렌"
+   ],
+   "kind": "stem",
+   "count": 23,
+   "precision": 2.7811
+  },
+  {
+   "en": "perfluoro",
+   "ko": [
+    "플루오로"
+   ],
+   "kind": "prefix",
+   "count": 22,
+   "precision": 2.2404
+  },
+  {
+   "en": "piperidine",
+   "ko": [
+    "피페리딘"
+   ],
+   "kind": "stem",
+   "count": 22,
+   "precision": 2.9071
+  },
+  {
+   "en": "sulfonyl",
+   "ko": [
+    "설포닐"
+   ],
+   "kind": "prefix",
+   "count": 22,
+   "precision": 1.6349
+  },
+  {
+   "en": "benzoyl",
+   "ko": [
+    "벤조일"
+   ],
+   "kind": "prefix",
+   "count": 20,
+   "precision": 2.6985
+  },
+  {
+   "en": "cyanide",
+   "ko": [
+    "안화"
+   ],
+   "kind": "stem",
+   "count": 20,
+   "precision": 0.8995
+  },
+  {
+   "en": "citrate",
+   "ko": [
+    "시",
+    "르"
+   ],
+   "kind": "stem",
+   "count": 19,
+   "precision": 0.4531
+  },
+  {
+   "en": "piperazine",
+   "ko": [
+    "피페라진"
+   ],
+   "kind": "stem",
+   "count": 19,
+   "precision": 3.788
+  },
+  {
+   "en": "imino",
+   "ko": [
+    "이미노"
+   ],
+   "kind": "prefix",
+   "count": 18,
+   "precision": 2.4985
+  },
+  {
+   "en": "osan",
+   "ko": [
+    "코"
+   ],
+   "kind": "suffix",
+   "count": 16,
+   "precision": 0.7869
+  },
+  {
+   "en": "peroxy",
+   "ko": [
+    "틸퍼옥시"
+   ],
+   "kind": "prefix",
+   "count": 16,
+   "precision": 2.499
+  },
+  {
+   "en": "stearyl",
+   "ko": [
+    "옥타데"
+   ],
+   "kind": "prefix",
+   "count": 16,
+   "precision": 1.4739
+  },
+  {
+   "en": "morpholine",
+   "ko": [
+    "폴린"
+   ],
+   "kind": "stem",
+   "count": 15,
+   "precision": 1.4659
+  },
+  {
+   "en": "gamma",
+   "ko": [
+    "감마"
+   ],
+   "kind": "prefix",
+   "count": 14,
+   "precision": 1.2847
+  },
+  {
+   "en": "indole",
+   "ko": [
+    "인돌"
+   ],
+   "kind": "stem",
+   "count": 14,
+   "precision": 1.5697
+  },
+  {
+   "en": "mercapto",
+   "ko": [
+    "아졸"
+   ],
+   "kind": "prefix",
+   "count": 14,
+   "precision": 0.9834
+  },
+  {
+   "en": "para",
+   "ko": [
+    "파라"
+   ],
+   "kind": "prefix",
+   "count": 14,
+   "precision": 1.4199
+  },
+  {
+   "en": "undeca",
+   "ko": [
+    "데칸"
+   ],
+   "kind": "prefix",
+   "count": 14,
+   "precision": 1.2621
+  },
+  {
+   "en": "heptane",
+   "ko": [
+    "로헵탄"
+   ],
+   "kind": "stem",
+   "count": 13,
+   "precision": 1.6146
+  },
+  {
+   "en": "lauryl",
+   "ko": [
+    "릴"
+   ],
+   "kind": "prefix",
+   "count": 12,
+   "precision": 0.6205
+  },
+  {
+   "en": "pyrrole",
+   "ko": [
+    "피롤"
+   ],
+   "kind": "stem",
+   "count": 12,
+   "precision": 1.6587
+  },
+  {
+   "en": "quinoline",
+   "ko": [
+    "퀴놀린"
+   ],
+   "kind": "stem",
+   "count": 12,
+   "precision": 2.4989
+  },
+  {
+   "en": "triazole",
+   "ko": [
+    "트리아졸"
+   ],
+   "kind": "stem",
+   "count": 12,
+   "precision": 2.3299
+  },
+  {
+   "en": "epoxy",
+   "ko": [
+    "에폭시"
+   ],
+   "kind": "prefix",
+   "count": 11,
+   "precision": 1.908
+  },
+  {
+   "en": "heptyl",
+   "ko": [
+    "헵틸"
+   ],
+   "kind": "prefix",
+   "count": 11,
+   "precision": 1.4543
+  },
+  {
+   "en": "naphthyl",
+   "ko": [
+    "나프틸아"
+   ],
+   "kind": "prefix",
+   "count": 11,
+   "precision": 2.545
+  },
+  {
+   "en": "pyrimidine",
+   "ko": [
+    "피리미딘"
+   ],
+   "kind": "stem",
+   "count": 11,
+   "precision": 2.9076
+  },
+  {
+   "en": "silyl",
+   "ko": [
+    "라이메틸실릴",
+    "트라이메틸실"
+   ],
+   "kind": "prefix",
+   "count": 11,
+   "precision": 3.2727
+  },
+  {
+   "en": "undecyl",
+   "ko": [
+    "운데실",
+    "운데"
+   ],
+   "kind": "prefix",
+   "count": 11,
+   "precision": 1.6364
+  },
+  {
+   "en": "octane",
+   "ko": [
+    "폰산"
+   ],
+   "kind": "stem",
+   "count": 10,
+   "precision": 0.9576
+  },
+  {
+   "en": "ortho",
+   "ko": [
+    "오"
+   ],
+   "kind": "prefix",
+   "count": 10,
+   "precision": 0.6021
+  },
+  {
+   "en": "thiophene",
+   "ko": [
+    "오펜"
+   ],
+   "kind": "stem",
+   "count": 10,
+   "precision": 1.397
+  },
+  {
+   "en": "cetyl",
+   "ko": [
+    "헥사데"
+   ],
+   "kind": "prefix",
+   "count": 9,
+   "precision": 1.6529
+  },
+  {
+   "en": "cresol",
+   "ko": [
+    "크레"
+   ],
+   "kind": "stem",
+   "count": 9,
+   "precision": 1.5526
+  },
+  {
+   "en": "laurate",
+   "ko": [
+    "르"
+   ],
+   "kind": "stem",
+   "count": 9,
+   "precision": 0.5906
+  },
+  {
+   "en": "oxazole",
+   "ko": [
+    "옥사졸"
+   ],
+   "kind": "stem",
+   "count": 9,
+   "precision": 1.9963
+  },
+  {
+   "en": "xylene",
+   "ko": [
+    "크실렌"
+   ],
+   "kind": "stem",
+   "count": 9,
+   "precision": 1.6659
+  },
+  {
+   "en": "butadiene",
+   "ko": [
+    "부타디엔"
+   ],
+   "kind": "stem",
+   "count": 8,
+   "precision": 2.9995
+  },
+  {
+   "en": "tolyl",
+   "ko": [
+    "톨릴"
+   ],
+   "kind": "prefix",
+   "count": 8,
+   "precision": 0.9998
+  }
+ ]
+}
