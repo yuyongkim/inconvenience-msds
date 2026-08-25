@@ -13,7 +13,7 @@ ORCID: 0009-0006-4842-666X
 
 **Methods.** Two components. First, code recognition that does not require aiming: we surveyed the licensing terms of NaviLens and measured detection of the open alternative, ArUco fiducial markers, over a grid of marker size and off-axis angle. Second, an ingredient summariser that restructures an INCI list along concentration order, EU-labelled fragrance allergens, and root decomposition, emitting plain text suited to a speech synthesiser. Because Korean-market labels print Korean ingredient names, we checked the summariser's Korean allergen spellings one by one against the Korean Cosmetic Association dictionary, the body that sets them.
 
-**Results.** On a flat surface, ArUco detection was complete out to 70° off-axis whenever the marker occupied 3.4% of frame width (44 px in a 1280-wide frame). Wrapping the marker onto a cylinder narrowed angle tolerance sharply: at a marker spanning 20% of the container circumference — a serum bottle — tolerance fell to 15°, and at 40% — a lip balm — the marker was read only head-on.
+**Results.** On a flat surface, ArUco detection was complete out to 70° off-axis whenever the marker occupied 3.4% of frame width (44 px in a 1280-wide frame). Wrapping the marker onto a cylinder narrowed angle tolerance sharply: at a marker spanning 20% of the container circumference — a serum bottle — tolerance fell to 15°, and at 40% — a lip balm — the marker was read only head-on. Adding a specular highlight, which is what a glossy container gives, left detection intact up to a highlight peak of 130 out of 255 in every condition and broke it in all of them by 210.
 
 The allergen check found no wrong spellings but a much narrower reach than assumed: our hand-made table held Korean names for 12 of the 26 allergens. Adopting the dictionary's spellings raised that to 25. Two of the 26 have no standardised Korean name at all.
 
@@ -120,7 +120,27 @@ Two have no Korean entry. Hydroxyisohexyl 3-cyclohexene carboxaldehyde has been 
 
 Two others are listed only under their botanical INCI, so the Korean names are the lichens': *Evernia prunastri* is 참나무이끼추출물 and *Evernia furfuracea* is 나무이끼추출물. A summariser keyed to the fragrance-chemical name alone misses both.
 
-### 3.3 The shape of the failure
+### 3.3 Gloss
+
+Cosmetics packaging is glossy, and the cylinder study left that untested. A glossy cylinder under a point light carries a bright vertical band where the surface bisects the light and the camera, and inside the band the sensor clips. We added a Blinn-Phong highlight to the cylinder model and swept its peak brightness against the width of its bright core, measured in marker cells.
+
+**Table 4.** Highest specular peak at which detection stayed at 12/12. Peak is in units of the 0-255 sensor range; core width is the highlight's half-power width in marker cells, of which a 4x4 marker has six across.
+
+| Core width | wrap 0.10 | wrap 0.20 |
+|---|---:|---:|
+| under 1 cell | — | 170 |
+| 1.4-1.6 cells | 130 | 130 |
+| 2.3-2.8 cells | 130 | 150 |
+| 3.9-4.6 cells | 150 | 170 |
+| 7.8 cells | 170 | — |
+
+Detection survived every condition up to a peak of 130, and no condition survived 210 (Fig. 3). Between those two the conditions part company, and the width of the highlight moves the boundary by less than this sweep can resolve.
+
+The mechanism is not saturation of the marker as a whole. The lobe peaks at full strength whatever its width, so the brightest column always receives the same lift; what changes is how many cells go with it. A core narrower than one cell is averaged away by the detector's own cell sampling, which is why the narrowest lobe on the tighter container tolerates as much as the broadest one.
+
+The practical reading is about exposure rather than lighting. The tolerated peak is a fraction of the sensor range, so a camera that meters for the highlight keeps the marker readable and one that lets the highlight blow out loses it. That is a capture-side setting, not a property of the shop's lighting, and it is cheaper to fix than either.
+
+### 3.4 The shape of the failure
 
 On a flat surface, detection fails with size before it fails with angle (Fig. 1). On a curved one, angle binds first. The two constraints act together, so there are two design variables: the area a package can give up, and the curvature that area sits on.
 
@@ -138,8 +158,9 @@ This is a design constraint. A system built without dermatological training that
 
 ## 6. Limitations
 
-- The measurement uses synthetic scenes with no motion blur, no specular highlight off glossy surfaces, no rolling-shutter skew and no occlusion by fingers. It should be read as an upper bound.
-- The cylinder measurement is also synthetic and excludes specular highlights. Glossy containers are the largest remaining untested factor.
+- The measurement uses synthetic scenes with no motion blur, no rolling-shutter skew and no occlusion by fingers. It should be read as an upper bound.
+- Gloss is now modelled rather than ignored, but a Blinn-Phong lobe is not a photograph of a coated bottle: it has no coating texture, no coloured light, no inter-reflection between the container and its surroundings, and one light rather than a room full of them. Section 3.3 bounds the effect; it does not settle it.
+- The specular sweep was run head-on only, so gloss and off-axis angle were never varied together. They plausibly interact, since both consume the same contrast budget.
 - The ID-to-product resolver is not implemented.
 - The allergen list is the EU's. Its Korean spellings are now the Korean register's, but Korean labelling *rules* still were not cross-checked: which allergens Korea requires to be declared, and above what threshold, is a separate question from what they are called.
 - Anisyl alcohol will be missed on Korean labels, since no standardised Korean spelling exists to match against.
@@ -148,7 +169,7 @@ This is a design constraint. A system built without dermatological training that
 ### Expert-review candidates
 
 - The marker area real cosmetics packaging can give up, and whether it clears 44 px at usable distances.
-- Specular highlights on glossy containers, which the synthetic test cannot answer.
+- Whether a real coated container's highlight behaves like the modelled lobe. Section 3.3 predicts that exposure control matters more than the light's angular size, and that is the prediction a photograph would test first.
 - Whether flagging an allergen is information access or interpretation. We drew that line on the access side and said so in the output, but without a dermatologist.
 
 ## 7. Conclusion
@@ -160,6 +181,7 @@ A non-aim recognition route exists without a commercial licence, but how forgivi
 ```
 python scripts/marker_feasibility.py
 python scripts/marker_cylinder.py
+python scripts/marker_specular.py
 python scripts/allergen_ko_check.py
 python -c "from pipeline.ingredient_summary import summarize; print(summarize('Water, Glycerin, Linalool'))"
 python -c "from pipeline.ingredient_summary import summarize; print(summarize('정제수, 글리세린, 참나무이끼추출물, 리날룰, 헥실신남알'))"
@@ -184,3 +206,5 @@ python -c "from pipeline.ingredient_summary import summarize; print(summarize('�
 **Fig. 1** ArUco detection rate on a flat surface, by marker size and off-axis angle. Failing cells cluster at the bottom (small markers) rather than at the right (wide angles). Twelve trials per condition, synthetic scenes. (`figures/Fig1.png`)
 
 **Fig. 2** Detection on a cylinder. The larger the share of the container's circumference a marker spans, the narrower the angle tolerance. Head-on detection is unaffected by curvature. (`figures/Fig2.png`)
+
+**Fig. 3** Detection against the peak brightness of a specular highlight, for four highlight widths on two curvatures. Every condition holds to a peak of 130 out of 255 and none survives 210; the shaded span is where they part company. Synthetic highlight, not photographs. (`figures/Fig3.png`)

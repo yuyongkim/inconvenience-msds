@@ -145,6 +145,9 @@ No deaf signer, sign language linguist or interpreter has reviewed any of this �
 
 That last question should be asked first. A hearing-led project can build a technically sound recogniser for something the deaf community has no use for, and the engineering being correct does not make the project worth doing.
 
+
+The consultation is written out as a protocol rather than left as an intention: `docs/paper5-consultation-protocol.md` fixes the questions, the three constituencies to ask, the consent steps, and — before any answer is heard — what each possible answer does to this paper. Committing the interpretation in advance is the part that matters, because a question asked after the analysis is chosen can only ratify it. If the answer is that the tool is not wanted, the protocol records that this report stays a protocol paper and the negative result is published as a finding.
+
 ## 6. Conclusion
 
 The contribution is an evaluation protocol, not a recogniser. By enforcing signer-grouped folds and printing the random-split difference alongside, inflation becomes something observed rather than assumed. Evaluation on real data awaits a dataset. The datasets that exist cannot support the protocol, since none of them records signer identity, so the requirement lands on collection rather than on analysis: one integer column, written down at capture time, or the question stays unanswerable.
