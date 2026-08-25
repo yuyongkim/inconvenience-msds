@@ -11,9 +11,11 @@ ORCID: 0009-0006-4842-666X
 
 **Purpose.** Cosmetics packaging offers no page for braille. A 30 mL bottle can carry a product name and little else, while the ingredient list — the part a user with a fragrance allergy needs — is the longest text on the label. This report presents an alternative route for the boundary case where braille does not extend.
 
-**Methods.** Two components. First, code recognition that does not require aiming: we surveyed the licensing terms of NaviLens and measured detection of the open alternative, ArUco fiducial markers, over a grid of marker size and off-axis angle. Second, an ingredient summariser that restructures an INCI list along concentration order, EU-labelled fragrance allergens, and root decomposition, emitting plain text suited to a speech synthesiser.
+**Methods.** Two components. First, code recognition that does not require aiming: we surveyed the licensing terms of NaviLens and measured detection of the open alternative, ArUco fiducial markers, over a grid of marker size and off-axis angle. Second, an ingredient summariser that restructures an INCI list along concentration order, EU-labelled fragrance allergens, and root decomposition, emitting plain text suited to a speech synthesiser. Because Korean-market labels print Korean ingredient names, we checked the summariser's Korean allergen spellings one by one against the Korean Cosmetic Association dictionary, the body that sets them.
 
 **Results.** On a flat surface, ArUco detection was complete out to 70° off-axis whenever the marker occupied 3.4% of frame width (44 px in a 1280-wide frame). Wrapping the marker onto a cylinder narrowed angle tolerance sharply: at a marker spanning 20% of the container circumference — a serum bottle — tolerance fell to 15°, and at 40% — a lip balm — the marker was read only head-on.
+
+The allergen check found no wrong spellings but a much narrower reach than assumed: our hand-made table held Korean names for 12 of the 26 allergens. Adopting the dictionary's spellings raised that to 25. Two of the 26 have no standardised Korean name at all.
 
 **Conclusions.** A non-aim recognition route exists without a commercial licence, but it is less forgiving than the planar measurement suggests. The design constraints are package area **and container curvature**: the tighter the curve, the closer to square on the user must hold the camera. Non-aim reading holds on wide containers and does not hold on narrow ones. The pipeline reports what the label states and what labelling rules single out; it does not assess safety.
 
@@ -57,6 +59,8 @@ Read verbatim, an INCI list is a run of syllables with no structure. The summari
 
 The wording matters. The output states that these are ingredients labelling rules require to be named, and that this does not mean they are dangerous. An allergen list read in a warning tone would be a safety claim we are not qualified to make.
 
+The Korean spellings matter for a duller reason. A Korean-market bottle prints 리날룰, not *linalool*, so matching depends on having the right Hangul. A spelling wrong by one syllable does not raise an error: the allergen is read out as an ordinary ingredient and the user is told nothing is there. Since a silent miss is the failure mode that actually harms someone, we checked all 26 against the Korean Cosmetic Association dictionary rather than trusting our own transliterations.
+
 **Root decomposition.** Ingredient names are decomposed using the chemical root lexicon of [2]. The Latin and Greek stock that names industrial chemicals also names cosmetic ingredients, which is where the two studies connect. Where the label is in English, the English side of the same lexicon is used.
 
 Output is plain text without markup and passes unchanged through the published braille encoder [1] for a refreshable display.
@@ -99,7 +103,24 @@ Head-on detection is unaffected by curvature. What collapses is angle tolerance 
 
 This retracts much of the planar result. For a 20 mm marker: 30° on a wide jar, 15° on a serum bottle, head-on only on a lip balm.
 
-### 3.2 The shape of the failure
+### 3.2 Korean allergen names
+
+**Table 3.** The 26 EU-labelled fragrance allergens, checked against the Korean Cosmetic Association dictionary.
+
+| | Count |
+|---|---:|
+| Our spelling matched the dictionary | 12 |
+| Our spelling was wrong | 0 |
+| We had no Korean name; the dictionary has one | 12 |
+| No standardised Korean name exists | 2 |
+
+Nothing we had written was wrong, which was the risk worth checking for. The real finding is reach: before this check the summariser could recognise 12 of the 26 allergens on a Korean label and would have passed silently over the other 14. It now recognises 25.
+
+Two have no Korean entry. Hydroxyisohexyl 3-cyclohexene carboxaldehyde has been banned in EU cosmetics since August 2021, so a Korean register has no reason to carry it. Anisyl alcohol has no standardised Korean name, which is a genuine gap: a Korean label that declares it does so in whatever spelling the manufacturer chooses, and no reader — automated or human — can rely on matching it.
+
+Two others are listed only under their botanical INCI, so the Korean names are the lichens': *Evernia prunastri* is 참나무이끼추출물 and *Evernia furfuracea* is 나무이끼추출물. A summariser keyed to the fragrance-chemical name alone misses both.
+
+### 3.3 The shape of the failure
 
 On a flat surface, detection fails with size before it fails with angle (Fig. 1). On a curved one, angle binds first. The two constraints act together, so there are two design variables: the area a package can give up, and the curvature that area sits on.
 
@@ -120,7 +141,8 @@ This is a design constraint. A system built without dermatological training that
 - The measurement uses synthetic scenes with no motion blur, no specular highlight off glossy surfaces, no rolling-shutter skew and no occlusion by fingers. It should be read as an upper bound.
 - The cylinder measurement is also synthetic and excludes specular highlights. Glossy containers are the largest remaining untested factor.
 - The ID-to-product resolver is not implemented.
-- The allergen list is the EU's; Korean labelling rules were not cross-checked.
+- The allergen list is the EU's. Its Korean spellings are now the Korean register's, but Korean labelling *rules* still were not cross-checked: which allergens Korea requires to be declared, and above what threshold, is a separate question from what they are called.
+- Anisyl alcohol will be missed on Korean labels, since no standardised Korean spelling exists to match against.
 - No blind user has tried this. Detection rates and summary structure are measured and reasoned, not validated with readers.
 
 ### Expert-review candidates
@@ -138,7 +160,9 @@ A non-aim recognition route exists without a commercial licence, but how forgivi
 ```
 python scripts/marker_feasibility.py
 python scripts/marker_cylinder.py
+python scripts/allergen_ko_check.py
 python -c "from pipeline.ingredient_summary import summarize; print(summarize('Water, Glycerin, Linalool'))"
+python -c "from pipeline.ingredient_summary import summarize; print(summarize('정제수, 글리세린, 참나무이끼추출물, 리날룰, 헥실신남알'))"
 ```
 
 ## References
@@ -150,6 +174,8 @@ python -c "from pipeline.ingredient_summary import summarize; print(summarize('W
 [3] European Parliament and Council. Regulation (EC) No 1223/2009 on cosmetic products, Annex III.
 
 [4] Garrido-Jurado, S., Muñoz-Salinas, R., Madrid-Cuevas, F. J., & Marín-Jiménez, M. J. (2014). Automatic generation and detection of highly reliable fiducial markers under occlusion. *Pattern Recognition*, 47(6), 2280-2292.
+
+[5] 대한화장품협회 [Korean Cosmetic Association]. *화장품 성분사전* [Cosmetic Ingredient Dictionary]. https://kcia.or.kr/cid
 
 ---
 

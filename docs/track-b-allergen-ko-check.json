@@ -1,0 +1,212 @@
+{
+ "source": "대한화장품협회 화장품성분사전 (https://kcia.or.kr/cid)",
+ "allergen_count": 26,
+ "correct": 12,
+ "mismatched": [],
+ "we_had_none": [
+  {
+   "english": "alpha-isomethyl ionone",
+   "official": "알파-아이소메틸아이오논"
+  },
+  {
+   "english": "amyl cinnamal",
+   "official": "아밀신남알"
+  },
+  {
+   "english": "amylcinnamyl alcohol",
+   "official": "아밀신나밀알코올"
+  },
+  {
+   "english": "benzyl cinnamate",
+   "official": "벤질신나메이트"
+  },
+  {
+   "english": "butylphenyl methylpropional",
+   "official": "부틸페닐메틸프로피오날"
+  },
+  {
+   "english": "cinnamyl alcohol",
+   "official": "신나밀알코올"
+  },
+  {
+   "english": "hexyl cinnamal",
+   "official": "헥실신남알"
+  },
+  {
+   "english": "hydroxycitronellal",
+   "official": "하이드록시시트로넬알"
+  },
+  {
+   "english": "isoeugenol",
+   "official": "아이소유제놀"
+  },
+  {
+   "english": "methyl 2-octynoate",
+   "official": "메틸2-옥티노에이트"
+  }
+ ],
+ "not_in_dictionary": [
+  "anisyl alcohol",
+  "evernia furfuracea",
+  "evernia prunastri",
+  "hydroxyisohexyl 3-cyclohexene carboxaldehyde"
+ ],
+ "rows": [
+  {
+   "english": "alpha-isomethyl ionone",
+   "ours": null,
+   "official": "알파-아이소메틸아이오논",
+   "status": "we-had-none"
+  },
+  {
+   "english": "amyl cinnamal",
+   "ours": null,
+   "official": "아밀신남알",
+   "status": "we-had-none"
+  },
+  {
+   "english": "amylcinnamyl alcohol",
+   "ours": null,
+   "official": "아밀신나밀알코올",
+   "status": "we-had-none"
+  },
+  {
+   "english": "anisyl alcohol",
+   "ours": "아니스알코올",
+   "official": null,
+   "status": "not-in-dictionary"
+  },
+  {
+   "english": "benzyl alcohol",
+   "ours": "벤질알코올",
+   "official": "벤질알코올",
+   "status": "match"
+  },
+  {
+   "english": "benzyl benzoate",
+   "ours": "벤질벤조에이트",
+   "official": "벤질벤조에이트",
+   "status": "match"
+  },
+  {
+   "english": "benzyl cinnamate",
+   "ours": null,
+   "official": "벤질신나메이트",
+   "status": "we-had-none"
+  },
+  {
+   "english": "benzyl salicylate",
+   "ours": "벤질살리실레이트",
+   "official": "벤질살리실레이트",
+   "status": "match"
+  },
+  {
+   "english": "butylphenyl methylpropional",
+   "ours": null,
+   "official": "부틸페닐메틸프로피오날",
+   "status": "we-had-none"
+  },
+  {
+   "english": "cinnamal",
+   "ours": "신남알",
+   "official": "신남알",
+   "status": "match"
+  },
+  {
+   "english": "cinnamyl alcohol",
+   "ours": null,
+   "official": "신나밀알코올",
+   "status": "we-had-none"
+  },
+  {
+   "english": "citral",
+   "ours": "시트랄",
+   "official": "시트랄",
+   "status": "match"
+  },
+  {
+   "english": "citronellol",
+   "ours": "시트로넬올",
+   "official": "시트로넬올",
+   "status": "match"
+  },
+  {
+   "english": "coumarin",
+   "ours": "쿠마린",
+   "official": "쿠마린",
+   "status": "match"
+  },
+  {
+   "english": "eugenol",
+   "ours": "유제놀",
+   "official": "유제놀",
+   "status": "match"
+  },
+  {
+   "english": "evernia furfuracea",
+   "ours": null,
+   "official": null,
+   "status": "not-in-dictionary"
+  },
+  {
+   "english": "evernia prunastri",
+   "ours": null,
+   "official": null,
+   "status": "not-in-dictionary"
+  },
+  {
+   "english": "farnesol",
+   "ours": "파네솔",
+   "official": "파네솔",
+   "status": "match"
+  },
+  {
+   "english": "geraniol",
+   "ours": "제라니올",
+   "official": "제라니올",
+   "status": "match"
+  },
+  {
+   "english": "hexyl cinnamal",
+   "ours": null,
+   "official": "헥실신남알",
+   "status": "we-had-none"
+  },
+  {
+   "english": "hydroxycitronellal",
+   "ours": null,
+   "official": "하이드록시시트로넬알",
+   "status": "we-had-none"
+  },
+  {
+   "english": "hydroxyisohexyl 3-cyclohexene carboxaldehyde",
+   "ours": null,
+   "official": null,
+   "status": "not-in-dictionary"
+  },
+  {
+   "english": "isoeugenol",
+   "ours": null,
+   "official": "아이소유제놀",
+   "status": "we-had-none"
+  },
+  {
+   "english": "limonene",
+   "ours": "리모넨",
+   "official": "리모넨",
+   "status": "match"
+  },
+  {
+   "english": "linalool",
+   "ours": "리날룰",
+   "official": "리날룰",
+   "status": "match"
+  },
+  {
+   "english": "methyl 2-octynoate",
+   "ours": null,
+   "official": "메틸2-옥티노에이트",
+   "status": "we-had-none"
+  }
+ ]
+}

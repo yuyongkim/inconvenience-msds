@@ -1,0 +1,157 @@
+{
+ "kosha_names": 9903,
+ "cosmetic_names": 1380,
+ "elements": [
+  {
+   "english": "sodium",
+   "forms": {
+    "나트륨": {
+     "kosha": 503,
+     "kosha_pct": 0.050792689084115925,
+     "cosmetics": 0,
+     "cosmetics_pct": 0.0
+    },
+    "소듐": {
+     "kosha": 75,
+     "kosha_pct": 0.007573462587094819,
+     "cosmetics": 61,
+     "cosmetics_pct": 0.04420289855072464
+    }
+   }
+  },
+  {
+   "english": "potassium",
+   "forms": {
+    "칼륨": {
+     "kosha": 129,
+     "kosha_pct": 0.01302635564980309,
+     "cosmetics": 0,
+     "cosmetics_pct": 0.0
+    },
+    "포타슘": {
+     "kosha": 15,
+     "kosha_pct": 0.001514692517418964,
+     "cosmetics": 15,
+     "cosmetics_pct": 0.010869565217391304
+    }
+   }
+  },
+  {
+   "english": "calcium",
+   "forms": {
+    "칼슘": {
+     "kosha": 71,
+     "kosha_pct": 0.007169544582449763,
+     "cosmetics": 1,
+     "cosmetics_pct": 0.0007246376811594203
+    }
+   }
+  },
+  {
+   "english": "magnesium",
+   "forms": {
+    "마그네슘": {
+     "kosha": 59,
+     "kosha_pct": 0.0059577905685145914,
+     "cosmetics": 2,
+     "cosmetics_pct": 0.0014492753623188406
+    }
+   }
+  }
+ ],
+ "prefixes": [
+  {
+   "english": "di-",
+   "forms": {
+    "디": {
+     "kosha": 495,
+     "kosha_pct": 0.04998485307482581,
+     "cosmetics": 2,
+     "cosmetics_pct": 0.0014492753623188406
+    },
+    "다이": {
+     "kosha": 533,
+     "kosha_pct": 0.05382207411895385,
+     "cosmetics": 62,
+     "cosmetics_pct": 0.04492753623188406
+    }
+   }
+  },
+  {
+   "english": "tri-",
+   "forms": {
+    "트리": {
+     "kosha": 240,
+     "kosha_pct": 0.024235080278703424,
+     "cosmetics": 2,
+     "cosmetics_pct": 0.0014492753623188406
+    },
+    "트라이": {
+     "kosha": 179,
+     "kosha_pct": 0.018075330707866304,
+     "cosmetics": 24,
+     "cosmetics_pct": 0.017391304347826087
+    }
+   }
+  },
+  {
+   "english": "tetra-",
+   "forms": {
+    "테트라": {
+     "kosha": 258,
+     "kosha_pct": 0.02605271129960618,
+     "cosmetics": 7,
+     "cosmetics_pct": 0.005072463768115942
+    }
+   }
+  }
+ ],
+ "shared_roots": [
+  {
+   "form": "메틸",
+   "kosha": 1465,
+   "kosha_pct": 0.14793496920125215,
+   "cosmetics": 47,
+   "cosmetics_pct": 0.034057971014492754
+  },
+  {
+   "form": "에틸",
+   "kosha": 763,
+   "kosha_pct": 0.07704735938604464,
+   "cosmetics": 48,
+   "cosmetics_pct": 0.034782608695652174
+  },
+  {
+   "form": "프로필",
+   "kosha": 225,
+   "kosha_pct": 0.02272038776128446,
+   "cosmetics": 40,
+   "cosmetics_pct": 0.028985507246376812
+  },
+  {
+   "form": "스테아",
+   "kosha": 68,
+   "kosha_pct": 0.00686660607896597,
+   "cosmetics": 61,
+   "cosmetics_pct": 0.04420289855072464
+  },
+  {
+   "form": "하이드록시",
+   "kosha": 393,
+   "kosha_pct": 0.03968494395637685,
+   "cosmetics": 33,
+   "cosmetics_pct": 0.02391304347826087
+  },
+  {
+   "form": "아크릴",
+   "kosha": 145,
+   "kosha_pct": 0.014642027668383318,
+   "cosmetics": 21,
+   "cosmetics_pct": 0.015217391304347827
+  }
+ ],
+ "kosha_forms_absent_from_cosmetics": [
+  "sodium",
+  "potassium"
+ ]
+}

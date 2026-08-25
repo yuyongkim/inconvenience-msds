@@ -71,3 +71,6 @@ paper/compile2.log
 .cache/
 .gstack/
 .omx/
+
+# Licensed third-party dictionary cache (KCIA terms Art. 9(2)) - never commit
+data/kcia_cache/

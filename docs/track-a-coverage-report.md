@@ -11,6 +11,8 @@ Coverage is the share of a name's Hangul that a known root accounts for. It says
 | KOSHA chemicals (source domain) | 9,903 | 40.4% | 4.4% | 25.7% | 118 |
 | MFDS drug product names | 4,762 | 1.5% | 0.0% | 95.4% | 32 |
 | WHO INN radicals (English) | 690 | 8.5% | 2.8% | 86.1% | 47 |
+| KCIA cosmetic ingredients (Korean) | 1,380 | 12.5% | 0.1% | 71.2% | 68 |
+| KCIA cosmetic ingredients (English INCI) | 1,291 | 15.9% | 1.2% | 62.4% | 83 |
 
 ## KOSHA chemicals (source domain)
 
@@ -143,6 +145,85 @@ Largest gaps — Hangul runs no root explains:
 | Fragment | Names |
 |---|---:|
 
+## KCIA cosmetic ingredients (Korean)
+
+Most-used roots:
+
+| Root | Names |
+|---|---:|
+| stearate | 67 |
+| iso | 58 |
+| methyl | 48 |
+| propyl | 39 |
+| ethyl | 36 |
+| amide | 36 |
+| hydroxy | 34 |
+| acrylate | 29 |
+| furan | 28 |
+| hexa | 16 |
+| amino | 16 |
+| decyl | 16 |
+| amine | 15 |
+| tetra | 15 |
+| penta | 15 |
+
+Largest gaps — Hangul runs no root explains:
+
+| Fragment | Names |
+|---|---:|
+| 레이트 | 53 |
+| 다이 | 24 |
+| 피이지 | 19 |
+| 펩타이드 | 18 |
+| 레이트코폴리머 | 11 |
+| 쿼터늄 | 11 |
+| 소듐 | 9 |
+| 트라이 | 9 |
+| 노녹시놀 | 9 |
+| 펩타이드다이머 | 8 |
+| 트라이데세스 | 7 |
+| 피피지 | 7 |
+| 에스에이치폴리펩타이드 | 6 |
+| 알케인 | 6 |
+| 에이트 | 6 |
+| 알케스 | 6 |
+| 메록사폴 | 6 |
+| 적색호 | 6 |
+| 에리스리틸 | 5 |
+| 다이올크로스폴리머 | 5 |
+| 피이지글리세릴아 | 5 |
+| 소듐라우레스설페이트 | 5 |
+| 에스알 | 4 |
+| 에스에이치올리고펩타이드에스피 | 4 |
+| 에스디엔에이압타머 | 4 |
+
+## KCIA cosmetic ingredients (English INCI)
+
+Most-used roots:
+
+| Root | Names |
+|---|---:|
+| poly | 105 |
+| iso | 57 |
+| methyl | 52 |
+| ethyl | 43 |
+| stearate | 41 |
+| propyl | 39 |
+| hydroxy | 35 |
+| amide | 33 |
+| acrylate | 24 |
+| carboxy | 23 |
+| sulfate | 22 |
+| amine | 22 |
+| phosphate | 19 |
+| oleate | 18 |
+| hexa | 17 |
+
+Largest gaps — Hangul runs no root explains:
+
+| Fragment | Names |
+|---|---:|
+
 ## What the pharmaceutical number means
 
 The MFDS figure is low because the names are the wrong unit, not because the lexicon fails. DrbEasyDrugInfoService returns *product* names, and a brand name has no Latin root to find. The fragments the lexicon cannot explain are dosage form and strength: 연질캡슐, 캡슐, 정, 밀리그램.
@@ -150,6 +231,12 @@ The MFDS figure is low because the names are the wrong unit, not because the lex
 Testing root transfer into pharmacy needs INN ingredient names, which live behind DrugPrdtPrmsnInfoService (주성분 / MAIN_ITEM_INGR). That endpoint returns HTTP 400 for the key this project holds; data.go.kr grants keys per service, so it has to be requested separately. Until then the pharmaceutical row measures brand naming and is not evidence either way about the lexicon.
 
 The KOSHA row is the one that carries information: 40% of the Hangul in chemical names is accounted for by the mined roots. What is left is element names (나트륨, 칼륨), trivial names, and stems that did not clear the mining thresholds.
+
+## What the cosmetics rows mean
+
+The cosmetics dictionary gives both scripts for the same substance, which is why both rows are here. They agree closely (12.5% Korean against 15.9% English), so the limit is vocabulary in the lexicon rather than the transliteration step: if mapping into Hangul were the problem, the Korean row would sit well below the English one.
+
+The gap to the source domain's 40% has two causes. Roughly 46% of cosmetic ingredient names are botanical, built from Korean plant names and 추출물, 꽃, 잎, 뿌리, which have no Latin root by construction; excluding them raises Korean coverage to 20.8%. The rest is orthographic: the two catalogues answer to different standards bodies and spell the same elements differently. Run `scripts/naming_convention_divergence.py` for that measurement.
 
 ## Expert-review candidates
 

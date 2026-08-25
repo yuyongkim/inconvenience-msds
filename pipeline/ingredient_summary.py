@@ -35,14 +35,35 @@ EU_LABELLED_ALLERGENS = {
     "butylphenyl methylpropional", "hydroxyisohexyl 3-cyclohexene carboxaldehyde",
 }
 
-# Korean transliterations for the same, so a Korean label matches too.
+# The same allergens under the Korean names, so a Korean-market label matches
+# too. Every spelling here except the two noted below is the standardised name
+# from the Korean Cosmetic Association dictionary, checked entry by entry by
+# `scripts/allergen_ko_check.py`. They are not our transliterations: a spelling
+# off by one syllable makes the summariser read a declared allergen out as an
+# ordinary ingredient, which is the one failure this component must not have.
 ALLERGEN_KO = {
     "리날룰": "linalool", "리모넨": "limonene", "제라니올": "geraniol",
     "시트로넬올": "citronellol", "시트랄": "citral", "쿠마린": "coumarin",
     "유제놀": "eugenol", "벤질알코올": "benzyl alcohol", "벤질벤조에이트": "benzyl benzoate",
-    "벤질살리실레이트": "benzyl salicylate", "파네솔": "farnesol",
-    "아니스알코올": "anisyl alcohol", "신남알": "cinnamal",
+    "벤질살리실레이트": "benzyl salicylate", "파네솔": "farnesol", "신남알": "cinnamal",
+    "알파-아이소메틸아이오논": "alpha-isomethyl ionone",
+    "아밀신남알": "amyl cinnamal", "아밀신나밀알코올": "amylcinnamyl alcohol",
+    "벤질신나메이트": "benzyl cinnamate",
+    "부틸페닐메틸프로피오날": "butylphenyl methylpropional",
+    "신나밀알코올": "cinnamyl alcohol", "헥실신남알": "hexyl cinnamal",
+    "하이드록시시트로넬알": "hydroxycitronellal", "아이소유제놀": "isoeugenol",
+    "메틸2-옥티노에이트": "methyl 2-octynoate",
+    # Listed under their botanical INCI, so the Korean name is the lichen's.
+    "참나무이끼추출물": "evernia prunastri", "나무이끼추출물": "evernia furfuracea",
+    # Not in the Korean dictionary at all. Our transliteration, unverified: a
+    # Korean label using another spelling will be missed.
+    "아니스알코올": "anisyl alcohol",
 }
+
+# The 26th, hydroxyisohexyl 3-cyclohexene carboxaldehyde, has no Korean entry.
+# It has been banned in EU cosmetics since August 2021, so its absence from a
+# Korean register is expected rather than a gap to fill.
+ALLERGENS_WITHOUT_KOREAN_NAME = {"hydroxyisohexyl 3-cyclohexene carboxaldehyde"}
 
 _SPLIT = re.compile(r"[,、/]|\s{2,}")
 
