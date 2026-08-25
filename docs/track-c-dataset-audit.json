@@ -1,0 +1,92 @@
+{
+ "source": "Hugging Face datasets-server / dataset cards",
+ "signer_key_candidates": [
+  "actor",
+  "participant",
+  "participant_id",
+  "person",
+  "person_id",
+  "signer",
+  "signer_id",
+  "speaker",
+  "subject",
+  "subject_id",
+  "user",
+  "user_id"
+ ],
+ "datasets": [
+  {
+   "dataset": "Voxel51/American-Sign-Language-MNIST",
+   "columns": [
+    "image",
+    "label"
+   ],
+   "signer_fields": [],
+   "supports_person_independent": false
+  },
+  {
+   "dataset": "Marxulia/asl_sign_languages_alphabets_v03",
+   "columns": [
+    "image",
+    "label"
+   ],
+   "signer_fields": [],
+   "supports_person_independent": false
+  },
+  {
+   "dataset": "shpouladi/American-Sign-Language-Dataset",
+   "columns": [
+    "video"
+   ],
+   "signer_fields": [],
+   "supports_person_independent": false
+  },
+  {
+   "dataset": "just-me7ss/American-Sign-Language-Dataset",
+   "columns": [
+    "video"
+   ],
+   "signer_fields": [],
+   "supports_person_independent": false
+  },
+  {
+   "dataset": "akasheroor/American-Sign-Language-Dataset",
+   "columns": [
+    "video"
+   ],
+   "signer_fields": [],
+   "supports_person_independent": false
+  },
+  {
+   "dataset": "ZahidYasinMittha/American-Sign-Language-Dataset",
+   "columns": [
+    "video"
+   ],
+   "signer_fields": [],
+   "supports_person_independent": false
+  },
+  {
+   "dataset": "Namonpas/thai-sign-language-tsl51",
+   "columns": [],
+   "signer_fields": [],
+   "supports_person_independent": false
+  },
+  {
+   "dataset": "PishangShedappp/malaysian-sign-language-dataset-v1",
+   "columns": [],
+   "signer_fields": [],
+   "supports_person_independent": false
+  },
+  {
+   "dataset": "silentone0725/Indian_Sign_Language_Data.gov_Rencoded",
+   "columns": [
+    "label",
+    "video"
+   ],
+   "signer_fields": [],
+   "supports_person_independent": false
+  }
+ ],
+ "resolved": 7,
+ "with_signer_field": 0
+}
