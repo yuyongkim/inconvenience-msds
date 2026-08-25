@@ -31,6 +31,7 @@ from pipeline.morphology import coverage, load_lexicon, normalize_ko, segment  #
 
 KOSHA_DB = Path("G:/MSDS/data/terminology.db")
 PHARMA_JSON = PROJECT_ROOT / "data" / "pharma" / "mfds_drug_names.json"
+INN_JSON = PROJECT_ROOT / "data" / "inn" / "inn_radicals.json"
 
 
 def kosha_names(limit: int | None = None) -> list[str]:
@@ -52,6 +53,60 @@ def pharma_names() -> list[str]:
     raw = json.loads(PHARMA_JSON.read_text(encoding="utf-8"))
     names = [normalize_ko(i["name_ko"]) for i in raw["items"]]
     return [n for n in names if n]
+
+
+def inn_radicals() -> list[str]:
+    """INN radical names, in English. Measured on the English side of the lexicon."""
+    if not INN_JSON.exists():
+        return []
+    return json.loads(INN_JSON.read_text(encoding="utf-8"))["names"]
+
+
+def analyse_english(names: list[str]) -> dict:
+    """Coverage over English names, using the English side of each root.
+
+    The Korean segmenter cannot help here: INN radicals are published in Latin
+    and English, and no Korean transliteration of them is available to us. What
+    this measures is whether the roots themselves recur, independent of script.
+    """
+    lex = load_lexicon()
+    if not names or not lex:
+        return {}
+    roots = sorted({r.en for r in lex if len(r.en) >= 3}, key=len, reverse=True)
+
+    used: Counter[str] = Counter()
+    per_name = []
+    for name in names:
+        low = name.lower()
+        covered = [False] * len(low)
+        for r in roots:
+            start = 0
+            while True:
+                i = low.find(r, start)
+                if i < 0:
+                    break
+                if not any(covered[i:i + len(r)]):
+                    for j in range(i, i + len(r)):
+                        covered[j] = True
+                    used[r] += 1
+                start = i + 1
+        letters = [c for c in low if c.isalpha()]
+        hit = sum(1 for c, cov in zip(low, covered) if cov and c.isalpha())
+        per_name.append(hit / len(letters) if letters else 0.0)
+
+    full = sum(1 for c in per_name if c >= 0.999)
+    return {
+        "names": len(names),
+        "char_coverage": sum(per_name) / len(per_name),
+        "mean_name_coverage": sum(per_name) / len(per_name),
+        "fully_covered": full,
+        "fully_covered_pct": full / len(names),
+        "uncovered": sum(1 for c in per_name if c == 0.0),
+        "uncovered_pct": sum(1 for c in per_name if c == 0.0) / len(names),
+        "roots_used": len(used),
+        "top_roots": used.most_common(15),
+        "top_gaps": [],
+    }
 
 
 def analyse(names: list[str]) -> dict:
@@ -178,6 +233,7 @@ def main() -> None:
     results = {
         "KOSHA chemicals (source domain)": analyse(kosha_names()),
         "MFDS drug product names": analyse(pharma_names()),
+        "WHO INN radicals (English)": analyse_english(inn_radicals()),
     }
     for label, r in results.items():
         if r:

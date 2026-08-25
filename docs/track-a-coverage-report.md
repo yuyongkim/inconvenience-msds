@@ -10,6 +10,7 @@ Coverage is the share of a name's Hangul that a known root accounts for. It says
 |---|---:|---:|---:|---:|---:|
 | KOSHA chemicals (source domain) | 9,903 | 40.4% | 4.4% | 25.7% | 118 |
 | MFDS drug product names | 4,762 | 1.5% | 0.0% | 95.4% | 32 |
+| WHO INN radicals (English) | 690 | 8.5% | 2.8% | 86.1% | 47 |
 
 ## KOSHA chemicals (source domain)
 
@@ -114,6 +115,33 @@ Largest gaps — Hangul runs no root explains:
 | 리나치올시럽 | 2 |
 | 부루펜정밀리그램 | 2 |
 | 포리부틴정 | 2 |
+
+## WHO INN radicals (English)
+
+Most-used roots:
+
+| Root | Names |
+|---|---:|
+| sulfate | 7 |
+| sulfo | 6 |
+| hexa | 6 |
+| oxo | 6 |
+| amine | 5 |
+| iso | 5 |
+| acetate | 4 |
+| penta | 4 |
+| tetra | 4 |
+| undecyl | 4 |
+| sulfonate | 3 |
+| decyl | 3 |
+| propyl | 3 |
+| methyl | 3 |
+| oleate | 3 |
+
+Largest gaps — Hangul runs no root explains:
+
+| Fragment | Names |
+|---|---:|
 
 ## What the pharmaceutical number means
 
