@@ -10,6 +10,31 @@ web service.
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![HF Dataset](https://img.shields.io/badge/🤗-dataset-yellow)](https://huggingface.co/datasets/Yuyongkim/inconvenience-msds)
+[![DOI](https://img.shields.io/badge/DOI-10.1007%2Fs10209--026--01381--0-blue)](https://doi.org/10.1007/s10209-026-01381-0)
+
+**Live service**: <https://braille.yule.pics>
+
+## Citation
+
+Kim, Y. (2026). KOSHA-Braille: infrastructure-grade accessibility for Korean
+chemical safety information. *Universal Access in the Information Society*,
+25, 116. https://doi.org/10.1007/s10209-026-01381-0
+
+```bibtex
+@article{kim2026koshabraille,
+  author  = {Kim, Yuyong},
+  title   = {{KOSHA-Braille}: infrastructure-grade accessibility for Korean chemical safety information},
+  journal = {Universal Access in the Information Society},
+  volume  = {25},
+  pages   = {116},
+  year    = {2026},
+  doi     = {10.1007/s10209-026-01381-0}
+}
+```
+
+The paper describes **corpus v1.0** (`corpus-v1.0`, 232.3 M braille cells).
+Later versions changed the braille after a rule-by-rule audit against the
+standard; see `notes/2026-08-13-regulation-audit.md`.
 
 ---
 
