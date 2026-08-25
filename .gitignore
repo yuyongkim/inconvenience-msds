@@ -74,3 +74,8 @@ paper/compile2.log
 
 # Licensed third-party dictionary cache (KCIA terms Art. 9(2)) - never commit
 data/kcia_cache/
+
+# Service logs
+web/backend/*.log
+web/backend/*.log.err
+web/backend/*.log.out
