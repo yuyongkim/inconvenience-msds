@@ -13,9 +13,9 @@ ORCID: 0009-0006-4842-666X
 
 **Methods.** Two components. First, code recognition that does not require aiming: we surveyed the licensing terms of NaviLens and measured detection of the open alternative, ArUco fiducial markers, over a grid of marker size and off-axis angle. Second, an ingredient summariser that restructures an INCI list along concentration order, EU-labelled fragrance allergens, and root decomposition, emitting plain text suited to a speech synthesiser.
 
-**Results.** ArUco detection was complete out to 70° off-axis whenever the marker occupied 3.4% of frame width (44 px in a 1280-wide frame), and held head-on down to 0.9% of frame width. Detection failed with size before it failed with angle.
+**Results.** On a flat surface, ArUco detection was complete out to 70° off-axis whenever the marker occupied 3.4% of frame width (44 px in a 1280-wide frame). Wrapping the marker onto a cylinder narrowed angle tolerance sharply: at a marker spanning 20% of the container circumference — a serum bottle — tolerance fell to 15°, and at 40% — a lip balm — the marker was read only head-on.
 
-**Conclusions.** A non-aim recognition route exists without a commercial licence. The design constraint is not how accurately the user aims but how much package area a marker can claim. The measurements are an upper bound from synthetic scenes, and cylindrical packaging is untested. The pipeline reports what the label states and what labelling rules single out; it does not assess safety.
+**Conclusions.** A non-aim recognition route exists without a commercial licence, but it is less forgiving than the planar measurement suggests. The design constraints are package area **and container curvature**: the tighter the curve, the closer to square on the user must hold the camera. Non-aim reading holds on wide containers and does not hold on narrow ones. The pipeline reports what the label states and what labelling rules single out; it does not assess safety.
 
 **Keywords:** accessibility; blindness; non-aim scanning; fiducial markers; cosmetic ingredients; speech output
 
@@ -78,9 +78,30 @@ Head-on, detection held down to 12 px, under 1% of frame width. Angle tolerance 
 
 Translated to a package, a 2 cm marker stays above 44 px out to roughly arm's length on a typical phone camera, at any angle a shopper would plausibly hold — the non-aim property, from a free library.
 
-### 3.1 The shape of the failure
+### 3.1 Re-measuring on a curved surface
 
-The informative part of the measurement is not the ceiling but how it collapses (Fig. 1). Detection fails with size before it fails with angle. The design constraint is therefore how much package area a marker can claim, not how carefully the user aims, which inverts QR's assumption.
+Cosmetics packaging is mostly cylindrical. A marker wrapped around a bottle is not a plane seen at an angle: the further from the centre line, the more the surface turns away, so the marker's own squares compress unevenly across its width. A homography cannot express that.
+
+We projected the marker onto a cylinder and measured again. The free parameter is the ratio of marker width to container circumference.
+
+**Table 2.** Detection on a cylinder. Marker 120 px, twelve trials per condition.
+
+| Marker width / circumference | 0° | 15° | 30° | 45° | 60° |
+|---|---:|---:|---:|---:|---:|
+| flat (label card) | 100% | 100% | 100% | 100% | 100% |
+| 0.10 (wide jar, d = 70 mm) | 100% | 100% | 100% | 0% | 0% |
+| 0.20 (serum bottle, d = 30 mm) | 100% | 100% | 0% | 0% | 0% |
+| 0.30 | 100% | 100% | 0% | 0% | 0% |
+| 0.40 (lip balm, d = 16 mm) | 100% | 0% | 0% | 0% | 0% |
+| 0.50 | 100% | 0% | 0% | 0% | 0% |
+
+Head-on detection is unaffected by curvature. What collapses is angle tolerance (Fig. 2).
+
+This retracts much of the planar result. For a 20 mm marker: 30° on a wide jar, 15° on a serum bottle, head-on only on a lip balm.
+
+### 3.2 The shape of the failure
+
+On a flat surface, detection fails with size before it fails with angle (Fig. 1). On a curved one, angle binds first. The two constraints act together, so there are two design variables: the area a package can give up, and the curvature that area sits on.
 
 ## 4. Discussion
 
@@ -97,7 +118,7 @@ This is a design constraint. A system built without dermatological training that
 ## 6. Limitations
 
 - The measurement uses synthetic scenes with no motion blur, no specular highlight off glossy surfaces, no rolling-shutter skew and no occlusion by fingers. It should be read as an upper bound.
-- Cosmetics packaging is mostly cylindrical, while the measurement uses a planar homography. This is the largest gap between the numbers and reality.
+- The cylinder measurement is also synthetic and excludes specular highlights. Glossy containers are the largest remaining untested factor.
 - The ID-to-product resolver is not implemented.
 - The allergen list is the EU's; Korean labelling rules were not cross-checked.
 - No blind user has tried this. Detection rates and summary structure are measured and reasoned, not validated with readers.
@@ -105,17 +126,18 @@ This is a design constraint. A system built without dermatological training that
 ### Expert-review candidates
 
 - The marker area real cosmetics packaging can give up, and whether it clears 44 px at usable distances.
-- Detection on cylindrical surfaces, which the synthetic test cannot answer.
+- Specular highlights on glossy containers, which the synthetic test cannot answer.
 - Whether flagging an allergen is information access or interpretation. We drew that line on the access side and said so in the output, but without a dermatologist.
 
 ## 7. Conclusion
 
-A non-aim recognition route exists without a commercial licence, and its constraint is package area rather than user aim. The ingredient summary conveys the label's content and what labelling rules single out, with interpretation placed explicitly out of scope.
+A non-aim recognition route exists without a commercial licence, but how forgiving it is depends on container shape: 70° on a flat label, 30° on a wide container, near head-on only on a narrow one. The constraints are package area and curvature. The ingredient summary conveys the label's content and what labelling rules single out, with interpretation placed explicitly out of scope.
 
 ## Reproduction
 
 ```
 python scripts/marker_feasibility.py
+python scripts/marker_cylinder.py
 python -c "from pipeline.ingredient_summary import summarize; print(summarize('Water, Glycerin, Linalool'))"
 ```
 
@@ -133,4 +155,6 @@ python -c "from pipeline.ingredient_summary import summarize; print(summarize('W
 
 ## Figures
 
-**Fig. 1** ArUco detection rate by marker size and off-axis angle. Failing cells cluster at the bottom (small markers) rather than at the right (wide angles). Twelve trials per condition, synthetic scenes. (`figures/Fig1.png`)
+**Fig. 1** ArUco detection rate on a flat surface, by marker size and off-axis angle. Failing cells cluster at the bottom (small markers) rather than at the right (wide angles). Twelve trials per condition, synthetic scenes. (`figures/Fig1.png`)
+
+**Fig. 2** Detection on a cylinder. The larger the share of the container's circumference a marker spans, the narrower the angle tolerance. Head-on detection is unaffected by curvature. (`figures/Fig2.png`)

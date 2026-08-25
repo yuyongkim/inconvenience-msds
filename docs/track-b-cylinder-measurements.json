@@ -1,0 +1,202 @@
+{
+ "opencv": "5.0.0",
+ "marker_px": 120,
+ "trials_per_condition": 12,
+ "wrap_fractions": [
+  0.0,
+  0.1,
+  0.2,
+  0.3,
+  0.4,
+  0.5
+ ],
+ "containers": {
+  "wide jar (d=70mm)": 0.09,
+  "cream tube (d=40mm)": 0.16,
+  "serum bottle (d=30mm)": 0.21,
+  "lip balm (d=16mm)": 0.4
+ },
+ "grid": [
+  {
+   "wrap": 0.0,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.0,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.0,
+   "angle_deg": 30,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.0,
+   "angle_deg": 45,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.0,
+   "angle_deg": 60,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.1,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.1,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.1,
+   "angle_deg": 30,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.1,
+   "angle_deg": 45,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.1,
+   "angle_deg": 60,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.2,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.2,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.2,
+   "angle_deg": 30,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.2,
+   "angle_deg": 45,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.2,
+   "angle_deg": 60,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.3,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.3,
+   "angle_deg": 15,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.3,
+   "angle_deg": 30,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.3,
+   "angle_deg": 45,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.3,
+   "angle_deg": 60,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.4,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.4,
+   "angle_deg": 15,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.4,
+   "angle_deg": 30,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.4,
+   "angle_deg": 45,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.4,
+   "angle_deg": 60,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.5,
+   "angle_deg": 0,
+   "detected": 12,
+   "trials": 12
+  },
+  {
+   "wrap": 0.5,
+   "angle_deg": 15,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.5,
+   "angle_deg": 30,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.5,
+   "angle_deg": 45,
+   "detected": 0,
+   "trials": 12
+  },
+  {
+   "wrap": 0.5,
+   "angle_deg": 60,
+   "detected": 0,
+   "trials": 12
+  }
+ ],
+ "caveat": "synthetic cylinder; no specular highlight, no motion blur"
+}
