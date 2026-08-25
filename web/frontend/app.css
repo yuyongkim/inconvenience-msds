@@ -843,3 +843,166 @@
             .pill .dot, .hero-preview::before, .skeleton-row { animation: none !important; }
             .btn { transition: background var(--transition), border-color var(--transition) !important; }
         }
+
+/* ---------------------------------------------------------------------------
+   Ingredient preview
+   The tab has to work before anyone has an ingredient list to paste, so the
+   presets sit above the input and read as things to press rather than as a
+   legend for the form below them.
+   --------------------------------------------------------------------------- */
+
+.ing-intro {
+    margin: 0 0 18px;
+}
+
+.ing-intro h2 {
+    margin: 0 0 8px;
+    font-size: 1.24rem;
+    letter-spacing: -0.01em;
+}
+
+.ing-intro p {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--text-muted, #5c6270);
+    line-height: 1.65;
+}
+
+.ing-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.ing-preset {
+    padding: 7px 14px;
+    border: 1px solid var(--border, #d8dce4);
+    border-radius: 999px;
+    background: var(--surface, #fff);
+    color: inherit;
+    font: inherit;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.ing-preset:hover,
+.ing-preset:focus-visible {
+    border-color: var(--accent, #2f5bd0);
+    background: var(--accent-pale, #eef2fc);
+}
+
+.ing-result {
+    margin-top: 20px;
+    display: grid;
+    gap: 18px;
+}
+
+.ing-block-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-muted, #5c6270);
+    margin-bottom: 8px;
+}
+
+.ing-allergens {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ing-allergens li {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #fdf3e3;
+    border: 1px solid #eccf9c;
+}
+
+.ing-en {
+    font-size: 0.78rem;
+    color: var(--text-muted, #5c6270);
+}
+
+.ing-note {
+    margin: 10px 0 0;
+    max-width: 62ch;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: var(--text-muted, #5c6270);
+}
+
+.ing-table-wrap {
+    overflow-x: auto;
+}
+
+.ing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.ing-table th,
+.ing-table td {
+    padding: 7px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border, #e6e9ef);
+    vertical-align: top;
+}
+
+.ing-table th {
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-muted, #5c6270);
+    white-space: nowrap;
+}
+
+.ing-table tr.is-allergen td {
+    background: #fdf8ef;
+}
+
+.ing-flag {
+    margin-left: 7px;
+    padding: 1px 7px;
+    border-radius: 999px;
+    background: #eccf9c;
+    color: #6b4a11;
+    font-size: 0.72rem;
+    white-space: nowrap;
+}
+
+.ing-roots {
+    color: var(--text-muted, #5c6270);
+    font-size: 0.83rem;
+}
+
+.ing-scope {
+    margin: 22px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--border, #e6e9ef);
+    max-width: 68ch;
+    font-size: 0.86rem;
+    line-height: 1.65;
+    color: var(--text-muted, #5c6270);
+}
+
+@media (max-width: 640px) {
+    .ing-presets {
+        gap: 6px;
+    }
+
+    .ing-preset {
+        font-size: 0.83rem;
+        padding: 6px 12px;
+    }
+}

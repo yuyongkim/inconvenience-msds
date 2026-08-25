@@ -26,6 +26,7 @@
     <div class="tabs" role="tablist" aria-label="Braille MSDS">
         <button class="tab active" id="tab-btn-browse" type="button" role="tab" aria-selected="true" aria-controls="tab-browse" data-tab="browse" data-i18n="tab.browse">화학물질 검색</button>
         <button class="tab" id="tab-btn-convert" type="button" role="tab" aria-selected="false" aria-controls="tab-convert" data-tab="convert" data-i18n="tab.convert">실시간 변환</button>
+        <button class="tab" id="tab-btn-ingredient" type="button" role="tab" aria-selected="false" aria-controls="tab-ingredient" data-tab="ingredient" data-i18n="tab.ingredient">성분 미리보기</button>
     </div>
 
     <main>
@@ -88,6 +89,38 @@
                 </div>
             </div>
             <div class="convert-stats" id="convert-stats"></div>
+        </div>
+
+        <!-- Tab 3: Ingredient list preview -->
+        <div class="tab-content" id="tab-ingredient" role="tabpanel" aria-labelledby="tab-btn-ingredient">
+            <section class="ing-intro">
+                <h2 data-i18n="ing.title">성분표를 구조로 바꿔 읽습니다</h2>
+                <p data-i18n="ing.desc">화장품 전성분표를 그대로 낭독하면 구조 없는 음절의 연속이 됩니다. 함량 순서로 나누고, 표시 대상 향료 성분을 짚고, 화학 어근을 분해하여 읽습니다. 아래 예시를 눌러 바로 확인해 보세요.</p>
+            </section>
+
+            <div class="ing-presets" id="ing-presets" role="group" data-i18n-label="ing.presetsLabel" aria-label="예시 목록"></div>
+
+            <div class="convert-actions">
+                <button class="btn btn-primary" id="ing-run" type="button" data-i18n="ing.run">요약 만들기</button>
+                <button class="btn btn-secondary" id="ing-copy" type="button" data-i18n="ing.copy">점자 복사</button>
+                <button class="btn btn-secondary" id="ing-clear" type="button" data-i18n="convert.clear">초기화</button>
+                <span class="convert-hint" data-i18n="convert.hint">Ctrl+Enter로 변환</span>
+            </div>
+
+            <div class="convert-panel">
+                <div>
+                    <div class="col-label" data-i18n="ing.inputLabel">성분표 입력 (쉼표로 구분)</div>
+                    <textarea id="ing-input" data-i18n-placeholder="ing.placeholder" placeholder="정제수, 글리세린, 리날룰 …"></textarea>
+                </div>
+                <div>
+                    <div class="col-label" data-i18n="ing.summaryLabel">음성용 요약</div>
+                    <div class="convert-output" id="ing-summary"></div>
+                </div>
+            </div>
+
+            <div class="ing-result" id="ing-result" aria-live="polite"></div>
+
+            <p class="ing-scope" data-i18n="ing.scope">이 도구는 라벨에 적힌 것과 표시 규정이 지목한 것만 전달합니다. 성분의 안전성이나 피부 반응은 판단하지 않습니다.</p>
         </div>
     </main>
 
