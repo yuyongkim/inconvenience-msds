@@ -57,8 +57,21 @@ PREFIXES = [
 ]
 
 # Roots that should transfer if the lexicon describes chemistry rather than
-# one registry's house style.
-SHARED_ROOTS = ["메틸", "에틸", "프로필", "스테아", "하이드록시", "아크릴"]
+# one registry's house style. Chosen because all three registries use them:
+# alkyl chains alone would understate pharmacy, whose names are built from INN
+# stems and salt forms rather than from substituent prefixes.
+SHARED_ROOTS = ["메틸", "에틸", "프로필", "아세테이트", "벤조", "아미노"]
+
+# The deeper split, and the one the element names were only a symptom of.
+# A counter-ion can be rendered two ways: translated into Sino-Korean, or
+# transliterated from English. Each registry picks one and stays with it.
+# (English, Sino-Korean translation, English transliteration)
+STRATEGIES = [
+    ("sulfate", "황산", "설페이트"),
+    ("phosphate", "인산", "포스페이트"),
+    ("hydrochloride", "염산", "클로라이드"),
+    ("hydrate", "수화물", "하이드레이트"),
+]
 
 
 def token_rate(names: list[str], form: str) -> tuple[int, float]:
@@ -74,59 +87,106 @@ def prefix_rate(names: list[str], form: str) -> tuple[int, float]:
 def main() -> None:
     kosha = dc.kosha_names()
     cos = dc.cosmetic_names("ko")
+    drug = dc.drug_ingredient_names("ko")
     if not kosha or not cos:
         raise SystemExit("need both corpora; run scripts/fetch_kcia_sample.py first")
+    if not drug:
+        print("note: no drug ingredients; run scripts/fetch_mfds_ingredients.py\n")
 
-    print(f"KOSHA chemicals: {len(kosha):,} names")
-    print(f"KCIA cosmetics:  {len(cos):,} names\n")
+    print(f"KOSHA chemicals:      {len(kosha):,} names")
+    print(f"KCIA cosmetics:       {len(cos):,} names")
+    print(f"MFDS drug ingredients: {len(drug):,} names\n")
 
-    report: dict = {"kosha_names": len(kosha), "cosmetic_names": len(cos)}
+    report: dict = {"kosha_names": len(kosha), "cosmetic_names": len(cos),
+                    "drug_names": len(drug)}
 
     print("Element names (whole token)")
-    print(f"  {'element':12s} {'form':10s} {'KOSHA':>16s} {'cosmetics':>16s}")
+    print(f"  {'element':12s} {'form':10s} {'KOSHA':>16s} {'cosmetics':>16s} {'drugs':>16s}")
     rows = []
     for en, a, b in ELEMENTS:
         entry = {"english": en, "forms": {}}
         for form in dict.fromkeys((a, b)):
             ka, kp = token_rate(kosha, form)
             ca, cp = token_rate(cos, form)
+            da, dp = token_rate(drug, form)
             entry["forms"][form] = {"kosha": ka, "kosha_pct": kp,
-                                    "cosmetics": ca, "cosmetics_pct": cp}
-            print(f"  {en:12s} {form:10s} {ka:7,d} ({kp:5.2%}) {ca:7,d} ({cp:5.2%})")
+                                    "cosmetics": ca, "cosmetics_pct": cp,
+                                    "drugs": da, "drugs_pct": dp}
+            print(f"  {en:12s} {form:10s} {ka:7,d} ({kp:5.2%}) "
+                  f"{ca:7,d} ({cp:5.2%}) {da:7,d} ({dp:5.2%})")
         rows.append(entry)
         print()
     report["elements"] = rows
 
     print("Prefixes (name-initial only)")
-    print(f"  {'prefix':10s} {'form':10s} {'KOSHA':>16s} {'cosmetics':>16s}")
+    print(f"  {'prefix':10s} {'form':10s} {'KOSHA':>16s} {'cosmetics':>16s} {'drugs':>16s}")
     prows = []
     for en, a, b in PREFIXES:
         entry = {"english": en, "forms": {}}
         for form in dict.fromkeys((a, b)):
             ka, kp = prefix_rate(kosha, form)
             ca, cp = prefix_rate(cos, form)
+            da, dp = prefix_rate(drug, form)
             entry["forms"][form] = {"kosha": ka, "kosha_pct": kp,
-                                    "cosmetics": ca, "cosmetics_pct": cp}
-            print(f"  {en:10s} {form:10s} {ka:7,d} ({kp:5.2%}) {ca:7,d} ({cp:5.2%})")
+                                    "cosmetics": ca, "cosmetics_pct": cp,
+                                    "drugs": da, "drugs_pct": dp}
+            print(f"  {en:10s} {form:10s} {ka:7,d} ({kp:5.2%}) "
+                  f"{ca:7,d} ({cp:5.2%}) {da:7,d} ({dp:5.2%})")
         prows.append(entry)
         print()
     report["prefixes"] = prows
+
+    print("Naming strategy: translate the counter-ion, or transliterate it")
+    print(f"  {'english':16s} {'form':10s} {'KOSHA':>16s} {'cosmetics':>16s} {'drugs':>16s}")
+    trows = []
+    for en, sino, translit in STRATEGIES:
+        entry = {"english": en, "sino": sino, "translit": translit, "forms": {}}
+        for form, kind in ((sino, "translated"), (translit, "transliterated")):
+            ka, kp = token_rate(kosha, form)
+            ca, cp = token_rate(cos, form)
+            da, dp = token_rate(drug, form)
+            entry["forms"][form] = {"kind": kind,
+                                    "kosha": ka, "kosha_pct": kp,
+                                    "cosmetics": ca, "cosmetics_pct": cp,
+                                    "drugs": da, "drugs_pct": dp}
+            print(f"  {en:16s} {form:10s} {ka:7,d} ({kp:5.2%}) "
+                  f"{ca:7,d} ({cp:5.2%}) {da:7,d} ({dp:5.2%})")
+        trows.append(entry)
+        print()
+    report["strategies"] = trows
 
     print("Shared roots (whole token) — these should transfer")
     srows = []
     for form in SHARED_ROOTS:
         ka, kp = token_rate(kosha, form)
         ca, cp = token_rate(cos, form)
+        da, dp = token_rate(drug, form)
         srows.append({"form": form, "kosha": ka, "kosha_pct": kp,
-                      "cosmetics": ca, "cosmetics_pct": cp})
-        print(f"  {form:10s} {ka:7,d} ({kp:5.2%}) {ca:7,d} ({cp:5.2%})")
+                      "cosmetics": ca, "cosmetics_pct": cp,
+                      "drugs": da, "drugs_pct": dp})
+        print(f"  {form:10s} {ka:7,d} ({kp:5.2%}) {ca:7,d} ({cp:5.2%}) {da:7,d} ({dp:5.2%})")
     report["shared_roots"] = srows
 
-    absent = [e["english"] for e in rows
-              for f, v in e["forms"].items()
-              if v["kosha"] > 0 and v["cosmetics"] == 0]
-    print(f"\nElement forms present in KOSHA and absent from cosmetics: {absent}")
-    report["kosha_forms_absent_from_cosmetics"] = absent
+    # The interesting cell is not a low rate, it is a zero: a registry that
+    # never uses a form its neighbour uses constantly has a house style, not a
+    # preference.
+    mutually_exclusive = []
+    for e in rows + prows:
+        forms = list(e["forms"].items())
+        if len(forms) != 2:
+            continue
+        (fa, va), (fb, vb) = forms
+        if va["cosmetics"] == 0 and vb["drugs"] == 0 and va["drugs"] and vb["cosmetics"]:
+            mutually_exclusive.append({"english": e["english"],
+                                       "drugs_use": fa, "cosmetics_use": fb})
+        elif vb["cosmetics"] == 0 and va["drugs"] == 0 and vb["drugs"] and va["cosmetics"]:
+            mutually_exclusive.append({"english": e["english"],
+                                       "drugs_use": fb, "cosmetics_use": fa})
+    print("\nForms where cosmetics and pharmacy do not overlap at all:")
+    for m in mutually_exclusive:
+        print(f"  {m['english']:12s} drugs use {m['drugs_use']}, "
+              f"cosmetics use {m['cosmetics_use']}")
+    report["mutually_exclusive"] = mutually_exclusive
 
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")

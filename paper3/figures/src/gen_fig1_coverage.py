@@ -24,12 +24,14 @@ OUT = Path(__file__).resolve().parents[1]
 DOMAINS = [
     ("KOSHA 화학물질\n(출처 도메인)", 40.4, 9903, False),
     ("KCIA 화장품 성분\n(영문 INCI)", 15.9, 1291, False),
+    ("MFDS 의약품 성분\n(영문)", 14.7, 1650, False),
     ("KCIA 화장품 성분\n(한글)", 12.5, 1380, False),
     ("WHO INN 라디칼\n(영문)", 8.5, 690, False),
+    ("MFDS 의약품 성분\n(한글)", 8.1, 1650, False),
     ("MFDS 의약품\n제품명", 1.5, 4762, True),
 ]
 
-fig, ax = plt.subplots(figsize=(PAGE_W, 3.4))
+fig, ax = plt.subplots(figsize=(PAGE_W, 4.3))
 fig.subplots_adjust(left=0.235, right=0.97, top=0.86, bottom=0.24)
 
 ys = range(len(DOMAINS))

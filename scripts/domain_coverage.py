@@ -33,6 +33,7 @@ KOSHA_DB = Path("G:/MSDS/data/terminology.db")
 PHARMA_JSON = PROJECT_ROOT / "data" / "pharma" / "mfds_drug_names.json"
 INN_JSON = PROJECT_ROOT / "data" / "inn" / "inn_radicals.json"
 KCIA_CACHE = PROJECT_ROOT / "data" / "kcia_cache" / "sample.json"
+MFDS_INGR_JSON = PROJECT_ROOT / "data" / "pharma" / "mfds_ingredients.json"
 
 
 def kosha_names(limit: int | None = None) -> list[str]:
@@ -81,6 +82,25 @@ def cosmetic_names(side: str = "ko") -> list[str]:
     if side == "en":
         return [e["en"].strip() for e in raw["entries"] if e.get("en", "").strip()]
     names = [normalize_ko(e["ko"]) for e in raw["entries"] if e.get("ko", "").strip()]
+    return [n for n in names if n]
+
+
+def drug_ingredient_names(side: str = "ko") -> list[str]:
+    """Korean or English drug ingredient names from the MFDS approval service.
+
+    Section 4.3 argued the pharmaceutical row measured product names because
+    the ingredient endpoint was out of reach. It is not out of reach any more,
+    so this is the row that argument predicted: the same catalogue, read at the
+    right unit.
+
+    Populated by `scripts/fetch_mfds_ingredients.py`.
+    """
+    if not MFDS_INGR_JSON.exists():
+        return []
+    raw = json.loads(MFDS_INGR_JSON.read_text(encoding="utf-8"))
+    if side == "en":
+        return [p["en"].strip() for p in raw["pairs"] if p.get("en", "").strip()]
+    names = [normalize_ko(p["ko"]) for p in raw["pairs"] if p.get("ko", "").strip()]
     return [n for n in names if n]
 
 
@@ -277,6 +297,8 @@ def main() -> None:
         "WHO INN radicals (English)": analyse_english(inn_radicals()),
         "KCIA cosmetic ingredients (Korean)": analyse(cosmetic_names("ko")),
         "KCIA cosmetic ingredients (English INCI)": analyse_english(cosmetic_names("en")),
+        "MFDS drug ingredients (Korean)": analyse(drug_ingredient_names("ko")),
+        "MFDS drug ingredients (English)": analyse_english(drug_ingredient_names("en")),
     }
     for label, r in results.items():
         if r:

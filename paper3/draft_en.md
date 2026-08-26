@@ -11,11 +11,11 @@ ORCID: 0009-0006-4842-666X
 
 **Purpose.** Korean chemical names are transliterations of Latin- and Greek-derived English ones. If the same roots recur in pharmaceutical, cosmetic and pesticide names, one accessibility resource can be extended across regulatory catalogues; if not, each catalogue needs its own vocabulary work. This report presents a root lexicon and a measurement method for answering that question.
 
-**Methods.** Rather than deriving the lexicon from naming rules, we mined it statistically from 8,071 aligned Korean/English name pairs in the KOSHA database. Candidate morphemes were taken from IUPAC nomenclature. For each candidate we compared Korean substring frequencies between the names containing it and those not, and kept the correspondences that separated the two sets. Coverage of the resulting lexicon was then measured over four domains, including a 1,380-entry sample of the Korean cosmetic ingredient dictionary, which gives Korean and English names for the same substance and so separates vocabulary transfer from spelling transfer.
+**Methods.** Rather than deriving the lexicon from naming rules, we mined it statistically from 8,071 aligned Korean/English name pairs in the KOSHA database. Candidate morphemes were taken from IUPAC nomenclature. For each candidate we compared Korean substring frequencies between the names containing it and those not, and kept the correspondences that separated the two sets. Coverage of the resulting lexicon was then measured over five domains across three Korean regulatory registries, using catalogues that give Korean and English names for the same substance and so separate vocabulary transfer from spelling transfer: 1,380 entries from the cosmetic ingredient dictionary and 1,650 drug ingredient names from the MFDS approval register.
 
-**Results.** The method yields 125 roots. Across 9,903 KOSHA chemical names, 40.4% of the Hangul is accounted for by a known root. Cosmetic ingredient names reach 12.5% on the Korean side and 15.9% on the English, WHO INN radicals (690 names) reach 8.5%, and MFDS drug names (4,762) reach 1.5%. The roots themselves transfer: methyl, ethyl, propyl, stearate, hydroxy and acrylate occur at comparable rates in both catalogues. The spellings do not. KOSHA writes sodium and potassium as 나트륨 and 칼륨, following the Korean Chemical Society; the cosmetics dictionary writes 소듐 and 포타슘, following the English INCI. Neither KOSHA form occurs even once in the cosmetics sample.
+**Results.** The method yields 125 roots. Across 9,903 KOSHA chemical names, 40.4% of the Hangul is accounted for by a known root. Cosmetic ingredient names reach 12.5% on the Korean side and 15.9% on the English; drug ingredient names reach 8.1% and 14.7%. The roots themselves transfer, occurring in all three registries at comparable rates. The spellings do not, and the divergence is systematic rather than incidental. Pharmacy and cosmetics do not overlap at all on the elements sodium and potassium: drugs write 나트륨 and 칼륨, cosmetics write 소듐 and 포타슘, and each form is absent from the other register. The same split runs deeper than element names. Cosmetics transliterates counter-ions (설페이트, 포스페이트) and never translates them; pharmacy translates them into Sino-Korean (황산, 염산, 수화물) and rarely transliterates. KOSHA, the registry this lexicon was mined from, is the only one of the three that uses both.
 
-**Conclusions.** Cross-domain transfer succeeds and fails in different places, and the distinction is the result: chemical vocabulary is shared, orthographic convention belongs to whichever body maintains the register. A lexicon mined in one catalogue therefore under-reads in another for reasons that are administrative rather than chemical, and a Korean reader meets two official spellings of the same element depending on which label is in their hand. The low pharmaceutical figure is separately a failure of measurement rather than of transfer: the only accessible public endpoint returns product names, and the unexplained fragments — 연질캡슐, 캡슐, 정, 밀리그램 — diagnose exactly that.
+**Conclusions.** Cross-registry transfer succeeds and fails in different places, and the distinction is the result: chemical vocabulary is shared, orthographic convention belongs to whichever body maintains the register. A lexicon mined in one catalogue under-reads in another for reasons that are administrative rather than chemical, and a Korean reader meets two official spellings of the same substance depending on which label is in their hand. The pharmaceutical figure also settles a question the earlier version of this work could only diagnose: measured on product names the same lexicon reached 1.5%, and measured on ingredient names from the same agency it reaches 8.1%, so the low figure was a failure of measurement rather than of transfer.
 
 **Keywords:** transliteration lexicon; morphological decomposition; chemical nomenclature; regulatory data; accessibility infrastructure; domain extension; orthographic convention
 
@@ -49,6 +49,22 @@ We are not aware of morphological decomposition work targeting Korean chemical n
 The `chemical_terms` table of the KOSHA database records each chemical under both a Korean and an English name. Of 117,744 rows, 111,556 carry an English name, but only 8,071 carry actual Hangul in the Korean-name field; the rest repeat the English name there. This study uses those 8,071 pairs.
 
 Names were normalised by removing parenthetical annotations (English glosses, trivial names) and locant or stereo descriptors (1,2-, (E)-, N,N'-), then keeping only Hangul or Latin letters.
+
+**The pharmaceutical catalogue.** Section 4.3 of an earlier version of this
+report argued that the pharmaceutical row measured the wrong strings, because
+the only endpoint then reachable returned product names. The ingredient names
+live in the MFDS drug approval register, and this study reads them through the
+chemical information service that already holds an authorised key for it.
+
+The register has no listing call, only substring search on the product name, so
+we swept the dosage-form words that nearly every Korean product name contains
+(정, 캡슐, 주사 …) and deduplicated by item. That yielded 12,633 distinct
+products and, from them, 1,650 ingredient names.
+
+Korean generic products print the active ingredient in parentheses after the
+product name — 보령아스트릭스캡슐100밀리그람(아스피린) — and the English
+ingredient arrives as its own field, so the pair comes out of one record. That
+is the same shape as the cosmetics dictionary, reached by a different route.
 
 **The cosmetics catalogue.** The Korean Cosmetic Association publishes a
 dictionary of cosmetic ingredients giving, for each entry, a standardised
@@ -97,9 +113,11 @@ Coverage is the share of a name's Hangul explained by a known root under greedy 
 |---|---:|---:|---:|---:|
 | KOSHA chemicals (source) | 9,903 | 40.4% | 4.4% | 118 |
 | KCIA cosmetic ingredients (English INCI) | 1,291 | 15.9% | 1.2% | 68 |
+| MFDS drug ingredients (English) | 1,650 | 14.7% | 0.6% | 71 |
 | KCIA cosmetic ingredients (Korean) | 1,380 | 12.5% | 0.1% | 61 |
 | WHO INN radicals (English) | 690 | 8.5% | 2.8% | 47 |
-| MFDS drug product names | 4,762 | 1.5% | 0.0% | 32 |
+| MFDS drug ingredients (Korean) | 1,650 | 8.1% | 0.1% | 65 |
+| MFDS drug *product* names | 4,762 | 1.5% | 0.0% | 32 |
 
 ### 4.2 Correspondences that are not transliterations
 
@@ -107,76 +125,112 @@ The lexicon contains translations as well as transliterations. *chloride* was mi
 
 Such entries carry meaning, so an error in one is a content error rather than a spelling error. They are listed separately among the expert-review candidates in Section 6.
 
-### 4.3 Interpreting the pharmaceutical figure
+### 4.3 The pharmaceutical figure, measured twice
 
-The MFDS figure of 1.5% does not show that the lexicon fails to transfer. It shows that the wrong strings were measured.
+An earlier version of this report gave the pharmaceutical row as 1.5% and argued that the number described the measurement rather than the lexicon. `DrbEasyDrugInfoService`, the only MFDS endpoint then reachable, returns product names, and brand names such as 활명수 and 아네모정 contain no Latin root. The diagnostic offered was that the largest unexplained fragments were 연질캡슐, 캡슐, 정 and 밀리그램: dosage form and strength, not chemistry.
 
-`DrbEasyDrugInfoService`, the only MFDS endpoint our data.go.kr key is authorised for, returns product names. Brand names such as 활명수 and 아네모정 contain no Latin root. The diagnostic is that the largest unexplained fragments are 연질캡슐, 캡슐, 정 and 밀리그램: dosage form and strength.
+That argument can now be tested rather than asserted, because the ingredient names from the same agency are in hand.
 
-Ingredient names live in the `MAIN_ITEM_INGR` field of `DrugPrdtPrmsnInfoService`, which returns HTTP 400 for our key. data.go.kr authorises keys per service, so access must be requested separately.
+**Table 2.** The same lexicon against two readings of the same catalogue.
 
-We record this rather than omitting it because the failure mode is easy to repeat: a public API that returns *something* for a drug query invites the assumption that it returns ingredients.
-
-### 4.4 Cosmetics: the roots transfer, the spellings do not
-
-The cosmetics dictionary answers the question the pharmaceutical row could not, because it supplies ingredient names in both scripts.
-
-The roots transfer. Measured as whole tokens, the shared chemical vocabulary appears in both catalogues at comparable rates (Fig. 3, left).
-
-**Table 2.** Shared roots, share of names containing each. KOSHA n = 9,903; KCIA sample n = 1,380.
-
-| Root | KOSHA | KCIA cosmetics |
+| Strings measured | Names | Char coverage |
 |---|---:|---:|
-| 메틸 (methyl) | 14.79% | 3.41% |
-| 에틸 (ethyl) | 7.70% | 3.48% |
-| 하이드록시 (hydroxy) | 3.97% | 2.39% |
-| 프로필 (propyl) | 2.27% | 2.90% |
-| 아크릴 (acryl) | 1.46% | 1.52% |
-| 스테아 (stear) | 0.69% | 4.42% |
+| Product names (`DrbEasyDrugInfoService`) | 4,762 | 1.5% |
+| Ingredient names (approval register) | 1,650 | 8.1% |
 
-The ordering shifts with what each industry actually uses. Stearates are emollients and surfactants, so they are six times commoner in cosmetics. The vocabulary is nonetheless the same vocabulary.
+Coverage rises by a factor of five on the same lexicon and the same agency. The diagnosis holds: the earlier figure measured brand naming.
 
-The spellings do not transfer. The two catalogues are maintained by different bodies with different romanisation ancestries, and for element names they do not overlap at all.
+We keep both rows in Table 1 rather than replacing one with the other. The product-name row is not a mistake to be corrected out of the record — it is the measurement a reader would get from the endpoint that is easiest to reach, and the gap between the two rows is the finding.
 
-**Table 3.** Element and prefix spellings by catalogue. Elements matched as whole tokens; prefixes at name-initial position only, since as substrings they match unrelated names.
+What the ingredient row does not do is rise to the source domain's 40.4%. Section 4.4 takes up why.
 
-| English | Form | KOSHA | KCIA cosmetics |
-|---|---|---:|---:|
-| sodium | 나트륨 | 5.08% | **0.00%** |
-| sodium | 소듐 | 0.76% | 4.42% |
-| potassium | 칼륨 | 1.30% | **0.00%** |
-| potassium | 포타슘 | 0.15% | 1.09% |
-| di- | 디 | 5.00% | 0.14% |
-| di- | 다이 | 5.38% | 4.49% |
-| tri- | 트리 | 2.42% | 0.14% |
-| tri- | 트라이 | 1.81% | 1.74% |
+### 4.4 The roots transfer, the spellings do not
 
-Not one of the 1,380 cosmetic ingredient names contains 나트륨 or 칼륨. KOSHA follows the Korean Chemical Society, which kept the German-derived element names that entered Korean scientific vocabulary through Japanese; the cosmetics dictionary transliterates the English INCI directly. The prefixes tell the same story more softly: KOSHA uses 디 and 다이 in almost equal measure, so it is internally inconsistent, while the cosmetics dictionary has settled on 다이.
+With two ingredient catalogues in hand the question splits cleanly, because both give Korean and English names for the same substances.
 
-This is why the Korean cosmetics figure sits at 12.5% rather than near the source domain's 40.4%. It is not that the chemistry is unfamiliar. A lexicon mined from one registry inherits that registry's house style, and 45.8% of cosmetic ingredient names are botanical besides, built from Korean plant names and the words 추출물, 꽃, 잎, 뿌리, which have no Latin root by construction. Excluding botanicals raises Korean coverage to 20.8%.
+The roots transfer. Measured as whole tokens, the shared chemical vocabulary appears in all three registries (Fig. 3, left).
 
-The Korean and English sides agree closely, 12.5% against 15.9%, which locates the limit. If the transliteration step were the problem, the Korean side would fall well below the English one. It does not, so what is missing is vocabulary in the lexicon, not the mapping into Hangul.
+**Table 3.** Shared roots, share of names containing each. KOSHA n = 9,903; MFDS ingredients n = 1,650; KCIA sample n = 1,380.
+
+| Root | KOSHA | MFDS drugs | KCIA cosmetics |
+|---|---:|---:|---:|
+| 메틸 (methyl) | 14.79% | 0.79% | 3.41% |
+| 에틸 (ethyl) | 7.70% | 0.55% | 3.48% |
+| 아미노 (amino) | 2.66% | 0.85% | 1.16% |
+| 벤조 (benzo) | 2.62% | 0.48% | 0.58% |
+| 프로필 (propyl) | 2.27% | 0.24% | 2.90% |
+| 아세테이트 (acetate) | 0.64% | 0.85% | 0.94% |
+
+Rates shift with what each industry uses — stearates are emollients, so they are six times commoner in cosmetics than in industrial chemicals, and alkyl prefixes are rarer in pharmacy, whose names are built from INN stems — but the vocabulary is the same vocabulary.
+
+The spellings do not transfer, and the divergence is not a matter of degree.
+
+**Table 4.** Element and prefix spellings by registry. Elements matched as whole tokens; prefixes at name-initial position only, since as substrings they match unrelated names.
+
+| English | Form | KOSHA | MFDS drugs | KCIA cosmetics |
+|---|---|---:|---:|---:|
+| sodium | 나트륨 | 5.08% | 9.64% | **0.00%** |
+| sodium | 소듐 | 0.76% | **0.00%** | 4.42% |
+| potassium | 칼륨 | 1.30% | 2.06% | **0.00%** |
+| potassium | 포타슘 | 0.15% | **0.00%** | 1.09% |
+| di- | 디 | 5.00% | 1.88% | 0.14% |
+| di- | 다이 | 5.38% | **0.00%** | 4.49% |
+| tri- | 트리 | 2.42% | 1.03% | 0.14% |
+| tri- | 트라이 | 1.81% | **0.00%** | 1.74% |
+
+On sodium and potassium the two ingredient registries do not overlap at all: each uses one form exclusively and never the other. KOSHA uses both.
+
+### 4.5 The split is a naming strategy, not four words
+
+Element names turned out to be a symptom. A counter-ion can be rendered two ways in Korean — translated into Sino-Korean, or transliterated from English — and each registry has settled on one.
+
+**Table 5.** Translation against transliteration, by registry.
+
+| English | Korean | Rendering | KOSHA | MFDS drugs | KCIA cosmetics |
+|---|---|---|---:|---:|---:|
+| sulfate | 황산 | translated | 2.14% | 2.30% | **0.00%** |
+| sulfate | 설페이트 | transliterated | 0.19% | 0.30% | 1.52% |
+| phosphate | 인산 | translated | 1.93% | 1.21% | **0.00%** |
+| phosphate | 포스페이트 | transliterated | 0.37% | 0.30% | 1.38% |
+| hydrochloride | 염산 | translated | 0.31% | 14.61% | **0.00%** |
+| hydrochloride | 클로라이드 | transliterated | 1.16% | **0.00%** | 0.87% |
+| hydrate | 수화물 | translated | 1.36% | 9.09% | **0.00%** |
+| hydrate | 하이드레이트 | transliterated | 0.15% | **0.00%** | 0.07% |
+
+The cosmetics column has four zeros and they are all in the translated rows: in 1,380 ingredient names the register never once translates a counter-ion. Pharmacy runs the other way, translating heavily — 염산 appears in 14.6% of drug ingredient names — and never using 클로라이드 or 하이드레이트 at all.
+
+This is why 염화 was mined for *chloride* in Section 4.2. That entry is correct for KOSHA and for pharmacy and wrong for cosmetics, and no amount of care in the mining could have found a form that serves all three, because no such form exists.
+
+It also explains the shape of Table 1. The Korean cosmetics figure sits at 12.5% and the Korean drug figure at 8.1%, both far below the source domain, and for opposite reasons: cosmetics spells things one way the lexicon does not hold, pharmacy spells them the other. KOSHA, sitting between them and using both, is the only registry a single-spelling lexicon could have been mined from without the inconsistency showing up immediately.
+
+Two further causes are specific to each catalogue. Some 45.8% of cosmetic ingredient names are botanical, built from Korean plant names and the words 추출물, 꽃, 잎, 뿌리, which have no Latin root by construction; excluding them raises Korean cosmetics coverage to 20.8%. Drug ingredient names carry salt and hydrate suffixes — 염산염, 나트륨, 수화물 — which the lexicon does not hold and which are grammar rather than vocabulary.
+
+The Korean and English sides locate the limit differently in each. For cosmetics the two agree closely, 12.5% against 15.9%, so what is missing is vocabulary. For drugs the gap is wider, 8.1% against 14.7%, which is the translation strategy showing up as a number: the English side is transliterable and the Korean side has already been translated away from the root.
 
 ## 5. Discussion
 
 The source-domain figure of 40.4% is not a ceiling. What remains unexplained is element names (나트륨, 칼륨), trivial names with no compositional structure, and stems that did not clear the mining thresholds. Raising coverage means extending the candidate list, not changing the method.
 
-The INN figure of 8.5% was measured against English roots. Korean transliterations of those names were not obtainable, so the number shows only that the roots themselves recur, not that transliteration transfers.
+The INN figure of 8.5% was measured against English roots. Korean transliterations of those radicals as a published list were not obtainable, so that row shows only that the roots themselves recur.
 
-### 5.1 Two registries, one language, two spellings
+### 5.1 Three registries, one language, three house styles
 
-The element result is small to state and awkward to live with. A Korean reader who meets sodium lauryl sulfate on a shampoo bottle and sodium hydroxide on a safety data sheet is given two different Korean words for the same element, by two public bodies, in the same language. Neither body is wrong within its own register. 나트륨 is standard chemical Korean, 소듐 is the standard cosmetics transliteration, and both are officially maintained.
+The result is small to state and awkward to live with. A Korean reader who meets sodium lauryl sulfate on a shampoo bottle, sodium hydroxide on a safety data sheet, and 염산 in a prescription leaflet is given different Korean words for the same chemistry by three public bodies, in one language. None of them is wrong inside its own register. 나트륨 is standard chemical and pharmaceutical Korean, 소듐 is the standard cosmetics transliteration, and every form in Table 5 is officially maintained by someone.
 
-For a sighted reader the cost is a moment's friction. For the accessibility case this series argues, it is more than that. Braille and speech both flatten the visual cues that would let a reader guess the two forms are the same substance, and someone assembling a list of ingredients to avoid has no way to know that the 소듐 on one label and the 나트륨 on another are one thing.
+For a sighted reader the cost is a moment's friction, and often not even that, because the packaging carries a shape and a colour and a shelf position that carry the identification instead. For the accessibility case this series argues, none of that is available. Braille and speech deliver the string and nothing else, so the reader has only the word — and someone assembling a list of ingredients to avoid has no way to know that the 소듐 on one label and the 나트륨 on another are one substance.
 
-The engineering consequence is narrow and useful. A cross-domain lexicon needs variant spellings recorded as alternates of one root, not one canonical spelling per root. That is a schema decision, and it has to be made before the lexicon is built rather than patched afterwards.
+The engineering consequence is narrow and useful. A lexicon meant to cross registries needs variant spellings recorded as alternates of one root, and it needs to record which registry uses which, because the alternates are not interchangeable within a document. That is a schema decision, and Section 4.5 is the argument for making it before the lexicon is built rather than patching it afterwards.
 
-We do not propose that either body change its convention. Both are settled, and an accessibility project is not the right instrument for standardising a national scientific vocabulary.
+There is a second consequence for how such a lexicon should be mined. KOSHA looked like the natural source: it is the largest aligned corpus available and it is the domain this series began in. It is also, of the three registries measured, the only one without a consistent house style. Mining from it produced a lexicon that reads as neutral and is in fact a blend, and the blend is invisible until it is measured against a registry that has committed to one convention.
+
+We do not propose that any of the three bodies change its convention. All are settled, they answer to different statutes, and an accessibility project is not the right instrument for standardising a national scientific vocabulary. The asymmetry is worth naming, though: the cost of the divergence falls almost entirely on readers who cannot see the package.
 
 ## 6. Limitations
 
 - The lexicon is mined from one regulatory corpus and reflects its transliteration conventions. Section 4.4 measures that limitation rather than removing it: the lexicon still holds one spelling per root.
 - The cosmetics figure comes from a 1,380-entry sample, not a census. Sampling was by fixed page stride, which is unbiased with respect to the dictionary's ordering but is still a sample.
+- The drug ingredient names were recovered from the parenthetical in the product name, not from a dedicated ingredient field. That favours single-ingredient generics, which are the products that print the ingredient there; combination products and originator brands are under-represented.
+- Both ingredient catalogues were swept through search rather than enumerated, so neither is a census and the rates carry sampling error that we have not quantified.
 - The cosmetics dictionary's terms prohibit redistribution, so the sample cannot be released with the paper. Only the statistics and the fetching script are reproducible, and a reader re-running the script draws their own sample, so rates should be expected to move by a fraction of a point.
 - Segmentation is greedy longest-match, so ambiguous decompositions are not resolved.
 - No transliteration reviewer has checked the lexicon.
@@ -193,20 +247,23 @@ The unit of review is a single root, not a whole name, and this is not a full au
 
 Aligned regulatory name pairs are evidence for a transliteration lexicon. We release the method, the conditions that decide its outcome, and the resulting 125 roots.
 
-Across four domains the result splits in two. Chemical vocabulary crosses the boundary between registries: the same roots name industrial chemicals and cosmetic ingredients, at comparable rates, in both scripts. Orthographic convention does not cross it, and for element names it does not overlap at all, because each register answers to a different standards body. A lexicon built for one catalogue will under-read in another for reasons that have nothing to do with chemistry, and the fix is a schema that stores variant spellings per root rather than a canonical one.
+Across five readings of three registries the result splits in two. Chemical vocabulary crosses the boundary between them: the same roots name industrial chemicals, drug ingredients and cosmetic ingredients, in both scripts. Orthographic convention does not cross it. On sodium and potassium the pharmaceutical and cosmetic registers do not overlap by a single name, and the divergence is systematic: cosmetics transliterates counter-ions and never translates them, pharmacy translates them and rarely transliterates. A lexicon built for one catalogue under-reads in another for reasons that have nothing to do with chemistry, and the fix is a schema that stores variant spellings per root together with the registry each belongs to.
 
-The pharmaceutical row remains a separate lesson: failing to check what a public API returns produces a measurement that reads as failed domain transfer.
+The pharmaceutical row carries a second lesson, and this version can close it rather than argue it. Measured on product names the lexicon reached 1.5%; measured on ingredient names from the same agency it reaches 8.1%. Failing to check what a public endpoint returns produces a number that reads as failed transfer and is really a failed measurement.
 
 ## Reproduction
 
 ```
 python scripts/mine_morphemes.py                  # rebuilds data/morphology/roots.json
 python scripts/fetch_kcia_sample.py               # samples the cosmetics dictionary
+python scripts/fetch_mfds_ingredients.py          # drug ingredient names
 python scripts/domain_coverage.py                 # rebuilds docs/track-a-coverage-report.md
-python scripts/naming_convention_divergence.py    # Tables 2 and 3
+python scripts/naming_convention_divergence.py    # Tables 3, 4 and 5
 ```
 
 `fetch_kcia_sample.py` writes to `data/kcia_cache/`, which is gitignored under the dictionary's terms of use. Everything downstream reads statistics, not entries.
+
+`fetch_mfds_ingredients.py` reads the MFDS approval register through the chemical information service that holds the authorised key, so no credential is copied into this repository. Its output is public government data and is committed.
 
 ## References
 
@@ -220,12 +277,14 @@ python scripts/naming_convention_divergence.py    # Tables 2 and 3
 
 [5] 대한화학회 [Korean Chemical Society]. *화합물 명명법* [Nomenclature of Chemical Compounds].
 
+[6] 식품의약품안전처 [Ministry of Food and Drug Safety]. 의약품 제품 허가정보 [Drug product approval information], public data set 15095677. https://www.data.go.kr/data/15095677/openapi.do
+
 ---
 
 ## Figures
 
-**Fig. 1** Reach of the 125-root lexicon by domain. Bars give the share of each catalogue's name characters explained by a known root. The MFDS bar is short because the strings measured are product names, not ingredient names. (`figures/Fig1.png`)
+**Fig. 1** Reach of the 125-root lexicon by catalogue. Bars give the share of each catalogue's name characters explained by a known root. The pale bar at the bottom is the same agency's product names rather than ingredient names, kept for comparison with the row above it. (`figures/Fig1.png`)
 
 **Fig. 2** The three conditions that decide whether mining works. Each row is a real corpus case: the naive result on the left, the corrected result on the right. (`figures/Fig2.png`)
 
-**Fig. 3** The two halves of the cross-domain result. Left: shared chemical roots occur in both catalogues at comparable rates. Right: the same two elements are spelled one way by KOSHA and the other by the cosmetics dictionary, with no overlap. Prefixes are counted at name-initial position only. (`figures/Fig3.png`)
+**Fig. 3** The two halves of the cross-registry result. Left: shared chemical roots occur in all three registries. Right: the same elements and prefixes are spelled one way by pharmacy and the other by cosmetics, with no overlap on sodium or potassium, while KOSHA uses both. Prefixes are counted at name-initial position only. (`figures/Fig3.png`)

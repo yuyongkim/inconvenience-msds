@@ -1,0 +1,6630 @@
+{
+ "source": "MFDS 의약품 제품 허가정보 (DrugPrdtPrmsnInfoService07), via the chemip drug service",
+ "method": "Korean ingredient from the ITEM_NAME parenthetical; English from ITEM_INGR_NAME",
+ "search_terms": [
+  "정",
+  "밀리그램",
+  "산",
+  "캡슐",
+  "주",
+  "액",
+  "시럽",
+  "점안",
+  "주사",
+  "과립",
+  "크림",
+  "밀리그람",
+  "연고"
+ ],
+ "api_calls": 357,
+ "products_seen": 12633,
+ "pairs": [
+  {
+   "ko": "123Ⅰ액",
+   "en": "3-Iodobenzylguanidine (123I) Solution"
+  },
+  {
+   "ko": "13C-요소",
+   "en": "Urea (13C)"
+  },
+  {
+   "ko": "14C우레아",
+   "en": "14C Urea"
+  },
+  {
+   "ko": "18F 플로르베타벤",
+   "en": "Florbetaben(18F)"
+  },
+  {
+   "ko": "1회용",
+   "en": "Fluorometholone/Fluorometholone/Tetrahydrozoline Hydrochloride/Tetrahydrozoline Hydrochloride"
+  },
+  {
+   "ko": "2-메톡시이소부틸이소니트릴",
+   "en": "Tetrakis (2-Methoxyisobutylisonitrile)copper (I)tetrafluoroborate"
+  },
+  {
+   "ko": "3,3-디포스포노-1,2-프로판디카르복실산나트륨",
+   "en": "Sodium 3/3-Diphospho-1/2-Propanedicarboxylic Acid (DPD)"
+  },
+  {
+   "ko": "3-플루오르프로필",
+   "en": "N-3-(Fluoroprolyl)-2Beta-Carbomethoxy-3Beta-(4-[123I]Iodophenyl)Nortropane"
+  },
+  {
+   "ko": "5-플루오로우라실",
+   "en": "5-Fluorourasil"
+  },
+  {
+   "ko": "BDDE가교히알루론산나트륨겔",
+   "en": "BDDE Cross Linked Sodium Hyaluronate Gel"
+  },
+  {
+   "ko": "D-판테놀",
+   "en": "Dexpanthenol"
+  },
+  {
+   "ko": "L-류신, L-발린, L-이소류신",
+   "en": "L-Isoleucine/L-Leucine/L-Valine"
+  },
+  {
+   "ko": "L-류신,L-발린,L-이소류신",
+   "en": "L-Isoleucine/L-Leucine/L-Valine"
+  },
+  {
+   "ko": "L-시스틴",
+   "en": "L-Cystine/L-Cystine"
+  },
+  {
+   "ko": "L-아르기닌",
+   "en": "L-Arginine"
+  },
+  {
+   "ko": "L-아르기닌염산염",
+   "en": "L-Arginine Hydrochloride"
+  },
+  {
+   "ko": "L-아스파라긴산-L-오르니친",
+   "en": "L-Ornithine-L-Aspartate Hydrate"
+  },
+  {
+   "ko": "L-아스파르트산-L-아르기닌",
+   "en": "L-Arginine-L-Aspartate Hydrate/L-Arginine-L-Aspartate Hydrate"
+  },
+  {
+   "ko": "L-아스파르트산-L-아르기닌수화물",
+   "en": "L-Arginine-L-Aspartate Hydrate"
+  },
+  {
+   "ko": "L-아스파르트산-L-오르니틴",
+   "en": "L-Ornithine-L-Aspartate"
+  },
+  {
+   "ko": "L-아스파르트산-L-오르니틴수화물",
+   "en": "L-Ornithine-L-Aspartate Hydrate"
+  },
+  {
+   "ko": "L-아스파르트산-L오르니틴수화물",
+   "en": "L-Ornithine-L-Aspartate Hydrate"
+  },
+  {
+   "ko": "L-카르니틴",
+   "en": "L-Carnitine/L-Carnitine/L-Carnitine"
+  },
+  {
+   "ko": "Polyvinil alcohol, 수출명:LUTERICAN Eye drop",
+   "en": "Polyvinyl Alcohol"
+  },
+  {
+   "ko": "S-아데노실-L-메티오닌황산토실산염",
+   "en": "S-Adenosyl-L-Methionine Sulfate Tosilate"
+  },
+  {
+   "ko": "S-암로디핀베실산염2.5수화물",
+   "en": "S-Amlodipine Besylate 2.5 Hydrate"
+  },
+  {
+   "ko": "가니렐릭스아세트산염",
+   "en": "Ganirelix Acetate diacetate"
+  },
+  {
+   "ko": "가도베네이트디메글루민",
+   "en": "Detapenta/Gadolinium Oxide"
+  },
+  {
+   "ko": "가도부트롤",
+   "en": "Gadobutrol Hydrate"
+  },
+  {
+   "ko": "가도테레이트메글루민액",
+   "en": "Gadoterate Meglumine Solution"
+  },
+  {
+   "ko": "가도테리돌",
+   "en": "Gadoteridol"
+  },
+  {
+   "ko": "가도피클레놀",
+   "en": "Gadopiclenol"
+  },
+  {
+   "ko": "가미귀비탕",
+   "en": "Angelica Gigas Root/Astragalus Root/Atractylodes Rhizome White/Aucklandiae Radix/Bupleurum Root/Gardenia Fruit/Ginger/Ginseng/Jujube/Licorice/Longan Arillus/Polygala Root/Poria/Zizyphus Seed"
+  },
+  {
+   "ko": "가미귀비탕엑스",
+   "en": "Gamigwibitang Soft Extract"
+  },
+  {
+   "ko": "가미귀비탕엑스과립",
+   "en": "Angelica Gigas Root/Astragalus Root/Atractylodes Rhizome White/Aucklandiae Radix/Bupleurum Root/Gardenia Fruit/Ginger/Ginseng/Jujube/Licorice/Longan Arillus/Moutan Root Bark/Polygala Root/Poria/Zizyphus Seed"
+  },
+  {
+   "ko": "가미소요산엑스과립",
+   "en": "Gamisoyosan Soft Extract"
+  },
+  {
+   "ko": "가미온담탕",
+   "en": "As Dried Extract/Citrus Unshiu Peel/Ginseng/Jujube/Licorice/Phyllostachyos Caulis in Taeniam/Pinellia Tuber/Polygala Root/Poncirus Immature Fruit/Poria/Prepared Rehmannia Root/Raw Ginger/Schisandra Fruit/Zizyphus Seed"
+  },
+  {
+   "ko": "가바펜틴",
+   "en": "Gabapentin"
+  },
+  {
+   "ko": "가벡세이트메실산염",
+   "en": "Gabexate Mesylate/Gabexate Mesylate/Gabexate Mesylate"
+  },
+  {
+   "ko": "가수과산화벤조일",
+   "en": "Hydrous Benzoyl Peroxide"
+  },
+  {
+   "ko": "가티플록사신수화물",
+   "en": "Gatifloxacin Hydrate"
+  },
+  {
+   "ko": "간시클로버",
+   "en": "Ganciclovir"
+  },
+  {
+   "ko": "갈근탕",
+   "en": "Cinnamomi Ramulus/Ephedra Herb/Ginger/Jujube/Licorice/Peony Root/Pueraria Root"
+  },
+  {
+   "ko": "갈근탕가천궁신이",
+   "en": "Cinnamomi Ramulus/Cnidium Rhizome/Ephedra Herb/Ginger/Jujube/Licorice/Magnoliae Flos/Peony Root/Pueraria Root"
+  },
+  {
+   "ko": "갈근탕가천궁신이엑스",
+   "en": "Galgeuntanggacheongungsini Dried Extracts"
+  },
+  {
+   "ko": "갈근탕가천궁신이엑스과립",
+   "en": "As Dried Extract/Cinnamomi Ramulus/Cnidium Rhizome/Ephedra Herb/Ginger/Jujube/Licorice/Magnoliae Flos/Peony Root/Pueraria Root"
+  },
+  {
+   "ko": "갈근탕엑스과립",
+   "en": "Cinnamomi Ramulus/Ephedra Herb/Ginger/Jujube/Licorice/Peony Root/Pueraria Root"
+  },
+  {
+   "ko": "갈근황련황금탕",
+   "en": "Coptis Rhizome/Licorice/Pueraria Root/Scutellaria Root"
+  },
+  {
+   "ko": "갈란타민브롬화수소산염",
+   "en": "Galantamine Hydrobromide"
+  },
+  {
+   "ko": "건조수산화알루미늄겔",
+   "en": "Dried Aluminium Hydroxide Gel"
+  },
+  {
+   "ko": "건조황산제일철",
+   "en": "Dried Ferrous Sulfate"
+  },
+  {
+   "ko": "게피티니브",
+   "en": "Gefitinib"
+  },
+  {
+   "ko": "겐타마이신황산염",
+   "en": "Gentamicin Sulfate"
+  },
+  {
+   "ko": "겐타마이신황산염, 플루오로메톨론",
+   "en": "Fluorometholone/Gentamicin Sulfate"
+  },
+  {
+   "ko": "결정글루코사민황산염",
+   "en": "Crystallized Glucosamine Sulfate"
+  },
+  {
+   "ko": "결정황산글루코사민",
+   "en": "Crystallized Glucosamine Sulfate"
+  },
+  {
+   "ko": "결합형에스트로겐",
+   "en": "Conjugated Estrogens"
+  },
+  {
+   "ko": "결합형에스트로겐 4.29%",
+   "en": "Conjugated Estrogens 4.29%"
+  },
+  {
+   "ko": "계지가용골모려탕",
+   "en": "Gyejigayonggolmoryetang Soft Extract/Gyejigayonggolmoryetang Soft Extract/Gyejigayonggolmoryetang Soft Extract/Gyejigayonggolmoryetang Soft Extract/Gyejigayonggolmoryetang Soft Extract/Gyejigayonggolmoryetang Soft Extract/Gyejigayonggolmoryetang Soft Extract"
+  },
+  {
+   "ko": "계지가작약탕엑스과립",
+   "en": "Gyejigajakyaktang Soft Extract"
+  },
+  {
+   "ko": "계지복령환",
+   "en": "Gyejibokryeonghwan Pill Soft Extract"
+  },
+  {
+   "ko": "계지복령환료가대황엑스과립",
+   "en": "Gyejibokryeonghwangadaehwang Soft Extract"
+  },
+  {
+   "ko": "계지탕",
+   "en": "Gyejitang Soft Extract"
+  },
+  {
+   "ko": "고나도렐린아세트산염",
+   "en": "Gonadorelin Acetate"
+  },
+  {
+   "ko": "고농도과아세트산평형혼합물",
+   "en": "Highly Concentrated Balanced Mixture of Peracetic Acid"
+  },
+  {
+   "ko": "고농도아세트산평형혼합물",
+   "en": "Highly Concentrated Balanced Mixture of Acetic Acid"
+  },
+  {
+   "ko": "고세렐린아세트산염",
+   "en": "Goserelin Acetate"
+  },
+  {
+   "ko": "과당주사액",
+   "en": "Fructose"
+  },
+  {
+   "ko": "과붕산나트륨",
+   "en": "Sodium Perborate"
+  },
+  {
+   "ko": "과산화수소수30%",
+   "en": "Hydrogen Peroxide Solution 30%"
+  },
+  {
+   "ko": "과산화수소수35%",
+   "en": "Hydrogen Peroxide Solution 35%"
+  },
+  {
+   "ko": "과아세트산",
+   "en": "Peracetic Acid Solution"
+  },
+  {
+   "ko": "과아세트산4%",
+   "en": "Peracetic Acid 40%"
+  },
+  {
+   "ko": "과아세트산액",
+   "en": "Peracetic Acid Solution"
+  },
+  {
+   "ko": "과아세트산액0.13%",
+   "en": "Peracetic Acid Solution 0.13%"
+  },
+  {
+   "ko": "과아세트산액0.2%",
+   "en": "Peracetic Acid Solution 0.2%"
+  },
+  {
+   "ko": "과탄산나트륨",
+   "en": "Sodium Percarbonate"
+  },
+  {
+   "ko": "과플루오르부탄",
+   "en": "Perfluorobutane"
+  },
+  {
+   "ko": "곽향정기산",
+   "en": "Agastachis Herba/Angelica Dahurica Root/Areca Peel/Atractylodes Rhizome White/Citrus Unshiu Peel/Ginger/Jujube/Licorice/Magnolia Bark/Perilla Leaf/Pinellia Tuber/Platycodon Root/Poria"
+  },
+  {
+   "ko": "관수용",
+   "en": "Water For Injection"
+  },
+  {
+   "ko": "구.한국산업가스산소",
+   "en": "Oxygen"
+  },
+  {
+   "ko": "구셀쿠맙, 유전자재조합",
+   "en": "Guselkumab"
+  },
+  {
+   "ko": "구아야줄렌",
+   "en": "Guaiazulene"
+  },
+  {
+   "ko": "구연산부타미레이트",
+   "en": "Butamirate Citrate"
+  },
+  {
+   "ko": "구연산수펜타닐",
+   "en": "Sufentanil Citrate"
+  },
+  {
+   "ko": "구연산알베린",
+   "en": "Alverine Citrate"
+  },
+  {
+   "ko": "구연산카르베타펜탄",
+   "en": "Pentoxyverine Citrate"
+  },
+  {
+   "ko": "구연산타목시펜",
+   "en": "Tamoxifen Citrate"
+  },
+  {
+   "ko": "군납명:노닐산바닐아미드카타플라스마제",
+   "en": "Methyl Salicylate/Vanillyl Nonylamide"
+  },
+  {
+   "ko": "군납명:아미노산주사액250밀리리터,AminoacidsInjection250ml",
+   "en": "Glycine/L-Alanine/L-Arginine/L-Cysteine Hydrochloride Hydrate/L-Histidine/L-Isoleucine/L-Leucine/L-Lysine Acetate/L-Methionine/L-Phenylalanine/L-Proline/L-Serine/L-Threonine/L-Tryptophan/L-Valine"
+  },
+  {
+   "ko": "군납명:팜자동주사기",
+   "en": "Pralidoxime Chloride"
+  },
+  {
+   "ko": "군납용",
+   "en": "Diethylenetriamine/Sodium Hydroxide"
+  },
+  {
+   "ko": "궁귀교애탕",
+   "en": "Gunggwigyoaetang Soft Extract"
+  },
+  {
+   "ko": "궁귀조혈음 엑스과립",
+   "en": "Angelica Gigas Root/Atractylodes Rhizome White/Citrus Unshiu Peel/Cnidium Rhizome/Cyperus Rhizome/Jujube/Leonurus Herb/Licorice/Lindera Root/Moutan Root Bark/Poria/Prepared Rehmannia Root"
+  },
+  {
+   "ko": "규산알루민산마그네슘",
+   "en": "Magnesium Aluminosilicate"
+  },
+  {
+   "ko": "그라니세트론염산염",
+   "en": "Granisetron Hydrochloride"
+  },
+  {
+   "ko": "글루콘산제이철나트륨착염",
+   "en": "Sodium Ferric Gluconate Complex"
+  },
+  {
+   "ko": "글루콘산클로르헥시딘",
+   "en": "Chlorhexidine Gluconate Solution 20%"
+  },
+  {
+   "ko": "글루콘산클로르헥시딘액",
+   "en": "Chlorhexidine Gluconate Solution"
+  },
+  {
+   "ko": "글루타랄콘센트레이트",
+   "en": "Glutaral Concentrate Solution"
+  },
+  {
+   "ko": "글루타치온",
+   "en": "Glutathione (Reduced)"
+  },
+  {
+   "ko": "글루타티온",
+   "en": "Glutathione (Reduced)"
+  },
+  {
+   "ko": "글리메피리드",
+   "en": "Glimepiride"
+  },
+  {
+   "ko": "글리벤클라미드",
+   "en": "Glibenclamide"
+  },
+  {
+   "ko": "글리코피롤레이트",
+   "en": "Glycopyrrolate"
+  },
+  {
+   "ko": "글리클라지드",
+   "en": "Gliclazide/Gliclazide"
+  },
+  {
+   "ko": "글리클라짓",
+   "en": "Gliclazide"
+  },
+  {
+   "ko": "글리피지드",
+   "en": "Glipizide"
+  },
+  {
+   "ko": "나디플록사신",
+   "en": "Nadifloxacin"
+  },
+  {
+   "ko": "나라트립탄염산염",
+   "en": "Naratriptan Hydrochloride"
+  },
+  {
+   "ko": "나부메톤",
+   "en": "Nabumetone"
+  },
+  {
+   "ko": "나파모스타트메실산염",
+   "en": "Nafamostat Mesylate"
+  },
+  {
+   "ko": "나프로닐옥살산염",
+   "en": "Nafronyl Oxalate"
+  },
+  {
+   "ko": "나프록센",
+   "en": "Naproxen"
+  },
+  {
+   "ko": "나프록센나트륨",
+   "en": "Naproxen Sodium"
+  },
+  {
+   "ko": "나프실린나트륨",
+   "en": "Nafcillin Sodium·Sodium Citrate Hydrate"
+  },
+  {
+   "ko": "나프티핀염산염",
+   "en": "Naftifine Hydrochloride"
+  },
+  {
+   "ko": "낙산클로베타손",
+   "en": "Clobetasone Butyrate"
+  },
+  {
+   "ko": "날록손염산염",
+   "en": "Naloxone Hydrochloride"
+  },
+  {
+   "ko": "날리딕스산",
+   "en": "Nalidixic Acid"
+  },
+  {
+   "ko": "날부핀염산염",
+   "en": "Nalbuphine Hydrochloride/Nalbuphine Hydrochloride"
+  },
+  {
+   "ko": "날트렉손염산염",
+   "en": "Naltrexone Hydrochloride"
+  },
+  {
+   "ko": "내소산엑스과립",
+   "en": "Amomum Fruit/Citrus Unshiu Peel/Cyperus Rhizome/Ginger/Hawthorn Fruit/Massa Medicata Fermentata/Pinellia Tuber/Poncirus Immature Fruit/Poria/Sparganium Rhizome/Zedoary"
+  },
+  {
+   "ko": "네오마이신황산염",
+   "en": "Neomycin Sulfate"
+  },
+  {
+   "ko": "네타르수딜, 라타노프로스트",
+   "en": "Latanoprost/Netarsudil Mesylate"
+  },
+  {
+   "ko": "네타르수딜메실산염",
+   "en": "Netarsudil Mesylate"
+  },
+  {
+   "ko": "네틸마이신황산염",
+   "en": "Netilmicin Sulfate"
+  },
+  {
+   "ko": "네포팜염산염",
+   "en": "Nefopam Hydrochloride"
+  },
+  {
+   "ko": "넬테넥신일수화물",
+   "en": "Neltenexine Monohydrate"
+  },
+  {
+   "ko": "노녹시놀9",
+   "en": "Nonoxynol 9"
+  },
+  {
+   "ko": "노르에피네프린타르타르산염수화물",
+   "en": "Norepinephrine Tartrate Hydrate"
+  },
+  {
+   "ko": "노르플록사신",
+   "en": "Norfloxacin"
+  },
+  {
+   "ko": "농글리세린",
+   "en": "Concentrated Glycerin"
+  },
+  {
+   "ko": "농축콜레칼시페롤과립",
+   "en": "Cholecalciferol Concentrate Granules"
+  },
+  {
+   "ko": "니메술리드",
+   "en": "Nimesulide"
+  },
+  {
+   "ko": "니메슬리드",
+   "en": "Nimesulide"
+  },
+  {
+   "ko": "니모디핀",
+   "en": "Nimodipine/Nimodipine"
+  },
+  {
+   "ko": "니세르골린",
+   "en": "Nicergoline"
+  },
+  {
+   "ko": "니스타틴",
+   "en": "Nystatin"
+  },
+  {
+   "ko": "니자티딘",
+   "en": "Nizatidine"
+  },
+  {
+   "ko": "니카르디핀염산염",
+   "en": "Nicardipine Hydrochloride"
+  },
+  {
+   "ko": "니코란딜",
+   "en": "Nicorandil"
+  },
+  {
+   "ko": "니코틴",
+   "en": "Nicotine/Nicotine"
+  },
+  {
+   "ko": "니코틴타르타르산염수화물",
+   "en": "Nicotine Tartrate Hydrate"
+  },
+  {
+   "ko": "니트로글리세린",
+   "en": "Dilute Nitroglycerin"
+  },
+  {
+   "ko": "니트로푸루시드나트륨",
+   "en": "Sodium Nitroprusside"
+  },
+  {
+   "ko": "니페디핀",
+   "en": "Nifedipine Micronized"
+  },
+  {
+   "ko": "니푸록사지드",
+   "en": "Nifuroxazide/Nifuroxazide"
+  },
+  {
+   "ko": "니프라딜롤",
+   "en": "Nipradilol"
+  },
+  {
+   "ko": "닐로티닙염산염일수화물",
+   "en": "Nilotinib Hydrochrloride Monohydrate"
+  },
+  {
+   "ko": "다라투무맙",
+   "en": "Daratumumab"
+  },
+  {
+   "ko": "다브라페닙메실산염",
+   "en": "Dabrafenib Mesylate Micronized"
+  },
+  {
+   "ko": "다비가트란에텍실레이트메실산염",
+   "en": "Dabigatran Etexilate Mesylate"
+  },
+  {
+   "ko": "다사티닙",
+   "en": "Dasatinib"
+  },
+  {
+   "ko": "다우노루비신염산염",
+   "en": "Daunorubicin Hydrochloride/Daunorubicin Hydrochloride"
+  },
+  {
+   "ko": "다카르바진",
+   "en": "Dacarbazine"
+  },
+  {
+   "ko": "다폭세틴염산염",
+   "en": "Dapoxetine Hydrochloride"
+  },
+  {
+   "ko": "단트롤렌나트륨수화물",
+   "en": "Dantrolene Sodium Hydrate"
+  },
+  {
+   "ko": "달테파린나트륨",
+   "en": "Dalteparin Sodium"
+  },
+  {
+   "ko": "당귀사역가오수유생강탕",
+   "en": "Akebia Stem/Angelica Gigas Root/Asiasarum Root and Rhizome/Cinnamomi Ramulus/Evodia Fruit/Jujube/Licorice/Peony Root/Raw Ginger"
+  },
+  {
+   "ko": "당귀수산",
+   "en": "Danggwisusan Dried Extract (4.74~7.10→1)"
+  },
+  {
+   "ko": "당귀수산엑스과립",
+   "en": "Angelica Gigas Root/Cassiae Cortex Interior/Cyperus Rhizome/Licorice/Lindera Root/Peach Kernel/Peony Root/Safflower/Sappan Wood"
+  },
+  {
+   "ko": "당귀음자엑스과립",
+   "en": "Danggwieumja Soft Extract"
+  },
+  {
+   "ko": "당귀작약산엑스과립",
+   "en": "Alisma Rhizome/Angelica Gigas Root/Atractylodes Rhizome White/Cnidium Rhizome/Peony Root/Poria"
+  },
+  {
+   "ko": "대금음자",
+   "en": "Amomum Fruit/Atractylodes Rhizome/Citrus Unshiu Peel/Licorice/Magnolia Bark/Massa Medicata Fermentata/Poria/Pueraria Root/Raw Ginger"
+  },
+  {
+   "ko": "대만수출용",
+   "en": "Anhydrous Caffeine/Calcium Pantothenate/Ginseng Fluid Extract/Lycium Fruit Fluid Extract/Nicotinamide/Pyridoxine Hydrochloride/Riboflavin"
+  },
+  {
+   "ko": "대승기탕엑스과립",
+   "en": "Magnolia Bark/Natrii Sulfas/Poncirus Immature Fruit/Rhubarb"
+  },
+  {
+   "ko": "대시호탕 엑스과립",
+   "en": "Daesihotang Soft Extract"
+  },
+  {
+   "ko": "대황목단피탕엑스과립",
+   "en": "Benincasae Semen/Moutan Root Bark/Natrii Sulfas/Peach Kernel/Rhubarb"
+  },
+  {
+   "ko": "데가렐릭스",
+   "en": "Degarelix"
+  },
+  {
+   "ko": "데소나이드",
+   "en": "Desonide"
+  },
+  {
+   "ko": "데소니드",
+   "en": "Desonide"
+  },
+  {
+   "ko": "데속시메타손",
+   "en": "Desoximetasone"
+  },
+  {
+   "ko": "데스모프레신아세트산염",
+   "en": "Desmopressin Acetate"
+  },
+  {
+   "ko": "데스플루란",
+   "en": "Desflurane"
+  },
+  {
+   "ko": "데시타빈",
+   "en": "Decitabine"
+  },
+  {
+   "ko": "데옥시콜산",
+   "en": "Deoxycholic acid"
+  },
+  {
+   "ko": "데페라시록스",
+   "en": "Deferasirox"
+  },
+  {
+   "ko": "데프라자코르트",
+   "en": "Deflazacort Micronized"
+  },
+  {
+   "ko": "덱사메타손",
+   "en": "Dexamethasone"
+  },
+  {
+   "ko": "덱사메타손,네오마이신황산염,폴리믹신B황산염",
+   "en": "Dexamethasone/Neomycin Sulfate/Polymyxin B Sulfate"
+  },
+  {
+   "ko": "덱사메타손디나트륨인산염",
+   "en": "Dexamethasone Disodium Phosphate"
+  },
+  {
+   "ko": "덱사메타손인산나트륨",
+   "en": "Dexamethasone Disodium Phosphate"
+  },
+  {
+   "ko": "덱사메타손팔미테이트",
+   "en": "Dexamethasone Palmitate"
+  },
+  {
+   "ko": "덱사메타손포스페이트이나트륨",
+   "en": "Dexamethasone Disodium Phosphate"
+  },
+  {
+   "ko": "덱사메타손프로피오네이트",
+   "en": "Dexamethasone Propionate"
+  },
+  {
+   "ko": "덱스라족산",
+   "en": "Dexrazoxane"
+  },
+  {
+   "ko": "덱스란소프라졸",
+   "en": "Dexlansoprazole/Dexlansoprazole"
+  },
+  {
+   "ko": "덱스메데토미딘염산염",
+   "en": "Dexmedetomidine Hydrochloride"
+  },
+  {
+   "ko": "덱스케토프로펜트로메타몰",
+   "en": "Dexketoprofen Trometamol"
+  },
+  {
+   "ko": "덱스판테놀",
+   "en": "Dexpanthenol"
+  },
+  {
+   "ko": "덱시부프로펜",
+   "en": "Dexibuprofen"
+  },
+  {
+   "ko": "덱시부프로펜 디.씨.",
+   "en": "Dexibuprofen D.C."
+  },
+  {
+   "ko": "덱시부프로펜디.씨",
+   "en": "Dexibuprofen D.C."
+  },
+  {
+   "ko": "덱시부프로펜디.씨.",
+   "en": "Dexibuprofen D.C."
+  },
+  {
+   "ko": "델고시티닙",
+   "en": "Delgocitinib"
+  },
+  {
+   "ko": "도네페질염산염",
+   "en": "Donepezil Hydrochloride"
+  },
+  {
+   "ko": "도네페질염산염수화물",
+   "en": "Donepezil Hydrochloride Hydrate"
+  },
+  {
+   "ko": "도네페질염산염일수화물",
+   "en": "Donepezil Hydrochloride Monohydrate"
+  },
+  {
+   "ko": "도르졸라미드염산염",
+   "en": "Dorzolamide Hydrochloride"
+  },
+  {
+   "ko": "도르졸라미드염산염, 티몰롤말레산염",
+   "en": "Dorzolamide Hydrochloride/Timolol Maleate"
+  },
+  {
+   "ko": "도르졸라미드염산염,티몰롤말레산염",
+   "en": "Dorzolamide Hydrochloride/Dorzolamide Hydrochloride/Timolol Maleate/Timolol Maleate"
+  },
+  {
+   "ko": "도리페넴",
+   "en": "Doripenem"
+  },
+  {
+   "ko": "도리페넴일수화물",
+   "en": "Doripenem Monohydrate"
+  },
+  {
+   "ko": "도베실산칼슘",
+   "en": "Dobesilate Calcium"
+  },
+  {
+   "ko": "도베실산칼슘수화물",
+   "en": "Dobesilate Calcium Hydrate"
+  },
+  {
+   "ko": "도부타민염산염",
+   "en": "Dobutamine Hydrochloride"
+  },
+  {
+   "ko": "도세탁셀무수물",
+   "en": "Anhydrous Docetaxel"
+  },
+  {
+   "ko": "도세탁셀무수화물",
+   "en": "Anhydrous Docetaxel"
+  },
+  {
+   "ko": "도세탁셀삼수화물",
+   "en": "Docetaxel Trihydrate"
+  },
+  {
+   "ko": "도세탁셀수화물",
+   "en": "Docetaxel Hydrate"
+  },
+  {
+   "ko": "도파민염산염",
+   "en": "Dopamine Hydrochloride"
+  },
+  {
+   "ko": "도핵승기탕",
+   "en": "Cinnamomi Ramulus/Dohekseungitang Soft Extract (6.28→1)/Licorice/Natrii Sulfas/Peach Kernel/Rhubarb"
+  },
+  {
+   "ko": "독사조신메실산염",
+   "en": "Doxazosin Mesylate/Doxazosin Mesylate"
+  },
+  {
+   "ko": "독소루비신염산염",
+   "en": "Doxorubicin Hydrochloride"
+  },
+  {
+   "ko": "독소필린",
+   "en": "Doxofylline"
+  },
+  {
+   "ko": "독시라민석시네이트",
+   "en": "Doxylamine Succinate"
+  },
+  {
+   "ko": "독시라민숙신산염",
+   "en": "Doxylamine Succinate"
+  },
+  {
+   "ko": "독시사이클린",
+   "en": "Doxycycline Hydrate"
+  },
+  {
+   "ko": "독시사이클린수화물",
+   "en": "Doxycycline Hydrate"
+  },
+  {
+   "ko": "독시사이클린하이클레이트",
+   "en": "Doxycycline Hyclate Hydrate"
+  },
+  {
+   "ko": "독시사이클린하이클레이트수화물",
+   "en": "Doxycycline Hyclate Hydrate"
+  },
+  {
+   "ko": "돔페리돈",
+   "en": "Domperidone"
+  },
+  {
+   "ko": "돔페리돈말레산염",
+   "en": "Domperidone Maleate"
+  },
+  {
+   "ko": "동남아수출용",
+   "en": "Ginseng Extract/Nicotinamide/Thiamine Hydrochloride"
+  },
+  {
+   "ko": "동물용",
+   "en": "Tiletamine Hydrochloride/Zolazepam Hydrochloride"
+  },
+  {
+   "ko": "동의수세보원",
+   "en": "Acori Graminei Rhizoma/Asparagus Tuber/Chrysanthemi Indici Flos/Dioscorea Rhizome/Liriope Tuber/Longan Arillus/Nelumbo Seed/Polygala Root/Raphani Semen/Scutellaria Root/Thuja Seed/Zizyphus Seed"
+  },
+  {
+   "ko": "돼지뇌펩티드",
+   "en": "Cerebrolysin"
+  },
+  {
+   "ko": "두타스테리드",
+   "en": "Dutasteride"
+  },
+  {
+   "ko": "둘록세틴염산염",
+   "en": "Duloxetine Hydrochloride Enteric-Coated Granules"
+  },
+  {
+   "ko": "디-페니실라민",
+   "en": "D-Penicillamine"
+  },
+  {
+   "ko": "디곡신",
+   "en": "Digoxin"
+  },
+  {
+   "ko": "디나트륨인산덱사메타손",
+   "en": "Dexamethasone Disodium Phosphate"
+  },
+  {
+   "ko": "디메르캅토숙신산",
+   "en": "Dimercaptosuccinic Acid"
+  },
+  {
+   "ko": "디멘히드리네이트",
+   "en": "Dimenhydrinate"
+  },
+  {
+   "ko": "디발프로엑스나트륨",
+   "en": "Divalproex Sodium"
+  },
+  {
+   "ko": "디부카인",
+   "en": "Dibucaine"
+  },
+  {
+   "ko": "디비닐설폰으로 가교 결합된 히알루론산나트륨겔과히알루론산나트륨액의 4:1 w/w 혼합겔",
+   "en": "4:1 w/w mixed hydrogel of sodium hyaluronate gel crosslinked by divinyl sulfone and sodium hyaluronate fluid"
+  },
+  {
+   "ko": "디비닐설폰으로 가교결합된 히알루론산나트륨겔과 히알루론산나트륨액의 4:1 w/w 혼합겔",
+   "en": "4:1 w/w mixed hydrogel of sodium hyaluronate gel crosslinked by divinyl sulfone and sodium hyaluronate fluid"
+  },
+  {
+   "ko": "디시클로민염산염",
+   "en": "Dicyclomine Hydrochloride"
+  },
+  {
+   "ko": "디아세레인",
+   "en": "Diacerein"
+  },
+  {
+   "ko": "디아제팜",
+   "en": "Diazepam"
+  },
+  {
+   "ko": "디에틸아미노에틸테오필린염산염",
+   "en": "Diethylaminoethyltheophylline Hydrochloride"
+  },
+  {
+   "ko": "디오스민",
+   "en": "Diosmin"
+  },
+  {
+   "ko": "디옥타헤드랄스멕타이트",
+   "en": "Dioctahedral Smectite/Dioctahedral Smectite/Dioctahedral Smectite/Dioctahedral Smectite/Dioctahedral Smectite/Dioctahedral Smectite"
+  },
+  {
+   "ko": "디쿠아포솔나트륨",
+   "en": "Diquafosol Tetrasodium"
+  },
+  {
+   "ko": "디클로페낙",
+   "en": "Diclofenac"
+  },
+  {
+   "ko": "디클로페낙β-디메틸아미노에탄올",
+   "en": "Diclofenac Beta-Dimethylaminoethanol"
+  },
+  {
+   "ko": "디클로페낙나트륨",
+   "en": "Diclofenac Sodium"
+  },
+  {
+   "ko": "디클로페낙디에틸암모늄",
+   "en": "Diclofenac Diethylammonium"
+  },
+  {
+   "ko": "디클로페낙베타-디메틸아미노에탄올",
+   "en": "Diclofenac Beta-Dimethylaminoethanol"
+  },
+  {
+   "ko": "디클로페낙베타디메틸아미노에탄올",
+   "en": "Diclofenac Beta-Dimethylaminoethanol"
+  },
+  {
+   "ko": "디클로페낙칼륨",
+   "en": "Diclofenac Potassium"
+  },
+  {
+   "ko": "디펜히드라민염산염",
+   "en": "Diphenhydramine Hydrochloride"
+  },
+  {
+   "ko": "디플로라손아세테이트",
+   "en": "Diflorasone Acetate"
+  },
+  {
+   "ko": "디플루코르톨론발레레이트",
+   "en": "Diflucortolone Valerate"
+  },
+  {
+   "ko": "디플루프레드네이트",
+   "en": "Difluprednate"
+  },
+  {
+   "ko": "디피리다몰",
+   "en": "Dipyridamole"
+  },
+  {
+   "ko": "디히드로아르테미시닌",
+   "en": "Dihydroartemisinin"
+  },
+  {
+   "ko": "디히드록시디부틸에테르",
+   "en": "Dihydroxydibutyl Ether/Dihydroxydibutyl Ether"
+  },
+  {
+   "ko": "딜라제프염산염수화물",
+   "en": "Dilazep Hydrochloride Hydrate"
+  },
+  {
+   "ko": "딜티아젬아시딕폴리머콤플렉스",
+   "en": "Diltiazem Acidic Polymer Complex"
+  },
+  {
+   "ko": "딜티아젬염산염",
+   "en": "Diltiazem Hydrochloride"
+  },
+  {
+   "ko": "딸기향, 바나나향",
+   "en": "Dextromethorphan Hydrobromide Hydrate/Dextromethorphan Hydrobromide Hydrate/Guaifenesin/Guaifenesin/Pseudoephedrine Hydrochloride/Pseudoephedrine Hydrochloride"
+  },
+  {
+   "ko": "딸기향, 포도향",
+   "en": "Anhydrous Caffeine/Anhydrous Caffeine/Chlorpheniramine Maleate/Chlorpheniramine Maleate/DL-Methylephedrine Hydrochloride/DL-Methylephedrine Hydrochloride/Dipotassium Glycyrrhizinate/Dipotassium Glycyrrhizinate"
+  },
+  {
+   "ko": "라니티딘염산염",
+   "en": "Ranitidine Hydrochloride"
+  },
+  {
+   "ko": "라도티닙염산염",
+   "en": "Radotinib Hydrochloride"
+  },
+  {
+   "ko": "라로트렉티닙황산염",
+   "en": "Larotrectinib sulfate"
+  },
+  {
+   "ko": "라록시펜염산염",
+   "en": "Raloxifene Hydrochloride"
+  },
+  {
+   "ko": "라모세트론염산염",
+   "en": "Ramosetron Hydrochloride"
+  },
+  {
+   "ko": "라모트리진",
+   "en": "Lamotrigine/Lamotrigine/Lamotrigine"
+  },
+  {
+   "ko": "라미부딘",
+   "en": "Lamivudine"
+  },
+  {
+   "ko": "라미프릴",
+   "en": "Ramipril Granules Coated Hydroxypropyl Methylcellulose"
+  },
+  {
+   "ko": "라베타롤염산염",
+   "en": "Labetalol Hydrochloride"
+  },
+  {
+   "ko": "라베탈롤염산염",
+   "en": "Labetalol Hydrochloride"
+  },
+  {
+   "ko": "라베프라졸나트륨",
+   "en": "Rabeprazole Sodium"
+  },
+  {
+   "ko": "라시디핀",
+   "en": "Lacidipine"
+  },
+  {
+   "ko": "라이트",
+   "en": "Glucose/Glucose/Glucose/Hypromellose/Hypromellose/Hypromellose/Potassium Chloride/Potassium Chloride/Potassium Chloride/Sodium Chloride/Sodium Chloride/Sodium Chloride"
+  },
+  {
+   "ko": "라코사미드",
+   "en": "Lacosamide"
+  },
+  {
+   "ko": "라타노프로스트",
+   "en": "Latanoprost/Latanoprost"
+  },
+  {
+   "ko": "라타노프로스틴부노드",
+   "en": "latanoprostene bunod"
+  },
+  {
+   "ko": "라타목세프나트륨",
+   "en": "Latamoxef Sodium"
+  },
+  {
+   "ko": "라파티닙디토실레이트",
+   "en": "Lapatinib Ditosylate Monohydrate"
+  },
+  {
+   "ko": "라푸티딘",
+   "en": "Lafutidine"
+  },
+  {
+   "ko": "락토바실루스아시도필루스",
+   "en": "Lactobacillus Acidophilus/Lactobacillus Acidophilus"
+  },
+  {
+   "ko": "락토바실루스아시도필루스균",
+   "en": "Lactobacillus Acidophilus"
+  },
+  {
+   "ko": "락토바실루스카제이변종람노수스",
+   "en": "Lactobacillus Casei Var.Rhamnosus Lyophilizate"
+  },
+  {
+   "ko": "락툴로오스농축물",
+   "en": "Lactulose Concentrate Solution"
+  },
+  {
+   "ko": "락툴로오스농축액",
+   "en": "Lactulose Concentrate Solution"
+  },
+  {
+   "ko": "락툴로오스액",
+   "en": "Lactulose Concentrate Solution"
+  },
+  {
+   "ko": "락툴로오즈농축액",
+   "en": "Lactulose Concentrate Solution"
+  },
+  {
+   "ko": "락툴로오즈액",
+   "en": "Lactulose Solution"
+  },
+  {
+   "ko": "락트산암모늄액",
+   "en": "Ammonium Lactate Solution"
+  },
+  {
+   "ko": "락티톨일수화물",
+   "en": "Lactitol Monohydrate/Lactitol Monohydrate"
+  },
+  {
+   "ko": "란소프라졸",
+   "en": "Lansoprazole"
+  },
+  {
+   "ko": "란소프라졸과립",
+   "en": "Lansoprazole Granules"
+  },
+  {
+   "ko": "레날리도마이드",
+   "en": "Lenalidomide Hemihydrate"
+  },
+  {
+   "ko": "레르카니디핀염산염",
+   "en": "Lercanidipine Hydrochloride"
+  },
+  {
+   "ko": "레바미피드",
+   "en": "Rebamipide"
+  },
+  {
+   "ko": "레바프라잔염산염",
+   "en": "Revaprazan Hydrochloride"
+  },
+  {
+   "ko": "레보드로프로피진",
+   "en": "Levodropropizine"
+  },
+  {
+   "ko": "레보메프로마진말레산염",
+   "en": "Levomepromazine Maleate"
+  },
+  {
+   "ko": "레보설피리드",
+   "en": "Levosulpiride"
+  },
+  {
+   "ko": "레보세티리진염산염",
+   "en": "Levocetirizine Hydrochloride"
+  },
+  {
+   "ko": "레보클로페라스틴펜디조산염",
+   "en": "Levocloperastine Fendizoate/Levocloperastine Fendizoate/Levocloperastine Fendizoate/Levocloperastine Fendizoate"
+  },
+  {
+   "ko": "레보티록신나트륨수화물",
+   "en": "Levothyroxine Sodium Hydrate"
+  },
+  {
+   "ko": "레보폴린산",
+   "en": "Levofolinic Acid"
+  },
+  {
+   "ko": "레보플록사신",
+   "en": "Levofloxacin"
+  },
+  {
+   "ko": "레보플록사신 수화물",
+   "en": "Levofloxacin Hydrate"
+  },
+  {
+   "ko": "레보플록사신수화물",
+   "en": "Levofloxacin Hydrate"
+  },
+  {
+   "ko": "레비티라세탐",
+   "en": "Levetiracetam"
+  },
+  {
+   "ko": "레트로졸",
+   "en": "Letrozole"
+  },
+  {
+   "ko": "레파글리니드",
+   "en": "Repaglinide"
+  },
+  {
+   "ko": "레플루노미드",
+   "en": "Leflunomide"
+  },
+  {
+   "ko": "렘데시비르",
+   "en": "Remdesivir"
+  },
+  {
+   "ko": "로라제팜",
+   "en": "Lorazepam"
+  },
+  {
+   "ko": "로라타딘",
+   "en": "Loratadine"
+  },
+  {
+   "ko": "로바스타틴",
+   "en": "Lovastatin"
+  },
+  {
+   "ko": "로사르탄칼륨",
+   "en": "Losartan Potassium"
+  },
+  {
+   "ko": "로수바스타틴칼슘",
+   "en": "Rosuvastatin Calcium"
+  },
+  {
+   "ko": "로쿠로늄브롬화물",
+   "en": "Rocuronium Bromide"
+  },
+  {
+   "ko": "로테프레드놀에타보네이트",
+   "en": "Loteprednol Etabonate"
+  },
+  {
+   "ko": "로테프레드놀에타보네이트, 토브라마이신",
+   "en": "Loteprednol Etabonate/Tobramycin"
+  },
+  {
+   "ko": "로페라미드염산염",
+   "en": "Loperamide Hydrochloride"
+  },
+  {
+   "ko": "로피니롤염산염",
+   "en": "Ropinirole Hydrochloride"
+  },
+  {
+   "ko": "로피바카인염산염",
+   "en": "Ropivacaine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "로피바카인염산염수화물",
+   "en": "Ropivacaine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "로피바카인염산염일수화물",
+   "en": "Ropivacaine Hydrochloride Hydrate/Ropivacaine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "록사티딘아세테이트염산염",
+   "en": "Roxatidine Acetate Hydrochloride"
+  },
+  {
+   "ko": "록사티딘아세테이트염산염서방성과립제45.45%",
+   "en": "Roxatidine Acetate Hydrochloride Extended-release Granules (45.45%)"
+  },
+  {
+   "ko": "록소프로펜나트륨",
+   "en": "Loxoprofen Sodium Hydrate"
+  },
+  {
+   "ko": "록소프로펜나트륨수화물",
+   "en": "Loxoprofen Sodium Hydrate"
+  },
+  {
+   "ko": "록시스로마이신",
+   "en": "Roxithromycin"
+  },
+  {
+   "ko": "록시스로마인신",
+   "en": "Roxithromycin"
+  },
+  {
+   "ko": "록시트로마이신",
+   "en": "Roxithromycin"
+  },
+  {
+   "ko": "류프로렐린아세트산염",
+   "en": "Leuprorelin Acetate/Leuprorelin Acetate"
+  },
+  {
+   "ko": "리네졸리드",
+   "en": "Linezolid"
+  },
+  {
+   "ko": "리놀산에틸",
+   "en": "Ethyl Linoleate"
+  },
+  {
+   "ko": "리도카인",
+   "en": "Lidocaine/Lidocaine"
+  },
+  {
+   "ko": "리도카인염산염수화물",
+   "en": "Lidocaine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "리루졸",
+   "en": "Riluzole"
+  },
+  {
+   "ko": "리마프로스트알파-시클로덱스트린포접화합물",
+   "en": "Limaprost Alfadex"
+  },
+  {
+   "ko": "리바록사반",
+   "en": "Rivaroxaban Micronized"
+  },
+  {
+   "ko": "리바비린",
+   "en": "Ribavirin"
+  },
+  {
+   "ko": "리바스티그민타르타르산염",
+   "en": "Rivastigmine Tartarate/Rivastigmine Tartarate/Rivastigmine Tartarate"
+  },
+  {
+   "ko": "리보스타마이신황산염",
+   "en": "Ribostamycin Sulfate"
+  },
+  {
+   "ko": "리세드론산나트륨",
+   "en": "Risedronate Sodium"
+  },
+  {
+   "ko": "리세드론산나트륨2.5수화물",
+   "en": "Risedronate Sodium 2.5 Hydrate"
+  },
+  {
+   "ko": "리세드론산나트륨일수화물",
+   "en": "Risedronate Sodium Monohydrate"
+  },
+  {
+   "ko": "리소짐염산염",
+   "en": "Lysozyme Hydrochloride"
+  },
+  {
+   "ko": "리스디플람",
+   "en": "Risdiplam"
+  },
+  {
+   "ko": "리스페리돈",
+   "en": "Risperidone"
+  },
+  {
+   "ko": "리시노프릴",
+   "en": "Lisinopril"
+  },
+  {
+   "ko": "리토드린염산염",
+   "en": "Ritodrine Hydrochloride"
+  },
+  {
+   "ko": "리툭시맙",
+   "en": "Rituximab"
+  },
+  {
+   "ko": "리파부틴",
+   "en": "Rifabutin"
+  },
+  {
+   "ko": "리파스딜염산염수화물",
+   "en": "Ripasudil Hydrochloride Dihydrate"
+  },
+  {
+   "ko": "리팍시민",
+   "en": "Rifaximin"
+  },
+  {
+   "ko": "리팜피신",
+   "en": "Rifampicin"
+  },
+  {
+   "ko": "리팜피신,이소니코틴산히드라짓캅셀",
+   "en": "Isoniazid/Rifampicin"
+  },
+  {
+   "ko": "리포좀화한독소루비신염산염",
+   "en": "Doxorubicin Hydrochloride"
+  },
+  {
+   "ko": "리피테그라스트",
+   "en": "Lifitegrast"
+  },
+  {
+   "ko": "린코마이신염산염",
+   "en": "Lincomycin Hydrochloride"
+  },
+  {
+   "ko": "린코마이신염산염수화물",
+   "en": "Lincomycin Hydrochloride Hydrate"
+  },
+  {
+   "ko": "릴피비린",
+   "en": "Rilpivirine Micronized"
+  },
+  {
+   "ko": "마니디핀염산염",
+   "en": "Manidipine Hydrochloride"
+  },
+  {
+   "ko": "마시모렐린아세트산염",
+   "en": "Macimorelin Acetate"
+  },
+  {
+   "ko": "마페니드아세테이트",
+   "en": "Mafenide Acetate"
+  },
+  {
+   "ko": "마페니드아세트산염",
+   "en": "Mafenide Acetate"
+  },
+  {
+   "ko": "마행감석탕",
+   "en": "Mahaenggamseogtang Soft Extract"
+  },
+  {
+   "ko": "마행의감탕",
+   "en": "Apricot Kernel/Coix Seed/Ephedra Herb/Licorice"
+  },
+  {
+   "ko": "만니톨",
+   "en": "D-Mannitol/D-Mannitol/D-Mannitol/D-Mannitol"
+  },
+  {
+   "ko": "말레인산돔페리돈",
+   "en": "Domperidone Maleate/Domperidone Maleate"
+  },
+  {
+   "ko": "말레인산암로디핀",
+   "en": "Amlodipine Maleate"
+  },
+  {
+   "ko": "말레인산에날라프릴",
+   "en": "Enalapril Maleate"
+  },
+  {
+   "ko": "말레인산트리메부틴",
+   "en": "Trimebutine Maleate/Trimebutine Maleate/Trimebutine Maleate"
+  },
+  {
+   "ko": "맥문동탕",
+   "en": "Maegmundongtang Soft Extract"
+  },
+  {
+   "ko": "맥문동탕엑스과립",
+   "en": "Ginseng/Jujube/Licorice/Liriope Tuber/Oryzae Semen/Pinellia Tuber"
+  },
+  {
+   "ko": "메게스트롤아세테이트",
+   "en": "Megestrol Acetate"
+  },
+  {
+   "ko": "메노트로핀",
+   "en": "Menotrophin/Menotrophin"
+  },
+  {
+   "ko": "메노트로핀에이치피",
+   "en": "Menotrophin HP"
+  },
+  {
+   "ko": "메드록시프로게스테론아세테이트",
+   "en": "Medroxyprogesterone Acetate"
+  },
+  {
+   "ko": "메드론산",
+   "en": "Methylenediphosphonic Acid"
+  },
+  {
+   "ko": "메로페넴삼수화물",
+   "en": "Meropenem Hydrate Dried Sodium Carbonate"
+  },
+  {
+   "ko": "메로페넴수화물",
+   "en": "Meropenem Hydrate"
+  },
+  {
+   "ko": "메로페넴수화물·건조탄산나트륨",
+   "en": "Meropenem Hydrate Dried Sodium Carbonate"
+  },
+  {
+   "ko": "메르캅토푸린수화물",
+   "en": "Mercaptopurine Hydrate/Mercaptopurine Hydrate"
+  },
+  {
+   "ko": "메만틴염산염",
+   "en": "Memantine Hydrochloride"
+  },
+  {
+   "ko": "메베베린염산염",
+   "en": "Mebeverin Hydrochloride"
+  },
+  {
+   "ko": "메브로페닌",
+   "en": "Mebrofenin"
+  },
+  {
+   "ko": "메살라진",
+   "en": "Mesalazine"
+  },
+  {
+   "ko": "메스나",
+   "en": "Mesna"
+  },
+  {
+   "ko": "메실산나파모스타트",
+   "en": "Nafamostat Mesylate"
+  },
+  {
+   "ko": "메실산암로디핀일수화물",
+   "en": "Amlodipine Mesylate Monohydrate"
+  },
+  {
+   "ko": "메실산프리디놀",
+   "en": "Pridinol Mesylate"
+  },
+  {
+   "ko": "메칠프레드니솔론",
+   "en": "Methylprednisolone"
+  },
+  {
+   "ko": "메코발라민",
+   "en": "Mecobalamin"
+  },
+  {
+   "ko": "메퀴타진",
+   "en": "Mequitazine"
+  },
+  {
+   "ko": "메타독신",
+   "en": "Metadoxine"
+  },
+  {
+   "ko": "메탄설폰산페플록사신",
+   "en": "Pefloxacin Methanesulfonate"
+  },
+  {
+   "ko": "메토카르바몰",
+   "en": "Methocarbamol/Methocarbamol"
+  },
+  {
+   "ko": "메토클로프라미드",
+   "en": "Metoclopramide"
+  },
+  {
+   "ko": "메토클로프라미드염산염",
+   "en": "Metoclopramide Hydrochloride Hydrate"
+  },
+  {
+   "ko": "메토클로프라미드염산염수화물",
+   "en": "Metoclopramide Hydrochloride Hydrate"
+  },
+  {
+   "ko": "메토트렉세이트",
+   "en": "Methotrexate"
+  },
+  {
+   "ko": "메토프롤롤숙신산염",
+   "en": "Metoprolol Succinate"
+  },
+  {
+   "ko": "메토프롤롤타르타르산염",
+   "en": "Metoprolol Tartrate"
+  },
+  {
+   "ko": "메트로니다졸",
+   "en": "Metronidazole"
+  },
+  {
+   "ko": "메트로니다졸제제",
+   "en": "Metronidazole"
+  },
+  {
+   "ko": "메트포르민염산염",
+   "en": "Metformin Hydrochloride"
+  },
+  {
+   "ko": "메틸-N,S-디아세틸시스테인",
+   "en": "Methyl-N/S-Diacetylcysteine"
+  },
+  {
+   "ko": "메틸아미노레불린산염산염",
+   "en": "Methyl Aminolevulinic Hydrochloride"
+  },
+  {
+   "ko": "메틸에르고메트린말레산염",
+   "en": "Methylergometrine Maleate"
+  },
+  {
+   "ko": "메틸올세팔렉신리시네이트",
+   "en": "Methylolcefalexin Lysinate"
+  },
+  {
+   "ko": "메틸프레드니솔론",
+   "en": "Methylprednisolone Micronized"
+  },
+  {
+   "ko": "메틸프레드니솔론숙시네이트나트륨",
+   "en": "Methylprednisolone Sodium Succinate"
+  },
+  {
+   "ko": "메틸프레드니솔론아세포네이트",
+   "en": "Methylprednisolone Aceponate"
+  },
+  {
+   "ko": "메플로퀸염산염",
+   "en": "Mefloquine Hydrochloride"
+  },
+  {
+   "ko": "메피바카인염산염",
+   "en": "Mepivacaine Hydrochloride"
+  },
+  {
+   "ko": "멕실레틴염산염",
+   "en": "Mexiletine Hydrochloride"
+  },
+  {
+   "ko": "멜록시캄",
+   "en": "Meloxicam"
+  },
+  {
+   "ko": "멜팔란",
+   "en": "Melphalan"
+  },
+  {
+   "ko": "멸균등장해수",
+   "en": "Sterile Isotonic Sea Water"
+  },
+  {
+   "ko": "모니플루메이트",
+   "en": "Morniflumate"
+  },
+  {
+   "ko": "모다피닐",
+   "en": "Modafinil"
+  },
+  {
+   "ko": "모르핀염산염수화물",
+   "en": "Morphine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "모르핀황산염수화물",
+   "en": "Morphine Sulfate Hydrate"
+  },
+  {
+   "ko": "모메타손푸로에이트",
+   "en": "Mometasone Furoate"
+  },
+  {
+   "ko": "모메타손푸로에이트일수화물",
+   "en": "Mometasone Furoate Monohydrate"
+  },
+  {
+   "ko": "모사프리드시트르산염수화물",
+   "en": "Mosapride Citrate Dihydrate"
+  },
+  {
+   "ko": "모사프리드시트르산염이수화물",
+   "en": "Mosapride Citrate Dihydrate"
+  },
+  {
+   "ko": "목시플록사신",
+   "en": "Moxifloxacin"
+  },
+  {
+   "ko": "목시플록사신염산염",
+   "en": "Moxifloxacin Hydrochloride"
+  },
+  {
+   "ko": "몬테루카스트나트륨",
+   "en": "Montelukast Sodium"
+  },
+  {
+   "ko": "몰린돈염산염",
+   "en": "Molindone Hydrochloride"
+  },
+  {
+   "ko": "몰시도민",
+   "en": "Molsidomine"
+  },
+  {
+   "ko": "무수구연산",
+   "en": "Anhydrous Citric Acid"
+  },
+  {
+   "ko": "무수리세드론산나트륨",
+   "en": "Anhydrous Risedronate Sodium"
+  },
+  {
+   "ko": "무수액체라놀린",
+   "en": "Lanolin"
+  },
+  {
+   "ko": "무수염산파록세틴",
+   "en": "Anhydrous Paroxetine Hydrochloride"
+  },
+  {
+   "ko": "무수탄산나트륨",
+   "en": "Dried Sodium Carbonate"
+  },
+  {
+   "ko": "무피로신",
+   "en": "Mupirocin/Mupirocin"
+  },
+  {
+   "ko": "무피로신칼슘",
+   "en": "Mupirocin Calcium"
+  },
+  {
+   "ko": "무피로신칼슘수화물",
+   "en": "Mupirocin Calcium Hydrate"
+  },
+  {
+   "ko": "묽은니트로글리세린",
+   "en": "Dilute Nitroglycerin"
+  },
+  {
+   "ko": "묽은이소소르비드이질산염",
+   "en": "Dilute Isosorbide Dinitrate"
+  },
+  {
+   "ko": "미글루스타트",
+   "en": "Miglustat"
+  },
+  {
+   "ko": "미노사이클린염산염",
+   "en": "Minocycline Hydrochloride"
+  },
+  {
+   "ko": "미노사이클린염산염이수화물, 메트로니다졸벤조산염",
+   "en": "Metronidazole Benzoate/Minocycline Hydrochloride Hydrate"
+  },
+  {
+   "ko": "미녹시딜",
+   "en": "Minoxidil/Minoxidil"
+  },
+  {
+   "ko": "미다졸람",
+   "en": "Midazolam"
+  },
+  {
+   "ko": "미도드린염산염",
+   "en": "Midodrine Hydrochloride"
+  },
+  {
+   "ko": "미로데나필염산염",
+   "en": "Mirodenafil Hydrochloride"
+  },
+  {
+   "ko": "미르타자핀",
+   "en": "Mirtazapine"
+  },
+  {
+   "ko": "미분화",
+   "en": "Deflazacort Micronized"
+  },
+  {
+   "ko": "미분화부데소니드",
+   "en": "Budesonide Micronized"
+  },
+  {
+   "ko": "미분화에토돌락",
+   "en": "Etodolac Micronized"
+  },
+  {
+   "ko": "미분화플루드로코르티손아세테이트",
+   "en": "Fludrocortisone Acetate Micronized"
+  },
+  {
+   "ko": "미세화페노피브레이트구형과립",
+   "en": "Fenofibrate Sphere Granules Micronized"
+  },
+  {
+   "ko": "미세화페노피브레이트혼합분말",
+   "en": "Fenofibrate Mixed Powder Micronized"
+  },
+  {
+   "ko": "미소프로스톨",
+   "en": "Misoprostol/Misoprostol"
+  },
+  {
+   "ko": "미소프로스톨 100배산",
+   "en": "Misoprostol 1%"
+  },
+  {
+   "ko": "미소프로스톨100배산",
+   "en": "Misoprostol 1%"
+  },
+  {
+   "ko": "미조리빈",
+   "en": "Mizoribine"
+  },
+  {
+   "ko": "미졸라스틴",
+   "en": "Mizolastine"
+  },
+  {
+   "ko": "미카펑긴나트륨",
+   "en": "Micafungin Sodium"
+  },
+  {
+   "ko": "미코페놀레이트나트륨",
+   "en": "Mycophenolate Sodium"
+  },
+  {
+   "ko": "미코페놀레이트모페틸",
+   "en": "Mycophenolate Mofetil"
+  },
+  {
+   "ko": "미토테인",
+   "en": "Mitotane"
+  },
+  {
+   "ko": "미톡산트론염산염",
+   "en": "Mitoxantrone Hydrochloride"
+  },
+  {
+   "ko": "미티글리니드칼슘수화물",
+   "en": "Mitiglinide Calcium Hydrate"
+  },
+  {
+   "ko": "밀나시프란염산염",
+   "en": "Milnacipran Hydrochloride"
+  },
+  {
+   "ko": "밀리논",
+   "en": "Milrinone"
+  },
+  {
+   "ko": "바니디핀염산염",
+   "en": "Barnidipine Hydrochloride/Barnidipine Hydrochloride"
+  },
+  {
+   "ko": "바실루스리케니포르미스균",
+   "en": "Bacillus Licheniformis"
+  },
+  {
+   "ko": "바실루스서브틸리스균·엔테로코쿠스페슘균배양물",
+   "en": "Bacillus Subtilis·Enterococcus Faecium Culture"
+  },
+  {
+   "ko": "바실릭시맙",
+   "en": "Basiliximab"
+  },
+  {
+   "ko": "바이알",
+   "en": "Ascorbic Acid/Dexpanthenol/Ergocalciferol/Nicotinamide/Pyridoxine Hydrochloride/Retinol Palmitate/Riboflavin Sodium Phosphate/Thiamine Hydrochloride/Tocopherol Acetate"
+  },
+  {
+   "ko": "바캄피실린염산염",
+   "en": "Bacampicillin Hydrochloride"
+  },
+  {
+   "ko": "바클로펜",
+   "en": "Baclofen"
+  },
+  {
+   "ko": "박하향",
+   "en": "Benzethonium Chloride/Benzethonium Chloride/Benzethonium Chloride"
+  },
+  {
+   "ko": "반코마이신염산염",
+   "en": "Vancomycin Hydrochloride"
+  },
+  {
+   "ko": "반하백출천마탕",
+   "en": "Alisma Rhizome/As Soft Extract/Astragalus Root/Atractylodes Rhizome White/Citrus Unshiu Peel/Gastrodia Rhizome/Ginger/Ginseng/Hordei Fructus Germinatus/Massa Medicata Fermentata/Phellodendron Bark/Pinellia Tuber/Poria/Raw Ginger"
+  },
+  {
+   "ko": "반하사심탕",
+   "en": "Coptis Rhizome/Ginger/Ginseng/Jujube/Licorice/Pinellia Tuber/Scutellaria Root"
+  },
+  {
+   "ko": "반하사심탕엑스과립",
+   "en": "Banhasasimtang Soft Extract (4.50→1)"
+  },
+  {
+   "ko": "반하후박탕엑스과립",
+   "en": "Banhahubagtang Soft Extract"
+  },
+  {
+   "ko": "발간시클로비르염산염",
+   "en": "Valganciclovir Hydrochloride"
+  },
+  {
+   "ko": "발라시클로비르염산염",
+   "en": "Valaciclovir Hydrochloride"
+  },
+  {
+   "ko": "발라시클로비르염산염수화물",
+   "en": "Valaciclovir Hydrochloride Hydrate"
+  },
+  {
+   "ko": "발로플록사신",
+   "en": "Balofloxacin"
+  },
+  {
+   "ko": "발록사비르 마르복실",
+   "en": "Baloxavir Marboxil"
+  },
+  {
+   "ko": "발사르탄",
+   "en": "Valsartan"
+  },
+  {
+   "ko": "발사르탄, 히드로클로로티아지드",
+   "en": "Hydrochlorothiazide/Valsartan/Valsartan"
+  },
+  {
+   "ko": "발살라지드이나트륨이수화물",
+   "en": "Balsalazide Disodium Hydrate"
+  },
+  {
+   "ko": "발프로산",
+   "en": "Valproic Acid"
+  },
+  {
+   "ko": "발프로산나트륨",
+   "en": "Sodium Valproate"
+  },
+  {
+   "ko": "발프로산마그네슘",
+   "en": "Magnesium Valproate"
+  },
+  {
+   "ko": "밤부테롤염산염",
+   "en": "Bambuterol Hydrochloride"
+  },
+  {
+   "ko": "방기황기탕",
+   "en": "Astragalus Root/Atractylodes Rhizome White/Jujube/Licorice/Raw Ginger/Sinomenium Stem"
+  },
+  {
+   "ko": "방기황기탕엑스과립",
+   "en": "Banggiwhanggitang Soft Extract/Banggiwhanggitang Soft Extract/Banggiwhanggitang Soft Extract/Banggiwhanggitang Soft Extract/Banggiwhanggitang Soft Extract/Banggiwhanggitang Soft Extract"
+  },
+  {
+   "ko": "방풍통성산",
+   "en": "Angelica Gigas Root/Atractylodes Rhizome White/Cnidium Rhizome/Ephedra Herb/Forsythia Fruit/Gardenia Fruit/Gypsum Fibrosum/Licorice/Mentha Herb/Natrii Sulfas/Peony Root/Platycodon Root/Raw Ginger/Rhubarb/Saposhnikovia Root/Schizonepeta Spike/Scutellaria Root/Talc"
+  },
+  {
+   "ko": "방풍통성산엑스과립",
+   "en": "Bangpungtongsungsan Soft Extract"
+  },
+  {
+   "ko": "방풍통성산연조엑스",
+   "en": "Bangpungtongsungsan Soft Extract"
+  },
+  {
+   "ko": "배농산급탕",
+   "en": "Baenongsangeubtang Soft Extract (4→1)"
+  },
+  {
+   "ko": "배농산급탕엑스과립",
+   "en": "Ginger/Jujube/Licorice/Peony Root/Platycodon Root/Poncirus Immature Fruit"
+  },
+  {
+   "ko": "베넥세이트염산염베타덱스",
+   "en": "Benexate Hydrochloride Betadex"
+  },
+  {
+   "ko": "베니디핀염산염",
+   "en": "Benidipine Hydrochloride"
+  },
+  {
+   "ko": "베라파밀염산염",
+   "en": "Verapamil Hydrochloride"
+  },
+  {
+   "ko": "베라프로스트나트륨",
+   "en": "Beraprost Sodium"
+  },
+  {
+   "ko": "베르테포르핀",
+   "en": "Verteporfin"
+  },
+  {
+   "ko": "베미파린나트륨",
+   "en": "Bemiparin Sodium"
+  },
+  {
+   "ko": "베실산아트라쿠륨",
+   "en": "Atracurium Besylate"
+  },
+  {
+   "ko": "베자피브레이트",
+   "en": "Bezafibrate"
+  },
+  {
+   "ko": "베쿠로늄브롬화물",
+   "en": "Vecuronium Bromide"
+  },
+  {
+   "ko": "베타네콜염화물",
+   "en": "Bethanechol Chloride"
+  },
+  {
+   "ko": "베타메타손포스페이트나트륨",
+   "en": "Betamethasone Sodium Phosphate"
+  },
+  {
+   "ko": "베타히스틴메실산염",
+   "en": "Betahistine Mesylate"
+  },
+  {
+   "ko": "베탁솔롤염산염",
+   "en": "Betaxolol Hydrochloride"
+  },
+  {
+   "ko": "베티아티드",
+   "en": "Betiatide"
+  },
+  {
+   "ko": "베포타스틴베실산염",
+   "en": "Bepotastine Besylate"
+  },
+  {
+   "ko": "벤다작리신수화물",
+   "en": "Bendazac Lysine Hydrate"
+  },
+  {
+   "ko": "벤라팍신염산염",
+   "en": "Venlafaxine Hydrochloride"
+  },
+  {
+   "ko": "벤조나테이트",
+   "en": "Benzonatate"
+  },
+  {
+   "ko": "벤조산나트륨카페인",
+   "en": "Caffeine·Sodium Benzoate"
+  },
+  {
+   "ko": "벤조카인",
+   "en": "Ethyl Aminobenzoate"
+  },
+  {
+   "ko": "벤즈브로마론",
+   "en": "Benzbromarone"
+  },
+  {
+   "ko": "벤즈트로핀메실산염",
+   "en": "Benztropine Mesylate"
+  },
+  {
+   "ko": "벤지다민염산염",
+   "en": "Benzydamine Hydrochloride"
+  },
+  {
+   "ko": "벤프로페린인산염",
+   "en": "Benproperine Phosphate"
+  },
+  {
+   "ko": "벨로테칸",
+   "en": "Belotecan (CKD-602)"
+  },
+  {
+   "ko": "보글리보스",
+   "en": "Voglibose"
+  },
+  {
+   "ko": "보르테조밉삼합체",
+   "en": "Bortezomib Trimer"
+  },
+  {
+   "ko": "보리코나졸",
+   "en": "Voriconazole"
+  },
+  {
+   "ko": "보센탄수화물",
+   "en": "Bosentan Hydrate"
+  },
+  {
+   "ko": "보중익기탕",
+   "en": "Bojungikgitang Soft Extract"
+  },
+  {
+   "ko": "부데소니드",
+   "en": "Budesonide"
+  },
+  {
+   "ko": "부로수맙,유전자재조합",
+   "en": "Burosumab"
+  },
+  {
+   "ko": "부스피론염산염",
+   "en": "Buspirone Hydrochloride"
+  },
+  {
+   "ko": "부시라민",
+   "en": "Bucillamine"
+  },
+  {
+   "ko": "부테나핀염산염",
+   "en": "Butenafine Hydrochloride"
+  },
+  {
+   "ko": "부토르파놀타르타르산염",
+   "en": "Butorphanol Tartrate"
+  },
+  {
+   "ko": "부틸스코폴라민브롬화물",
+   "en": "Scopolamine Butylbromide"
+  },
+  {
+   "ko": "부프로피온염산염",
+   "en": "Bupropion Hydrochloride"
+  },
+  {
+   "ko": "부플로메딜염산염",
+   "en": "Buflomedil Hydrochloride/Buflomedil Hydrochloride"
+  },
+  {
+   "ko": "부플로메딜인산피리독살",
+   "en": "Buflomedil Pyridoxal Phosphate"
+  },
+  {
+   "ko": "부피바카인염산염",
+   "en": "Bupivacaine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "부피바카인염산염수화물",
+   "en": "Bupivacaine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "부피바카인염산염일수화물",
+   "en": "Bupivacaine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "브로마제팜",
+   "en": "Bromazepam"
+  },
+  {
+   "ko": "브로모크립틴메실산염",
+   "en": "Bromocriptine Mesylate"
+  },
+  {
+   "ko": "브롬페낙나트륨수화물",
+   "en": "Bromfenac Sodium Hydrate/Bromfenac Sodium Hydrate"
+  },
+  {
+   "ko": "브롬페리돌",
+   "en": "Bromperidol"
+  },
+  {
+   "ko": "브롬헥신염산염",
+   "en": "Bromhexine Hydrochloride"
+  },
+  {
+   "ko": "브롬화베쿠로니움",
+   "en": "Vecuronium Bromide"
+  },
+  {
+   "ko": "브롬화부틸스코폴라민",
+   "en": "Scopolamine Butylbromide"
+  },
+  {
+   "ko": "브롬화시메트로피움",
+   "en": "Cimetropium Bromide"
+  },
+  {
+   "ko": "브롬화옥틸로늄",
+   "en": "Octylonium Bromide"
+  },
+  {
+   "ko": "브롬화피나베리움",
+   "en": "Pinaverium Bromide"
+  },
+  {
+   "ko": "브리모니딘타르타르산염",
+   "en": "Brimonidine Tartrate"
+  },
+  {
+   "ko": "브리모니딘타르타르산염,티몰롤말레산염",
+   "en": "Brimonidine Tartrate/Brimonidine Tartrate/Timolol Maleate/Timolol Maleate"
+  },
+  {
+   "ko": "브린졸라미드",
+   "en": "Brinzolamide"
+  },
+  {
+   "ko": "브린졸라미드,티몰롤말레산염",
+   "en": "Brinzolamide/Timolol Maleate"
+  },
+  {
+   "ko": "블레오마이신황산염",
+   "en": "Bleomycin Sulfate"
+  },
+  {
+   "ko": "블로난세린",
+   "en": "Blonanserin/Blonanserin"
+  },
+  {
+   "ko": "비가바트린",
+   "en": "Vigabatrin"
+  },
+  {
+   "ko": "비노렐빈타르타르산염",
+   "en": "Vinorelbine Tartrate"
+  },
+  {
+   "ko": "비마토프로스트",
+   "en": "Bimatoprost"
+  },
+  {
+   "ko": "비사코딜",
+   "en": "Bisacodyl"
+  },
+  {
+   "ko": "비소프롤롤푸마르산염",
+   "en": "Bisoprolol Fumarate"
+  },
+  {
+   "ko": "비스무트시트르산염칼륨",
+   "en": "Tripotassium Bismuth Dicitrate"
+  },
+  {
+   "ko": "비스무트차살리실산염",
+   "en": "Bismuth Subsalicylate"
+  },
+  {
+   "ko": "비씨지StrainTice",
+   "en": "BCG (Tice)"
+  },
+  {
+   "ko": "비칼루타미드",
+   "en": "Bicalutamide"
+  },
+  {
+   "ko": "비타민E",
+   "en": "Tocopherol"
+  },
+  {
+   "ko": "비페닐디메칠디카르복실레이트",
+   "en": "Biphenyl Dimethyl Dicarboxylate"
+  },
+  {
+   "ko": "비페닐디메틸디카르복실레이트",
+   "en": "Biphenyl Dimethyl Dicarboxylate/Biphenyl Dimethyl Dicarboxylate"
+  },
+  {
+   "ko": "비페닐디메틸디카르복실레이트,우르소데옥시콜산",
+   "en": "Biphenyl Dimethyl Dicarboxylate/Ursodeoxycholic Acid"
+  },
+  {
+   "ko": "비페리덴염산염",
+   "en": "Biperiden Hydrochloride"
+  },
+  {
+   "ko": "비포나졸",
+   "en": "Bifonazole"
+  },
+  {
+   "ko": "빈블라스틴황산염",
+   "en": "Vinblastine Sulfate"
+  },
+  {
+   "ko": "빈크리스틴황산염",
+   "en": "Vincristine Sulfate"
+  },
+  {
+   "ko": "빌다글립틴",
+   "en": "Vildagliptin Micronized"
+  },
+  {
+   "ko": "사과향, 토피넛향, 유자향, 피치향",
+   "en": "Calcium Citrate/Calcium Citrate/Calcium Citrate/Calcium Citrate/Cholecalciferol Concentrate Powder/Cholecalciferol Concentrate Powder/Cholecalciferol Concentrate Powder/Cholecalciferol Concentrate Powder/Cyanocobalamin/Cyanocobalamin/Cyanocobalamin/Cyanocobalamin/Magnesium Glycerophosphate/Magnesium Glycerophosphate/Magnesium Glycerophosphate/Magnesium Glycerophosphate/Magnesium Oxide/Magnesium Oxide/Magnesium Oxide/Magnesium Oxide/Tocopherol Acetate Powder 50%/Tocopherol Acetate Powder 50%/Tocopherol Acetate Powder 50%/Tocopherol Acetate Powder 50%"
+  },
+  {
+   "ko": "사르포그렐레이트염산염",
+   "en": "Sarpogrelate Hydrochloride"
+  },
+  {
+   "ko": "사물탕",
+   "en": "Samultang Soft Extract"
+  },
+  {
+   "ko": "사와이",
+   "en": "Cefaclor Hydrate/Cefaclor Hydrate"
+  },
+  {
+   "ko": "사이클로스포린",
+   "en": "Cyclosporine"
+  },
+  {
+   "ko": "사칠탕",
+   "en": "Magnolia Bark/Perilla Leaf/Pinellia Tuber/Poria/Raw Ginger"
+  },
+  {
+   "ko": "사카로마이세스보울라르디균",
+   "en": "Saccharomyces Boulardii"
+  },
+  {
+   "ko": "사향대체물질영묘향함유",
+   "en": "Ampelopsis Radix/Angelica Gigas Root/Apricot Kernel/Asini Corii Colla/Atractylodes Rhizome White/Bomeolum/Bupleurum Root/Cattle Gallstone/Cinnamon Bark/Civet/Cnidium Rhizome/Dioscorea Rhizome/Gazellae seu Saigae Cornu/Ginger/Ginseng/Glycine Semen Germinatum/Licorice/Liriope Tuber/Massa Medicata Fermentata/Peony Root/Platycodon Root/Poria/Saposhnikovia Root/Scutellaria Root/Typhae Pollen"
+  },
+  {
+   "ko": "산화마그네슘",
+   "en": "Magnesium Oxide"
+  },
+  {
+   "ko": "산화아연",
+   "en": "Zinc Oxide/Zinc Oxide"
+  },
+  {
+   "ko": "산화에칠렌",
+   "en": "Ethylene Oxide"
+  },
+  {
+   "ko": "산화에틸렌",
+   "en": "Ethylene Oxide"
+  },
+  {
+   "ko": "살라조설파피리딘",
+   "en": "Sulfasalazine"
+  },
+  {
+   "ko": "살리실산",
+   "en": "Salicylic Acid"
+  },
+  {
+   "ko": "살리실산반창고",
+   "en": "Salicylic Acid"
+  },
+  {
+   "ko": "살부타몰황산염",
+   "en": "Salbutamol Sulfate"
+  },
+  {
+   "ko": "살살레이트",
+   "en": "Salsalate"
+  },
+  {
+   "ko": "삼령백출산",
+   "en": "Amomum Fruit/Atractylodes Rhizome White/Coix Seed/Dioscorea Rhizome/Dolichos Seed/Ginseng/Licorice/Nelumbo Seed/Platycodon Root/Poria"
+  },
+  {
+   "ko": "삼산화비소",
+   "en": "Arsenic Trioxide"
+  },
+  {
+   "ko": "삼소음",
+   "en": "Aucklandiae Radix/Citrus Unshiu Peel/Ginger/Ginseng/Jujube/Licorice/Perilla Leaf/Peucedani Radix/Pinellia Tuber/Platycodon Root/Poncirus Immature Fruit/Poria/Pueraria Root"
+  },
+  {
+   "ko": "삼인산아데노신이나트륨",
+   "en": "Adenosine Disodium Triphosphate"
+  },
+  {
+   "ko": "삼황사심탕엑스과립",
+   "en": "Samhwangsasimtang Soft Extract"
+  },
+  {
+   "ko": "생리식염주사액",
+   "en": "Sodium Chloride"
+  },
+  {
+   "ko": "설글리코타이드",
+   "en": "Sulglycotide"
+  },
+  {
+   "ko": "설린닥",
+   "en": "Sulindac"
+  },
+  {
+   "ko": "설박탐나트륨, 암피실린나트륨",
+   "en": "Ampicillin Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "설박탐나트륨,세포페라존나트륨",
+   "en": "Sulbactam Sodium·Cefoperazone Sodium"
+  },
+  {
+   "ko": "설박탐나트륨,암피실리나트륨",
+   "en": "Ampicillin Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "설박탐나트륨,암피실린나트륨",
+   "en": "Ampicillin Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "설박탐나트륨.세포페라존나트륨",
+   "en": "Cefoperazone Sodium/Sulbactam Sodium/Sulbactam Sodium·Cefoperazone Sodium"
+  },
+  {
+   "ko": "설박탐나트륨.암피실린나트륨",
+   "en": "Ampicillin Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "설박탐나트륨·세포페라존나트륨",
+   "en": "Cefoperazone Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "설박탐나트륨·암피실린나트륨",
+   "en": "Ampicillin Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "설박탐나트륨ㆍ세포페라존나트륨",
+   "en": "Cefoperazone Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "설박탐나트륨ㆍ암피실린나트륨",
+   "en": "Ampicillin Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "설트랄린염산염",
+   "en": "Sertraline Hydrochloride"
+  },
+  {
+   "ko": "설파디아진은",
+   "en": "Silver Sulfadiazine"
+  },
+  {
+   "ko": "설파살라진",
+   "en": "Sulfasalazine"
+  },
+  {
+   "ko": "설파헥사플루오라이드",
+   "en": "Sulfur Hexafluoride"
+  },
+  {
+   "ko": "설포살리실산테트로포스민",
+   "en": "Tetrofosmin Sulfosalicylate"
+  },
+  {
+   "ko": "설피리드",
+   "en": "Sulpiride"
+  },
+  {
+   "ko": "성인용",
+   "en": "Standardized Lyophyllized of Bacterial Lysate"
+  },
+  {
+   "ko": "세레콕시브",
+   "en": "Celecoxib"
+  },
+  {
+   "ko": "세르타코나졸질산염",
+   "en": "Sertaconazole Nitrate"
+  },
+  {
+   "ko": "세보플루란",
+   "en": "Seboflurane"
+  },
+  {
+   "ko": "세쿠키누맙,유전자재조합",
+   "en": "Secukinumab"
+  },
+  {
+   "ko": "세트로렐릭스아세트산염",
+   "en": "Cetrorelix Acetate"
+  },
+  {
+   "ko": "세티리진염산염",
+   "en": "Cetirizine Hydrochloride/Cetirizine Hydrochloride/Cetirizine Hydrochloride"
+  },
+  {
+   "ko": "세파드록실",
+   "en": "Cefadroxil Hydrate/Cefadroxil Hydrate"
+  },
+  {
+   "ko": "세파드록실수화물",
+   "en": "Cefadroxil Hydrate"
+  },
+  {
+   "ko": "세파드록실일수화물",
+   "en": "Cefadroxil Monohydrate/Cefadroxil Monohydrate"
+  },
+  {
+   "ko": "세파만돌나페이트",
+   "en": "Cefamandole Nafate"
+  },
+  {
+   "ko": "세파제돈나트륨",
+   "en": "Cefazedone Sodium"
+  },
+  {
+   "ko": "세파졸린나트륨",
+   "en": "Cefazolin Sodium/Cefazolin Sodium"
+  },
+  {
+   "ko": "세파클러",
+   "en": "Cefaclor"
+  },
+  {
+   "ko": "세파클러수화물",
+   "en": "Cefaclor Hydrate"
+  },
+  {
+   "ko": "세팔렉신나트륨수화물",
+   "en": "Cefalexin Sodium Hydrate"
+  },
+  {
+   "ko": "세팔렉신수화물",
+   "en": "Cefalexin Hydrate"
+  },
+  {
+   "ko": "세팔로틴나트륨",
+   "en": "Cefalotin Sodium"
+  },
+  {
+   "ko": "세페타메트피복실염산염",
+   "en": "Cefetamet Pivoxil Hydrochloride"
+  },
+  {
+   "ko": "세페핌염산염",
+   "en": "Cefepime Hydrochloride Hydrate·L-Arginine/Cefepime Hydrochloride Hydrate·L-Arginine"
+  },
+  {
+   "ko": "세페핌염산염수화물",
+   "en": "Cefepime Hydrochloride Hydrate"
+  },
+  {
+   "ko": "세페핌염산염수화물·L-아르기닌",
+   "en": "Cefepime Hydrochloride Hydrate·L-Arginine"
+  },
+  {
+   "ko": "세포디짐나트륨",
+   "en": "Cefodizime Sodium"
+  },
+  {
+   "ko": "세포탁심나트륨",
+   "en": "Cefotaxime Sodium"
+  },
+  {
+   "ko": "세포테탄",
+   "en": "Cefotetan"
+  },
+  {
+   "ko": "세포테탄나트륨",
+   "en": "Cefotetan Sodium"
+  },
+  {
+   "ko": "세포티암염산염",
+   "en": "Cefotiam Hydrochloride·Dried Sodium Carbonate"
+  },
+  {
+   "ko": "세포티암염산염·건조탄산나트륨",
+   "en": "Cefotiam Hydrochloride·Dried Sodium Carbonate"
+  },
+  {
+   "ko": "세포티암헥세틸염산염",
+   "en": "Cefotiam Hexetil Hydrochloride"
+  },
+  {
+   "ko": "세포페라존나트륨",
+   "en": "Cefoperazone Sodium"
+  },
+  {
+   "ko": "세폭시틴나트륨",
+   "en": "Cefoxitin Sodium"
+  },
+  {
+   "ko": "세푸록심나트륨",
+   "en": "Cefuroxime Sodium"
+  },
+  {
+   "ko": "세푸록심악세틸",
+   "en": "Cefuroxime Axetil"
+  },
+  {
+   "ko": "세프디니르",
+   "en": "Cefdinir"
+  },
+  {
+   "ko": "세프디토렌피복실",
+   "en": "Cefditoren Pivoxil"
+  },
+  {
+   "ko": "세프라딘",
+   "en": "Cefradine"
+  },
+  {
+   "ko": "세프라딘수화물",
+   "en": "Cefradine Hydrate"
+  },
+  {
+   "ko": "세프록사딘",
+   "en": "Cefroxadine Hydrate"
+  },
+  {
+   "ko": "세프록사딘수화물",
+   "en": "Cefroxadine Hydrate"
+  },
+  {
+   "ko": "세프메타졸나트륨",
+   "en": "Cefmetazole Sodium/Cefmetazole Sodium"
+  },
+  {
+   "ko": "세프미녹스나트륨",
+   "en": "Cefminox Sodium Hydrate"
+  },
+  {
+   "ko": "세프미녹스나트륨수화물",
+   "en": "Cefminox Sodium Hydrate"
+  },
+  {
+   "ko": "세프부페라존나트륨",
+   "en": "Cefbuperazone Hydrate"
+  },
+  {
+   "ko": "세프카펜피복실염산염수화물",
+   "en": "Cefcapene Pivoxil Hydrochloride Hydrate"
+  },
+  {
+   "ko": "세프타지딤",
+   "en": "Ceftazidime Hydrate Dried Sodium Carbonate/Ceftazidime Hydrate Dried Sodium Carbonate/Ceftazidime Hydrate Dried Sodium Carbonate"
+  },
+  {
+   "ko": "세프타지딤수화물",
+   "en": "Ceftazidime Hydrate/Ceftazidime Hydrate/Ceftazidime Hydrate/Ceftazidime Hydrate Dried Sodium Carbonate"
+  },
+  {
+   "ko": "세프타지딤수화물*건조탄산나트륨",
+   "en": "Ceftazidime Hydrate Dried Sodium Carbonate"
+  },
+  {
+   "ko": "세프타지딤수화물-건조탄산나트륨",
+   "en": "Ceftazidime Hydrate Dried Sodium Carbonate"
+  },
+  {
+   "ko": "세프타지딤수화물·건조탄산나트륨",
+   "en": "Ceftazidime Hydrate Dried Sodium Carbonate"
+  },
+  {
+   "ko": "세프테졸나트륨",
+   "en": "Ceftezole Sodium"
+  },
+  {
+   "ko": "세프트리악손나트륨",
+   "en": "Ceftriaxone Sodium"
+  },
+  {
+   "ko": "세프트리악손나트륨수화물",
+   "en": "Ceftriaxone Sodium Hydrate"
+  },
+  {
+   "ko": "세프티족심나트륨",
+   "en": "Ceftizoxime Sodium"
+  },
+  {
+   "ko": "세프포독심프록세틸",
+   "en": "Cefpodoxime Proxetil"
+  },
+  {
+   "ko": "세프포독심프록세틸50mg/5mL",
+   "en": "Cefpodoxime Proxetil"
+  },
+  {
+   "ko": "세프프로질수화물",
+   "en": "Cefprozil Hydrate"
+  },
+  {
+   "ko": "세프피라미드나트륨",
+   "en": "Cefpiramide Sodium"
+  },
+  {
+   "ko": "세프피롬황산염",
+   "en": "Cefpirome Sulfate"
+  },
+  {
+   "ko": "세픽심",
+   "en": "Cefixime Hydrate"
+  },
+  {
+   "ko": "세픽심수화물",
+   "en": "Cefixime Hydrate"
+  },
+  {
+   "ko": "셀레길린염산염",
+   "en": "Selegiline Hydrochloride"
+  },
+  {
+   "ko": "소건중탕",
+   "en": "Cinnamomi Ramulus/Jujube/Licorice/Peony Root/Raw Ginger/Saccharum Granorum/Sogeonjungtang Soft Extracts"
+  },
+  {
+   "ko": "소경활혈탕",
+   "en": "Achyranthes Root/Angelica Dahurica Root/Angelica Gigas Root/Atractylodes Rhizome White/Citrus Unshiu Peel/Clematidis Radix/Cnidium Rhizome/Gentian Root and Rhizome/Ginger/Licorice/Ostericum Root/Peach Kernel/Peony Root/Poria/Rehmannia Root/Saposhnikovia Root/Sinomenium Stem"
+  },
+  {
+   "ko": "소마토스타틴",
+   "en": "Somatostatin Acetate"
+  },
+  {
+   "ko": "소마트로핀",
+   "en": "Somatropin/Somatropin/Somatropin"
+  },
+  {
+   "ko": "소브레롤",
+   "en": "Sobrerol"
+  },
+  {
+   "ko": "소시호탕엑스과립",
+   "en": "Sosihotang Soft Extracts"
+  },
+  {
+   "ko": "소시호합반하후박탕",
+   "en": "Bupleurum Root/Ginseng/Jujube/Licorice/Magnolia Bark/Perilla Leaf/Pinellia Tuber/Poria/Raw Ginger/Scutellaria Root"
+  },
+  {
+   "ko": "소아용",
+   "en": "Standardized Lyophyllized of Bacterial Lysate"
+  },
+  {
+   "ko": "소청룡탕",
+   "en": "Asiasarum Root and Rhizome/Cinnamomi Ramulus/Ephedra Herb/Ginger/Licorice/Peony Root/Pinellia Tuber/Schisandra Fruit"
+  },
+  {
+   "ko": "소청룡탕엑스",
+   "en": "Socheongryongtang Dried Extract"
+  },
+  {
+   "ko": "소청룡탕엑스과립",
+   "en": "As Dried Extract/Asiasarum Root and Rhizome/Cinnamomi Ramulus/Ephedra Herb/Ginger/Licorice/Peony Root/Pinellia Tuber/Schisandra Fruit"
+  },
+  {
+   "ko": "소타롤염산염",
+   "en": "Sotalol Hydrochloride"
+  },
+  {
+   "ko": "소함흉탕",
+   "en": "Coptis Rhizome/Pinellia Tuber/Trichosanthes Seed"
+  },
+  {
+   "ko": "솔리페나신숙신산염",
+   "en": "Solifenacin Succinate"
+  },
+  {
+   "ko": "수니티닙말산염",
+   "en": "Sunitinib Malate"
+  },
+  {
+   "ko": "수도에페드린염산염",
+   "en": "Pseudoephedrine Hydrochloride"
+  },
+  {
+   "ko": "수마트립탄숙신산염",
+   "en": "Sumatriptan Succinate"
+  },
+  {
+   "ko": "수산나프로닐",
+   "en": "Nafronyl Oxalate"
+  },
+  {
+   "ko": "수산화마그네슘",
+   "en": "Magnesium Hydroxide"
+  },
+  {
+   "ko": "수산화제이철수크로오스복염",
+   "en": "Ferric Hydroxide Sucrose Complex"
+  },
+  {
+   "ko": "수산화제이철폴리말토스복염",
+   "en": "Ferric Hydroxide Polymaltose Complex/Ferric Hydroxide Polymaltose Complex"
+  },
+  {
+   "ko": "수출용",
+   "en": "Ethambutol Hydrochloride/Ethambutol Hydrochloride"
+  },
+  {
+   "ko": "수출용:요오드화나트륨30호, 요오드화나트륨50호",
+   "en": "Sodium Iodide (131I) Solution/Sodium Iodide (131I) Solution/Sodium Iodide (131I) Solution"
+  },
+  {
+   "ko": "수출용:유클러건조시럽",
+   "en": "Cefaclor Hydrate"
+  },
+  {
+   "ko": "수출용:판린정40밀리그람",
+   "en": "Famotidine"
+  },
+  {
+   "ko": "수크랄페이트수화물",
+   "en": "Sucralfate Hydrate"
+  },
+  {
+   "ko": "수크로스수산화제이철착염",
+   "en": "Ferric Hydroxide Sucrose Complex"
+  },
+  {
+   "ko": "수크로오스수산화제이철착염",
+   "en": "Ferric Hydroxide Sucrose Complex"
+  },
+  {
+   "ko": "수펜타닐시트르산염",
+   "en": "Sufentanil Citrate"
+  },
+  {
+   "ko": "숙주목:말리",
+   "en": "Viscum Album (Host Tree:Mali) Extract (1→50)"
+  },
+  {
+   "ko": "숙주목:아비에티스",
+   "en": "Viscum Album (Host Tree:Abietis) Extract  (1→50)"
+  },
+  {
+   "ko": "숙주목:쿠에르쿠스",
+   "en": "Viscum Album (Host Tree:Quercus) Extract (1→50)"
+  },
+  {
+   "ko": "숙주목:프락시니",
+   "en": "Viscum Album (Host Tree:Fraxinus) Extract (1→50)"
+  },
+  {
+   "ko": "순-1회용",
+   "en": "Glucose/Glucose/Glucose/Glucose/Glucose/Potassium Chloride/Potassium Chloride/Potassium Chloride/Potassium Chloride/Potassium Chloride/Sodium Chloride/Sodium Chloride/Sodium Chloride/Sodium Chloride/Sodium Chloride"
+  },
+  {
+   "ko": "슈가마덱스나트륨",
+   "en": "Sugammadex Sodium/Sugammadex Sodium"
+  },
+  {
+   "ko": "슈도에페드린염산염",
+   "en": "Pseudoephedrine Hydrochloride"
+  },
+  {
+   "ko": "스테아린산에리스로마이신",
+   "en": "Erythromycin Stearate"
+  },
+  {
+   "ko": "스트렙토마이신황산염",
+   "en": "Streptomycin Sulfate"
+  },
+  {
+   "ko": "스트렙토키나제",
+   "en": "Streptokinase/Streptokinase"
+  },
+  {
+   "ko": "스트렙토키나제 ·스트렙토도르나제",
+   "en": "Streptokinase·Streptodornase"
+  },
+  {
+   "ko": "스트렙토키나제·스트렙토도르나제",
+   "en": "Streptokinase·Streptodornase/Streptokinase·Streptodornase"
+  },
+  {
+   "ko": "스펙티노마이신염산염수화물",
+   "en": "Spectinomycin Hydrochloride Hydrate"
+  },
+  {
+   "ko": "스피로노락톤",
+   "en": "Spironolactone"
+  },
+  {
+   "ko": "스피로노락톤, 히드로클로로티아지드",
+   "en": "Hydrochlorothiazide/Spironolactone"
+  },
+  {
+   "ko": "시네파지드말레산염",
+   "en": "Cinepazide Maleate"
+  },
+  {
+   "ko": "시롤리무스",
+   "en": "Sirolimus Dispersion Solution"
+  },
+  {
+   "ko": "시메트로퓸브롬화물",
+   "en": "Cimetropium Bromide"
+  },
+  {
+   "ko": "시메티딘",
+   "en": "Cimetidine"
+  },
+  {
+   "ko": "시메티콘",
+   "en": "Simethicone/Simethicone/Simethicone"
+  },
+  {
+   "ko": "시베레스타트나트륨수화물",
+   "en": "Sivelestat Sodium Hydrate"
+  },
+  {
+   "ko": "시스플라틴",
+   "en": "Cisplatin"
+  },
+  {
+   "ko": "시아노코발라민",
+   "en": "Cyanocobalamin"
+  },
+  {
+   "ko": "시클로벤자프린염산염",
+   "en": "Cyclobenzaprine Hydrochloride"
+  },
+  {
+   "ko": "시클로세린",
+   "en": "Cycloserine"
+  },
+  {
+   "ko": "시클로스포린",
+   "en": "Cyclosporine"
+  },
+  {
+   "ko": "시클로실린산",
+   "en": "Cicloxilic Acid"
+  },
+  {
+   "ko": "시클로페닐",
+   "en": "Cyclofenil"
+  },
+  {
+   "ko": "시클로펜톨레이트염산염",
+   "en": "Cyclopentolate Hydrochloride"
+  },
+  {
+   "ko": "시클로포스파미드",
+   "en": "Cyclophosphamide"
+  },
+  {
+   "ko": "시클로포스파미드정",
+   "en": "Cyclophosphamide"
+  },
+  {
+   "ko": "시클로피록스올아민",
+   "en": "Ciclopirox Olamine"
+  },
+  {
+   "ko": "시타글립틴인산염수화물",
+   "en": "Sitagliptin Phosphate Hydrate"
+  },
+  {
+   "ko": "시트룰린말산염",
+   "en": "Citrulline Malate"
+  },
+  {
+   "ko": "시트르산수화물",
+   "en": "Citric Acid Hydrate"
+  },
+  {
+   "ko": "시트르산칼륨수화물",
+   "en": "Potassium Citrate Hydrate/Potassium Citrate Hydrate"
+  },
+  {
+   "ko": "시티콜린",
+   "en": "Citicoline"
+  },
+  {
+   "ko": "시티콜린나트륨",
+   "en": "Citicoline Sodium"
+  },
+  {
+   "ko": "시프로플록사신",
+   "en": "Ciprofloxacin/Ciprofloxacin"
+  },
+  {
+   "ko": "시프로플록사신염산염",
+   "en": "Ciprofloxacin Hydrochloride"
+  },
+  {
+   "ko": "시프로플록사신염산염수화물",
+   "en": "Ciprofloxacin Hydrochloride Hydrate"
+  },
+  {
+   "ko": "시프로헵타딘염산염수화물",
+   "en": "Cyproheptadine Hydrochloride Hydrate/Cyproheptadine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "시함탕",
+   "en": "Bupleurum Root/Coptis Rhizome/Ginseng/Jujube/Licorice/Pinellia Tuber/Raw Ginger/Scutellaria Root/Trichosanthes Seed"
+  },
+  {
+   "ko": "시호가용골모려탕엑스",
+   "en": "Bupleurum Root/Cinnamomi Ramulus/Ginger/Ginseng/Jujube/Longgu/Oyster Shell/Pinellia Tuber/Poria/Rhubarb/Scutellaria Root"
+  },
+  {
+   "ko": "시호계지건강탕엑스",
+   "en": "As Dried Extract/Bupleurum Root/Cinnamomi Ramulus/Ginger/Licorice/Oyster Shell/Scutellaria Root/Trichosanthes Root"
+  },
+  {
+   "ko": "시호계지탕엑스과립",
+   "en": "Bupleurum Root/Cinnamomi Ramulus/Ginger/Ginseng/Jujube/Licorice/Peony Root/Pinellia Tuber/Scutellaria Root"
+  },
+  {
+   "ko": "시호청간탕",
+   "en": "Sihocheonggantang Soft Extract"
+  },
+  {
+   "ko": "실니디핀",
+   "en": "Cilnidipine"
+  },
+  {
+   "ko": "실데나필시트르산염",
+   "en": "Sildenafil Citrate"
+  },
+  {
+   "ko": "실라자프릴수화물",
+   "en": "Cilazapril Hydrate"
+  },
+  {
+   "ko": "실로스타졸",
+   "en": "Cilostazol"
+  },
+  {
+   "ko": "심바스타틴",
+   "en": "Simvastatin"
+  },
+  {
+   "ko": "십미패독탕",
+   "en": "Aralia Continentalis Root/Bupleurum Root/Cnidium Rhizome/Forsythia Fruit/Licorice/Platycodon Root/Poria/Prunus Bark/Raw Ginger/Saposhnikovia Root/Schizonepeta Spike"
+  },
+  {
+   "ko": "십미패독탕엑스과립",
+   "en": "Aralia Continentalis Root/Bupleurum Root/Cnidium Rhizome/Forsythia Fruit/Licorice/Platycodon Root/Poria/Prunus Bark/Raw Ginger/Saposhnikovia Root/Schizonepeta Spike"
+  },
+  {
+   "ko": "십전대보탕",
+   "en": "Angelica Gigas Root/Astragalus Root/Atractylodes Rhizome White/Cinnamomi Ramulus/Cnidium Rhizome/Ginseng/Licorice/Peony Root/Poria/Prepared Rehmannia Root/Sibjeondaebotang Dried Extract"
+  },
+  {
+   "ko": "싸이모신알파1",
+   "en": "Thymosin-Alpha 1"
+  },
+  {
+   "ko": "아가트로반",
+   "en": "Argatroban"
+  },
+  {
+   "ko": "아나그렐리드염산염",
+   "en": "Anagrelide Hydrochloride"
+  },
+  {
+   "ko": "아나스트로졸",
+   "en": "Micronized Anastrozole"
+  },
+  {
+   "ko": "아니둘라펀진과당혼합물",
+   "en": "Anidulafungin Fructose Mixture"
+  },
+  {
+   "ko": "아다팔렌",
+   "en": "Adapalene"
+  },
+  {
+   "ko": "아데노신",
+   "en": "Adenosine"
+  },
+  {
+   "ko": "아로티놀롤염산염",
+   "en": "Arotinolol Hydrochloride"
+  },
+  {
+   "ko": "아르기닌티디아시케이트",
+   "en": "Arginine Tidiacicate"
+  },
+  {
+   "ko": "아르티초쿠스연조엑스",
+   "en": "Soft Extract of Artichokus/Soft Extract of Artichokus"
+  },
+  {
+   "ko": "아리피프라졸",
+   "en": "Aripiprazole"
+  },
+  {
+   "ko": "아리피프라졸일수화물",
+   "en": "Aripiprazole Monohydrate"
+  },
+  {
+   "ko": "아만타딘황산염",
+   "en": "Amantadine Sulfate"
+  },
+  {
+   "ko": "아모롤핀염산염",
+   "en": "Amorolfine Hydrochloride"
+  },
+  {
+   "ko": "아목시실린",
+   "en": "Amoxicillin"
+  },
+  {
+   "ko": "아목시실린, 클라불란산",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린, 클라불란산칼륨",
+   "en": "Amoxicillin/Clavulanate Potassium"
+  },
+  {
+   "ko": "아목시실린,클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린-클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린-클라불란산칼륨 14:1",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린-클라불란산칼륨14:1",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린.클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린:클라불란산칼륨",
+   "en": "Amoxicillin·Clavulanate Potassium (4:1)"
+  },
+  {
+   "ko": "아목시실린`클라불란산칼륨",
+   "en": "Amoxicillin·Clavulanate Potassium (4:1)"
+  },
+  {
+   "ko": "아목시실린·묽은클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린·설박탐피복실",
+   "en": "Amoxicillin Hydrate/Sulbactam Pivoxil"
+  },
+  {
+   "ko": "아목시실린·클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린·클라불란산칼륨 2:1",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린·클라불란산칼륨 4:1",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린·클라불란산칼륨[7:1]",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린·피복실설박탐",
+   "en": "Amoxicillin Hydrate/Sulbactam Pivoxil"
+  },
+  {
+   "ko": "아목시실린ㆍ클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린나트륨",
+   "en": "Amoxicillin Sodium"
+  },
+  {
+   "ko": "아목시실린나트륨-클라불란산칼륨5:1",
+   "en": "Amoxicillin Sodium/Amoxicillin Sodium·Clavulanate Potassium (5:1)/Clavulanate Potassium"
+  },
+  {
+   "ko": "아목시실린나트륨·클라불란산칼륨",
+   "en": "Amoxicillin Sodium·Clavulanate Potassium"
+  },
+  {
+   "ko": "아목시실린수화물",
+   "en": "Amoxicillin Hydrate/Amoxicillin Hydrate/Amoxicillin Hydrate/Amoxicillin Hydrate/Amoxicillin Hydrate/Amoxicillin Hydrate"
+  },
+  {
+   "ko": "아목시실린수화물 · 설박탐피복실",
+   "en": "Amoxicillin Hydrate/Sulbactam Pivoxil"
+  },
+  {
+   "ko": "아목시실린수화물, 묽은클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린수화물,클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린수화물-묽은클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린수화물.묽은클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린수화물.클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린수화물·묽은클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아목시실린수화물·설박탐피복실",
+   "en": "Amoxicillin Hydrate/Sulbactam Pivoxil"
+  },
+  {
+   "ko": "아목시실린수화물·희석클라불란산칼륨",
+   "en": "Amoxicillin Hydrate/Dilute Potassium Clavulanate"
+  },
+  {
+   "ko": "아미노벤조산에틸",
+   "en": "Ethyl Aminobenzoate"
+  },
+  {
+   "ko": "아미노벤조산칼륨",
+   "en": "Aminobenzoate Potassium"
+  },
+  {
+   "ko": "아미노필린",
+   "en": "Aminophylline"
+  },
+  {
+   "ko": "아미노필린수화물",
+   "en": "Aminophylline Hydrate"
+  },
+  {
+   "ko": "아미설프리드",
+   "en": "Amisulpride"
+  },
+  {
+   "ko": "아미오다론염산염",
+   "en": "Amiodarone Hydrochloride"
+  },
+  {
+   "ko": "아미카신황산염",
+   "en": "Amikacin Sulfate"
+  },
+  {
+   "ko": "아미트리프틸린염산염",
+   "en": "Amitriptyline Hydrochloride"
+  },
+  {
+   "ko": "아세메타신",
+   "en": "Acemetacin"
+  },
+  {
+   "ko": "아세브로필린",
+   "en": "Acebrophylline"
+  },
+  {
+   "ko": "아세클로페낙",
+   "en": "Aceclofenac"
+  },
+  {
+   "ko": "아세타졸아미드",
+   "en": "Acetazolamide"
+  },
+  {
+   "ko": "아세트산아연이수화물",
+   "en": "Zinc Acetate Hydrate"
+  },
+  {
+   "ko": "아세트산칼슘",
+   "en": "Calcium Acetate"
+  },
+  {
+   "ko": "아세트아미노펜",
+   "en": "Acetaminophen"
+  },
+  {
+   "ko": "아세트아미노펜제피세립",
+   "en": "Microencapsulated Acetaminophen"
+  },
+  {
+   "ko": "아세틸-L-카르니틴염산염",
+   "en": "Acetyl-L-Carnitine Hydrochloride"
+  },
+  {
+   "ko": "아세틸시스테인",
+   "en": "Acetylcysteine/Acetylcysteine"
+  },
+  {
+   "ko": "아세폰산메칠프레드니솔론",
+   "en": "Methylprednisolone Aceponate"
+  },
+  {
+   "ko": "아세피필린",
+   "en": "Acepifylline"
+  },
+  {
+   "ko": "아셀렌산",
+   "en": "Selenious Acid"
+  },
+  {
+   "ko": "아셀렌산나트륨오수화물",
+   "en": "Sodium Selenite Pentahydrate/Sodium Selenite Pentahydrate"
+  },
+  {
+   "ko": "아스코르브산",
+   "en": "Ascorbic Acid"
+  },
+  {
+   "ko": "아스코르브산97%과립",
+   "en": "Ascorbic Acid Granules 97%"
+  },
+  {
+   "ko": "아스퍼길루스",
+   "en": "Beta-Galactosidase (Aspergillus)"
+  },
+  {
+   "ko": "아스피린",
+   "en": "Aspirin"
+  },
+  {
+   "ko": "아스피린100밀리그람",
+   "en": "Aspirin"
+  },
+  {
+   "ko": "아스피린장용과립",
+   "en": "Aspirin Enteric Granules"
+  },
+  {
+   "ko": "아시클로버",
+   "en": "Acyclovir"
+  },
+  {
+   "ko": "아시타자노라스트",
+   "en": "Acitazanolast Hydrate"
+  },
+  {
+   "ko": "아시트레틴",
+   "en": "Spray Dried Acitretin 25%"
+  },
+  {
+   "ko": "아시피목스",
+   "en": "Acipimox"
+  },
+  {
+   "ko": "아이비엽70%에탄올유동엑스",
+   "en": "Ivy Leaf 70% Ethanol Fluid Extract"
+  },
+  {
+   "ko": "아이오다이즈드오일",
+   "en": "Iodised Oil (Ethyl Esters of The Iodised Fatty Acids of Poppyseed Oil)"
+  },
+  {
+   "ko": "아자시티딘",
+   "en": "Azacitidine"
+  },
+  {
+   "ko": "아자티오프린",
+   "en": "Azathioprine"
+  },
+  {
+   "ko": "아젤라산",
+   "en": "Azelaic Acid"
+  },
+  {
+   "ko": "아젤라스틴염산염",
+   "en": "Azelastine Hydrochloride"
+  },
+  {
+   "ko": "아조세미드",
+   "en": "Azosemide"
+  },
+  {
+   "ko": "아종: 아비에티스",
+   "en": "Viscum Album (Host Tree:Abietis) 60mg Hydrosoluble Extract"
+  },
+  {
+   "ko": "아종:말리",
+   "en": "Viscum Album (Host Tree:Mali) Hydrosoluble Extract (1→5)"
+  },
+  {
+   "ko": "아종:아비에티스",
+   "en": "Viscum Album (Host Tree:Abietis) 60mg Hydrosoluble Extract"
+  },
+  {
+   "ko": "아종:쿠에르쿠스",
+   "en": "Viscum Album (Host Tree:Quercus) Hydrosoluble Extract (1→5)"
+  },
+  {
+   "ko": "아지스로마이신",
+   "en": "Azithromycin"
+  },
+  {
+   "ko": "아지트로마이신수화물",
+   "en": "Azithromycin Hydrate"
+  },
+  {
+   "ko": "아카보즈",
+   "en": "Acarbose"
+  },
+  {
+   "ko": "아탈루렌",
+   "en": "Ataluren"
+  },
+  {
+   "ko": "아테놀롤",
+   "en": "Atenolol"
+  },
+  {
+   "ko": "아테놀올",
+   "en": "Atenolol"
+  },
+  {
+   "ko": "아토르바스타틴스트론튬오수화물",
+   "en": "Atorvastatin Strontium Pentahydrate"
+  },
+  {
+   "ko": "아토르바스타틴칼슘삼수화물",
+   "en": "Atorvastatin Calcium Trihydrate"
+  },
+  {
+   "ko": "아토르바스타틴칼슘수화물",
+   "en": "Atorvastatin Calcium Hydrate"
+  },
+  {
+   "ko": "아토목세틴염산염",
+   "en": "Atomoxetine Hydrochloride"
+  },
+  {
+   "ko": "아토시반아세트산염",
+   "en": "Atosiban Acetate"
+  },
+  {
+   "ko": "아트라쿠륨베실산염",
+   "en": "Atracurium Besylate"
+  },
+  {
+   "ko": "아트로핀황산염",
+   "en": "Atropine Sulfate"
+  },
+  {
+   "ko": "아트로핀황산염수화물",
+   "en": "Atropine Sulfate Hydrate"
+  },
+  {
+   "ko": "아프라클로니딘염산염",
+   "en": "Apraclonidine Hydrochloride"
+  },
+  {
+   "ko": "아프레피탄트",
+   "en": "Aprepitant"
+  },
+  {
+   "ko": "아플로쿠알론",
+   "en": "Afloqualone"
+  },
+  {
+   "ko": "안중산",
+   "en": "Alpinia Officinarum Rhizome/Amomum Fruit/Cinnamon Bark/Corydalis Tuber/Fennel/Licorice/Oyster Shell/Poria"
+  },
+  {
+   "ko": "안중산엑스과립",
+   "en": "Alpinia Officinarum Rhizome/Amomum Fruit/Cinnamon Bark/Corydalis Tuber/Fennel/Licorice/Oyster Shell/Poria"
+  },
+  {
+   "ko": "알긴산나트륨",
+   "en": "Sodium Alginate/Sodium Alginate"
+  },
+  {
+   "ko": "알라세프릴",
+   "en": "Alacepril"
+  },
+  {
+   "ko": "알러젠추출물",
+   "en": "Allergen Extract/Allergen Extract"
+  },
+  {
+   "ko": "알렌드론산나트륨",
+   "en": "Sodium Alendronate Hydrate"
+  },
+  {
+   "ko": "알렌드론산나트륨삼수화물",
+   "en": "Sodium Alendronate Trihydrate"
+  },
+  {
+   "ko": "알렌드론산나트륨수화물",
+   "en": "Sodium Alendronate Hydrate"
+  },
+  {
+   "ko": "알로푸리놀",
+   "en": "Allopurinol"
+  },
+  {
+   "ko": "알리벤돌",
+   "en": "Alibendol"
+  },
+  {
+   "ko": "알리트레티노인",
+   "en": "Alitretinoin"
+  },
+  {
+   "ko": "알마게이트",
+   "en": "Almagate"
+  },
+  {
+   "ko": "알베린시트르산염,시메티콘",
+   "en": "Alverine Citrate/Simethicone"
+  },
+  {
+   "ko": "알벤다졸",
+   "en": "Albendazole"
+  },
+  {
+   "ko": "알카프타딘",
+   "en": "Alcaftadine"
+  },
+  {
+   "ko": "알킬디아미노에틸글리신염산염액",
+   "en": "Alkyldiaminoethylglycine Hydrochloride Solution 40%"
+  },
+  {
+   "ko": "알테플라제",
+   "en": "Alteplase"
+  },
+  {
+   "ko": "알파칼시돌",
+   "en": "Alfacalcidol"
+  },
+  {
+   "ko": "알파트라디올",
+   "en": "Alfatradiol"
+  },
+  {
+   "ko": "알펜타닐염산염",
+   "en": "Alfentanil Hydrochloride"
+  },
+  {
+   "ko": "알푸조신염산염",
+   "en": "Alfuzosin Hydrochloride"
+  },
+  {
+   "ko": "알프라졸람",
+   "en": "Alprazolam"
+  },
+  {
+   "ko": "알프로스타딜",
+   "en": "Alprostadil"
+  },
+  {
+   "ko": "알프로스타딜알파덱스",
+   "en": "Alprostadil Alfadex"
+  },
+  {
+   "ko": "암로디핀, 아토르바스타틴",
+   "en": "Amlodipine Besylate/Atorvastatin Calcium Trihydrate"
+  },
+  {
+   "ko": "암로디핀니코틴산염",
+   "en": "Amlodipine Nicotinate"
+  },
+  {
+   "ko": "암로디핀말레산염",
+   "en": "Amlodipine Maleate"
+  },
+  {
+   "ko": "암로디핀메실산염일수화물",
+   "en": "Amlodipine Mesylate Monohydrate"
+  },
+  {
+   "ko": "암로디핀베실산염",
+   "en": "Amlodipine Besylate"
+  },
+  {
+   "ko": "암로디핀베실산염, 발사르탄",
+   "en": "Amlodipine Besylate/Valsartan"
+  },
+  {
+   "ko": "암로디핀베실산염, 아토르바스타틴칼슘삼수화물",
+   "en": "Amlodipine Besylate/Atorvastatin Calcium Trihydrate"
+  },
+  {
+   "ko": "암로디핀베실산염, 아토르바스타틴칼슘수화물",
+   "en": "Amlodipine Besylate/Atorvastatin Calcium Hydrate"
+  },
+  {
+   "ko": "암로디핀아디프산염",
+   "en": "Amlodipine Adipate"
+  },
+  {
+   "ko": "암로디핀오로트산염",
+   "en": "Amlodipine Orotate"
+  },
+  {
+   "ko": "암로디핀캄실산염",
+   "en": "Amlodipine Camsylate"
+  },
+  {
+   "ko": "암브록솔,클렌부테롤",
+   "en": "Ambroxol Hydrochloride/Clenbuterol Hydrochloride"
+  },
+  {
+   "ko": "암브록솔염산염",
+   "en": "Ambroxol Hydrochloride"
+  },
+  {
+   "ko": "암브리센탄",
+   "en": "Ambrisentan"
+  },
+  {
+   "ko": "암피실린",
+   "en": "Ampicillin"
+  },
+  {
+   "ko": "암피실린나트륨",
+   "en": "Ampicillin Sodium"
+  },
+  {
+   "ko": "암피실린수화물",
+   "en": "Ampicillin Hydrate"
+  },
+  {
+   "ko": "애플리버셉트",
+   "en": "Aflibercept"
+  },
+  {
+   "ko": "약용탄",
+   "en": "Medicinal Carbon"
+  },
+  {
+   "ko": "에날라프릴말레산염",
+   "en": "Enalapril Maleate"
+  },
+  {
+   "ko": "에녹사파린나트륨",
+   "en": "Enoxaparin Sodium"
+  },
+  {
+   "ko": "에데트산칼슘디나트륨",
+   "en": "Edetate Calcium Disodium Hydrate"
+  },
+  {
+   "ko": "에르도스테인",
+   "en": "Erdosteine"
+  },
+  {
+   "ko": "에르타페넴나트륨",
+   "en": "Ertapenem Sodium"
+  },
+  {
+   "ko": "에리불린메실산염",
+   "en": "Eribulin Mesylate"
+  },
+  {
+   "ko": "에메다스틴푸마르산염서방성과립",
+   "en": "Emedastine Fumarate Extended-Release Granules"
+  },
+  {
+   "ko": "에미시주맙, 유전자재조합",
+   "en": "Emicizumab/Emicizumab/Emicizumab/Emicizumab/Emicizumab"
+  },
+  {
+   "ko": "에바스틴",
+   "en": "Ebastine"
+  },
+  {
+   "ko": "에베로리무스",
+   "en": "Everolimus"
+  },
+  {
+   "ko": "에스몰롤염산염",
+   "en": "Esmolol Hydrochloride"
+  },
+  {
+   "ko": "에스시탈로프람옥살산염",
+   "en": "Escitalopram Oxalate"
+  },
+  {
+   "ko": "에스아데노실엘메치오닌설페이트파라톨루엔설포네이트",
+   "en": "S-Adenosyl-L-Methionine Sulfate Tosilate"
+  },
+  {
+   "ko": "에스아테놀롤",
+   "en": "S-Atenolol"
+  },
+  {
+   "ko": "에스암로디핀니코틴산염",
+   "en": "S-Amlodipine Nicotinate"
+  },
+  {
+   "ko": "에스암로디핀베실산염2.5수화물",
+   "en": "S-Amlodipine Besylate 2.5 Hydrate"
+  },
+  {
+   "ko": "에스암로디핀베실산염이수화물",
+   "en": "S-Amlodipine Besylate Dihydrate"
+  },
+  {
+   "ko": "에스오메프라졸",
+   "en": "Esomeprazole"
+  },
+  {
+   "ko": "에스오메프라졸마그네슘",
+   "en": "Esomeprazole Magnesium Trihydrate"
+  },
+  {
+   "ko": "에스오메프라졸스트론튬사수화물",
+   "en": "Esomeprazole Strontium Tetrahydrate"
+  },
+  {
+   "ko": "에스트라디올발레레이트",
+   "en": "Estradiol Valerate"
+  },
+  {
+   "ko": "에스트라머스틴인산나트륨수화물",
+   "en": "Estramustine Sodium Phosphate Hydrate"
+  },
+  {
+   "ko": "에스트로피페이트",
+   "en": "Estropipate"
+  },
+  {
+   "ko": "에스트리올",
+   "en": "Estriol"
+  },
+  {
+   "ko": "에이액",
+   "en": "Calcium Chloride Hydrate/Glacial Acetic Acid/Magnesium Chloride/Potassium Chloride/Sodium Chloride"
+  },
+  {
+   "ko": "에이코사펜타엔산에칠E",
+   "en": "Ethyl Eicosapentaenoic Acid"
+  },
+  {
+   "ko": "에카베트나트륨수화물",
+   "en": "Ecabet Sodium Hydrate"
+  },
+  {
+   "ko": "에코나졸,트리암시놀론아세토니드",
+   "en": "Econazole Nitrate/Triamcinolone Acetonide"
+  },
+  {
+   "ko": "에코나졸질산염",
+   "en": "Econazole Nitrate"
+  },
+  {
+   "ko": "에타너셉트,유전자재조합",
+   "en": "Etanercept"
+  },
+  {
+   "ko": "에탐부톨염산염",
+   "en": "Ethambutol Hydrochloride"
+  },
+  {
+   "ko": "에토돌락",
+   "en": "Etodolac"
+  },
+  {
+   "ko": "에토숙시미드",
+   "en": "Ethosuximide"
+  },
+  {
+   "ko": "에토포시드",
+   "en": "Etoposide"
+  },
+  {
+   "ko": "에토필린니코티네이트",
+   "en": "Etofylline Nicotinate"
+  },
+  {
+   "ko": "에티드론산디나트륨",
+   "en": "Etidronate Disodium"
+  },
+  {
+   "ko": "에티졸람",
+   "en": "Etizolam"
+  },
+  {
+   "ko": "에틸로플라제페이트",
+   "en": "Ethyl Loflazepate"
+  },
+  {
+   "ko": "에페드린염산염",
+   "en": "Ephedrine Hydrochloride"
+  },
+  {
+   "ko": "에페리손염산염",
+   "en": "Eperisone Hydrochloride"
+  },
+  {
+   "ko": "에포니디핀염산염",
+   "en": "Efonidipine Hydrochloride/Efonidipine Hydrochloride"
+  },
+  {
+   "ko": "에프로사르탄메실산염",
+   "en": "Eprosartan Mesylate"
+  },
+  {
+   "ko": "에피나스틴염산염",
+   "en": "Epinastine Hydrochloride"
+  },
+  {
+   "ko": "에피나코나졸",
+   "en": "Efinaconazole"
+  },
+  {
+   "ko": "에피네프린",
+   "en": "Epinephrine"
+  },
+  {
+   "ko": "에피루비신염산염",
+   "en": "Epirubicin Hydrochloride"
+  },
+  {
+   "ko": "엑사메타짐",
+   "en": "Exametazime"
+  },
+  {
+   "ko": "엔-아세틸아스파틸글루타민산나트륨",
+   "en": "Sodium N-Acetylaspartylglutamate"
+  },
+  {
+   "ko": "엔잘루타마이드",
+   "en": "Enzalutamide"
+  },
+  {
+   "ko": "엔타카폰",
+   "en": "Entacapone"
+  },
+  {
+   "ko": "엔테로코쿠스페슘스트레인세르넬레68균",
+   "en": "Enterococcus Faecium (Strain: Cernelle 68)"
+  },
+  {
+   "ko": "엔테카비르",
+   "en": "Entecavir"
+  },
+  {
+   "ko": "엘-시스틴",
+   "en": "L-Cystine/L-Cystine"
+  },
+  {
+   "ko": "엘-아스파라기나제",
+   "en": "L-Asparaginase"
+  },
+  {
+   "ko": "엘-아스파라긴산-엘-오르니친",
+   "en": "L-Ornithine-L-Aspartate Hydrate"
+  },
+  {
+   "ko": "엘-아스파르트산-엘-아르기닌",
+   "en": "L-Arginine-L-Aspartate"
+  },
+  {
+   "ko": "엘-카르니틴",
+   "en": "L-Carnitine"
+  },
+  {
+   "ko": "엘로티닙염산염",
+   "en": "Erlotinib Hydrochloride"
+  },
+  {
+   "ko": "엘시스틴",
+   "en": "L-Cystine"
+  },
+  {
+   "ko": "엘에버나모닌",
+   "en": "Eburnamonine"
+  },
+  {
+   "ko": "연교패독산",
+   "en": "Aralia Continentalis Root/Aurantii Fructus Immaturus/Bupleurum Root/Cnidium Rhizome/Forsythia Fruit/Licorice/Lonicera Flower/Mentha Herb/Ostericum Root/Peucedani Radix/Platycodon Root/Poria/Raw Ginger/Saposhnikovia Root/Schizonepeta Spike/Water Dried Extract"
+  },
+  {
+   "ko": "연교패독산엑스과립",
+   "en": "Aralia Continentalis Root/Aurantii Fructus Immaturus/Bupleurum Root/Cnidium Rhizome/Forsythia Fruit/Licorice/Lonicera Flower/Mentha Herb/Ostericum Root/Peucedani Radix/Platycodon Root/Poria/Raw Ginger/Saposhnikovia Root/Schizonepeta Spike"
+  },
+  {
+   "ko": "열다한소탕",
+   "en": "Angelica Dahurica Root/Cimicifuga Rhizome/Ligustici Tenuissimi Rhizoma et Radix/Platycodon Root/Pueraria Root/Raphani Semen/Scutellaria Root"
+  },
+  {
+   "ko": "염산노르트립틸린",
+   "en": "Nortriptyline Hydrochloride"
+  },
+  {
+   "ko": "염산도파민",
+   "en": "Dopamine Hydrochloride"
+  },
+  {
+   "ko": "염산라니티딘",
+   "en": "Ranitidine Hydrochloride/Ranitidine Hydrochloride"
+  },
+  {
+   "ko": "염산레르카니디핀",
+   "en": "Lercanidipine Hydrochloride"
+  },
+  {
+   "ko": "염산레르카르디핀",
+   "en": "Lercanidipine Hydrochloride"
+  },
+  {
+   "ko": "염산로페라미드",
+   "en": "Loperamide Hydrochloride"
+  },
+  {
+   "ko": "염산록사티딘아세테이트",
+   "en": "Roxatidine Acetate Hydrochloride Granules 45.45%"
+  },
+  {
+   "ko": "염산린코마이신",
+   "en": "Lincomycin Hydrochloride"
+  },
+  {
+   "ko": "염산메만틴",
+   "en": "Memantine Hydrochloride"
+  },
+  {
+   "ko": "염산메트포르민",
+   "en": "Metformin Hydrochloride"
+  },
+  {
+   "ko": "염산메피바카인",
+   "en": "Mepivacaine Hydrochloride"
+  },
+  {
+   "ko": "염산밤부테롤",
+   "en": "Bambuterol Hydrochloride"
+  },
+  {
+   "ko": "염산베니디핀",
+   "en": "Benidipine Hydrochloride"
+  },
+  {
+   "ko": "염산부플로메딜정",
+   "en": "Buflomedil Hydrochloride/Buflomedil Hydrochloride"
+  },
+  {
+   "ko": "염산세티리진",
+   "en": "Cetirizine Hydrochloride"
+  },
+  {
+   "ko": "염산시프로플록사신",
+   "en": "Ciprofloxacin Hydrochloride"
+  },
+  {
+   "ko": "염산아모디아퀸",
+   "en": "Amodiaquine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "염산아미로라이드",
+   "en": "Amiloride Hydrochloride"
+  },
+  {
+   "ko": "염산아세틸엘카르니틴",
+   "en": "Acetyl-L-Carnitine Hydrochloride"
+  },
+  {
+   "ko": "염산아이다루비신",
+   "en": "Idarubicin Hydrochloride"
+  },
+  {
+   "ko": "염산암브록솔",
+   "en": "Ambroxol Hydrochloride"
+  },
+  {
+   "ko": "염산온단세트론이수화물",
+   "en": "Ondansetron Hydrochloride Hydrate"
+  },
+  {
+   "ko": "염산젬시타빈",
+   "en": "Gemcitabine Hydrochloride"
+  },
+  {
+   "ko": "염산카로베린",
+   "en": "Caroverine Hydrochloride"
+  },
+  {
+   "ko": "염산케타민",
+   "en": "Ketamine Hydrochloride"
+  },
+  {
+   "ko": "염산클린다마이신",
+   "en": "Clindamycin Hydrochloride"
+  },
+  {
+   "ko": "염산테라조신",
+   "en": "Terazosin Hydrochloride"
+  },
+  {
+   "ko": "염산테트라싸이클린",
+   "en": "Tetracycline Hydrochloride"
+  },
+  {
+   "ko": "염산톨라졸린",
+   "en": "Tolazoline Hydrochloride"
+  },
+  {
+   "ko": "염산톨페리손",
+   "en": "Tolperisone Hydrochloride"
+  },
+  {
+   "ko": "염산트라마돌",
+   "en": "Tramadol Hydrochloride"
+  },
+  {
+   "ko": "염산트리메타지딘",
+   "en": "Trimetazidine Hydrochloride"
+  },
+  {
+   "ko": "염산티자니딘",
+   "en": "Tizanidine Hydrochloride"
+  },
+  {
+   "ko": "염산티클로피딘",
+   "en": "Ticlopidine Hydrochloride"
+  },
+  {
+   "ko": "염산폴라복세이트",
+   "en": "Flavoxate Hydrochloride"
+  },
+  {
+   "ko": "염산푸르설티아민",
+   "en": "Fursultiamine Hydrochloride"
+  },
+  {
+   "ko": "염산프로카인",
+   "en": "Procaine Hydrochloride"
+  },
+  {
+   "ko": "염산플루나리진",
+   "en": "Flunarizine Hydrochloride"
+  },
+  {
+   "ko": "염화나트륨",
+   "en": "Sodium Chloride"
+  },
+  {
+   "ko": "염화리소짐",
+   "en": "Lysozyme Hydrochloride/Lysozyme Hydrochloride"
+  },
+  {
+   "ko": "염화망간",
+   "en": "Manganese Chloride Hydrate"
+  },
+  {
+   "ko": "염화석사메토늄",
+   "en": "Suxamethonium Chloride"
+  },
+  {
+   "ko": "염화세틸피리디늄",
+   "en": "Cetylpyridinium Chloride"
+  },
+  {
+   "ko": "염화알루미늄",
+   "en": "Aluminium Chloride"
+  },
+  {
+   "ko": "염화알루미늄수화물",
+   "en": "Aluminium Chloride Hydrate"
+  },
+  {
+   "ko": "염화칼륨",
+   "en": "Potassium Chloride"
+  },
+  {
+   "ko": "염화칼슘수화물",
+   "en": "Calcium Chloride Hydrate"
+  },
+  {
+   "ko": "염화프랄리독심",
+   "en": "Pralidoxime Chloride"
+  },
+  {
+   "ko": "영계출감탕",
+   "en": "Atractylodes Rhizome White/Cinnamomi Ramulus/Licorice/Poria/Yeonggyechulgamtang Soft Extract"
+  },
+  {
+   "ko": "오령산",
+   "en": "Alisma Rhizome/Atractylodes Rhizome White/Cinnamomi Ramulus/Polyporus Sclerotium/Poria"
+  },
+  {
+   "ko": "오령산엑스과립",
+   "en": "Alisma Rhizome/Atractylodes Rhizome White/Cinnamomi Ramulus/Polyporus Sclerotium/Poria"
+  },
+  {
+   "ko": "오르니다졸",
+   "en": "Ornidazole"
+  },
+  {
+   "ko": "오르리스타트",
+   "en": "Orlistat"
+  },
+  {
+   "ko": "오르페나드린시트르산염",
+   "en": "Orphenadrine Citrate"
+  },
+  {
+   "ko": "오르페나드린시트르산염50밀리그램",
+   "en": "Orphenadrine Citrate"
+  },
+  {
+   "ko": "오르페나드린염산염",
+   "en": "Orphenadrine Hydrochloride"
+  },
+  {
+   "ko": "오림산",
+   "en": "Orimsan Soft Extract"
+  },
+  {
+   "ko": "오말리주맙",
+   "en": "Omalizumab"
+  },
+  {
+   "ko": "오메프라졸",
+   "en": "Omeprazole"
+  },
+  {
+   "ko": "오메프라졸장용성과립",
+   "en": "Omeprazole Enteric Coated Granules"
+  },
+  {
+   "ko": "오미데네팍이소프로필",
+   "en": "Omidenepag Isopropyl/Omidenepag Isopropyl"
+  },
+  {
+   "ko": "오셀타미비르인산염",
+   "en": "Oseltamivir Phosphate"
+  },
+  {
+   "ko": "오약순기산",
+   "en": "Angelica Dahurica Root/Aurantii Fructus Immaturus/Batryticatus Bombyx/Citrus Unshiu Peel/Cnidium Rhizome/Ephedra Herb/Ginger/Jujube/Licorice/Lindera Root/Platycodon Root/Raw Ginger"
+  },
+  {
+   "ko": "오자그렐나트륨",
+   "en": "Sodium Ozagrel"
+  },
+  {
+   "ko": "오자그렐염산염일수화물",
+   "en": "Ozagrel Hydrochloride Monohydrate"
+  },
+  {
+   "ko": "오적산엑스과립",
+   "en": "Angelica Dahurica Root/Angelica Gigas Root/Atractylodes Rhizome/Cinnamon Bark/Citrus Unshiu Peel/Cnidium Rhizome/Cyperus Rhizome/Ephedra Herb/Ginger/Jujube/Licorice/Magnolia Bark/Peony Root/Pinellia Tuber/Platycodon Root/Poncirus Immature Fruit/Poria"
+  },
+  {
+   "ko": "오제녹사신",
+   "en": "Ozenoxacin(micronized)"
+  },
+  {
+   "ko": "오크렐리주맙",
+   "en": "Ocrelizumab"
+  },
+  {
+   "ko": "오토프탈알데하이드",
+   "en": "o-Phthalaldehyde"
+  },
+  {
+   "ko": "오플록사신",
+   "en": "Ofloxacin"
+  },
+  {
+   "ko": "옥살리플라틴",
+   "en": "Oxaliplatin"
+  },
+  {
+   "ko": "옥스카르바제핀",
+   "en": "Oxcarbazepine"
+  },
+  {
+   "ko": "옥시드론산나트륨",
+   "en": "Oxidronate Disodium"
+  },
+  {
+   "ko": "옥시라세탐",
+   "en": "Oxiracetam/Oxiracetam"
+  },
+  {
+   "ko": "옥시메타졸린염산염",
+   "en": "Oxymetazoline Hydrochloride/Oxymetazoline Hydrochloride"
+  },
+  {
+   "ko": "옥시부티닌염산염",
+   "en": "Oxybutynin Hydrochloride"
+  },
+  {
+   "ko": "옥시부프로카인염산염",
+   "en": "Oxybuprocaine Hydrochloride"
+  },
+  {
+   "ko": "옥시코돈염산염",
+   "en": "Oxycodone Hydrochloride"
+  },
+  {
+   "ko": "옥시토신",
+   "en": "Oxytocin"
+  },
+  {
+   "ko": "옥트레오티드아세트산염",
+   "en": "Octreotide Acetate"
+  },
+  {
+   "ko": "옥틸로늄브롬화물",
+   "en": "Octylonium Bromide"
+  },
+  {
+   "ko": "온경탕",
+   "en": "Onkyung-tang Soft Extract (4.45→1)"
+  },
+  {
+   "ko": "온단세트론",
+   "en": "Ondansetron"
+  },
+  {
+   "ko": "온단세트론염산염",
+   "en": "Ondansetron Hydrochloride"
+  },
+  {
+   "ko": "온단세트론염산염수화물",
+   "en": "Ondansetron Hydrochloride Hydrate"
+  },
+  {
+   "ko": "온청음엑스과립",
+   "en": "Angelica Gigas Root/Cnidium Rhizome/Coptis Rhizome/Gardenia Fruit/Peony Root/Phellodendron Bark/Prepared Rehmannia Root/Scutellaria Root"
+  },
+  {
+   "ko": "올란자핀",
+   "en": "Olanzapine"
+  },
+  {
+   "ko": "올로파타딘염산염",
+   "en": "Olopatadine Hydrochloride"
+  },
+  {
+   "ko": "올메사르탄메독소밀",
+   "en": "Olmesartan Medoxomil"
+  },
+  {
+   "ko": "와파린나트륨",
+   "en": "Warfarin Sodium"
+  },
+  {
+   "ko": "요오드화칼륨,요오드화나트륨",
+   "en": "Potassium Iodide/Potassium Iodide/Sodium Iodide/Sodium Iodide"
+  },
+  {
+   "ko": "요오드화킬륨, 요오드화나트륨",
+   "en": "Potassium Iodide/Sodium Iodide"
+  },
+  {
+   "ko": "요오드화티에모늄",
+   "en": "Tiemonium Iodide"
+  },
+  {
+   "ko": "요오딕사놀",
+   "en": "Iodixanol"
+  },
+  {
+   "ko": "용담사간탕",
+   "en": "Alisma Rhizome/Angelica Gigas Root/Gardenia Fruit/Gentian Root and Rhizome/Licorice/Plantago Seed/Rehmannia Root/Scutellaria Root"
+  },
+  {
+   "ko": "용담사간탕엑스과립",
+   "en": "Akebia Stem/Alisma Rhizome/Angelica Gigas Root/Gardenia Fruit/Gentian Root and Rhizome/Licorice/Plantago Seed/Rehmannia Root/Scutellaria Root"
+  },
+  {
+   "ko": "우레아",
+   "en": "Urea"
+  },
+  {
+   "ko": "우루소데스옥시콜린산",
+   "en": "Ursodeoxycholic Acid"
+  },
+  {
+   "ko": "우르소데스옥시콜린산",
+   "en": "Ursodeoxycholic Acid"
+  },
+  {
+   "ko": "우르소데옥시콜산",
+   "en": "Ursodeoxycholic Acid/Ursodeoxycholic Acid"
+  },
+  {
+   "ko": "우스테키누맙",
+   "en": "Ustekinumab"
+  },
+  {
+   "ko": "월비가출탕",
+   "en": "Atractylodes Rhizome/Ephedra Herb/Gypsum Fibrosum/Jujube/Licorice/Raw Ginger"
+  },
+  {
+   "ko": "위령탕",
+   "en": "Alisma Rhizome/Atractylodes Rhizome/Atractylodes Rhizome White/Cinnamon Bark/Citrus Unshiu Peel/Ginger/Jujube/Licorice/Magnolia Bark/Peony Root/Polyporus Sclerotium/Poria"
+  },
+  {
+   "ko": "유데나필",
+   "en": "Udenafil"
+  },
+  {
+   "ko": "유리나스타틴",
+   "en": "Ulinastatin"
+  },
+  {
+   "ko": "유비데카레논",
+   "en": "Ubidecarenone"
+  },
+  {
+   "ko": "유전자재조합",
+   "en": "Filgrastim (rDNA)"
+  },
+  {
+   "ko": "육미지황탕",
+   "en": "Alisma Rhizome/Cornus Fruit/Dioscorea Rhizome/Moutan Root Bark/Poria/Prepared Rehmannia Root/Yukmijihwangtang Soft Extract"
+  },
+  {
+   "ko": "은교산",
+   "en": "Eungyosan Dried Extract"
+  },
+  {
+   "ko": "은교산엑스과립",
+   "en": "Arctium Fruit/Forsythia Fruit/Gazellae seu Saigae Cornu/Glycine Semen Preparatum/Licorice/Lonicera Flower/Lophatheri Herba/Mentha Herb/Platycodon Root/Schizonepeta Spike"
+  },
+  {
+   "ko": "은행엽건조엑스",
+   "en": "Ginkgo Biloba Leaf Dried Extract"
+  },
+  {
+   "ko": "은행엽엑스",
+   "en": "Ginkgo Leaf Extract"
+  },
+  {
+   "ko": "은행엽엑스:총깅고플라본배당체15%",
+   "en": "Ginkgo Leaf Extract"
+  },
+  {
+   "ko": "을자탕",
+   "en": "Angelica Gigas Root/Bupleurum Root/Cimicifuga Rhizome/Licorice/Rhubarb/Scutellaria Root"
+  },
+  {
+   "ko": "의료용",
+   "en": "Oxygen"
+  },
+  {
+   "ko": "의이인엑스과립",
+   "en": "Coix Seed"
+  },
+  {
+   "ko": "이노시플렉스",
+   "en": "Inosiplex"
+  },
+  {
+   "ko": "이다루비신염산염",
+   "en": "Idarubicin Hydrochloride"
+  },
+  {
+   "ko": "이다루시주맙",
+   "en": "Idarucizumab"
+  },
+  {
+   "ko": "이르베사르탄",
+   "en": "Irbesartan"
+  },
+  {
+   "ko": "이리노테칸염산염",
+   "en": "Irinotecan Hydrochloride"
+  },
+  {
+   "ko": "이매티닙메실산염",
+   "en": "Imatinib Mesylate"
+  },
+  {
+   "ko": "이뮤노시아닌",
+   "en": "Immunocyanin"
+  },
+  {
+   "ko": "이미퀴모드",
+   "en": "Imiquimod"
+  },
+  {
+   "ko": "이미페넴수화물.실라스타틴나트륨",
+   "en": "Cilastatin Sodium/Imipenem Hydrate"
+  },
+  {
+   "ko": "이바브라딘염산염",
+   "en": "Ivabradine Hydrochloride"
+  },
+  {
+   "ko": "이반드론산나트륨수화물",
+   "en": "Ibandronate Sodium Monohydrate"
+  },
+  {
+   "ko": "이반드론산나트륨일수화물",
+   "en": "Ibandronate Sodium Monohydrate"
+  },
+  {
+   "ko": "이버멕틴",
+   "en": "Ivermectin"
+  },
+  {
+   "ko": "이부딜라스트",
+   "en": "Ibudilast Granules"
+  },
+  {
+   "ko": "이부프로펜",
+   "en": "Ibuprofen"
+  },
+  {
+   "ko": "이부프로펜피코놀",
+   "en": "Ibuprofen Piconol"
+  },
+  {
+   "ko": "이브루티닙",
+   "en": "Ibrutinib Micronized"
+  },
+  {
+   "ko": "이소니아지드",
+   "en": "Isoniazid"
+  },
+  {
+   "ko": "이소소르비드-5-모노니트레이트",
+   "en": "Isosorbide-5-Mononitrate"
+  },
+  {
+   "ko": "이소소르비드5모노니트레이트",
+   "en": "Isosorbide-5-Mononitrate Montan Glycol Wax Mixture 40%"
+  },
+  {
+   "ko": "이소소르비드액",
+   "en": "Isosorbide Solution"
+  },
+  {
+   "ko": "이소소르비드이질산염지속과립",
+   "en": "Isosorbide Dinitrate Sustained-Release Granules"
+  },
+  {
+   "ko": "이소소르비드일질산염",
+   "en": "Isosorbide Mononitrate"
+  },
+  {
+   "ko": "이소소르비드일질산염서방과립",
+   "en": "Isosorbide Mononitrate Extended-Release Granules"
+  },
+  {
+   "ko": "이소코나졸질산염",
+   "en": "Isoconazole Nitrate"
+  },
+  {
+   "ko": "이소트레티노인",
+   "en": "Isotretinoin"
+  },
+  {
+   "ko": "이소플루란",
+   "en": "Isoflurane"
+  },
+  {
+   "ko": "이오메프롤",
+   "en": "Iomeprol"
+  },
+  {
+   "ko": "이오버솔",
+   "en": "Ioversol"
+  },
+  {
+   "ko": "이오비트리돌",
+   "en": "Iobitridol"
+  },
+  {
+   "ko": "이오파미돌",
+   "en": "Iopamidol/Iopamidol"
+  },
+  {
+   "ko": "이오프로마이드",
+   "en": "Iopromide"
+  },
+  {
+   "ko": "이오헥솔",
+   "en": "Iohexol"
+  },
+  {
+   "ko": "이토프리드염산염",
+   "en": "Itopride Hydrochloride"
+  },
+  {
+   "ko": "이트라코나졸",
+   "en": "Itraconazole"
+  },
+  {
+   "ko": "이트라코나졸고체분산체",
+   "en": "Itraconazole Solid Dispersions"
+  },
+  {
+   "ko": "이펜프로딜타르타르산염",
+   "en": "Ifenprodil Tartrate"
+  },
+  {
+   "ko": "이포스파마이드",
+   "en": "Ifosfamide"
+  },
+  {
+   "ko": "이프라트로퓸브롬화물수화물",
+   "en": "Ipratropium Bromide Hydrate"
+  },
+  {
+   "ko": "인난포자극호르몬, 유전자재조합",
+   "en": "Follitropin/Follitropin/Follitropin/Follitropin"
+  },
+  {
+   "ko": "인다카테롤말레산염",
+   "en": "Indacaterol Maleate"
+  },
+  {
+   "ko": "인다파미드",
+   "en": "Indapamide"
+  },
+  {
+   "ko": "인도메타신",
+   "en": "Indometacin"
+  },
+  {
+   "ko": "인도부펜",
+   "en": "Indobufen"
+  },
+  {
+   "ko": "인디고카르민",
+   "en": "Blue No.2 (Indigo Carmine)"
+  },
+  {
+   "ko": "인산나트륨에네마",
+   "en": "Monobasic Sodium Phosphate/Sodium Hydrogen Phosphate"
+  },
+  {
+   "ko": "인산알루미늄겔",
+   "en": "Aluminium Phosphate Gel/Colloidal Aluminium Phosphate"
+  },
+  {
+   "ko": "인산오셀타미비르",
+   "en": "Oseltamivir Phosphate"
+  },
+  {
+   "ko": "인산이수소칼륨",
+   "en": "Monobasic Potassium Phosphate"
+  },
+  {
+   "ko": "인산클린다마이신",
+   "en": "Clindamycin Phosphate"
+  },
+  {
+   "ko": "인삼패독산",
+   "en": "Aralia Continentalis Root/Aurantii Fructus Immaturus/Bupleurum Root/Cnidium Rhizome/Ginseng/Licorice/Ostericum Root/Peucedani Radix/Platycodon Root/Poria"
+  },
+  {
+   "ko": "인삼패독산엑스과립",
+   "en": "Aralia Continentalis Root/Aurantii Fructus Immaturus/Bupleurum Root/Cnidium Rhizome/Ginseng/Licorice/Ostericum Root/Peucedani Radix/Platycodon Root/Poria"
+  },
+  {
+   "ko": "인암리논",
+   "en": "Inamrinone"
+  },
+  {
+   "ko": "인진오령산엑스",
+   "en": "Alisma Rhizome/Artemisiae Capillaris Herba/Atractylodes Rhizome White/Cinnamomi Ramulus/Polyporus Sclerotium/Poria"
+  },
+  {
+   "ko": "인진호탕엑스과립",
+   "en": "Artemisiae Capillaris Herba/Artemisiae Capillaris Herba Decoction Soft Extract (10→1)/Gardenia Fruit/Rhubarb"
+  },
+  {
+   "ko": "인체흉선세포로면역시킨레빗트의항흉선면역글로부린",
+   "en": "Anti-Human Tymocyte Rabbit Immunoglobulin"
+  },
+  {
+   "ko": "인터페론베타-1b, 유전자재조합",
+   "en": "Interferon Beta-1B (Host: E.coli strain MM294-1/ Vector: pSY2501)"
+  },
+  {
+   "ko": "인플릭시맵",
+   "en": "Infliximab"
+  },
+  {
+   "ko": "일라프라졸",
+   "en": "Ilaprazole"
+  },
+  {
+   "ko": "일로프로스트",
+   "en": "Iloprost/Iloprost"
+  },
+  {
+   "ko": "자감초탕",
+   "en": "Jagamchotang Soft Extract(7.86→1)"
+  },
+  {
+   "ko": "자감초탕엑스과립",
+   "en": "Asini Corii Colla/Cannabis Semen/Cinnamomi Ramulus/Ginseng/Jujube/Licorice/Liriope Tuber/Raw Ginger/Rehmannia Root"
+  },
+  {
+   "ko": "자나미비르",
+   "en": "Zanamivir Micronized"
+  },
+  {
+   "ko": "자음강화탕엑스과립",
+   "en": "Anemarrhena Rhizome/Angelica Gigas Root/Asparagus Tuber/Atractylodes Rhizome White/Citrus Unshiu Peel/Jujube/Licorice/Liriope Tuber/Peony Root/Phellodendron Bark/Raw Ginger/Rehmanniae Radix Recens"
+  },
+  {
+   "ko": "자일로메타졸린염산염",
+   "en": "Xylometazoline Hydrochloride"
+  },
+  {
+   "ko": "자하거가수분해물",
+   "en": "Human Placenta Hydrolysate"
+  },
+  {
+   "ko": "자하거추출물",
+   "en": "Human Placenta Extract"
+  },
+  {
+   "ko": "작약감초탕",
+   "en": "Licorice/Peony Root"
+  },
+  {
+   "ko": "잘토프로펜",
+   "en": "Zaltoprofen"
+  },
+  {
+   "ko": "재조합인간상피세포성장인자",
+   "en": "Recombinant Human Epidermal Growth Factor (Host: Escherichia Coli JM101/ Vector: pTE105)"
+  },
+  {
+   "ko": "재조합인간인터페론베타1a",
+   "en": "Recombinant Interferon Beta-1A"
+  },
+  {
+   "ko": "재조합인에리스로포이에틴",
+   "en": "Recombinant Human Erythropoietin"
+  },
+  {
+   "ko": "저농도과초산평형혼합물",
+   "en": "Low Concentration Peracetic Acid Equilibrium Mixture"
+  },
+  {
+   "ko": "저령탕엑스",
+   "en": "Alisma Rhizome/Asini Corii Colla/Polyporus Sclerotium/Poria/Talc"
+  },
+  {
+   "ko": "정맥주사용 B형 간염 사람면역글로불린",
+   "en": "Hepatitis B Human Normal Immunoglobulin"
+  },
+  {
+   "ko": "정주용",
+   "en": "Cefazedone Sodium"
+  },
+  {
+   "ko": "젖산칼슘",
+   "en": "Calcium Lactate Hydrate"
+  },
+  {
+   "ko": "제미플록사신메실산염",
+   "en": "Gemifloxacin Mesylate"
+  },
+  {
+   "ko": "제일벤조산나트륨카페인주",
+   "en": "Caffeine·Sodium Benzoate"
+  },
+  {
+   "ko": "제피미르타자핀",
+   "en": "Mirtazapine Coated"
+  },
+  {
+   "ko": "젬시타빈염산염",
+   "en": "Gemcitabine Hydrochloride"
+  },
+  {
+   "ko": "조니사미드",
+   "en": "Zonisamide"
+  },
+  {
+   "ko": "조위승기탕엑스과립",
+   "en": "Licorice/Natrii Sulfas/Rhubarb"
+  },
+  {
+   "ko": "졸레드론산일수화물",
+   "en": "Zoledronic Acid Monohydrate"
+  },
+  {
+   "ko": "졸미트립탄",
+   "en": "Zolmitriptan"
+  },
+  {
+   "ko": "죠테핀",
+   "en": "Zotepine"
+  },
+  {
+   "ko": "주사용리포좀화한암포테리신B",
+   "en": "Amphotericin B"
+  },
+  {
+   "ko": "주사용설박탐나트륨,암피실린나트륨",
+   "en": "Ampicillin Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "주사용설박탐나트륨·암피실린나트륨",
+   "en": "Ampicillin Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "주사용수",
+   "en": "Water For Injection"
+  },
+  {
+   "ko": "주사용아목시실린나트륨.클라부란산칼륨",
+   "en": "Amoxicillin Sodium·Clavulanate Potassium (5:1)"
+  },
+  {
+   "ko": "주사용아목시실린나트륨ㆍ설박탐나트륨",
+   "en": "Amoxicillin Sodium/Sulbactam Sodium"
+  },
+  {
+   "ko": "주사용아스피린리신90%",
+   "en": "Aspirin Lysine For Injection 90%"
+  },
+  {
+   "ko": "주사용암포테리신비",
+   "en": "Amphotericin B"
+  },
+  {
+   "ko": "주사용페노바르비탈나트륨",
+   "en": "Phenobarbital Sodium"
+  },
+  {
+   "ko": "중국수출용",
+   "en": "Caffeine Hydrate/Calcium Pantothenate/Ginseng Fluid Extract/Lycium Fruit Fluid Extract/Nicotinamide/Pyridoxine Hydrochloride/Riboflavin"
+  },
+  {
+   "ko": "지도부딘",
+   "en": "Zidovudine"
+  },
+  {
+   "ko": "지속성질산이소소르비드펠렛",
+   "en": "Isosorbide Mononitrate Sustained-Release Pellets"
+  },
+  {
+   "ko": "지축이진탕",
+   "en": "Amomum Fruit/Aquilariae Lignum/Aucklandiae Radix/Citrus Unshiu Peel/Cnidium Rhizome/Cyperus Rhizome/Fritillaria Thunbergii Bulb/Licorice/Magnolia Bark/Perillae Fructus/Poncirus Immature Fruit/Poria/Raw Ginger/Trichosanthes Seed"
+  },
+  {
+   "ko": "지파미드",
+   "en": "Xipamide"
+  },
+  {
+   "ko": "지페프롤염산염",
+   "en": "Zipeprol Hydrochloride"
+  },
+  {
+   "ko": "지프라시돈염산염일수화물",
+   "en": "Ziprasidone Hydrochloride Monohydrate"
+  },
+  {
+   "ko": "지황백호탕",
+   "en": "Anemarrhena Rhizome/Aralia Continentalis Root/Gypsum Fibrosum/Rehmanniae Radix Recens/Saposhnikovia Root"
+  },
+  {
+   "ko": "진무탕",
+   "en": "Atractylodes Rhizome White/Ginger/Peony Root/Poria/Pulvis Aconiti Tuberis Purificaum"
+  },
+  {
+   "ko": "질산이소소르비드",
+   "en": "Isosorbide Dinitrate Coated Granules"
+  },
+  {
+   "ko": "집먼지진드기",
+   "en": "Allergen Extract (Purified House Dust Mite Allergen Extract)/Allergen Extract (Purified House Dust Mite Allergen Extract)"
+  },
+  {
+   "ko": "집먼지진드기정제추출액",
+   "en": "Purified House Dust Mite Allergen Extract/Purified House Dust Mite Allergen Extract/Purified House Dust Mite Allergen Extract"
+  },
+  {
+   "ko": "차아염소산나트륨0.14%",
+   "en": "Sodium Hypochlorite Solution 0.14%"
+  },
+  {
+   "ko": "천연캡사이신",
+   "en": "Capsaicin"
+  },
+  {
+   "ko": "철-아세틸트랜스페린",
+   "en": "Iron Acetyl Transferrin"
+  },
+  {
+   "ko": "철단백추출물",
+   "en": "Ferritin Extract/Ferritin Extract"
+  },
+  {
+   "ko": "철단백추출물수화글리세린액",
+   "en": "Ferritin Extractive Hydrogliceric Solution"
+  },
+  {
+   "ko": "철아세틸트랜스페린",
+   "en": "Iron Acetyl Transferrin"
+  },
+  {
+   "ko": "청상견통탕",
+   "en": "Cheongsanggyeontongtang Soft Extract"
+  },
+  {
+   "ko": "청상방풍탕",
+   "en": "Cheongsangbangpungtang Soft Extract"
+  },
+  {
+   "ko": "청심연자음",
+   "en": "Astragalus Root/Ginseng/Licorice/Liriope Tuber/Lycium Root Bark/Nelumbo Seed/Plantago Seed/Poria/Scutellaria Root"
+  },
+  {
+   "ko": "청폐탕",
+   "en": "Angelica Gigas Root/Apricot Kernel/Asparagus Tuber/Citrus Unshiu Peel/Fritillaria Thunbergii Bulb/Gardenia Fruit/Ginger/Jujube/Licorice/Liriope Tuber/Mulberry Root Bark/Platycodon Root/Poria/Schisandra Fruit/Scutellaria Root"
+  },
+  {
+   "ko": "청화보음탕",
+   "en": "Anemarrhena Rhizome/Angelica Gigas Root/Cnidium Rhizome/Licorice/Peony Root/Phellodendron Bark/Prepared Rehmannia Root/Scrophularia Root/Trichosanthes Root"
+  },
+  {
+   "ko": "초산메드록시프로게스테론",
+   "en": "Medroxyprogesterone Acetate"
+  },
+  {
+   "ko": "초산메칠프레드니솔론",
+   "en": "Methylprednisolone Acetate"
+  },
+  {
+   "ko": "초산칼슘",
+   "en": "Calcium Acetate"
+  },
+  {
+   "ko": "치오펜탈나트륨",
+   "en": "Thiopental Sodium"
+  },
+  {
+   "ko": "치옥트산",
+   "en": "Thioctic Acid"
+  },
+  {
+   "ko": "침강탄산칼슘",
+   "en": "Precipitated Calcium Carbonate"
+  },
+  {
+   "ko": "침강탄산칼슘과립",
+   "en": "Precipitated Calcium Carbonate Granular"
+  },
+  {
+   "ko": "카나마이신황산염",
+   "en": "Kanamycin Sulfate"
+  },
+  {
+   "ko": "카나키누맙,유전자재조합",
+   "en": "Canakinumab"
+  },
+  {
+   "ko": "카르바마제핀",
+   "en": "Carbamazepine"
+  },
+  {
+   "ko": "카르바민산클로르페네신",
+   "en": "Chlorphenesin Carbamate"
+  },
+  {
+   "ko": "카르베딜롤",
+   "en": "Carvedilol"
+  },
+  {
+   "ko": "카르베토신",
+   "en": "Carbetocin"
+  },
+  {
+   "ko": "카르보시스테인",
+   "en": "Carbocisteine"
+  },
+  {
+   "ko": "카르보플라틴",
+   "en": "Carboplatin"
+  },
+  {
+   "ko": "카르복시말토오스수산화제이철착염",
+   "en": "Ferric Hydroxide·Carboxymaltose Complex"
+  },
+  {
+   "ko": "카르복시메틸셀룰로오스나트륨",
+   "en": "Carboxymethylcellulose Sodium"
+  },
+  {
+   "ko": "카르비도파,레보도파",
+   "en": "Carbidopa Hydrate/Levodopa"
+  },
+  {
+   "ko": "카르비마졸",
+   "en": "Carbimazole"
+  },
+  {
+   "ko": "카르테올롤염산염",
+   "en": "Carteolol Hydrochloride"
+  },
+  {
+   "ko": "카모스타트메실산염",
+   "en": "Camostat Mesylate"
+  },
+  {
+   "ko": "카바지탁셀아세톤용매화물",
+   "en": "Cabazitaxel Acetone Solvate"
+  },
+  {
+   "ko": "카바콜",
+   "en": "Carbachol"
+  },
+  {
+   "ko": "카보머",
+   "en": "Carbomer"
+  },
+  {
+   "ko": "카스포펀진아세테이트",
+   "en": "Caspofungin Acetate"
+  },
+  {
+   "ko": "카제인가수분해물",
+   "en": "Casein Hydrolysate/Casein Hydrolysate"
+  },
+  {
+   "ko": "카트리지",
+   "en": "Epinephrine Tartrate/Lidocaine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "카페시타빈",
+   "en": "Capecitabine"
+  },
+  {
+   "ko": "카페인무수물",
+   "en": "Anhydrous Caffeine"
+  },
+  {
+   "ko": "카페인시트르산염",
+   "en": "Anhydrous Caffeine/Citric Acid Hydrate/Sodium Citrate Hydrate"
+  },
+  {
+   "ko": "카프레오마이신황산염",
+   "en": "Capreomycin Sulfate"
+  },
+  {
+   "ko": "칸데사르탄실렉세틸",
+   "en": "Candesartan Cilexetil"
+  },
+  {
+   "ko": "칼리디노게나제",
+   "en": "Kallidinogenase"
+  },
+  {
+   "ko": "칼시트리올",
+   "en": "Calcitriol"
+  },
+  {
+   "ko": "칼시포트리올",
+   "en": "Calcipotriol"
+  },
+  {
+   "ko": "캅토프릴",
+   "en": "Captopril"
+  },
+  {
+   "ko": "컨티뉴에이션코오스A",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "컨티뉴에이션코오스B",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "컨티뉴에이션코오스C",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "컨티뉴에이션코오스D",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "컨티뉴에이션코오스E",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "컨티뉴에이션코오스F",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "케노데옥시콜산-우르소데옥시콜산삼수화물마그네슘염",
+   "en": "Magnesium Trihydrate Salt of Chenodeoxycholic Acid And Ursodeoxycholic Acid"
+  },
+  {
+   "ko": "케타민염산염",
+   "en": "Ketamine Hydrochloride"
+  },
+  {
+   "ko": "케토롤락트로메타민",
+   "en": "Ketorolac Tromethamine"
+  },
+  {
+   "ko": "케토롤락트로메타민염",
+   "en": "Ketorolac Tromethamine"
+  },
+  {
+   "ko": "케토코나졸",
+   "en": "Ketoconazole"
+  },
+  {
+   "ko": "케토티펜푸마르산염",
+   "en": "Ketotifen Fumarate"
+  },
+  {
+   "ko": "케토프로펜",
+   "en": "Ketoprofen"
+  },
+  {
+   "ko": "코리오고나도트로핀알파",
+   "en": "Chorionic Gonadotropin Alpha"
+  },
+  {
+   "ko": "코바마미드",
+   "en": "Cobamamide"
+  },
+  {
+   "ko": "콘드로이틴설페이트나트륨",
+   "en": "Sodium Chondroitin Sulfate"
+  },
+  {
+   "ko": "콜레칼시페롤",
+   "en": "Cholecalciferol"
+  },
+  {
+   "ko": "콜레칼시페롤과립",
+   "en": "Cholecalciferol Granules"
+  },
+  {
+   "ko": "콜리스틴메탄설포네이트나트륨",
+   "en": "Colistin Sodium Methanesulfonate"
+  },
+  {
+   "ko": "콜리스틴메탄설폰나트륨",
+   "en": "Colistin Sodium Methanesulfonate"
+  },
+  {
+   "ko": "콜린알포세레이트",
+   "en": "Choline Alfoscerate"
+  },
+  {
+   "ko": "콜키신",
+   "en": "Colchicine"
+  },
+  {
+   "ko": "쿠에티아핀푸마르산염",
+   "en": "Quetiapine Fumarate"
+  },
+  {
+   "ko": "쿨하이",
+   "en": "Glucose/Glucose/Glucose/Glucose/Potassium Chloride/Potassium Chloride/Potassium Chloride/Potassium Chloride/Sodium Chloride/Sodium Chloride/Sodium Chloride/Sodium Chloride"
+  },
+  {
+   "ko": "크로모글리크산나트륨",
+   "en": "Sodium Cromoglicate"
+  },
+  {
+   "ko": "크로몰린나트륨",
+   "en": "Sodium Cromoglicate"
+  },
+  {
+   "ko": "크로타미톤",
+   "en": "Crotamiton"
+  },
+  {
+   "ko": "크리조티닙",
+   "en": "Crizotinib"
+  },
+  {
+   "ko": "클라드리빈",
+   "en": "Cladribine"
+  },
+  {
+   "ko": "클라스코테론",
+   "en": "Clascoterone"
+  },
+  {
+   "ko": "클라조센탄이나트륨",
+   "en": "Clazosentan disodium"
+  },
+  {
+   "ko": "클래리트로마이신",
+   "en": "Clarithromycin/Clarithromycin"
+  },
+  {
+   "ko": "클래리트로마이신제피과립",
+   "en": "Clarithromycin Coated Granules"
+  },
+  {
+   "ko": "클래이트로마이신",
+   "en": "Clarithromycin Coated Granules"
+  },
+  {
+   "ko": "클레마스틴푸마르산염",
+   "en": "Clemastine Fumarate"
+  },
+  {
+   "ko": "클레부딘",
+   "en": "Clevudine"
+  },
+  {
+   "ko": "클렌부테롤염산염",
+   "en": "Clenbuterol Hydrochloride"
+  },
+  {
+   "ko": "클로닉신리시네이트",
+   "en": "Clonixin Lysinate"
+  },
+  {
+   "ko": "클로람부실",
+   "en": "Chlorambucil"
+  },
+  {
+   "ko": "클로르탈리돈",
+   "en": "Chlorthalidone"
+  },
+  {
+   "ko": "클로르페네신카르바메이트",
+   "en": "Chlorphenesin Carbamate"
+  },
+  {
+   "ko": "클로르페니라민말레산염",
+   "en": "Chlorpheniramine Maleate"
+  },
+  {
+   "ko": "클로르프로마진염산염",
+   "en": "Chlorpromazine Hydrochloride"
+  },
+  {
+   "ko": "클로르프로칙센",
+   "en": "Chlorprothixene"
+  },
+  {
+   "ko": "클로르헥시딘글루콘산염",
+   "en": "Chlorhexidine Gluconate Solution"
+  },
+  {
+   "ko": "클로르헥시딘글루콘산염 액",
+   "en": "Chlorhexidine Gluconate Solution"
+  },
+  {
+   "ko": "클로르헥시딘글루콘산염액",
+   "en": "Chlorhexidine Gluconate Solution"
+  },
+  {
+   "ko": "클로르헥시딘아세트산염",
+   "en": "Chlorhexidine Acetate"
+  },
+  {
+   "ko": "클로미프라민염산염",
+   "en": "Clomipramine Hydrochloride"
+  },
+  {
+   "ko": "클로바잠",
+   "en": "Clobazam"
+  },
+  {
+   "ko": "클로베타솔프로피오네이트",
+   "en": "Clobetasol Propionate"
+  },
+  {
+   "ko": "클로자핀",
+   "en": "Clozapine"
+  },
+  {
+   "ko": "클로트리마졸",
+   "en": "Clotrimazole"
+  },
+  {
+   "ko": "클로트리마졸질정",
+   "en": "Clotrimazole"
+  },
+  {
+   "ko": "클로파라빈",
+   "en": "Clofarabine"
+  },
+  {
+   "ko": "클로파지민",
+   "en": "Clofazimine"
+  },
+  {
+   "ko": "클로피도그렐, 아스피린",
+   "en": "Aspirin/Clopidogrel Bisulfate"
+  },
+  {
+   "ko": "클로피도그렐,아스피린",
+   "en": "Aspirin/Clopidogrel Bisulfate"
+  },
+  {
+   "ko": "클로피도그렐나파디실레이트일수화물",
+   "en": "Clopidogrel Napadisilate Monohydrate"
+  },
+  {
+   "ko": "클로피도그렐황산수소염",
+   "en": "Clopidogrel Bisulfate"
+  },
+  {
+   "ko": "클로피도그렐황산염",
+   "en": "Clopidogrel Bisulfate"
+  },
+  {
+   "ko": "클린다마이신염산염",
+   "en": "Clindamycin Hydrochloride"
+  },
+  {
+   "ko": "클린다마이신포스페이트",
+   "en": "Clindamycin Phosphate"
+  },
+  {
+   "ko": "키모파파인",
+   "en": "Purified Chymopapain"
+  },
+  {
+   "ko": "타다라필",
+   "en": "Tadalafil"
+  },
+  {
+   "ko": "타목시펜시트르산염",
+   "en": "Tamoxifen Citrate"
+  },
+  {
+   "ko": "타우로리딘",
+   "en": "Taurolidine"
+  },
+  {
+   "ko": "타이코플라닌",
+   "en": "Teicoplanin"
+  },
+  {
+   "ko": "타크로리무스수화물",
+   "en": "Tacrolimus Hydrate/Tacrolimus Hydrate/Tacrolimus Hydrate"
+  },
+  {
+   "ko": "타플루프로스트",
+   "en": "Tafluprost"
+  },
+  {
+   "ko": "탁리소독음",
+   "en": "Angelica Dahurica Root/Angelica Gigas Root/Astragalus Root/Atractylodes Rhizome White/Citrus Unshiu Peel/Forsythia Fruit/Ginseng/Licorice/Lonicera Flower/Peony Root/Poria/Takrisodokeum Soft Extract"
+  },
+  {
+   "ko": "탄산리튬",
+   "en": "Lithium Carbonate"
+  },
+  {
+   "ko": "탄산수소나트륨",
+   "en": "Sodium Bicarbonate"
+  },
+  {
+   "ko": "탈니플루메이트",
+   "en": "Talniflumate"
+  },
+  {
+   "ko": "탈리도마이드",
+   "en": "Thalidomide"
+  },
+  {
+   "ko": "탐스로신염산염",
+   "en": "Tamsulosin Hydrochloride"
+  },
+  {
+   "ko": "태반성성선자극호르몬",
+   "en": "Chorionic Gonadotropin Alpha"
+  },
+  {
+   "ko": "태음조위탕",
+   "en": "Acori Graminei Rhizoma/Castaneae Semen/Coix Seed/Ephedra Herb/Liriope Tuber/Platycodon Root/Raphani Semen/Schisandra Fruit"
+  },
+  {
+   "ko": "태화환",
+   "en": "Angelica Gigas Root/Atractylodes Rhizome/Aucklandiae Radix/Citrus Unshiu Peel/Coptis Rhizome/Cyperus Rhizome/Ginseng/Hawthorn Fruit/Hordei Fructus Germinatus/Licorice/Longan Arillus/Massa Medicata Fermentata/Mentha Herb Oil/Peony Root/Pinellia Tuber/Poncirus Immature Fruit/Poria/Round Amomum Fruit"
+  },
+  {
+   "ko": "테넥테플라제",
+   "en": "Tenecteplase"
+  },
+  {
+   "ko": "테녹시캄",
+   "en": "Tenoxicam"
+  },
+  {
+   "ko": "테라조신염산염",
+   "en": "Terazosin Hydrochloride"
+  },
+  {
+   "ko": "테라조신염산염수화물",
+   "en": "Terazosin Hydrochloride Hydrate"
+  },
+  {
+   "ko": "테르비나핀염산염",
+   "en": "Terbinafine Hydrochloride"
+  },
+  {
+   "ko": "테를리프레신아세트산염",
+   "en": "Terlipressin Acetate"
+  },
+  {
+   "ko": "테리파라타이드아세트산염",
+   "en": "Teriparatide Acetate"
+  },
+  {
+   "ko": "테모졸로미드",
+   "en": "Temozolomide"
+  },
+  {
+   "ko": "테스토스테론에난테이트",
+   "en": "Testosterone Enanthate"
+  },
+  {
+   "ko": "테스토스테론운데카노에이트",
+   "en": "Testosterone Undecanoate"
+  },
+  {
+   "ko": "테오브로민",
+   "en": "Theobromine"
+  },
+  {
+   "ko": "테오필린",
+   "en": "Theophylline Polymeric Shelled Complex"
+  },
+  {
+   "ko": "테이코플라닌",
+   "en": "Teicoplanin/Water For Injection"
+  },
+  {
+   "ko": "테트라데실황산나트륨콘센트레이트",
+   "en": "Sodium Tetradecyl Sulfate Concentrate"
+  },
+  {
+   "ko": "테트라코삭티드",
+   "en": "Tetracosactide"
+  },
+  {
+   "ko": "테트라히드로졸린염산염",
+   "en": "Tetrahydrozoline Hydrochloride"
+  },
+  {
+   "ko": "테프레논",
+   "en": "Teprenone"
+  },
+  {
+   "ko": "텔미사르탄",
+   "en": "Telmisartan"
+  },
+  {
+   "ko": "템시롤리무스",
+   "en": "Temsirolimus"
+  },
+  {
+   "ko": "토라세미드",
+   "en": "Torsemide"
+  },
+  {
+   "ko": "토르세미드",
+   "en": "Torsemide"
+  },
+  {
+   "ko": "토브라마이신",
+   "en": "Tobramycin"
+  },
+  {
+   "ko": "토브라마이신,덱사메타손",
+   "en": "Dexamethasone/Tobramycin"
+  },
+  {
+   "ko": "토수플록사신토실산염수화물",
+   "en": "Tosufloxacine Tosilate Hydrate"
+  },
+  {
+   "ko": "토실리주맙",
+   "en": "Tocilizumab (Host: CHO DXB11/ Vector:phPM1HL2/ Sub Host: CHO V4)/Tocilizumab (Host: CHO DXB11/ Vector:phPM1HL2/ Sub Host: CHO V4)"
+  },
+  {
+   "ko": "토코페롤아세테이트",
+   "en": "Tocopherol Acetate"
+  },
+  {
+   "ko": "토파시티닙시트르산염",
+   "en": "Tofacitinib Citrate"
+  },
+  {
+   "ko": "토포테칸염산염",
+   "en": "Topotecan Hydrochloride"
+  },
+  {
+   "ko": "토피라메이트",
+   "en": "Topiramate"
+  },
+  {
+   "ko": "토피소팜",
+   "en": "Tofisopam"
+  },
+  {
+   "ko": "톨나프테이트",
+   "en": "Tolnaftate"
+  },
+  {
+   "ko": "톨터로딘-L-타르타르산염",
+   "en": "Tolterodine-L-Tartrate"
+  },
+  {
+   "ko": "톨페남산",
+   "en": "Tolfenamic Acid"
+  },
+  {
+   "ko": "톨페리손염산염",
+   "en": "Tolperisone Hydrochloride"
+  },
+  {
+   "ko": "툴로부테롤",
+   "en": "Tulobuterol"
+  },
+  {
+   "ko": "트라넥사민산",
+   "en": "Tranexamic Acid/Tranexamic Acid"
+  },
+  {
+   "ko": "트라넥삼산",
+   "en": "Tranexamic Acid/Tranexamic Acid"
+  },
+  {
+   "ko": "트라닐라스트",
+   "en": "Tranilast"
+  },
+  {
+   "ko": "트라마돌염산염",
+   "en": "Tramadol Hydrochloride"
+  },
+  {
+   "ko": "트라벡테딘",
+   "en": "Trabectedin"
+  },
+  {
+   "ko": "트라보프로스트",
+   "en": "Travoprost"
+  },
+  {
+   "ko": "트라스투주맙",
+   "en": "Trastuzumab"
+  },
+  {
+   "ko": "트라조돈염산염",
+   "en": "Trazodone Hydrochloride"
+  },
+  {
+   "ko": "트레티노인",
+   "en": "Tretinoin"
+  },
+  {
+   "ko": "트레프로스티닐",
+   "en": "Treprostinil/Treprostinil/Treprostinil/Treprostinil"
+  },
+  {
+   "ko": "트레할로스수화물",
+   "en": "Trehalose Hydrate"
+  },
+  {
+   "ko": "트로스퓸염화물",
+   "en": "Trospium Chloride"
+  },
+  {
+   "ko": "트로픽아미드",
+   "en": "Tropicamide"
+  },
+  {
+   "ko": "트로픽아미드,페닐레프린",
+   "en": "Phenylephrine Hydrochloride/Tropicamide"
+  },
+  {
+   "ko": "트록세루틴",
+   "en": "Troxerutin"
+  },
+  {
+   "ko": "트록시피드",
+   "en": "Troxipide"
+  },
+  {
+   "ko": "트리메부틴",
+   "en": "Trimebutine"
+  },
+  {
+   "ko": "트리메부틴말레산염",
+   "en": "Trimebutine Maleate"
+  },
+  {
+   "ko": "트리메타지딘염산염",
+   "en": "Trimetazidine Hydrochloride"
+  },
+  {
+   "ko": "트리암시놀론",
+   "en": "Triamcinolone/Triamcinolone"
+  },
+  {
+   "ko": "트리암시놀론아세토니드",
+   "en": "Triamcinolone Acetonide"
+  },
+  {
+   "ko": "트리트먼트코오스A",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "트리트먼트코오스B",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "트리트먼트코오스C",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "트리트먼트코오스D",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "트리트먼트코오스E",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "트리트먼트코오스F",
+   "en": "Allergen Extract"
+  },
+  {
+   "ko": "트리파로텐",
+   "en": "Trifarotene"
+  },
+  {
+   "ko": "트리판블루",
+   "en": "Trypan Blue"
+  },
+  {
+   "ko": "트리페그필그라스팀",
+   "en": "Tripegfilgrastim"
+  },
+  {
+   "ko": "트리플루리딘",
+   "en": "Trifluridine/Trifluridine"
+  },
+  {
+   "ko": "트리플루살",
+   "en": "Triflusal"
+  },
+  {
+   "ko": "트리헥시페니딜염산염",
+   "en": "Trihexyphenidyl Hydrochloride"
+  },
+  {
+   "ko": "트립토렐린아세트산염",
+   "en": "Triptorelin Acetate"
+  },
+  {
+   "ko": "트립토렐린파모산염",
+   "en": "Triptorelin Pamoate"
+  },
+  {
+   "ko": "티니다졸",
+   "en": "Tinidazole"
+  },
+  {
+   "ko": "티로프라미드염산염",
+   "en": "Tiropramide Hydrochloride"
+  },
+  {
+   "ko": "티로피반염산염수화물",
+   "en": "Tirofiban Hydrochloride Hydrate"
+  },
+  {
+   "ko": "티몰롤말레산염",
+   "en": "Timolol Maleate"
+  },
+  {
+   "ko": "티아넵틴나트륨",
+   "en": "Tianeptine Sodium"
+  },
+  {
+   "ko": "티아민염산염",
+   "en": "Thiamine Hydrochloride"
+  },
+  {
+   "ko": "티오콜키코시드",
+   "en": "Thiocolchicoside"
+  },
+  {
+   "ko": "티오트로퓸브롬화물수화물",
+   "en": "Tiotropium Bromide Hydrate"
+  },
+  {
+   "ko": "티옥트산",
+   "en": "Thioctic Acid"
+  },
+  {
+   "ko": "티옥트산트로메타민",
+   "en": "Thioctic Acid Tromethamine"
+  },
+  {
+   "ko": "티자니딘염산염",
+   "en": "Tizanidine Hydrochloride"
+  },
+  {
+   "ko": "티클로피딘염산염",
+   "en": "Ticlopidine Hydrochloride"
+  },
+  {
+   "ko": "파라아미노살리실산칼슘수화물",
+   "en": "Calcium p-Aminosalicylate Hydrate"
+  },
+  {
+   "ko": "파록세틴염산염반수화물",
+   "en": "Paroxetine Hydrochloride Hemihydrate"
+  },
+  {
+   "ko": "파록세틴염산염수화물",
+   "en": "Paroxetine Hydrochloride Hydrate"
+  },
+  {
+   "ko": "파리칼시톨",
+   "en": "Paricalcitol"
+  },
+  {
+   "ko": "파모티딘",
+   "en": "Famotidine"
+  },
+  {
+   "ko": "파미드론산나트륨",
+   "en": "Pamidronate Sodium"
+  },
+  {
+   "ko": "파미드론산나트륨오수화물",
+   "en": "Pamidronate Disodium Hydrate"
+  },
+  {
+   "ko": "파클리탁셀",
+   "en": "Paclitaxel"
+  },
+  {
+   "ko": "판크레리파제",
+   "en": "Pancrelipase"
+  },
+  {
+   "ko": "판크레아스 분말",
+   "en": "Pancrease Powder"
+  },
+  {
+   "ko": "판크레아틴장용성제피미세정",
+   "en": "Pancreatin Enteric Coated Micronized Tablets"
+  },
+  {
+   "ko": "판크레아틴장용성제피정",
+   "en": "Pancreatin Enteric Coated Tablets"
+  },
+  {
+   "ko": "판크레아틴장용성제피펠렛",
+   "en": "Pancreatin Enteric Coated Pellets"
+  },
+  {
+   "ko": "판토프라졸나트륨세스키히드레이트",
+   "en": "Pantoprazole Sodium Sesquihydrate"
+  },
+  {
+   "ko": "팔로노세트론염산염",
+   "en": "Palonosetron Hydrochloride"
+  },
+  {
+   "ko": "팔리비주맙",
+   "en": "Palivizumab"
+  },
+  {
+   "ko": "팔리페리돈팔미테이트",
+   "en": "Paliperidone Palmitate"
+  },
+  {
+   "ko": "팔미원엑스과립",
+   "en": "Alisma Rhizome/Cinnamon Bark/Cornus Fruit/Dioscorea Rhizome/Moutan Root Bark/Palmijihwanghwan Soft Extract/Poria/Prepared Rehmannia Root/Pulvis Aconiti Tuberis Purificaum"
+  },
+  {
+   "ko": "팔미지황환엑스과립",
+   "en": "Alisma Rhizome/Cinnamomi Ramulus/Cornus Fruit/Dioscorea Rhizome/Moutan Root Bark/Poria/Prepared Rehmannia Root/Pulvis Aconiti Tuberis Purificaum"
+  },
+  {
+   "ko": "팜시클로비르",
+   "en": "Famciclovir"
+  },
+  {
+   "ko": "패독산",
+   "en": "Aralia Continentalis Root/As Dried Extract/Atractylodes Rhizome/Aurantii Fructus Immaturus/Bupleurum Root/Citrus Unshiu Peel/Cnidium Rhizome/Ostericum Root/Perilla Leaf/Peucedani Radix/Platycodon Root/Poria/Pueraria Root/Saposhnikovia Root/Schizonepeta Spike"
+  },
+  {
+   "ko": "퍼메트린",
+   "en": "Permethrin"
+  },
+  {
+   "ko": "퍼투주맙/트라스투주맙",
+   "en": "Pertuzumab/Trastuzumab"
+  },
+  {
+   "ko": "페그아스파르가제",
+   "en": "Pegaspargase"
+  },
+  {
+   "ko": "페노바르비탈나트륨",
+   "en": "Phenobarbital Sodium"
+  },
+  {
+   "ko": "페노테롤브롬화수소산염",
+   "en": "Fenoterol Hydrobromide"
+  },
+  {
+   "ko": "페노피브레이트",
+   "en": "Fenofibrate Micronized"
+  },
+  {
+   "ko": "페노피브릭산",
+   "en": "Fenofibric Acid"
+  },
+  {
+   "ko": "페니토인",
+   "en": "Phenytoin"
+  },
+  {
+   "ko": "페니토인나트륨",
+   "en": "Phenytoin Sodium"
+  },
+  {
+   "ko": "페닐레프린염산염",
+   "en": "Phenylephrine Hydrochloride"
+  },
+  {
+   "ko": "페닐부틸산나트륨",
+   "en": "Sodium Phenylbutyrate"
+  },
+  {
+   "ko": "페라미비르수화물",
+   "en": "Peramivir Hydrate"
+  },
+  {
+   "ko": "페람파넬",
+   "en": "Perampanel"
+  },
+  {
+   "ko": "페르페나진염산염",
+   "en": "Perphenazine Hydrochloride"
+  },
+  {
+   "ko": "페린도프릴-t-부틸아민",
+   "en": "Perindopril Tert-Butylamine"
+  },
+  {
+   "ko": "페린도프릴아르기닌",
+   "en": "Perindopril Arginine"
+  },
+  {
+   "ko": "페메트렉시드이나트륨2.5수화물",
+   "en": "Pemetrexed Disodium 2.5 Hydrate"
+  },
+  {
+   "ko": "페메트렉시드이나트륨염2.5수화물",
+   "en": "Pemetrexed Disodium 2.5 Hydrate"
+  },
+  {
+   "ko": "페미로라스트칼륨",
+   "en": "Pemirolast Potassium"
+  },
+  {
+   "ko": "페북소스타트",
+   "en": "Febuxostat"
+  },
+  {
+   "ko": "페소테로딘푸마르산염",
+   "en": "Fesoterodine Fumarate"
+  },
+  {
+   "ko": "펙소페나딘염산염",
+   "en": "Fexofenadine Hydrochloride"
+  },
+  {
+   "ko": "펜시클로버",
+   "en": "Penciclovir"
+  },
+  {
+   "ko": "펜타닐시트르산염",
+   "en": "Fentanyl Citrate/Fentanyl Citrate"
+  },
+  {
+   "ko": "펜테트산",
+   "en": "Pentetic Acid"
+  },
+  {
+   "ko": "펜토라민메실레이트",
+   "en": "Phentolamine Mesylate"
+  },
+  {
+   "ko": "펜토산폴리설페이트나트륨",
+   "en": "Pentosan Polysulfate Sodium"
+  },
+  {
+   "ko": "펜톡시필린",
+   "en": "Pentoxifylline/Pentoxifylline"
+  },
+  {
+   "ko": "펠로디핀",
+   "en": "Felodipine Micronized"
+  },
+  {
+   "ko": "펠비낙",
+   "en": "Felbinac"
+  },
+  {
+   "ko": "펨브롤리주맙,유전자재조합",
+   "en": "Pembrolizumab/Pembrolizumab"
+  },
+  {
+   "ko": "평위산",
+   "en": "Atractylodes Rhizome/Citrus Unshiu Peel/Ginger/Jujube/Licorice/Magnolia Bark"
+  },
+  {
+   "ko": "평위산엑스과립",
+   "en": "Atractylodes Rhizome/Citrus Unshiu Peel/Ginger/Jujube/Licorice/Magnolia Bark"
+  },
+  {
+   "ko": "평위오령산",
+   "en": "Alisma Rhizome/As Dried Extract/Atractylodes Rhizome/Atractylodes Rhizome White/Cinnamon Bark/Citrus Unshiu Peel/Ginger/Jujube/Licorice/Magnolia Bark/Peony Root/Polyporus Sclerotium/Poria"
+  },
+  {
+   "ko": "포도당",
+   "en": "Glucose"
+  },
+  {
+   "ko": "포르모테롤푸마르산염수화물",
+   "en": "Formoterol Fumarate Hydrate"
+  },
+  {
+   "ko": "포르피머나트륨",
+   "en": "Porfimer Sodium"
+  },
+  {
+   "ko": "포말리도마이드",
+   "en": "Pomalidomide"
+  },
+  {
+   "ko": "포비돈",
+   "en": "Povidone"
+  },
+  {
+   "ko": "포비돈요오드",
+   "en": "Povidone Iodine"
+  },
+  {
+   "ko": "포비돈요오드액10%",
+   "en": "Povidone Iodine"
+  },
+  {
+   "ko": "포수클로랄",
+   "en": "Chloral Hydrate"
+  },
+  {
+   "ko": "포스아프레피탄트 디메글루민염",
+   "en": "Fosaprepitant Dimeglumine"
+  },
+  {
+   "ko": "포스페니토인나트륨",
+   "en": "Fosphenytoin Sodium"
+  },
+  {
+   "ko": "포스포마이신나트륨",
+   "en": "Fosfomycin Sodium/Fosfomycin Sodium"
+  },
+  {
+   "ko": "포타시움크로라이드주",
+   "en": "Potassium Chloride"
+  },
+  {
+   "ko": "폰다파리눅스나트륨",
+   "en": "Fondaparinux Sodium"
+  },
+  {
+   "ko": "폴리네이트나트륨",
+   "en": "Sodium Folinate"
+  },
+  {
+   "ko": "폴리네이트칼슘",
+   "en": "Calcium Folinate"
+  },
+  {
+   "ko": "폴리데옥시리보뉴클레오타이드나트륨",
+   "en": "Polydeoxyribonucleotide Sodium"
+  },
+  {
+   "ko": "폴리데옥시리보뉴클레오티드나트륨",
+   "en": "Polydeoxyribonucleotide Sodium"
+  },
+  {
+   "ko": "폴리말토오스수산화제이철착염",
+   "en": "Ferric Hydroxide Polymaltose Complex"
+  },
+  {
+   "ko": "폴리비닐알코올",
+   "en": "Polyvinyl Alcohol/Polyvinyl Alcohol"
+  },
+  {
+   "ko": "폴리사카리드철착염",
+   "en": "Polysaccharide Iron Complex"
+  },
+  {
+   "ko": "폴리소르베이트80",
+   "en": "Polysorbate 80"
+  },
+  {
+   "ko": "폴리스티렌설폰산칼슘",
+   "en": "Calcium Polystyrene Sulfonate"
+  },
+  {
+   "ko": "폴리에틸렌글리콜3350",
+   "en": "Polyethylene Glycol 3350"
+  },
+  {
+   "ko": "폴리에틸렌글리콜4000",
+   "en": "Polyethylene Glycol 4000"
+  },
+  {
+   "ko": "폴리카르보필칼슘",
+   "en": "Calcium Polycarbophil"
+  },
+  {
+   "ko": "폴리크레줄렌",
+   "en": "Policresulen Solution 50%"
+  },
+  {
+   "ko": "폴리크레줄렌액50%",
+   "en": "Policresulen Solution 50%"
+  },
+  {
+   "ko": "표준화",
+   "en": "Standardized Lyophyllized of Bacterial Lysate"
+  },
+  {
+   "ko": "푸로세미드",
+   "en": "Furosemide"
+  },
+  {
+   "ko": "푸로파라카인염산염",
+   "en": "Proparacaine Hydrochloride"
+  },
+  {
+   "ko": "푸르설티아민염산염",
+   "en": "Fursultiamine Hydrochloride"
+  },
+  {
+   "ko": "푸마르산케토티펜",
+   "en": "Ketotifen Fumarate"
+  },
+  {
+   "ko": "푸마르산포르모테롤",
+   "en": "Formoterol Fumarate"
+  },
+  {
+   "ko": "푸시딘산",
+   "en": "Fusidic Acid"
+  },
+  {
+   "ko": "푸시딘산나트륨",
+   "en": "Sodium Fusidate"
+  },
+  {
+   "ko": "풀베스트란트",
+   "en": "Fulvestrant"
+  },
+  {
+   "ko": "퓨시드산나트륨",
+   "en": "Sodium Fusidate"
+  },
+  {
+   "ko": "퓨시드산수화물",
+   "en": "Fusidic Acid Hydroxide"
+  },
+  {
+   "ko": "프라노프로펜",
+   "en": "Pranoprofen"
+  },
+  {
+   "ko": "프라목신염산염",
+   "en": "Pramoxine Hydrochloride"
+  },
+  {
+   "ko": "프라미펙솔염산염일수화물",
+   "en": "Pramipexole Dihydrochloride Monohydrate"
+  },
+  {
+   "ko": "프라바스타틴",
+   "en": "Pravastatin Sodium"
+  },
+  {
+   "ko": "프라바스타틴나트륨",
+   "en": "Pravastatin Sodium"
+  },
+  {
+   "ko": "프라지콴텔",
+   "en": "Praziquantel"
+  },
+  {
+   "ko": "프라지퀀텔",
+   "en": "Praziquantel"
+  },
+  {
+   "ko": "프란루카스트수화물",
+   "en": "Pranlukast Hydrate"
+  },
+  {
+   "ko": "프랄라트렉세이트",
+   "en": "Pralatrexate"
+  },
+  {
+   "ko": "프랄리독심염화물",
+   "en": "Pralidoxime Chloride"
+  },
+  {
+   "ko": "프랄리독심염화물,수출명:PralidoximChlorideTab.",
+   "en": "Pralidoxime Chloride"
+  },
+  {
+   "ko": "프레가발린",
+   "en": "Pregabalin"
+  },
+  {
+   "ko": "프레드니솔론",
+   "en": "Prednisolone"
+  },
+  {
+   "ko": "프레드니솔론발레로아세테이트",
+   "en": "Prednisolone Valeroacetate"
+  },
+  {
+   "ko": "프레드니솔론아세테이트",
+   "en": "Prednisolone Acetate"
+  },
+  {
+   "ko": "프레드니카르베이트",
+   "en": "Prednicarbate"
+  },
+  {
+   "ko": "프로글루메타신말레산염",
+   "en": "Proglumetacin Dimaleate"
+  },
+  {
+   "ko": "프로메스트리엔",
+   "en": "Promestriene"
+  },
+  {
+   "ko": "프로바트립탄숙신산염일수화물",
+   "en": "Frovatriptan Succinate Monohydrate"
+  },
+  {
+   "ko": "프로싸이클리딘염산염",
+   "en": "Procyclidine Hydrochloride"
+  },
+  {
+   "ko": "프로카테롤염산염수화물",
+   "en": "Procaterol Hydrochloride Hydrate"
+  },
+  {
+   "ko": "프로타민황산염",
+   "en": "Protamine Sulfate"
+  },
+  {
+   "ko": "프로티렐린타르타르산염수화물",
+   "en": "Protirelin Tartrate Hydrate"
+  },
+  {
+   "ko": "프로파라카인염산염",
+   "en": "Proparacaine Hydrochloride"
+  },
+  {
+   "ko": "프로파세타몰염산염",
+   "en": "Propacetamol Hydrochloride"
+  },
+  {
+   "ko": "프로파페논염산염",
+   "en": "Propafenone Hydrochloride"
+  },
+  {
+   "ko": "프로포폴",
+   "en": "Propofol"
+  },
+  {
+   "ko": "프로프라놀롤염산염",
+   "en": "Propranolol Hydrochloride"
+  },
+  {
+   "ko": "프로피베린염산염",
+   "en": "Propiverine Hydrochloride"
+  },
+  {
+   "ko": "프로필렌글리콜",
+   "en": "Propylene Glycol"
+  },
+  {
+   "ko": "프로필티오우라실",
+   "en": "Propylthiouracil"
+  },
+  {
+   "ko": "프리디놀메실산염",
+   "en": "Pridinol Mesylate"
+  },
+  {
+   "ko": "프리마퀸인산염",
+   "en": "Primaquine Phosphate"
+  },
+  {
+   "ko": "프리마퀸포스페이트",
+   "en": "Primaquine Phosphate"
+  },
+  {
+   "ko": "프리필드",
+   "en": "Lanreotide"
+  },
+  {
+   "ko": "플라스틱백",
+   "en": "Purified Olive Oil/Refined Soyabean Oil"
+  },
+  {
+   "ko": "플레릭사포르",
+   "en": "Plerixafor"
+  },
+  {
+   "ko": "플레카이니드아세트산염",
+   "en": "Flecainide Acetate"
+  },
+  {
+   "ko": "플로로글루시놀",
+   "en": "Phloroglucinol"
+  },
+  {
+   "ko": "플로로글루시놀수화물",
+   "en": "Phloroglucinol Hydrate"
+  },
+  {
+   "ko": "플로로글루신",
+   "en": "Phloroglucinol"
+  },
+  {
+   "ko": "플로목세프나트륨",
+   "en": "Flomoxef Sodium"
+  },
+  {
+   "ko": "플루나리진염산염",
+   "en": "Flunarizine Hydrochloride/Flunarizine Hydrochloride"
+  },
+  {
+   "ko": "플루다라빈포스페이트",
+   "en": "Fludarabine Phosphate"
+  },
+  {
+   "ko": "플루마제닐",
+   "en": "Flumazenil"
+  },
+  {
+   "ko": "플루바스타틴나트륨",
+   "en": "Fluvastatin Sodium"
+  },
+  {
+   "ko": "플루벤다졸",
+   "en": "Flubendazole"
+  },
+  {
+   "ko": "플루오레세인나트륨",
+   "en": "Fluorescein Sodium"
+  },
+  {
+   "ko": "플루오로메톨론",
+   "en": "Fluorometholone/Fluorometholone"
+  },
+  {
+   "ko": "플루오로메톨론, 테트라히드로졸린염산염",
+   "en": "Fluorometholone/Tetrahydrozoline Hydrochloride"
+  },
+  {
+   "ko": "플루오로메톨론,테트라히드로졸린",
+   "en": "Fluorometholone/Tetrahydrozoline Hydrochloride"
+  },
+  {
+   "ko": "플루오로메톨론,테트라히드로졸린염산염",
+   "en": "Fluorometholone/Tetrahydrozoline Hydrochloride"
+  },
+  {
+   "ko": "플루오로메톨론아세테이트",
+   "en": "Fluorometholone Acetate"
+  },
+  {
+   "ko": "플루오로우라실",
+   "en": "Fluorouracil"
+  },
+  {
+   "ko": "플루오르화나트륨 F-18액",
+   "en": "Sodium Fluoride (18F) Solution"
+  },
+  {
+   "ko": "플루오시노니드",
+   "en": "Fluocinonide"
+  },
+  {
+   "ko": "플루옥세틴염산염",
+   "en": "Fluoxetine Hydrochloride"
+  },
+  {
+   "ko": "플루코나졸",
+   "en": "Fluconazole"
+  },
+  {
+   "ko": "플루트리마졸",
+   "en": "Flutrimazole"
+  },
+  {
+   "ko": "플루티카손프로피오네이트,살메테롤",
+   "en": "Fluticasone Propionate Micronized/Salmeterol Xinafoate Micronized"
+  },
+  {
+   "ko": "플루페남산",
+   "en": "Flufenamic Acid"
+  },
+  {
+   "ko": "피나베륨브롬화물",
+   "en": "Pinaverium Bromide"
+  },
+  {
+   "ko": "피나스테리드",
+   "en": "Finasteride"
+  },
+  {
+   "ko": "피라루비신",
+   "en": "Pirarubicin"
+  },
+  {
+   "ko": "피라세탐",
+   "en": "Piracetam"
+  },
+  {
+   "ko": "피라진아미드",
+   "en": "Pyrazinamide"
+  },
+  {
+   "ko": "피레녹신",
+   "en": "Pirenoxine"
+  },
+  {
+   "ko": "피로인산나트륨",
+   "en": "Sodium Pyrophosphate"
+  },
+  {
+   "ko": "피록시캄",
+   "en": "Piroxicam"
+  },
+  {
+   "ko": "피록시캄베타사이클로덱스트린",
+   "en": "Piroxicam Beta-Cyclodextrin"
+  },
+  {
+   "ko": "피록시캄칼륨",
+   "en": "Piroxicam Potassium"
+  },
+  {
+   "ko": "피리도스티그민브롬화물",
+   "en": "Pyridostigmine Bromide"
+  },
+  {
+   "ko": "피리독신염산염",
+   "en": "Pyridoxine Hydrochloride"
+  },
+  {
+   "ko": "피리티온아연",
+   "en": "Pyrithione Zinc Solution"
+  },
+  {
+   "ko": "피리티온아연 액",
+   "en": "Pyrithione Zinc Solution"
+  },
+  {
+   "ko": "피메크로리무스",
+   "en": "Pimecrolimus"
+  },
+  {
+   "ko": "피오글리타존염산염",
+   "en": "Pioglitazone Hydrochloride"
+  },
+  {
+   "ko": "피친산나트륨",
+   "en": "Sodium Phytate"
+  },
+  {
+   "ko": "피코설페이트나트륨수화물",
+   "en": "Sodium Picosulfate Hydrate"
+  },
+  {
+   "ko": "피타바스타틴칼슘, 페노피브레이트과립",
+   "en": "Fenofibrate Granules/Pitavastatin Calcium"
+  },
+  {
+   "ko": "피타바스타틴칼슘수화물",
+   "en": "Pitavastatin Calcium Hydrate"
+  },
+  {
+   "ko": "피토나디온주사액",
+   "en": "Phytonadione"
+  },
+  {
+   "ko": "피페라실린나트륨",
+   "en": "Piperacillin Sodium/Piperacillin Sodium"
+  },
+  {
+   "ko": "피페라실린나트륨 ·  타조박탐나트륨",
+   "en": "Piperacillin Sodium·Tazobactam Sodium"
+  },
+  {
+   "ko": "피페라실린나트륨.타조박탐나트륨",
+   "en": "Piperacillin Hydrate/Piperacillin Sodium·Tazobactam Sodium/Tazobactam"
+  },
+  {
+   "ko": "피페라실린나트륨·타조박탐나트륨",
+   "en": "Piperacillin Sodium·Tazobactam Sodium"
+  },
+  {
+   "ko": "피프린히드리네이트",
+   "en": "Piprinhydrinate"
+  },
+  {
+   "ko": "핀골리모드염산염",
+   "en": "Fingolimod Hydrochloride"
+  },
+  {
+   "ko": "필로카르핀염산염",
+   "en": "Pilocarpine Hydrochloride"
+  },
+  {
+   "ko": "필수인지질성물질",
+   "en": "Essential Phospholipids (EPL) Substance"
+  },
+  {
+   "ko": "필시카이니드염산염수화물",
+   "en": "Pilsicainide Hydrochloride Hydrate"
+  },
+  {
+   "ko": "하이드로코르티손-17-발레레이트",
+   "en": "Hydrocortisone Valerate"
+  },
+  {
+   "ko": "할로페리돌",
+   "en": "Haloperidol"
+  },
+  {
+   "ko": "할로페리돌데카노에이트",
+   "en": "Haloperidol Decanoate"
+  },
+  {
+   "ko": "향사육군자탕",
+   "en": "Amomum Fruit/Atractylodes Rhizome White/Aucklandiae Radix/Bitter Cardamon/Citrus Unshiu Peel/Cyperus Rhizome/Ginseng/Jujube/Licorice/Magnolia Bark/Pinellia Tuber/Poria/Raw Ginger/Round Amomum Fruit"
+  },
+  {
+   "ko": "향사평위산",
+   "en": "Agastachis Herba/Amomum Fruit/Atractylodes Rhizome/Citrus Unshiu Peel/Cyperus Rhizome/Jujube/Licorice/Magnolia Bark/Raw Ginger"
+  },
+  {
+   "ko": "향사평위산엑스과립",
+   "en": "Agastachis Herba/Amomum Fruit/Atractylodes Rhizome/Citrus Unshiu Peel/Cyperus Rhizome/Jujube/Licorice/Magnolia Bark/Raw Ginger"
+  },
+  {
+   "ko": "향성파적환",
+   "en": "Amomum Fruit/Cnidium Rhizome/Forsythia Fruit/Gambir/Licorice/Mentha Herb/Platycodon Root/Rhubarb/Terminalia Fruit"
+  },
+  {
+   "ko": "헤모코아귤라제",
+   "en": "Hemocoagulase"
+  },
+  {
+   "ko": "헤파린나트륨",
+   "en": "Heparin Sodium/Heparin Sodium"
+  },
+  {
+   "ko": "형개연교탕",
+   "en": "Hyeonggaeyeongyotang Soft Extract"
+  },
+  {
+   "ko": "형개연교탕엑스과립",
+   "en": "Angelica Dahurica Root/Angelica Gigas Root/Bupleurum Root/Cnidium Rhizome/Forsythia Fruit/Gardenia Fruit/Licorice/Peony Root/Platycodon Root/Poncirus Immature Fruit/Saposhnikovia Root/Schizonepeta Spike/Scutellaria Root"
+  },
+  {
+   "ko": "형방도적산",
+   "en": "Akebia Stem/Aralia Continentalis Root/Ostericum Root/Peucedani Radix/Rehmanniae Radix Recens/Saposhnikovia Root/Schizonepeta Spike/Scrophularia Root/Trichosanthes Seed"
+  },
+  {
+   "ko": "형방사백산탕",
+   "en": "Alisma Rhizome/Anemarrhena Rhizome/Aralia Continentalis Root/Gypsum Fibrosum/Ostericum Root/Poria/Rehmanniae Radix Recens/Saposhnikovia Root/Schizonepeta Spike"
+  },
+  {
+   "ko": "형방패독산",
+   "en": "Aralia Continentalis Root/Aurantii Fructus Immaturus/Bupleurum Root/Cnidium Rhizome/Ginseng/Licorice/Ostericum Root/Peucedani Radix/Platycodon Root/Poria/Saposhnikovia Root/Schizonepeta Spike"
+  },
+  {
+   "ko": "호마트로핀브롬화수소산염",
+   "en": "Homatropine Hydrobromide"
+  },
+  {
+   "ko": "호박산메칠프레드니솔론나트륨",
+   "en": "Methylprednisolone Sodium Succinate"
+  },
+  {
+   "ko": "호박산메토프로롤",
+   "en": "Metoprolol Succinate"
+  },
+  {
+   "ko": "확산형",
+   "en": "Piroxicam"
+  },
+  {
+   "ko": "환원형",
+   "en": "Glutathione (Reduced)"
+  },
+  {
+   "ko": "황기건중탕",
+   "en": "Hwanggigeonjungtang Soft Extract"
+  },
+  {
+   "ko": "황기건중탕엑스",
+   "en": "Astragalus Root/Cinnamomi Ramulus/Jujube/Licorice/Peony Root/Raw Ginger/Saccharum Granorum"
+  },
+  {
+   "ko": "황련해독탕",
+   "en": "Hwangryeonhaedoktang Soft Extract"
+  },
+  {
+   "ko": "황련해독탕엑스과립",
+   "en": "Coptis Rhizome/Gardenia Fruit/Phellodendron Bark/Scutellaria Root"
+  },
+  {
+   "ko": "황산네틸마이신",
+   "en": "Netilmicin Sulfate"
+  },
+  {
+   "ko": "황산마그네슘수화물",
+   "en": "Magnesium Sulfate Hydrate"
+  },
+  {
+   "ko": "황산바륨",
+   "en": "Barium Sulfate"
+  },
+  {
+   "ko": "황산아미카신",
+   "en": "Amikacin Sulfate"
+  },
+  {
+   "ko": "황산아연수화물",
+   "en": "Zinc Sulfate Hydrate"
+  },
+  {
+   "ko": "황산아연일수화물",
+   "en": "Zinc Sulfate Hydrate"
+  },
+  {
+   "ko": "황산콘드로이틴나트륨, 히알루론산나트륨",
+   "en": "Sodium Chondroitin Sulfate/Sodium Hyaluronate"
+  },
+  {
+   "ko": "황산토브라마이신",
+   "en": "Tobramycin Sulfate"
+  },
+  {
+   "ko": "황산헥소프레날린주",
+   "en": "Hexoprenaline Sulfate"
+  },
+  {
+   "ko": "희석니트로글리세린",
+   "en": "Dilute Nitroglycerin"
+  },
+  {
+   "ko": "희석된니트로글리세린",
+   "en": "Dilute Nitroglycerin"
+  },
+  {
+   "ko": "희석이소소르비드질산염",
+   "en": "Dilute Isosorbide Nitrate"
+  },
+  {
+   "ko": "희석한니트로글리세린용액",
+   "en": "Dilute Nitroglycerin Solution"
+  },
+  {
+   "ko": "히드랄라진염산염",
+   "en": "Hydralazine Hydrochloride"
+  },
+  {
+   "ko": "히드로모르폰염산염",
+   "en": "Hydromorphone Hydrochloride"
+  },
+  {
+   "ko": "히드로코르티손",
+   "en": "Hydrocortisone"
+  },
+  {
+   "ko": "히드로코르티손숙시네이트나트륨",
+   "en": "Hydrocortisone Sodium Succinate"
+  },
+  {
+   "ko": "히드로코르티손아세테이트",
+   "en": "Hydrocortisone Acetate"
+  },
+  {
+   "ko": "히드로코르티손프로부테이트",
+   "en": "Hydrocortisone Probutate"
+  },
+  {
+   "ko": "히드로퀴논",
+   "en": "Hydroquinone/Hydroquinone"
+  },
+  {
+   "ko": "히드로클로로티아지드",
+   "en": "Hydrochlorothiazide"
+  },
+  {
+   "ko": "히드로탈시트",
+   "en": "Hydrotalcite"
+  },
+  {
+   "ko": "히드록소코발라민",
+   "en": "Hydroxocobalamin"
+  },
+  {
+   "ko": "히드록시우레아",
+   "en": "Hydroxyurea"
+  },
+  {
+   "ko": "히드록시진염산염",
+   "en": "Hydroxyzine Hydrochloride"
+  },
+  {
+   "ko": "히드록시클로로퀸설페이트",
+   "en": "Hydroxychloroquine Sulfate"
+  },
+  {
+   "ko": "히드록시클로로퀸황산염",
+   "en": "Hydroxychloroquine Sulfate"
+  },
+  {
+   "ko": "히알루로니다제",
+   "en": "Hyaluronidase"
+  },
+  {
+   "ko": "히알루론산나트륨",
+   "en": "Sodium Hyaluronate"
+  },
+  {
+   "ko": "히알우로니다제",
+   "en": "Hyaluronidase"
+  },
+  {
+   "ko": "히알우론산나트륨",
+   "en": "Sodium Hyaluronate"
+  },
+  {
+   "ko": "히프로멜로오스",
+   "en": "Hypromellose"
+  },
+  {
+   "ko": "﻿소마트로핀",
+   "en": "Somatropin/Somatropin"
+  }
+ ],
+ "korean_only": [
+  "감초탕엑스",
+  "마황부자세신탕엑스",
+  "산조인탕",
+  "시호계지건강탕",
+  "십미패독산"
+ ]
+}

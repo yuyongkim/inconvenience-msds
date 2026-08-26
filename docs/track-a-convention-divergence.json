@@ -1,6 +1,7 @@
 {
  "kosha_names": 9903,
  "cosmetic_names": 1380,
+ "drug_names": 1650,
  "elements": [
   {
    "english": "sodium",
@@ -9,13 +10,17 @@
      "kosha": 503,
      "kosha_pct": 0.050792689084115925,
      "cosmetics": 0,
-     "cosmetics_pct": 0.0
+     "cosmetics_pct": 0.0,
+     "drugs": 159,
+     "drugs_pct": 0.09636363636363636
     },
     "소듐": {
      "kosha": 75,
      "kosha_pct": 0.007573462587094819,
      "cosmetics": 61,
-     "cosmetics_pct": 0.04420289855072464
+     "cosmetics_pct": 0.04420289855072464,
+     "drugs": 0,
+     "drugs_pct": 0.0
     }
    }
   },
@@ -26,13 +31,17 @@
      "kosha": 129,
      "kosha_pct": 0.01302635564980309,
      "cosmetics": 0,
-     "cosmetics_pct": 0.0
+     "cosmetics_pct": 0.0,
+     "drugs": 34,
+     "drugs_pct": 0.020606060606060607
     },
     "포타슘": {
      "kosha": 15,
      "kosha_pct": 0.001514692517418964,
      "cosmetics": 15,
-     "cosmetics_pct": 0.010869565217391304
+     "cosmetics_pct": 0.010869565217391304,
+     "drugs": 0,
+     "drugs_pct": 0.0
     }
    }
   },
@@ -43,7 +52,9 @@
      "kosha": 71,
      "kosha_pct": 0.007169544582449763,
      "cosmetics": 1,
-     "cosmetics_pct": 0.0007246376811594203
+     "cosmetics_pct": 0.0007246376811594203,
+     "drugs": 23,
+     "drugs_pct": 0.013939393939393939
     }
    }
   },
@@ -54,7 +65,9 @@
      "kosha": 59,
      "kosha_pct": 0.0059577905685145914,
      "cosmetics": 2,
-     "cosmetics_pct": 0.0014492753623188406
+     "cosmetics_pct": 0.0014492753623188406,
+     "drugs": 7,
+     "drugs_pct": 0.004242424242424243
     }
    }
   }
@@ -67,13 +80,17 @@
      "kosha": 495,
      "kosha_pct": 0.04998485307482581,
      "cosmetics": 2,
-     "cosmetics_pct": 0.0014492753623188406
+     "cosmetics_pct": 0.0014492753623188406,
+     "drugs": 31,
+     "drugs_pct": 0.018787878787878787
     },
     "다이": {
      "kosha": 533,
      "kosha_pct": 0.05382207411895385,
      "cosmetics": 62,
-     "cosmetics_pct": 0.04492753623188406
+     "cosmetics_pct": 0.04492753623188406,
+     "drugs": 0,
+     "drugs_pct": 0.0
     }
    }
   },
@@ -84,13 +101,17 @@
      "kosha": 240,
      "kosha_pct": 0.024235080278703424,
      "cosmetics": 2,
-     "cosmetics_pct": 0.0014492753623188406
+     "cosmetics_pct": 0.0014492753623188406,
+     "drugs": 17,
+     "drugs_pct": 0.010303030303030303
     },
     "트라이": {
      "kosha": 179,
      "kosha_pct": 0.018075330707866304,
      "cosmetics": 24,
-     "cosmetics_pct": 0.017391304347826087
+     "cosmetics_pct": 0.017391304347826087,
+     "drugs": 0,
+     "drugs_pct": 0.0
     }
    }
   },
@@ -101,7 +122,111 @@
      "kosha": 258,
      "kosha_pct": 0.02605271129960618,
      "cosmetics": 7,
-     "cosmetics_pct": 0.005072463768115942
+     "cosmetics_pct": 0.005072463768115942,
+     "drugs": 3,
+     "drugs_pct": 0.0018181818181818182
+    }
+   }
+  }
+ ],
+ "strategies": [
+  {
+   "english": "sulfate",
+   "sino": "황산",
+   "translit": "설페이트",
+   "forms": {
+    "황산": {
+     "kind": "translated",
+     "kosha": 212,
+     "kosha_pct": 0.021407654246188023,
+     "cosmetics": 0,
+     "cosmetics_pct": 0.0,
+     "drugs": 38,
+     "drugs_pct": 0.02303030303030303
+    },
+    "설페이트": {
+     "kind": "transliterated",
+     "kosha": 19,
+     "kosha_pct": 0.001918610522064021,
+     "cosmetics": 21,
+     "cosmetics_pct": 0.015217391304347827,
+     "drugs": 5,
+     "drugs_pct": 0.0030303030303030303
+    }
+   }
+  },
+  {
+   "english": "phosphate",
+   "sino": "인산",
+   "translit": "포스페이트",
+   "forms": {
+    "인산": {
+     "kind": "translated",
+     "kosha": 191,
+     "kosha_pct": 0.019287084721801476,
+     "cosmetics": 0,
+     "cosmetics_pct": 0.0,
+     "drugs": 20,
+     "drugs_pct": 0.012121212121212121
+    },
+    "포스페이트": {
+     "kind": "transliterated",
+     "kosha": 37,
+     "kosha_pct": 0.003736241542966778,
+     "cosmetics": 19,
+     "cosmetics_pct": 0.013768115942028985,
+     "drugs": 5,
+     "drugs_pct": 0.0030303030303030303
+    }
+   }
+  },
+  {
+   "english": "hydrochloride",
+   "sino": "염산",
+   "translit": "클로라이드",
+   "forms": {
+    "염산": {
+     "kind": "translated",
+     "kosha": 31,
+     "kosha_pct": 0.003130364535999192,
+     "cosmetics": 0,
+     "cosmetics_pct": 0.0,
+     "drugs": 241,
+     "drugs_pct": 0.14606060606060606
+    },
+    "클로라이드": {
+     "kind": "transliterated",
+     "kosha": 115,
+     "kosha_pct": 0.011612642633545391,
+     "cosmetics": 12,
+     "cosmetics_pct": 0.008695652173913044,
+     "drugs": 0,
+     "drugs_pct": 0.0
+    }
+   }
+  },
+  {
+   "english": "hydrate",
+   "sino": "수화물",
+   "translit": "하이드레이트",
+   "forms": {
+    "수화물": {
+     "kind": "translated",
+     "kosha": 135,
+     "kosha_pct": 0.013632232656770675,
+     "cosmetics": 0,
+     "cosmetics_pct": 0.0,
+     "drugs": 150,
+     "drugs_pct": 0.09090909090909091
+    },
+    "하이드레이트": {
+     "kind": "transliterated",
+     "kosha": 15,
+     "kosha_pct": 0.001514692517418964,
+     "cosmetics": 1,
+     "cosmetics_pct": 0.0007246376811594203,
+     "drugs": 0,
+     "drugs_pct": 0.0
     }
    }
   }
@@ -112,46 +237,66 @@
    "kosha": 1465,
    "kosha_pct": 0.14793496920125215,
    "cosmetics": 47,
-   "cosmetics_pct": 0.034057971014492754
+   "cosmetics_pct": 0.034057971014492754,
+   "drugs": 13,
+   "drugs_pct": 0.00787878787878788
   },
   {
    "form": "에틸",
    "kosha": 763,
    "kosha_pct": 0.07704735938604464,
    "cosmetics": 48,
-   "cosmetics_pct": 0.034782608695652174
+   "cosmetics_pct": 0.034782608695652174,
+   "drugs": 9,
+   "drugs_pct": 0.005454545454545455
   },
   {
    "form": "프로필",
    "kosha": 225,
    "kosha_pct": 0.02272038776128446,
    "cosmetics": 40,
-   "cosmetics_pct": 0.028985507246376812
+   "cosmetics_pct": 0.028985507246376812,
+   "drugs": 4,
+   "drugs_pct": 0.0024242424242424242
   },
   {
-   "form": "스테아",
-   "kosha": 68,
-   "kosha_pct": 0.00686660607896597,
-   "cosmetics": 61,
-   "cosmetics_pct": 0.04420289855072464
+   "form": "아세테이트",
+   "kosha": 63,
+   "kosha_pct": 0.006361708573159649,
+   "cosmetics": 13,
+   "cosmetics_pct": 0.009420289855072464,
+   "drugs": 14,
+   "drugs_pct": 0.008484848484848486
   },
   {
-   "form": "하이드록시",
-   "kosha": 393,
-   "kosha_pct": 0.03968494395637685,
-   "cosmetics": 33,
-   "cosmetics_pct": 0.02391304347826087
+   "form": "벤조",
+   "kosha": 259,
+   "kosha_pct": 0.026153690800767446,
+   "cosmetics": 8,
+   "cosmetics_pct": 0.005797101449275362,
+   "drugs": 8,
+   "drugs_pct": 0.0048484848484848485
   },
   {
-   "form": "아크릴",
-   "kosha": 145,
-   "kosha_pct": 0.014642027668383318,
-   "cosmetics": 21,
-   "cosmetics_pct": 0.015217391304347827
+   "form": "아미노",
+   "kosha": 263,
+   "kosha_pct": 0.0265576088054125,
+   "cosmetics": 16,
+   "cosmetics_pct": 0.011594202898550725,
+   "drugs": 14,
+   "drugs_pct": 0.008484848484848486
   }
  ],
- "kosha_forms_absent_from_cosmetics": [
-  "sodium",
-  "potassium"
+ "mutually_exclusive": [
+  {
+   "english": "sodium",
+   "drugs_use": "나트륨",
+   "cosmetics_use": "소듐"
+  },
+  {
+   "english": "potassium",
+   "drugs_use": "칼륨",
+   "cosmetics_use": "포타슘"
+  }
  ]
 }

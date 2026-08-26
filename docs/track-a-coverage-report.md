@@ -13,6 +13,8 @@ Coverage is the share of a name's Hangul that a known root accounts for. It says
 | WHO INN radicals (English) | 690 | 8.5% | 2.8% | 86.1% | 47 |
 | KCIA cosmetic ingredients (Korean) | 1,380 | 12.5% | 0.1% | 71.2% | 68 |
 | KCIA cosmetic ingredients (English INCI) | 1,291 | 15.9% | 1.2% | 62.4% | 83 |
+| MFDS drug ingredients (Korean) | 1,650 | 8.1% | 0.1% | 76.1% | 65 |
+| MFDS drug ingredients (English) | 1,650 | 14.7% | 0.6% | 59.1% | 71 |
 
 ## KOSHA chemicals (source domain)
 
@@ -218,6 +220,85 @@ Most-used roots:
 | phosphate | 19 |
 | oleate | 18 |
 | hexa | 17 |
+
+Largest gaps — Hangul runs no root explains:
+
+| Fragment | Names |
+|---|---:|
+
+## MFDS drug ingredients (Korean)
+
+Most-used roots:
+
+| Root | Names |
+|---|---:|
+| propane | 73 |
+| sulfate | 39 |
+| meta | 27 |
+| acetate | 24 |
+| iso | 20 |
+| bromide | 20 |
+| phosphate | 20 |
+| beta | 14 |
+| amino | 14 |
+| chloride | 14 |
+| oxide | 13 |
+| methyl | 13 |
+| carbonate | 11 |
+| nitrate | 10 |
+| para | 9 |
+
+Largest gaps — Hangul runs no root explains:
+
+| Fragment | Names |
+|---|---:|
+| 아목시실린클라불란산칼륨 | 13 |
+| 나트륨 | 10 |
+| 덱사 | 8 |
+| 스트 | 7 |
+| 화물 | 7 |
+| 컨티뉴에이션코오스 | 6 |
+| 트리트먼트코오스 | 6 |
+| 메톨론 | 5 |
+| 설박탐나트륨암피실린나트륨 | 5 |
+| 폴리 | 5 |
+| 덱시부 | 4 |
+| 말레 | 4 |
+| 설박탐나트륨세포페라존나트륨 | 4 |
+| 제이철착염 | 4 |
+| 아목시실린수화물묽은클라불란산칼륨 | 4 |
+| 소르비드 | 4 |
+| 우라실 | 3 |
+| 화수소산염 | 3 |
+| 펜디씨 | 3 |
+| 디클로페낙 | 3 |
+| 에탄올 | 3 |
+| 염수화물 | 3 |
+| 미소 | 3 |
+| 티아지드 | 3 |
+| 세프타지딤수화물건조 | 3 |
+
+## MFDS drug ingredients (English)
+
+Most-used roots:
+
+| Root | Names |
+|---|---:|
+| chloride | 325 |
+| iso | 63 |
+| sulfate | 46 |
+| acetate | 43 |
+| amine | 36 |
+| amide | 33 |
+| mono | 29 |
+| poly | 28 |
+| phosphate | 28 |
+| methyl | 23 |
+| bromide | 19 |
+| beta | 18 |
+| carbonate | 17 |
+| meta | 16 |
+| thio | 15 |
 
 Largest gaps — Hangul runs no root explains:
 
