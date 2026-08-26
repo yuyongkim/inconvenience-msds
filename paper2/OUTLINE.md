@@ -41,7 +41,7 @@ Paper 1 Sec VIII (`sec:extensibility`) explicitly listed pharmaceutical labels a
 
 | # | Domain | API | Auth status | Records (est.) | Role in paper |
 |---|---|---|---|---|---|
-| D1 | **Pharmaceutical labels** | MFDS e약은요 (의약품안전나라) | ✅ active | ~35K | Citizen self-medication safety. Headline case study. |
+| D1 | **Pharmaceutical labels** | MFDS e약은요 **+ 제품허가(DrugPrdtPrmsnInfoService07)** | ✅ both active (2026-08-26) | ~35K / ~50K | Citizen self-medication safety. Headline case study. |
 | D2 | **Pesticide registrations** | PSIS 농약안전정보시스템 | ⏳ needs PSIS portal key | ~2K + safety guides | Rural / aging visual-impairment angle. GHS-adjacent. |
 | D3 | **Industrial-incident cases** | KOSHA 국내재해사례 (data.go.kr 15121001) | ⏳ needs data.go.kr 활용신청 | ~hundreds (board posts) | Closes paper 1 loop (incidents ↔ MSDS); safety-training material. |
 
@@ -68,7 +68,7 @@ Probes in `paper2/probes/`:
 | Probe | Result | Notes |
 |---|---|---|
 | `probe_mfds.py` (e약은요) | ✅ 3/3 OK | 평균 1,512자 → 3,144셀, 비율 2.08 (paper-1 MSDS 1.95와 동등) |
-| `probe_mfds_detail.py` (제품허가) | ❌ 500 | 활용신청 미등록 |
+| `probe_mfds_detail.py` (제품허가) | ~~❌ 500~~ → **✅ 동작** | 키는 인가되어 있었고 엔드포인트 버전이 07. `chemip` 서비스 경유로 접근 (2026-08-26 확인) |
 | `probe_psis.py` (농약) | ❌ ERR_101 | psis.rda.go.kr 자체 키 필요 |
 | `probe_airkorea.py` | ❌ 403 | 활용신청 미등록 (도메인 자체 drop) |
 
@@ -99,10 +99,41 @@ IX.   Limitations and Future Work
 X.    Conclusion
 ```
 
+## Status update (2026-08-26)
+
+**D1 unblocked, and larger than planned.** The approval register was logged as
+❌ 500 "활용신청 미등록". It was neither: the key is authorised and the endpoint
+is version 07, which earlier probes had guessed wrong. Reading it through the
+chemical information service that already holds the key means no credential is
+copied into this repository.
+
+That upgrades the headline domain. The plan assumed e약은요 alone (product name,
+indication, dosage). Pairing it with the approval register adds the active
+ingredient, the prescription/OTC split and the therapeutic class — the fields
+that tell a reader whether the leaflet matches the box.
+
+Built so far:
+
+| Piece | File |
+|---|---|
+| Adapter interface | `pipeline/adapters/__init__.py` |
+| Drug adapter | `pipeline/adapters/drug.py` |
+| Corpus fetcher (rate-limited) | `scripts/paper2_fetch_drugs.py` |
+| Per-domain validation | `eval/paper2_validation.py` |
+
+**One operational lesson worth keeping.** A first sweep at 0.3 s between calls
+pushed the service into 429s and slowed chemip.yule.pics, which serves real
+users. The fetcher now waits 1.5 s, backs off on 429 rather than retrying
+through it, and gives up instead of hammering. Sharing a key means sharing the
+rate limit.
+
 ## Prerequisite Actions (사장님)
 
 1. **psis.rda.go.kr 가입 + OpenAPI 신청** — 농약등록정보 SVC01 (개인 가능, 사업자 무관)
 2. **data.go.kr 활용신청 추가** — KOSHA 국내재해사례 (15121001), 기존 키 그대로 사용
+
+D2와 D3만 남았다. D1은 이 둘 없이도 어댑터 구조·검증 파이프라인·데이터셋 통계를
+지탱하므로, 키가 오면 어댑터 두 개를 붙이는 일만 남는다.
 
 활용목적 문구 예시: "학술논문 연구 — 시각장애인 정보 접근성 향상을 위한 한국어 점자 변환 데이터셋 구축 (UAIS 후속편)"
 
