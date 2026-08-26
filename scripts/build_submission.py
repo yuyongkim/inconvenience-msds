@@ -1,0 +1,182 @@
+"""Assemble everything a journal upload asks for, in one folder.
+
+Submission is the step where a finished paper stalls, because the manuscript
+lives in one place, the figures in another, and the metadata only in the
+author's head. This collects them, and writes the metadata down as text that
+can be pasted into the submission form rather than retyped from the draft —
+retyping is where the abstract on the site stops matching the abstract in the
+file.
+
+Figures go in twice: PNG because that is what reviewers see inline, PDF because
+that is the vector copy production wants. Both come from the same generator, so
+they cannot drift.
+
+Usage:
+    python scripts/build_submission.py paper3
+"""
+
+from __future__ import annotations
+
+import argparse
+import re
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+# Each paper releases a different thing and withholds a different thing, and the
+# form asks about both. A single generic sentence here would be the kind of
+# boilerplate that is technically true and tells a reader nothing.
+DATA_AVAILABILITY = {
+    "paper3": "The mined lexicon, the measurement scripts and the derived "
+              "statistics are in the repository. Two sources are described rather "
+              "than redistributed: the cosmetics dictionary, whose terms reserve "
+              "copyright to the association, and the drug register, which is read "
+              "through a service holding the authorised key.",
+    "paper4": "The marker measurement scripts, the cylinder and specular sweeps, "
+              "the ingredient summariser and the allergen check are in the "
+              "repository, together with the printable marker sheet. No "
+              "photographs exist to release; every detection figure is synthetic "
+              "and the code that generates it is included.",
+    "paper5": "The evaluation harness, the synthetic keypoint generator, the "
+              "public-dataset audit and its raw output are in the repository. No "
+              "Korean fingerspelling data were collected, so none can be released.",
+    "default": "Scripts and derived statistics are in the repository.",
+}
+
+
+def field(text: str, heading: str) -> str:
+    """Pull one bolded abstract field out of the markdown."""
+    m = re.search(rf"\*\*{heading}\.\*\*\s*(.+?)(?=\n\n|\Z)", text, re.S)
+    return " ".join(m.group(1).split()) if m else ""
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("paper", help="paper directory, e.g. paper3")
+    ap.add_argument("--venue", default="UAIS")
+    args = ap.parse_args()
+
+    src = PROJECT_ROOT / args.paper
+    if not src.exists():
+        raise SystemExit(f"no such paper directory: {src}")
+    out = src / "submission"
+    figs = out / "figures"
+    figs.mkdir(parents=True, exist_ok=True)
+
+    md = (src / "draft_en.md").read_text(encoding="utf-8")
+    title = md.splitlines()[0].lstrip("# ").strip()
+
+    # Regenerate rather than copy: a stale docx is the failure this exists to
+    # prevent, and the conversion is cheap.
+    jobs = [(src / "draft_en.md", out / "manuscript.docx")]
+    # The cover letter is named after its venue, so a paper can carry more than
+    # one and the package picks whichever matches.
+    letters = sorted(src.glob(f"cover_letter_{args.venue.lower()}.md"))         or sorted(src.glob("cover_letter_*.md"))
+    if letters:
+        jobs.append((letters[0], out / "cover_letter.docx"))
+    for source_md, dest in jobs:
+        if not source_md.exists():
+            continue
+        subprocess.run([sys.executable, str(PROJECT_ROOT / "scripts" / "md_to_docx.py"),
+                        str(source_md), str(dest)], check=True)
+
+    used = sorted(set(re.findall(r"figures/(Fig\d+)\.png", md)),
+                  key=lambda s: int(s[3:]))
+    for stem in used:
+        for ext in ("png", "pdf"):
+            f = src / "figures" / f"{stem}.{ext}"
+            if f.exists():
+                shutil.copy2(f, figs / f.name)
+
+    tables = sorted(set(re.findall(r"\*\*Table (\d+)\.", md)), key=int)
+    keywords = ""
+    m = re.search(r"\*\*Keywords:\*\*\s*(.+)", md)
+    if m:
+        keywords = m.group(1).strip()
+
+    lines = [
+        f"# Submission package — {args.paper} → {args.venue}",
+        "",
+        f"**Title.** {title}",
+        "",
+        "**Author.** Yuyong Kim, University of Wisconsin-Madison, Madison, WI 53706, USA",
+        "**Email.** ykim288@wisc.edu",
+        "**ORCID.** 0009-0006-4842-666X",
+        "",
+        "## Files in this folder",
+        "",
+        "| File | Upload as |",
+        "|---|---|",
+        "| `manuscript.docx` | Manuscript |",
+        "| `cover_letter.docx` | Cover letter |",
+    ]
+    for stem in used:
+        lines.append(f"| `figures/{stem}.png` | Figure {stem[3:]} (screen) |")
+        lines.append(f"| `figures/{stem}.pdf` | Figure {stem[3:]} (vector) |")
+
+    lines += [
+        "",
+        f"Figures: {len(used)}. Tables: {len(tables)}, kept inside the manuscript.",
+        "",
+        "## Where it goes",
+        "",
+        "*Universal Access in the Information Society* submits through SNAPP, the",
+        "Springer Nature Article Processing Platform, not Editorial Manager. The",
+        "first paper in this series went the same way.",
+        "",
+        "  https://submission.nature.com/new-submission/10209",
+        "",
+        "Article type: **Brief Report** (matching the first paper in the series).",
+        "",
+        "## Paste-in metadata",
+        "",
+        "The form asks for these separately from the file. They are reproduced here",
+        "so the submitted metadata matches the manuscript rather than being retyped.",
+        "",
+        "### Abstract",
+        "",
+    ]
+    for h in ("Purpose", "Methods", "Results", "Conclusions"):
+        v = field(md, h)
+        if v:
+            lines += [f"**{h}.** {v}", ""]
+    lines += ["### Keywords", "", keywords, ""]
+
+    lines += [
+        "## Declarations the form will ask for",
+        "",
+        "- **Funding.** None.",
+        "- **Competing interests.** None.",
+        "- **Ethics approval.** Not applicable; no human participants or animals.",
+        "- **Consent.** Not applicable.",
+        f"- **Data availability.** {DATA_AVAILABILITY.get(args.paper, DATA_AVAILABILITY['default'])}",
+        "- **Code availability.** Same repository; every figure and table has a named",
+        "  script listed under Reproduction.",
+        "",
+        "## Before uploading",
+        "",
+        "- [ ] Open `manuscript.docx` and check the figures are embedded and legible",
+        "- [ ] Confirm the abstract above matches the one in the manuscript",
+        "- [ ] Confirm the reference to the first paper carries the right DOI",
+        "- [ ] Suggested reviewers are at the end of the cover letter",
+        "",
+        "Regenerate this folder with:",
+        "",
+        "```",
+        f"python scripts/build_submission.py {args.paper}",
+        "```",
+    ]
+
+    (out / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    print(f"\n-> {out}")
+    for p in sorted(out.rglob("*")):
+        if p.is_file():
+            print(f"   {p.relative_to(out).as_posix():28s} {p.stat().st_size:>9,} bytes")
+
+
+if __name__ == "__main__":
+    main()
