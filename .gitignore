@@ -79,3 +79,6 @@ data/kcia_cache/
 web/backend/*.log
 web/backend/*.log.err
 web/backend/*.log.out
+
+# Paper 2 corpora: public data, but large and re-fetchable by script
+data/paper2/*.json

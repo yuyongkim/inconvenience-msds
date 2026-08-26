@@ -102,31 +102,32 @@ def main() -> None:
         print(f"  {term:6s} running total {len(paired):,} records, {calls} calls",
               flush=True)
 
-    # Pairing pass. Searching both services with the same dosage-form word does
-    # not line them up: each matches its own name field and pages independently,
-    # so the first sweep produced 1,525 records and 17 pairs. Looking each
-    # approval record up by its exact product name does line them up, because
-    # the item sequence number comes back identical.
-    unpaired = [r for r in paired.values() if r["approval"] and not r["easy"]]
-    print(f"\npairing {len(unpaired):,} approval-only records by exact name",
+    # Pairing pass, and the direction matters. Looking an approval record up in
+    # e약은요 fails almost always: the register carries every product ever
+    # approved, including 1960s registrations, while e약은요 only carries what is
+    # currently marketed. Going the other way succeeds, because anything with a
+    # patient leaflet is necessarily an approved product. A first attempt ran it
+    # the wrong way round and paired 0 of 685.
+    unpaired = [r for r in paired.values() if r["easy"] and not r["approval"]]
+    print(f"\npairing {len(unpaired):,} e약은요 records against the register",
           flush=True)
     filled = 0
     for i, rec in enumerate(unpaired, 1):
-        name = (rec["approval"].get("ITEM_NAME") or "").strip()
+        name = (rec["easy"].get("itemName") or "").strip()
         if not name:
             continue
-        d = get(f"/easy?q={urllib.parse.quote(name)}&limit=5", args.delay)
+        d = get(f"/approval?q={urllib.parse.quote(name)}&limit=5", args.delay)
         calls += 1
         if d:
             for item in d.get("items", []):
-                if item.get("itemSeq") == rec["item_seq"]:
-                    rec["easy"] = item
+                if item.get("ITEM_SEQ") == rec["item_seq"]:
+                    rec["approval"] = item
                     filled += 1
                     break
-        if i % 50 == 0:
+        if i % 100 == 0:
             print(f"    {i}/{len(unpaired)} looked up, {filled} paired", flush=True)
         time.sleep(args.delay)
-    print(f"  paired {filled:,} more", flush=True)
+    print(f"  paired {filled:,}", flush=True)
 
     both = sum(1 for r in paired.values() if r["approval"] and r["easy"])
     OUT.parent.mkdir(parents=True, exist_ok=True)

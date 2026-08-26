@@ -1,0 +1,26 @@
+{
+ "drug": {
+  "domain": "drug",
+  "records": 800,
+  "text_chars": 219992,
+  "braille_cells": 364366,
+  "expansion_ratio": 1.656,
+  "mean_text_chars": 275,
+  "roundtrip_exact_pct": 0.7275,
+  "roundtrip_near_pct": 0.7275,
+  "roundtrip_stable_pct": 1.0,
+  "rule_violations": {}
+ },
+ "pesticide": {
+  "domain": "pesticide",
+  "records": 800,
+  "text_chars": 125189,
+  "braille_cells": 223168,
+  "expansion_ratio": 1.783,
+  "mean_text_chars": 156,
+  "roundtrip_exact_pct": 0.1125,
+  "roundtrip_near_pct": 0.1125,
+  "roundtrip_stable_pct": 1.0,
+  "rule_violations": {}
+ }
+}
