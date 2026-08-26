@@ -1,4 +1,4 @@
-# What Korean Chemical Names Are Made Of: Mining a Transliteration Lexicon from Aligned Regulatory Name Pairs, and What It Does Not Reach
+# What Korean Chemical Names Are Made Of: A Mined Transliteration Lexicon and the Registry Conventions It Cannot Cross
 
 Yuyong Kim
 University of Wisconsin-Madison, Madison, WI 53706, USA
