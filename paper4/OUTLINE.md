@@ -75,8 +75,30 @@ deployment.
   a planar homography. This is the largest gap between the number and reality.
 - **A resolver service.** An ArUco ID is a small integer, not a URL. NaviLens
   bundles the mapping; here it must be built.
-- **Real packaging photographs.** The synthetic numbers are an upper bound with
-  no motion blur, specular highlight or rolling shutter.
+- **Real packaging footage.** The synthetic numbers are an upper bound with no
+  motion blur, specular highlight or rolling shutter.
+
+  The plan was 480 posed stills — three distances by five angles by two
+  lightings by two exposures, across eight containers. That is the wrong medium
+  and it was my error. Motion blur and rolling shutter exist only while the
+  camera moves; posing for each of 480 frames removes two of the three artefacts
+  the shoot exists to introduce, and costs an afternoon to do it.
+
+  It is now four 20-second sweeps per container (lighting × exposure), six
+  containers, **eight minutes of recording**. At 30 fps that is roughly 14,000
+  frames against 480, the angle varies continuously rather than at five levels,
+  and every frame carries the blur a hand actually produced.
+
+  The angle for each frame comes from a large reference marker lying flat beside
+  the container. Recovering it from the container's own marker would be
+  circular — it works only where detection worked, so the failures, which are
+  the data, would have no angle.
+
+  Harness: `scripts/marker_video_eval.py`, exercised on a synthetic sweep.
+  Sheet: `scripts/make_marker_sheet.py` now prints the reference marker and the
+  sweep protocol. Neither crawling nor an API can substitute: the photographs
+  have to contain *our marker*, and online product shots are the opposite
+  condition — studio lit, square on, reflections removed.
 - **At least one blind reader.** No user has tried this. A paper claiming an
   accessibility route without that is a systems paper, and should say so rather
   than imply otherwise.

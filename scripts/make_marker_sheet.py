@@ -63,9 +63,16 @@ def register_korean() -> tuple[str, str]:
 DICT = cv2.aruco.DICT_4X4_50
 PRINT_DPI = 600           # marker edges stay crisp at this size
 
-# The grid the plan asks for, printed rather than remembered.
-DISTANCES = ["30 cm", "60 cm", "1 m"]
-ANGLES = ["0°", "15°", "30°", "45°", "60°"]
+# What varies during a sweep, printed rather than remembered.
+#
+# An earlier version of this sheet asked for a factorial of stills: three
+# distances by five angles by two lightings by two exposures, sixty frames a
+# container, 480 in all. That is the wrong medium. Two of the three artefacts
+# the shoot exists to capture — motion blur and rolling shutter — occur only
+# while the camera is moving, and posing for each of 480 stills removes them.
+# A sweep records them for free and gives a continuous angle rather than five
+# levels of one.
+SWEEP = "카메라를 정면에서 70°까지 천천히 돌리며 20초 녹화 (한 번에 왕복하지 말 것)"
 LIGHTING = ["실내 확산광", "직사 조명 (정반사 유도)"]
 EXPOSURES = ["자동 노출", "하이라이트 기준 -2 EV"]
 
@@ -129,13 +136,22 @@ def draw_checklist(c: canvas.Canvas, size_mm: float, reg: str, bold: str) -> Non
     y -= 7 * mm
     c.setFont(reg, 8.5)
     for line in [
-        "One marker per container. Note the container's diameter: it is the variable that",
-        "decides angle tolerance, so a shot without it cannot be placed on the curve.",
+        "Film sweeps, do not take stills. Motion blur and rolling shutter exist only while",
+        "the camera moves, and they are two of the three things the synthetic study could",
+        "not model. Posing for each frame removes exactly what the shoot is for.",
+        "",
+        "Lay the large reference marker flat beside the container, in shot throughout. It",
+        "gives the camera angle for every frame — including the frames where the",
+        "container's own marker is lost, which are the interesting ones. Recovering the",
+        "angle from the container's marker would work only where detection worked.",
+        "",
+        "Note the container's diameter: it decides angle tolerance, so a sweep without it",
+        "cannot be placed on the curve.",
         "",
         "Include glossy containers. Specular highlight is the factor the synthetic study",
-        "could only bound, and matte-only photographs would leave it exactly where it was.",
+        "could only bound, and matte-only footage would leave it exactly where it was.",
         "",
-        "Shoot each scene at two exposures. The model predicts detection turns over on the",
+        "Film each scene at two exposures. The model predicts detection turns over on the",
         "highlight's peak brightness rather than the light's angular size, so exposure is",
         "the first prediction worth testing.",
     ]:
@@ -144,9 +160,9 @@ def draw_checklist(c: canvas.Canvas, size_mm: float, reg: str, bold: str) -> Non
 
     y -= 4 * mm
     rows = [
-        ("Container", "지름 기록 · 유광/무광 구분 · 5~10종"),
-        ("Distance", " / ".join(DISTANCES)),
-        ("Angle", " / ".join(ANGLES)),
+        ("Container", "지름 기록 · 유광/무광 구분 · 6종"),
+        ("Sweep", SWEEP),
+        ("Distance", "스윕 안에서 30 cm에서 1 m까지 자연스럽게 변하도록"),
         ("Lighting", " / ".join(LIGHTING)),
         ("Exposure", " / ".join(EXPOSURES)),
     ]
@@ -164,37 +180,75 @@ def draw_checklist(c: canvas.Canvas, size_mm: float, reg: str, bold: str) -> Non
         c.drawString(52 * mm, y, levels)
         y -= 6 * mm
 
-    per_container = len(DISTANCES) * len(ANGLES) * len(LIGHTING) * len(EXPOSURES)
+    sweeps = len(LIGHTING) * len(EXPOSURES)
     y -= 3 * mm
     c.setFont(reg, 8.5)
     c.drawString(20 * mm, y,
-                 f"{per_container} frames per container "
-                 f"({len(DISTANCES)} x {len(ANGLES)} x {len(LIGHTING)} x {len(EXPOSURES)}). "
-                 "Eight containers gives 480.")
+                 f"{sweeps} sweeps per container "
+                 f"({len(LIGHTING)} x {len(EXPOSURES)}), 20 seconds each. Six containers "
+                 f"is {sweeps * 6 * 20 // 60} minutes of recording.")
     y -= 5 * mm
     c.drawString(20 * mm, y,
-                 "Halve it by dropping to one lighting condition if time runs short — but "
-                 "keep both exposures.")
+                 "At 30 fps that is about 14,000 frames — thirty times what the stills plan "
+                 "would have produced,")
+    y -= 4.6 * mm
+    c.drawString(20 * mm, y,
+                 "and it contains the blur. Drop to one lighting condition if time runs "
+                 "short, but keep both exposures.")
 
     y -= 12 * mm
     c.setFont(bold, 10)
-    c.drawString(20 * mm, y, "Record with every frame")
+    c.drawString(20 * mm, y, "Record with every sweep")
     y -= 6 * mm
     c.setFont(reg, 8.5)
     for line in [
         "container ID, container diameter (mm), surface (glossy / matte),",
-        f"marker ID, marker size ({size_mm:.0f} mm), distance, angle, lighting, exposure.",
+        f"marker ID, marker size ({size_mm:.0f} mm), lighting, exposure.",
         "",
-        "A frame whose conditions were not written down is not a measurement.",
+        "Distance and angle are recovered from the footage and need not be written down.",
+        "A sweep whose conditions were not written down is not a measurement.",
+        "",
+        "Then: python scripts/marker_video_eval.py <videos> --ref-id 0 --ref-mm 100",
     ]:
         c.drawString(20 * mm, y, line)
         y -= 4.6 * mm
 
 
+def draw_reference(c: canvas.Canvas, marker_id: int, size_mm: float,
+                   reg: str, bold: str) -> None:
+    """The flat marker that lies beside the container and gives camera pose.
+
+    It is large and it is on its own page because it has to stay readable at
+    the angle where the container's marker is already lost. That is the whole
+    point of it: the frames worth measuring are the ones where the small marker
+    fails, and those frames still need an angle.
+    """
+    page_w, page_h = A4
+    px = int(size_mm / 25.4 * PRINT_DPI)
+    side = size_mm * mm
+    x = (page_w - side) / 2
+    y = (page_h - side) / 2 + 15 * mm
+    c.drawImage(marker_image(marker_id, px), x, y, side, side)
+
+    c.setFont(bold, 12)
+    c.drawCentredString(page_w / 2, y - 12 * mm,
+                        f"Reference marker · ID {marker_id} · {size_mm:.0f} mm")
+    c.setFont(reg, 9)
+    for i, line in enumerate([
+        "용기 옆 탁자에 평평하게 놓고, 스윕 내내 화면 안에 들어오게 한다.",
+        "이 마커가 모든 프레임의 카메라 각도를 준다 — 용기 마커가 놓친 프레임까지.",
+        "구겨지거나 휘면 각도가 틀어지므로, 판에 붙이거나 책으로 눌러 둔다.",
+    ]):
+        c.drawCentredString(page_w / 2, y - (20 + 5.5 * i) * mm, line)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--size-mm", type=float, default=20.0)
-    ap.add_argument("--ids", type=int, nargs="+", default=[0, 1, 2, 3, 4, 5, 6, 7])
+    ap.add_argument("--ids", type=int, nargs="+", default=[1, 2, 3, 4, 5, 6, 7, 8],
+                    help="container markers; ID 0 is reserved for the reference")
+    ap.add_argument("--ref-id", type=int, default=0)
+    ap.add_argument("--ref-mm", type=float, default=100.0)
     ap.add_argument("--output", default=str(OUT_PDF))
     args = ap.parse_args()
 
@@ -204,10 +258,13 @@ def main() -> None:
     c = canvas.Canvas(str(out), pagesize=A4)
     draw_markers(c, args.ids, args.size_mm)
     c.showPage()
+    draw_reference(c, args.ref_id, args.ref_mm, reg, bold)
+    c.showPage()
     draw_checklist(c, args.size_mm, reg, bold)
     c.showPage()
     c.save()
-    print(f"-> {out}  ({len(args.ids)} markers at {args.size_mm:.0f} mm, plus the shooting grid)")
+    print(f"-> {out}  ({len(args.ids)} container markers at {args.size_mm:.0f} mm, "
+          f"reference ID {args.ref_id} at {args.ref_mm:.0f} mm, plus the shooting grid)")
 
 
 if __name__ == "__main__":
