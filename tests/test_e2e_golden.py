@@ -1,12 +1,17 @@
 """
-End-to-End Golden Set Test.
+English-pipeline to Korean-reference smoke test.
 
-Uses the parallel EN/KR golden sets (45 sentences each) to test
-the full pipeline: EN text → EN braille → decode → correct → translate → compare with KR gold.
-
-This is the most rigorous test we can run without external data.
+Important:
+- This is not a trustworthy KR braille quality benchmark.
+- It mixes English decode/correction, external translation, and Korean braille
+  encoding, so its KR-side numbers are diagnostics only.
+- Translation failures, including silent source-text fallbacks, are reported as
+  skipped rows instead of being scored as if they were Korean output.
 """
 
+from __future__ import annotations
+
+import argparse
 import csv
 import sys
 import time
@@ -15,134 +20,167 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from pipeline.encoder import encode_text_to_braille
-from pipeline.decoder import braille_to_text
+from eval.similarity import chrf_score, normalized_edit_similarity
 from pipeline.corrector import correct_noisy_text
-from pipeline.translator import translate_text
+from pipeline.decoder import braille_to_text
+from pipeline.encoder import encode_text_to_braille
 from pipeline.ko_braille import encode_korean_braille
-from eval.similarity import normalized_edit_similarity, chrf_score
+from pipeline.translator import translate_text
 
 
 def load_golden(lang: str) -> list[dict]:
     path = PROJECT_ROOT / 'data' / f'golden_braille_roundtrip_{lang}.csv'
     rows = []
     with open(path, encoding='utf-8') as f:
-        for r in csv.DictReader(f):
-            rows.append(r)
+        for row in csv.DictReader(f):
+            rows.append(row)
     return rows
 
 
-def run_e2e_test():
+def run_e2e_test(sleep_seconds: float = 0.3) -> list[dict]:
     en_rows = load_golden('en')
     ko_rows = load_golden('ko')
-
-    assert len(en_rows) == len(ko_rows), "EN/KR golden sets must be same size"
+    assert len(en_rows) == len(ko_rows), 'EN/KR golden sets must be same size'
 
     results = []
-
     for en_row, ko_row in zip(en_rows, ko_rows):
         sid = en_row['id']
-        cat = en_row['category']
+        category = en_row['category']
         en_text = en_row['source_text']
         ko_gold = ko_row['source_text']
 
-        # Stage 1: Encode EN text → braille
         en_braille = encode_text_to_braille(en_text)
-
-        # Stage 2: Decode braille → EN text
         decoded = braille_to_text(en_braille)
-
-        # Stage 3: Correct
         corrected = correct_noisy_text(decoded)
-
-        # Stage 4: Translate EN → KR
-        try:
-            ko_translated = translate_text(corrected)
-            time.sleep(0.3)  # rate limit
-        except Exception as e:
-            print(f"  [{sid}] Translation failed: {e}")
-            ko_translated = corrected
-
-        # Stage 5: Encode KR → braille
-        ko_braille = encode_korean_braille(ko_translated)
-
-        # Also encode gold KR for comparison
-        ko_gold_braille = encode_korean_braille(ko_gold)
-
-        # Metrics
-        # 1. Decode accuracy (EN roundtrip)
         decode_sim = normalized_edit_similarity(en_text, decoded)
 
-        # 2. Translation quality (KR translated vs KR gold)
-        trans_sim = normalized_edit_similarity(ko_gold, ko_translated)
-        trans_chrf = chrf_score(ko_gold, ko_translated)
+        translation_status = 'ok'
+        ko_translated = None
+        try:
+            ko_translated = translate_text(corrected)
+            if sleep_seconds > 0:
+                time.sleep(sleep_seconds)
+        except Exception as exc:
+            translation_status = f'skipped: {exc}'
 
-        # 3. Braille accuracy (KR braille vs gold KR braille)
-        braille_sim = normalized_edit_similarity(ko_gold_braille, ko_braille)
+        if not ko_translated:
+            if translation_status == 'ok':
+                translation_status = 'skipped: empty translation result'
+            ko_translated = None
+        elif ko_translated == corrected:
+            translation_status = 'skipped: translator returned source text'
+            ko_translated = None
+
+        trans_sim = None
+        trans_chrf = None
+        braille_sim = None
+        if ko_translated is not None:
+            ko_braille = encode_korean_braille(ko_translated)
+            ko_gold_braille = encode_korean_braille(ko_gold)
+            trans_sim = normalized_edit_similarity(ko_gold, ko_translated)
+            trans_chrf = chrf_score(ko_gold, ko_translated)
+            braille_sim = normalized_edit_similarity(ko_gold_braille, ko_braille)
+            status = 'OK' if decode_sim >= 0.99 else 'WARN'
+            print(
+                f"  [{status}] {sid} {category:<8} "
+                f"decode={decode_sim:.2f} diag_trans={trans_sim:.2f} diag_braille={braille_sim:.2f}"
+            )
+        else:
+            print(f"  [SKIP] {sid} {category:<8} decode={decode_sim:.2f} {translation_status}")
 
         results.append({
             'id': sid,
-            'category': cat,
-            'en_text': en_text,
-            'ko_gold': ko_gold,
-            'ko_translated': ko_translated,
-            'decode_sim': round(decode_sim, 4),
-            'trans_sim': round(trans_sim, 4),
-            'trans_chrf': round(trans_chrf, 4),
-            'braille_sim': round(braille_sim, 4),
+            'category': category,
+            'translation_status': translation_status,
+            'decode_sim': decode_sim,
+            'trans_sim': trans_sim,
+            'trans_chrf': trans_chrf,
+            'braille_sim': braille_sim,
         })
-
-        status = 'OK' if decode_sim >= 0.99 else 'XX'
-        print(f"  [{status}] {sid} {cat:<8} decode={decode_sim:.2f} trans={trans_sim:.2f} braille={braille_sim:.2f}")
 
     return results
 
 
-def print_summary(results):
+def _format_optional(value: float | None, width: int) -> str:
+    if value is None:
+        return f"{'N/A':>{width}}"
+    return f"{value:>{width}.4f}"
+
+
+def print_summary(results: list[dict], output_path: Path) -> None:
     from collections import defaultdict
 
-    print(f"\n{'='*70}")
-    print(f"  E2E Golden Set Results ({len(results)} sentences)")
-    print(f"{'='*70}")
+    print(f"\n{'=' * 78}")
+    print(f"  EN pipeline -> KO reference smoke results ({len(results)} sentences)")
+    print('  decode_sim is the only direct benchmark metric in this script.')
+    print('  trans_* and braille_sim are diagnostic only.')
+    print(f"{'=' * 78}")
 
-    # Per category
-    by_cat = defaultdict(list)
-    for r in results:
-        by_cat[r['category']].append(r)
+    by_category = defaultdict(list)
+    for row in results:
+        by_category[row['category']].append(row)
 
-    print(f"\n  {'Category':<12} {'N':>4} {'Decode':>8} {'TransSim':>10} {'TransChrF':>10} {'BrailleSim':>11}")
-    print(f"  {'-'*57}")
+    print(f"\n  {'Category':<12} {'N':>4} {'Decode':>8} {'DiagTrans':>10} {'DiagChrF':>10} {'DiagBraille':>12} {'Skipped':>8}")
+    print(f"  {'-' * 74}")
 
-    for cat, rows in sorted(by_cat.items()):
-        n = len(rows)
-        avg_dec = sum(r['decode_sim'] for r in rows) / n
-        avg_trans = sum(r['trans_sim'] for r in rows) / n
-        avg_chrf = sum(r['trans_chrf'] for r in rows) / n
-        avg_brl = sum(r['braille_sim'] for r in rows) / n
-        print(f"  {cat:<12} {n:>4} {avg_dec:>8.4f} {avg_trans:>10.4f} {avg_chrf:>10.4f} {avg_brl:>11.4f}")
+    for category, rows in sorted(by_category.items()):
+        translated = [row for row in rows if row['trans_sim'] is not None]
+        skipped = len(rows) - len(translated)
+        avg_decode = sum(row['decode_sim'] for row in rows) / len(rows)
+        avg_trans = sum(row['trans_sim'] for row in translated) / len(translated) if translated else None
+        avg_chrf = sum(row['trans_chrf'] for row in translated) / len(translated) if translated else None
+        avg_braille = sum(row['braille_sim'] for row in translated) / len(translated) if translated else None
+        print(
+            f"  {category:<12} {len(rows):>4} {avg_decode:>8.4f} "
+            f"{_format_optional(avg_trans, 10)} {_format_optional(avg_chrf, 10)} {_format_optional(avg_braille, 12)} {skipped:>8}"
+        )
 
-    # Overall
-    n = len(results)
-    print(f"  {'-'*57}")
-    print(f"  {'OVERALL':<12} {n:>4} "
-          f"{sum(r['decode_sim'] for r in results)/n:>8.4f} "
-          f"{sum(r['trans_sim'] for r in results)/n:>10.4f} "
-          f"{sum(r['trans_chrf'] for r in results)/n:>10.4f} "
-          f"{sum(r['braille_sim'] for r in results)/n:>11.4f}")
+    translated = [row for row in results if row['trans_sim'] is not None]
+    skipped = len(results) - len(translated)
+    overall_trans = sum(row['trans_sim'] for row in translated) / len(translated) if translated else None
+    overall_chrf = sum(row['trans_chrf'] for row in translated) / len(translated) if translated else None
+    overall_braille = sum(row['braille_sim'] for row in translated) / len(translated) if translated else None
+    print(f"  {'-' * 74}")
+    print(
+        f"  {'OVERALL':<12} {len(results):>4} {sum(row['decode_sim'] for row in results) / len(results):>8.4f} "
+        f"{_format_optional(overall_trans, 10)} {_format_optional(overall_chrf, 10)} {_format_optional(overall_braille, 12)} {skipped:>8}"
+    )
 
-    # Save results CSV
-    out_path = PROJECT_ROOT / 'results' / 'e2e_golden_results.csv'
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(out_path, 'w', encoding='utf-8', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=[
-            'id', 'category', 'decode_sim', 'trans_sim', 'trans_chrf', 'braille_sim'
-        ])
-        w.writeheader()
-        for r in results:
-            w.writerow({k: r[k] for k in w.fieldnames})
-    print(f"\n  Results saved to {out_path}")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open('w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=[
+                'id',
+                'category',
+                'translation_status',
+                'decode_sim',
+                'trans_sim',
+                'trans_chrf',
+                'braille_sim',
+            ],
+        )
+        writer.writeheader()
+        for row in results:
+            out_row = row.copy()
+            for key in ('decode_sim', 'trans_sim', 'trans_chrf', 'braille_sim'):
+                value = out_row[key]
+                out_row[key] = '' if value is None else f"{value:.6f}"
+            writer.writerow(out_row)
+    print(f"\n  Results saved to {output_path}")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description='EN pipeline to KO reference smoke test')
+    parser.add_argument('--sleep-seconds', type=float, default=0.3,
+                        help='Delay after successful translation calls (default: 0.3)')
+    parser.add_argument('--output', default=str(PROJECT_ROOT / 'results' / 'en_pipeline_translation_smoke.csv'),
+                        help='Output CSV path (diagnostic only)')
+    args = parser.parse_args()
+
+    results = run_e2e_test(sleep_seconds=args.sleep_seconds)
+    print_summary(results, Path(args.output))
 
 
 if __name__ == '__main__':
-    results = run_e2e_test()
-    print_summary(results)
+    main()

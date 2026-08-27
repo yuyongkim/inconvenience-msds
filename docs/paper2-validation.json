@@ -2,25 +2,37 @@
  "drug": {
   "domain": "drug",
   "records": 800,
-  "text_chars": 219992,
-  "braille_cells": 364366,
-  "expansion_ratio": 1.656,
-  "mean_text_chars": 275,
-  "roundtrip_exact_pct": 0.7275,
-  "roundtrip_near_pct": 0.7275,
+  "text_chars": 532120,
+  "braille_cells": 874549,
+  "expansion_ratio": 1.644,
+  "mean_text_chars": 665,
+  "roundtrip_exact_pct": 0.44,
+  "roundtrip_near_pct": 0.44,
   "roundtrip_stable_pct": 1.0,
   "rule_violations": {}
  },
  "pesticide": {
   "domain": "pesticide",
   "records": 800,
-  "text_chars": 125189,
-  "braille_cells": 223168,
-  "expansion_ratio": 1.783,
+  "text_chars": 125037,
+  "braille_cells": 223092,
+  "expansion_ratio": 1.784,
   "mean_text_chars": 156,
-  "roundtrip_exact_pct": 0.1125,
-  "roundtrip_near_pct": 0.1125,
+  "roundtrip_exact_pct": 0.095,
+  "roundtrip_near_pct": 0.095,
   "roundtrip_stable_pct": 1.0,
+  "rule_violations": {}
+ },
+ "incident": {
+  "domain": "incident",
+  "records": 800,
+  "text_chars": 407522,
+  "braille_cells": 676126,
+  "expansion_ratio": 1.659,
+  "mean_text_chars": 509,
+  "roundtrip_exact_pct": 0.4363,
+  "roundtrip_near_pct": 0.4363,
+  "roundtrip_stable_pct": 0.9975,
   "rule_violations": {}
  }
 }

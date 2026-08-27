@@ -28,8 +28,8 @@ PENDING = "#C9CDD6"
 
 DOMAINS = [
     ("의약품\nMFDS 허가 + e약은요", "산문 · 환자용 서술", True),
-    ("농약\nPSIS 등록정보", "표 · 작물×병해충", False),
-    ("산업재해\nKOSHA 사례", "서술 · 자유 형식", False),
+    ("농약\n식품안전나라 등록정보", "표 · 작물×병해충", True),
+    ("산업재해\nKOSHA 재해사례", "서술 · 조사자 문장", True),
 ]
 
 fig, ax = plt.subplots(figsize=(PAGE_W, 3.4))
@@ -65,9 +65,6 @@ for i, (name, shape, built) in enumerate(DOMAINS):
     arrow(x + w / 2, 8.0, 7.15)
     box(x, 5.9, w, 1.2, "어댑터", "읽기 순서 결정", face="#F0F2F6", edge=BORDER, tc=INK, fs=7.0)
     arrow(x + w / 2, 5.9, 4.95)
-    if not built:
-        ax.text(x + w / 2, 9.72, "키 신청 대기", ha="center", va="center",
-                fontsize=6.0, color="#B02020", weight=W_BOLD, zorder=5)
 
 # --- the shared floor ----------------------------------------------------
 ax.plot([0.6, 9.4], [5.45, 5.45], linestyle=(0, (3, 3)), linewidth=0.7,

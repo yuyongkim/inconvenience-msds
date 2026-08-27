@@ -483,6 +483,14 @@ def _hangul_tail_count(
         if ch in {_BRAILLE_SPACE, "\n"}:
             # 다음 어절도 한글이면 이어서 센다.
             if seen and seen < 3 and _can_start_hangul(chars, cursor + 1):
+                # strict_end와 raw_ends가 함께 묻는 것은 "이 어절이 깨끗하게
+                # 끝나는가"이다. 빈칸에 닿았다면 그 어절은 이미 깨끗하게 끝났고,
+                # 두 조건은 거기서 충족된 것이다. 그런데도 엄격함을 다음 어절까지
+                # 끌고 가면, 한참 뒤의 여는 괄호나 점형 없는 글자가 앞선 종료표
+                # 읽기를 뒤집는다 — "Bracket에 길이=8m"의 ⠲이 종료표가 아니라
+                # 마침표로 읽히며 뒤의 한글이 로마자가 되던 자리.
+                strict_end = False
+                raw_ends = True
                 cursor += 1
                 continue
             return seen

@@ -57,6 +57,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from eval.rule_checker import check_all_rules  # noqa: E402
 from pipeline.adapters.drug import DrugAdapter  # noqa: E402
+from pipeline.adapters.incident import IncidentAdapter  # noqa: E402
 from pipeline.adapters.pesticide import PesticideAdapter  # noqa: E402
 from pipeline.ko_braille import encode_korean_braille  # noqa: E402
 from pipeline.ko_braille_decoder import decode_korean_braille  # noqa: E402
@@ -64,6 +65,7 @@ from pipeline.ko_braille_decoder import decode_korean_braille  # noqa: E402
 OUT_JSON = PROJECT_ROOT / "docs" / "paper2-validation.json"
 DRUG_CORPUS = PROJECT_ROOT / "data" / "paper2" / "drug_corpus.json"
 PESTICIDE_CORPUS = PROJECT_ROOT / "data" / "paper2" / "pesticide_corpus.json"
+INCIDENT_CORPUS = PROJECT_ROOT / "data" / "paper2" / "incident_corpus.json"
 
 
 def normalise(text: str) -> str:
@@ -77,12 +79,27 @@ def normalise(text: str) -> str:
     return " ".join(text.split())
 
 
+def take(records: list, sample: int | None) -> list:
+    """An even stride through the corpus, not its first N.
+
+    Every corpus here arrives ordered — drugs by item sequence, incidents by
+    board number — and the order correlates with length. Taking the head of the
+    incident board gives records averaging 128 characters against the corpus's
+    514, because the most recent postings are the shortest. That would have put
+    a number in the paper that says more about the sampling than the domain.
+    """
+    if not sample or len(records) <= sample:
+        return records
+    stride = len(records) / sample
+    return [records[int(i * stride)] for i in range(sample)]
+
+
 def validate(records, domain: str, sample: int | None = None) -> dict:
     rows, exact, near, stable = [], 0, 0, 0
     total_text = total_cells = 0
     violations: dict[str, int] = {}
 
-    subset = records[:sample] if sample else records
+    subset = take(records, sample)
     for rec in subset:
         text = rec.text()
         if not text.strip():
@@ -156,6 +173,13 @@ def load_pesticides() -> list:
     return PesticideAdapter().adapt_many(raw.get("records", []))
 
 
+def load_incidents() -> list:
+    if not INCIDENT_CORPUS.exists():
+        return []
+    raw = json.loads(INCIDENT_CORPUS.read_text(encoding="utf-8"))
+    return IncidentAdapter().adapt_many(raw.get("records", []))
+
+
 def main() -> None:
     results = {}
 
@@ -172,6 +196,13 @@ def main() -> None:
         results["pesticide"] = validate(pest, "pesticide", sample=800)
     else:
         print("pesticide: no corpus; run scripts/paper2_fetch_pesticides.py first")
+
+    inc = load_incidents()
+    if inc:
+        print(f"incident: {len(inc):,} adapted records")
+        results["incident"] = validate(inc, "incident", sample=800)
+    else:
+        print("incident: no corpus; run scripts/paper2_fetch_incidents.py first")
 
     print()
     print(f"{'domain':10s} {'records':>8s} {'chars':>10s} {'cells':>11s} "

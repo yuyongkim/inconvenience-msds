@@ -19,10 +19,14 @@ from __future__ import annotations
 import argparse
 import io
 import json
+import sys
 import time
 import urllib.error
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import keys  # noqa: E402
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUT = PROJECT_ROOT / "data" / "paper2" / "pesticide_corpus.json"
@@ -30,20 +34,6 @@ OUT = PROJECT_ROOT / "data" / "paper2" / "pesticide_corpus.json"
 SERVICE = "http://openapi.foodsafetykorea.go.kr/api"
 SERVICE_ID = "I1910"
 PAGE = 1000            # the portal's per-request ceiling
-
-
-def load_key() -> str:
-    """The portal key, read from .env and never printed."""
-    env = {}
-    for line in io.open(PROJECT_ROOT / ".env", encoding="utf-8-sig"):
-        line = line.strip()
-        if line and not line.startswith("#") and "=" in line:
-            k, v = line.split("=", 1)
-            env[k.strip().lower()] = v.strip()
-    key = env.get("food")
-    if not key:
-        raise SystemExit("no `Food` key in .env")
-    return key
 
 
 def fetch(key: str, start: int, end: int, attempts: int = 3) -> tuple[list, int]:
@@ -74,7 +64,7 @@ def main() -> None:
     ap.add_argument("--delay", type=float, default=0.6)
     args = ap.parse_args()
 
-    key = load_key()
+    key = keys.get("food")
     rows: list[dict] = []
     total = 0
     start = 1
@@ -89,6 +79,18 @@ def main() -> None:
             break
         start = end + 1
         time.sleep(args.delay)
+
+    # A short run is for checking the service, not for replacing the corpus.
+    # `--target 20` used to overwrite three thousand collected rows with twenty.
+    if OUT.exists():
+        try:
+            held = json.loads(OUT.read_text(encoding="utf-8")).get("collected", 0)
+        except (json.JSONDecodeError, OSError):
+            held = 0
+        if len(rows) < held:
+            print(f"\nkeeping the {held:,} rows already collected; "
+                  f"this run got {len(rows):,}")
+            return
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({

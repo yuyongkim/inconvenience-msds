@@ -20,7 +20,42 @@ looking for first rather than reproducing the field order of the source system.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
+
+# A comma and the initial ㄹ occupy the same cell (⠐). Print gets away with
+# "현장에서,달비계에" because the eye sees the comma sitting low; braille cannot,
+# and the decoder reads 현장에서달비계에 with a stray ㄹ. The two are genuinely
+# indistinguishable in the cell stream, so the space has to be there before the
+# text is encoded. Written Korean would have used one anyway — the omission is
+# an artefact of typing into a database field, and it shows up in every domain,
+# which is why the fix lives here rather than in one adapter.
+_COMMA_RUN = re.compile(r",(?=\S)")
+
+# Subscript and superscript digits have no cell, and the encoder drops them
+# after emitting the number indicator: "H₂S" comes out as "H S". That is silent
+# loss in the one place these catalogues cannot afford it, since the digit is
+# what distinguishes 황화수소 from 수소. Braille has no raised or lowered
+# position either way, so the digit is written on the line — "H2S" — which is
+# also how a chemist reads the formula aloud.
+_SCRIPT_DIGITS = str.maketrans(
+    "₀₁₂₃₄₅₆₇₈₉⁰¹²³⁴⁵⁶⁷⁸⁹",
+    "01234567890123456789",
+)
+
+
+def normalise_for_braille(value) -> str:
+    """Collapse the whitespace a source system leaves behind, and space commas.
+
+    Braille has no run of blanks to spare: a document is measured in cells and
+    a doubled space costs one. Source text is full of them — pasted line breaks,
+    aligned columns, trailing tabs — and none of it means anything once the text
+    is linear.
+    """
+    if value is None:
+        return ""
+    text = str(value).translate(_SCRIPT_DIGITS)
+    return _COMMA_RUN.sub(", ", re.sub(r"\s+", " ", text).strip())
 
 
 @dataclass
@@ -80,4 +115,4 @@ class Adapter:
         return out
 
 
-__all__ = ["Adapter", "AdaptedRecord", "Section"]
+__all__ = ["Adapter", "AdaptedRecord", "Section", "normalise_for_braille"]

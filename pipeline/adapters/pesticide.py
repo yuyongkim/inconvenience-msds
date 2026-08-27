@@ -30,7 +30,7 @@ from __future__ import annotations
 
 import re
 
-from . import Adapter, AdaptedRecord, Section
+from . import Adapter, AdaptedRecord, Section, normalise_for_braille
 
 # Field, title, and whether an empty value is worth saying aloud.
 USE_FIELDS = [
@@ -51,22 +51,9 @@ TOXICITY_FIELDS = [
 EMPTY = {"", "-", "--", "자료없음", "해당없음", "None", "null"}
 
 
-# A comma and the initial ㄹ are the same cell (⠐). Print gets away with
-# "사과,배" because the eye sees the comma; braille cannot, and the decoder
-# reads 사과롤... — the two are genuinely indistinguishable in the cell stream.
-# The register writes lists without the space, which is fine in a database
-# field and ambiguous the moment it is embossed, so the adapter restores the
-# space that written Korean would have used anyway.
-COMMA_RUN = re.compile(r",(?=\S)")
-
-
 def _clean(value) -> str:
-    if value is None:
-        return ""
-    text = re.sub(r"\s+", " ", str(value)).strip()
-    if text in EMPTY:
-        return ""
-    return COMMA_RUN.sub(", ", text)
+    text = normalise_for_braille(value)
+    return "" if text in EMPTY else text
 
 
 def _dilution(raw: str) -> str:

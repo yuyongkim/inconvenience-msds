@@ -24,58 +24,68 @@ Config JSON format:
     }
 """
 
+from __future__ import annotations
+
 import argparse
 import csv
 import json
+import re
 import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from eval.similarity import normalized_edit_similarity, chrf_score
+from eval.korean_decoder import DECODER_QUALNAME, decode_ko_braille_strict
 from eval.rule_checker import check_all_rules
+from eval.similarity import chrf_score, normalized_edit_similarity
 
 
-# ---------------------------------------------------------------------------
-# Braille decode interface (stub)
-# ---------------------------------------------------------------------------
+def resolve_project_path(path_str: str | None) -> Path | None:
+    """Resolve config paths relative to the project root."""
+    if path_str in (None, ''):
+        return None
+
+    path = Path(path_str)
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+    return path
+
+
+def read_required_text(path_str: str | None, *, label: str, doc_id: str) -> str:
+    path = resolve_project_path(path_str)
+    if path is None:
+        raise FileNotFoundError(f"{doc_id}: missing required path for {label}")
+    if not path.exists():
+        raise FileNotFoundError(f"{doc_id}: missing {label}: {path}")
+    return path.read_text(encoding='utf-8')
+
+
+def read_optional_json(path_str: str | None, *, doc_id: str) -> dict | None:
+    path = resolve_project_path(path_str)
+    if path is None:
+        return None
+    if not path.exists():
+        raise FileNotFoundError(f"{doc_id}: missing gold structure file: {path}")
+    with path.open('r', encoding='utf-8') as f:
+        return json.load(f)
+
 
 def decode_ko_braille(braille_text: str) -> str:
-    """Decode Korean braille to Korean text. Stub – replace with real module."""
-    try:
-        from braille_io import decode_braille
-        return decode_braille(braille_text, lang='ko')
-    except ImportError:
-        return braille_text
+    """Decode Korean braille using the strict evaluation decoder path."""
+    return decode_ko_braille_strict(braille_text)
 
 
-# ---------------------------------------------------------------------------
-# Metric 1: Text Similarity Score
-# ---------------------------------------------------------------------------
+def compute_text_metrics(gold_text: str, decoded_text: str) -> dict[str, float]:
+    """Measure decoded-text quality separately from braille rule compliance."""
+    return {
+        'text_sim_score': chrf_score(gold_text, decoded_text),
+        'decoded_text_edit_similarity': normalized_edit_similarity(gold_text, decoded_text),
+    }
 
-def compute_text_sim_score(gold_text: str, braille_output: str) -> float:
-    """
-    Decode braille output to text, then compare with gold text.
-    Uses chrF as the primary metric.
-    """
-    decoded = decode_ko_braille(braille_output)
-    return chrf_score(gold_text, decoded)
-
-
-# ---------------------------------------------------------------------------
-# Metric 2: Structure F1
-# ---------------------------------------------------------------------------
 
 def extract_structure_vector(text: str) -> dict:
-    """
-    Extract document structure counts from text.
-    Simple heuristic approach:
-      - para_count: number of paragraph breaks (double newlines or distinct blocks)
-      - list_count: lines starting with bullets, numbers, or list markers
-      - table_count: blocks with tab-separated or pipe-separated columns
-      - math_count: lines containing math-like patterns
-    """
+    """Extract simple document structure counts from text."""
     lines = text.strip().split('\n')
     para_count = 0
     list_count = 0
@@ -93,17 +103,14 @@ def extract_structure_vector(text: str) -> dict:
 
         in_paragraph = True
 
-        # List detection
-        if (stripped.startswith(('-', '*', '+')) or
-            (len(stripped) > 2 and stripped[0].isdigit() and stripped[1] in '.)')):
+        if stripped.startswith(('-', '*', '+')) or (
+            len(stripped) > 2 and stripped[0].isdigit() and stripped[1] in '.)'
+        ):
             list_count += 1
 
-        # Table detection (pipes or multiple tabs)
         if '|' in stripped or stripped.count('\t') >= 2:
             table_count += 1
 
-        # Math detection
-        import re
         if re.search(r'[=+\-*/^].*\d|\\frac|\\sum|\\int|x\^|f\(x\)', stripped):
             math_count += 1
 
@@ -119,31 +126,22 @@ def extract_structure_vector(text: str) -> dict:
 
 
 def compute_structure_f1(gold_structure: dict, system_structure: dict) -> float:
-    """
-    Compute structure F1 based on block count vectors.
-
-    For each block type, compute min(gold, sys)/max(gold, sys) as element-wise agreement,
-    then average across all types.
-    """
+    """Compute structure F1 based on block count vectors."""
     keys = ['para_count', 'list_count', 'table_count', 'math_count']
     agreements = []
 
-    for k in keys:
-        g = gold_structure.get(k, 0)
-        s = system_structure.get(k, 0)
-        if g == 0 and s == 0:
-            agreements.append(1.0)  # Both agree on zero
-        elif g == 0 or s == 0:
-            agreements.append(0.0)  # One has blocks, other doesn't
+    for key in keys:
+        gold_value = gold_structure.get(key, 0)
+        system_value = system_structure.get(key, 0)
+        if gold_value == 0 and system_value == 0:
+            agreements.append(1.0)
+        elif gold_value == 0 or system_value == 0:
+            agreements.append(0.0)
         else:
-            agreements.append(min(g, s) / max(g, s))
+            agreements.append(min(gold_value, system_value) / max(gold_value, system_value))
 
     return sum(agreements) / len(agreements) if agreements else 0.0
 
-
-# ---------------------------------------------------------------------------
-# Metric 3: Rule Violation Rate (delegated to rule_checker)
-# ---------------------------------------------------------------------------
 
 def compute_rule_violation_rate(braille_text: str) -> float:
     """Compute rule violations per 1,000 braille cells."""
@@ -151,116 +149,117 @@ def compute_rule_violation_rate(braille_text: str) -> float:
     return report['violation_rate_per_1000']
 
 
-# ---------------------------------------------------------------------------
-# Document evaluation
-# ---------------------------------------------------------------------------
-
 def evaluate_document(doc_config: dict) -> dict:
     """Evaluate a single document across all three metrics."""
     doc_id = doc_config['doc_id']
-
-    # Load gold text
-    gold_text = ''
-    gold_text_path = doc_config.get('gold_ko_text_path')
-    if gold_text_path and Path(gold_text_path).exists():
-        gold_text = Path(gold_text_path).read_text(encoding='utf-8')
-
-    # Load gold structure (or extract from gold text)
-    gold_structure_path = doc_config.get('gold_structure_path')
-    if gold_structure_path and Path(gold_structure_path).exists():
-        with open(gold_structure_path, 'r', encoding='utf-8') as f:
-            gold_structure = json.load(f)
-    else:
+    gold_text = read_required_text(
+        doc_config.get('gold_ko_text_path'),
+        label='gold_ko_text_path',
+        doc_id=doc_id,
+    )
+    gold_structure = read_optional_json(doc_config.get('gold_structure_path'), doc_id=doc_id)
+    if gold_structure is None:
         gold_structure = extract_structure_vector(gold_text)
 
-    # Load system outputs
-    baseline_braille = ''
-    proposed_braille = ''
-    baseline_path = doc_config.get('baseline_ko_braille_path')
-    proposed_path = doc_config.get('proposed_ko_braille_path')
-    if baseline_path and Path(baseline_path).exists():
-        baseline_braille = Path(baseline_path).read_text(encoding='utf-8')
-    if proposed_path and Path(proposed_path).exists():
-        proposed_braille = Path(proposed_path).read_text(encoding='utf-8')
+    baseline_braille = read_required_text(
+        doc_config.get('baseline_ko_braille_path'),
+        label='baseline_ko_braille_path',
+        doc_id=doc_id,
+    )
+    proposed_braille = read_required_text(
+        doc_config.get('proposed_ko_braille_path'),
+        label='proposed_ko_braille_path',
+        doc_id=doc_id,
+    )
 
-    result = {'doc_id': doc_id}
+    baseline_text = decode_ko_braille(baseline_braille)
+    proposed_text = decode_ko_braille(proposed_braille)
 
-    # Metric 1: Text similarity
-    if gold_text:
-        result['text_sim_score_baseline'] = round(
-            compute_text_sim_score(gold_text, baseline_braille), 4) if baseline_braille else 0.0
-        result['text_sim_score_proposed'] = round(
-            compute_text_sim_score(gold_text, proposed_braille), 4) if proposed_braille else 0.0
-    else:
-        result['text_sim_score_baseline'] = None
-        result['text_sim_score_proposed'] = None
+    baseline_metrics = compute_text_metrics(gold_text, baseline_text)
+    proposed_metrics = compute_text_metrics(gold_text, proposed_text)
 
-    # Metric 2: Structure F1
-    baseline_structure = extract_structure_vector(decode_ko_braille(baseline_braille))
-    proposed_structure = extract_structure_vector(decode_ko_braille(proposed_braille))
-    result['structure_f1_baseline'] = round(
-        compute_structure_f1(gold_structure, baseline_structure), 4)
-    result['structure_f1_proposed'] = round(
-        compute_structure_f1(gold_structure, proposed_structure), 4)
-
-    # Metric 3: Rule violation rate
-    result['rule_violation_rate_baseline'] = round(
-        compute_rule_violation_rate(baseline_braille), 2) if baseline_braille else 0.0
-    result['rule_violation_rate_proposed'] = round(
-        compute_rule_violation_rate(proposed_braille), 2) if proposed_braille else 0.0
-
-    return result
+    return {
+        'doc_id': doc_id,
+        'text_sim_score_baseline': round(baseline_metrics['text_sim_score'], 4),
+        'text_sim_score_proposed': round(proposed_metrics['text_sim_score'], 4),
+        'decoded_text_edit_similarity_baseline': round(
+            baseline_metrics['decoded_text_edit_similarity'], 4
+        ),
+        'decoded_text_edit_similarity_proposed': round(
+            proposed_metrics['decoded_text_edit_similarity'], 4
+        ),
+        'structure_f1_baseline': round(
+            compute_structure_f1(gold_structure, extract_structure_vector(baseline_text)), 4
+        ),
+        'structure_f1_proposed': round(
+            compute_structure_f1(gold_structure, extract_structure_vector(proposed_text)), 4
+        ),
+        'rule_violation_rate_baseline': round(compute_rule_violation_rate(baseline_braille), 2),
+        'rule_violation_rate_proposed': round(compute_rule_violation_rate(proposed_braille), 2),
+    }
 
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
-
-def print_results(results: list[dict]):
+def print_results(results: list[dict]) -> None:
     """Print evaluation results to console."""
-    print(f"\n{'='*90}")
-    print("  End-to-End Evaluation Results (Baseline vs Proposed)")
-    print(f"{'='*90}")
+    print(f"\n{'=' * 122}")
+    print('  End-to-End Evaluation Results (Baseline vs Proposed)')
+    print(f'  Decoder: {DECODER_QUALNAME}')
+    print(f"{'=' * 122}")
 
-    header = (f"  {'DocID':<8} {'TextSim BL':>12} {'TextSim PR':>12} "
-              f"{'StructF1 BL':>12} {'StructF1 PR':>12} "
-              f"{'RuleViol BL':>12} {'RuleViol PR':>12}")
+    header = (
+        f"  {'DocID':<8} {'TextSim BL':>12} {'TextSim PR':>12} "
+        f"{'EditSim BL':>12} {'EditSim PR':>12} "
+        f"{'StructF1 BL':>12} {'StructF1 PR':>12} "
+        f"{'RuleViol BL':>12} {'RuleViol PR':>12}"
+    )
     print(header)
-    print('  ' + '-' * 86)
+    print('  ' + '-' * 118)
 
-    for r in results:
-        ts_bl = f"{r['text_sim_score_baseline']:.4f}" if r['text_sim_score_baseline'] is not None else 'N/A'
-        ts_pr = f"{r['text_sim_score_proposed']:.4f}" if r['text_sim_score_proposed'] is not None else 'N/A'
-        print(f"  {r['doc_id']:<8} {ts_bl:>12} {ts_pr:>12} "
-              f"{r['structure_f1_baseline']:>12.4f} {r['structure_f1_proposed']:>12.4f} "
-              f"{r['rule_violation_rate_baseline']:>12.2f} {r['rule_violation_rate_proposed']:>12.2f}")
+    for row in results:
+        print(
+            f"  {row['doc_id']:<8} {row['text_sim_score_baseline']:>12.4f} {row['text_sim_score_proposed']:>12.4f} "
+            f"{row['decoded_text_edit_similarity_baseline']:>12.4f} {row['decoded_text_edit_similarity_proposed']:>12.4f} "
+            f"{row['structure_f1_baseline']:>12.4f} {row['structure_f1_proposed']:>12.4f} "
+            f"{row['rule_violation_rate_baseline']:>12.2f} {row['rule_violation_rate_proposed']:>12.2f}"
+        )
 
-    # Averages
-    n = len(results)
-    if n > 0:
-        fields = ['text_sim_score_baseline', 'text_sim_score_proposed',
-                   'structure_f1_baseline', 'structure_f1_proposed',
-                   'rule_violation_rate_baseline', 'rule_violation_rate_proposed']
-        avgs = {}
-        for f_name in fields:
-            vals = [r[f_name] for r in results if r[f_name] is not None]
-            avgs[f_name] = sum(vals) / len(vals) if vals else 0
-        print('  ' + '-' * 86)
-        ts_bl = f"{avgs['text_sim_score_baseline']:.4f}"
-        ts_pr = f"{avgs['text_sim_score_proposed']:.4f}"
-        print(f"  {'AVG':<8} {ts_bl:>12} {ts_pr:>12} "
-              f"{avgs['structure_f1_baseline']:>12.4f} {avgs['structure_f1_proposed']:>12.4f} "
-              f"{avgs['rule_violation_rate_baseline']:>12.2f} {avgs['rule_violation_rate_proposed']:>12.2f}")
+    if results:
+        fields = [
+            'text_sim_score_baseline',
+            'text_sim_score_proposed',
+            'decoded_text_edit_similarity_baseline',
+            'decoded_text_edit_similarity_proposed',
+            'structure_f1_baseline',
+            'structure_f1_proposed',
+            'rule_violation_rate_baseline',
+            'rule_violation_rate_proposed',
+        ]
+        averages = {
+            field: sum(row[field] for row in results) / len(results)
+            for field in fields
+        }
+        print('  ' + '-' * 118)
+        print(
+            f"  {'AVG':<8} {averages['text_sim_score_baseline']:>12.4f} {averages['text_sim_score_proposed']:>12.4f} "
+            f"{averages['decoded_text_edit_similarity_baseline']:>12.4f} {averages['decoded_text_edit_similarity_proposed']:>12.4f} "
+            f"{averages['structure_f1_baseline']:>12.4f} {averages['structure_f1_proposed']:>12.4f} "
+            f"{averages['rule_violation_rate_baseline']:>12.2f} {averages['rule_violation_rate_proposed']:>12.2f}"
+        )
 
 
-def save_results_csv(results: list[dict], output_path: str):
+def save_results_csv(results: list[dict], output_path: str) -> None:
     """Save results to CSV."""
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     fieldnames = [
         'doc_id',
-        'text_sim_score_baseline', 'text_sim_score_proposed',
-        'structure_f1_baseline', 'structure_f1_proposed',
-        'rule_violation_rate_baseline', 'rule_violation_rate_proposed',
+        'text_sim_score_baseline',
+        'text_sim_score_proposed',
+        'decoded_text_edit_similarity_baseline',
+        'decoded_text_edit_similarity_proposed',
+        'structure_f1_baseline',
+        'structure_f1_proposed',
+        'rule_violation_rate_baseline',
+        'rule_violation_rate_proposed',
     ]
     with open(output_path, 'w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -269,12 +268,10 @@ def save_results_csv(results: list[dict], output_path: str):
     print(f"\nResults saved to {output_path}")
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description='End-to-End Braille Evaluation')
-    parser.add_argument('--config', required=True,
-                        help='JSON config file listing documents to evaluate')
-    parser.add_argument('--output', default='results/e2e_eval_results.csv',
-                        help='Output CSV path')
+    parser.add_argument('--config', required=True, help='JSON config file listing documents to evaluate')
+    parser.add_argument('--output', default='results/e2e_eval_results.csv', help='Output CSV path')
     args = parser.parse_args()
 
     with open(args.config, 'r', encoding='utf-8') as f:
@@ -283,8 +280,7 @@ def main():
     results = []
     for doc_cfg in config['documents']:
         print(f"Evaluating {doc_cfg['doc_id']}...")
-        result = evaluate_document(doc_cfg)
-        results.append(result)
+        results.append(evaluate_document(doc_cfg))
 
     print_results(results)
     save_results_csv(results, args.output)

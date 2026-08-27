@@ -1,71 +1,86 @@
-"""Build the paper 2 drug corpus, without knocking over the service it reads.
+"""Build the paper 2 drug corpus from the two MFDS services.
 
-The two MFDS services describe the same product from different angles, so this
-pairs them on the item sequence number: the approval register supplies the
-ingredient and classification, e약은요 supplies the prose worth reading aloud.
+The services describe the same product from different angles, so this pairs them
+on the item sequence number: the approval register supplies the ingredient and
+classification, e약은요 supplies the prose worth reading aloud.
 
-Politeness is the design constraint, not an afterthought. These calls go through
-the chemical information service that serves chemip.yule.pics, and an earlier
-sweep at a third of a second between requests pushed it into 429s and slowed the
-live site. So this waits longer between calls, backs off when it is told to,
-and stops entirely rather than hammering through a sustained rate limit.
+An earlier version of this script went through the chemical information service
+that serves chemip.yule.pics, on the theory that direct calls to data.go.kr were
+being refused. They were not. The key in .env is stored quoted and split across
+two lines, and a line-at-a-time parser handed the portal `"KEY` — which it
+answers with SERVICE_KEY_IS_NOT_REGISTERED_ERROR, an error that names the key
+and so reads as an authorisation problem. `scripts/keys.py` parses the file
+properly and the portal answers normally. Nothing was ever wrong with the key,
+and the detour also put load on a live service for no reason.
 
 The register has no listing call, only substring search on the product name, so
 the sweep walks dosage-form words that nearly every Korean product name carries.
 
 Usage:
-    python scripts/paper2_fetch_drugs.py [--target 1500] [--delay 1.5]
+    python scripts/paper2_fetch_drugs.py [--target 1500] [--delay 0.4]
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import sys
 import time
-import urllib.error
-import urllib.parse
-import urllib.request
 from pathlib import Path
+
+import requests
+import urllib3
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import keys  # noqa: E402
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUT = PROJECT_ROOT / "data" / "paper2" / "drug_corpus.json"
 
-SERVICE = "http://127.0.0.1:7011/api/drugs"
-PAGE = 50
+APPROVAL_URL = ("https://apis.data.go.kr/1471000/DrugPrdtPrmsnInfoService07/"
+                "getDrugPrdtPrmsnInq07")
+EASY_URL = ("https://apis.data.go.kr/1471000/DrbEasyDrugInfoService/"
+            "getDrbEasyDrugList")
+
+PAGE = 100      # the portal's per-request ceiling
 
 TERMS = ["정", "캡슐", "시럽", "주", "액", "산", "과립", "크림", "연고", "점안"]
 
-# Seconds to wait after a 429 before trying again, then again, then give up.
-BACKOFF = (20, 60, 120)
 
-
-def get(path: str, delay: float) -> dict | None:
-    """One request, with the rate limit treated as an instruction rather than an error."""
-    url = f"{SERVICE}{path}"
-    req = urllib.request.Request(url, headers={"User-Agent": "kosha-braille/paper2"})
-    for wait in BACKOFF + (None,):
+def call(url: str, key: str, params: dict, attempts: int = 3) -> list[dict]:
+    """One search, returning items. A portal-level refusal stops the run."""
+    query = {"serviceKey": key, "type": "json", **params}
+    for attempt in range(attempts):
         try:
-            with urllib.request.urlopen(req, timeout=180) as r:
-                return json.loads(r.read().decode("utf-8", "replace"))
-        except urllib.error.HTTPError as e:
-            if e.code == 429 and wait is not None:
-                print(f"    rate limited; waiting {wait}s", flush=True)
-                time.sleep(wait)
-                continue
-            return None
-        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError):
-            time.sleep(delay * 2)
-            continue
-    return None
+            d = requests.get(url, params=query, timeout=120, verify=False).json()
+            header = d.get("header") or d.get("body", {}).get("header") or {}
+            code = header.get("resultCode")
+            if code not in (None, "00"):
+                raise SystemExit(f"{code}: {header.get('resultMsg')}")
+            items = (d.get("body") or {}).get("items", [])
+            if isinstance(items, dict):
+                items = items.get("item", [])
+            if isinstance(items, dict):
+                items = [items]
+            return [i for i in items if isinstance(i, dict)]
+        except SystemExit:
+            raise
+        except Exception:
+            if attempt < attempts - 1:
+                time.sleep(2 ** attempt)
+    return []
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--target", type=int, default=1500,
-                    help="stop once this many paired records are held")
-    ap.add_argument("--delay", type=float, default=1.5,
-                    help="seconds between requests; this shares a live service")
+                    help="stop once this many records are held")
+    ap.add_argument("--delay", type=float, default=0.4)
     args = ap.parse_args()
+
+    key = keys.service_key()
 
     paired: dict[str, dict] = {}
     if OUT.exists():
@@ -82,13 +97,11 @@ def main() -> None:
             break
         page = 1
         while len(paired) < args.target:
-            d = get(f"/search?q={urllib.parse.quote(term)}&page={page}&limit={PAGE}",
-                    args.delay)
-            calls += 1
-            if not d:
-                break
-            appr = {i.get("ITEM_SEQ"): i for i in d.get("approval", {}).get("items", [])}
-            easy = {i.get("itemSeq"): i for i in d.get("easyInfo", {}).get("items", [])}
+            appr = {i.get("ITEM_SEQ"): i for i in call(
+                APPROVAL_URL, key, {"item_name": term, "pageNo": page, "numOfRows": PAGE})}
+            easy = {i.get("itemSeq"): i for i in call(
+                EASY_URL, key, {"itemName": term, "pageNo": page, "numOfRows": PAGE})}
+            calls += 2
             if not appr and not easy:
                 break
             for seq in set(appr) | set(easy):
@@ -116,14 +129,12 @@ def main() -> None:
         name = (rec["easy"].get("itemName") or "").strip()
         if not name:
             continue
-        d = get(f"/approval?q={urllib.parse.quote(name)}&limit=5", args.delay)
         calls += 1
-        if d:
-            for item in d.get("items", []):
-                if item.get("ITEM_SEQ") == rec["item_seq"]:
-                    rec["approval"] = item
-                    filled += 1
-                    break
+        for item in call(APPROVAL_URL, key, {"item_name": name, "numOfRows": 5}):
+            if item.get("ITEM_SEQ") == rec["item_seq"]:
+                rec["approval"] = item
+                filled += 1
+                break
         if i % 100 == 0:
             print(f"    {i}/{len(unpaired)} looked up, {filled} paired", flush=True)
         time.sleep(args.delay)
@@ -132,8 +143,8 @@ def main() -> None:
     both = sum(1 for r in paired.values() if r["approval"] and r["easy"])
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({
-        "source": "MFDS DrugPrdtPrmsnInfoService07 + DrbEasyDrugInfoService, "
-                  "paired on ITEM_SEQ, read through the chemip drug service",
+        "source": "MFDS DrugPrdtPrmsnInfoService07 + DrbEasyDrugInfoService "
+                  "(data.go.kr), paired on ITEM_SEQ",
         "search_terms": TERMS,
         "api_calls": calls,
         "records": sorted(paired.values(), key=lambda r: r["item_seq"]),

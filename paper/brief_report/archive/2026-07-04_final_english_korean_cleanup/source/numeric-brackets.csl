@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" default-locale="en-US">
+  <info>
+    <title>Numeric Brackets</title>
+    <id>https://example.invalid/numeric-brackets</id>
+    <link href="https://example.invalid/numeric-brackets" rel="self"/>
+    <author>
+      <name>KOSHA-Braille brief-report package</name>
+    </author>
+    <category citation-format="numeric"/>
+    <updated>2026-07-03T00:00:00+09:00</updated>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name and="text" initialize-with=". " delimiter=", "/>
+      <label form="short" prefix=", "/>
+      <substitute>
+        <text variable="title"/>
+      </substitute>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <choose>
+      <if type="book report thesis" match="any">
+        <text variable="title" font-style="italic"/>
+      </if>
+      <else>
+        <text variable="title" quotes="true"/>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="container">
+    <choose>
+      <if variable="container-title">
+        <text variable="container-title" font-style="italic"/>
+      </if>
+      <else-if variable="publisher">
+        <text variable="publisher"/>
+      </else-if>
+      <else-if variable="genre">
+        <text variable="genre"/>
+      </else-if>
+    </choose>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <bibliography second-field-align="flush" entry-spacing="0">
+    <layout>
+      <text variable="citation-number" prefix="[" suffix="]"/>
+      <group delimiter=", " suffix=".">
+        <text macro="author"/>
+        <text macro="title"/>
+        <text macro="container"/>
+        <text variable="volume" prefix="vol. "/>
+        <text variable="issue" prefix="no. "/>
+        <text variable="page" prefix="pp. "/>
+        <text macro="issued"/>
+        <text variable="DOI" prefix="doi: "/>
+        <text variable="URL"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>

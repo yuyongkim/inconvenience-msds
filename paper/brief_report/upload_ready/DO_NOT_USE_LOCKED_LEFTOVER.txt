@@ -1,0 +1,5 @@
+﻿DO NOT USE THIS FOLDER.
+
+Use ../english/ and ../korean/ for final files.
+This folder remains only because one or more Word files are locked by another process and cannot be moved until closed.
+A copy of remaining locked files has been placed in archive/2026-07-04_final_english_korean_cleanup/upload_ready/ when readable.

@@ -1,0 +1,46 @@
+lang,suite,decoder,id,category,source_text,roundtrip_text,sim_edit,sim_chrf
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_001,basic,이것은 간단한 문장입니다.,이것은 간단한 문장입니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_002,basic,오늘 날씨가 참 좋습니다.,오늘 날씨가 참 좋습니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_003,basic,그녀는 점심 후에 공원으로 걸어갔다.,그녀는 점심 후에 공원으로 걸어갔다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_004,basic,도서관이 어디에 있는지 아시나요?,도서관이 어디에 있는지 아시나요?,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_005,basic,나가기 전에 불을 꺼 주세요.,나가기 전에 불을 꺼 주세요.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_006,basic,그는 정오까지 도착하겠다고 말했다.,그는 정오까지 도착하겠다고 말했다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_007,number,회의는 2026년 4월 6일 오후 3시 45분에 시작합니다.,회의는 2026년 4월 6일 오후 3시 45분에 시작합니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_008,number,이번 학기에 등록한 학생 수는 1234명입니다.,이번 학기에 등록한 학생 수는 1234명입니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_009,number,물과 시멘트의 비율은 0.45 대 1입니다.,물과 시멘트의 비율은 0.45 대 1입니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_010,number,자세한 내용은 02-555-1234로 전화해 주세요.,자세한 내용은 02-555-1234로 전화해 주세요.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_011,number,이 소포의 무게는 12.5킬로그램이고 가격은 39000원입니다.,이 소포의 무게는 12.5킬로그램이고 가격은 39000원입니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_012,number,제7장 3.2절은 유체역학을 다룹니다.,제7장 3.2절은 유체역학을 다룹니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_013,number,401B호는 4층에 있습니다.,401B호는 4층에 있습니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_014,list,"다음 물품이 필요합니다: 연필, 지우개, 자, 컴퍼스.","다음 물품이 필요합니다: 연필, 지우개, 자, 컴퍼스.",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_015,list,1단계: 밸브를 연다. 2단계: 압력을 확인한다. 3단계: 수치를 기록한다.,1단계: 밸브를 연다. 2단계: 압력을 확인한다. 3단계: 수치를 기록한다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_016,list,"선택지는 다음과 같다: (가) 빨강, (나) 파랑, (다) 초록, (라) 노랑.","선택지는 다음과 같다: (가) 빨강, (나) 파랑, (다) 초록, (라) 노랑.",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_017,list,"첫째 재료를 모으고, 둘째 용액을 준비하고, 셋째 실험을 실시한다.","첫째 재료를 모으고, 둘째 용액을 준비하고, 셋째 실험을 실시한다.",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_018,list,"재료: 밀가루 200그램, 우유 100밀리리터, 달걀 2개, 소금 약간.","재료: 밀가루 200그램, 우유 100밀리리터, 달걀 2개, 소금 약간.",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_019,quote,"그는 속삭였다. ""정말 확실해?""","그는 속삭였다. ""정말 확실해?""",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_020,quote,"""기계 학습""이라는 용어는 1959년 아서 새뮤얼이 만들었다.","""기계 학습""이라는 용어는 1959년 아서 새뮤얼이 만들었다.",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_021,quote,"그녀는 살짝 미소를 지으며 대답했다. ""물론이지.""","그녀는 살짝 미소를 지으며 대답했다. ""물론이지.""",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_022,quote,"소위 ""모범 사례""가 항상 최선은 아니다.","소위 ""모범 사례""가 항상 최선은 아니다.",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_023,quote,매뉴얼에 따르면 -- 42쪽 -- 한도는 500개입니다.,매뉴얼에 따르면 -- 42쪽 -- 한도는 500개입니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_024,math,"x 제곱이 4라면, x는 2 또는 마이너스 2입니다.","x 제곱이 4라면, x는 2 또는 마이너스 2입니다.",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_025,math,원의 넓이는 파이 곱하기 반지름의 제곱입니다.,원의 넓이는 파이 곱하기 반지름의 제곱입니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_026,math,y에 대해 풀어라: 3y 더하기 7은 22이다.,y에 대해 풀어라: 3y 더하기 7은 22이다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_027,math,삼각형의 내각의 합은 180도입니다.,삼각형의 내각의 합은 180도입니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_028,math,"f(x) = 2x + 1일 때, f(3)을 구하시오.","f(x) = 2x + 1일 때, f(3)을 구하시오.",1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_029,math,x 제곱을 0에서 1까지 적분하면 3분의 1이다.,x 제곱을 0에서 1까지 적분하면 3분의 1이다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_030,domain,반응기 온도는 섭씨 20도에서 25도 사이를 유지해야 합니다.,반응기 온도는 섭씨 20도에서 25도 사이를 유지해야 합니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_031,domain,염화나트륨(NaCl)은 물에 잘 녹는다.,염화나트륨(NaCl)은 물에 잘 녹는다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_032,domain,이 CPU는 64비트 명령어 집합 아키텍처를 사용합니다.,이 CPU는 64비트 명령어 집합 아키텍처를 사용합니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_033,domain,환자에게 아목시실린 500밀리그램을 하루 두 번 투여하였다.,환자에게 아목시실린 500밀리그램을 하루 두 번 투여하였다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_034,domain,A36 강재의 항복 강도는 약 250메가파스칼입니다.,A36 강재의 항복 강도는 약 250메가파스칼입니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_035,domain,중합효소 연쇄 반응(PCR)은 DNA 조각을 증폭합니다.,중합효소 연쇄 반응(PCR)은 DNA 조각을 증폭합니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_036,domain,레이놀즈 수는 흐름이 층류인지 난류인지를 결정합니다.,레이놀즈 수는 흐름이 층류인지 난류인지를 결정합니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_037,domain,HTTP 상태 코드 404는 리소스를 찾을 수 없음을 의미합니다.,HTTP 상태 코드 404는 리소스를 찾을 수 없음을 의미합니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_038,domain,벤젠(C6H6)은 방향족 탄화수소입니다.,벤젠(C6H6)은 방향족 탄화수소입니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_039,domain,컴파일러는 구문 분석 과정에서 추상 구문 트리(AST)를 생성합니다.,컴파일러는 구문 분석 과정에서 추상 구문 트리(AST)를 생성합니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_040,basic,다음 기차는 몇 시에 출발합니까?,다음 기차는 몇 시에 출발합니까?,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_041,basic,나는 그런 것을 전에 한 번도 본 적이 없다.,나는 그런 것을 전에 한 번도 본 적이 없다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_042,basic,그들은 추후 공지가 있을 때까지 행사를 연기하기로 했다.,그들은 추후 공지가 있을 때까지 행사를 연기하기로 했다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_043,number,2019년부터 2023년까지 매출은 47.3퍼센트 증가했다.,2019년부터 2023년까지 매출은 47.3퍼센트 증가했다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_044,number,서버 응답 시간은 평균 12.8밀리초였습니다.,서버 응답 시간은 평균 12.8밀리초였습니다.,1.000000,1.000000
+ko,korean_roundtrip,pipeline.ko_braille_decoder.decode_korean_braille,ko_045,list,다음 예외 사항에 유의하시오: 별표(*)가 표시된 항목은 선택 사항입니다.,다음 예외 사항에 유의하시오: 별표(*)가 표시된 항목은 선택 사항입니다.,1.000000,1.000000

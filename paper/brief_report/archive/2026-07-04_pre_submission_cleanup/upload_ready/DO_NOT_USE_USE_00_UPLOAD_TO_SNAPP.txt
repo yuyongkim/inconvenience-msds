@@ -1,0 +1,5 @@
+Do not use this folder for submission.
+
+This is the previous upload folder and it is being kept only because a Word process currently has the old manuscript file open.
+
+Use ../00_UPLOAD_TO_SNAPP/ for SNAPP upload.
