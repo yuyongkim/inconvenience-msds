@@ -72,6 +72,22 @@ def main() -> None:
                     private=args.private, exist_ok=True)
     print(f"\nrepo ready ({'private' if args.private else 'public'})")
 
+    # upload_folder adds and replaces; it does not delete. A config that has
+    # been split or renamed therefore stays on the Hub, and the dataset ships a
+    # file its own card does not name. Splitting the drug register left the
+    # merged drug.jsonl there through one release.
+    keep = {f"{k}.jsonl" for k in domains} | {"README.md", "manifest.json",
+                                              ".gitattributes"}
+    try:
+        remote = {s.rfilename for s in api.dataset_info(args.repo_id).siblings or []}
+    except Exception:
+        remote = set()
+    for name in sorted(remote - keep):
+        api.delete_file(path_in_repo=name, repo_id=args.repo_id,
+                        repo_type="dataset",
+                        commit_message=f"remove stale config {name}")
+        print(f"removed stale remote file: {name}")
+
     api.upload_folder(
         folder_path=str(DATASET_DIR),
         repo_id=args.repo_id,
