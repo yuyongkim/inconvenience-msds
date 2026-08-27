@@ -1,0 +1,509 @@
+{
+ "catalogue": {
+  "source": "KOSHA chemical_terms (paper 1)",
+  "korean_names": 9280,
+  "min_name_length": 3
+ },
+ "method": "verbatim occurrence of a catalogue name, bounded so a name inside a longer Korean compound does not count; longest match wins; no fuzzy matching. `identified` counts links found in a section that says what the record is; `linked` also counts mentions elsewhere in the record.",
+ "identity_sections": [
+  "성분",
+  "주성분",
+  "품목명"
+ ],
+ "excluded_sections": [
+  "병해충 또는 잡초",
+  "작물"
+ ],
+ "domains": {
+  "incident": {
+   "records": 6362,
+   "linked": 84,
+   "linked_pct": 0.0132,
+   "identified": 0,
+   "identified_pct": 0.0,
+   "identified_en": 0,
+   "identified_en_pct": 0.0,
+   "distinct_chemicals": 17,
+   "top": [
+    [
+     "아스팔트",
+     33
+    ],
+    [
+     "톨루엔",
+     15
+    ],
+    [
+     "아르곤",
+     11
+    ],
+    [
+     "나일론",
+     6
+    ],
+    [
+     "암모니아",
+     4
+    ],
+    [
+     "가솔린",
+     4
+    ],
+    [
+     "크실렌",
+     4
+    ],
+    [
+     "아세톤",
+     3
+    ],
+    [
+     "활성탄",
+     2
+    ],
+    [
+     "그리스",
+     1
+    ],
+    [
+     "파라핀",
+     1
+    ],
+    [
+     "프로필",
+     1
+    ],
+    [
+     "에틸렌",
+     1
+    ],
+    [
+     "다이아몬드",
+     1
+    ],
+    [
+     "아카시아",
+     1
+    ]
+   ],
+   "examples": [
+    {
+     "record_id": "202604281549295LDUY4",
+     "name": "배관 내부에서 작업 중 질식",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "아르곤",
+       "cas": "7440-37-1",
+       "en": "Argon"
+      }
+     ]
+    },
+    {
+     "record_id": "202604281548433YC4XY",
+     "name": "톨루엔 취급 중 화재발생",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20260413153409B1XHN8",
+     "name": "공드럼통 용단작업 중 폭발",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20251120132321JBMISZ",
+     "name": "탱크 컨테이너 세척 작업 중 중독",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20230103103145N9C7ZT",
+     "name": "톨루엔 이송 중 화재, 폭발",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "202211041019532J5WC3",
+     "name": "운전 중 톨루엔 누출로 화재",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20210531150243JFUNA1",
+     "name": "톨루엔 주입작업 중 화재",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20210513081005RV54OV",
+     "name": "공드럼 용단작업 중 폭발",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    }
+   ]
+  },
+  "drug": {
+   "records": 3052,
+   "linked": 1643,
+   "linked_pct": 0.5383,
+   "identified": 0,
+   "identified_pct": 0.0,
+   "identified_en": 1412,
+   "identified_en_pct": 0.4626,
+   "distinct_chemicals": 42,
+   "top": [
+    [
+     "메토트렉세이트",
+     144
+    ],
+    [
+     "와파린",
+     132
+    ],
+    [
+     "테오필린",
+     93
+    ],
+    [
+     "나프록센",
+     79
+    ],
+    [
+     "나트륨",
+     78
+    ],
+    [
+     "푸로세미드",
+     68
+    ],
+    [
+     "이부프로펜",
+     68
+    ],
+    [
+     "시메티딘",
+     53
+    ],
+    [
+     "살리실산",
+     51
+    ],
+    [
+     "에리트로마이신",
+     44
+    ],
+    [
+     "페노바르비탈",
+     42
+    ],
+    [
+     "바클로펜",
+     33
+    ],
+    [
+     "덱사메타손",
+     31
+    ],
+    [
+     "케토코나졸",
+     24
+    ],
+    [
+     "아목시실린",
+     23
+    ]
+   ],
+   "examples": [
+    {
+     "record_id": "195900043",
+     "name": "아네모정",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "나트륨",
+       "cas": "29329-71-3",
+       "en": "Monosodium etidronate"
+      }
+     ]
+    },
+    {
+     "record_id": "196000008",
+     "name": "다이크로짇정(히드로클로로티아지드)",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "196000011",
+     "name": "페니라민정(클로르페니라민말레산염)",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "196200032",
+     "name": "유한짓정100mg(이소니아지드)(군납명:이소니아지드정케이.피100밀리그람)",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "196200034",
+     "name": "삐콤정",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "196300064",
+     "name": "부광덱사메타손정",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "196400037",
+     "name": "라식스정(푸로세미드)",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "196400046",
+     "name": "게루삼정",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "나트륨",
+       "cas": "29329-71-3",
+       "en": "Monosodium etidronate"
+      }
+     ]
+    }
+   ]
+  },
+  "pesticide": {
+   "records": 3000,
+   "linked": 468,
+   "linked_pct": 0.156,
+   "identified": 468,
+   "identified_pct": 0.156,
+   "identified_en": 0,
+   "identified_en_pct": 0.0,
+   "distinct_chemicals": 27,
+   "top": [
+    [
+     "이미다클로프리드",
+     79
+    ],
+    [
+     "스트렙토마이신",
+     43
+    ],
+    [
+     "아세페이트",
+     38
+    ],
+    [
+     "만코제브",
+     37
+    ],
+    [
+     "디티아논",
+     35
+    ],
+    [
+     "카벤다짐",
+     33
+    ],
+    [
+     "펜프로파트린",
+     29
+    ],
+    [
+     "플루아지남",
+     27
+    ],
+    [
+     "알라클로르",
+     23
+    ],
+    [
+     "세톡시딤",
+     21
+    ],
+    [
+     "지베렐린산",
+     20
+    ],
+    [
+     "티오벤카브",
+     18
+    ],
+    [
+     "이미벤코나졸",
+     17
+    ],
+    [
+     "메톡시페노자이드",
+     15
+    ],
+    [
+     "비페나제이트",
+     6
+    ]
+   ],
+   "examples": [
+    {
+     "record_id": "1-살균-84",
+     "name": "클로로탈로닐.만코제브 수화제",
+     "identified": [
+      "만코제브"
+     ],
+     "chemicals": [
+      {
+       "ko": "만코제브",
+       "cas": "8018-01-7",
+       "en": "Mancozeb"
+      }
+     ]
+    },
+    {
+     "record_id": "1-살균-84",
+     "name": "클로로탈로닐.만코제브 수화제",
+     "identified": [
+      "만코제브"
+     ],
+     "chemicals": [
+      {
+       "ko": "만코제브",
+       "cas": "8018-01-7",
+       "en": "Mancozeb"
+      }
+     ]
+    },
+    {
+     "record_id": "1-살균-84",
+     "name": "클로로탈로닐.만코제브 수화제",
+     "identified": [
+      "만코제브"
+     ],
+     "chemicals": [
+      {
+       "ko": "만코제브",
+       "cas": "8018-01-7",
+       "en": "Mancozeb"
+      }
+     ]
+    },
+    {
+     "record_id": "1-살균-84",
+     "name": "클로로탈로닐.만코제브 수화제",
+     "identified": [
+      "만코제브"
+     ],
+     "chemicals": [
+      {
+       "ko": "만코제브",
+       "cas": "8018-01-7",
+       "en": "Mancozeb"
+      }
+     ]
+    },
+    {
+     "record_id": "46-제초-337",
+     "name": "아짐설퓨론.벤조비사이클론.펜트라자마이드 입제",
+     "identified": [
+      "펜트라자마이드"
+     ],
+     "chemicals": [
+      {
+       "ko": "펜트라자마이드",
+       "cas": "158237-07-1",
+       "en": "Fentrazamide"
+      }
+     ]
+    },
+    {
+     "record_id": "46-제초-337",
+     "name": "아짐설퓨론.벤조비사이클론.펜트라자마이드 입제",
+     "identified": [
+      "펜트라자마이드"
+     ],
+     "chemicals": [
+      {
+       "ko": "펜트라자마이드",
+       "cas": "158237-07-1",
+       "en": "Fentrazamide"
+      }
+     ]
+    },
+    {
+     "record_id": "46-제초-520",
+     "name": "벤퓨러세이트.펜트라자마이드.피라조설퓨론에틸 입제",
+     "identified": [
+      "펜트라자마이드"
+     ],
+     "chemicals": [
+      {
+       "ko": "펜트라자마이드",
+       "cas": "158237-07-1",
+       "en": "Fentrazamide"
+      }
+     ]
+    },
+    {
+     "record_id": "3-살균-217",
+     "name": "이미벤코나졸 입상수화제",
+     "identified": [
+      "이미벤코나졸"
+     ],
+     "chemicals": [
+      {
+       "ko": "이미벤코나졸",
+       "cas": "86598-92-7",
+       "en": "Imibenconazole"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

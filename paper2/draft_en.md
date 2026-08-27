@@ -13,7 +13,7 @@ ORCID: 0009-0006-4842-666X
 
 **Methods.** The encoder is left untouched; each register gets a thin adapter whose only job is to decide reading order. The registers are pharmaceutical approvals and patient leaflets (MFDS), pesticide registrations (Korea Food Safety portal), and domestic industrial accident cases (KOSHA). The first two are records with named fields; the third is free prose written by an investigator. Expansion ratio, round-trip accuracy, and 2017 rule compliance are measured per domain. Round-trip is reported three ways: exact match against the source, a near match folding case and whitespace, and **fixed-point stability** — whether a second round trip changes anything.
 
-**Results.** 12,414 records were collected and encoded across the three registers. Median record length spans more than two orders of magnitude, from 154 to 540 characters, while cells per source character stay between 1.63 and 1.78. Rule violations were zero in all three domains. Exact match diverged sharply — 9.5% for pesticides, 45.0% for drugs, 43.6% for incidents — while stability was 100%, 100%, and 99.8%. That gap is itself the result: what exact match counts as failure is transformation the rules require, chiefly the space 제38항 [다만] mandates between a digit and an initial that shares its cell, which appears in almost every pesticide row. **The narrative domain surfaced two defects the record domains never would.** A decoder that misread the roman terminator as a period and turned the Korean after it back into roman, and an encoder that silently dropped subscript digits, rendering H₂S as "H S".
+**Results.** 12,414 records were collected and encoded across the three registers. Median record length spans more than two orders of magnitude, from 161 to 540 characters, while cells per source character stay between 1.63 and 1.79. Rule violations were zero in all three domains. Exact match diverged sharply — 9.5% for pesticides, 45.0% for drugs, 43.6% for incidents — while stability was 100%, 100%, and 99.8%. That gap is itself the result: what exact match counts as failure is transformation the rules require, chiefly the space 제38항 [다만] mandates between a digit and an initial that shares its cell, which appears in almost every pesticide row. **The narrative domain surfaced two defects the record domains never would.** A decoder that misread the roman terminator as a period and turned the Korean after it back into roman, and an encoder that silently dropped subscript digits, rendering H₂S as "H S".
 
 **Conclusions.** One encoder does serve catalogues of differing shape, and the cost of a new domain is one adapter. But that claim only holds if it is tested against material that is genuinely shaped differently. Had the measurement stopped at the two record domains, neither defect would have appeared and the encoder would have looked sturdier than it is. Extensibility of accessibility infrastructure should be judged not by whether a new domain can be attached, but by what attaching it reveals.
 
@@ -118,7 +118,9 @@ Warnings precede adverse effects deliberately. A warning states the conditions u
 
 ### 5.2 Pesticide
 
-Brand and formulation → purpose → crop → pest or weed → application method → application window → dilution → quantity → frequency → toxicity → registration status.
+Product name → brand → formulation → purpose → crop → pest or weed → application method → application window → dilution → quantity → frequency → toxicity → registration status.
+
+The product name leads because it is the only field carrying the active ingredient — "플로니카미드 입상수화제". Section 7.4 records how that came to light.
 
 Placing toxicity last runs against the usual safety convention of leading with the warning. A row existing in the register already implies approval for this crop; what actually decides whether the substance is used safely is the dilution and the frequency, and those numbers are useless if the reader has stopped listening. The toxicity grade is short, so it lands better as a closing statement than as an opening one the reader must hold through four fields of numbers.
 
@@ -149,18 +151,18 @@ Two issues arise in every domain and so live in the shared layer rather than in 
 | Domain | Records | Source chars | Braille cells | Ratio | Median record |
 |---|---|---|---|---|---|
 | Pharmaceutical | 3,052 | 499,637 | 813,794 | 1.63 | 540 chars |
-| Pesticide | 3,000 | 125,037 | 223,092 | 1.78 | 154 chars |
+| Pesticide | 3,000 | 131,170 | 235,365 | 1.79 | 161 chars |
 | Industrial accident | 6,362 | 407,522 | 676,126 | 1.66 | 200 chars |
 
 Sampling at an even stride rather than taking the first 800 is not a methodological detail; it changes the numbers. All three corpora arrive ordered, and the order correlates with length. The first 800 records of the incident board average 128 characters against the corpus's 514, because the most recent postings are the shortest. Taking the head reports the sampling rather than the domain.
 
 ### 6.2 The shapes differ; the cost does not
 
-Figure 3 carries both the paper's premise and its result. Median record length runs from 154 to 540 characters, and the distributions span more than two orders of magnitude. The pesticide distribution is narrow and sharp: one approved use has fixed fields, so its length barely varies. The incident distribution is the widest, because some cases are a single sentence and some are a full report with a numbered preamble.
+Figure 3 carries both the paper's premise and its result. Median record length runs from 161 to 540 characters, and the distributions span more than two orders of magnitude. The pesticide distribution is narrow and sharp: one approved use has fixed fields, so its length barely varies. The incident distribution is the widest, because some cases are a single sentence and some are a full report with a numbered preamble.
 
-Cells per source character, meanwhile, stay between 1.63 and 1.78. **The shapes differ; the cost of embossing them barely does.**
+Cells per source character, meanwhile, stay between 1.63 and 1.79. **The shapes differ; the cost of embossing them barely does.**
 
-The pesticide ratio is highest (1.78) because of digit density. Dilution, quantity, and frequency crowd into one row, and Korean braille prefixes numbers with the number indicator (⠼), which costs an extra cell.
+The pesticide ratio is highest (1.79) because of digit density. Dilution, quantity, and frequency crowd into one row, and Korean braille prefixes numbers with the number indicator (⠼), which costs an extra cell.
 
 ## 7. Validation
 
@@ -205,6 +207,30 @@ That the drug domain carried the same defect without its 800-record sample revea
 
 Zero violations in all three domains, checked by the earlier work's `eval.rule_checker` across five rules. A document can round-trip perfectly and still be malformed braille, so this is measured separately.
 
+### 7.4 Cross-reference to the earlier catalogue
+
+The earlier work argued that accident cases could join safety data sheets and become prevention material. That is only true if the two catalogues can actually be joined, and whether they can is an empirical question about how each register writes substance names.
+
+9,280 Korean names and 111,133 English names were taken from the earlier work's chemical catalogue and looked for **verbatim** in each domain's encoded text. No fuzzy matching: 염화메틸 and 염화메틸렌 differ by two characters and by a great deal of toxicology. Korean does not space compounds, so a match whose neighbours are Hangul is discarded — otherwise 프로필 is found inside 프로필렌.
+
+**Table 6. Cross-reference results**
+
+| Domain | Mentions | Identified by Korean name | Identified by English name | Distinct substances |
+|---|---|---|---|---|
+| Pharmaceutical | 53.8% | **0.0%** | **46.3%** | 42 |
+| Pesticide | 15.6% | **15.6%** | 0.0% | 27 |
+| Industrial accident | 1.3% | — | — | 17 |
+
+*Identified* counts matches in a field that says what the record is (active ingredient, product name); *mentions* also counts matches in fields like interactions or the accident narrative, where the record is talking about something else.
+
+**The two registers are mutually exclusive.** The drug approval register writes its active ingredient in English, so the Korean catalogue joins **none** of it. Matched in English, 46.3% joins. The pesticide register is the exact mirror: Korean, and nothing joins in English. Whether a cross-reference is possible turns not on chemistry but on **which language the agency running the register chose to write in.**
+
+This is the same phenomenon a companion study reports about orthography [5], seen from another side. There, pharmacy writes 나트륨 and cosmetics writes 소듐 for the same element, and the two registers do not overlap by a single name. Here the layer that fails to overlap is not the spelling but the language.
+
+**Accident cases do not join.** They have no field that names a substance; whatever chemistry they carry is inside the narrative. By mentions the rate is 1.3%, with names like 아스팔트, 톨루엔, and 아르곤 appearing in the sequence of events. The loop the earlier work described — incident to data sheet to prevention — **does not close automatically.** Extracting substance names from narrative is separate work, and it is outside this paper.
+
+The pesticide adapter was fixed in the course of this measurement. The register carries its active ingredient only in `PRDLST_KOR_NM` ("플로니카미드 입상수화제"), and the adapter used that field as the record's title and nowhere else, so the braille gave a reader the brand and the formulation and never the substance. For someone holding a bottle in a shed that is the one thing worth knowing, so the product name now leads.
+
 ## 8. Discussion
 
 ### 8.1 What extensibility should be judged by
@@ -243,7 +269,7 @@ That reading order is the part which does not automate is worth stating plainly.
 
 12,414 records were collected from three national registers — pharmaceutical, pesticide, and industrial accident — and encoded under the 2017 revised Korean braille rules. The earlier work's encoder was not modified; each register received one adapter that fixes reading order. Rule violations were zero, and stability was 100%, 100%, and 99.8%.
 
-Document length spans more than two orders of magnitude while cells per character stay between 1.63 and 1.78. The shapes differ; the cost of embossing them barely does.
+Document length spans more than two orders of magnitude while cells per character stay between 1.63 and 1.79. The shapes differ; the cost of embossing them barely does.
 
 What this paper means to leave behind, though, is the method rather than those figures. Until material of a different shape is actually put through it, an encoder does not reveal what it cannot handle. One narrative domain surfaced two defects, and one of them had been silently erasing digits from chemical formulae.
 
@@ -271,6 +297,8 @@ Collected source text is not redistributed; only the braille output, statistics,
 [3] United Nations (2006). Convention on the Rights of Persons with Disabilities, Article 9.
 
 [4] Act on the Prohibition of Discrimination Against Persons with Disabilities, Article 21 (Republic of Korea).
+
+[5] Kim, Y. (2026). What Korean chemical names are made of: a mined transliteration lexicon and the registry conventions it cannot cross. Submitted.
 
 ## Figures
 

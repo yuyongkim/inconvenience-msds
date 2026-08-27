@@ -31,7 +31,7 @@ registrations, and the KOSHA domestic accident-case board — 12,414 records,
 encoded under the 2017 revised rules. Rule violations were zero in all three
 domains and round-trip stability was 100%, 100%, and 99.8%. Median record length
 spans more than two orders of magnitude while cells per source character stay
-between 1.63 and 1.78: the shapes differ, the cost of embossing them barely
+between 1.63 and 1.79: the shapes differ, the cost of embossing them barely
 does.
 
 **Why the third domain is the point.** Two of the three registers are records —
@@ -79,6 +79,16 @@ worked around by routing through another service. The key was fine; the file it
 was stored in used quoting my parser did not handle. I have written this up
 because the error message points at the wrong thing, and because the workaround
 I chose was avoidance rather than diagnosis.
+
+**One result I did not expect.** Joining the three catalogues back to the
+earlier work's chemical catalogue turned out to be governed not by chemistry but
+by which language each agency writes in. The drug register names its active
+ingredient in English, so the Korean chemical catalogue joins none of it — 0.0%
+— while matching in English joins 46.3%. The pesticide register is the exact
+mirror. And accident cases have no field naming a substance at all, so the loop
+the earlier paper described — incident to data sheet to prevention — does not
+close automatically. Section 7.4 reports this rather than the tidier claim I set
+out to make.
 
 **Limitations, stated plainly.** Only the accident board was collected in full;
 pesticides are 3,000 of 95,912 rows, and the pharmaceutical register offers no

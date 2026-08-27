@@ -76,11 +76,20 @@ class PesticideAdapter(Adapter):
 
         brand = _clean(raw.get("BRND_NM"))
         shape = _clean(raw.get("MDC_SHAP_NM"))
-        head = ", ".join(x for x in (brand, shape) if x)
 
         sections: list[Section] = []
-        if head:
-            sections.append(Section("상표 및 제형", head))
+
+        # 품목명 carries the active ingredient — "플로니카미드 입상수화제" — and
+        # it is the only field that does. An earlier version used it as the
+        # record's title and nothing else, which meant the braille told a reader
+        # the brand and the formulation and never the substance. For a bottle in
+        # a shed that is the one thing worth knowing, so it now leads.
+        sections.append(Section("품목명", name))
+
+        if brand:
+            sections.append(Section("상표", brand))
+        if shape and shape not in name:
+            sections.append(Section("제형", shape))
 
         for key, title in USE_FIELDS:
             value = _clean(raw.get(key))

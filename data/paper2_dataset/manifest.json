@@ -13,9 +13,9 @@
   },
   "pesticide": {
    "records": 3000,
-   "text_chars": 467820,
-   "braille_cells": 834721,
-   "expansion_ratio": 1.784,
+   "text_chars": 490757,
+   "braille_cells": 880605,
+   "expansion_ratio": 1.794,
    "source": "식품의약품안전처 농약 등록정보 (openapi.foodsafetykorea.go.kr, I1910)",
    "label": "농약 등록정보 (식품의약품안전처, 식품안전나라)"
   },
@@ -30,7 +30,7 @@
  },
  "totals": {
   "records": 12414,
-  "text_chars": 5760491,
-  "braille_cells": 9557644
+  "text_chars": 5783428,
+  "braille_cells": 9603528
  }
 }
