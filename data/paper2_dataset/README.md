@@ -71,7 +71,7 @@ passed through is neither necessary nor ours to do.
 
 ## Known limits
 
-- Round-trip reaches a fixed point for 100% of drug and pesticide records and 99.7% of accident cases. The remainder sits where the
+- Round-trip reaches a fixed point for 100.0% of drug records, 100.0% of pesticide records, 99.7% of incident records. The remainder sits where the
   Rule 30 roman terminator shares a cell with the period and the cell stream
   genuinely does not distinguish the readings.
 - Composed unit characters (㎡, ℃, ㎥) have no cell and pass through unchanged.

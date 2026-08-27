@@ -170,11 +170,13 @@ The pesticide ratio is highest (1.79) because of digit density. Dilution, quanti
 
 **Table 4. Per-domain validation** (800 records each)
 
-| Domain | Exact | Near | Stable | Rule violations |
-|---|---|---|---|---|
-| Pharmaceutical | 45.0% | 45.0% | **100.0%** | 0 |
-| Pesticide | 9.5% | 9.5% | **100.0%** | 0 |
-| Industrial accident | 43.6% | 43.6% | **99.8%** | 0 |
+| Domain | Exact | Near | Stable (800) | Stable (whole corpus) | Rule violations |
+|---|---|---|---|---|---|
+| Pharmaceutical | 45.0% | 45.0% | 100.0% | **100.000%** (3,052) | 0 |
+| Pesticide | 9.5% | 9.5% | 100.0% | **100.000%** (3,000) | 0 |
+| Industrial accident | 43.6% | 43.6% | 99.8% | **99.686%** (6,362) | 0 |
+
+Stability is re-measured over the whole corpus rather than the sample. It is the number this paper rests on, and a sample is a weaker claim than the corpus. That matters most for the incident domain: its failures are rare and concentrated where roman and Korean interlock, which is exactly the distribution a sample can miss entirely or over-weight twofold.
 
 Read by exact match alone, the pesticide domain scores 9.5% and looks broken. It is not. 제38항 [다만] of the 2017 rules requires a space where a digit is followed by an initial that shares its cell. Almost every pesticide row carries a frequency like "3회", which must be embossed as "3 회", and no decoder can put that space back. The score is measuring the writing system, not the pipeline.
 
@@ -282,6 +284,9 @@ python scripts/paper2_fetch_drugs.py
 python scripts/paper2_fetch_pesticides.py
 python scripts/paper2_fetch_incidents.py
 python eval/paper2_validation.py
+python eval/paper2_stability_full.py
+python scripts/paper2_cross_reference.py
+python scripts/export_paper2_dataset.py
 ```
 
 API keys are not included in the repository and are read from `.env`. `scripts/keys.py` handles quoting and line breaks and decodes data.go.kr's encoded form.
