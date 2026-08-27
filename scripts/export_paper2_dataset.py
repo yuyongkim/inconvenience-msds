@@ -37,19 +37,31 @@ from pipeline.ko_braille import encode_korean_braille  # noqa: E402
 CORPORA = PROJECT_ROOT / "data" / "paper2"
 OUT = PROJECT_ROOT / "data" / "paper2_dataset"
 
+# The drug register carries two document shapes. A record with a patient
+# leaflet is prose at a median of 917 characters; one without is a handful of
+# approval fields at 67. Merging them would put a number in the card that
+# describes neither, so they ship as separate configs.
 DOMAINS = [
-    ("drug", DrugAdapter, "의약품 허가정보 및 복약정보 (식품의약품안전처)"),
-    ("pesticide", PesticideAdapter, "농약 등록정보 (식품의약품안전처, 식품안전나라)"),
-    ("incident", IncidentAdapter, "국내재해사례 (한국산업안전보건공단)"),
+    ("drug_leaflet", "drug", DrugAdapter, lambda r: bool(r.get("easy")),
+     "의약품 복약정보 + 허가정보 (식품의약품안전처, e약은요)"),
+    ("drug_approval", "drug", DrugAdapter, lambda r: not r.get("easy"),
+     "의약품 허가정보 (식품의약품안전처)"),
+    ("pesticide", "pesticide", PesticideAdapter, None,
+     "농약 등록정보 (식품의약품안전처, 식품안전나라)"),
+    ("incident", "incident", IncidentAdapter, None,
+     "국내재해사례 (한국산업안전보건공단)"),
 ]
 
 
-def export(key: str, adapter_cls, limit: int | None) -> dict:
-    path = CORPORA / f"{key}_corpus.json"
+def export(key: str, corpus: str, adapter_cls, select, limit: int | None) -> dict:
+    path = CORPORA / f"{corpus}_corpus.json"
     if not path.exists():
         return {}
     raw = json.loads(path.read_text(encoding="utf-8"))
-    records = adapter_cls().adapt_many(raw.get("records", []))
+    rows = raw.get("records", [])
+    if select:
+        rows = [r for r in rows if select(r)]
+    records = adapter_cls().adapt_many(rows)
     if limit:
         records = records[:limit]
 
@@ -89,7 +101,7 @@ language:
 - ko
 license: cc-by-4.0
 size_categories:
-- 10K<n<100K
+- 100K<n<1M
 task_categories:
 - translation
 - text-generation
@@ -108,12 +120,18 @@ configs:
 # inconvenience-public-safety
 
 Three Korean public-safety registers converted to Korean braille under the 2017
-revised rules (문화체육관광부 고시 제2017-15호), with one config per register.
+revised rules (문화체육관광부 고시 제2017-15호). Every register is enumerated in
+full, not sampled.
 
 The registers are here because their documents are shaped differently, not
 because three is more than one. A pesticide row is a filled-in form; a patient
 leaflet is prose; an accident case is a paragraph an investigator wrote. Median
-record length spans more than two orders of magnitude across them.
+record length spans more than an order of magnitude across them.
+
+There are four configs rather than three because the drug register carries two
+shapes. A product with a patient leaflet runs to a median of 917 characters of
+prose; one without is a handful of approval fields at 67. Averaging them would
+produce a number describing neither.
 
 ## Configs
 
@@ -123,7 +141,7 @@ record length spans more than two orders of magnitude across them.
 
 | Field | Meaning |
 |---|---|
-| `domain` | `drug`, `pesticide`, or `incident` |
+| `domain` | `drug`, `pesticide`, or `incident` — the register it came from |
 | `record_id` | the register's own identifier |
 | `name` | product or case name |
 | `sections` | titled blocks **in reading order**, each with its own braille |
@@ -152,8 +170,8 @@ passed through is neither necessary nor ours to do.
   genuinely does not distinguish the readings.
 - Composed unit characters (㎡, ℃, ㎥) have no cell and pass through unchanged.
   They round-trip by accident but are not braille.
-- Pesticides are a sample of a much larger register; only the accident board is
-  complete.
+- Every register is enumerated in full. Earlier releases of this dataset carried
+  samples shaped by a search term, which is a different thing and a worse one.
 
 ## Source
 
@@ -191,8 +209,8 @@ def main() -> None:
     args = ap.parse_args()
 
     manifest = {}
-    for key, cls, label in DOMAINS:
-        stats = export(key, cls, args.limit or None)
+    for key, corpus, cls, select, label in DOMAINS:
+        stats = export(key, corpus, cls, select, args.limit or None)
         if not stats:
             print(f"{key}: no corpus, skipped")
             continue
@@ -220,6 +238,14 @@ def main() -> None:
                 "braille_cells": sum(d["braille_cells"] for d in manifest.values()),
             },
         }, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    # A config that no longer exists leaves its file behind, and the next upload
+    # ships it as though it were current. Splitting the drug register into two
+    # configs left the merged drug.jsonl sitting in the folder.
+    for stale in OUT.glob("*.jsonl"):
+        if stale.stem not in manifest:
+            stale.unlink()
+            print(f"removed stale config: {stale.name}")
 
     write_card(manifest)
 

@@ -159,11 +159,22 @@ def validate(records, domain: str, sample: int | None = None) -> dict:
     }
 
 
-def load_drugs() -> list:
+def load_drugs() -> tuple[list, list]:
+    """Leaflet records and approval-only records, kept apart.
+
+    They are not the same document. A record with a patient leaflet runs to a
+    median of 917 characters of prose; one without is a handful of approval
+    fields at a median of 67. Reporting them together would average a page and
+    a label into a number describing neither, and would hide the fact that the
+    drug register contributes two shapes rather than one.
+    """
     if not DRUG_CORPUS.exists():
-        return []
+        return [], []
     raw = json.loads(DRUG_CORPUS.read_text(encoding="utf-8"))
-    return DrugAdapter().adapt_many(raw.get("records", []))
+    records = raw.get("records", [])
+    adapter = DrugAdapter()
+    return (adapter.adapt_many([r for r in records if r.get("easy")]),
+            adapter.adapt_many([r for r in records if not r.get("easy")]))
 
 
 def load_pesticides() -> list:
@@ -183,10 +194,13 @@ def load_incidents() -> list:
 def main() -> None:
     results = {}
 
-    drugs = load_drugs()
-    if drugs:
-        print(f"drug: {len(drugs):,} adapted records")
-        results["drug"] = validate(drugs, "drug", sample=800)
+    leaflets, approvals = load_drugs()
+    if leaflets or approvals:
+        print(f"drug: {len(leaflets):,} leaflets, {len(approvals):,} approval-only")
+        if leaflets:
+            results["drug_leaflet"] = validate(leaflets, "drug_leaflet", sample=800)
+        if approvals:
+            results["drug_approval"] = validate(approvals, "drug_approval", sample=800)
     else:
         print("drug: no corpus; run scripts/paper2_fetch_drugs.py first")
 

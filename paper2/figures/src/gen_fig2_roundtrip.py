@@ -32,16 +32,18 @@ OUT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs" / "paper2-validation.json"
 
 LABELS = {
-    "drug": "의약품\nMFDS 허가 + e약은요",
-    "pesticide": "농약\n식품안전나라 등록정보",
-    "incident": "산업재해\nKOSHA 재해사례",
+    "drug_leaflet": "의약품 복약정보\n중앙값 917자 · 산문",
+    "drug_approval": "의약품 허가정보\n중앙값 67자 · 항목",
+    "pesticide": "농약 등록정보\n중앙값 161자 · 표",
+    "incident": "산업재해 사례\n중앙값 200자 · 서술",
 }
 
 results = json.loads(DATA.read_text(encoding="utf-8"))
-domains = [k for k in ("drug", "pesticide", "incident") if k in results]
+domains = [k for k in ("drug_leaflet", "drug_approval", "pesticide",
+                       "incident") if k in results]
 
-fig, ax = plt.subplots(figsize=(PAGE_W, 3.5))
-fig.subplots_adjust(left=0.20, right=0.965, top=0.80, bottom=0.13)
+fig, ax = plt.subplots(figsize=(PAGE_W, 4.1))
+fig.subplots_adjust(left=0.235, right=0.965, top=0.83, bottom=0.115)
 
 H = 0.30
 for i, key in enumerate(domains):
@@ -60,8 +62,10 @@ for i, key in enumerate(domains):
     ax.text(stable + 1.4, y - H / 2 - 0.02, f"{stable:.1f}%", va="center",
             ha="left", fontsize=8, weight=W_BOLD, color=INK, zorder=4)
 
-    # The gap is the claim, so it gets a bracket rather than a caption.
-    if stable - exact > 8:
+    # The gap is the claim, so it gets a bracket rather than a caption. Below
+    # about twenty points there is no room to write in: the approval bar's own
+    # value label already occupies the space the bracket would need.
+    if stable - exact > 20:
         ax.annotate("", xy=(exact, y), xytext=(stable, y),
                     arrowprops=dict(arrowstyle="<->", linewidth=0.7,
                                     color=GREY_TEXT, shrinkA=0, shrinkB=0),
@@ -94,8 +98,19 @@ handles = [
 ax.legend(handles,
           ["원문 그대로 일치 — 규정이 넣은 빈칸까지 오류로 셈",
            "고정점 도달 — 두 번째 왕복에서 더 잃는 것이 없음"],
-          loc="upper left", bbox_to_anchor=(-0.245, 1.17), ncol=1,
+          loc="upper left", bbox_to_anchor=(-0.29, 1.15), ncol=1,
           frameon=False, fontsize=6.9, handlelength=1.1, handleheight=0.9,
           labelspacing=0.35)
+
+# The top two bars come from one register and one adapter, and their exact-match
+# scores differ by more than eighty points. Saying so on the figure is the whole
+# argument: the spread is a property of the records, not of the code.
+top = len(domains) - 1
+if {"drug_leaflet", "drug_approval"} <= set(domains):
+    ax.plot([-7.5, -7.5], [top - 0.32, top - 1 + 0.32], linewidth=1.1,
+            color=NAVY, clip_on=False, zorder=6)
+    ax.text(-9.5, top - 0.5, "같은 등록부\n같은 어댑터", ha="right", va="center",
+            fontsize=6.6, color=NAVY, weight=W_BOLD, linespacing=1.4,
+            clip_on=False, zorder=6)
 
 save_to(fig, OUT, "Fig2", DPI_LINE)

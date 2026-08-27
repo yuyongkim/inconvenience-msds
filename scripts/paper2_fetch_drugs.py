@@ -1,23 +1,32 @@
-"""Build the paper 2 drug corpus from the two MFDS services.
+"""Build the paper 2 drug corpus by walking both MFDS registers.
 
-The services describe the same product from different angles, so this pairs them
-on the item sequence number: the approval register supplies the ingredient and
-classification, e약은요 supplies the prose worth reading aloud.
+The two services describe the same product from different angles, so this pairs
+them on the item sequence number: the approval register supplies the ingredient
+and the classification, e약은요 supplies the prose worth reading aloud.
 
-An earlier version of this script went through the chemical information service
-that serves chemip.yule.pics, on the theory that direct calls to data.go.kr were
-being refused. They were not. The key in .env is stored quoted and split across
-two lines, and a line-at-a-time parser handed the portal `"KEY` — which it
-answers with SERVICE_KEY_IS_NOT_REGISTERED_ERROR, an error that names the key
-and so reads as an authorisation problem. `scripts/keys.py` parses the file
-properly and the portal answers normally. Nothing was ever wrong with the key,
-and the detour also put load on a live service for no reason.
+Two earlier premises turned out to be wrong, and both cost real time.
 
-The register has no listing call, only substring search on the product name, so
-the sweep walks dosage-form words that nearly every Korean product name carries.
+The first was that direct calls to data.go.kr were being refused, which led to
+routing this through the chemical information service that already held the key.
+They were not refused. The key in .env is stored quoted and split across two
+lines, and a line-at-a-time parser handed the portal `"KEY` — which it answers
+with SERVICE_KEY_IS_NOT_REGISTERED_ERROR, an error that names the key and so
+reads as an authorisation problem. `scripts/keys.py` parses it properly.
+
+The second was that the approval register offers no listing call, only substring
+search on the product name, so the corpus was built by sweeping dosage-form
+words. Both services page perfectly well with no filter at all: 4,762 leaflets
+and 42,988 approved products, enumerated. The sweep had been returning whatever
+its first search term matched and stopping at a target, which is a sample shaped
+by the search term rather than by the register.
+
+The leaflets are the smaller set and the more valuable one, because a patient
+leaflet is what a reader is actually handed. So they are collected in full, and
+the approval register is walked to fill in the ingredient and classification
+that the leaflet does not carry.
 
 Usage:
-    python scripts/paper2_fetch_drugs.py [--target 1500] [--delay 0.4]
+    python scripts/paper2_fetch_drugs.py [--approval-limit 0] [--delay 0.3]
 """
 
 from __future__ import annotations
@@ -46,9 +55,6 @@ EASY_URL = ("https://apis.data.go.kr/1471000/DrbEasyDrugInfoService/"
 
 PAGE = 100      # the portal's per-request ceiling
 
-TERMS = ["정", "캡슐", "시럽", "주", "액", "산", "과립", "크림", "연고", "점안"]
-
-
 # Codes that will not fix themselves: the key is wrong, expired, unregistered,
 # or over its quota. Anything else — 01 APPLICATION_ERROR, 02 DB_ERROR, a
 # timeout — is the portal having a moment, and retrying is the right answer.
@@ -57,8 +63,8 @@ TERMS = ["정", "캡슐", "시럽", "주", "액", "산", "과립", "크림", "�
 FATAL_CODES = {"20", "21", "22", "30", "31", "32", "33"}
 
 
-def call(url: str, key: str, params: dict, attempts: int = 4) -> list[dict]:
-    """One search, returning items. Only an authorisation refusal stops the run."""
+def call(url: str, key: str, params: dict, attempts: int = 4) -> tuple[list[dict], int]:
+    """One page. Returns its items and the register's total count."""
     query = {"serviceKey": key, "type": "json", **params}
     for attempt in range(attempts):
         try:
@@ -69,111 +75,97 @@ def call(url: str, key: str, params: dict, attempts: int = 4) -> list[dict]:
                 raise SystemExit(f"{code}: {header.get('resultMsg')}")
             if code not in (None, "00"):
                 raise RuntimeError(f"{code}: {header.get('resultMsg')}")
-            items = (d.get("body") or {}).get("items", [])
+            body = d.get("body") or {}
+            items = body.get("items", [])
             if isinstance(items, dict):
                 items = items.get("item", [])
             if isinstance(items, dict):
                 items = [items]
-            return [i for i in items if isinstance(i, dict)]
+            return [i for i in items if isinstance(i, dict)], int(body.get("totalCount") or 0)
         except SystemExit:
             raise
         except Exception:
             if attempt < attempts - 1:
                 time.sleep(2 ** attempt)
-    return []
+    return [], 0
+
+
+def walk(url: str, key: str, label: str, delay: float, limit: int = 0):
+    """Every page of a register, in order."""
+    page = 1
+    seen = 0
+    while True:
+        items, total = call(url, key, {"pageNo": page, "numOfRows": PAGE})
+        if not items:
+            break
+        seen += len(items)
+        yield items
+        if page % 20 == 0 or seen >= total:
+            print(f"  {label}: {seen:,}/{total:,}", flush=True)
+        if len(items) < PAGE or seen >= total or (limit and seen >= limit):
+            break
+        page += 1
+        time.sleep(delay)
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--target", type=int, default=1500,
-                    help="stop once this many records are held")
-    ap.add_argument("--delay", type=float, default=0.4)
+    ap.add_argument("--approval-limit", type=int, default=0,
+                    help="0 walks the whole approval register")
+    ap.add_argument("--delay", type=float, default=0.3)
     args = ap.parse_args()
 
     key = keys.service_key()
 
-    paired: dict[str, dict] = {}
-    if OUT.exists():
-        try:
-            prev = json.loads(OUT.read_text(encoding="utf-8"))
-            paired = {r["item_seq"]: r for r in prev.get("records", [])}
-            print(f"carrying forward {len(paired):,} records\n")
-        except (json.JSONDecodeError, OSError):
-            paired = {}
+    print("e약은요 (patient leaflets)")
+    easy: dict[str, dict] = {}
+    for batch in walk(EASY_URL, key, "leaflets", args.delay):
+        for it in batch:
+            seq = it.get("itemSeq")
+            if seq:
+                easy[seq] = it
 
-    def save(calls: int) -> None:
-        """Write what is held. Called after the sweep as well as at the end, so
-        a portal hiccup in the pairing pass cannot discard the sweep's work."""
-        both = sum(1 for r in paired.values() if r["approval"] and r["easy"])
-        OUT.parent.mkdir(parents=True, exist_ok=True)
-        OUT.write_text(json.dumps({
-            "source": "MFDS DrugPrdtPrmsnInfoService07 + DrbEasyDrugInfoService "
-                      "(data.go.kr), paired on ITEM_SEQ",
-            "search_terms": TERMS,
-            "api_calls": calls,
-            "collected": len(paired),
-            "paired_both_services": both,
-            "records": sorted(paired.values(), key=lambda r: r["item_seq"]),
-        }, ensure_ascii=False, indent=1), encoding="utf-8")
+    print("\n허가등록부 (approved products)")
+    approval: dict[str, dict] = {}
+    for batch in walk(APPROVAL_URL, key, "products", args.delay,
+                      limit=args.approval_limit):
+        for it in batch:
+            seq = it.get("ITEM_SEQ")
+            if seq:
+                approval[seq] = it
 
-    calls = 0
-    for term in TERMS:
-        if len(paired) >= args.target:
-            break
-        page = 1
-        while len(paired) < args.target:
-            appr = {i.get("ITEM_SEQ"): i for i in call(
-                APPROVAL_URL, key, {"item_name": term, "pageNo": page, "numOfRows": PAGE})}
-            easy = {i.get("itemSeq"): i for i in call(
-                EASY_URL, key, {"itemName": term, "pageNo": page, "numOfRows": PAGE})}
-            calls += 2
-            if not appr and not easy:
-                break
-            for seq in set(appr) | set(easy):
-                if not seq or seq in paired:
-                    continue
-                paired[seq] = {"item_seq": seq,
-                               "approval": appr.get(seq, {}),
-                               "easy": easy.get(seq, {})}
-            page += 1
-            time.sleep(args.delay)
-        print(f"  {term:6s} running total {len(paired):,} records, {calls} calls",
-              flush=True)
+    # A leaflet is what a reader is handed, so the corpus is keyed on those and
+    # the approval register fills in what the leaflet leaves out. Approved
+    # products with no leaflet are kept too, but they are a different document —
+    # a few short fields, not prose — and the manifest says how many there are
+    # so the paper can report the two apart.
+    records = []
+    for seq, leaf in easy.items():
+        records.append({"item_seq": seq, "easy": leaf,
+                        "approval": approval.get(seq, {})})
+    paired = sum(1 for r in records if r["approval"])
+    for seq, appr in approval.items():
+        if seq not in easy:
+            records.append({"item_seq": seq, "easy": {}, "approval": appr})
 
-    # Pairing pass, and the direction matters. Looking an approval record up in
-    # e약은요 fails almost always: the register carries every product ever
-    # approved, including 1960s registrations, while e약은요 only carries what is
-    # currently marketed. Going the other way succeeds, because anything with a
-    # patient leaflet is necessarily an approved product. A first attempt ran it
-    # the wrong way round and paired 0 of 685.
-    save(calls)
-    unpaired = [r for r in paired.values() if r["easy"] and not r["approval"]]
-    print(f"\npairing {len(unpaired):,} e약은요 records against the register",
-          flush=True)
-    filled = 0
-    for i, rec in enumerate(unpaired, 1):
-        name = (rec["easy"].get("itemName") or "").strip()
-        if not name:
-            continue
-        calls += 1
-        for item in call(APPROVAL_URL, key, {"item_name": name, "numOfRows": 5}):
-            if item.get("ITEM_SEQ") == rec["item_seq"]:
-                rec["approval"] = item
-                filled += 1
-                break
-        if i % 100 == 0:
-            print(f"    {i}/{len(unpaired)} looked up, {filled} paired", flush=True)
-            save(calls)
-        time.sleep(args.delay)
-    print(f"  paired {filled:,}", flush=True)
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps({
+        "source": "MFDS DrugPrdtPrmsnInfoService07 + DrbEasyDrugInfoService "
+                  "(data.go.kr), both registers enumerated, paired on ITEM_SEQ",
+        "leaflets": len(easy),
+        "approved_products": len(approval),
+        "paired_both_services": paired,
+        "note": "A record with a leaflet is patient-facing prose; one without is "
+                "a handful of approval fields. They are different documents and "
+                "the paper reports them apart.",
+        "records": sorted(records, key=lambda r: r["item_seq"]),
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    both = sum(1 for r in paired.values() if r["approval"] and r["easy"])
-    save(calls)
-
-    print(f"\n{len(paired):,} records over {calls} calls")
-    print(f"  with both services: {both:,}")
-    print(f"  approval only     : {sum(1 for r in paired.values() if r['approval'] and not r['easy']):,}")
-    print(f"  e약은요 only        : {sum(1 for r in paired.values() if r['easy'] and not r['approval']):,}")
+    print(f"\n{len(records):,} records")
+    print(f"  leaflets            : {len(easy):,}")
+    print(f"  approved products   : {len(approval):,}")
+    print(f"  leaflet + approval  : {paired:,}")
+    print(f"  approval only       : {len(records) - len(easy):,}")
     print(f"\n-> {OUT}")
 
 

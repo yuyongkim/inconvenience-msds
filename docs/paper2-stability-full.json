@@ -1,12 +1,18 @@
 {
- "drug": {
-  "records": 3052,
+ "drug_leaflet": {
+  "records": 4745,
+  "unstable": 0,
+  "stable_pct": 1.0,
+  "unstable_ids": []
+ },
+ "drug_approval": {
+  "records": 38243,
   "unstable": 0,
   "stable_pct": 1.0,
   "unstable_ids": []
  },
  "pesticide": {
-  "records": 3000,
+  "records": 95912,
   "unstable": 0,
   "stable_pct": 1.0,
   "unstable_ids": []

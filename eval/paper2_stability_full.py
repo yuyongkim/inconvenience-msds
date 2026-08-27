@@ -34,8 +34,15 @@ from pipeline.ko_braille_decoder import decode_korean_braille  # noqa: E402
 CORPORA = PROJECT_ROOT / "data" / "paper2"
 OUT = PROJECT_ROOT / "docs" / "paper2-stability-full.json"
 
-DOMAINS = [("drug", DrugAdapter), ("pesticide", PesticideAdapter),
-           ("incident", IncidentAdapter)]
+# The drug register carries two document shapes and they are reported apart:
+# a record with a patient leaflet is prose, one without is a handful of approval
+# fields. `select` picks the raw records belonging to each.
+DOMAINS = [
+    ("drug_leaflet", "drug", DrugAdapter, lambda r: bool(r.get("easy"))),
+    ("drug_approval", "drug", DrugAdapter, lambda r: not r.get("easy")),
+    ("pesticide", "pesticide", PesticideAdapter, None),
+    ("incident", "incident", IncidentAdapter, None),
+]
 
 
 def stable(text: str) -> bool:
@@ -49,13 +56,15 @@ def stable(text: str) -> bool:
 
 def main() -> None:
     results = {}
-    for key, cls in DOMAINS:
-        path = CORPORA / f"{key}_corpus.json"
+    for key, corpus, cls, select in DOMAINS:
+        path = CORPORA / f"{corpus}_corpus.json"
         if not path.exists():
             print(f"{key}: no corpus, skipped")
             continue
-        raw = json.loads(path.read_text(encoding="utf-8"))
-        records = cls().adapt_many(raw.get("records", []))
+        raw = json.loads(path.read_text(encoding="utf-8")).get("records", [])
+        if select:
+            raw = [r for r in raw if select(r)]
+        records = cls().adapt_many(raw)
         bad = [r.record_id for r in records if not stable(r.text())]
         n = len(records) or 1
         results[key] = {
@@ -65,7 +74,7 @@ def main() -> None:
             # Enough to find them again without turning the file into a corpus.
             "unstable_ids": bad[:40],
         }
-        print(f"{key:10s} {len(records) - len(bad):>6,}/{len(records):,} stable "
+        print(f"{key:14s} {len(records) - len(bad):>6,}/{len(records):,} stable "
               f"= {results[key]['stable_pct']:.3%}  ({len(bad)} unstable)",
               flush=True)
 

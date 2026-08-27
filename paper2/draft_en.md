@@ -13,7 +13,11 @@ ORCID: 0009-0006-4842-666X
 
 **Methods.** The encoder is left untouched; each register gets a thin adapter whose only job is to decide reading order. The registers are pharmaceutical approvals and patient leaflets (MFDS), pesticide registrations (Korea Food Safety portal), and domestic industrial accident cases (KOSHA). The first two are records with named fields; the third is free prose written by an investigator. Expansion ratio, round-trip accuracy, and 2017 rule compliance are measured per domain. Round-trip is reported three ways: exact match against the source, a near match folding case and whitespace, and **fixed-point stability** — whether a second round trip changes anything.
 
-**Results.** 12,414 records were collected and encoded across the three registers. Median record length spans more than two orders of magnitude, from 161 to 540 characters, while cells per source character stay between 1.63 and 1.79. Rule violations were zero in all three domains. Exact match diverged sharply — 9.5% for pesticides, 45.0% for drugs, 43.6% for incidents — while stability was 100%, 100%, and 99.8%. That gap is itself the result: what exact match counts as failure is transformation the rules require, chiefly the space 제38항 [다만] mandates between a digit and an initial that shares its cell, which appears in almost every pesticide row. **The narrative domain surfaced two defects the record domains never would.** A decoder that misread the roman terminator as a period and turned the Korean after it back into roman, and an encoder that silently dropped subscript digits, rendering H₂S as "H S".
+**Results.** All three registers were enumerated **in full**: 145,262 records encoded. There are four document shapes rather than three, because the drug register holds two — 4,745 products carry a patient leaflet and run to a median of 917 characters of prose, while the remaining 38,243 are four approval fields at 67. Cells per source character stay between 1.49 and 1.79 across all four, and rule violations were zero. Fixed-point stability is 145,242/145,262 = **99.986%**.
+
+Exact match ranged from 7.6% to 91.2%, and **both ends came from the same register, the same adapter, and the same encoder.** Exact match is therefore measuring how many rule-mandated transformations a record contains, not how good the pipeline is — a conclusion available only from within one domain, since across domains one can always object that the code differed.
+
+**The narrative domain surfaced two defects the record domains never would.** A decoder that misread the roman terminator as a period and turned the Korean after it back into roman, and an encoder that silently dropped subscript digits, rendering H₂S as "H S".
 
 **Conclusions.** One encoder does serve catalogues of differing shape, and the cost of a new domain is one adapter. But that claim only holds if it is tested against material that is genuinely shaped differently. Had the measurement stopped at the two record domains, neither defect would have appeared and the encoder would have looked sturdier than it is. Extensibility of accessibility infrastructure should be judged not by whether a new domain can be attached, but by what attaching it reveals.
 
@@ -36,7 +40,7 @@ The three domains were chosen along distinct axes of access. Pharmaceuticals con
 The contributions are four:
 
 1. A common-encoder plus domain-adapter structure, with the cost of adding a domain measured
-2. A braille dataset of 12,414 records across three public-safety registers
+2. A braille dataset of 145,262 records, three public-safety registers enumerated in full
 3. Per-shape validation, and the reason round-trip accuracy must be read three ways
 4. Two encoder and decoder defects surfaced by narrative material, and their repair
 
@@ -61,16 +65,20 @@ The legal grounding is UN CRPD Article 9 (accessibility) and Article 21 of the K
 | Service | DrugPrdtPrmsnInfoService07 + DrbEasyDrugInfoService | I1910 | disaster_api02 |
 | Record unit | one product | one approved **use** | one case |
 | Document shape | prose (patient-facing) | table (crop × pest) | narrative (investigator) |
-| Register size | — | 95,912 | 6,362 |
-| Collected | 3,052 | 3,000 | 6,362 (all) |
+| Register size | 42,988 (4,745 with a leaflet) | 95,912 | 6,362 |
+| Collected | **42,988 (all)** | **95,912 (all)** | **6,362 (all)** |
 
 The differing record unit matters. The pesticide register stores one row per approved *use*, not per product: the same pesticide appears once for apples and aphids, again for pears and mites, each with its own dilution and application window. That is the right shape for a database and the wrong shape for a label, because a grower holding a bottle wants the one row that matches the crop in front of them.
 
-The incident board was collected in full: 6,362 cases, of which 4,191 are construction, 1,448 manufacturing, 378 shipbuilding, and 345 services.
+All three registers were collected in full. All three services page perfectly well with no filter at all.
+
+That is worth recording, because an earlier version of this work did not know it. The approval register appeared to offer no listing call, only substring search on the product name, so its corpus was built by sweeping dosage-form words — 정, 캡슐, 시럽 and so on. A sweep stops when the first search term reaches a target, which produces a sample shaped by **the search term rather than the register**.
+
+The incident board is 4,191 construction cases, 1,448 manufacturing, 378 shipbuilding, and 345 services.
 
 ### 3.2 Why this third domain is necessary
 
-Pharmaceuticals and pesticides are both **records**. Somebody filled in fields, and an adapter for either is mostly a decision about which field to read first. Reporting that a single encoder covers "differently shaped catalogues" on the strength of those two invites the obvious objection that the shapes are not that different.
+Pesticides and approval-only drug records are both **records**. Somebody filled in fields, and an adapter for either is mostly a decision about which field to read first. Reporting that a single encoder covers "differently shaped catalogues" on the strength of those invites the obvious objection that the shapes are not that different.
 
 Accident cases are not records. The `contents` field is a paragraph an investigator wrote:
 
@@ -102,7 +110,7 @@ The judgement in this split sits in the adapter's **reading order**. A record ha
 
 | Component | Nature | Size |
 |---|---|---|
-| Fetcher | per domain | 100–150 lines |
+| Fetcher | per domain | 110–160 lines |
 | Adapter | per domain | 60–110 lines |
 | Encoder | shared, unmodified | — |
 | Rule checker | shared, unmodified | — |
@@ -146,43 +154,57 @@ Two issues arise in every domain and so live in the shared layer rather than in 
 
 ### 6.1 Scale
 
-**Table 3. Dataset statistics** (800-record sample per domain, drawn at an even stride through the corpus)
+**Table 3. Dataset statistics** (whole corpus)
 
-| Domain | Records | Source chars | Braille cells | Ratio | Median record |
+| Document shape | Records | Source chars | Braille cells | Ratio | Median |
 |---|---|---|---|---|---|
-| Pharmaceutical | 3,052 | 499,637 | 813,794 | 1.63 | 540 chars |
-| Pesticide | 3,000 | 131,170 | 235,365 | 1.79 | 161 chars |
-| Industrial accident | 6,362 | 407,522 | 676,126 | 1.66 | 200 chars |
+| Drug leaflet | 4,745 | 5,209,167 | 8,535,422 | 1.64 | 917 chars |
+| Drug approval | 38,243 | 3,171,212 | 4,726,419 | 1.49 | 67 chars |
+| Pesticide registration | 95,912 | 15,428,894 | 27,688,274 | 1.79 | 160 chars |
+| Industrial accident | 6,362 | 3,269,232 | 5,421,872 | 1.66 | 200 chars |
+| **Total** | **145,262** | **27,078,505** | **46,371,987** | | |
 
-Sampling at an even stride rather than taking the first 800 is not a methodological detail; it changes the numbers. All three corpora arrive ordered, and the order correlates with length. The first 800 records of the incident board average 128 characters against the corpus's 514, because the most recent postings are the shortest. Taking the head reports the sampling rather than the domain.
+**The drug register holds two documents.** The 4,745 products that carry a patient leaflet are prose; the remaining 38,243 are four fields — ingredient, prescription status, class, manufacturer. Medians of 917 and 67 characters are a thirteenfold difference, so averaging them produces a number that describes neither. The paper reports them apart throughout.
+
+Table 4's round-trip figures are measured on 800 records per shape; stability is re-measured over the whole corpus (§7.1). The sample is drawn at an even stride rather than from the head, which is not a methodological detail — it changes the numbers. All four corpora arrive ordered, and the order correlates with length. The first 800 records of the incident board average 128 characters against the corpus's 514, because the most recent postings are the shortest. Taking the head reports the sampling rather than the domain.
 
 ### 6.2 The shapes differ; the cost does not
 
-Figure 3 carries both the paper's premise and its result. Median record length runs from 161 to 540 characters, and the distributions span more than two orders of magnitude. The pesticide distribution is narrow and sharp: one approved use has fixed fields, so its length barely varies. The incident distribution is the widest, because some cases are a single sentence and some are a full report with a numbered preamble.
+Figure 3 carries both the paper's premise and its result. Median record length runs from 67 to 917 characters, and the distributions span more than two orders of magnitude. The pesticide distribution is narrow and sharp: one approved use has fixed fields, so its length barely varies. The incident distribution is the widest, because some cases are a single sentence and some are a full report with a numbered preamble.
 
-Cells per source character, meanwhile, stay between 1.63 and 1.79. **The shapes differ; the cost of embossing them barely does.**
+**The difference in shape is not only between registers.** The top two rows of Figure 3 come from one register, and the distance between them is greater than between any other pair. What fixes a document's shape is not which agency keeps it but what the document is trying to do.
 
-The pesticide ratio is highest (1.79) because of digit density. Dilution, quantity, and frequency crowd into one row, and Korean braille prefixes numbers with the number indicator (⠼), which costs an extra cell.
+Cells per source character, meanwhile, stay between 1.49 and 1.79. **The shapes differ; the cost of embossing them barely does.**
+
+The pesticide ratio is highest (1.79) because of digit density. Dilution, quantity, and frequency crowd into one row, and Korean braille prefixes numbers with the number indicator (⠼), which costs an extra cell. The lowest (drug approval, 1.49) is the same effect inverted: roughly half of such a record is an English ingredient name, and a Latin letter costs one cell where a Hangul syllable costs more.
 
 ## 7. Validation
 
 ### 7.1 Why round-trip is read three ways
 
-**Table 4. Per-domain validation** (800 records each)
+**Table 4. Validation by document shape**
 
-| Domain | Exact | Near | Stable (800) | Stable (whole corpus) | Rule violations |
+| Document shape | Median | Exact | Near | Stable (whole corpus) | Rule violations |
 |---|---|---|---|---|---|
-| Pharmaceutical | 45.0% | 45.0% | 100.0% | **100.000%** (3,052) | 0 |
-| Pesticide | 9.5% | 9.5% | 100.0% | **100.000%** (3,000) | 0 |
-| Industrial accident | 43.6% | 43.6% | 99.8% | **99.686%** (6,362) | 0 |
+| Drug leaflet | 917 | **7.6%** | 7.6% | **100.000%** (4,745) | 0 |
+| Drug approval | 67 | **91.2%** | 91.2% | **100.000%** (38,243) | 0 |
+| Pesticide registration | 160 | 8.0% | 8.0% | **100.000%** (95,912) | 0 |
+| Industrial accident | 200 | 43.6% | 43.6% | **99.686%** (6,362) | 0 |
+| **All** | | | | **99.986%** (145,262) | **0** |
 
 Stability is re-measured over the whole corpus rather than the sample. It is the number this paper rests on, and a sample is a weaker claim than the corpus. That matters most for the incident domain: its failures are rare and concentrated where roman and Korean interlock, which is exactly the distribution a sample can miss entirely or over-weight twofold.
 
-Read by exact match alone, the pesticide domain scores 9.5% and looks broken. It is not. 제38항 [다만] of the 2017 rules requires a space where a digit is followed by an initial that shares its cell. Almost every pesticide row carries a frequency like "3회", which must be embossed as "3 회", and no decoder can put that space back. The score is measuring the writing system, not the pipeline.
+Read by exact match alone, drug leaflets score 7.6% and look broken. They are not. Approval records from the same register score **91.2%**, and both pass through the same adapter and the same encoder. When the code is identical and the score differs by eighty-four points, the score is not measuring the code.
+
+What it measures is how many rule-mandated transformations a record contains. 제38항 [다만] of the 2017 rules requires a space where a digit is followed by an initial that shares its cell; no decoder can put that space back, and **one** occurrence anywhere in a record fails the whole record on exact match. Long prose therefore scores low almost by construction: a 917-character leaflet will nearly always contain one, a 67-character approval record usually will not.
+
+Pesticides score 8.0% for density rather than length — almost every registration row carries a frequency like "3회".
+
+This observation was not available from a cross-domain comparison, where one can always object that different domains meant different code. It closes only when the split happens inside one register.
 
 **Stability** answers the correctness question. Encode, decode, encode, decode again: if the second pass equals the first, the transformation has reached a fixed point and nothing further is being lost. A pipeline that inserts a rule-mandated space scores 100% here; one that drops or corrupts a character does not, because the damage compounds on the second pass.
 
-The gap in Fig. 2 is the result. All of it is deterministic transformation the rules impose — otherwise it would widen on the second pass.
+The gap in Fig. 2 is the result. All of it is deterministic transformation the rules impose — otherwise it would widen on the second pass. Of 145,262 records, 20 fail to reach a fixed point: 0.014%.
 
 ### 7.2 What the narrative domain found
 
@@ -215,17 +237,20 @@ The earlier work argued that accident cases could join safety data sheets and be
 
 9,280 Korean names and 111,133 English names were taken from the earlier work's chemical catalogue and looked for **verbatim** in each domain's encoded text. No fuzzy matching: 염화메틸 and 염화메틸렌 differ by two characters and by a great deal of toxicology. Korean does not space compounds, so a match whose neighbours are Hangul is discarded — otherwise 프로필 is found inside 프로필렌.
 
-**Table 6. Cross-reference results**
+**Table 6. Cross-reference results** (whole corpus)
 
-| Domain | Mentions | Identified by Korean name | Identified by English name | Distinct substances |
+| Document shape | Mentions | Korean-name ID | English-name ID | Distinct substances (KO / EN) |
 |---|---|---|---|---|
-| Pharmaceutical | 53.8% | **0.0%** | **46.3%** | 42 |
-| Pesticide | 15.6% | **15.6%** | 0.0% | 27 |
-| Industrial accident | 1.3% | — | — | 17 |
+| Drug leaflet | 70.5% | **0.0%** | **58.1%** | 59 / 133 |
+| Drug approval | 24.4% | **0.0%** | **24.4%** | 0 / 363 |
+| Pesticide registration | 9.2% | **9.2%** | 0.0% | 51 / 0 |
+| Industrial accident | 1.3% | — | — | 17 / 0 |
 
 *Identified* counts matches in a field that says what the record is (active ingredient, product name); *mentions* also counts matches in fields like interactions or the accident narrative, where the record is talking about something else.
 
-**The two registers are mutually exclusive.** The drug approval register writes its active ingredient in English, so the Korean catalogue joins **none** of it. Matched in English, 46.3% joins. The pesticide register is the exact mirror: Korean, and nothing joins in English. Whether a cross-reference is possible turns not on chemistry but on **which language the agency running the register chose to write in.**
+**The two registers are mutually exclusive.** The drug register writes its active ingredient in English, so the Korean catalogue joins **none** of it — 0.0% for both of its document shapes. Matched in English, leaflets join at 58.1% and approval records at 24.4%. The pesticide register is the exact mirror: Korean, and nothing joins in English. Whether a cross-reference is possible turns not on chemistry but on **which language the agency running the register chose to write in.**
+
+That the two shapes within one register differ in rate but not in language is worth noting too. The gap between 58.1% and 24.4% is not a difference in convention; a leaflet record carries the approval fields as well as the prose. Language is set by the agency, quantity by the document.
 
 This is the same phenomenon a companion study reports about orthography [5], seen from another side. There, pharmacy writes 나트륨 and cosmetics writes 소듐 for the same element, and the two registers do not overlap by a single name. Here the layer that fails to overlap is not the spelling but the language.
 
@@ -239,9 +264,13 @@ The pesticide adapter was fixed in the course of this measurement. The register 
 
 This paper shows two things, and the second matters more.
 
-First, one encoder serves three catalogues of differing shape. The cost of a domain is one adapter, and the encoder was not touched.
+First, one encoder serves four kinds of document. The cost of a domain is one adapter, and the encoder was not touched: 145,262 records, zero rule violations, 99.986% reaching a fixed point.
 
-Second, **that claim only holds if it is tested against material that is genuinely shaped differently.** Had measurement stopped at the two record domains, stability would have read 100% and 100%, and the encoder would have looked sturdier than it is. One narrative domain surfaced two defects. Extensibility of accessibility infrastructure should be judged not by whether a new domain can be attached but by what attaching it reveals.
+Second, **that claim only holds if it is tested against material that is genuinely shaped differently.** Had measurement stopped at the record domains, stability would have read 100% throughout, and the encoder would have looked sturdier than it is. One narrative domain surfaced two defects. Extensibility of accessibility infrastructure should be judged not by whether a new domain can be attached but by what attaching it reveals.
+
+Third, something this paper did not set out to find. Three agencies were chosen in order to get differently shaped material, and the two most distant shapes turned out to sit **inside one agency** (Fig. 3). Counting domains by institution misses that. What fixes a document's shape is not who keeps it but what it is trying to do.
+
+The same observation applies to the method. That exact match measures the text rather than the code cannot be established across domains, where one can object that the code differed. It closes only when two documents through the same adapter score 7.6% and 91.2%.
 
 The same applies to the extension candidates listed in Section VIII of the earlier work. Promoting that list from prospective to validated is not accomplished by shipping catalogues; the list must include a catalogue whose shape differs.
 
@@ -259,9 +288,11 @@ That reading order is the part which does not automate is worth stating plainly.
 
 ## 9. Limitations
 
-**Sampling.** Pesticides are 3,000 of 95,912 rows: enough for a rate and a distribution, not a mirror of the register. The pharmaceutical register offers no listing call, only substring search on the product name, so the sweep walks dosage-form words; products whose names lack those words never enter the sample. Only the incident board is complete.
+**Sampling is no longer a limitation.** All three registers are complete. Earlier versions carried 3,000 pesticide rows and a drug sample built by sweeping dosage-form words, which was a sample shaped by the search term rather than by the register. That was a defect in method rather than a limitation of scope, and it is recorded in §3.1.
 
-**The 20 unstable cases.** The 20 incident cases (0.31%) that do not reach a fixed point sit where roman and Korean interlock and the cell stream genuinely does not distinguish the readings. This follows from the 제30항 terminator sharing a cell with the period, and is a property of the notation.
+One sampling question remains: Table 4's exact and near figures are measured on 800 records per shape, while stability is measured over everything. The first two are supporting numbers that carry none of the argument.
+
+**The 20 unstable cases.** Twenty records of 145,262 (0.014%) fail to reach a fixed point, all of them accident cases. They sit where roman and Korean interlock and the cell stream genuinely does not distinguish the readings, which follows from the 제30항 terminator sharing a cell with the period. It is a property of the notation, so there is little left for code to recover.
 
 **Unit characters.** Composed characters such as ㎡, ℃, and ㎥ have no cell and pass through unchanged. They round-trip by accident but are not braille. Unlike subscripts, the right treatment is to spell them out in Korean, which is left to a later revision.
 
@@ -269,9 +300,9 @@ That reading order is the part which does not automate is worth stating plainly.
 
 ## 10. Conclusion
 
-12,414 records were collected from three national registers — pharmaceutical, pesticide, and industrial accident — and encoded under the 2017 revised Korean braille rules. The earlier work's encoder was not modified; each register received one adapter that fixes reading order. Rule violations were zero, and stability was 100%, 100%, and 99.8%.
+Three national registers — pharmaceutical, pesticide, and industrial accident — were enumerated in full and their 145,262 records encoded under the 2017 revised Korean braille rules. The earlier work's encoder was not modified; each register received one adapter that fixes reading order. Rule violations were zero and stability was 99.986%.
 
-Document length spans more than two orders of magnitude while cells per character stay between 1.63 and 1.79. The shapes differ; the cost of embossing them barely does.
+There were four document shapes rather than three: the drug register holds both prose and fields, and the distance between them is greater than between any other pair. Length spans more than two orders of magnitude while cells per character stay between 1.49 and 1.79. The shapes differ; the cost of embossing them barely does.
 
 What this paper means to leave behind, though, is the method rather than those figures. Until material of a different shape is actually put through it, an encoder does not reveal what it cannot handle. One narrative domain surfaced two defects, and one of them had been silently erasing digits from chemical formulae.
 
@@ -311,6 +342,6 @@ Collected source text is not redistributed; only the braille output, statistics,
 
 **Fig. 1.** Where the reuse is and where it is not. Above the divider is written per domain; below it is taken unchanged from the earlier work. (`paper2/figures/Fig1.png`)
 
-**Fig. 2.** The gap between two readings of the round trip. The light bar is exact match against the source; the dark bar is fixed-point stability. What lies between them is transformation the rules impose. (`paper2/figures/Fig2.png`)
+**Fig. 2.** The gap between two readings of the round trip. The light bar is exact match against the source; the dark bar is fixed-point stability. What lies between them is transformation the rules impose. The top two rows come from one register through one adapter, and their exact scores are 7.6% and 91.2%. (`paper2/figures/Fig2.png`)
 
-**Fig. 3.** Left, record length distribution on a log scale; right, cells per source character. Length spans more than two orders of magnitude; the cost of embossing barely moves. (`paper2/figures/Fig3.png`)
+**Fig. 3.** Left, record length distribution on a log scale; right, cells per source character. Length spans more than two orders of magnitude; the cost of embossing barely moves. The two most distant shapes come from the same register. (`paper2/figures/Fig3.png`)

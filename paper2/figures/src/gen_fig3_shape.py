@@ -39,25 +39,32 @@ DATA = ROOT / "data" / "paper2"
 VALIDATION = ROOT / "docs" / "paper2-validation.json"
 
 DOMAINS = [
-    ("drug", "의약품", "산문 · 환자용 서술", DrugAdapter),
-    ("pesticide", "농약", "표 · 승인된 사용 1건", PesticideAdapter),
-    ("incident", "산업재해", "서술 · 조사자 문장", IncidentAdapter),
+    ("drug_leaflet", "drug", "의약품 복약정보", "산문 · 환자용 서술",
+     DrugAdapter, lambda r: bool(r.get("easy"))),
+    ("drug_approval", "drug", "의약품 허가정보", "항목 · 성분과 분류",
+     DrugAdapter, lambda r: not r.get("easy")),
+    ("pesticide", "pesticide", "농약 등록정보", "표 · 승인된 사용 1건",
+     PesticideAdapter, None),
+    ("incident", "incident", "산업재해 사례", "서술 · 조사자 문장",
+     IncidentAdapter, None),
 ]
 
 
-def lengths(key: str, adapter_cls) -> list[int]:
-    path = DATA / f"{key}_corpus.json"
-    raw = json.loads(path.read_text(encoding="utf-8"))
-    return [len(r.text()) for r in adapter_cls().adapt_many(raw.get("records", []))]
+def lengths(corpus: str, adapter_cls, select=None) -> list[int]:
+    path = DATA / f"{corpus}_corpus.json"
+    rows = json.loads(path.read_text(encoding="utf-8")).get("records", [])
+    if select:
+        rows = [r for r in rows if select(r)]
+    return [len(r.text()) for r in adapter_cls().adapt_many(rows)]
 
 
 results = json.loads(VALIDATION.read_text(encoding="utf-8"))
-series = [(label, sub, lengths(key, cls),
+series = [(label, note, lengths(corpus, cls, select),
            results.get(key, {}).get("expansion_ratio", 0))
-          for key, label, sub, cls in DOMAINS]
+          for key, corpus, label, note, cls, select in DOMAINS]
 
 fig, (ax, ax2) = plt.subplots(
-    1, 2, figsize=(PAGE_W, 3.3), gridspec_kw={"width_ratios": [2.55, 1]})
+    1, 2, figsize=(PAGE_W, 4.0), gridspec_kw={"width_ratios": [2.55, 1]})
 fig.subplots_adjust(left=0.175, right=0.965, top=0.86, bottom=0.185, wspace=0.30)
 
 # --- left: length distributions ------------------------------------------
@@ -71,7 +78,7 @@ for body in parts["bodies"]:
     body.set_linewidth(0.6)
     body.set_alpha(0.85)
 
-for y, (label, sub, vals, _) in zip(positions, series):
+for y, (label, note, vals, _) in zip(positions, series):
     med = float(np.median(vals))
     ax.plot([np.log10(med)], [y], marker="o", markersize=3.4, color="white",
             markeredgecolor=NAVY, markeredgewidth=0.8, zorder=5)
@@ -79,7 +86,7 @@ for y, (label, sub, vals, _) in zip(positions, series):
             ha="center", va="top", fontsize=6.4, color=GREY_TEXT, zorder=6)
 
 ax.set_yticks(positions)
-ax.set_yticklabels([f"{label}\n{sub}" for label, sub, _, _ in series],
+ax.set_yticklabels([f"{label}\n{note}" for label, note, _, _ in series],
                    fontsize=7.4, linespacing=1.5)
 ticks = [1, 2, 3, 4]
 ax.set_xticks(ticks)
@@ -94,7 +101,7 @@ for side in ("top", "right", "left"):
 ax.spines["bottom"].set_color(BORDER)
 ax.grid(axis="x", color=BORDER, linewidth=0.4, alpha=0.6)
 ax.set_axisbelow(True)
-ax.set_title("길이는 두 자릿수 넘게 벌어진다", fontsize=8, color=INK,
+ax.set_title("길이는 한 등록부 안에서도 갈린다", fontsize=8, color=INK,
              weight=W_BOLD, pad=8, loc="left")
 
 # --- right: expansion ratio ----------------------------------------------

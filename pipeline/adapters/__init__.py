@@ -30,7 +30,14 @@ from dataclasses import dataclass, field
 # text is encoded. Written Korean would have used one anyway — the omission is
 # an artefact of typing into a database field, and it shows up in every domain,
 # which is why the fix lives here rather than in one adapter.
-_COMMA_RUN = re.compile(r",(?=\S)")
+#
+# Hangul on both sides, and only there. The ambiguity exists because the cell
+# after the comma could be read as an initial ㄹ, which requires a Korean
+# syllable to follow; anything else is disambiguated by the number indicator or
+# the roman indicator. Widening the rule breaks real notation — "3,200 mg"
+# becomes two numbers one of which is a dose, "B1, B2" gains a second space,
+# and "N,N-디메틸" is pulled apart. An earlier version did all three.
+_COMMA_RUN = re.compile(r"(?<=[가-힣]),(?=[가-힣])")
 
 # Subscript and superscript digits have no cell, and the encoder drops them
 # after emitting the number indicator: "H₂S" comes out as "H S". That is silent

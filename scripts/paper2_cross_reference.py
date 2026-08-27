@@ -156,6 +156,7 @@ def link(records, matcher, names, names_en=None, sample: int | None = None) -> d
     subset = records[:sample] if sample else records
     linked = identified = identified_en = 0
     hits: dict[str, int] = {}
+    hits_en: dict[str, int] = {}
     examples: list[dict] = []
     for rec in subset:
         strong: set[str] = set()
@@ -171,6 +172,8 @@ def link(records, matcher, names, names_en=None, sample: int | None = None) -> d
                 if names_en:
                     strong_en |= english_hits(sec.text, names_en)
         identified_en += bool(strong_en)
+        for f in strong_en:
+            hits_en[f] = hits_en.get(f, 0) + 1
         if not (found or strong_en):
             continue
         linked += 1
@@ -195,17 +198,32 @@ def link(records, matcher, names, names_en=None, sample: int | None = None) -> d
         "identified_en": identified_en,
         "identified_en_pct": round(identified_en / n, 4),
         "distinct_chemicals": len(hits),
+        "distinct_chemicals_en": len(hits_en),
         "top": sorted(hits.items(), key=lambda kv: -kv[1])[:15],
+        "top_en": sorted(hits_en.items(), key=lambda kv: -kv[1])[:15],
         "examples": examples,
     }
 
 
-def load(key: str, adapter_cls) -> list:
-    path = CORPORA / f"{key}_corpus.json"
+# The drug register contributes two document shapes and they join differently:
+# a leaflet names its ingredient in a field, an approval-only record is little
+# else. `select` picks the raw records belonging to each.
+DOMAINS = [
+    ("drug_leaflet", "drug", DrugAdapter, lambda r: bool(r.get("easy"))),
+    ("drug_approval", "drug", DrugAdapter, lambda r: not r.get("easy")),
+    ("pesticide", "pesticide", PesticideAdapter, None),
+    ("incident", "incident", IncidentAdapter, None),
+]
+
+
+def load(corpus: str, adapter_cls, select=None) -> list:
+    path = CORPORA / f"{corpus}_corpus.json"
     if not path.exists():
         return []
-    raw = json.loads(path.read_text(encoding="utf-8"))
-    return adapter_cls().adapt_many(raw.get("records", []))
+    rows = json.loads(path.read_text(encoding="utf-8")).get("records", [])
+    if select:
+        rows = [r for r in rows if select(r)]
+    return adapter_cls().adapt_many(rows)
 
 
 def main() -> None:
@@ -216,20 +234,19 @@ def main() -> None:
     matcher = build_matcher(names)
 
     results = {}
-    for key, cls in [("incident", IncidentAdapter),
-                     ("drug", DrugAdapter),
-                     ("pesticide", PesticideAdapter)]:
-        records = load(key, cls)
+    for key, corpus, cls, select in DOMAINS:
+        records = load(corpus, cls, select)
         if not records:
             print(f"{key}: no corpus, skipped")
             continue
         results[key] = link(records, matcher, names, names_en)
         r = results[key]
-        print(f"{key:10s} {r['linked']:>6,}/{r['records']:,} mention "
+        print(f"{key:14s} {r['linked']:>6,}/{r['records']:,} mention "
               f"({r['linked_pct']:>5.1%})  "
               f"KO-id {r['identified_pct']:>5.1%}  "
               f"EN-id {r['identified_en_pct']:>5.1%}  "
-              f"{r['distinct_chemicals']:,} distinct")
+              f"{r['distinct_chemicals']:,} KO / "
+              f"{r['distinct_chemicals_en']:,} EN distinct")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({

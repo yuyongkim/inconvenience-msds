@@ -15,248 +15,165 @@
   "작물"
  ],
  "domains": {
-  "incident": {
-   "records": 6362,
-   "linked": 84,
-   "linked_pct": 0.0132,
+  "drug_leaflet": {
+   "records": 4745,
+   "linked": 3347,
+   "linked_pct": 0.7054,
    "identified": 0,
    "identified_pct": 0.0,
-   "identified_en": 0,
-   "identified_en_pct": 0.0,
-   "distinct_chemicals": 17,
+   "identified_en": 2756,
+   "identified_en_pct": 0.5808,
+   "distinct_chemicals": 59,
+   "distinct_chemicals_en": 133,
    "top": [
-    [
-     "아스팔트",
-     33
-    ],
-    [
-     "톨루엔",
-     15
-    ],
-    [
-     "아르곤",
-     11
-    ],
-    [
-     "나일론",
-     6
-    ],
-    [
-     "암모니아",
-     4
-    ],
-    [
-     "가솔린",
-     4
-    ],
-    [
-     "크실렌",
-     4
-    ],
-    [
-     "아세톤",
-     3
-    ],
-    [
-     "활성탄",
-     2
-    ],
-    [
-     "그리스",
-     1
-    ],
-    [
-     "파라핀",
-     1
-    ],
-    [
-     "프로필",
-     1
-    ],
-    [
-     "에틸렌",
-     1
-    ],
-    [
-     "다이아몬드",
-     1
-    ],
-    [
-     "아카시아",
-     1
-    ]
-   ],
-   "examples": [
-    {
-     "record_id": "202604281549295LDUY4",
-     "name": "배관 내부에서 작업 중 질식",
-     "identified": [],
-     "chemicals": [
-      {
-       "ko": "아르곤",
-       "cas": "7440-37-1",
-       "en": "Argon"
-      }
-     ]
-    },
-    {
-     "record_id": "202604281548433YC4XY",
-     "name": "톨루엔 취급 중 화재발생",
-     "identified": [],
-     "chemicals": [
-      {
-       "ko": "톨루엔",
-       "cas": "108-88-3",
-       "en": "Toluene"
-      }
-     ]
-    },
-    {
-     "record_id": "20260413153409B1XHN8",
-     "name": "공드럼통 용단작업 중 폭발",
-     "identified": [],
-     "chemicals": [
-      {
-       "ko": "톨루엔",
-       "cas": "108-88-3",
-       "en": "Toluene"
-      }
-     ]
-    },
-    {
-     "record_id": "20251120132321JBMISZ",
-     "name": "탱크 컨테이너 세척 작업 중 중독",
-     "identified": [],
-     "chemicals": [
-      {
-       "ko": "톨루엔",
-       "cas": "108-88-3",
-       "en": "Toluene"
-      }
-     ]
-    },
-    {
-     "record_id": "20230103103145N9C7ZT",
-     "name": "톨루엔 이송 중 화재, 폭발",
-     "identified": [],
-     "chemicals": [
-      {
-       "ko": "톨루엔",
-       "cas": "108-88-3",
-       "en": "Toluene"
-      }
-     ]
-    },
-    {
-     "record_id": "202211041019532J5WC3",
-     "name": "운전 중 톨루엔 누출로 화재",
-     "identified": [],
-     "chemicals": [
-      {
-       "ko": "톨루엔",
-       "cas": "108-88-3",
-       "en": "Toluene"
-      }
-     ]
-    },
-    {
-     "record_id": "20210531150243JFUNA1",
-     "name": "톨루엔 주입작업 중 화재",
-     "identified": [],
-     "chemicals": [
-      {
-       "ko": "톨루엔",
-       "cas": "108-88-3",
-       "en": "Toluene"
-      }
-     ]
-    },
-    {
-     "record_id": "20210513081005RV54OV",
-     "name": "공드럼 용단작업 중 폭발",
-     "identified": [],
-     "chemicals": [
-      {
-       "ko": "톨루엔",
-       "cas": "108-88-3",
-       "en": "Toluene"
-      }
-     ]
-    }
-   ]
-  },
-  "drug": {
-   "records": 3052,
-   "linked": 1643,
-   "linked_pct": 0.5383,
-   "identified": 0,
-   "identified_pct": 0.0,
-   "identified_en": 1412,
-   "identified_en_pct": 0.4626,
-   "distinct_chemicals": 42,
-   "top": [
-    [
-     "메토트렉세이트",
-     144
-    ],
     [
      "와파린",
-     132
+     328
     ],
     [
-     "테오필린",
-     93
-    ],
-    [
-     "나프록센",
-     79
-    ],
-    [
-     "나트륨",
-     78
+     "메토트렉세이트",
+     327
     ],
     [
      "푸로세미드",
-     68
-    ],
-    [
-     "이부프로펜",
-     68
-    ],
-    [
-     "시메티딘",
-     53
-    ],
-    [
-     "살리실산",
-     51
+     259
     ],
     [
      "에리트로마이신",
-     44
+     129
     ],
     [
-     "페노바르비탈",
-     42
+     "테오필린",
+     127
     ],
     [
-     "바클로펜",
-     33
+     "트리암테렌",
+     126
     ],
     [
-     "덱사메타손",
-     31
+     "나프록센",
+     121
     ],
     [
-     "케토코나졸",
-     24
+     "이부프로펜",
+     119
+    ],
+    [
+     "나트륨",
+     104
     ],
     [
      "아목시실린",
-     23
+     101
+    ],
+    [
+     "페노바르비탈",
+     90
+    ],
+    [
+     "바클로펜",
+     77
+    ],
+    [
+     "시메티딘",
+     64
+    ],
+    [
+     "스트렙토마이신",
+     60
+    ],
+    [
+     "살리실산",
+     55
+    ]
+   ],
+   "top_en": [
+    [
+     "acetaminophen",
+     487
+    ],
+    [
+     "nicotinamide",
+     438
+    ],
+    [
+     "riboflavin",
+     368
+    ],
+    [
+     "calcium pantothenate",
+     358
+    ],
+    [
+     "chlorpheniramine maleate",
+     334
+    ],
+    [
+     "folic acid",
+     310
+    ],
+    [
+     "magnesium oxide",
+     271
+    ],
+    [
+     "zinc oxide",
+     245
+    ],
+    [
+     "thiamine nitrate",
+     244
+    ],
+    [
+     "dl-methylephedrine hydrochloride",
+     221
+    ],
+    [
+     "benfotiamine",
+     220
+    ],
+    [
+     "guaifenesin",
+     203
+    ],
+    [
+     "pseudoephedrine hydrochloride",
+     191
+    ],
+    [
+     "biotin",
+     112
+    ],
+    [
+     "lidocaine",
+     90
     ]
    ],
    "examples": [
+    {
+     "record_id": "195700020",
+     "name": "활명수",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "나트륨",
+       "cas": "29329-71-3",
+       "en": "Monosodium etidronate"
+      }
+     ]
+    },
+    {
+     "record_id": "195900034",
+     "name": "신신티눈고(살리실산반창고)",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "메토트렉세이트",
+       "cas": "59-05-2",
+       "en": "Methotrexate"
+      }
+     ]
+    },
     {
      "record_id": "195900043",
      "name": "아네모정",
@@ -270,8 +187,8 @@
      ]
     },
     {
-     "record_id": "196000008",
-     "name": "다이크로짇정(히드로클로로티아지드)",
+     "record_id": "195900045",
+     "name": "자모",
      "identified": [],
      "chemicals": []
     },
@@ -282,26 +199,8 @@
      "chemicals": []
     },
     {
-     "record_id": "196200032",
-     "name": "유한짓정100mg(이소니아지드)(군납명:이소니아지드정케이.피100밀리그람)",
-     "identified": [],
-     "chemicals": []
-    },
-    {
      "record_id": "196200034",
      "name": "삐콤정",
-     "identified": [],
-     "chemicals": []
-    },
-    {
-     "record_id": "196300064",
-     "name": "부광덱사메타손정",
-     "identified": [],
-     "chemicals": []
-    },
-    {
-     "record_id": "196400037",
-     "name": "라식스정(푸로세미드)",
      "identified": [],
      "chemicals": []
     },
@@ -316,80 +215,218 @@
        "en": "Monosodium etidronate"
       }
      ]
+    },
+    {
+     "record_id": "196400089",
+     "name": "보화소합원(대환, 소환)",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "푸로세미드",
+       "cas": "54-31-9",
+       "en": "Furosemide"
+      }
+     ]
+    }
+   ]
+  },
+  "drug_approval": {
+   "records": 38243,
+   "linked": 9324,
+   "linked_pct": 0.2438,
+   "identified": 0,
+   "identified_pct": 0.0,
+   "identified_en": 9324,
+   "identified_en_pct": 0.2438,
+   "distinct_chemicals": 0,
+   "distinct_chemicals_en": 363,
+   "top": [],
+   "top_en": [
+    [
+     "metformin hydrochloride",
+     1505
+    ],
+    [
+     "acetaminophen",
+     846
+    ],
+    [
+     "telmisartan",
+     749
+    ],
+    [
+     "hydrochlorothiazide",
+     567
+    ],
+    [
+     "nicotinamide",
+     436
+    ],
+    [
+     "riboflavin",
+     393
+    ],
+    [
+     "losartan potassium",
+     364
+    ],
+    [
+     "chlorpheniramine maleate",
+     344
+    ],
+    [
+     "calcium pantothenate",
+     336
+    ],
+    [
+     "magnesium oxide",
+     291
+    ],
+    [
+     "folic acid",
+     263
+    ],
+    [
+     "pseudoephedrine hydrochloride",
+     243
+    ],
+    [
+     "thiamine nitrate",
+     235
+    ],
+    [
+     "dl-methylephedrine hydrochloride",
+     211
+    ],
+    [
+     "guaifenesin",
+     207
+    ]
+   ],
+   "examples": [
+    {
+     "record_id": "195500005",
+     "name": "중외5%포도당생리식염액",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "195700009",
+     "name": "대한멸균생리식염수(생리식염주사액)",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "195700013",
+     "name": "제일에페드린염산염주사액4%",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "195800018",
+     "name": "대원염산에페드린주사액[",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "195900009",
+     "name": "비오베이비(수출용)",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "196000008",
+     "name": "다이크로짇정(히드로클로로티아지드)",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "196000010",
+     "name": "페니라민주사(클로르페니라민말레산염)",
+     "identified": [],
+     "chemicals": []
+    },
+    {
+     "record_id": "196100002",
+     "name": "종근당황산스트렙토마이신주(스트렙토마이신황산염)",
+     "identified": [],
+     "chemicals": []
     }
    ]
   },
   "pesticide": {
-   "records": 3000,
-   "linked": 468,
-   "linked_pct": 0.156,
-   "identified": 468,
-   "identified_pct": 0.156,
+   "records": 95912,
+   "linked": 8791,
+   "linked_pct": 0.0917,
+   "identified": 8791,
+   "identified_pct": 0.0917,
    "identified_en": 0,
    "identified_en_pct": 0.0,
-   "distinct_chemicals": 27,
+   "distinct_chemicals": 51,
+   "distinct_chemicals_en": 0,
    "top": [
     [
+     "디페노코나졸",
+     1799
+    ],
+    [
      "이미다클로프리드",
-     79
-    ],
-    [
-     "스트렙토마이신",
-     43
-    ],
-    [
-     "아세페이트",
-     38
-    ],
-    [
-     "만코제브",
-     37
-    ],
-    [
-     "디티아논",
-     35
-    ],
-    [
-     "카벤다짐",
-     33
-    ],
-    [
-     "펜프로파트린",
-     29
+     1793
     ],
     [
      "플루아지남",
-     27
-    ],
-    [
-     "알라클로르",
-     23
-    ],
-    [
-     "세톡시딤",
-     21
-    ],
-    [
-     "지베렐린산",
-     20
-    ],
-    [
-     "티오벤카브",
-     18
-    ],
-    [
-     "이미벤코나졸",
-     17
+     965
     ],
     [
      "메톡시페노자이드",
-     15
+     536
     ],
     [
-     "비페나제이트",
-     6
+     "디티아논",
+     481
+    ],
+    [
+     "만코제브",
+     411
+    ],
+    [
+     "스트렙토마이신",
+     395
+    ],
+    [
+     "카벤다짐",
+     261
+    ],
+    [
+     "포스티아제이트",
+     225
+    ],
+    [
+     "메톨라클로르",
+     188
+    ],
+    [
+     "디플루벤주론",
+     145
+    ],
+    [
+     "플루퀸코나졸",
+     140
+    ],
+    [
+     "카두사포스",
+     139
+    ],
+    [
+     "알라클로르",
+     136
+    ],
+    [
+     "아세페이트",
+     135
     ]
    ],
+   "top_en": [],
    "examples": [
     {
      "record_id": "1-살균-84",
@@ -500,6 +537,178 @@
        "ko": "이미벤코나졸",
        "cas": "86598-92-7",
        "en": "Imibenconazole"
+      }
+     ]
+    }
+   ]
+  },
+  "incident": {
+   "records": 6362,
+   "linked": 84,
+   "linked_pct": 0.0132,
+   "identified": 0,
+   "identified_pct": 0.0,
+   "identified_en": 0,
+   "identified_en_pct": 0.0,
+   "distinct_chemicals": 17,
+   "distinct_chemicals_en": 0,
+   "top": [
+    [
+     "아스팔트",
+     33
+    ],
+    [
+     "톨루엔",
+     15
+    ],
+    [
+     "아르곤",
+     11
+    ],
+    [
+     "나일론",
+     6
+    ],
+    [
+     "암모니아",
+     4
+    ],
+    [
+     "가솔린",
+     4
+    ],
+    [
+     "크실렌",
+     4
+    ],
+    [
+     "아세톤",
+     3
+    ],
+    [
+     "활성탄",
+     2
+    ],
+    [
+     "그리스",
+     1
+    ],
+    [
+     "파라핀",
+     1
+    ],
+    [
+     "프로필",
+     1
+    ],
+    [
+     "에틸렌",
+     1
+    ],
+    [
+     "다이아몬드",
+     1
+    ],
+    [
+     "아카시아",
+     1
+    ]
+   ],
+   "top_en": [],
+   "examples": [
+    {
+     "record_id": "202604281549295LDUY4",
+     "name": "배관 내부에서 작업 중 질식",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "아르곤",
+       "cas": "7440-37-1",
+       "en": "Argon"
+      }
+     ]
+    },
+    {
+     "record_id": "202604281548433YC4XY",
+     "name": "톨루엔 취급 중 화재발생",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20260413153409B1XHN8",
+     "name": "공드럼통 용단작업 중 폭발",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20251120132321JBMISZ",
+     "name": "탱크 컨테이너 세척 작업 중 중독",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20230103103145N9C7ZT",
+     "name": "톨루엔 이송 중 화재, 폭발",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "202211041019532J5WC3",
+     "name": "운전 중 톨루엔 누출로 화재",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20210531150243JFUNA1",
+     "name": "톨루엔 주입작업 중 화재",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
+      }
+     ]
+    },
+    {
+     "record_id": "20210513081005RV54OV",
+     "name": "공드럼 용단작업 중 폭발",
+     "identified": [],
+     "chemicals": [
+      {
+       "ko": "톨루엔",
+       "cas": "108-88-3",
+       "en": "Toluene"
       }
      ]
     }

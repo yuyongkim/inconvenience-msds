@@ -33,7 +33,7 @@ from __future__ import annotations
 
 import re
 
-from . import Adapter, AdaptedRecord, Section
+from . import Adapter, AdaptedRecord, Section, normalise_for_braille
 
 # e약은요 field -> section title, in reading order.
 EASY_FIELDS = [
@@ -65,15 +65,19 @@ CLASS_CODE = re.compile(r"^\[\d+\]")
 EXPORT_NAME = re.compile(r"\s*[（(]?\s*수출\s*명\s*[:：].*$")
 
 
+EMPTY = {"자료없음", "None", "null"}
+
+
 def _clean(value) -> str:
     if value is None:
         return ""
-    text = str(value).strip()
-    if not text or text in {"자료없음", "None", "null"}:
-        return ""
-    # The services use both real newlines and literal backslash-n.
-    text = text.replace("\\n", " ").replace("\r", " ")
-    return re.sub(r"\s+", " ", text).strip()
+    # The services use both real newlines and a literal backslash-n; the shared
+    # normaliser only knows about whitespace. Everything after that — collapsing
+    # runs, spacing a list comma without touching a grouping comma, folding
+    # subscript digits onto the line — is the same in every domain and belongs
+    # there rather than here.
+    text = normalise_for_braille(str(value).replace("\\n", " "))
+    return "" if text in EMPTY else text
 
 
 class DrugAdapter(Adapter):
