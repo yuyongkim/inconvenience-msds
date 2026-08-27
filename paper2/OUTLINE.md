@@ -59,7 +59,14 @@ Dropped (and why):
   - Pharma: drug brand vs generic, dosage forms, foreign drug names
   - Pesticide: crop × pest combinations, mixing ratios, withholding periods
   - Incident: free-form narrative text, named entities (workplace, equipment), tabular hazards
-- **C5** — Cross-domain CAS / generic-name cross-reference (joins paper-1 MSDS to paper-2 catalogs)
+- **C5** — Cross-domain cross-reference (joins paper-1 MSDS to paper-2 catalogs)
+  — **done, and the answer is negative.** `scripts/paper2_cross_reference.py`,
+  §7.4 of the draft. Whether a join is possible turns on which language the
+  agency writes in, not on chemistry: drugs join at 0.0% in Korean and 46.3% in
+  English, pesticides at 15.6% in Korean and 0.0% in English, and accident cases
+  have no substance field at all (1.3% by incidental mention). The
+  incident → MSDS → prevention loop paper 1 described does not close
+  automatically.
 
 ## Sanity-Check Results (logged 2026-06-13)
 

@@ -84,6 +84,107 @@ def export(key: str, adapter_cls, limit: int | None) -> dict:
     }
 
 
+CARD = """---
+language:
+- ko
+license: cc-by-4.0
+size_categories:
+- 10K<n<100K
+task_categories:
+- translation
+- text-generation
+tags:
+- braille
+- accessibility
+- korean
+- public-safety
+- pharmaceutical
+- pesticide
+- occupational-safety
+- inconvenience-series
+configs:
+{configs}---
+
+# inconvenience-public-safety
+
+Three Korean public-safety registers converted to Korean braille under the 2017
+revised rules (문화체육관광부 고시 제2017-15호), with one config per register.
+
+The registers are here because their documents are shaped differently, not
+because three is more than one. A pesticide row is a filled-in form; a patient
+leaflet is prose; an accident case is a paragraph an investigator wrote. Median
+record length spans more than two orders of magnitude across them.
+
+## Configs
+
+{table}
+
+## Fields
+
+| Field | Meaning |
+|---|---|
+| `domain` | `drug`, `pesticide`, or `incident` |
+| `record_id` | the register's own identifier |
+| `name` | product or case name |
+| `sections` | titled blocks **in reading order**, each with its own braille |
+| `text` | the whole record as one Korean string |
+| `braille` | the whole record in Unicode braille |
+| `text_chars`, `braille_cells` | lengths, for embosser planning |
+| `meta` | per-domain identifiers kept out of the reading flow |
+
+`sections` is kept alongside `text` because the reading order is the part that
+carries judgement. A record has no inherent order — the API returns whatever the
+database stores — while a braille reader traverses linearly with no way to skim
+back. Collapsing the sections into one string would make that order
+unrecoverable.
+
+## What is not here
+
+The source records. All three registers are public APIs and the fetchers in the
+repository name the endpoints and parameters, so a reader can collect the same
+material with their own key. Redistributing government text this project merely
+passed through is neither necessary nor ours to do.
+
+## Known limits
+
+- Round-trip reaches a fixed point for {stability}. The remainder sits where the
+  Rule 30 roman terminator shares a cell with the period and the cell stream
+  genuinely does not distinguish the readings.
+- Composed unit characters (㎡, ℃, ㎥) have no cell and pass through unchanged.
+  They round-trip by accident but are not braille.
+- Pesticides are a sample of a much larger register; only the accident board is
+  complete.
+
+## Source
+
+Built by `scripts/export_paper2_dataset.py` in the KOSHA-Braille repository.
+Companion to `Yuyongkim/inconvenience-msds`, which carries the chemical safety
+data sheets the encoder was first validated on.
+"""
+
+
+def write_card(manifest: dict) -> None:
+    """A card that says what the fields mean and what is deliberately absent."""
+    configs = "".join(
+        f"- config_name: {k}\n  data_files: {k}.jsonl\n" for k in manifest)
+    rows = ["| Config | Register | Records | Cells | Cells per character |",
+            "|---|---|---|---|---|"]
+    for k, d in manifest.items():
+        rows.append(f"| `{k}` | {d['label']} | {d['records']:,} | "
+                    f"{d['braille_cells']:,} | {d['expansion_ratio']:.2f} |")
+
+    stability = "100% of drug and pesticide records and 99.7% of accident cases"
+    stab = PROJECT_ROOT / "docs" / "paper2-stability-full.json"
+    if stab.exists():
+        got = json.loads(stab.read_text(encoding="utf-8"))
+        stability = ", ".join(
+            f"{v['stable_pct']:.1%} of {k} records" for k, v in got.items())
+
+    (OUT / "README.md").write_text(
+        CARD.format(configs=configs, table="\n".join(rows), stability=stability),
+        encoding="utf-8")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
@@ -119,6 +220,8 @@ def main() -> None:
                 "braille_cells": sum(d["braille_cells"] for d in manifest.values()),
             },
         }, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    write_card(manifest)
 
     total = sum(d["records"] for d in manifest.values())
     print(f"\n{total:,} records across {len(manifest)} domains")
