@@ -52,7 +52,7 @@ Dropped (and why):
 
 ## Contributions (planned)
 
-- **C1** — Multi-domain Korean braille catalog release: 3 public-safety domains, single HuggingFace dataset + per-domain configs
+- **C1** — Multi-domain Korean braille catalog release: 3 public-safety domains, single HuggingFace dataset + per-domain configs — **published 2026-08-27**, `Yuyongkim/inconvenience-public-safety`, 12,414 records / 9,603,528 braille cells. Push with `scripts/push_paper2_to_hf.py`.
 - **C2** — Common encoder + domain-adapter architecture (reuses paper-1 `ko_braille`, adds 3 lightweight adapters)
 - **C3** — Per-domain quality validation (roundtrip, 2017 rule compliance, GHS / generic-name cross-references)
 - **C4** — Domain-specific challenges report:

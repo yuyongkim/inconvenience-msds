@@ -277,7 +277,9 @@ What this paper means to leave behind, though, is the method rather than those f
 
 ## Reproduction
 
-Code and dataset are in the public repository.
+The braille dataset is published at **https://huggingface.co/datasets/Yuyongkim/inconvenience-public-safety**, one config per domain, alongside the earlier work's `Yuyongkim/inconvenience-msds`.
+
+The code is in the public repository. The following regenerates the dataset and every figure in this paper.
 
 ```
 python scripts/paper2_fetch_drugs.py
@@ -291,7 +293,7 @@ python scripts/export_paper2_dataset.py
 
 API keys are not included in the repository and are read from `.env`. `scripts/keys.py` handles quoting and line breaks and decodes data.go.kr's encoded form.
 
-Collected source text is not redistributed; only the braille output, statistics, and conversion code are released.
+Collected source text is not redistributed; only the braille output, statistics, and conversion code are released. All three registers are public APIs and the fetchers name the endpoints and parameters, so a reader can collect the same material with their own key.
 
 ## References
 

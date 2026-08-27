@@ -66,10 +66,12 @@ argues that the fixed-point test — encode and decode twice, and ask whether th
 second pass changed anything — is the one that answers the correctness question.
 I would rather make this explicit than publish a number that flatters the work.
 
-**Reproducibility, including two things that cost me time.** All three fetchers,
-the adapters, the validation harness and every figure script are released; the
-collected source text is not redistributed, since all three registers are public
-APIs a reader can call with their own key. Section 3.3 records two obstacles
+**Reproducibility, including two things that cost me time.** The braille dataset
+is published at huggingface.co/datasets/Yuyongkim/inconvenience-public-safety,
+one config per domain. All three fetchers, the adapters, the validation harness
+and every figure script are released; the collected source text is not
+redistributed, since all three registers are public APIs a reader can call with
+their own key. Section 3.3 records two obstacles
 that a later researcher will otherwise hit. First, the accident endpoint's
 mandatory `callApiId` is documented as a "fixed value" whose value appears only
 in an attached guide document, not on the dataset page. Second, and more

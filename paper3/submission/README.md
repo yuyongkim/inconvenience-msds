@@ -29,7 +29,7 @@ first paper in this series went the same way.
 
   https://submission.nature.com/new-submission/10209
 
-Article type: **Brief Report** (matching the first paper in the series).
+Article type: **Brief Report**, as declared in the cover letter.
 
 ## Paste-in metadata
 
@@ -56,7 +56,7 @@ transliteration lexicon; morphological decomposition; chemical nomenclature; reg
 - **Competing interests.** None.
 - **Ethics approval.** Not applicable; no human participants or animals.
 - **Consent.** Not applicable.
-- **Data availability.** The mined lexicon, the measurement scripts and the derived statistics are in the repository. Two sources are described rather than redistributed: the cosmetics dictionary, whose terms reserve copyright to the association, and the drug register, which is read through a service holding the authorised key.
+- **Data availability.** The mined lexicon, the measurement scripts and the derived statistics are in the repository. The cosmetics dictionary is described rather than redistributed, its terms reserving copyright to the association. The drug register is a public API and the fetcher names the endpoint; the authorised key is read from a file outside the repository.
 - **Code availability.** Same repository; every figure and table has a named
   script listed under Reproduction.
 

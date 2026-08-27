@@ -29,7 +29,7 @@ first paper in this series went the same way.
 
   https://submission.nature.com/new-submission/10209
 
-Article type: **Brief Report** (matching the first paper in the series).
+Article type: **Brief Report**, as declared in the cover letter.
 
 ## Paste-in metadata
 

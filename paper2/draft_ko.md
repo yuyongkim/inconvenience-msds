@@ -277,7 +277,9 @@ data.go.kr에 대한 모든 직접 호출이 `SERVICE_KEY_IS_NOT_REGISTERED_ERRO
 
 ## 재현
 
-코드와 데이터셋은 공개 저장소에 있다.
+점역 데이터셋은 **https://huggingface.co/datasets/Yuyongkim/inconvenience-public-safety** 에 공개되어 있다. 도메인마다 config 하나이며, 선행 연구의 `Yuyongkim/inconvenience-msds`와 짝을 이룬다.
+
+코드는 공개 저장소에 있다. 아래 순서로 데이터셋과 논문의 모든 수치를 재생성한다.
 
 ```
 python scripts/paper2_fetch_drugs.py
@@ -291,7 +293,7 @@ python scripts/export_paper2_dataset.py
 
 인증키는 저장소에 포함되지 않으며 `.env`에서 읽는다. `scripts/keys.py`가 따옴표와 줄바꿈을 처리하고 data.go.kr의 인코딩된 키를 디코딩한다.
 
-수집한 원문은 재배포하지 않는다. 점역 결과, 통계, 변환 코드만 공개한다.
+수집한 원문은 재배포하지 않는다. 점역 결과, 통계, 변환 코드만 공개한다. 세 등록부 모두 공개 API이고 수집기가 엔드포인트와 파라미터를 명시하므로, 자신의 인증키로 같은 자료를 모을 수 있다.
 
 ## 참고문헌
 
