@@ -49,16 +49,26 @@ PAGE = 100      # the portal's per-request ceiling
 TERMS = ["정", "캡슐", "시럽", "주", "액", "산", "과립", "크림", "연고", "점안"]
 
 
-def call(url: str, key: str, params: dict, attempts: int = 3) -> list[dict]:
-    """One search, returning items. A portal-level refusal stops the run."""
+# Codes that will not fix themselves: the key is wrong, expired, unregistered,
+# or over its quota. Anything else — 01 APPLICATION_ERROR, 02 DB_ERROR, a
+# timeout — is the portal having a moment, and retrying is the right answer.
+# An earlier version stopped the whole run on any non-zero code, which threw
+# away 2,510 collected records because the portal returned 01 once.
+FATAL_CODES = {"20", "21", "22", "30", "31", "32", "33"}
+
+
+def call(url: str, key: str, params: dict, attempts: int = 4) -> list[dict]:
+    """One search, returning items. Only an authorisation refusal stops the run."""
     query = {"serviceKey": key, "type": "json", **params}
     for attempt in range(attempts):
         try:
             d = requests.get(url, params=query, timeout=120, verify=False).json()
             header = d.get("header") or d.get("body", {}).get("header") or {}
             code = header.get("resultCode")
-            if code not in (None, "00"):
+            if code in FATAL_CODES:
                 raise SystemExit(f"{code}: {header.get('resultMsg')}")
+            if code not in (None, "00"):
+                raise RuntimeError(f"{code}: {header.get('resultMsg')}")
             items = (d.get("body") or {}).get("items", [])
             if isinstance(items, dict):
                 items = items.get("item", [])
@@ -91,6 +101,21 @@ def main() -> None:
         except (json.JSONDecodeError, OSError):
             paired = {}
 
+    def save(calls: int) -> None:
+        """Write what is held. Called after the sweep as well as at the end, so
+        a portal hiccup in the pairing pass cannot discard the sweep's work."""
+        both = sum(1 for r in paired.values() if r["approval"] and r["easy"])
+        OUT.parent.mkdir(parents=True, exist_ok=True)
+        OUT.write_text(json.dumps({
+            "source": "MFDS DrugPrdtPrmsnInfoService07 + DrbEasyDrugInfoService "
+                      "(data.go.kr), paired on ITEM_SEQ",
+            "search_terms": TERMS,
+            "api_calls": calls,
+            "collected": len(paired),
+            "paired_both_services": both,
+            "records": sorted(paired.values(), key=lambda r: r["item_seq"]),
+        }, ensure_ascii=False, indent=1), encoding="utf-8")
+
     calls = 0
     for term in TERMS:
         if len(paired) >= args.target:
@@ -121,6 +146,7 @@ def main() -> None:
     # currently marketed. Going the other way succeeds, because anything with a
     # patient leaflet is necessarily an approved product. A first attempt ran it
     # the wrong way round and paired 0 of 685.
+    save(calls)
     unpaired = [r for r in paired.values() if r["easy"] and not r["approval"]]
     print(f"\npairing {len(unpaired):,} e약은요 records against the register",
           flush=True)
@@ -137,18 +163,12 @@ def main() -> None:
                 break
         if i % 100 == 0:
             print(f"    {i}/{len(unpaired)} looked up, {filled} paired", flush=True)
+            save(calls)
         time.sleep(args.delay)
     print(f"  paired {filled:,}", flush=True)
 
     both = sum(1 for r in paired.values() if r["approval"] and r["easy"])
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps({
-        "source": "MFDS DrugPrdtPrmsnInfoService07 + DrbEasyDrugInfoService "
-                  "(data.go.kr), paired on ITEM_SEQ",
-        "search_terms": TERMS,
-        "api_calls": calls,
-        "records": sorted(paired.values(), key=lambda r: r["item_seq"]),
-    }, ensure_ascii=False, indent=1), encoding="utf-8")
+    save(calls)
 
     print(f"\n{len(paired):,} records over {calls} calls")
     print(f"  with both services: {both:,}")

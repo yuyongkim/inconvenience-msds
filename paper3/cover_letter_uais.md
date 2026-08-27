@@ -66,8 +66,9 @@ decide whether mining works, and every measurement script are released. Two
 constraints are documented rather than worked around: the cosmetics dictionary's
 terms of use prohibit redistribution, so the repository carries statistics
 computed from a sample and never the entries themselves; and the drug register
-is read through a service that already holds an authorised key, so no
-credential is copied into the released code.
+is a public API whose endpoint the fetcher names, with the authorised key read
+from a file outside the repository, so no credential is copied into the
+released code.
 
 **Limitations, stated plainly.** Both ingredient catalogues were swept by search
 rather than enumerated, so neither is a census. Drug ingredient names were

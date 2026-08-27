@@ -41,9 +41,9 @@ Paper 1 Sec VIII (`sec:extensibility`) explicitly listed pharmaceutical labels a
 
 | # | Domain | API | Auth status | Records (est.) | Role in paper |
 |---|---|---|---|---|---|
-| D1 | **Pharmaceutical labels** | MFDS e약은요 **+ 제품허가(DrugPrdtPrmsnInfoService07)** | ✅ both active (2026-08-26) | ~35K / ~50K | Citizen self-medication safety. Headline case study. |
-| D2 | **Pesticide registrations** | PSIS 농약안전정보시스템 | ⏳ needs PSIS portal key | ~2K + safety guides | Rural / aging visual-impairment angle. GHS-adjacent. |
-| D3 | **Industrial-incident cases** | KOSHA 국내재해사례 (data.go.kr 15121001) | ⏳ needs data.go.kr 활용신청 | ~hundreds (board posts) | Closes paper 1 loop (incidents ↔ MSDS); safety-training material. |
+| D1 | **Pharmaceutical labels** | MFDS e약은요 **+ 제품허가(DrugPrdtPrmsnInfoService07)** | ✅ direct calls, no proxy | 1,525 collected | Citizen self-medication safety. Headline case study. |
+| D2 | **Pesticide registrations** | 식품안전나라 `I1910` (**not** PSIS) | ✅ `Food` key in `.env` | 3,000 of 95,912 | Rural / aging visual-impairment angle. GHS-adjacent. |
+| D3 | **Industrial-incident cases** | KOSHA `disaster_api02`, `callApiId=1060` (data.go.kr 15121001) | ✅ 2026-08-27 | 6,362 (whole board) | Closes paper 1 loop (incidents ↔ MSDS); the one narrative domain. |
 
 Dropped (and why):
 - ~~AirKorea~~ — real-time stream shifts the paper toward HCI/systems; out of scope for catalog-based contribution.
@@ -68,8 +68,8 @@ Probes in `paper2/probes/`:
 | Probe | Result | Notes |
 |---|---|---|
 | `probe_mfds.py` (e약은요) | ✅ 3/3 OK | 평균 1,512자 → 3,144셀, 비율 2.08 (paper-1 MSDS 1.95와 동등) |
-| `probe_mfds_detail.py` (제품허가) | ~~❌ 500~~ → **✅ 동작** | 키는 인가되어 있었고 엔드포인트 버전이 07. `chemip` 서비스 경유로 접근 (2026-08-26 확인) |
-| `probe_psis.py` (농약) | ❌ ERR_101 | psis.rda.go.kr 자체 키 필요 |
+| `probe_mfds_detail.py` (제품허가) | ~~❌ 500~~ → **✅ 동작** | 엔드포인트 버전이 07. ~~`chemip` 경유~~ → 직접 호출로 정정 (2026-08-27): 경유가 필요했던 것이 아니라 `.env` 파서가 인증키를 깨뜨리고 있었다 |
+| `probe_psis.py` (농약) | ❌ ERR_101 → **도메인 자체가 다른 포털** | psis.rda.go.kr이 아니라 식품안전나라 `I1910` |
 | `probe_airkorea.py` | ❌ 403 | 활용신청 미등록 (도메인 자체 drop) |
 
 ## Section Plan (tentative)
@@ -99,59 +99,46 @@ IX.   Limitations and Future Work
 X.    Conclusion
 ```
 
-## Status update (2026-08-26)
+## Status update (2026-08-27) — three domains, all collected
 
-**D1 unblocked, and larger than planned.** The approval register was logged as
-❌ 500 "활용신청 미등록". It was neither: the key is authorised and the endpoint
-is version 07, which earlier probes had guessed wrong. Reading it through the
-chemical information service that already holds the key means no credential is
-copied into this repository.
+All three domains are in. The manuscript drafts are `paper2/draft_ko.md` and
+`paper2/draft_en.md`; figures are `paper2/figures/Fig1..3`.
 
-That upgrades the headline domain. The plan assumed e약은요 alone (product name,
-indication, dosage). Pairing it with the approval register adds the active
-ingredient, the prescription/OTC split and the therapeutic class — the fields
-that tell a reader whether the leaflet matches the box.
+| Domain | Source | Collected | Stability | Rule violations |
+|---|---|---|---|---|
+| 의약품 | MFDS 허가 + e약은요 (data.go.kr) | 1,525 | 100.0% | 0 |
+| 농약 | 식품안전나라 I1910 | 3,000 of 95,912 | 100.0% | 0 |
+| 산업재해 | KOSHA disaster_api02 | 6,362 (전량) | 99.8% | 0 |
 
-Built so far:
+**D2 was not PSIS.** The outline listed 농약안전정보시스템 (psis.rda.go.kr) and a
+separate portal key. The register that actually serves this data is 식품안전나라
+(openapi.foodsafetykorea.go.kr), service `I1910`, and the key there is the
+`Food` entry in `.env`.
 
-| Piece | File |
-|---|---|
-| Adapter interface | `pipeline/adapters/__init__.py` |
-| Drug adapter | `pipeline/adapters/drug.py` |
-| Corpus fetcher (rate-limited) | `scripts/paper2_fetch_drugs.py` |
-| Per-domain validation | `eval/paper2_validation.py` |
+**D3 endpoint.** `apis.data.go.kr/B552468/disaster_api02/getdisaster_api02`, with
+`callApiId=1060`. The fixed value appears only in the activity guide attached to
+the dataset page, not in the parameter list on the page itself.
 
-**One operational lesson worth keeping.** A first sweep at 0.3 s between calls
-pushed the service into 429s and slowed chemip.yule.pics, which serves real
-users. The fetcher now waits 1.5 s, backs off on 429 rather than retrying
-through it, and gives up instead of hammering. Sharing a key means sharing the
-rate limit.
+**The key was never the problem.** Every direct data.go.kr call failed with
+SERVICE_KEY_IS_NOT_REGISTERED_ERROR because the key in `.env` is stored quoted
+and split across two lines, and a line-at-a-time parser truncated it. The error
+names the key, so it reads as authorisation. `scripts/keys.py` parses the file
+properly. The earlier remedy — routing the drug fetcher through the chemical
+information service — was avoidance, not diagnosis: that service runs on this
+machine and so leaves from the same address. It has been reverted to direct
+calls. This is written up in §3.3 of the draft, because a later researcher will
+hit the same wall.
 
-## Prerequisite Actions (사장님)
+**What the narrative domain found.** Adding incidents took stability from 100%
+to 99.5% and exposed two real defects — a decoder that misread the roman
+terminator across a word boundary, and an encoder that silently dropped
+subscript digits (H₂S → "H S"). Both fixed. This is now the paper's main
+argument (§8.1): extensibility is judged by what a new domain reveals, not by
+whether it attaches.
 
-1. **psis.rda.go.kr 가입 + OpenAPI 신청** — 농약등록정보 SVC01 (개인 가능, 사업자 무관)
-2. **data.go.kr 활용신청 추가** — KOSHA 국내재해사례 (15121001), 기존 키 그대로 사용
+**Validation sampling changed the numbers.** `validate` took the first 800
+records of corpora that arrive ordered; incident records averaged 128 characters
+that way against the corpus's 514. Now an even stride.
 
-D2와 D3만 남았다. D1은 이 둘 없이도 어댑터 구조·검증 파이프라인·데이터셋 통계를
-지탱하므로, 키가 오면 어댑터 두 개를 붙이는 일만 남는다.
+## Superseded status update (2026-08-26)
 
-활용목적 문구 예시: "학술논문 연구 — 시각장애인 정보 접근성 향상을 위한 한국어 점자 변환 데이터셋 구축 (UAIS 후속편)"
-
-## Next Engineering Steps (after keys)
-
-1. `scripts/paper2_fetch_drugs.py` — MFDS e약은요 bulk fetch + cache (rate-limited)
-2. `scripts/paper2_fetch_pesticides.py` — PSIS bulk fetch (key-rate aware)
-3. `scripts/paper2_fetch_incidents.py` — KOSHA disaster-case bulk fetch
-4. `pipeline/adapters/{drug,pesticide,incident}.py` — adapter modules (text builder per domain)
-5. `eval/paper2_validation.py` — per-domain roundtrip + rule check + cross-reference
-6. `paper2/main.tex` — manuscript
-
-## Open Questions
-
-- KOSHA MSDS와의 CAS cross-reference: paper 2 안에 넣을지(D1·D2·D3 셋 다 cross-ref가능), paper 3로 미룰지 (현재 안: paper 2에 포함, contribution C5)
-- 코드네임: **KSafe-Braille** vs **KOSHA-Braille-Extended** — 결정 보류
-
-## Naming Convention
-
-- Paper 1 = "KOSHA-Braille" (MSDS-specific brand)
-- Paper 2 codename: **TBD**

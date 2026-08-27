@@ -5,9 +5,12 @@ that this measures the wrong strings: `DrbEasyDrugInfoService` returns product
 names, and 활명수 has no Latin root to find. The ingredient names live in the
 drug approval service, which needed a separately authorised key.
 
-That key exists and works — it drives the drug search on chemip.yule.pics. So
-this goes through that service rather than calling data.go.kr directly, which
-keeps the credential where it already lives instead of copying it here.
+That key exists and works, and it works directly. An earlier version of this
+script went through the chemical information service that already held it, on
+the theory that data.go.kr was refusing calls from here. It was not: the key in
+.env is stored quoted and split across two lines, and a line-at-a-time parser
+was truncating it into something the portal rejects by name. `scripts/keys.py`
+reads it properly and the register answers directly.
 
 Two fields carry what we need, in two scripts:
 
@@ -33,16 +36,23 @@ import argparse
 import json
 import re
 import time
-import urllib.error
-import urllib.parse
-import urllib.request
+import sys
 from pathlib import Path
+
+import requests
+import urllib3
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import keys  # noqa: E402
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUT_JSON = PROJECT_ROOT / "data" / "pharma" / "mfds_ingredients.json"
 
-SERVICE = "http://127.0.0.1:7011/api/drugs/approval"
-PAGE_SIZE = 50            # the route caps limit at 50
+SERVICE = ("https://apis.data.go.kr/1471000/DrugPrdtPrmsnInfoService07/"
+           "getDrugPrdtPrmsnInq07")
+PAGE_SIZE = 100           # the portal's per-request ceiling
 
 # Dosage-form and unit words. Between them they appear in nearly every Korean
 # product name, so sweeping them approximates a full listing that the API does
@@ -62,22 +72,26 @@ NOT_INGREDIENT = re.compile(
 HANGUL = re.compile(r"[가-힣]")
 
 
-def fetch(term: str, page: int, attempts: int = 3) -> dict | None:
+def fetch(key: str, term: str, page: int, attempts: int = 4) -> dict | None:
     """One page, retried. Returns None only if every attempt failed.
 
-    The upstream call goes through two hops and occasionally times out under
-    load. An earlier version treated one timeout as "this term is exhausted"
-    and abandoned the remaining twelve terms, which cost most of a run.
+    The portal occasionally answers a transient application error under load. An
+    earlier version treated one failure as "this term is exhausted" and
+    abandoned the remaining twelve terms, which cost most of a run.
     """
-    url = (f"{SERVICE}?q={urllib.parse.quote(term)}"
-           f"&page={page}&limit={PAGE_SIZE}")
-    req = urllib.request.Request(url, headers={"User-Agent": "kosha-braille/1.0"})
+    params = {"serviceKey": key, "item_name": term, "pageNo": page,
+              "numOfRows": PAGE_SIZE, "type": "json"}
     for attempt in range(attempts):
         try:
-            with urllib.request.urlopen(req, timeout=180) as r:
-                return json.loads(r.read().decode("utf-8", "replace"))
-        except (urllib.error.URLError, urllib.error.HTTPError,
-                TimeoutError, json.JSONDecodeError):
+            d = requests.get(SERVICE, params=params, timeout=120,
+                             verify=False).json()
+            items = (d.get("body") or {}).get("items", [])
+            if isinstance(items, dict):
+                items = items.get("item", [])
+            if isinstance(items, dict):
+                items = [items]
+            return {"items": [i for i in items if isinstance(i, dict)]}
+        except Exception:
             if attempt < attempts - 1:
                 time.sleep(2 ** attempt)
     return None
@@ -120,11 +134,12 @@ def main() -> None:
     calls = 0
     failures = 0
 
+    key = keys.service_key()
     for term in TERMS:
         got_for_term = 0
         misses = 0
         for page in range(1, args.per_term + 1):
-            d = fetch(term, page)
+            d = fetch(key, term, page)
             calls += 1
             if d is None:
                 failures += 1

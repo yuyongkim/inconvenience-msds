@@ -11,9 +11,24 @@
 
 ---
 
-## KOSHA 국내재해사례 (data.go.kr 15121001)
+## KOSHA 국내재해사례 (data.go.kr 15121001) — 승인 완료 2026-08-27
 
 https://www.data.go.kr/data/15121001/openapi.do
+
+**수집 완료.** 게시판 전체 6,362건. 아래 신청 문구는 기록으로 남긴다.
+
+호출 방법을 여기 적어 둔다. 데이터셋 페이지의 파라미터 목록만 보고는 부를 수 없다.
+
+```
+https://apis.data.go.kr/B552468/disaster_api02/getdisaster_api02
+  ?serviceKey=<디코딩된 키>&callApiId=1060&pageNo=1&numOfRows=1000
+```
+
+- `callApiId=1060` — 페이지에는 "필수입력 고정값"이라고만 적혀 있고 값이 없다.
+  값은 첨부된 활용가이드(.docx) 안에만 있다.
+- 한 번에 1,000건까지 받는다. 초당 30회 제한.
+- `serviceKey` 는 **디코딩된** 형태를 넘긴다. `requests` 가 쿼리 파라미터를
+  스스로 인코딩하므로, 인코딩된 키를 넘기면 퍼센트 기호가 두 번 인코딩된다.
 
 ### 활용목적 상세 (그대로 붙여넣기)
 
@@ -66,7 +81,8 @@ Information Society, 2026), 변환 결과를 공개 데이터셋으로 배포하
 |---|---|---|---|
 | 의약품 제품 허가정보 | data.go.kr | DrugPrdtPrmsnInfoService07 | 인가됨 |
 | 의약품개요정보(e약은요) | data.go.kr | DrbEasyDrugInfoService | 인가됨 |
-| 농약 등록정보 | 식품안전나라 | I1910 | 2026-08-26 승인 |
+| 농약 등록정보 | 식품안전나라 | I1910 | 2026-08-26 승인, 수집 완료 |
+| 국내재해사례 | data.go.kr | disaster_api02 | 2026-08-27 승인, 전량 수집 |
 
 식약처 자료는 **식품안전나라**(openapi.foodsafetykorea.go.kr), KOSHA 자료는
 **data.go.kr** 이다. 두 포털은 키가 별개이므로 서로의 서비스를 부르지 못한다.
@@ -75,11 +91,14 @@ Information Society, 2026), 변환 결과를 공개 데이터셋으로 배포하
 
 ## 신청 뒤 확인
 
-승인되면 알려주십시오. 아래로 즉시 확인합니다.
-
 ```
 python scripts/paper2_fetch_incidents.py --check
 ```
 
-`INFO-110`(활용신청 내역 없음)이나 `SERVICE_KEY_IS_NOT_REGISTERED_ERROR`가
-나오면 아직 반영 전입니다. 포털에 따라 승인 후 반영까지 몇 분 걸립니다.
+`SERVICE_KEY_IS_NOT_REGISTERED_ERROR` 가 나온다고 해서 승인이 안 된 것으로 단정하지
+마십시오. 같은 오류가 **인증키 문자열이 깨졌을 때에도** 나옵니다. 이 저장소에서
+실제로 그랬습니다 — `.env` 의 키가 따옴표에 감싸인 채 두 줄로 저장되어 있었고,
+한 줄씩 읽는 파서가 값을 잘랐습니다. `scripts/keys.py` 를 거쳐 읽으면 됩니다.
+
+같은 키로 이미 동작하는 다른 서비스가 있는데 새 서비스만 이 오류를 낸다면 그때는
+승인 문제입니다. 둘 다 낸다면 키를 읽는 쪽을 먼저 보십시오.

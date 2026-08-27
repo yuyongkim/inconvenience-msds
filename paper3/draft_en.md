@@ -54,7 +54,7 @@ Names were normalised by removing parenthetical annotations (English glosses, tr
 report argued that the pharmaceutical row measured the wrong strings, because
 the only endpoint then reachable returned product names. The ingredient names
 live in the MFDS drug approval register, and this study reads them through the
-chemical information service that already holds an authorised key for it.
+authorised key, calling the register directly.
 
 The register has no listing call, only substring search on the product name, so
 we swept the dosage-form words that nearly every Korean product name contains
@@ -263,7 +263,7 @@ python scripts/naming_convention_divergence.py    # Tables 3, 4 and 5
 
 `fetch_kcia_sample.py` writes to `data/kcia_cache/`, which is gitignored under the dictionary's terms of use. Everything downstream reads statistics, not entries.
 
-`fetch_mfds_ingredients.py` reads the MFDS approval register through the chemical information service that holds the authorised key, so no credential is copied into this repository. Its output is public government data and is committed.
+`fetch_mfds_ingredients.py` calls the MFDS approval register directly. The key is read from a file outside the repository and no credential is copied into it. Its output is public government data and is committed.
 
 ## References
 
