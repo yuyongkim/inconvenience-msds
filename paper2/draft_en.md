@@ -13,7 +13,7 @@ ORCID: 0009-0006-4842-666X
 
 **Methods.** The encoder is left untouched; each register gets a thin adapter whose only job is to decide reading order. The registers are pharmaceutical approvals and patient leaflets (MFDS), pesticide registrations (Korea Food Safety portal), and domestic industrial accident cases (KOSHA). The first two are records with named fields; the third is free prose written by an investigator. Expansion ratio, round-trip accuracy, and 2017 rule compliance are measured per domain. Round-trip is reported three ways: exact match against the source, a near match folding case and whitespace, and **fixed-point stability** — whether a second round trip changes anything.
 
-**Results.** 10,887 records were collected and encoded across the three registers. Median record length spans more than two orders of magnitude, from 154 to 539 characters, while cells per source character stay between 1.64 and 1.78. Rule violations were zero in all three domains. Exact match diverged sharply — 9.5% for pesticides, 44.0% for drugs, 43.6% for incidents — while stability was 100%, 100%, and 99.8%. That gap is itself the result: what exact match counts as failure is transformation the rules require, chiefly the space 제38항 [다만] mandates between a digit and an initial that shares its cell, which appears in almost every pesticide row. **The narrative domain surfaced two defects the record domains never would.** A decoder that misread the roman terminator as a period and turned the Korean after it back into roman, and an encoder that silently dropped subscript digits, rendering H₂S as "H S".
+**Results.** 12,414 records were collected and encoded across the three registers. Median record length spans more than two orders of magnitude, from 154 to 540 characters, while cells per source character stay between 1.63 and 1.78. Rule violations were zero in all three domains. Exact match diverged sharply — 9.5% for pesticides, 45.0% for drugs, 43.6% for incidents — while stability was 100%, 100%, and 99.8%. That gap is itself the result: what exact match counts as failure is transformation the rules require, chiefly the space 제38항 [다만] mandates between a digit and an initial that shares its cell, which appears in almost every pesticide row. **The narrative domain surfaced two defects the record domains never would.** A decoder that misread the roman terminator as a period and turned the Korean after it back into roman, and an encoder that silently dropped subscript digits, rendering H₂S as "H S".
 
 **Conclusions.** One encoder does serve catalogues of differing shape, and the cost of a new domain is one adapter. But that claim only holds if it is tested against material that is genuinely shaped differently. Had the measurement stopped at the two record domains, neither defect would have appeared and the encoder would have looked sturdier than it is. Extensibility of accessibility infrastructure should be judged not by whether a new domain can be attached, but by what attaching it reveals.
 
@@ -36,7 +36,7 @@ The three domains were chosen along distinct axes of access. Pharmaceuticals con
 The contributions are four:
 
 1. A common-encoder plus domain-adapter structure, with the cost of adding a domain measured
-2. A braille dataset of 10,887 records across three public-safety registers
+2. A braille dataset of 12,414 records across three public-safety registers
 3. Per-shape validation, and the reason round-trip accuracy must be read three ways
 4. Two encoder and decoder defects surfaced by narrative material, and their repair
 
@@ -62,7 +62,7 @@ The legal grounding is UN CRPD Article 9 (accessibility) and Article 21 of the K
 | Record unit | one product | one approved **use** | one case |
 | Document shape | prose (patient-facing) | table (crop × pest) | narrative (investigator) |
 | Register size | — | 95,912 | 6,362 |
-| Collected | 1,525 | 3,000 | 6,362 (all) |
+| Collected | 3,052 | 3,000 | 6,362 (all) |
 
 The differing record unit matters. The pesticide register stores one row per approved *use*, not per product: the same pesticide appears once for apples and aphids, again for pears and mites, each with its own dilution and application window. That is the right shape for a database and the wrong shape for a label, because a grower holding a bottle wants the one row that matches the crop in front of them.
 
@@ -148,7 +148,7 @@ Two issues arise in every domain and so live in the shared layer rather than in 
 
 | Domain | Records | Source chars | Braille cells | Ratio | Median record |
 |---|---|---|---|---|---|
-| Pharmaceutical | 1,525 | 532,120 | 874,549 | 1.64 | 539 chars |
+| Pharmaceutical | 3,052 | 499,637 | 813,794 | 1.63 | 540 chars |
 | Pesticide | 3,000 | 125,037 | 223,092 | 1.78 | 154 chars |
 | Industrial accident | 6,362 | 407,522 | 676,126 | 1.66 | 200 chars |
 
@@ -156,9 +156,9 @@ Sampling at an even stride rather than taking the first 800 is not a methodologi
 
 ### 6.2 The shapes differ; the cost does not
 
-Figure 3 carries both the paper's premise and its result. Median record length runs from 154 to 539 characters, and the distributions span more than two orders of magnitude. The pesticide distribution is narrow and sharp: one approved use has fixed fields, so its length barely varies. The incident distribution is the widest, because some cases are a single sentence and some are a full report with a numbered preamble.
+Figure 3 carries both the paper's premise and its result. Median record length runs from 154 to 540 characters, and the distributions span more than two orders of magnitude. The pesticide distribution is narrow and sharp: one approved use has fixed fields, so its length barely varies. The incident distribution is the widest, because some cases are a single sentence and some are a full report with a numbered preamble.
 
-Cells per source character, meanwhile, stay between 1.64 and 1.78. **The shapes differ; the cost of embossing them barely does.**
+Cells per source character, meanwhile, stay between 1.63 and 1.78. **The shapes differ; the cost of embossing them barely does.**
 
 The pesticide ratio is highest (1.78) because of digit density. Dilution, quantity, and frequency crowd into one row, and Korean braille prefixes numbers with the number indicator (⠼), which costs an extra cell.
 
@@ -170,7 +170,7 @@ The pesticide ratio is highest (1.78) because of digit density. Dilution, quanti
 
 | Domain | Exact | Near | Stable | Rule violations |
 |---|---|---|---|---|
-| Pharmaceutical | 44.0% | 44.0% | **100.0%** | 0 |
+| Pharmaceutical | 45.0% | 45.0% | **100.0%** | 0 |
 | Pesticide | 9.5% | 9.5% | **100.0%** | 0 |
 | Industrial accident | 43.6% | 43.6% | **99.8%** | 0 |
 
@@ -241,9 +241,9 @@ That reading order is the part which does not automate is worth stating plainly.
 
 ## 10. Conclusion
 
-10,887 records were collected from three national registers — pharmaceutical, pesticide, and industrial accident — and encoded under the 2017 revised Korean braille rules. The earlier work's encoder was not modified; each register received one adapter that fixes reading order. Rule violations were zero, and stability was 100%, 100%, and 99.8%.
+12,414 records were collected from three national registers — pharmaceutical, pesticide, and industrial accident — and encoded under the 2017 revised Korean braille rules. The earlier work's encoder was not modified; each register received one adapter that fixes reading order. Rule violations were zero, and stability was 100%, 100%, and 99.8%.
 
-Document length spans more than two orders of magnitude while cells per character stay between 1.64 and 1.78. The shapes differ; the cost of embossing them barely does.
+Document length spans more than two orders of magnitude while cells per character stay between 1.63 and 1.78. The shapes differ; the cost of embossing them barely does.
 
 What this paper means to leave behind, though, is the method rather than those figures. Until material of a different shape is actually put through it, an encoder does not reveal what it cannot handle. One narrative domain surfaced two defects, and one of them had been silently erasing digits from chemical formulae.
 

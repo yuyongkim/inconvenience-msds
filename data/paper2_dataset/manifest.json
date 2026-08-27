@@ -4,33 +4,33 @@
  "note": "Source records are not redistributed; all three registers are public APIs and the fetchers name the endpoints.",
  "domains": {
   "drug": {
-   "records": 20,
-   "text_chars": 8775,
-   "braille_cells": 14250,
-   "expansion_ratio": 1.624,
+   "records": 3052,
+   "text_chars": 2022118,
+   "braille_cells": 3298594,
+   "expansion_ratio": 1.631,
    "source": "MFDS DrugPrdtPrmsnInfoService07 + DrbEasyDrugInfoService (data.go.kr), paired on ITEM_SEQ",
    "label": "의약품 허가정보 및 복약정보 (식품의약품안전처)"
   },
   "pesticide": {
-   "records": 20,
-   "text_chars": 3112,
-   "braille_cells": 5568,
-   "expansion_ratio": 1.789,
+   "records": 3000,
+   "text_chars": 467820,
+   "braille_cells": 834721,
+   "expansion_ratio": 1.784,
    "source": "식품의약품안전처 농약 등록정보 (openapi.foodsafetykorea.go.kr, I1910)",
    "label": "농약 등록정보 (식품의약품안전처, 식품안전나라)"
   },
   "incident": {
-   "records": 20,
-   "text_chars": 3294,
-   "braille_cells": 5333,
-   "expansion_ratio": 1.619,
+   "records": 6362,
+   "text_chars": 3270553,
+   "braille_cells": 5424329,
+   "expansion_ratio": 1.659,
    "source": "한국산업안전보건공단 국내재해사례 게시판 (data.go.kr 15121001, disaster_api02, callApiId=1060)",
    "label": "국내재해사례 (한국산업안전보건공단)"
   }
  },
  "totals": {
-  "records": 60,
-  "text_chars": 15181,
-  "braille_cells": 25151
+  "records": 12414,
+  "text_chars": 5760491,
+  "braille_cells": 9557644
  }
 }

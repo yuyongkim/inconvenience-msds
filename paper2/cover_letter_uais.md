@@ -27,11 +27,11 @@ happens.
 
 **What this paper does.** Three Korean national registers, one encoder, one
 adapter each. Pharmaceutical approvals and patient leaflets, pesticide
-registrations, and the KOSHA domestic accident-case board — 10,887 records,
+registrations, and the KOSHA domestic accident-case board — 12,414 records,
 encoded under the 2017 revised rules. Rule violations were zero in all three
 domains and round-trip stability was 100%, 100%, and 99.8%. Median record length
 spans more than two orders of magnitude while cells per source character stay
-between 1.64 and 1.78: the shapes differ, the cost of embossing them barely
+between 1.63 and 1.78: the shapes differ, the cost of embossing them barely
 does.
 
 **Why the third domain is the point.** Two of the three registers are records —

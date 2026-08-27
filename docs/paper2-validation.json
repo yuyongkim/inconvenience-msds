@@ -2,12 +2,12 @@
  "drug": {
   "domain": "drug",
   "records": 800,
-  "text_chars": 532120,
-  "braille_cells": 874549,
-  "expansion_ratio": 1.644,
-  "mean_text_chars": 665,
-  "roundtrip_exact_pct": 0.44,
-  "roundtrip_near_pct": 0.44,
+  "text_chars": 499637,
+  "braille_cells": 813794,
+  "expansion_ratio": 1.629,
+  "mean_text_chars": 625,
+  "roundtrip_exact_pct": 0.45,
+  "roundtrip_near_pct": 0.45,
   "roundtrip_stable_pct": 1.0,
   "rule_violations": {}
  },

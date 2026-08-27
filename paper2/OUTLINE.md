@@ -41,7 +41,7 @@ Paper 1 Sec VIII (`sec:extensibility`) explicitly listed pharmaceutical labels a
 
 | # | Domain | API | Auth status | Records (est.) | Role in paper |
 |---|---|---|---|---|---|
-| D1 | **Pharmaceutical labels** | MFDS e약은요 **+ 제품허가(DrugPrdtPrmsnInfoService07)** | ✅ direct calls, no proxy | 1,525 collected | Citizen self-medication safety. Headline case study. |
+| D1 | **Pharmaceutical labels** | MFDS e약은요 **+ 제품허가(DrugPrdtPrmsnInfoService07)** | ✅ direct calls, no proxy | 3,052 collected | Citizen self-medication safety. Headline case study. |
 | D2 | **Pesticide registrations** | 식품안전나라 `I1910` (**not** PSIS) | ✅ `Food` key in `.env` | 3,000 of 95,912 | Rural / aging visual-impairment angle. GHS-adjacent. |
 | D3 | **Industrial-incident cases** | KOSHA `disaster_api02`, `callApiId=1060` (data.go.kr 15121001) | ✅ 2026-08-27 | 6,362 (whole board) | Closes paper 1 loop (incidents ↔ MSDS); the one narrative domain. |
 
@@ -106,9 +106,12 @@ All three domains are in. The manuscript drafts are `paper2/draft_ko.md` and
 
 | Domain | Source | Collected | Stability | Rule violations |
 |---|---|---|---|---|
-| 의약품 | MFDS 허가 + e약은요 (data.go.kr) | 1,525 | 100.0% | 0 |
+| 의약품 | MFDS 허가 + e약은요 (data.go.kr) | 3,052 (양쪽 서비스 1,682) | 100.0% | 0 |
 | 농약 | 식품안전나라 I1910 | 3,000 of 95,912 | 100.0% | 0 |
 | 산업재해 | KOSHA disaster_api02 | 6,362 (전량) | 99.8% | 0 |
+
+합계 12,414건. 데이터셋 export는 `scripts/export_paper2_dataset.py`, 도메인마다
+JSONL 한 개와 manifest 하나를 쓴다.
 
 **D2 was not PSIS.** The outline listed 농약안전정보시스템 (psis.rda.go.kr) and a
 separate portal key. The register that actually serves this data is 식품안전나라
