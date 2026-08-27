@@ -1,0 +1,38 @@
+{
+  "total_chemicals": 48966,
+  "complete_chemicals": 48966,
+  "total_sections": 769897,
+  "sections_per_type": {
+    "1": 48966,
+    "2": 48966,
+    "3": 48966,
+    "4": 48966,
+    "5": 48966,
+    "6": 48966,
+    "7": 48966,
+    "8": 48966,
+    "9": 48966,
+    "10": 48966,
+    "11": 48966,
+    "12": 48966,
+    "13": 48966,
+    "14": 48966,
+    "15": 35407,
+    "16": 48966
+  },
+  "sample_size": 500,
+  "avg_text_chars": 6046,
+  "median_text_chars": 5934,
+  "min_text_chars": 2241,
+  "max_text_chars": 10490,
+  "std_text_chars": 1435,
+  "unique_names": 500,
+  "char_distribution": {
+    "korean": 1627147,
+    "latin": 353488,
+    "digit": 150595,
+    "korean_pct": 76.3,
+    "latin_pct": 16.6,
+    "digit_pct": 7.1
+  }
+}

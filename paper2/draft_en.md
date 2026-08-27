@@ -195,6 +195,10 @@ Before the incident domain was added, both existing domains scored 100% stable. 
 
 The reason this never surfaced in record data is plain: roman followed by Korean, with a bracket or an equals sign within two words, is a layout that occurs in free prose.
 
+The repair was checked for regressions separately. Across 1,267 cases — every regression case the repository holds plus a sample from all three domains — the change **fixed one and broke none**, with four outputs differing and all four improved. One of those four is in the drug domain: `만성C.j영 간염` became `만성C형 간염`. The earlier work's own domain was checked too: round-trip edit similarity over 300 real safety-data-sheet passages is 0.9992.
+
+That the drug domain carried the same defect without its 800-record sample revealing it is worth recording. Free prose merely makes the layout frequent; it does not make it absent from record data.
+
 **Subscripts.** The encoder emitted the number indicator and then discarded subscript and superscript digits, so `H₂S` became "H S". That is silent loss in the one place these catalogues cannot afford it, since the digit is what distinguishes hydrogen sulfide from hydrogen. Braille has no raised or lowered position, so the digit is written on the line — `H2S` — which is how a chemist reads the formula aloud anyway. Script digits occur 65 times across the three corpora.
 
 ### 7.3 Rule compliance

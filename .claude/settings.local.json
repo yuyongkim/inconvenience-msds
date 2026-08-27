@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p figures)",
+      "Bash(mv fig_pipeline.pdf fig_pipeline.png fig_dataset_stats.pdf fig_dataset_stats.png fig_webui.pdf fig_webui.png figures/)",
+      "Bash(mv gen_fig_pipeline.py gen_fig_dataset_stats.py gen_fig_webui.py figures/)",
+      "Bash(mv dataset_stats.json figures/)",
+      "Bash(rm -f main.aux main.log main.out main.bbl main.blg c2.log compile.log compile2.log)"
+    ]
+  }
+}
