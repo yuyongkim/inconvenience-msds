@@ -730,6 +730,187 @@ INGREDIENT_PRESETS = [
 ]
 
 
+# --- Public-safety catalogues -------------------------------------------
+#
+# The chemical side of this service reads the KOSHA database. These four are a
+# separate file built by scripts/build_catalog_db.py, kept apart because they
+# are re-fetched on a different schedule and because a rebuild should never be
+# able to disturb the chemical search that people already use.
+#
+# There is no cosmetics catalogue here and there will not be one from this
+# route: the ingredient dictionary's terms of use prohibit redistribution. The
+# preview tab, where a user pastes their own ingredient list, is what is
+# possible within that.
+
+CATALOG_DB_PATH = Path(
+    os.getenv("BRAILLE_CATALOG_DB_PATH")
+    or (PROJECT_ROOT / "data" / "catalog.db")
+).expanduser()
+
+# Trigram FTS cannot match anything shorter than three characters, and Korean
+# two-syllable words — 추락, 감기, 사과 — are exactly what a user types. Those
+# fall back to LIKE, which costs about 100 ms over 145,000 rows and is the
+# difference between the search working and silently returning nothing.
+FTS_MIN_QUERY = 3
+
+
+def catalog_db() -> sqlite3.Connection:
+    if not CATALOG_DB_PATH.exists():
+        raise HTTPException(
+            status_code=503,
+            detail="Catalogue database not built; run scripts/build_catalog_db.py")
+    conn = sqlite3.connect(f"file:{CATALOG_DB_PATH}?mode=ro", uri=True)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+
+@app.get("/api/catalogs")
+def list_catalogs():
+    """What catalogues exist, what they are called, and how big they are.
+
+    The labels live in the database rather than the page so that adding a
+    catalogue does not require a frontend change to name it.
+    """
+    conn = catalog_db()
+    try:
+        rows = conn.execute(
+            "SELECT config, label, unit, source, records FROM catalog_info "
+            "ORDER BY records DESC").fetchall()
+    finally:
+        conn.close()
+    return {"catalogs": [dict(r) for r in rows]}
+
+
+@app.get("/api/catalog/{config}")
+def list_catalog(
+    config: str,
+    search: Optional[str] = Query(None),
+    limit: int = Query(50, ge=1, le=200),
+    offset: int = Query(0, ge=0),
+):
+    conn = catalog_db()
+    try:
+        info = conn.execute(
+            "SELECT * FROM catalog_info WHERE config = ?", (config,)).fetchone()
+        if not info:
+            raise HTTPException(status_code=404, detail="No such catalogue")
+
+        q = (search or "").strip()
+        if not q:
+            total = info["records"]
+            rows = conn.execute(
+                "SELECT record_id, name, text_chars FROM catalog "
+                "WHERE config = ? ORDER BY record_id LIMIT ? OFFSET ?",
+                (config, limit, offset)).fetchall()
+        elif len(q) >= FTS_MIN_QUERY:
+            total = conn.execute(
+                "SELECT count(*) FROM catalog_fts "
+                "WHERE catalog_fts MATCH ? AND config = ?",
+                (f'"{q}"', config)).fetchone()[0]
+            rows = conn.execute(
+                "SELECT c.record_id, c.name, c.text_chars FROM catalog_fts f "
+                "JOIN catalog c ON c.config = f.config AND c.record_id = f.record_id "
+                "WHERE f.catalog_fts MATCH ? AND f.config = ? "
+                "ORDER BY rank LIMIT ? OFFSET ?",
+                (f'"{q}"', config, limit, offset)).fetchall()
+        else:
+            like = f"%{q}%"
+            total = conn.execute(
+                "SELECT count(*) FROM catalog WHERE config = ? "
+                "AND (name LIKE ? OR text LIKE ?)",
+                (config, like, like)).fetchone()[0]
+            rows = conn.execute(
+                "SELECT record_id, name, text_chars FROM catalog WHERE config = ? "
+                "AND (name LIKE ? OR text LIKE ?) "
+                "ORDER BY record_id LIMIT ? OFFSET ?",
+                (config, like, like, limit, offset)).fetchall()
+    finally:
+        conn.close()
+
+    return {
+        "config": config,
+        "label": info["label"],
+        "unit": info["unit"],
+        "source": info["source"],
+        "total": total,
+        "offset": offset,
+        "limit": limit,
+        "results": [dict(r) for r in rows],
+    }
+
+
+def _catalog_record(config: str, record_id: str) -> dict:
+    conn = catalog_db()
+    try:
+        row = conn.execute(
+            "SELECT * FROM catalog WHERE config = ? AND record_id = ?",
+            (config, record_id)).fetchone()
+    finally:
+        conn.close()
+    if not row:
+        raise HTTPException(status_code=404, detail="Record not found")
+    return dict(row)
+
+
+@app.get("/api/catalog/{config}/{record_id}")
+def get_catalog_record(config: str, record_id: str):
+    """One record, its sections in reading order, and the braille for each.
+
+    Braille is encoded here rather than stored. It costs about a millisecond
+    and storing it would double a 363 MB file for a value that is derived — and
+    that would go stale the moment the encoder is corrected, which has happened
+    twice.
+    """
+    row = _catalog_record(config, record_id)
+    sections = json.loads(row["sections"])
+    text = row["text"]
+    braille = encode_korean_braille(text)
+    return {
+        "config": config,
+        "record_id": row["record_id"],
+        "name": row["name"],
+        "korean_text": text,
+        "braille": braille,
+        "sections": [
+            {
+                "title": s.get("title", ""),
+                "korean": s.get("text", ""),
+                "braille": s.get("braille") or encode_korean_braille(
+                    f"{s.get('title','')}: {s.get('text','')}".strip(": ")),
+            }
+            for s in sections
+        ],
+        "meta": json.loads(row["meta"]),
+        "stats": {
+            "text_chars": len(text),
+            "braille_cells": len(braille),
+            "expansion_ratio": round(len(braille) / len(text), 3) if text else 0.0,
+        },
+    }
+
+
+@app.get("/api/catalog/{config}/{record_id}/braille.txt")
+def catalog_braille_txt(config: str, record_id: str):
+    row = _catalog_record(config, record_id)
+    return PlainTextResponse(
+        content=encode_korean_braille(row["text"]),
+        media_type="text/plain; charset=utf-8",
+        headers={"Content-Disposition":
+                 f'attachment; filename="{config}_{safe_filename_part(record_id)}.txt"'},
+    )
+
+
+@app.get("/api/catalog/{config}/{record_id}/braille.brf")
+def catalog_braille_brf(config: str, record_id: str):
+    row = _catalog_record(config, record_id)
+    return PlainTextResponse(
+        content=build_brf_text(encode_korean_braille(row["text"])),
+        media_type="application/octet-stream",
+        headers={"Content-Disposition":
+                 f'attachment; filename="{config}_{safe_filename_part(record_id)}.brf"'},
+    )
+
+
 @app.get("/api/ingredient-presets")
 def ingredient_presets():
     """Worked examples for the preview tab, so the page has something to show."""

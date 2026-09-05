@@ -27,6 +27,7 @@
         <button class="tab active" id="tab-btn-browse" type="button" role="tab" aria-selected="true" aria-controls="tab-browse" data-tab="browse" data-i18n="tab.browse">화학물질 검색</button>
         <button class="tab" id="tab-btn-convert" type="button" role="tab" aria-selected="false" aria-controls="tab-convert" data-tab="convert" data-i18n="tab.convert">실시간 변환</button>
         <button class="tab" id="tab-btn-ingredient" type="button" role="tab" aria-selected="false" aria-controls="tab-ingredient" data-tab="ingredient" data-i18n="tab.ingredient">성분 미리보기</button>
+        <button class="tab" id="tab-btn-catalog" type="button" role="tab" aria-selected="false" aria-controls="tab-catalog" data-tab="catalog" data-i18n="tab.catalog">공공안전 카탈로그</button>
     </div>
 
     <main>
@@ -121,6 +122,29 @@
             <div class="ing-result" id="ing-result" aria-live="polite"></div>
 
             <p class="ing-scope" data-i18n="ing.scope">이 도구는 라벨에 적힌 것과 표시 규정이 지목한 것만 전달합니다. 성분의 안전성이나 피부 반응은 판단하지 않습니다.</p>
+        </div>
+
+        <!-- Tab 4: Public-safety catalogues -->
+        <div class="tab-content" id="tab-catalog" role="tabpanel" aria-labelledby="tab-btn-catalog">
+            <section class="ing-intro">
+                <h2 data-i18n="cat.title">의약품 · 농약 · 산업재해를 점자로</h2>
+                <p data-i18n="cat.desc">국가 등록부 세 곳을 전량 점역했습니다. 아래에서 분야를 고르고 검색하세요. 화장품은 성분사전 이용약관상 재배포가 금지되어 카탈로그로 제공할 수 없으며, 「성분 미리보기」 탭에서 직접 입력해 확인하실 수 있습니다.</p>
+            </section>
+
+            <div class="cat-tabs" id="cat-tabs" role="group" data-i18n-label="cat.groupLabel" aria-label="분야"></div>
+
+            <div class="cat-searchbar">
+                <input type="search" id="cat-search" data-i18n-placeholder="cat.placeholder" placeholder="이름이나 본문으로 검색">
+                <span class="cat-count" id="cat-count"></span>
+            </div>
+
+            <div class="cat-layout">
+                <div>
+                    <div class="cat-list" id="cat-list" aria-live="polite"></div>
+                    <button class="btn btn-secondary" id="cat-more" type="button" data-i18n="cat.more" hidden>더 보기</button>
+                </div>
+                <div class="cat-detail" id="cat-detail"></div>
+            </div>
         </div>
     </main>
 

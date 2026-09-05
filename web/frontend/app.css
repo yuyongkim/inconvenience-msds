@@ -864,7 +864,7 @@
 .ing-intro p {
     margin: 0;
     max-width: 62ch;
-    color: var(--text-muted, #5c6270);
+    color: var(--text-tertiary);
     line-height: 1.65;
 }
 
@@ -904,7 +904,7 @@
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--text-muted, #5c6270);
+    color: var(--text-tertiary);
     margin-bottom: 8px;
 }
 
@@ -929,7 +929,7 @@
 
 .ing-en {
     font-size: 0.78rem;
-    color: var(--text-muted, #5c6270);
+    color: var(--text-tertiary);
 }
 
 .ing-note {
@@ -937,7 +937,7 @@
     max-width: 62ch;
     font-size: 0.86rem;
     line-height: 1.6;
-    color: var(--text-muted, #5c6270);
+    color: var(--text-tertiary);
 }
 
 .ing-table-wrap {
@@ -963,7 +963,7 @@
     font-size: 0.78rem;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--text-muted, #5c6270);
+    color: var(--text-tertiary);
     white-space: nowrap;
 }
 
@@ -982,7 +982,7 @@
 }
 
 .ing-roots {
-    color: var(--text-muted, #5c6270);
+    color: var(--text-tertiary);
     font-size: 0.83rem;
 }
 
@@ -993,7 +993,7 @@
     max-width: 68ch;
     font-size: 0.86rem;
     line-height: 1.65;
-    color: var(--text-muted, #5c6270);
+    color: var(--text-tertiary);
 }
 
 @media (max-width: 640px) {
@@ -1004,5 +1004,196 @@
     .ing-preset {
         font-size: 0.83rem;
         padding: 6px 12px;
+    }
+}
+
+/* --- Public-safety catalogues ----------------------------------------- */
+
+/* Four categories, one tab. Seven tabs across the top would push the chemical
+   search into a row of competing labels, and these four are the same question
+   asked of four registers. */
+
+.cat-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.cat-chip {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.cat-chip:hover,
+.cat-chip:focus-visible {
+    border-color: var(--accent);
+}
+
+.cat-chip.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.cat-chip-count {
+    font-size: 0.78rem;
+    opacity: 0.7;
+    font-variant-numeric: tabular-nums;
+}
+
+.cat-searchbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.cat-searchbar input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.cat-count {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.cat-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 340px) 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.cat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 62vh;
+    overflow-y: auto;
+}
+
+.cat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.88rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.cat-item:hover,
+.cat-item:focus-visible {
+    border-color: var(--border);
+}
+
+.cat-item.active {
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+}
+
+.cat-item-name {
+    /* Names run long — a pesticide row is brand plus formulation — and a list
+       that reflows on every entry is unreadable at a glance. */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cat-item-size {
+    font-size: 0.76rem;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.cat-detail {
+    min-height: 200px;
+}
+
+.cat-title {
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+}
+
+.cat-stats {
+    margin: 0 0 14px;
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+.cat-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.cat-section {
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+}
+
+.cat-section h4 {
+    margin: 0 0 6px;
+    font-size: 0.9rem;
+}
+
+.cat-korean {
+    margin: 0 0 8px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+/* An ingredient list runs to a single unbroken Latin string, which is one very
+   long braille line. Wrapping it would misrepresent the cell stream, so it
+   scrolls inside its own box instead of pushing the page sideways. */
+.cat-section .braille-text {
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--braille-bg);
+    color: var(--braille-text);
+    font-family: "Noto Sans Symbols 2", "Noto Sans Symbols", "Segoe UI Symbol", monospace;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-x: auto;
+}
+
+@media (max-width: 860px) {
+    .cat-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cat-list {
+        max-height: 40vh;
     }
 }
